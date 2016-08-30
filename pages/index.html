@@ -1,0 +1,152 @@
+---
+category: home
+---
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Structured Cancer Reporting Implementation Guide (Australian Digital Health Agency)</title>
+
+  {% include header.html %}
+
+</head>
+<body>
+{% include navbar.html %}
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9">
+
+<h1>Structured Cancer Reporting</h1>
+
+<table class="none">
+<tr>
+ <td>
+ <a href="colorectal.html">Colorectal Report</a>:
+ <ul>
+  <li><a href="colorectal.html#table">Logical Model</a> + <a href="colorectal.html#definitions">Definitions</a> </li>
+  <li><a href="cmap.html">Logical/Resource Mappings</a></li>
+  <li><a href="cprofiles.html">Resource Profiles</a></li>
+  <li><a href="colorectal.html#examples">Examples (Logical &amp; Resource)</a></li>
+ </ul>
+ </td>
+ <td>
+ <a href="prostate.html">Prostate Report</a>:
+ <ul>
+  <li><a href="prostate.html#table">Logical Model</a> + <a href="prostate.html#definitions">Definitions</a> </li>
+  <li><a href="pmap.html">Logical/Resource Mappings</a></li>
+  <li><a href="pprofiles.html">Resource Profiles</a></li>
+  <li><a href="pexamples.html">Examples (Logical &amp; Resource)</a></li>
+ </ul>
+ </td>
+</tr>
+<tr>
+ <td>
+   <a href="valuesets.html">Value Sets</a> &amp; <a href="codesystems.html">Code Systems</a>
+ </td>
+ <td>
+   <a href="testing.html">Testing</a> Information
+ </td>
+</tr>
+</table>
+<hr/>
+
+<a name="intro"> </a>
+<h2>Introduction</h2>
+
+<p>
+Welcome to the RCPA / HL7 Australia FHIR Implementation Guide.
+This implementation guide describes how to implement the RCPA/CAP 
+structured cancer reporting protocols for data exchange.
+</p>
+<p>
+This guide is solely concerned with the correct representation 
+of the data elements, in order to support successful exchange of
+data after the protocols have been correctly followed by 
+the clinical and pathology staff during the sampling.
+</p>
+<!--
+<p>
+Protocols included in this Implementation Guide:
+</p>
+<ul>
+ <li>
+   Colorectal Cancer:
+   <ul>
+    <li><a href="colorectal.html">Logical Model</a></li>
+    <li><a href="colorectal.html#definitions">Definitions</a></li>
+    <li><a href="cmap.html">Mapping to Resources</a></li>
+   </ul>
+   <p>Examples:</p>
+   <ul>
+    {% include StructureDefinition-example-list-colorectal.xhtml %}     
+   </ul>   
+ </li>
+ <li>
+   Prostate Cancer
+   <ul>
+    <li><a href="prostate.html">Logical Model</a></li>
+    <li><a href="prostate.html#definitions">Definitions</a></li>
+   </ul>
+   <p>Examples:</p>
+   <ul>
+    {% include StructureDefinition-example-list-prostate.xhtml %}     
+   </ul>   
+ </li>
+</ul> 
+<p>
+In addition, there is supporting terminology:
+</p>
+<table class="grid">
+<tr><td colspan="2"><b>Code Systems</b></td></tr>
+{% include table-codesystems.xhtml %}
+<tr><td colspan="2"><b>Value Sets</b></td></tr>
+{% include table-valuesets.xhtml %}
+</table>
+-->
+
+ <li>FHIR Profiles &amp; ValueSets</li>
+ <li>How to wrap FHIR resources in V2 messages</li>
+
+ <p>
+    The Royal College of Pathologists of Australasia (RCPA) has a number of projects running as part of the Pathology Information, Terminology and Units Standardisation (PITUS-15-16) Project.
+    One of these projects (working group 5) is concerned with report modelling and in particular the development of structured cancer protocols.
+    Two structured cancer protocols (https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer/Cancer-Protocols) 
+    ie colorectal cancer and prostate cancer (radical prostatectomy), were chosen to pilot the development of FHIR artefacts. 
+    It is envisaged these FHIR artefacts will be used in some example colorectal and prostate cancer (radical prostatectomy) pathology reports from public and private pathology providers. 
+    These trial reports will be sent to and consumed by selected cancer registries. 
+    It is envisaged this pilot project will determine a way forward for greater adoption of the use of structured cancer reporting and in particular the use of FHIR to facilitate this change.
+    These preliminary cancer protocols (colorectal and prostate-radical prostatectomy) require further development of the terminology valuesets ie the next release (Sep 2016) of 
+    SNOMED CT-AU is expected to have more of the required result values.
+    <p>
+    These protocols (colorectal cancer and prostate-radical prostatectomy) are likely to be change to suit implementation when that occurs in H2 2016.  
+    These protocols are being developed for trial implementation at selected sites are are not yet suitable for wider consumption.
+    </p>
+</p>
+
+<a name="implementers"> </a>
+<h2>Information for Implementers</h2>
+<p>
+  <ul>
+    <li><a href="https://hl7-fhir.github.io/index.html">FHIR Specification</a></li>
+    <li><a href="https://hl7-fhir.github.io/resourcelist.html">FHIR Specification - resources</a></li>
+    <li><a href="https://hl7-fhir.github.io/terminologies-valuesets.html">FHIR Specification - valuesets defined in FHIR</a></li>
+    <li><a href="https://fhir-drills.github.io/">FHIR Tutorials</a></li>
+  </ul>
+</p>
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+{% include footer.html %}
+</body>
+</html>

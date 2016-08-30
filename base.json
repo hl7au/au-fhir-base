@@ -1,0 +1,28 @@
+{
+	"tool": "jekyll",
+  "paths" : {
+    "resources" : "resources",
+    "pages" : "pages",
+    "temp" : "temp",
+    "output" : "output",
+    "qa" : "qa",
+    "txCache" : "txCache",
+    "specification" : "http://hl7-fhir.github.io"
+  },
+  "defaults" : {
+    "Any" : {
+	  	"template-format" : "instance-template-format.html",
+      "template-base" : "instance-template-base.html"
+    },
+    "ValueSet" : {
+      "template-base" : "instance-template-vs.html"
+    },
+    "StructureDefinition" : {
+      "template-base" : "instance-template-sd.html"
+    }
+  },
+	"canonicalBase": "http://fhir.hl7.org.au/base",
+	"source": "base.xml",
+	"resources": {
+  }
+}

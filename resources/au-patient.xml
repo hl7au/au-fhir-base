@@ -1,0 +1,790 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="au-patient"/>
+    <meta>
+        <versionId value="23" />
+        <lastUpdated value="2016-07-03T11:38:26.077+00:00" />
+    </meta>
+    <url value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/au-patient" />
+    <name value="Australian Patient" />
+    <status value="draft" />
+    <description value="Australian realm Patient profile" />
+    <fhirVersion value="1.0.2" />
+    <kind value="resource" />
+    <constrainedType value="Patient" />
+    <abstract value="false" />
+    <base value="http://hl7.org/fhir/StructureDefinition/Patient" />
+    <differential>
+        <element>
+            <path value="Patient" />
+            <short value="Information about an individual or animal receiving health care services" />
+            <definition value="Demographics and other administrative information about an individual or animal receiving care or other health-related services." />
+            <alias value="SubjectOfCare Client Resident" />
+            <min value="0" />
+            <max value="*" />
+            <base>
+                <path value="Patient" />
+                <min value="0" />
+                <max value="*" />
+            </base>
+            <type>
+                <code value="Patient" />
+            </type>
+            <mapping>
+                <identity value="rim" />
+                <map value="Patient[classCode=PAT]" />
+            </mapping>
+            <mapping>
+                <identity value="cda" />
+                <map value="ClinicalDocument.recordTarget.patientRole" />
+            </mapping>
+            <mapping>
+                <identity value="w5" />
+                <map value="administrative.individual" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.extension" />
+            <slicing>
+                <discriminator value="url" />
+                <rules value="openAtEnd" />
+            </slicing>
+        </element>
+        <element>
+            <path value="Patient.extension" />
+            <name value="indigenous status" />
+            <short value="Australian Indigenous Status" />
+            <definition value="Administrative Australian indigenous status coding" />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.extension" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
+            </type>
+        </element>
+        <element>
+            <path value="Patient.identifier" />
+            <slicing>
+                <discriminator value="system" />
+                <discriminator value="type.coding.code" />
+                <description value="identifier by type" />
+                <ordered value="false" />
+                <rules value="open" />
+            </slicing>
+            <short value="An identifier for this patient" />
+            <definition value="An identifier for this patient." />
+            <requirements value="Patients are almost always assigned specific numerical identifiers." />
+            <min value="0" />
+            <max value="*" />
+            <base>
+                <min value="0" />
+                <max value="*" />
+            </base>
+            <type>
+                <code value="Identifier" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="PID-3" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="id" />
+            </mapping>
+            <mapping>
+                <identity value="cda" />
+                <map value=".id" />
+            </mapping>
+            <mapping>
+                <identity value="w5" />
+                <map value="id" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier" />
+            <name value="ihi" />
+            <short value="An identifier for this patient" />
+            <definition value="An identifier for this patient." />
+            <requirements value="Patients are almost always assigned specific numerical identifiers." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier" />
+                <min value="0" />
+                <max value="*" />
+            </base>
+            <type>
+                <code value="Identifier" />
+                <profile value="http://hl7.org.au/fhir/StructureDefinition/au-ihi" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="PID-3" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="id" />
+            </mapping>
+            <mapping>
+                <identity value="cda" />
+                <map value=".id" />
+            </mapping>
+            <mapping>
+                <identity value="w5" />
+                <map value="id" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding" />
+            <short value="Code defined by a terminology system" />
+            <definition value="A reference to a code defined by a terminology system." />
+            <comments value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true." />
+            <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <min value="0" />
+                <max value="*" />
+            </base>
+            <type>
+                <code value="Coding" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.1-8, C*E.10-22" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="union(., ./translation)" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.id" />
+            <representation value="xmlAttr" />
+            <short value="xml:id (or equivalent in JSON)" />
+            <definition value="unique id for the element within a resource (for internal references)." />
+            <min value="0" />
+            <max value="0" />
+            <base>
+                <path value="Patient.identifier.type.coding.id" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="id" />
+            </type>
+            <mapping>
+                <identity value="rim" />
+                <map value="n/a" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.system" />
+            <short value="Identity of the terminology system" />
+            <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+            <comments value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
+            <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding.system" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="uri" />
+            </type>
+            <fixedUri value="http://hl7.org/fhir/v2/0203" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.3" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./codeSystem" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.version" />
+            <short value="Version of the system - if relevant" />
+            <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
+            <comments value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
+            <min value="0" />
+            <max value="0" />
+            <base>
+                <path value="Patient.identifier.type.coding.version" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.7" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./codeSystemVersion" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.code" />
+            <short value="Symbol in syntax defined by the system" />
+            <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+            <requirements value="Need to refer to a particular code in the system." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding.code" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="code" />
+            </type>
+            <fixedCode value="NI" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.1" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./code" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.display" />
+            <short value="Representation defined by the system" />
+            <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+            <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding.display" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <fixedString value="National unique individual identifier" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.2 - but note this is not well followed" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="CV.displayName" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.userSelected" />
+            <short value="If this coding was chosen directly by the user" />
+            <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
+            <comments value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
+            <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
+            <min value="0" />
+            <max value="0" />
+            <base>
+                <path value="Patient.identifier.type.coding.userSelected" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="boolean" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="Sometimes implied by being first" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="CD.codingRationale" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source 'true';     fhir:target dt:CDCoding.codingRationale\#O   ]" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.text" />
+            <short value="Plain text representation of the concept" />
+            <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+            <comments value="Very often the text is the same as a displayName of one of the codings." />
+            <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.text" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <fixedString value="IHI" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.9. But note many systems use C*E.2 for this" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./originalText[mediaType/code='text/plain']/data" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.system" />
+            <short value="The namespace for the identifier" />
+            <definition value="Establishes the namespace in which set of possible id values is unique." />
+            <requirements value="There are many sequences of identifiers.  To perform matching, we need to know what sequence we're dealing with. The system identifies a particular sequence or set of unique identifiers." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.system" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="uri" />
+            </type>
+            <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0" />
+            <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="CX.4 / EI-2-4" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="II.root or Role.id.root" />
+            </mapping>
+            <mapping>
+                <identity value="servd" />
+                <map value="./IdentifierType" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.value" />
+            <short value="The value that is unique" />
+            <definition value="The portion of the identifier typically displayed to the user and which is unique within the context of the system." />
+            <comments value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.value" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <exampleString value="8003608166690503" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="CX.1 / EI.1" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)" />
+            </mapping>
+            <mapping>
+                <identity value="servd" />
+                <map value="./Value" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier" />
+            <name value="medicare" />
+            <short value="An identifier for this patient" />
+            <definition value="An identifier for this patient." />
+            <requirements value="Patients are almost always assigned specific numerical identifiers." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier" />
+                <min value="0" />
+                <max value="*" />
+            </base>
+            <type>
+                <code value="Identifier" />
+                <profile value="http://hl7.org.au/fhir/StructureDefinition/au-mc" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="PID-3" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="id" />
+            </mapping>
+            <mapping>
+                <identity value="cda" />
+                <map value=".id" />
+            </mapping>
+            <mapping>
+                <identity value="w5" />
+                <map value="id" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding" />
+            <short value="Code defined by a terminology system" />
+            <definition value="A reference to a code defined by a terminology system." />
+            <comments value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true." />
+            <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding" />
+                <min value="0" />
+                <max value="*" />
+            </base>
+            <type>
+                <code value="Coding" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.1-8, C*E.10-22" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="union(., ./translation)" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.id" />
+            <representation value="xmlAttr" />
+            <short value="xml:id (or equivalent in JSON)" />
+            <definition value="unique id for the element within a resource (for internal references)." />
+            <min value="0" />
+            <max value="0" />
+            <base>
+                <path value="Patient.identifier.type.coding.id" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="id" />
+            </type>
+            <mapping>
+                <identity value="rim" />
+                <map value="n/a" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.system" />
+            <short value="Identity of the terminology system" />
+            <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+            <comments value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
+            <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding.system" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="uri" />
+            </type>
+            <fixedUri value="http://hl7.org/fhir/v2/0203" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.3" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./codeSystem" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.version" />
+            <short value="Version of the system - if relevant" />
+            <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
+            <comments value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
+            <min value="0" />
+            <max value="0" />
+            <base>
+                <path value="Patient.identifier.type.coding.version" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.7" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./codeSystemVersion" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.code" />
+            <short value="Symbol in syntax defined by the system" />
+            <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+            <requirements value="Need to refer to a particular code in the system." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding.code" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="code" />
+            </type>
+            <fixedCode value="MC" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.1" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./code" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.display" />
+            <short value="Representation defined by the system" />
+            <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+            <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.coding.display" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <fixedString value="Patient's Medicare Number" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.2 - but note this is not well followed" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="CV.displayName" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.coding.userSelected" />
+            <short value="If this coding was chosen directly by the user" />
+            <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
+            <comments value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
+            <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
+            <min value="0" />
+            <max value="0" />
+            <base>
+                <path value="Patient.identifier.type.coding.userSelected" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="boolean" />
+            </type>
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="Sometimes implied by being first" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="CD.codingRationale" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source true;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.type.text" />
+            <short value="Plain text representation of the concept" />
+            <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+            <comments value="Very often the text is the same as a displayName of one of the codings." />
+            <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
+            <min value="0" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.type.text" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <fixedString value="Medicare Number" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="C*E.9. But note many systems use C*E.2 for this" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./originalText[mediaType/code='text/plain']/data" />
+            </mapping>
+            <mapping>
+                <identity value="orim" />
+                <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.system" />
+            <short value="The namespace for the identifier" />
+            <definition value="Establishes the namespace in which set of possible id values is unique." />
+            <requirements value="There are many sequences of identifiers.  To perform matching, we need to know what sequence we're dealing with. The system identifies a particular sequence or set of unique identifiers." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.system" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="uri" />
+            </type>
+            <fixedUri value="http://ns.electronichealth.net.au/id/hi/mc" />
+            <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="CX.4 / EI-2-4" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="II.root or Role.id.root" />
+            </mapping>
+            <mapping>
+                <identity value="servd" />
+                <map value="./IdentifierType" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.value" />
+            <short value="The value that is unique" />
+            <definition value="The portion of the identifier typically displayed to the user and which is unique within the context of the system." />
+            <comments value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.value" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="string" />
+            </type>
+            <exampleString value="32788511952" />
+            <maxLength value="11" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="CX.1 / EI.1" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)" />
+            </mapping>
+            <mapping>
+                <identity value="servd" />
+                <map value="./Value" />
+            </mapping>
+        </element>
+        <element>
+            <path value="Patient.identifier.period.end" />
+            <short value="End time with inclusive boundary, if not ongoing" />
+            <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
+            <comments value="The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has a end value of 2012-02-03." />
+            <min value="1" />
+            <max value="1" />
+            <base>
+                <path value="Patient.identifier.period.end" />
+                <min value="0" />
+                <max value="1" />
+            </base>
+            <type>
+                <code value="dateTime" />
+            </type>
+            <meaningWhenMissing value="If the end of the period is missing, it means that the period is ongoing" />
+            <condition value="per-1" />
+            <isSummary value="true" />
+            <mapping>
+                <identity value="v2" />
+                <map value="DR.2" />
+            </mapping>
+            <mapping>
+                <identity value="rim" />
+                <map value="./high" />
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>
