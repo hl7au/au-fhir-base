@@ -16,6 +16,7 @@ go to [path]\html and run jekyll serve
 
 the final output will be in [path]\html\_site
 
-The current version of the IG is published at... [tba]
+The current version of the IG is published at... http://build.fhir.org/ig/hl7au/au-fhir-base/
+
 
 
