@@ -1,13 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
     <versionId value="23" />
-    <lastUpdated value="2017-02-21T11:13:38.316+11:00" />
+    <lastUpdated value="2017-02-22T01:35:52.295+11:00" />
   </meta>
   <url value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/au-patient" />
-  <name value="Australian Patient" />
+  <name value="Australian Patient (Human)" />
   <status value="draft" />
+  <publisher value="HL7 AU FHIR Community" />
   <description value="Australian realm Patient profile" />
   <kind value="resource" />
   <constrainedType value="Patient" />
@@ -1779,10 +1780,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="extensible" />
-        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/identifier-type" />
-        </valueSetReference>
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/identifier-type" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -1881,7 +1879,7 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comments value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
@@ -2967,10 +2965,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="extensible" />
-        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/identifier-type" />
-        </valueSetReference>
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/identifier-type" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -3069,7 +3064,7 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comments value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
@@ -10031,7 +10026,7 @@
       <comments value="The animal element is labeled &quot;Is Modifier&quot; since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal)." />
       <requirements value="Many clinical systems are extended to care for animal patients as well as human." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Patient.animal" />
         <min value="0" />
@@ -13091,7 +13086,11 @@
       <max value="1" />
     </element>
     <element>
+      <path value="Patient.identifier.type" />
+    </element>
+    <element>
       <path value="Patient.identifier.type.coding" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element>
@@ -13156,7 +13155,11 @@
       <max value="1" />
     </element>
     <element>
+      <path value="Patient.identifier.type" />
+    </element>
+    <element>
       <path value="Patient.identifier.type.coding" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element>
@@ -13216,6 +13219,13 @@
     <element>
       <path value="Patient.identifier.period.end" />
       <min value="1" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Animal" />
+      </extension>
+      <path value="Patient.animal" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
