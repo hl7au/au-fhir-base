@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-au-ihi-status" />
+  <meta>
+    <versionId value="8" />
+    <lastUpdated value="2017-02-22T16:13:30.967+11:00" />
+  </meta>
+  <url value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-au-ihi-status" />
+  <version value="20140801" />
+  <name value="Individual Healthcare Identifier Status (IHI Status)" />
+  <status value="draft" />
+  <publisher value="Australian Digital Health Agency" />
+  <contact>
+    <name value="Angus Millar" />
+    <telecom>
+      <system value="email" />
+      <value value="angus.millar@digitalhealth.gov.au" />
+    </telecom>
+  </contact>
+  <description value="The status of the Individual Healthcare Identifier (IHI Status)" />
+  <compose>
+    <include>
+      <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0/CodeSystem/ihi-status" />
+      <concept>
+        <code value="Active" />
+        <display value="Active" />
+      </concept>
+      <concept>
+        <code value="Deceased" />
+        <display value="Deceased" />
+      </concept>
+      <concept>
+        <code value="Retired" />
+        <display value="Retired" />
+      </concept>
+      <concept>
+        <code value="Expired" />
+        <display value="Expired" />
+      </concept>
+      <concept>
+        <code value="Resolved" />
+        <display value="Resolved" />
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
