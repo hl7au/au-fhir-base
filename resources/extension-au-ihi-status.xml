@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/structuredefinition.xsd">
+	<id value="extension-au-ihi-status"/>
+	<meta>
+		<lastUpdated value="2017-02-22T16:34:33.091+11:00"/>
+	</meta>
+	<url value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+	<name value="IHI Status Extension"/>
+	<status value="draft"/>
+	<date value="2017-03-11T06:30:54+00:00"/>
+	<publisher value="Health Level Seven Australia (Patient Administration)"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org.au"/>
+		</telecom>
+	</contact>
+	<description value="IHI number status extension"/>
+	<purpose value="Coded status associated with an IHI number instance"/>
+	<fhirVersion value="1.9.0"/>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<contextType value="datatype"/>
+	<context value="Identifier"/>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<snapshot>
+		<element>
+			<path value="Extension"/>
+			<short value="Base for all elements"/>
+			<definition value="Optional Extensions Element - found in all resources."/>
+			<min value="0"/>
+			<max value="*"/>
+			<base>
+				<path value="Element"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<type>
+				<code value="Element"/>
+			</type>
+		</element>
+		<element>
+			<path value="Extension.id"/>
+			<short value="xml:id (or equivalent in JSON)"/>
+			<definition value="unique id for the element within a resource (for internal references)."/>
+			<comment value="RFC 4122"/>
+			<min value="0"/>
+			<max value="1"/>
+			<base>
+				<path value="Element.id"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="id"/>
+			</type>
+		</element>
+		<element>
+			<path value="Extension.extension"/>
+			<short value="Additional Content defined by implementations"/>
+			<definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+			<comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+			<alias value="extensions"/>
+			<alias value="user content"/>
+			<min value="0"/>
+			<max value="*"/>
+			<base>
+				<path value="Element.extension"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<type>
+				<code value="Extension"/>
+			</type>
+		</element>
+		<element>
+			<path value="Extension.url"/>
+			<short value="identifies the meaning of the extension"/>
+			<definition value="Source of the definition for the extension code - a logical name or a URL."/>
+			<comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #."/>
+			<min value="1"/>
+			<max value="1"/>
+			<base>
+				<path value="Extension.url"/>
+				<min value="1"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+		</element>
+		<element>
+			<path value="Extension.valueCoding"/>
+			<sliceName value="ihi status"/>
+			<short value="IHI Number Status Code"/>
+			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<min value="1"/>
+			<max value="1"/>
+			<base>
+				<path value="Extension.value[x]"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="IHI Number Status"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-au-ihi-status"/>
+			</binding>
+		</element>
+	</snapshot>
+	<differential>
+		<element>
+			<path value="Extension"/>
+		</element>
+		<element>
+			<path value="Extension.url"/>
+			<fixedUri value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+		</element>
+		<element>
+			<path value="Extension.valueCoding"/>
+			<sliceName value="ihi status"/>
+			<short value="IHI Number Status Code"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="IHI Number Status"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-au-ihi-status"/>
+			</binding>
+		</element>
+	</differential>
+</StructureDefinition>

@@ -1,68 +1,66 @@
 {
-	"tool": "jekyll",
-  "paths" : {
-    "resources" : "resources",
-    "pages" : "pages",
-    "temp" : "temp",
-    "output" : "output",
-    "qa" : "qa",
-    "txCache" : "txCache",
-    "specification" : "http://hl7-fhir.github.io"
-  },
-  "defaults" : {
-    "Any" : {
-	  	"template-format" : "instance-template-format.html",
-      "template-base" : "instance-template-base.html"
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "version": "1.9.0",
+  "source": "ig.xml",
+  "extraTemplates": [ "mappings" ],
+  "defaults": {
+    "ConceptMap": { "template-base": "cm.html" },
+    "Any": {
+      "template-base": "base.html",
+      "template-format": "format.html"
     },
-    "ValueSet" : {
-      "template-base" : "instance-template-vs.html"
+    "StructureDefinition": {
+      "template-base": "sd.html",
+      "template-defns": "sd-definitions.html",
+      "template-mappings": "sd-mappings.html"
     },
-    "StructureDefinition" : {
-      "template-base" : "instance-template-sd.html"
-    }
+    "ValueSet": { "template-base": "vs.html" },
+    "CodeSystem": { "template-base": "cs.html" }
   },
-	"canonicalBase": "http://fhir.hl7.org.au/fhir/base",
-	"source": "base.xml",
-  "sct-edition" : "http://snomed.info/sct/32506021000036107",
-	"resources": {
-    "StructureDefinition/au-patient" : {
-      "base" : "StructureDefinition-au-patient.html",
-      "version" : "1.0.1"
-    }, 
-    "StructureDefinition/au-practitioner" : {
-      "base" : "StructureDefinition-au-practitioner.html",
-     "version" : "1.0.1"
-   },
-   "StructureDefinition/au-organisation" : {
-      "base" : "StructureDefinition-au-organisation.html",
-     "version" : "1.0.1"
-   },
-    "StructureDefinition/identifier-location" : {
-      "base" : "StructureDefinition-identifier-location.html",
-     "version" : "1.0.1"
-   },
-    "StructureDefinition/au-indigenous-status" : {
-      "base" : "StructureDefinition-au-indigenous-status.html",
-     "version" : "1.0.1"
-   },
-   "StructureDefinition/au-ihi-status" : {
-      "base" : "StructureDefinition-au-ihi-status.html",
-     "version" : "1.0.1"
-   },
-   "StructureDefinition/au-ihi-record-status" : {
-      "base" : "StructureDefinition-au-ihi-record-status.html",
-     "version" : "1.0.1"
-   },
-    "ValueSet/valueset-au-ihi-status": {
+  "tool": "jekyll",
+  "canonicalBase": "http://fhir.hl7.org.au/fhir/base",
+  "paths": {
+    "temp": "temp",
+    "resources": [ "resources", "examples" ],
+    "pages": "pages",
+    "txCache": "txCache",
+    "output": "output",
+    "qa": "qa",
+    "specification": "http://build.fhir.org"
+  },
+  "resources": {
+	"CodeSystem/codesystem-au-indigenous-status": {
+	  "base": "CodeSystem-au-indigenous-status.html"
+	},
+	"ValueSet/valueset-au-indigenous-status": {
+	  "base": "ValueSet-au-indigenous-status.html"
+	},
+	"CodeSystem/codesystem-au-ihi-status": {
+	  "base": "CodeSystem-au-ihi-status.html"
+	},
+	"ValueSet/valueset-au-ihi-status": {
 	  "base": "ValueSet-au-ihi-status.html"
+	},
+	"CodeSystem/codesystem-au-ihi-record-status": {
+	  "base": "CodeSystem-au-ihi-record-status.html"
 	},
 	"ValueSet/valueset-au-ihi-record-status": {
 	  "base": "ValueSet-au-ihi-record-status.html"
 	},
-   "ValueSet/valueset-au-indigenous-status": {
-	  "base": "ValueSet-au-indigenous-status.html"
+	"StructureDefinition/au-practitioner": {
+	  "base": "au-practitioner.html"
+	},
+	"StructureDefinition/extension-au-indigenous-status": {
+	  "base": "extension-au-indigenous-status.html"
+	},
+	"StructureDefinition/extension-au-ihi-status": {
+	  "base": "extension-au-ihi-status.html"
+	},
+	"StructureDefinition/extension-au-ihi-record-status": {
+	  "base": "extension-au-ihi-record-status.html"
 	}
   },
-  "logging" : ["progress"]
-  
+  "dependencyList": [
+  ],
+  "spreadsheets": [ ]
 }

@@ -1,0 +1,215 @@
+---
+# jekyll header
+---
+
+
+  {% include header.html %}
+
+<!--FHIR\US-Core\sd.html-->
+<!-- segment-breadcrumb -->
+
+{% include container-start.html %}
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">Content</a></li>
+	<li><a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a></li>
+	<li><a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a></li>
+	<li><a href="{{[type]}}-{{[id]}}.xml.html">XML</a></li>
+	<li><a href="{{[type]}}-{{[id]}}.json.html">JSON</a></li>
+	<li><a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a></li>
+</ul>
+
+<h3><span class="sectioncount">D.4.1<a name="D.4.1"> </a></span>{{[type]}}-{{[id]}}<a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#D.4.1"><img src="target.png"/></a></h3>
+
+
+<!-- introductiontext here-->
+<a name="introduction"> </a>
+
+
+{% capture my-include %}{% include {{[id]}}-intro.md %}{% endcapture %}{{ my-include | markdownify }}
+
+
+<!-- example here -->
+<a name="example"> </a>
+<!--
+<h5>Example: <a href="daf-{{page.code}}-{{page.example}}.html">{{page.tcode}} Example: {{page.example}}</a></h5>
+-->
+<!--  try build generated templates
+<h5>Example: <a href="{{[title]}}.example.html">{{[title]}} Example</a></h5> -->
+<p> example here </p>
+
+
+<a name="profile"> </a>
+<h4><span class="sectioncount">D.4.1.1</span>
+Formal Views of Profile Content
+ <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#profile"><img src="target.png"/></a>
+</h4>
+<!-- uri -->
+{% include {{[type]}}-{{[id]}}-header.xhtml %}
+
+<!-- uri -->
+<p>
+<a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work</a>.
+</p>
+
+<div id="tabs">
+ <ul>
+  <li><a href="#tabs-summ">Text Summary</a></li>
+  <li><a href="#tabs-diff">Differential Table</a></li>
+  <li><a href="#tabs-snap">Snapshot Table</a></li>
+<!--
+  <li><a href="#tabs-xml">XML Template</a></li>
+  <li><a href="#tabs-json">JSON Template</a></li>
+-->
+  <li><a href="#tabs-all">All</a></li>
+ </ul>
+
+ <div id="tabs-summ">
+  <div id="tbl-summ">
+   <div id="tbl-diff-inner">
+     <a name="summary"> </a>
+<!--{% include {{[type]}}-{{[id]}}-summary.xhtml %}-->
+
+{% capture my-include %}{% include {{[id]}}-summary.md %}{% endcapture %}{{ my-include | markdownify }}
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-diff">
+  <div id="tbl-diff">
+   <div id="tbl-diff-inner">
+  {% include {{[type]}}-{{[id]}}-diff.xhtml %}
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-snap">
+  <div id="tbl-snap">
+   <div id="tbl-snap-inner">
+{% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
+   </div>
+  </div>
+ </div>
+
+<!--
+ <div id="tabs-xml">
+  <div id="xml">
+   <div id="xml-inner">
+{% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-json">
+  <div id="json">
+   <div id="json-inner">
+{% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
+   </div>
+  </div>
+ </div>
+-->
+
+ <div id="tabs-all">
+  <div id="tbl-summ">
+   <div id="tbl-diff-inner">
+     <a name="summary"> </a>
+<!--   {% include {{[type]}}-{{[id]}}-summary.xhtml %}  -->
+{% capture my-include %}{% include {{[id]}}-summary.md %}{% endcapture %}{{ my-include | markdownify }}
+   </div>
+  </div>
+
+ <div id="all-tbl-diff">
+   <p><b>Differential View</b></p>
+   <div id="all-tbl-diff-inner">
+   {% include {{[type]}}-{{[id]}}-diff.xhtml %}
+   </div>
+  </div>
+  <div id="all-tbl-snap">
+   <p><b>Snapshot View</b></p>
+   <div id="all-tbl-snap-inner">
+{% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
+   </div>
+  </div>
+
+  <!--
+  <div id="all-xml">
+   <p><b>XML Template</b></p>
+   <div id="all-xml-inner">{% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
+   </div>
+  </div>
+
+  <div id="all-json">
+   <p><b>JSON Template</b></p>
+   <div id="all-json-inner">
+{% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
+   </div>
+  </div>
+-->
+ </div>
+</div>
+
+
+<a name="downloads"> </a>
+<p>Downloads: StructureDefinition: (<a href="{{[type]}}-{{[id]}}.xml" download>XML</a>, <a href="{{[type]}}-{{[id]}}.json" download>JSON</a>), Schema:  <a href="{{[id]}}.sch" download>XML Schematron</a></p>
+
+<p>&nbsp;</p>
+
+<!-- search text here-->
+<a name="search"> </a>
+<h4><span class="sectioncount">D.4.1.2</span> Quick Start <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#search"><img src="target.png"/></a></h4>
+<p>Below is an overview of the required search and read operations.</p>
+
+
+<p><b>Summary of Argonaut Search Criteria for {{[type]}}-{{[id]}}</b></p>
+
+{% capture my-include %}{% include {{[id]}}-search.md %}{% endcapture %}{{ my-include | markdownify }}
+
+
+
+<!-- remove term and invarients sections
+
+<a name="tx"> </a>
+<h4><span class="sectioncount">D.4.1.3</span> Terminology Bindings <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#tx"><img src="target.png"/></a></h4>
+  {% include {{[type]}}-{{[id]}}-tx.xhtml %}
+
+<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> Constraints <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#D.4.1.3"><img src="target.png"/></a></h4>
+{% include {{[type]}}-{{[id]}}-inv.xhtml %}
+
+-->
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+
+<script src="jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+}
+catch(exception){
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+             }
+             catch(exception){
+             }
+         }
+     });
+</script>
+
+{% include footer.html %}
+</body>
+</html>

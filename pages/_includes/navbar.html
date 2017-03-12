@@ -2,7 +2,7 @@
   <div class="container">  <!-- container -->
    <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
    <div id="hl7-status">
-    <b>HL7 Australia Implementation Guide: {{{{page.category}}</b> 
+    <b>AU Base</b>
    </div>
 
    <div id="hl7-nav">
@@ -10,23 +10,40 @@
      <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
     </a>
    </div>
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
   </div>
   <div class="container">  <!-- container -->
-  </div>
-</div>  <!-- /segment-header -->
+ </div></div>  <!-- /segment-header -->
 
- <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
   <div class="container">  <!-- container -->
-   <ul class="breadcrumb">
-    <li><b><a href="index.html">Home</a></b></li>
-    <li><b><a href="profiles.html">Profiles</a></b></li>
-    <li><b><a href="identifiers.html">Identifiers</a></b></li>
-    <li><b><a href="terminologies.html">Terminologies</a></b></li>
-    <li><b><a href="smartonfhir.html">Smart on FHIR for Australia</a></b></li>
-    <li><b><a href="community.html">Australian Community Info</a></b></li>
+   <!-- HEADER CONTENT -->
 
-   </ul>
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="{{ site.data.fhir.path }}index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guidance.html">General Guidance</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="extensions.html">Extensions</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="searchparams.html">Search Parameters</a></li>
+        <li><a href="capstatements.html">Capability Statements</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
   </div>  <!-- /container -->
- </div>  <!-- /segment-breadcrumb -->
-
+ </div>  <!-- /segment-navbar -->

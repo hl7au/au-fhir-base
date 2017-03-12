@@ -1,8 +1,8 @@
 /*
- 
+
     Specific layout and styling, project based
-        
-    
+
+
 */
 /*
 Flexslider vs LayerSlider vs SliderRevolution
@@ -14,7 +14,7 @@ breadcrumb vs history what is a breadcrumb hiearchy or history?
 gray-color thingy
 
 widget-row vs thumbs vs joyo-thumbs
-shortcode for 
+shortcode for
 - Fontawesome
 - Accordion
 - Notifications
@@ -28,13 +28,13 @@ widget in sidebar vs in column = uiterlijk op basis van locale class via functio
 
 - SCAFFOLDING							Groundwork for the site. Background colors are set in less or overruled here
 - SCAFFOLDING OBJECTS					Objects reoccurring on every page
-- COMPONENTS							Everything what can be moved around				
+- COMPONENTS							Everything what can be moved around
 - BACK TO TOP							Anchor animating to top of the page
 - EXCEPTIONS FOR SPECIFIC SITUATIONS	Some pages are not like the others
-- D-I-D AREA							Do-It-Dirty 
+- D-I-D AREA							Do-It-Dirty
 
 */
-/* SCAFFOLDING STYLING 
+/* SCAFFOLDING STYLING
 ----------------------------------------------------------------------------------------*/
 html {
   background-color: ;
@@ -81,7 +81,7 @@ body {
 		//padding-right: 0;
 		.segment > .container {
 			//padding-left: 10px;
-			//padding-right: 10px; 
+			//padding-right: 10px;
 		}
 	}
 	.segment {
@@ -250,7 +250,7 @@ body {
         border-bottom: 0;
     }
     .nav-tabs > li > a {
-        border: 1px solid #ddd;        
+        border: 1px solid #ddd;
         .border-top-radius(0);
         .border-right-radius(0);
         .border-bottom-radius(0);
@@ -271,7 +271,7 @@ body {
         border-color: #ddd;
         z-index: 2;
     }
-}	
+}
 */
 .nav-list > li > a {
   padding: 3px 15px;
@@ -365,3 +365,26 @@ a.to-top {
 ----------------------------------------------------------------------------------------*/
 /* D-I-D AREA
 ----------------------------------------------------------------------------------------*/
+
+/* ----------TOC styling ------*/
+
+// Adding 'Contents' headline to the TOC
+
+#markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+}
+
+/*
+// Using numbers instead of bullets for listing
+#markdown-toc ul {
+    list-style: decimal;
+}
+*/
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+/*    list-style: decimal; */
+    display: inline-block;
+}

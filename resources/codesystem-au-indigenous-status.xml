@@ -1,0 +1,64 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="codesystem-au-indigenous-status"/>
+	<url value="http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h2>Australian Indigenous Status</h2>
+			<p>Whether a person identifies as being of Aboriginal or Torres Strait Islander origin, as represented by a code.<br/>
+			The purpose of this data element is to provide information about whether persons identify as being of Aboriginal and/or Torres Strait Islander origin.<br/>
+			The following definition, commonly known as 'The Commonwealth Definition', was given in a High Court judgement in the case of Commonwealth v Tasmania (1983) 46 ALR 625.<br/>
+			'An Aboriginal or Torres Strait Islander is a person of Aboriginal or Torres Strait Islander descent who identifies as an Aboriginal or Torres Strait Islander and is accepted as such by the community in which he or she lives'.<br/>
+			There are three components to the Commonwealth definition:
+<ul>
+					<li>descent;</li>
+					<li>self-identification; and</li>
+					<li>community acceptance.</li>
+				</ul>
+				<br/>
+			
+In practice, it is not feasible to collect information on the community acceptance part of this definition in general purpose statistical and administrative collections and therefore standard questions on Indigenous status relate to descent and self-identification only.</p>
+		</div>
+	</text>
+	<version value="1"/>
+	<name value="Australian Indigenous Status"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<publisher value="Health Level Seven Australia (Patient Administration)"/>
+	<contact>
+		<name value="hl7.org.au"/>
+	</contact>
+	<date value="2017-03-11"/>
+    <description value="Whether a person identifies as being of Aboriginal or Torres Strait Islander origin, as represented by a code."/>
+	<caseSensitive value="true"/>
+	<valueSet value="http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes"/>
+	<compositional value="false"/>
+	<versionNeeded value="true"/>
+	<content value="complete"/>
+	<count value="5"/>
+	<concept>
+		<code value="1"/>
+		<display value="Aboriginal but not Torres Strait Islander origin"/>
+		<definition value="Indigenous Australian"/>
+	</concept>
+	<concept>
+		<code value="2"/>
+		<display value="Torres Strait Islander but not Aboriginal origin"/>
+		<definition value="Indigenous Australian"/>
+	</concept>
+	<concept>
+		<code value="3"/>
+		<display value="Both Aboriginal and Torres Strait Islander origin"/>
+		<definition value="Indigenous Australian"/>
+	</concept>
+	<concept>
+		<code value="4"/>
+		<display value="Neither Aboriginal nor Torres Strait Islander origin"/>
+		<definition value="Non-indigenous Australian"/>
+	</concept>
+	<concept>
+		<code value="5"/>
+		<display value="Not stated/inadequately described"/>
+		<definition value=" Primarily when importing data from other data collections that do not contain mappable data. Where the answer cannot be determined without clarification from the respondent (for example, 'No' and 'Yes, Aboriginal' are both selected).  Where an answer was declined. Where the question was not able to be asked because the client was unable to communicate or a person who knows the client was not available."/>
+	</concept>
+</CodeSystem>

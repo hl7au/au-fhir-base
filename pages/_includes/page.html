@@ -1,0 +1,17 @@
+{% include header.html %}
+
+  <!-- ============BreadCrumb=============== -->
+
+
+{% include container-start.html %}
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+{% capture my-include %}{% include {{page.md_filename}}.md %}{% endcapture %}{{ my-include | markdownify }}
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+
+    {% include footer.html %}

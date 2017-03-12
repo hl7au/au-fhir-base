@@ -1,0 +1,27 @@
+---
+# jekyll header
+---
+
+{% include header.html %}
+
+<!-- segment-breadcrumb -->
+
+{% include container-start.html %}
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+
+{% include {{[type]}}-{{[id]}}-summary.xhtml %}
+{% include {{[type]}}-{{[id]}}-xref.xhtml %}
+{% include {{[type]}}-{{[id]}}-cld.xhtml %}
+
+<h3>Expansion</h3>
+
+{% include {{[type]}}-{{[id]}}-expansion.xhtml %}
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+
+{% include footer.html %}

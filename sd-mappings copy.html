@@ -1,0 +1,43 @@
+---
+# jekyll header
+---
+
+
+  {% include header.html %}
+
+ <div id="segment-breadcrumb" class="segmnt">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+        <li title="home"><a href="index.html"><b>Home</b></a></li>
+     <li><b>{{[title]}} Mappings</b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+<div class="col-9">
+
+<ul class="nav nav-tabs"><li><a href="{{[type]}}-{{[id]}}.html">Content</a></li><li><a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a></li><li class="active"><a href="#">Mappings</a></li><li><a href="{{[type]}}-{{[id]}}.xml.html">XML</a></li><li><a href="{{[type]}}-{{[id]}}.json.html">JSON</a></li></ul>
+
+<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition: {{[title]}} - Mappings <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
+
+<p>Mappings for the {{[type]}}-{{[id]}} Profile.</p>
+
+{%include {{[type]}}-{{[id]}}-maps.xhtml%}
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content --> 
+{% include footer.html %}
+</body>
+</html>
