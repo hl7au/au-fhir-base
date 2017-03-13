@@ -9,9 +9,13 @@ source pages/_include/{{page.md_filename}}.md  file
 {:toc}
 
 ### Introduction
+This implementation guide is provided to support the use of FHIR(r) in an Australian context.
 
-blah blah blah
+Uses of core resources are described in this guide with common localisation concepts, such as those related to:
+* Patient: IHI, Medicare Number, Indigenous Status
+* Practitioners: HPI-I, Prescriber Number
+* Practitioner roles (provider): Provider Number
+* Organisations: HPI-O
 
-### More Stuff
 
-#### And More Stuff
+

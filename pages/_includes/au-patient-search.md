@@ -1,17 +1,17 @@
-# Template-basic-search.md  file
+Australian Patient Search
 
 This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
 
 
-`GET /Basic?patient={id}`
+`GET /Patient`
 
 **Example:**
 
 [example here]
 
-*Support:* e.g. Mandatory for client to support search by patient.  Optional for server to support.
+*Support:* e.g.
 
-*Implementation Notes:*  blah blah blah
+*Implementation Notes:*  
 
 *Response Class:*
 

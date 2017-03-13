@@ -1,4 +1,4 @@
-# Template-basic-search.md  file
+Practitioner Role Search
 
 This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
 
@@ -9,9 +9,9 @@ This is the search markdown file that gets inserted into the sd.html Quick Start
 
 [example here]
 
-*Support:* e.g. Mandatory for client to support search by patient.  Optional for server to support.
+*Support:* e.g. 
 
-*Implementation Notes:*  blah blah blah
+*Implementation Notes:*  
 
 *Response Class:*
 

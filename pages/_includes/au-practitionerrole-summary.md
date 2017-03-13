@@ -1,9 +1,5 @@
-# Template-basic-summary.md  file
+Australian Practitioner Role
 
-This is the summary markdown file that gets inserted into the sd.html template. for a more formal narrative summary of constraints.  in future hope to automate this to computer generated code.
+1. Optional Provider Number profile defined for a location
+1. Location reference restricted to maximum of one
 
-#### Complete Summary of the Mandatory Requirements
-
-1. A `Basic.identifier`
-1. A code = 'diet'  in  `Basic.code.coding.code`
-1. A patient in `Basic.subject`

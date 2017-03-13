@@ -1,17 +1,15 @@
-# Template-basic-search.md  file
-
-This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
+Search for Practitioner
 
 
-`GET /Basic?patient={id}`
+`GET /Practitioner`
 
 **Example:**
 
 [example here]
 
-*Support:* e.g. Mandatory for client to support search by patient.  Optional for server to support.
+*Support:* 
 
-*Implementation Notes:*  blah blah blah
+*Implementation Notes:*  
 
 *Response Class:*
 

@@ -2,5 +2,7 @@
 
 source pages/_include/{{page.md_filename}}.md  file
 
-These searchparameters have been defined for this implementation guide.
+Search parameters that have been defined for this implementation guide.
+
+n/a
 <!---% include list-simple-searchparameters.xhtml %-->
