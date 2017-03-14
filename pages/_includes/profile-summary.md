@@ -1,2 +1,1 @@
-Profiles have been defined to support the core information required for identity and administration of key entities involved in healthcare.
-This includes the patient, practitioners and organisations participating in in healthcare delivery
+

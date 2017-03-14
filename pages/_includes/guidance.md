@@ -9,7 +9,7 @@ source pages/_include/{{page.md_filename}}.md  file
 {:toc}
 
 ### Working Group
-This guide is the product of collaborative work undertaken with the HL7 Australia working groups encompassing membership from:
+This guide is the product of collaborative work undertaken with the HL7 Australia working groups with partcipants from:
 * HL7 Australia membership
-* Australian Digital Health Agency staff
-* FHIR implementers' community
+* Australian Digital Health Agency
+* Australian  FHIR implementers' community
