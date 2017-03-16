@@ -1034,10 +1034,10 @@
 		</element>
 	</snapshot>
 	<differential>
-		<element>
+		<element id="Organization">
 			<path value="Organization"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:slice">
 			<path value="Organization.identifier"/>
 			<slicing>
 				<discriminator>
@@ -1051,50 +1051,50 @@
 				<rules value="openAtEnd"/>
 			</slicing>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio">
 			<path value="Organization.identifier"/>
 			<sliceName value="hpi-o"/>
 			<short value="National organisation identifier"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.coding">
 			<path value="Organization.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.coding.system">
 			<path value="Organization.identifier.type.coding.system"/>
 			<min value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.coding.version">
 			<path value="Organization.identifier.type.coding.version"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.coding.code">
 			<path value="Organization.identifier.type.coding.code"/>
 			<min value="1"/>
 			<fixedCode value="NOI"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.coding.display">
 			<path value="Organization.identifier.type.coding.display"/>
 			<min value="1"/>
 			<fixedString value="National Organization Identifier"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.coding.userSelected">
 			<path value="Organization.identifier.type.coding.userSelected"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.type.text">
 			<path value="Organization.identifier.type.text"/>
 			<fixedString value="HPI-O"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.identifier.system">
 			<path value="Organization.identifier.system"/>
 			<min value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.value">
 			<path value="Organization.identifier.value"/>
 			<min value="1"/>
 			<example>
@@ -1103,11 +1103,11 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.identifier.period">
 			<path value="Organization.identifier.period"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Organization.identifier:hpio.identifier.assigner">
 			<path value="Organization.identifier.assigner"/>
 			<max value="0"/>
 		</element>
