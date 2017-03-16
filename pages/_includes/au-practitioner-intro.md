@@ -1,6 +1,2 @@
-Australian Practitioner
+Australian Practitioner Profile
 
-**Additional Profile specific implementation guidance:**
-
-
-#### Examples

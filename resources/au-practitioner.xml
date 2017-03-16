@@ -1,3 +1,4 @@
+<!-- edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by Brett Esler (Private) -->
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/structuredefinition.xsd">
 	<id value="au-practitioner"/>
 	<meta>
@@ -373,9 +374,6 @@
 				<min value="0"/>
 				<max value="*"/>
 			</base>
-			<type>
-				<code value="DomainResource"/>
-			</type>
 			<constraint>
 				<key value="dom-2"/>
 				<severity value="error"/>
@@ -624,7 +622,7 @@
 			</type>
 			<isSummary value="true"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii">
 			<path value="Practitioner.identifier"/>
 			<sliceName value="hpi-i"/>
 			<short value="National Individual Provider Healthcare Identifier"/>
@@ -635,59 +633,69 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type">
 			<path value="Practitioner.identifier.type"/>
+			<definition value="hpii"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.system">
 			<path value="Practitioner.identifier.type.coding.system"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.version">
 			<path value="Practitioner.identifier.type.coding.version"/>
+			<definition value="hpii"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="NPI"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.display">
 			<path value="Practitioner.identifier.type.coding.display"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="National provider identifier"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.userSelected">
 			<path value="Practitioner.identifier.type.coding.userSelected"/>
+			<definition value="hpii"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.text">
 			<path value="Practitioner.identifier.type.text"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="HPI-I"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.system">
 			<path value="Practitioner.identifier.system"/>
 			<short value="national namespace for hpi-i"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.value">
 			<path value="Practitioner.identifier.value"/>
+			<definition value="hpii"/>
 			<min value="1"/>
 			<max value="1"/>
 			<example>
@@ -696,7 +704,7 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number">
 			<path value="Practitioner.identifier"/>
 			<sliceName value="prescriber-number"/>
 			<short value="Prescriber Number"/>
@@ -707,59 +715,69 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type">
 			<path value="Practitioner.identifier.type"/>
+			<definition value="medicare-number"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.coding.system">
 			<path value="Practitioner.identifier.type.coding.system"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.coding.version">
 			<path value="Practitioner.identifier.type.coding.version"/>
+			<definition value="medicare-number"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="PRES"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.coding.display">
 			<path value="Practitioner.identifier.type.coding.display"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Prescriber Number"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.coding.userSelected">
 			<path value="Practitioner.identifier.type.coding.userSelected"/>
+			<definition value="medicare-number"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.type.text">
 			<path value="Practitioner.identifier.type.text"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Prescriber Number"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.system">
 			<path value="Practitioner.identifier.system"/>
 			<short value="namespace for prescriber number"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/prescriber-number"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.medicare-number.value">
 			<path value="Practitioner.identifier.value"/>
+			<definition value="medicare-number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<example>
@@ -1162,10 +1180,10 @@
 		</element>
 	</snapshot>
 	<differential>
-		<element>
+		<element id="Practitioner">
 			<path value="Practitioner"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.slicing">
 			<path value="Practitioner.identifier"/>
 			<slicing>
 				<discriminator>
@@ -1179,7 +1197,7 @@
 				<rules value="openAtEnd"/>
 			</slicing>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii">
 			<path value="Practitioner.identifier"/>
 			<sliceName value="hpi-i"/>
 			<short value="National Individual Provider Healthcare Identifier"/>
@@ -1190,57 +1208,57 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type">
 			<path value="Practitioner.identifier.type"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.code.system">
 			<path value="Practitioner.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.version">
 			<path value="Practitioner.identifier.type.coding.version"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="NPI"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.display">
 			<path value="Practitioner.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="National provider identifier"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.coding.userSelected">
 			<path value="Practitioner.identifier.type.coding.userSelected"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.type.text">
 			<path value="Practitioner.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="HPI-I"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.system">
 			<path value="Practitioner.identifier.system"/>
 			<short value="national namespace for hpi-i"/>
 			<min value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.hpii.value">
 			<path value="Practitioner.identifier.value"/>
 			<min value="1"/>
 			<example>
@@ -1249,7 +1267,7 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number">
 			<path value="Practitioner.identifier"/>
 			<sliceName value="prescriber-number"/>
 			<short value="Prescriber Number"/>
@@ -1260,58 +1278,58 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type">
 			<path value="Practitioner.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.coding.system">
 			<path value="Practitioner.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.coding.version">
 			<path value="Practitioner.identifier.type.coding.version"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="PRES"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.coding.display">
 			<path value="Practitioner.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Prescriber Number"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.coding.userSelected">
 			<path value="Practitioner.identifier.type.coding.userSelected"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.type.text">
 			<path value="Practitioner.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Prescriber Number"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.system">
 			<path value="Practitioner.identifier.system"/>
 			<short value="namespace for prescriber number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/prescriber-number"/>
 		</element>
-		<element>
+		<element id="Practitioner.identifier.prescriber-number.value">
 			<path value="Practitioner.identifier.value"/>
 			<min value="1"/>
 			<max value="1"/>

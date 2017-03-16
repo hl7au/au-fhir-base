@@ -1,7 +1,2 @@
-Australian Practitioner
+Australian Practitioner Role Profile
 
-
-**Additional Profile specific implementation guidance:**
-
-
-#### Examples
