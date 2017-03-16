@@ -1,3 +1,4 @@
+<!-- edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by Brett Esler (Private) -->
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/structuredefinition.xsd">
 	<id value="au-patient"/>
 	<meta>
@@ -749,7 +750,7 @@
 	</mapping>
 	<kind value="resource"/>
 	<abstract value="false"/>
-	<type value="Practitioner"/>
+	<type value="Patient"/>
 	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
 	<derivation value="constraint"/>
 	<snapshot>
@@ -964,6 +965,24 @@
 				<map value="N/A"/>
 			</mapping>
 		</element>
+		<element id="Patient.extension.indigenous-status">
+			<path value="Patient.extension"/>
+			<sliceName value="indigenous-status"/>
+			<label value="indigenous status"/>
+			<short value="Australian Indigenous Status"/>
+			<definition value="Administrative Australian indigenous status coding"/>
+			<min value="0"/>
+			<max value="1"/>
+			<base>
+				<path value="DomainResource.extension"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<type>
+				<code value="Extension"/>
+				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-indigenous-status"/>
+			</type>
+		</element>
 		<element id="Patient.modifierExtension">
 			<path value="Patient.modifierExtension"/>
 			<short value="Extensions that cannot be ignored"/>
@@ -1015,7 +1034,7 @@
 				<map value="id"/>
 			</mapping>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi">
 			<path value="Patient.identifier"/>
 			<sliceName value="ihi"/>
 			<short value="National Individual Health Identifier"/>
@@ -1027,19 +1046,9 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.extension.ihistatus">
 			<path value="Patient.identifier.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="open"/>
-			</slicing>
-		</element>
-		<element>
-			<path value="Patient.identifier.extension"/>
-			<sliceName value="IHI status"/>
+			<sliceName value="ihistatus"/>
 			<short value="IHI Number Status"/>
 			<definition value="ihi number status extension"/>
 			<min value="0"/>
@@ -1049,11 +1058,11 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
 			</type>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.extension.ihirecordstatus">
 			<path value="Patient.identifier.extension"/>
-			<sliceName value="IHI record status"/>
+			<sliceName value="ihirecordstatus"/>
 			<short value="IHI Record Status"/>
-			<definition value="ihi record status"/>
+			<definition value="ihi"/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>
@@ -1061,58 +1070,67 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-record-status"/>
 			</type>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type">
 			<path value="Patient.identifier.type"/>
+			<definition value="ihi"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
+			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
+			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.coding.version">
 			<path value="Patient.identifier.type.coding.version"/>
+			<definition value="ihi"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.coding.code">
 			<path value="Patient.identifier.type.coding.code"/>
+			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="NI"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
+			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="National unique individual identifier"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.coding.userSelected">
 			<path value="Patient.identifier.type.coding.userSelected"/>
+			<definition value="ihi"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.type.text">
 			<path value="Patient.identifier.type.text"/>
+			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="IHI"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for ihi"/>
+			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.ihi.value">
 			<path value="Patient.identifier.value"/>
 			<short value="Individual Health Identifier number"/>
 			<definition value="The 16 digit unique identifier for consumers of healthcare services"/>
@@ -1124,9 +1142,9 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number">
 			<path value="Patient.identifier"/>
-			<sliceName value="medicare"/>
+			<sliceName value="medicare-number"/>
 			<short value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
@@ -1135,58 +1153,67 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type">
 			<path value="Patient.identifier.type"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.coding.version">
 			<path value="Patient.identifier.type.coding.version"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.coding.code">
 			<path value="Patient.identifier.type.coding.code"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="MC"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Patient's Medicare Number"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.coding.userSelected">
 			<path value="Patient.identifier.type.coding.userSelected"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.type.text">
 			<path value="Patient.identifier.type.text"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Medicare Number"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for medicare"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.value">
 			<path value="Patient.identifier.value"/>
 			<short value="Medicare Number value including optional individual reference number"/>
 			<definition value="10 digit Medicare number with optional 11 digit individual reference number (IRN)"/>
@@ -1199,12 +1226,25 @@
 			</example>
 			<maxLength value="11"/>
 		</element>
-		<element>
-			<path value="Patient.identifier.period.end"/>
+		<element id="Patient.identifier.medicare-number.period">
+			<path value="Patient.identifier.period"/>
+			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Period"/>
+			</type>
 		</element>
-		<element>
+		<element id="Patient.identifier.medicare-number.period.end">
+			<path value="Patient.identifier.period.end"/>
+			<definition value="Medicare Number assigned  to a patient"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+		</element>
+		<element id="Patient.animal">
 			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
 				<valueString value="Animal"/>
 			</extension>
@@ -1785,210 +1825,6 @@
 				<map value="n/a"/>
 			</mapping>
 		</element>
-		<element id="Patient.animal">
-			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-				<valueString value="Animal"/>
-			</extension>
-			<path value="Patient.animal"/>
-			<short value="This patient is known to be an animal (non-human)"/>
-			<definition value="This patient is known to be an animal."/>
-			<comment value="The animal element is labeled &quot;Is Modifier&quot; since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal)."/>
-			<requirements value="Many clinical systems are extended to care for animal patients as well as human."/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="BackboneElement"/>
-			</type>
-			<constraint>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<expression value="children().count() &gt; id.count()"/>
-				<xpath value="@value|f:*|h:div"/>
-				<source value="Element"/>
-			</constraint>
-			<isModifier value="true"/>
-			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="player[classCode=ANM]"/>
-			</mapping>
-			<mapping>
-				<identity value="cda"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Patient.animal.id">
-			<path value="Patient.animal.id"/>
-			<representation value="xmlAttr"/>
-			<short value="xml:id (or equivalent in JSON)"/>
-			<definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-			<min value="0"/>
-			<max value="1"/>
-			<base>
-				<path value="Element.id"/>
-				<min value="0"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="string"/>
-			</type>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Patient.animal.extension">
-			<path value="Patient.animal.extension"/>
-			<short value="Additional Content defined by implementations"/>
-			<definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-			<comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-			<alias value="extensions"/>
-			<alias value="user content"/>
-			<min value="0"/>
-			<max value="*"/>
-			<base>
-				<path value="Element.extension"/>
-				<min value="0"/>
-				<max value="*"/>
-			</base>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Patient.animal.modifierExtension">
-			<path value="Patient.animal.modifierExtension"/>
-			<short value="Extensions that cannot be ignored"/>
-			<definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
-			<comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-			<alias value="extensions"/>
-			<alias value="user content"/>
-			<alias value="modifiers"/>
-			<min value="0"/>
-			<max value="*"/>
-			<base>
-				<path value="BackboneElement.modifierExtension"/>
-				<min value="0"/>
-				<max value="*"/>
-			</base>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<isModifier value="true"/>
-			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="N/A"/>
-			</mapping>
-		</element>
-		<element id="Patient.animal.species">
-			<path value="Patient.animal.species"/>
-			<short value="E.g. Dog, Cow"/>
-			<definition value="Identifies the high level taxonomic categorization of the kind of animal."/>
-			<comment value="If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word &quot;Hereford&quot; does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for &quot;Hereford Cattle Breed&quot; does.)."/>
-			<requirements value="Need to know what kind of animal."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="CodeableConcept"/>
-			</type>
-			<isSummary value="true"/>
-			<binding>
-				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-					<valueString value="AnimalSpecies"/>
-				</extension>
-				<strength value="example"/>
-				<description value="The species of an animal."/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/animal-species"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="v2"/>
-				<map value="PID-35"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="code"/>
-			</mapping>
-			<mapping>
-				<identity value="cda"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Patient.animal.breed">
-			<path value="Patient.animal.breed"/>
-			<short value="E.g. Poodle, Angus"/>
-			<definition value="Identifies the detailed categorization of the kind of animal."/>
-			<comment value="Breed MAY be used to provide further taxonomic or non-taxonomic classification.  It may involve local or proprietary designation--such as commercial strain--and/or additional information such as production type."/>
-			<requirements value="May need to know the specific kind within the species."/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="CodeableConcept"/>
-			</type>
-			<isSummary value="true"/>
-			<binding>
-				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-					<valueString value="AnimalBreed"/>
-				</extension>
-				<strength value="example"/>
-				<description value="The breed of an animal."/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/animal-breeds"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="v2"/>
-				<map value="PID-37"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code"/>
-			</mapping>
-			<mapping>
-				<identity value="cda"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Patient.animal.genderStatus">
-			<path value="Patient.animal.genderStatus"/>
-			<short value="E.g. Neutered, Intact"/>
-			<definition value="Indicates the current state of the animal&#39;s reproductive organs."/>
-			<requirements value="Gender status can affect housing and animal behavior."/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="CodeableConcept"/>
-			</type>
-			<isSummary value="true"/>
-			<binding>
-				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-					<valueString value="AnimalGenderStatus"/>
-				</extension>
-				<strength value="example"/>
-				<description value="The state of the animal&#39;s reproductive organs."/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/animal-genderstatus"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="v2"/>
-				<map value="N/A"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="genderStatusCode"/>
-			</mapping>
-			<mapping>
-				<identity value="cda"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
 		<element id="Patient.communication">
 			<path value="Patient.communication"/>
 			<short value="A list of Languages which may be used to communicate with the patient about his or her health"/>
@@ -2352,13 +2188,10 @@
 		</element>
 	</snapshot>
 	<differential>
-		<element>
+		<element id="differential.Patient">
 			<path value="Patient"/>
-			<type>
-				<code value="Patient"/>
-			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.extension">
 			<path value="Patient.extension"/>
 			<slicing>
 				<discriminator>
@@ -2368,9 +2201,9 @@
 				<rules value="open"/>
 			</slicing>
 		</element>
-		<element>
+		<element id="differential.Patient.extension.indigenous-status">
 			<path value="Patient.extension"/>
-			<sliceName value="indigenous status"/>
+			<sliceName value="indigenous-status"/>
 			<label value="indigenous status"/>
 			<short value="Australian Indigenous Status"/>
 			<definition value="Administrative Australian indigenous status coding"/>
@@ -2386,7 +2219,7 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-indigenous-status"/>
 			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.slicing">
 			<path value="Patient.identifier"/>
 			<slicing>
 				<discriminator>
@@ -2400,7 +2233,7 @@
 				<rules value="openAtEnd"/>
 			</slicing>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi">
 			<path value="Patient.identifier"/>
 			<sliceName value="ihi"/>
 			<short value="National Individual Health Identifier"/>
@@ -2412,7 +2245,7 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.extension.slicing">
 			<path value="Patient.identifier.extension"/>
 			<slicing>
 				<discriminator>
@@ -2422,9 +2255,9 @@
 				<rules value="open"/>
 			</slicing>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.extension.ihistatus">
 			<path value="Patient.identifier.extension"/>
-			<sliceName value="IHI status"/>
+			<sliceName value="ihistatus"/>
 			<short value="IHI Number Status"/>
 			<definition value="ihi number status extension"/>
 			<min value="0"/>
@@ -2434,9 +2267,9 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
 			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.extension.ihirecordstatus">
 			<path value="Patient.identifier.extension"/>
-			<sliceName value="IHI record status"/>
+			<sliceName value="ihirecordstatus"/>
 			<short value="IHI Record Status"/>
 			<definition value="ihi record status"/>
 			<min value="0"/>
@@ -2446,57 +2279,57 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-record-status"/>
 			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type">
 			<path value="Patient.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.coding.version">
 			<path value="Patient.identifier.type.coding.version"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.coding.code">
 			<path value="Patient.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="NI"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="National unique individual identifier"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.coding.userSelected">
 			<path value="Patient.identifier.type.coding.userSelected"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.type.text">
 			<path value="Patient.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="IHI"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for ihi"/>
 			<min value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.ihi.value">
 			<path value="Patient.identifier.value"/>
 			<short value="Individual Health Identifier number"/>
 			<definition value="The 16 digit unique identifier for consumers of healthcare services"/>
@@ -2508,9 +2341,9 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number">
 			<path value="Patient.identifier"/>
-			<sliceName value="medicare"/>
+			<sliceName value="medicare-number"/>
 			<short value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
@@ -2519,76 +2352,90 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type">
 			<path value="Patient.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.coding.version">
 			<path value="Patient.identifier.type.coding.version"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.coding.code">
 			<path value="Patient.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedCode value="MC"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Patient's Medicare Number"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.coding.userSelected">
 			<path value="Patient.identifier.type.coding.userSelected"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.type.text">
 			<path value="Patient.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedString value="Medicare Number"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for medicare"/>
 			<min value="1"/>
 			<max value="1"/>
 			<fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.value">
 			<path value="Patient.identifier.value"/>
 			<short value="Medicare Number value including optional individual reference number"/>
 			<definition value="10 digit Medicare number with optional 11 digit individual reference number (IRN)"/>
 			<comment value="10 digit Medicare Number and optional 1 digit Individual Reference Number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<example>
 				<label value="Medicare number"/>
 				<valueString value="32788511952"/>
 			</example>
 			<maxLength value="11"/>
 		</element>
-		<element>
-			<path value="Patient.identifier.period.end"/>
+		<element id="differential.Patient.identifier.medicare-number.period">
+			<path value="Patient.identifier.period"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Period"/>
+			</type>
 		</element>
-		<element>
+		<element id="differential.Patient.identifier.medicare-number.period.end">
+			<path value="Patient.identifier.period"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+		</element>
+		<element id="differential.Patient.animal">
 			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
 				<valueString value="Animal"/>
 			</extension>
