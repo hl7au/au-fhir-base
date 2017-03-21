@@ -817,13 +817,8 @@
 			<comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation."/>
 			<min value="0"/>
 			<max value="1"/>
-			<base>
-				<path value="Resource.id"/>
-				<min value="0"/>
-				<max value="1"/>
-			</base>
 			<type>
-				<code value="id"/>
+				<code value="Identifier"/>
 			</type>
 			<isSummary value="true"/>
 		</element>
@@ -1075,18 +1070,27 @@
 			<definition value="ihi"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding.version">
@@ -1100,6 +1104,9 @@
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
 			<fixedCode value="NI"/>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding.display">
@@ -1107,6 +1114,9 @@
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="National unique individual identifier"/>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding.userSelected">
@@ -1120,6 +1130,9 @@
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="IHI"/>
 		</element>
 		<element id="Patient.identifier.ihi.system">
@@ -1128,6 +1141,9 @@
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
 		</element>
 		<element id="Patient.identifier.ihi.value">
@@ -1136,6 +1152,9 @@
 			<definition value="The 16 digit unique identifier for consumers of healthcare services"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<example>
 				<label value="IHI number"/>
 				<valueString value="8003608166690503"/>
@@ -1158,18 +1177,27 @@
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding.version">
@@ -1183,6 +1211,9 @@
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
 			<fixedCode value="MC"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding.display">
@@ -1190,6 +1221,9 @@
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Patient's Medicare Number"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding.userSelected">
@@ -1203,6 +1237,9 @@
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Medicare Number"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.system">
@@ -1211,6 +1248,9 @@
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.value">
@@ -1220,6 +1260,9 @@
 			<comment value="10 digit Medicare Number and optional 1 digit Individual Reference Number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<example>
 				<label value="Medicare number"/>
 				<valueString value="32788511952"/>
