@@ -2326,16 +2326,25 @@
 			<path value="Patient.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
 		</element>
 		<element id="differential.Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
 		</element>
 		<element id="differential.Patient.identifier.ihi.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="differential.Patient.identifier.ihi.type.coding.version">
@@ -2347,12 +2356,18 @@
 			<path value="Patient.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
 			<fixedCode value="NI"/>
 		</element>
 		<element id="differential.Patient.identifier.ihi.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="National unique individual identifier"/>
 		</element>
 		<element id="differential.Patient.identifier.ihi.type.coding.userSelected">
@@ -2364,12 +2379,18 @@
 			<path value="Patient.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="IHI"/>
 		</element>
 		<element id="differential.Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for ihi"/>
 			<min value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
 		</element>
 		<element id="differential.Patient.identifier.ihi.value">
@@ -2378,6 +2399,9 @@
 			<definition value="The 16 digit unique identifier for consumers of healthcare services"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<example>
 				<label value="IHI number"/>
 				<valueString value="8003608166690503"/>
@@ -2399,16 +2423,25 @@
 			<path value="Patient.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.type.coding.version">
@@ -2420,12 +2453,18 @@
 			<path value="Patient.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
 			<fixedCode value="MC"/>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Patient's Medicare Number"/>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.type.coding.userSelected">
@@ -2437,6 +2476,9 @@
 			<path value="Patient.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Medicare Number"/>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.system">
@@ -2444,6 +2486,9 @@
 			<short value="national namespace for medicare"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
 		</element>
 		<element id="differential.Patient.identifier.medicare-number.value">
