@@ -642,7 +642,7 @@
 				<map value="id"/>
 			</mapping>
 		</element>
-			<element id="Organization.identifier:hpio">
+		<element id="Organization.identifier:hpio">
 			<path value="Organization.identifier"/>
 			<sliceName value="hpi-o"/>
 			<short value="National organisation identifier"/>
@@ -650,9 +650,9 @@
 			<max value="1"/>
 			<type>
 				<code value="Identifier"/>
-			</type>			
+			</type>
 		</element>
-			<element id="Organization.identifier:hpio.type">
+		<element id="Organization.identifier:hpio.type">
 			<path value="Organization.identifier.type"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -675,7 +675,6 @@
 			<type>
 				<code value="uri"/>
 			</type>
-
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="Organization.identifier:hpio.type.coding.version">
@@ -816,6 +815,46 @@
 				<identity value="w5"/>
 				<map value="class"/>
 			</mapping>
+		</element>
+				<element id="Organization.type.anzicclass">
+			<path value="Organization.type"/>
+			<short value="Organisation Class Type"/>
+			<definition value="The kind of organization that this is coded as ANZSIC class type"/>
+			<comment value="Australian and New Zealand standard classification of industry category level 1 class type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="OrganizationType"/>
+				</extension>
+				<strength value="required"/>
+				<description value="Used to categorize the organization class"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsic-restricted-class"/>
+			</binding>
+		</element>
+		<element id="Organization.type.anzicactivity">
+			<path value="Organization.type"/>
+			<short value="Organisation Activity Type"/>
+			<definition value="The kind of organization that this is coded as ANZSIC activity type"/>
+			<comment value="Australian and New Zealand standard classification of industry category level 2 activity type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="OrganizationType"/>
+				</extension>
+				<strength value="required"/>
+				<description value="Used to categorize the organization activity type"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsic-restricted-activity"/>
+			</binding>
 		</element>
 		<element id="Organization.name">
 			<path value="Organization.name"/>
@@ -1164,9 +1203,9 @@
 			<max value="1"/>
 			<type>
 				<code value="Identifier"/>
-			</type>			
+			</type>
 		</element>
-			<element id="Organization.identifier:hpio.type">
+		<element id="Organization.identifier:hpio.type">
 			<path value="Organization.identifier.type"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -1189,7 +1228,6 @@
 			<type>
 				<code value="uri"/>
 			</type>
-
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="Organization.identifier:hpio.type.coding.version">
@@ -1260,6 +1298,56 @@
 			<path value="Organization.identifier.assigner"/>
 			<min value="0"/>
 			<max value="0"/>
+		</element>
+		<element id="Organization.type:slice">
+			<path value="Organization.type"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="Coding.system"/>
+				</discriminator>
+				<rules value="openAtEnd"/>
+			</slicing>
+		</element>
+		<element id="Organization.type.anzicclass">
+			<path value="Organization.type"/>
+			<short value="Organisation Class Type"/>
+			<definition value="The kind of organization that this is coded as ANZSIC class type"/>
+			<comment value="Australian and New Zealand standard classification of industry category level 1 class type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="OrganizationType"/>
+				</extension>
+				<strength value="required"/>
+				<description value="Used to categorize the organization class"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsic-restricted-class"/>
+			</binding>
+		</element>
+		<element id="Organization.type.anzicactivity">
+			<path value="Organization.type"/>
+			<short value="Organisation Activity Type"/>
+			<definition value="The kind of organization that this is coded as ANZSIC activity type"/>
+			<comment value="Australian and New Zealand standard classification of industry category level 2 activity type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="OrganizationType"/>
+				</extension>
+				<strength value="required"/>
+				<description value="Used to categorize the organization activity type"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsic-restricted-activity"/>
+			</binding>
 		</element>
 	</differential>
 </StructureDefinition>
