@@ -722,78 +722,105 @@
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.extension">
 			<path value="PractitionerRole.identifier.extension"/>
-			<definition value="provider number"/>
-			<min value="0"/>
-			<max value="1"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type">
 			<path value="PractitionerRole.identifier.type"/>
-			<definition value="provider number"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding">
 			<path value="PractitionerRole.identifier.type.coding"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.system">
 			<path value="PractitionerRole.identifier.type.coding.system"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.version">
 			<path value="PractitionerRole.identifier.type.coding.version"/>
-			<definition value="provider number"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.code">
 			<path value="PractitionerRole.identifier.type.coding.code"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
 			<fixedCode value="PRN"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.display">
 			<path value="PractitionerRole.identifier.type.coding.display"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Provider number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.userSelected">
 			<path value="PractitionerRole.identifier.type.coding.userSelected"/>
-			<definition value="provider number"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.text">
 			<path value="PractitionerRole.identifier.type.text"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Provider Number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.system">
 			<path value="PractitionerRole.identifier.system"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
-			<fixedUri value="http://ns.electronichealth.net.au/id/hi/prn"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/provider-number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.value">
 			<path value="PractitionerRole.identifier.value"/>
-			<definition value="provider number"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<example>
 				<label value="Provider number"/>
 				<valueString value="2426621B"/>
 			</example>
+		</element>
+		<element id="PractitionerRole.location">
+			<path value="PractitionerRole.location"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+			</type>
 		</element>
 		<element id="PractitionerRole.active">
 			<path value="PractitionerRole.active"/>
@@ -916,6 +943,25 @@
 				<map value="(ServD maps Practitioners and Organizations via another entity, so this concept is not available)"/>
 			</mapping>
 		</element>
+		<element id="PractitionerRole.code.anzsco">
+			<path value="PractitionerRole.code"/>
+			<short value="Practitioner Role"/>
+			<definition value="The main job role this practitioner plays"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="PractitionerRole"/>
+				</extension>
+				<strength value="required"/>
+				<description value="Used to categorize the provider role type"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsco"/>
+			</binding>
+		</element>
 		<element id="PractitionerRole.specialty">
 			<path value="PractitionerRole.specialty"/>
 			<short value="Specific specialty of the practitioner"/>
@@ -933,7 +979,7 @@
 				<strength value="preferred"/>
 				<description value="Specific specialty associated with the agency"/>
 				<valueSetReference>
-					<reference value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsco"/>
+					<reference value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
 				</valueSetReference>
 			</binding>
 			<mapping>
@@ -955,6 +1001,11 @@
 			<definition value="The location at which this practitioner is a provider"/>
 			<min value="0"/>
 			<max value="1"/>
+			<base>
+				<path value="Reference"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
@@ -1320,7 +1371,7 @@
 			<short value="Roles/organizations the practitioner is associated with"/>
 			<definition value="A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time."/>
 			<min value="0"/>
-			<max value="*"/>		
+			<max value="*"/>
 		</element>
 		<element id="PractitionerRole.identifier.slicing">
 			<path value="PractitionerRole.identifier"/>
@@ -1361,16 +1412,25 @@
 			<path value="PractitionerRole.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding">
 			<path value="PractitionerRole.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.system">
 			<path value="PractitionerRole.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.version">
@@ -1382,12 +1442,18 @@
 			<path value="PractitionerRole.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
 			<fixedCode value="PRN"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.display">
 			<path value="PractitionerRole.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Provider number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.userSelected">
@@ -1399,18 +1465,27 @@
 			<path value="PractitionerRole.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<fixedString value="Provider Number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.system">
 			<path value="PractitionerRole.identifier.system"/>
 			<min value="1"/>
 			<max value="1"/>
-			<fixedUri value="http://ns.electronichealth.net.au/id/hi/prn"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/provider-number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.value">
 			<path value="PractitionerRole.identifier.value"/>
 			<min value="1"/>
 			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
 			<example>
 				<label value="Provider number"/>
 				<valueString value="2426621B"/>
@@ -1420,6 +1495,39 @@
 			<path value="PractitionerRole.location"/>
 			<min value="0"/>
 			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+			</type>
+		</element>
+		<element id="PractitionerRole.code.slicing">
+			<path value="PractitionerRole.code"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="Coding.system"/>
+				</discriminator>
+				<rules value="openAtEnd"/>
+			</slicing>
+		</element>
+		<element id="PractitionerRole.code.anzsco">
+			<path value="PractitionerRole.code"/>
+			<short value="Practitioner Role"/>
+			<definition value="The main job role this practitioner plays"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="PractitionerRole"/>
+				</extension>
+				<strength value="required"/>
+				<description value="Used to categorize the provider role type"/>
+				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-anzsco"/>
+			</binding>
 		</element>
 	</differential>
 </StructureDefinition>
