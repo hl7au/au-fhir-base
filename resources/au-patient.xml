@@ -1271,7 +1271,8 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.period">
 			<path value="Patient.identifier.period"/>
-			<definition value="Medicare Number assigned  to a patient"/>
+			<short value="Medicare number validity period"/>
+			<definition value="Period of validity for Medicare number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -1280,12 +1281,121 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.period.end">
 			<path value="Patient.identifier.period.end"/>
-			<definition value="Medicare Number assigned  to a patient"/>
+			<short value="Medicare number expiry end date"/>
+			<definition value="Expiry date for medicare number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="dateTime"/>
 			</type>
+		</element>
+		<element id="Patient.identifier.dva-number">
+			<path value="Patient.identifier"/>
+			<sliceName value="medicare-number"/>
+			<short value="DVA Number"/>
+			<definition value="Department of Veterans' Affairs number"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element>
+		<element id="Patient.identifier.dva-number.type">
+			<path value="Patient.identifier.type"/>
+			<definition value="Coded identifier type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding">
+			<path value="Patient.identifier.type.coding"/>
+			<definition value="DVA number coding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.system">
+			<path value="Patient.identifier.type.coding.system"/>
+			<definition value="DVA number coding system"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.version">
+			<path value="Patient.identifier.type.coding.version"/>
+			<definition value="DVA Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.code">
+			<path value="Patient.identifier.type.coding.code"/>
+			<definition value="DVA Number code"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<fixedCode value="DV"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.display">
+			<path value="Patient.identifier.type.coding.display"/>
+			<definition value="DVA number desciption"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="DVA Number"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.userSelected">
+			<path value="Patient.identifier.type.coding.userSelected"/>
+			<definition value="DVA Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.text">
+			<path value="Patient.identifier.type.text"/>
+			<definition value="DVA Number type description"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="Department of Veterans Affairs Number"/>
+		</element>
+		<element id="Patient.identifier.dva-number.system">
+			<path value="Patient.identifier.system"/>
+			<short value="DVA number identifier system"/>
+			<definition value="DVA Number assigned uri"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/dva"/>
+		</element>
+		<element id="Patient.identifier.dva-number.value">
+			<path value="Patient.identifier.value"/>
+			<short value="DVA number value"/>
+			<definition value="Up to 9 digit value in the form AAXXNNNN[A]"/>
+			<comment value="Reference: http://meteor.aihw.gov.au/content/index.phtml/itemId/339127"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<example>
+				<label value="DVA number"/>
+				<valueString value="NBUR9080"/>
+			</example>
+			<maxLength value="9"/>
 		</element>
 		<element id="Patient.animal">
 			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -2231,10 +2341,10 @@
 		</element>
 	</snapshot>
 	<differential>
-		<element id="differential.Patient">
+		<element id="Patient">
 			<path value="Patient"/>
 		</element>
-		<element id="differential.Patient.extension">
+		<element id="Patient.extension">
 			<path value="Patient.extension"/>
 			<slicing>
 				<discriminator>
@@ -2244,7 +2354,7 @@
 				<rules value="open"/>
 			</slicing>
 		</element>
-		<element id="differential.Patient.extension.indigenous-status">
+		<element id="Patient.extension.indigenous-status">
 			<path value="Patient.extension"/>
 			<sliceName value="indigenous-status"/>
 			<label value="indigenous status"/>
@@ -2262,7 +2372,7 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-indigenous-status"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.slicing">
+		<element id="Patient.identifier.slicing">
 			<path value="Patient.identifier"/>
 			<slicing>
 				<discriminator>
@@ -2276,7 +2386,7 @@
 				<rules value="openAtEnd"/>
 			</slicing>
 		</element>
-		<element id="differential.Patient.identifier.ihi">
+		<element id="Patient.identifier.ihi">
 			<path value="Patient.identifier"/>
 			<sliceName value="ihi"/>
 			<short value="National Individual Health Identifier"/>
@@ -2288,7 +2398,7 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.ihi.extension.slicing">
+		<element id="Patient.identifier.ihi.extension.slicing">
 			<path value="Patient.identifier.extension"/>
 			<slicing>
 				<discriminator>
@@ -2298,7 +2408,7 @@
 				<rules value="open"/>
 			</slicing>
 		</element>
-		<element id="differential.Patient.identifier.ihi.extension.ihistatus">
+		<element id="Patient.identifier.ihi.extension.ihistatus">
 			<path value="Patient.identifier.extension"/>
 			<sliceName value="ihistatus"/>
 			<short value="IHI Number Status"/>
@@ -2310,7 +2420,7 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.ihi.extension.ihirecordstatus">
+		<element id="Patient.identifier.ihi.extension.ihirecordstatus">
 			<path value="Patient.identifier.extension"/>
 			<sliceName value="ihirecordstatus"/>
 			<short value="IHI Record Status"/>
@@ -2322,7 +2432,7 @@
 				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-record-status"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type">
+		<element id="Patient.identifier.ihi.type">
 			<path value="Patient.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -2330,7 +2440,7 @@
 				<code value="CodeableConcept"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.coding">
+		<element id="Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2338,7 +2448,7 @@
 				<code value="Coding"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.coding.system">
+		<element id="Patient.identifier.ihi.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2347,12 +2457,12 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.coding.version">
+		<element id="Patient.identifier.ihi.type.coding.version">
 			<path value="Patient.identifier.type.coding.version"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.coding.code">
+		<element id="Patient.identifier.ihi.type.coding.code">
 			<path value="Patient.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2361,7 +2471,7 @@
 			</type>
 			<fixedCode value="NI"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.coding.display">
+		<element id="Patient.identifier.ihi.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2370,12 +2480,12 @@
 			</type>
 			<fixedString value="National unique individual identifier"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.coding.userSelected">
+		<element id="Patient.identifier.ihi.type.coding.userSelected">
 			<path value="Patient.identifier.type.coding.userSelected"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.type.text">
+		<element id="Patient.identifier.ihi.type.text">
 			<path value="Patient.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2384,7 +2494,7 @@
 			</type>
 			<fixedString value="IHI"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.system">
+		<element id="Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for ihi"/>
 			<min value="1"/>
@@ -2393,7 +2503,7 @@
 			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
 		</element>
-		<element id="differential.Patient.identifier.ihi.value">
+		<element id="Patient.identifier.ihi.value">
 			<path value="Patient.identifier.value"/>
 			<short value="Individual Health Identifier number"/>
 			<definition value="The 16 digit unique identifier for consumers of healthcare services"/>
@@ -2408,7 +2518,7 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number">
+		<element id="Patient.identifier.medicare-number">
 			<path value="Patient.identifier"/>
 			<sliceName value="medicare-number"/>
 			<short value="Medicare Number"/>
@@ -2419,7 +2529,7 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type">
+		<element id="Patient.identifier.medicare-number.type">
 			<path value="Patient.identifier.type"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -2427,7 +2537,7 @@
 				<code value="CodeableConcept"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.coding">
+		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2435,7 +2545,7 @@
 				<code value="Coding"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.coding.system">
+		<element id="Patient.identifier.medicare-number.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2444,12 +2554,12 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.coding.version">
+		<element id="Patient.identifier.medicare-number.type.coding.version">
 			<path value="Patient.identifier.type.coding.version"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.coding.code">
+		<element id="Patient.identifier.medicare-number.type.coding.code">
 			<path value="Patient.identifier.type.coding.code"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2458,7 +2568,7 @@
 			</type>
 			<fixedCode value="MC"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.coding.display">
+		<element id="Patient.identifier.medicare-number.type.coding.display">
 			<path value="Patient.identifier.type.coding.display"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2467,12 +2577,12 @@
 			</type>
 			<fixedString value="Patient's Medicare Number"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.coding.userSelected">
+		<element id="Patient.identifier.medicare-number.type.coding.userSelected">
 			<path value="Patient.identifier.type.coding.userSelected"/>
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.type.text">
+		<element id="Patient.identifier.medicare-number.type.text">
 			<path value="Patient.identifier.type.text"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2481,7 +2591,7 @@
 			</type>
 			<fixedString value="Medicare Number"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.system">
+		<element id="Patient.identifier.medicare-number.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for medicare"/>
 			<min value="1"/>
@@ -2491,7 +2601,7 @@
 			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.value">
+		<element id="Patient.identifier.medicare-number.value">
 			<path value="Patient.identifier.value"/>
 			<short value="Medicare Number value including optional individual reference number"/>
 			<definition value="10 digit Medicare number with optional 11 digit individual reference number (IRN)"/>
@@ -2507,7 +2617,7 @@
 			</example>
 			<maxLength value="11"/>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.period">
+		<element id="Patient.identifier.medicare-number.period">
 			<path value="Patient.identifier.period"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2515,7 +2625,7 @@
 				<code value="Period"/>
 			</type>
 		</element>
-		<element id="differential.Patient.identifier.medicare-number.period.end">
+		<element id="Patient.identifier.medicare-number.period.end">
 			<path value="Patient.identifier.period"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -2523,7 +2633,115 @@
 				<code value="dateTime"/>
 			</type>
 		</element>
-		<element id="differential.Patient.animal">
+		<element id="Patient.identifier.dva-number">
+			<path value="Patient.identifier"/>
+			<sliceName value="dva-number"/>
+			<short value="DVA Number"/>
+			<definition value="DVA Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element>
+		<element id="Patient.identifier.dva-number.type">
+			<path value="Patient.identifier.type"/>
+			<definition value="Coded identifier type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding">
+			<path value="Patient.identifier.type.coding"/>
+			<definition value="DVA number coding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.system">
+			<path value="Patient.identifier.type.coding.system"/>
+			<definition value="DVA number coding system"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.version">
+			<path value="Patient.identifier.type.coding.version"/>
+			<definition value="DVA Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.code">
+			<path value="Patient.identifier.type.coding.code"/>
+			<definition value="DVA Number code"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<fixedCode value="DV"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.display">
+			<path value="Patient.identifier.type.coding.display"/>
+			<definition value="DVA number desciption"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="DVA Number"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.coding.userSelected">
+			<path value="Patient.identifier.type.coding.userSelected"/>
+			<definition value="DVA Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="Patient.identifier.dva-number.type.text">
+			<path value="Patient.identifier.type.text"/>
+			<definition value="DVA Number type description"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="Department of Veterans Affairs Number"/>
+		</element>
+		<element id="Patient.identifier.dva-number.system">
+			<path value="Patient.identifier.system"/>
+			<short value="DVA number identifier system"/>
+			<definition value="DVA Number assigned uri"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/dva"/>
+		</element>
+		<element id="Patient.identifier.dva-number.value">
+			<path value="Patient.identifier.value"/>
+			<short value="DVA number value"/>
+			<definition value="Up to 9 digit value in the form AAXXNNNN[A]"/>
+			<comment value="Reference: http://meteor.aihw.gov.au/content/index.phtml/itemId/339127"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<example>
+				<label value="DVA number"/>
+				<valueString value="NBUR9080"/>
+			</example>
+			<maxLength value="9"/>
+		</element>
+		<element id="Patient.animal">
 			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
 				<valueString value="Animal"/>
 			</extension>
