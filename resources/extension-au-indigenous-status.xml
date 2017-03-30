@@ -33,7 +33,7 @@
 			<min value="0"/>
 			<max value="1"/>
 		</element>
-		<element  id="Extension.id">
+		<element id="Extension.id">
 			<path value="Extension.id"/>
 			<short value="xml:id (or equivalent in JSON)"/>
 			<definition value="unique id for the element within a resource (for internal references)."/>
@@ -82,10 +82,10 @@
 			<type>
 				<code value="uri"/>
 			</type>
+			<fixedUri value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status"/>
 		</element>
 		<element id="Extension.valueCoding">
 			<path value="Extension.valueCoding"/>
-			<sliceName value="indigenousStatusCode"/>
 			<short value="Indigenous status code"/>
 			<definition value="NHDD based indigenous status code"/>
 			<min value="1"/>
@@ -100,13 +100,20 @@
 			</type>
 			<binding>
 				<strength value="required"/>
-					<description value="NHDD Aboriginal status coding"/>
+				<description value="NHDD Aboriginal status coding"/>
 				<valueSetUri value="http://fhir.hl7.org.au/fhir/base/ValueSet/valueset-au-indigenous-status"/>
 			</binding>
 		</element>
 	</snapshot>
 	<differential>
-		
+		<element id="Extension">
+			<path value="Extension"/>
+			<short value="Indigenous status"/>
+			<definition value="NHDD based indigenous status for a patient"/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
 		<element id="Extension.url">
 			<path value="Extension.url"/>
 			<min value="1"/>
@@ -114,15 +121,19 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-indigenous-status"/>
+			<fixedUri value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status"/>
 		</element>
 		<element id="Extension.valueCoding">
 			<path value="Extension.valueCoding"/>
-			<sliceName value="indigenousStatusCode"/>
 			<short value="Indigenous status code"/>
 			<definition value="NHDD based indigenous status code"/>
 			<min value="1"/>
 			<max value="1"/>
+			<base>
+				<path value="Extension.value[x]"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
 			<type>
 				<code value="Coding"/>
 			</type>

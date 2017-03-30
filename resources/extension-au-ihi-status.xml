@@ -82,7 +82,7 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0/StructureDefinition/ihi-status"/>
 		</element>
 		<element id="Element.valueCoding">
 			<path value="Extension.valueCoding"/>
@@ -107,9 +107,17 @@
 		</element>
 	</snapshot>
 	<differential>
-		<element id="Element">
+		<element id="Extension">
+			<path value="Extension"/>
+			<short value="IHI Status"/>
+			<definition value="IHI value status associated with an IHI identifier"/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Element.url">
 			<path value="Extension.url"/>
-			<fixedUri value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+			<fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0/StructureDefinition/ihi-status"/>
 		</element>
 		<element id="Element.valueCoding">
 			<path value="Extension.valueCoding"/>
