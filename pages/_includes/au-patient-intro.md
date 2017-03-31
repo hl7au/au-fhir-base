@@ -20,7 +20,7 @@ agency to reconcile payment for the service provided. The data should not be use
 organisations for any other purpose unless specifically authorised by law. For example, data linkage 
 should not be carried out unless specifically authorised by law.
 
-* __DVA (Department of Veterans' Affairs) Number __ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/339127))
+* __DVA (Department of Veterans' Affairs) Number__ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/339127))
 
 The data should not be used by private sector organisations for any purpose unless specifically authorised by law. For example, 
 private sector organisations should not use the DVA file number for data linking unless specifically authorised by relevant 
