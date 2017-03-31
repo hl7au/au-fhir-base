@@ -1,31 +1,55 @@
 ## {{ page.title }}
 {:.no_toc}
 
-source pages/_include/{{page.md_filename}}.md  file
-
 <!-- TOC -->
 
 * Do not remove this line (it will not be displayed)
 {:toc}
 
 ## Introduction
-This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup>  in an Australian context.
+This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
-Uses of core resources are described in this guide with common localisation concepts, such as those related to:
+This document is a working specification that is expected to be implemented and tested by FHIR®© system producers
+to enable feedback to improve the content of this guide.
 
-* Patient: IHI, Medicare number, indigenous status
-* Practitioners: HPI-I, Prescriber number
-* Practitioner roles (provider): Provider number, job role
-* Organisations: HPI-O, service type, service activity type
+## Scope
 
-Profiles contained in this implementation guide document the structure of some common Australian context concepts. 
-This scope is currently addressing general use of these concepts this particularly addresses the need for exchange of this content at a resource level.
-The material also can be drawn on as the basis of further sophisticated composed profiles for messages and documents for specific use cases.
+An indication of FHIR profiles that are managed under HL7 Australia working groups follows. 
+
+__HL7 Australia Patient Administration Working Group__
+* [Patient](StructureDefinition-au-patient.html): identifying values (IHI, Medicare Number, DVA Number), indigenous status
+* [Practitioner](StructureDefinition-au-practitioner.html): identifiers (HPI-I, Prescriber Number)
+* [PractitionerRole](StructureDefinition-au-practitionerrole.html): identifiers (Provider Number), occupation role
+* [Organization](StructureDefinition-au-organisation.html): identifiers (HPI-O), industry class, industry activity
+
+__HL7 Australia Medications Working Group__
+* Medication: (tbd)
+* MedicationRequest: (tbd)
+* MedicationDispense: (tbd)
+* MedicationStatement: (tbd)
+* Immunization: (tbd)
+
+__HL7 Australia Orders and Observations Working Group__
+* Observation (Vital Signs): (tbd)
+* Observation (Smoking Status): (tbd)
+* Observation (Pathology Results): (tbd)
+* DiagnosticReport: (tbd)
+
+## Usage
+
+This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
+
+Information contained in this document is aimed at providing guidance on representing Australian local concepts 
+using FHIR. This includes code systems, extensions and profiles on base FHIR types.  The content of the IG is 
+general in nature and seeks to provide a ‘how-to’ guide when representing concepts, it includes core base
+profiles that can be further constrained for a particular usage.
+
+FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of the guide as being suitable for 
+implementation. This implementation guide will be used as the basis for Australian connectathon events.
 
 
-This document is a working specification that is expected to be implemented and tested by FHIR<sup>&reg;&copy;</sup> system producers to enable feedback to improve the content of this guide.
 
-FHIR<sup>&reg;&copy;</sup>  Connectathons are key to the verification of the guide as being suitable for implementation and this will be supported through various face to face and virtual events.
+
 
 
 
