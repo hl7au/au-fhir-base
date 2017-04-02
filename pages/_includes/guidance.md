@@ -1,8 +1,6 @@
 ## {{ page.title }}
 {:.no_toc}
 
-source pages/_include/{{page.md_filename}}.md  file
-
 <!-- TOC -->
 
 * Do not remove this line (it will not be displayed)

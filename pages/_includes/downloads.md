@@ -1,7 +1,5 @@
 # {{ page.title }}
 
-source pages/_include/{{page.md_filename}}.md  file
-
 **Validator Pack and Definitions:**
 
 The following file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this Implementation Guides.:
