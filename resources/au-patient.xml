@@ -975,7 +975,7 @@
 			</base>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-indigenous-status"/>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-indigenous-status"/>
 			</type>
 		</element>
 		<element id="Patient.modifierExtension">
@@ -1050,7 +1050,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-status"/>
 			</type>
 		</element>
 		<element id="Patient.identifier.ihi.extension.ihirecordstatus">
@@ -1062,7 +1062,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-record-status"/>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-record-status"/>
 			</type>
 		</element>
 		<element id="Patient.identifier.ihi.type">
@@ -1073,6 +1073,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -1180,6 +1186,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -1308,6 +1320,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Patient.identifier.dva-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -1368,7 +1386,7 @@
 			<type>
 				<code value="string"/>
 			</type>
-			<fixedString value="Department of Veterans Affairs Number"/>
+			<fixedString value="Department of Veterans' Affairs Number"/>
 		</element>
 		<element id="Patient.identifier.dva-number.system">
 			<path value="Patient.identifier.system"/>
@@ -2369,7 +2387,7 @@
 			</base>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-indigenous-status"/>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-indigenous-status"/>
 			</type>
 		</element>
 		<element id="Patient.identifier.slicing">
@@ -2417,7 +2435,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-status"/>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-status"/>
 			</type>
 		</element>
 		<element id="Patient.identifier.ihi.extension.ihirecordstatus">
@@ -2429,7 +2447,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://fhir.hl7.org.au/fhir/base/StructureDefinition/extension-au-ihi-record-status"/>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-record-status"/>
 			</type>
 		</element>
 		<element id="Patient.identifier.ihi.type">
@@ -2447,6 +2465,12 @@
 			<type>
 				<code value="Coding"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding.system">
 			<path value="Patient.identifier.type.coding.system"/>
@@ -2536,6 +2560,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -2652,6 +2682,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Patient.identifier.dva-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -2712,7 +2748,7 @@
 			<type>
 				<code value="string"/>
 			</type>
-			<fixedString value="Department of Veterans Affairs Number"/>
+			<fixedString value="Department of Veterans' Affairs Number"/>
 		</element>
 		<element id="Patient.identifier.dva-number.system">
 			<path value="Patient.identifier.system"/>

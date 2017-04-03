@@ -12,6 +12,8 @@ IHI is part of the government's e-health initiative developed to enhance the way
 and managed in the Australian health sector. Electronic identifiers and the systems underpinning them were
 developed and are maintained by Medicare Australia.
 
+The IHI identifier may also include extension properties IHI Status and IHI Record Status associated with the IHI value.
+
 * __Medicare Number__ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/270101))
 
 The Medicare card number should only be collected from persons eligible to receive health services that are
@@ -20,18 +22,24 @@ agency to reconcile payment for the service provided. The data should not be use
 organisations for any other purpose unless specifically authorised by law. For example, data linkage 
 should not be carried out unless specifically authorised by law.
 
+Medicare number may also include an expiry date associated with the number.
+
 * __DVA (Department of Veterans' Affairs) Number__ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/339127))
 
 The data should not be used by private sector organisations for any purpose unless specifically authorised by law. For example, 
 private sector organisations should not use the DVA file number for data linking unless specifically authorised by relevant 
 privacy legislation.
 
+DVA number may also include details of the specific card colour associated with the number.
+
 ## Extensions
 Definitions here describe extensions to the Patient resource.
 
 * __Indigenous Status__  ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543))
 
-This extension is added to hold the administrative indigenous status of an individual. The Commonwealth defintions
+This extension is added to hold the administrative indigenous status of an individual. The Commonwealth defintion
 of indigenous status is "An Aboriginal or Torres Strait Islander is a person of Aboriginal or Torres Strait Islander 
 descent who identifies as an Aboriginal or Torres Strait Islander and is accepted as such by the community in which
 he or she lives"
+
+Indigenous status is defined as a coded concept associated with the patient.
