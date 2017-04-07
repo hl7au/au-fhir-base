@@ -1,20 +1,19 @@
 Australian Patient Profile
 
-This profile defines a patient administration structure that includes core localisation concepts.
+This profile defines a patient administration details structure that includes core localisation concepts.
 
-## Identifiers
+#### Identifiers
 These definitions represent common data held in the Patient.identifier element.
 
 * __Individual Healthcare Identifier - IHI__ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495))
 
-Each person's Individual Healthcare Identifier (IHI) is unique within the Australian health care system. The 
-IHI is part of the government's e-health initiative developed to enhance the way information is exchanged, shared
-and managed in the Australian health sector. Electronic identifiers and the systems underpinning them were
-developed and are maintained by Medicare Australia.
+The numerical identifier that uniquely identifies each individual in the Australian healthcare system.
 
 The IHI identifier may also include extension properties IHI Status and IHI Record Status associated with the IHI value.
 
 * __Medicare Number__ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/270101))
+
+Person identifier, allocated by the Health Insurance Commission to eligible persons under the Medicare scheme, that appears on a Medicare card.
 
 The Medicare card number should only be collected from persons eligible to receive health services that are
 to be funded by the Commonwealth government. The number should be reported to the appropriate government 
@@ -32,7 +31,7 @@ privacy legislation.
 
 DVA number may also include details of the specific card colour associated with the number.
 
-## Extensions
+#### Extensions
 Definitions here describe extensions to the Patient resource.
 
 * __Indigenous Status__  ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543))
@@ -43,3 +42,12 @@ descent who identifies as an Aboriginal or Torres Strait Islander and is accepte
 he or she lives"
 
 Indigenous status is defined as a coded concept associated with the patient.
+
+#### Examples
+
+[Patient with IHI and Medicare Number](au-patient-example-0.html)
+
+[Patient with IHI and DVA Number](au-patient-example-1.html)
+
+[Patient with Indigenous Status](au-patient-example-2.html)
+
