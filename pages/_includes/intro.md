@@ -9,7 +9,7 @@
 ## Introduction
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
-This document is a working specification that is expected to be implemented and tested by FHIR®© system producers
+This document is a working specification that is expected to be implemented and tested by FHIR<sup>&reg;&copy;</sup> system producers
 to enable feedback to improve the content of this guide.
 
 ## Scope
@@ -47,7 +47,16 @@ profiles that can be further constrained for a particular usage.
 FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of the guide as being suitable for 
 implementation. This implementation guide will be used as the basis for Australian connectathon events.
 
+## Collaboration
+This guide is the product of collaborative work undertaken with participants from:
 
+* Australian Digital Health Agency
+* Secure Messaging Technical Working Group
+* Australian FHIR Implementers' Community
+* HL7 Australia Patient Administration Working Group
+* HL7 Australia Medications Working Group
+* HL7 Australia Orders and Observations Working Group
+* HL7 Australia Members 
 
 
 

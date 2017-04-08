@@ -5,7 +5,7 @@ This profile defines a practitioner administration details structure that includ
 #### Identifiers
 These definitions represent common data held in the Practitioner.identifier element.
 
-* __Healthcare Provider Identifier - Individual__ ([METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495))
+* __Healthcare Provider Identifier - Individual__
 
 The Healthcare provider identifier—individual (HPI-I) is the numerical identifier that uniquely identifies individuals in Australia providing healthcare.
 
