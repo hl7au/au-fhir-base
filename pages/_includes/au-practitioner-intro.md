@@ -16,5 +16,5 @@ A unique numeric identifier for the prescriber of the Pharmaceutical Benefits Sc
 
 #### Examples
 
-[Practitioner with HPI-I and Prescriber Number](practitioner-example0.html)
+[Practitioner with HPI-I and Prescriber Number](PractitionerRole-example0.html)
 

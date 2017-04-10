@@ -11,5 +11,5 @@ The Healthcare provider identifier—organisation (HPI-O) is the numerical ident
 
 #### Examples
 
-[Organisation with HPI-O and ANZSIC coded class/activity types](organization-example0.html)
+[Organisation with HPI-O and ANZSIC coded class/activity types](Organization-example0.html)
 
