@@ -4,7 +4,7 @@
   "source": "ig.xml",
   "dependencyList": [],
   "spreadsheets": [],
-  "special-urls": [ "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "http://hl7.org.au/fhir/v2/0203" ],
+  "special-urls": ["http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "http://hl7.org.au/fhir/v2/0203" ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "ConceptMap": { "template-base": "cm.html" },
@@ -17,13 +17,24 @@
       "template-defns": "sd-definitions.html",
       "template-mappings": "sd-mappings.html"
     },
-    "ValueSet": { "template-base": "vs.html" },
+    "ValueSet": { "template-base": "vs.html"},
     "CodeSystem": { "template-base": "cs.html" },
-	"Patient": { "template-base": "ex.html" },
-	"Practitioner": { "template-base": "ex.html" },
-	"PractitionerRole": { "template-base": "ex.html" },
-	"Organization": { "template-base": "ex.html" }
-  },
+	"Patient": { 
+		"template-base": "ex.html",
+		"template-format": "ex-format.html"
+	},
+	"Practitioner": { 
+		"template-base": "ex.html",
+		"template-format": "ex-format.html" 
+	},
+	"PractitionerRole": { 
+		"template-base": "ex.html",
+		"template-format": "ex-format.html" 
+	},
+	"Organization": { 
+		"template-base": "ex.html",
+		"template-format": "ex-format.html" }
+	},
   "tool": "jekyll",
   "canonicalBase": "http://hl7.org.au/fhir",
   "paths": {
@@ -93,7 +104,7 @@
 	"StructureDefinition/au-organisation": {
 	  "base": "StructureDefinition-au-organisation.html"
 	},
-	"StructureDefinition/extension-au-indigenous-status": {
+	"StructureDefinition/indigenous-status": {
 	  "base": "StructureDefinition-extension-au-indigenous-status.html"
 	},
 	"StructureDefinition/extension-au-ihi-status": {

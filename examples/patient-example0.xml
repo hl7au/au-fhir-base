@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
-	<id value="aubase-patient-example1"/>
-	<extension url="http://hl7.org.au/fhir/StructureDefinition/extension-au-indigenous-status">
+	<id value="example0"/>
+	<extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
 		<valueCoding>
 			<system value="http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes"/>
-			<code value="3"/>
-			<display value="Both Aboriginal and Torres Strait Islander origin"/>
+			<code value="9"/>
+			<display value="Not stated/inadequately described"/>
 		</valueCoding>
 	</extension>
 	<identifier>
-		<extension url="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-status">
+		<extension url="http://ns.electronichealth.net.au/id/hi/ihi/1.0/StructureDefinition/ihi-status">
 			<valueCoding>
 				<system value="http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0"/>
 				<code value="Active"/>
 				<display value="Active"/>
 			</valueCoding>
 		</extension>
-		<extension url="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-record-status">
+		<extension url="http://ns.electronichealth.net.au/id/hi/ihi/1.0/StructureDefinition/ihi-record-status">
 			<valueCoding>
 				<system value="http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0"/>
 				<code value="Verified"/>
@@ -32,39 +32,34 @@
 			<text value="IHI"/>
 		</type>
 		<system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-		<value value="8003608000024083"/>
+		<value value="8003608166690503"/>
 	</identifier>
 	<identifier>
 		<type>
 			<coding>
-				<system value="http://hl7.org.au/fhir/v2/0203"/>
-				<code value="DV"/>
-				<display value="DVA Card Number"/>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="MC"/>
+				<display value="Patient's Medicare Number"/>
 			</coding>
-			<coding>
-				<system value="http://hl7.org.au/fhir/v2/0203"/>
-				<code value="DVG"/>
-				<display value="DVA Gold Card Number"/>
-			</coding>
-			<text value="Department of Veterans' Affairs Number"/>
+			<text value="Medicare Number"/>
 		</type>
-		<system value="http://ns.electronichealth.net.au/id/dva"/>
-		<value value="NBUR9080"/>
+		<system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+		<value value="32788511952"/>
 	</identifier>
 	<name>
-		<family value="Dan"/>
-		<given value="Harry"/>
+		<family value="Franklin"/>
+		<given value="Stella"/>
 	</name>
 	<telecom>
 		<system value="email"/>
-		<value value="hdan@amail.com.au"/>
+		<value value="sfranklin@amail.com.au"/>
 		<use value="work"/>
 	</telecom>
-	<gender value="male"/>
-	<birthDate value="1939-08-25"/>
+	<gender value="female"/>
+	<birthDate value="1979-10-14"/>
 	<address>
 		<use value="home"/>
-		<line value="29 Gadsby Street"/>
+		<line value="31 Pacquola Street"/>
 		<city value="Blacktown"/>
 		<state value="NSW"/>
 		<postalCode value="2148"/>
