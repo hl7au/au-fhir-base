@@ -640,6 +640,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Practitioner.identifier.hpii.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
@@ -660,12 +666,6 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="Practitioner.identifier.hpii.type.coding.version">
-			<path value="Practitioner.identifier.type.coding.version"/>
-			<definition value="hpii"/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
 		<element id="Practitioner.identifier.hpii.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
 			<definition value="hpii"/>
@@ -685,12 +685,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="National provider identifier"/>
-		</element>
-		<element id="Practitioner.identifier.hpii.type.coding.userSelected">
-			<path value="Practitioner.identifier.type.coding.userSelected"/>
-			<definition value="hpii"/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Practitioner.identifier.hpii.type.text">
 			<path value="Practitioner.identifier.type.text"/>
@@ -746,6 +740,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Practitioner.identifier.medicare-number.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
@@ -766,13 +766,6 @@
 			</type>
 			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
 		</element>
-		<element id="Practitioner.identifier.medicare-number.type.coding.version">
-			<path value="Practitioner.identifier.type.coding.version"/>
-			<definition value="prescriber-number"/>
-			<min value="0"/>
-			<max value="0"/>
-			
-		</element>
 		<element id="Practitioner.identifier.medicare-number.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
 			<definition value="prescriber-number"/>
@@ -792,12 +785,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="Prescriber Number"/>
-		</element>
-		<element id="Practitioner.identifier.medicare-number.type.coding.userSelected">
-			<path value="Practitioner.identifier.type.coding.userSelected"/>
-			<definition value="prescriber-number"/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Practitioner.identifier.medicare-number.type.text">
 			<path value="Practitioner.identifier.type.text"/>
@@ -1263,6 +1250,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Practitioner.identifier.hpii.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
@@ -1281,12 +1274,6 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="Practitioner.identifier.hpii.type.coding.version">
-			<path value="Practitioner.identifier.type.coding.version"/>
-			<min value="0"/>
-			<max value="0"/>
-			
-		</element>
 		<element id="Practitioner.identifier.hpii.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
 			<min value="1"/>
@@ -1304,12 +1291,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="National provider identifier"/>
-		</element>
-		<element id="Practitioner.identifier.hpii.type.coding.userSelected">
-			<path value="Practitioner.identifier.type.coding.userSelected"/>
-			<min value="0"/>
-			<max value="0"/>
-			
 		</element>
 		<element id="Practitioner.identifier.hpii.type.text">
 			<path value="Practitioner.identifier.type.text"/>
@@ -1361,6 +1342,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Practitioner.identifier.prescriber-number.type.coding">
 			<path value="Practitioner.identifier.type.coding"/>
@@ -1379,12 +1366,6 @@
 			</type>
 			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
 		</element>
-		<element id="Practitioner.identifier.prescriber-number.type.coding.version">
-			<path value="Practitioner.identifier.type.coding.version"/>
-			<min value="0"/>
-			<max value="0"/>
-			
-		</element>
 		<element id="Practitioner.identifier.prescriber-number.type.coding.code">
 			<path value="Practitioner.identifier.type.coding.code"/>
 			<min value="1"/>
@@ -1402,12 +1383,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="Prescriber Number"/>
-		</element>
-		<element id="Practitioner.identifier.prescriber-number.type.coding.userSelected">
-			<path value="Practitioner.identifier.type.coding.userSelected"/>
-			<min value="0"/>
-			<max value="0"/>
-			
 		</element>
 		<element id="Practitioner.identifier.prescriber-number.type.text">
 			<path value="Practitioner.identifier.type.text"/>

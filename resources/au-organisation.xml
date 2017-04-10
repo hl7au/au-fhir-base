@@ -662,6 +662,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Organization.identifier:hpio.type.coding">
 			<path value="Organization.identifier.type.coding"/>
@@ -682,12 +688,6 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="Organization.identifier:hpio.type.coding.version">
-			<path value="Organization.identifier.type.coding.version"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
 		<element id="Organization.identifier:hpio.type.coding.code">
 			<path value="Organization.identifier.type.coding.code"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
@@ -707,12 +707,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="National Organization Identifier"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.userSelected">
-			<path value="Organization.identifier.type.coding.userSelected"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Organization.identifier:hpio.type.text">
 			<path value="Organization.identifier.type.text"/>
@@ -747,18 +741,6 @@
 				<valueString value="8003627500000328"/>
 			</example>
 			<maxLength value="16"/>
-		</element>
-		<element id="Organization.identifier:hpio.identifier.period">
-			<path value="Organization.identifier.period"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
-		<element id="Organization.identifier:hpio.identifier.assigner">
-			<path value="Organization.identifier.assigner"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Organization.active">
 			<path value="Organization.active"/>
@@ -1230,6 +1212,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="Organization.identifier:hpio.type.coding">
 			<path value="Organization.identifier.type.coding"/>
@@ -1250,12 +1238,6 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="Organization.identifier:hpio.type.coding.version">
-			<path value="Organization.identifier.type.coding.version"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
 		<element id="Organization.identifier:hpio.type.coding.code">
 			<path value="Organization.identifier.type.coding.code"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
@@ -1275,12 +1257,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="National Organization Identifier"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.userSelected">
-			<path value="Organization.identifier.type.coding.userSelected"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Organization.identifier:hpio.type.text">
 			<path value="Organization.identifier.type.text"/>
@@ -1315,18 +1291,6 @@
 				<valueString value="8003627500000328"/>
 			</example>
 			<maxLength value="16"/>
-		</element>
-		<element id="Organization.identifier:hpio.identifier.period">
-			<path value="Organization.identifier.period"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
-		<element id="Organization.identifier:hpio.identifier.assigner">
-			<path value="Organization.identifier.assigner"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Organization.type.slice">
 			<path value="Organization.type"/>

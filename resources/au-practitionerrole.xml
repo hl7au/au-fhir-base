@@ -741,6 +741,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding">
 			<path value="PractitionerRole.identifier.type.coding"/>
@@ -761,12 +767,6 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="PractitionerRole.identifier.provider-number.type.coding.version">
-			<path value="PractitionerRole.identifier.type.coding.version"/>
-			<definition value="Provider number for this practitioner role"/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.code">
 			<path value="PractitionerRole.identifier.type.coding.code"/>
 			<definition value="Provider number for this practitioner role"/>
@@ -786,12 +786,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="Provider number"/>
-		</element>
-		<element id="PractitionerRole.identifier.provider-number.type.coding.userSelected">
-			<path value="PractitionerRole.identifier.type.coding.userSelected"/>
-			<definition value="Provider number for this practitioner role"/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.text">
 			<path value="PractitionerRole.identifier.type.text"/>
@@ -1426,6 +1420,12 @@
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
+			<binding>
+				<strength value="required"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
+				</valueSetReference>
+			</binding>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding">
 			<path value="PractitionerRole.identifier.type.coding"/>
@@ -1446,12 +1446,6 @@
 			</type>
 			<fixedUri value="http://hl7.org/fhir/v2/0203"/>
 		</element>
-		<element id="PractitionerRole.identifier.provider-number.type.coding.version">
-			<path value="PractitionerRole.identifier.type.coding.version"/>
-			<definition value="Provider number for this practitioner role"/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.coding.code">
 			<path value="PractitionerRole.identifier.type.coding.code"/>
 			<definition value="Provider number for this practitioner role"/>
@@ -1471,12 +1465,6 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="Provider number"/>
-		</element>
-		<element id="PractitionerRole.identifier.provider-number.type.coding.userSelected">
-			<path value="PractitionerRole.identifier.type.coding.userSelected"/>
-			<definition value="Provider number for this practitioner role"/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.type.text">
 			<path value="PractitionerRole.identifier.type.text"/>
