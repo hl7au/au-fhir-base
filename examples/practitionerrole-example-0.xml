@@ -1,0 +1,37 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+	<id value="aubase-practitionerrole-example0"/>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="PRN"/>
+				<display value="Provider Number"/>
+			</coding>
+			<text value="Provider Number"/>
+		</type>
+		<system value=" http://ns.electronichealth.net.au/id/provider-number"/>
+		<value value="2426621B"/>
+	</identifier>
+	<active value="true"/>
+	<practitioner>
+		<reference value="Practitioner/aubase-practitioner-example0"/>
+	</practitioner>
+	<organization>
+		<reference value="Practitioner/aubase-organization-example0"/>
+	</organization>
+	<code>
+		<coding>
+			<system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+			<code value="253312"/>
+			<display value="Cardiologist"/>
+		</coding>
+	</code>
+	<location>
+		<reference value="Location/aubase-location-example0"/>
+	</location>
+	<telecom>
+		<system value="phone"/>
+		<value value="025553333"/>
+		<use value="work"/>
+	</telecom>
+</PractitionerRole>

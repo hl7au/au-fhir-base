@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/patient.xsd" xmlns="http://hl7.org/fhir">
+<Patient xmlns="http://hl7.org/fhir">
 	<id value="aubase-patient-example0"/>
 	<extension url="http://hl7.org.au/fhir/StructureDefinition/extension-au-indigenous-status">
 		<valueCoding>
@@ -50,6 +50,19 @@
 		<family value="Franklin"/>
 		<given value="Stella"/>
 	</name>
+	<telecom>
+		<system value="email"/>
+		<value value="sfranklin@amail.com.au"/>
+		<use value="work"/>
+	</telecom>
 	<gender value="female"/>
 	<birthDate value="1979-10-14"/>
+	<address>
+		<use value="home"/>
+		<line value="31 Pacquola Street"/>
+		<city value="Blacktown"/>
+		<state value="NSW"/>
+		<postalCode value="2148"/>
+		<country value="Australia"/>
+	</address>
 </Patient>

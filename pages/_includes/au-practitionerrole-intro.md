@@ -14,6 +14,6 @@ of a provider’s practice or the place of equipment.
 
 #### Examples
 
-[ProviderRole with Provider Number](au-providerrole-example-0.html)
+[Practitioner Role with Provider Number and ANZSCO coded role](PractitionerRole-aubase-practitionerrole-example0.html)
 
 
