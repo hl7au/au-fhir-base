@@ -61,6 +61,6 @@ Indigenous status is defined as a coded concept associated with the patient.
 
 #### Examples
 
-[Patient with IHI and Medicare Number](Patient-example0.html)
+[Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
 
 [Patient with IHI and DVA Number](Patient-example1.html)
