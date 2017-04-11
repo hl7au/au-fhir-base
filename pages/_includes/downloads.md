@@ -13,10 +13,6 @@ In addition there are format specific definitions files.
 
 The above complete defintions are the most suitable choice for generating implementations of profiles described in this guide. See the overview on [validating FHIR profiles and resources](http://build.fhir.org/validation.html) for more information about validating profiles and how to use these artifacts
 
-**Schematrons** are also available and listed below:
-
-- [Schematrons]
-
 **Examples:** all the examples that are used in this Implementation Guide available for download:
 
 - [XML](examples.xml.zip)
