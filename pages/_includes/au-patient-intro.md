@@ -31,6 +31,22 @@ privacy legislation.
 
 DVA number may also include details of the specific card colour associated with the number.
 
+* __Health Care Card Number__ 
+* __Pensioner Concession Card Number__ 
+* __Commonwealth Seniors Health Card Number__ 
+
+([METeOR CRN Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/270098))
+
+All of the above mentioned cards use Centerlink Customer Reference Number.
+
+A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific 
+services, including some public health care services, such as oral health services.
+
+The CRN should only be collected from persons eligible to receive health services that are to be funded by Centrelink. The 
+number may be reported to a Centrelink agency to reconcile payment for the service provided. The data should not be used by
+private sector organisations for any purpose unless specifically authorised by law. For example, data linkage should not be
+carried out unless specifically authorised by law.
+
 #### Extensions
 Definitions here describe extensions to the Patient resource.
 
