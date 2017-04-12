@@ -1069,25 +1069,37 @@
 			<path value="Patient.identifier.type"/>
 			<sliceName value="IHI Number"/>
 			<definition value="ihi"/>
-			<min value="0"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org/fhir/v2/0203"/>
-					<code value="NI"/>
-					<display value="National unique individual identifier"/>
-				</coding>
-				<text value="IHI"/>
-			</fixedCodeableConcept>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
-				</valueSetReference>
-			</binding>
+		</element>
+		<element id="Patient.identifier.ihi.type.coding">
+			<path value="Patient.identifier.type.coding"/>
+			<sliceName value="IHI Number"/>
+			<definition value="ihi"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="NI"/>
+				<display value="National unique individual identifier"/>
+			</fixedCoding>
+		</element>
+		<element id="Patient.identifier.ihi.type.text">
+			<path value="Patient.identifier.type.text"/>
+			<sliceName value="IHI Number"/>
+			<definition value="ihi"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="IHI"/>
 		</element>
 		<element id="Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
@@ -1132,25 +1144,37 @@
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
-			<min value="0"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org/fhir/v2/0203"/>
-					<code value="MC"/>
-					<display value="Patient's Medicare Number"/>
-				</coding>
-				<text value="Medicare Number"/>
-			</fixedCodeableConcept>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
-				</valueSetReference>
-			</binding>
+		</element>
+		<element id="Patient.identifier.medicare-number.type.coding">
+			<path value="Patient.identifier.type.coding"/>
+			<sliceName value="Medicare Number"/>
+			<definition value="Medicare Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="MC"/>
+				<display value="Patient's Medicare Number"/>
+			</fixedCoding>
+		</element>
+		<element id="Patient.identifier.medicare-number.type.text">
+			<path value="Patient.identifier.type.text"/>
+			<sliceName value="Medicare Number"/>
+			<definition value="Medicare Number descriptive text"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="Medicare Number"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.system">
 			<path value="Patient.identifier.system"/>
@@ -1213,69 +1237,85 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+			<constraint>
+				<key value="inv-dva-number-colour"/>
+				<severity value="error"/>
+				<human value="DVA Number identifier must have a type with descriptive text"/>
+				<expression value="exists(type.text)"/>
+			</constraint>
+			<constraint>
+				<key value="inv-dva-number-colour-single"/>
+				<severity value="error"/>
+				<human value="DVA Number identifier there must be one and only one card colour type"/>
+				<expression value="coding.count()=1"/>
+			</constraint>
 		</element>
-		<element id="Patient.identifier.dva-number.type">
+		<element id="Patient.identifier.dva-number.type.unspecified">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="DVA Number"/>
+			<sliceName value="DVA Number Unspecified"/>
 			<definition value="Coded identifier type"/>
-			<min value="1"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
-				</valueSetReference>
-			</binding>
+			<fixedCodeableConcept>
+				<text value="DVA Number"/>
+			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dva-number.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="DVA Number"/>
-			<short value="DVA number general identifier type"/>
-			<definition value="DVA number coding"/>
-			<min value="1"/>
+		<element id="Patient.identifier.dva-number.type.gold">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number Gold"/>
+			<definition value="Coded identifier type"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
-				<code value="Coding"/>
+				<code value="CodeableConcept"/>
 			</type>
 			<fixedCodeableConcept>
 				<coding>
 					<system value="http://hl7.org.au/fhir/v2/0203"/>
-					<code value="DV"/>
-					<display value="DVA Number"/>
+					<code value="DVG"/>
+					<display value="DVA Number (Gold)"/>
 				</coding>
-				<text value="Department of Veterans' Affairs Number"/>
+				<text value="DVA Number (Gold)"/>
 			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dva-number.type.specific-coding">
-			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="DVA Number"/>
-			<short value="DVA number specific colour identifier type"/>
-			<definition value="DVA number identiifer type for specific colour"/>
+		<element id="Patient.identifier.dva-number.type.white">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number White"/>
+			<definition value="Coded identifier type"/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>
-				<code value="Coding"/>
+				<code value="CodeableConcept"/>
 			</type>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-dva"/>
-				</valueSetReference>
-			</binding>
+			<fixedCodeableConcept>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="DVW"/>
+					<display value="DVA Number (White)"/>
+				</coding>
+				<text value="DVA Number (White)"/>
+			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dva-number.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<sliceName value="DVA Number"/>
-			<definition value="DVA Number type description"/>
-			<min value="1"/>
+		<element id="Patient.identifier.dva-number.type.orange">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number Orange"/>
+			<definition value="Coded identifier type"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
-				<code value="string"/>
+				<code value="CodeableConcept"/>
 			</type>
-			<fixedString value="Department of Veterans' Affairs Number"/>
+			<fixedCodeableConcept>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="DVO"/>
+					<display value="DVA Number (Orange)"/>
+				</coding>
+				<text value="DVA Number (Orange)"/>
+			</fixedCodeableConcept>
 		</element>
 		<element id="Patient.identifier.dva-number.system">
 			<path value="Patient.identifier.system"/>
@@ -1306,10 +1346,10 @@
 			</example>
 			<maxLength value="9"/>
 		</element>
-		<element id="Patient.identifier.dhs-crn">
+		<element id="Patient.identifier.dhs-crn.hcc">
 			<path value="Patient.identifier"/>
-			<sliceName value="Concession Card"/>
-			<short value="Concession Card Number"/>
+			<sliceName value="Health Care Card"/>
+			<short value="Health Care Card Identifier"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -1320,7 +1360,9 @@
 		<element id="Patient.identifier.dhs-crn.type.hcc">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Health Care Card"/>
-			<min value="0"/>
+			<short value="Health Care Card Identifier Type"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
@@ -1334,15 +1376,57 @@
 				<text value="Health Care Card Number"/>
 			</fixedCodeableConcept>
 		</element>
+		<element id="Patient.identifier.dhs-crn.system.hcc">
+			<path value="Patient.identifier.system"/>
+			<sliceName value="Health Care Card"/>
+			<short value="namespace for Centrelink CRN identifiers"/>
+			<definition value="namespace for CRN values"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/crn"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.value.hcc">
+			<path value="Patient.identifier.value"/>
+			<sliceName value="Health Care Card"/>
+			<short value="Centrelink Customer Reference Number (CRN)"/>
+			<definition value="10 character identifier NNNNNNNNNA"/>
+			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<example>
+				<label value="DHS CRN"/>
+				<valueString value="307111942H"/>
+			</example>
+			<maxLength value="10"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.pcc">
+			<path value="Patient.identifier"/>
+			<sliceName value="Pensioner Concession Card"/>
+			<short value="Pensioner Concession Card Identifier"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element>
 		<element id="Patient.identifier.dhs-crn.type.pcc">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Pensioner Concession Card"/>
-			<min value="0"/>
+			<short value="Pensioner Concession Card Identifier Type"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-				<fixedCodeableConcept>
+			<fixedCodeableConcept>
 				<coding>
 					<system value="http://hl7.org/fhir/v2/0203"/>
 					<code value="PEN"/>
@@ -1351,15 +1435,57 @@
 				<text value="Pensioner Concession Card Number"/>
 			</fixedCodeableConcept>
 		</element>
+		<element id="Patient.identifier.dhs-crn.system.pcc">
+			<path value="Patient.identifier.system"/>
+			<sliceName value="Pensioner Concession Card"/>
+			<short value="namespace for Centrelink CRN identifiers"/>
+			<definition value="namespace for CRN values"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/crn"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.value.pcc">
+			<path value="Patient.identifier.value"/>
+			<sliceName value="Pensioner Concession Card"/>
+			<short value="Centrelink Customer Reference Number (CRN)"/>
+			<definition value="10 character identifier NNNNNNNNNA"/>
+			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<example>
+				<label value="DHS CRN"/>
+				<valueString value="307111942H"/>
+			</example>
+			<maxLength value="10"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.scc">
+			<path value="Patient.identifier"/>
+			<sliceName value="Commonwealth Seniors Health Card"/>
+			<short value="Commonwealth Seniors Health Card Identifier"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element>
 		<element id="Patient.identifier.dhs-crn.type.scc">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Commonwealth Seniors Health Card"/>
-			<min value="0"/>
+			<short value="Commonwealth Seniors Health Card Identifier Type"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-				<fixedCodeableConcept>
+			<fixedCodeableConcept>
 				<coding>
 					<system value="http://hl7.org.au/fhir/v2/0203"/>
 					<code value="SEN"/>
@@ -1368,10 +1494,11 @@
 				<text value="Commonwealth Seniors Health Card"/>
 			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dhs-crn.system">
+		<element id="Patient.identifier.dhs-crn.system.scc">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="Concession Card"/>
+			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="namespace for Centrelink CRN identifiers"/>
+			<definition value="namespace for CRN values"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -1379,9 +1506,9 @@
 			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/crn"/>
 		</element>
-		<element id="Patient.identifier.dhs-crn.value">
+		<element id="Patient.identifier.dhs-crn.value.scc">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="Concession Card"/>
+			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="Centrelink Customer Reference Number (CRN)"/>
 			<definition value="10 character identifier NNNNNNNNNA"/>
 			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
@@ -2435,31 +2562,44 @@
 			<path value="Patient.identifier.type"/>
 			<sliceName value="IHI Number"/>
 			<definition value="ihi"/>
-			<min value="0"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org/fhir/v2/0203"/>
-					<code value="NI"/>
-					<display value="National unique individual identifier"/>
-				</coding>
-				<text value="IHI"/>
-			</fixedCodeableConcept>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
-				</valueSetReference>
-			</binding>
+		</element>
+		<element id="Patient.identifier.ihi.type.coding">
+			<path value="Patient.identifier.type.coding"/>
+			<sliceName value="IHI Number"/>
+			<definition value="ihi"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="NI"/>
+				<display value="National unique individual identifier"/>
+			</fixedCoding>
+		</element>
+		<element id="Patient.identifier.ihi.type.text">
+			<path value="Patient.identifier.type.text"/>
+			<sliceName value="IHI Number"/>
+			<definition value="ihi"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="IHI"/>
 		</element>
 		<element id="Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
 			<short value="national namespace for ihi"/>
 			<definition value="National identifier for the patient"/>
 			<min value="1"/>
+			<max value="1"/>
 			<type>
 				<code value="uri"/>
 			</type>
@@ -2493,26 +2633,39 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.type">
 			<path value="Patient.identifier.type"/>
+			<sliceName value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
-			<min value="0"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org/fhir/v2/0203"/>
-					<code value="MC"/>
-					<display value="Patient's Medicare Number"/>
-				</coding>
-				<text value="Medicare Number"/>
-			</fixedCodeableConcept>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
-				</valueSetReference>
-			</binding>
+		</element>
+		<element id="Patient.identifier.medicare-number.type.coding">
+			<path value="Patient.identifier.type.coding"/>
+			<sliceName value="Medicare Number"/>
+			<definition value="Medicare Number assigned  to a patient"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="MC"/>
+				<display value="Patient's Medicare Number"/>
+			</fixedCoding>
+		</element>
+		<element id="Patient.identifier.medicare-number.type.text">
+			<path value="Patient.identifier.type.text"/>
+			<sliceName value="Medicare Number"/>
+			<definition value="Medicare Number descriptive text"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="Medicare Number"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.system">
 			<path value="Patient.identifier.system"/>
@@ -2558,77 +2711,104 @@
 		</element>
 		<element id="Patient.identifier.dva-number">
 			<path value="Patient.identifier"/>
-			<sliceName value="dva-number"/>
+			<sliceName value="DVA Number"/>
 			<short value="DVA Number"/>
-			<definition value="DVA Number assigned  to a patient"/>
+			<definition value="Department of Veterans' Affairs number"/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="Identifier"/>
 			</type>
+			<constraint>
+				<key value="inv-dva-number-colour"/>
+				<severity value="error"/>
+				<human value="DVA Number identifier must have a type with descriptive text"/>
+				<expression value="exists(type.text)"/>
+			</constraint>
+			<constraint>
+				<key value="inv-dva-number-colour-single"/>
+				<severity value="error"/>
+				<human value="DVA Number identifier there must be one and only one card colour type"/>
+				<expression value="coding.count()=1"/>
+			</constraint>
 		</element>
-		<element id="Patient.identifier.dva-number.type">
+		<element id="Patient.identifier.dva-number.type.slicing">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="DVA Number"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="text"/>
+				</discriminator>
+				<rules value="openAtEnd"/>
+			</slicing>
+		</element>
+		<element id="Patient.identifier.dva-number.type.unspecified">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number Unspecified"/>
 			<definition value="Coded identifier type"/>
-			<min value="1"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/v2-0203"/>
-				</valueSetReference>
-			</binding>
+			<fixedCodeableConcept>
+				<text value="DVA Number"/>
+			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dva-number.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="DVA Number"/>
-			<short value="DVA number general identifier type"/>
-			<definition value="DVA number coding"/>
-			<min value="1"/>
+		<element id="Patient.identifier.dva-number.type.gold">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number Gold"/>
+			<definition value="Coded identifier type"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
-				<code value="Coding"/>
+				<code value="CodeableConcept"/>
 			</type>
 			<fixedCodeableConcept>
 				<coding>
 					<system value="http://hl7.org.au/fhir/v2/0203"/>
-					<code value="DV"/>
-					<display value="DVA Number"/>
+					<code value="DVG"/>
+					<display value="DVA Number (Gold)"/>
 				</coding>
-				<text value="Department of Veterans' Affairs Number"/>
+				<text value="DVA Number (Gold)"/>
 			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dva-number.type.specific-coding">
-			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="DVA Number"/>
-			<short value="DVA number specific colour identifier type"/>
-			<definition value="DVA number identiifer type for specific colour"/>
+		<element id="Patient.identifier.dva-number.type.white">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number White"/>
+			<definition value="Coded identifier type"/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>
-				<code value="Coding"/>
+				<code value="CodeableConcept"/>
 			</type>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-dva"/>
-				</valueSetReference>
-			</binding>
+			<fixedCodeableConcept>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="DVW"/>
+					<display value="DVA Number (White)"/>
+				</coding>
+				<text value="DVA Number (White)"/>
+			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dva-number.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<sliceName value="DVA Number"/>
-			<definition value="DVA Number type description"/>
-			<min value="1"/>
+		<element id="Patient.identifier.dva-number.type.orange">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="DVA Number Orange"/>
+			<definition value="Coded identifier type"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
-				<code value="string"/>
+				<code value="CodeableConcept"/>
 			</type>
-			<fixedString value="Department of Veterans' Affairs Number"/>
+			<fixedCodeableConcept>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="DVO"/>
+					<display value="DVA Number (Orange)"/>
+				</coding>
+				<text value="DVA Number (Orange)"/>
+			</fixedCodeableConcept>
 		</element>
 		<element id="Patient.identifier.dva-number.system">
 			<path value="Patient.identifier.system"/>
@@ -2657,10 +2837,21 @@
 			</example>
 			<maxLength value="9"/>
 		</element>
-		<element id="Patient.identifier.dhs-crn">
+		<element id="Patient.identifier.dhs-crn.type.slicing">
+			<path value="Patient.identifier.type"/>
+			<sliceName value="Concesision Card"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="coding.code"/>
+				</discriminator>
+				<rules value="openAtEnd"/>
+			</slicing>
+		</element>
+		<element id="Patient.identifier.dhs-crn.hcc">
 			<path value="Patient.identifier"/>
-			<sliceName value="Concession Card"/>
-			<short value="Concession Card Number"/>
+			<sliceName value="Health Care Card"/>
+			<short value="Health Care Card Identifier"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -2668,30 +2859,12 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element id="Patient.identifier.dhs-crn.type.slicing">
-			<path value="Patient.identifier.type"/>
-			<sliceName value="Concession Card"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="coding.system"/>
-				</discriminator>
-				<discriminator>
-					<type value="value"/>
-					<path value="coding.code"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="CodeableConcept"/>
-			</type>
-		</element>
 		<element id="Patient.identifier.dhs-crn.type.hcc">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Health Care Card"/>
-			<min value="0"/>
+			<short value="Health Care Card Identifier Type"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
@@ -2705,15 +2878,57 @@
 				<text value="Health Care Card Number"/>
 			</fixedCodeableConcept>
 		</element>
+		<element id="Patient.identifier.dhs-crn.system.hcc">
+			<path value="Patient.identifier.system"/>
+			<sliceName value="Health Care Card"/>
+			<short value="namespace for Centrelink CRN identifiers"/>
+			<definition value="namespace for CRN values"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/crn"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.value.hcc">
+			<path value="Patient.identifier.value"/>
+			<sliceName value="Health Care Card"/>
+			<short value="Centrelink Customer Reference Number (CRN)"/>
+			<definition value="10 character identifier NNNNNNNNNA"/>
+			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<example>
+				<label value="DHS CRN"/>
+				<valueString value="307111942H"/>
+			</example>
+			<maxLength value="10"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.pcc">
+			<path value="Patient.identifier"/>
+			<sliceName value="Pensioner Concession Card"/>
+			<short value="Pensioner Concession Card Identifier"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element>
 		<element id="Patient.identifier.dhs-crn.type.pcc">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Pensioner Concession Card"/>
-			<min value="0"/>
+			<short value="Pensioner Concession Card Identifier Type"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-				<fixedCodeableConcept>
+			<fixedCodeableConcept>
 				<coding>
 					<system value="http://hl7.org/fhir/v2/0203"/>
 					<code value="PEN"/>
@@ -2722,15 +2937,57 @@
 				<text value="Pensioner Concession Card Number"/>
 			</fixedCodeableConcept>
 		</element>
+		<element id="Patient.identifier.dhs-crn.system.pcc">
+			<path value="Patient.identifier.system"/>
+			<sliceName value="Pensioner Concession Card"/>
+			<short value="namespace for Centrelink CRN identifiers"/>
+			<definition value="namespace for CRN values"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://ns.electronichealth.net.au/id/crn"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.value.pcc">
+			<path value="Patient.identifier.value"/>
+			<sliceName value="Pensioner Concession Card"/>
+			<short value="Centrelink Customer Reference Number (CRN)"/>
+			<definition value="10 character identifier NNNNNNNNNA"/>
+			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<example>
+				<label value="DHS CRN"/>
+				<valueString value="307111942H"/>
+			</example>
+			<maxLength value="10"/>
+		</element>
+		<element id="Patient.identifier.dhs-crn.scc">
+			<path value="Patient.identifier"/>
+			<sliceName value="Commonwealth Seniors Health Card"/>
+			<short value="Commonwealth Seniors Health Card Identifier"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element>
 		<element id="Patient.identifier.dhs-crn.type.scc">
 			<path value="Patient.identifier.type"/>
 			<sliceName value="Commonwealth Seniors Health Card"/>
-			<min value="0"/>
+			<short value="Commonwealth Seniors Health Card Identifier Type"/>
+			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-				<fixedCodeableConcept>
+			<fixedCodeableConcept>
 				<coding>
 					<system value="http://hl7.org.au/fhir/v2/0203"/>
 					<code value="SEN"/>
@@ -2739,10 +2996,11 @@
 				<text value="Commonwealth Seniors Health Card"/>
 			</fixedCodeableConcept>
 		</element>
-		<element id="Patient.identifier.dhs-crn.system">
+		<element id="Patient.identifier.dhs-crn.system.scc">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="Concession Card"/>
+			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="namespace for Centrelink CRN identifiers"/>
+			<definition value="namespace for CRN values"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -2750,9 +3008,9 @@
 			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/crn"/>
 		</element>
-		<element id="Patient.identifier.dhs-crn.value">
+		<element id="Patient.identifier.dhs-crn.value.scc">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="Concession Card"/>
+			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="Centrelink Customer Reference Number (CRN)"/>
 			<definition value="10 character identifier NNNNNNNNNA"/>
 			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
