@@ -643,9 +643,9 @@
 				<map value="id"/>
 			</mapping>
 		</element>
-		<element id="Organization.identifier:hpio">
+		<element id="Organization.identifier.hpio">
 			<path value="Organization.identifier"/>
-			<sliceName value="hpi-o"/>
+			<sliceName value="HPI-O"/>
 			<short value="National organisation identifier"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="0"/>
@@ -654,72 +654,27 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element id="Organization.identifier:hpio.type">
+		<element id="Organization.identifier.hpio.type">
 			<path value="Organization.identifier.type"/>
+			<sliceName value="HPI-O"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
-				</valueSetReference>
-			</binding>
+			<fixedCodeableConcept>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="NOI"/>
+					<display value="National Organisation Identifier"/>
+				</coding>
+				<text value="HPI-O"/>
+			</fixedCodeableConcept>
 		</element>
-		<element id="Organization.identifier:hpio.type.coding">
-			<path value="Organization.identifier.type.coding"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Coding"/>
-			</type>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.system">
-			<path value="Organization.identifier.type.coding.system"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.code">
-			<path value="Organization.identifier.type.coding.code"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="code"/>
-			</type>
-			<fixedCode value="NOI"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.display">
-			<path value="Organization.identifier.type.coding.display"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-			<fixedString value="National Organisation Identifier"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.text">
-			<path value="Organization.identifier.type.text"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-			<fixedString value="HPI-O"/>
-		</element>
-		<element id="Organization.identifier:hpio.identifier.system">
+		<element id="Organization.identifier.hpio.identifier.system">
 			<path value="Organization.identifier.system"/>
+			<sliceName value="HPI-O"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="1"/>
 			<max value="1"/>
@@ -728,8 +683,9 @@
 			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
 		</element>
-		<element id="Organization.identifier:hpio.value">
+		<element id="Organization.identifier.hpio.value">
 			<path value="Organization.identifier.value"/>
+			<sliceName value="HPI-O"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="1"/>
 			<max value="1"/>
@@ -814,6 +770,7 @@
 		</element>
 		<element id="Organization.type.anzicclass">
 			<path value="Organization.type"/>
+			<sliceName value="Organization Type Class"/>
 			<short value="Organisation Class Type"/>
 			<definition value="The kind of organization that this is coded as ANZSIC class type"/>
 			<comment value="Australian and New Zealand standard classification of industry category level 1 class type"/>
@@ -834,6 +791,7 @@
 		</element>
 		<element id="Organization.type.anzicactivity">
 			<path value="Organization.type"/>
+			<sliceName value="Organization Type Activity"/>
 			<short value="Organisation Activity Type"/>
 			<definition value="The kind of organization that this is coded as ANZSIC activity type"/>
 			<comment value="Australian and New Zealand standard classification of industry category level 2 activity type"/>
@@ -1193,9 +1151,9 @@
 			</slicing>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 		</element>
-		<element id="Organization.identifier:hpio">
+				<element id="Organization.identifier.hpio">
 			<path value="Organization.identifier"/>
-			<sliceName value="hpi-o"/>
+			<sliceName value="HPI-O"/>
 			<short value="National organisation identifier"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="0"/>
@@ -1204,72 +1162,27 @@
 				<code value="Identifier"/>
 			</type>
 		</element>
-		<element id="Organization.identifier:hpio.type">
+		<element id="Organization.identifier.hpio.type">
 			<path value="Organization.identifier.type"/>
+			<sliceName value="HPI-O"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<binding>
-				<strength value="required"/>
-				<valueSetReference>
-					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
-				</valueSetReference>
-			</binding>
+			<fixedCodeableConcept>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="NOI"/>
+					<display value="National Organisation Identifier"/>
+				</coding>
+				<text value="HPI-O"/>
+			</fixedCodeableConcept>
 		</element>
-		<element id="Organization.identifier:hpio.type.coding">
-			<path value="Organization.identifier.type.coding"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Coding"/>
-			</type>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.system">
-			<path value="Organization.identifier.type.coding.system"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.code">
-			<path value="Organization.identifier.type.coding.code"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="code"/>
-			</type>
-			<fixedCode value="NOI"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.coding.display">
-			<path value="Organization.identifier.type.coding.display"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-			<fixedString value="National Organisation Identifier"/>
-		</element>
-		<element id="Organization.identifier:hpio.type.text">
-			<path value="Organization.identifier.type.text"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-			<fixedString value="HPI-O"/>
-		</element>
-		<element id="Organization.identifier:hpio.identifier.system">
+		<element id="Organization.identifier.hpio.identifier.system">
 			<path value="Organization.identifier.system"/>
+			<sliceName value="HPI-O"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="1"/>
 			<max value="1"/>
@@ -1278,8 +1191,9 @@
 			</type>
 			<fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
 		</element>
-		<element id="Organization.identifier:hpio.value">
+		<element id="Organization.identifier.hpio.value">
 			<path value="Organization.identifier.value"/>
+			<sliceName value="HPI-O"/>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 			<min value="1"/>
 			<max value="1"/>
@@ -1305,6 +1219,7 @@
 		</element>
 		<element id="Organization.type.anzicclass">
 			<path value="Organization.type"/>
+			<sliceName value="Organization Type Class"/>
 			<short value="Organisation Class Type"/>
 			<definition value="The kind of organization that this is coded as ANZSIC class type"/>
 			<comment value="Australian and New Zealand standard classification of industry category level 1 class type"/>
@@ -1325,6 +1240,7 @@
 		</element>
 		<element id="Organization.type.anzicactivity">
 			<path value="Organization.type"/>
+			<sliceName value="Organization Type Activity"/>
 			<short value="Organisation Activity Type"/>
 			<definition value="The kind of organization that this is coded as ANZSIC activity type"/>
 			<comment value="Australian and New Zealand standard classification of industry category level 2 activity type"/>
