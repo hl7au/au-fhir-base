@@ -631,6 +631,18 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+			<constraint>
+				<key value="inv-hpii-0"/>
+				<severity value="error"/>
+				<human value="HPI-I is exactly 16 characters"/>
+				<expression value="value.length() = 16"/>
+			</constraint>
+			<constraint>
+				<key value="inv-hpii-1"/>
+				<severity value="error"/>
+				<human value="HPI-I prefix is 800361"/>
+				<expression value="value.startsWith('800361')"/>
+			</constraint>
 		</element>
 		<element id="Practitioner.identifier.hpii.type">
 			<path value="Practitioner.identifier.type"/>
@@ -1188,6 +1200,18 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+			<constraint>
+				<key value="inv-hpii-0"/>
+				<severity value="error"/>
+				<human value="HPI-I is exactly 16 characters"/>
+				<expression value="value.length() = 16"/>
+			</constraint>
+			<constraint>
+				<key value="inv-hpii-1"/>
+				<severity value="error"/>
+				<human value="HPI-I prefix is 800361"/>
+				<expression value="value.startsWith('800361')"/>
+			</constraint>
 		</element>
 		<element id="Practitioner.identifier.hpii.type">
 			<path value="Practitioner.identifier.type"/>
@@ -1296,7 +1320,8 @@
 				<code value="string"/>
 			</type>
 			<fixedString value="Prescriber Number"/>
-		</element>		<element id="Practitioner.identifier.prescriber-number.system">
+		</element>
+		<element id="Practitioner.identifier.prescriber-number.system">
 			<path value="Practitioner.identifier.system"/>
 			<sliceName value="Prescriber Number"/>
 			<short value="namespace for prescriber number"/>

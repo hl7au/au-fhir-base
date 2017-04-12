@@ -653,6 +653,18 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+			<constraint>
+				<key value="inv-hpio-0"/>
+				<severity value="error"/>
+				<human value="HPI-O is exactly 16 characters"/>
+				<expression value="value.length() = 16"/>
+			</constraint>
+			<constraint>
+				<key value="inv-hpio-1"/>
+				<severity value="error"/>
+				<human value="HPI-O prefix is 800362"/>
+				<expression value="value.startsWith('800362')"/>
+			</constraint>
 		</element>
 		<element id="Organization.identifier.hpio.type">
 			<path value="Organization.identifier.type"/>
@@ -1182,6 +1194,18 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+			<constraint>
+				<key value="inv-hpio-0"/>
+				<severity value="error"/>
+				<human value="HPI-O is exactly 16 characters"/>
+				<expression value="value.length() = 16"/>
+			</constraint>
+			<constraint>
+				<key value="inv-hpio-1"/>
+				<severity value="error"/>
+				<human value="HPI-O prefix is 800362"/>
+				<expression value="value.startsWith('800362')"/>
+			</constraint>
 		</element>
 		<element id="Organization.identifier.hpio.type">
 			<path value="Organization.identifier.type"/>

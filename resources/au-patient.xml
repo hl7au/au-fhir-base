@@ -1040,6 +1040,18 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+					<constraint>
+				<key value="inv-ihi-0"/>
+				<severity value="error"/>
+				<human value="IHI is exactly 16 characters"/>
+				<expression value="value.length() = 16"/>
+			</constraint>
+			<constraint>
+				<key value="inv-ihi-1"/>
+				<severity value="error"/>
+				<human value="IHI prefix is 800360"/>
+				<expression value="value.startsWith('800360')"/>
+			</constraint>
 		</element>
 		<element id="Patient.identifier.ihi.extension.ihistatus">
 			<path value="Patient.identifier.extension"/>
@@ -2514,7 +2526,7 @@
 		</element>
 		<element id="Patient.identifier.ihi">
 			<path value="Patient.identifier"/>
-			<sliceName value="ihi"/>
+			<sliceName value="IHI Number"/>
 			<short value="National Individual Health Identifier"/>
 			<definition value="National identifier for the patient"/>
 			<requirements value="Identifier as assigned and available via Health Identifiers service"/>
@@ -2523,6 +2535,18 @@
 			<type>
 				<code value="Identifier"/>
 			</type>
+				<constraint>
+				<key value="inv-ihi-0"/>
+				<severity value="error"/>
+				<human value="IHI is exactly 16 characters"/>
+				<expression value="value.length() = 16"/>
+			</constraint>
+			<constraint>
+				<key value="inv-ihi-1"/>
+				<severity value="error"/>
+				<human value="IHI prefix is 800360"/>
+				<expression value="value.startsWith('800360')"/>
+			</constraint>
 		</element>
 		<element id="Patient.identifier.ihi.extension.slicing">
 			<path value="Patient.identifier.extension"/>
@@ -2548,7 +2572,7 @@
 		</element>
 		<element id="Patient.identifier.ihi.extension.ihirecordstatus">
 			<path value="Patient.identifier.extension"/>
-			<sliceName value="ihirecordstatus"/>
+			<sliceName value="IHI Record Status"/>
 			<short value="IHI Record Status"/>
 			<definition value="ihi record status"/>
 			<min value="0"/>
