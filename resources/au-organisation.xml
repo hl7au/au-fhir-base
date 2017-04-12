@@ -657,20 +657,41 @@
 		<element id="Organization.identifier.hpio.type">
 			<path value="Organization.identifier.type"/>
 			<sliceName value="HPI-O"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
+			<short value="HPI-O Identifier Type"/>
+			<definition value="Element describing the type of identifier"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org.au/fhir/v2/0203"/>
-					<code value="NOI"/>
-					<display value="National Organisation Identifier"/>
-				</coding>
-				<text value="HPI-O"/>
-			</fixedCodeableConcept>
+		</element>
+		<element id="Organization.identifier.hpio.type.coding">
+			<path value="Organization.identifier.type.coding"/>
+			<sliceName value="HPI-O"/>
+			<short value="HPI-O Identifier Type Code"/>
+			<definition value="Coding for the identifier type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org.au/fhir/v2/0203"/>
+				<code value="NOI"/>
+				<display value="National Organisation Identifier"/>
+			</fixedCoding>
+		</element>
+		<element id="Organization.identifier.hpio.type.text">
+			<path value="Organization.identifier.type.text"/>
+			<sliceName value="HPI-O"/>
+			<short value="HPI-O Identifier Type Descriptive Text"/>
+			<definition value="Descriptive text for the identifier type"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="HPI-O"/>
 		</element>
 		<element id="Organization.identifier.hpio.identifier.system">
 			<path value="Organization.identifier.system"/>
@@ -1151,7 +1172,7 @@
 			</slicing>
 			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
 		</element>
-				<element id="Organization.identifier.hpio">
+		<element id="Organization.identifier.hpio">
 			<path value="Organization.identifier"/>
 			<sliceName value="HPI-O"/>
 			<short value="National organisation identifier"/>
@@ -1165,25 +1186,46 @@
 		<element id="Organization.identifier.hpio.type">
 			<path value="Organization.identifier.type"/>
 			<sliceName value="HPI-O"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
+			<short value="HPI-O Identifier Type"/>
+			<definition value="Element describing the type of identifier"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org.au/fhir/v2/0203"/>
-					<code value="NOI"/>
-					<display value="National Organisation Identifier"/>
-				</coding>
-				<text value="HPI-O"/>
-			</fixedCodeableConcept>
+		</element>
+		<element id="Organization.identifier.hpio.type.coding">
+			<path value="Organization.identifier.type.coding"/>
+			<sliceName value="HPI-O"/>
+			<short value="HPI-O Identifier Type Code"/>
+			<definition value="Coding for the identifier type"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org.au/fhir/v2/0203"/>
+				<code value="NOI"/>
+				<display value="National Organisation Identifier"/>
+			</fixedCoding>
+		</element>
+		<element id="Organization.identifier.hpio.type.text">
+			<path value="Organization.identifier.type.text"/>
+			<sliceName value="HPI-O"/>
+			<short value="HPI-O Identifier Type Descriptive Text"/>
+			<definition value="Descriptive text for the identifier type"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="HPI-O"/>
 		</element>
 		<element id="Organization.identifier.hpio.identifier.system">
 			<path value="Organization.identifier.system"/>
 			<sliceName value="HPI-O"/>
-			<definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
+			<definition value="Namespace uri for HPI-O values"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>

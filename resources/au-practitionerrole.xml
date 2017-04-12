@@ -737,20 +737,41 @@
 		<element id="PractitionerRole.identifier.provider-number.type">
 			<path value="PractitionerRole.identifier.type"/>
 			<sliceName value="Provider Number"/>
+			<short value="Provider Number Identifier Type"/>
 			<definition value="Provider number for this practitioner role"/>
-			<min value="0"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org/fhir/v2/0203"/>
-					<code value="PRN"/>
-					<display value="Provider number"/>
-				</coding>
-				<text value="Medicare Provider Number"/>
-			</fixedCodeableConcept>
+		</element>
+		<element id="PractitionerRole.identifier.provider-number.type.coding">
+			<path value="PractitionerRole.identifier.type.coding"/>
+			<sliceName value="Provider Number"/>
+			<short value="Provider Number Identifier Type Code"/>
+			<definition value="Provider number identifier type coding"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="PRN"/>
+				<display value="Provider number"/>
+			</fixedCoding>
+		</element>
+		<element id="PractitionerRole.identifier.provider-number.type.text">
+			<path value="PractitionerRole.identifier.type.text"/>
+			<sliceName value="Provider Number"/>
+			<short value="Provider Number Identifier Type Descriptive Text"/>
+			<definition value="Provider number identifier type descriptive text"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="Medicare Provider Number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.system">
 			<path value="PractitionerRole.identifier.system"/>
@@ -1373,20 +1394,41 @@
 		<element id="PractitionerRole.identifier.provider-number.type">
 			<path value="PractitionerRole.identifier.type"/>
 			<sliceName value="Provider Number"/>
+			<short value="Provider Number Identifier Type"/>
 			<definition value="Provider number for this practitioner role"/>
-			<min value="0"/>
+			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<fixedCodeableConcept>
-				<coding>
-					<system value="http://hl7.org/fhir/v2/0203"/>
-					<code value="PRN"/>
-					<display value="Provider number"/>
-				</coding>
-				<text value="Medicare Provider Number"/>
-			</fixedCodeableConcept>
+		</element>
+		<element id="PractitionerRole.identifier.provider-number.type.coding">
+			<path value="PractitionerRole.identifier.type.coding"/>
+			<sliceName value="Provider Number"/>
+			<short value="Provider Number Identifier Type Code"/>
+			<definition value="Provider number identifier type coding"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<fixedCoding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="PRN"/>
+				<display value="Provider number"/>
+			</fixedCoding>
+		</element>
+		<element id="PractitionerRole.identifier.provider-number.type.text">
+			<path value="PractitionerRole.identifier.type.text"/>
+			<sliceName value="Provider Number"/>
+			<short value="Provider Number Identifier Type Descriptive Text"/>
+			<definition value="Provider number identifier type descriptive text"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<fixedString value="Medicare Provider Number"/>
 		</element>
 		<element id="PractitionerRole.identifier.provider-number.system">
 			<path value="PractitionerRole.identifier.system"/>
