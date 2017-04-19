@@ -769,7 +769,7 @@
 		</element>
 		<element id="Patient.extension.indigenous-status">
 			<path value="Patient.extension"/>
-			<sliceName value="indigenous-status"/>
+			<sliceName value="Indigenous Status"/>
 			<label value="indigenous status"/>
 			<short value="Australian Indigenous Status"/>
 			<definition value="Administrative Australian indigenous status coding"/>
@@ -835,7 +835,7 @@
 		</element>
 		<element id="Patient.identifier.ihi.extension.ihistatus">
 			<path value="Patient.identifier.extension"/>
-			<sliceName value="ihistatus"/>
+			<sliceName value="IHI Status"/>
 			<short value="IHI Number Status"/>
 			<definition value="ihi number status extension"/>
 			<min value="0"/>
@@ -859,7 +859,6 @@
 		</element>
 		<element id="Patient.identifier.ihi.type">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="IHI Number"/>
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -869,7 +868,6 @@
 		</element>
 		<element id="Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="IHI Number"/>
 			<definition value="ihi"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -884,7 +882,6 @@
 		</element>
 		<element id="Patient.identifier.ihi.type.text">
 			<path value="Patient.identifier.type.text"/>
-			<sliceName value="IHI Number"/>
 			<definition value="ihi"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -895,7 +892,6 @@
 		</element>
 		<element id="Patient.identifier.ihi.system">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="IHI Number"/>
 			<short value="national namespace for ihi"/>
 			<definition value="National identifier for the patient"/>
 			<min value="1"/>
@@ -907,7 +903,6 @@
 		</element>
 		<element id="Patient.identifier.ihi.value">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="IHI Number"/>
 			<short value="Individual Health Identifier number"/>
 			<definition value="The 16 digit unique identifier for consumers of healthcare services"/>
 			<min value="1"/>
@@ -923,7 +918,7 @@
 		</element>
 		<element id="Patient.identifier.medicare-number">
 			<path value="Patient.identifier"/>
-			<sliceName value="medicare-number"/>
+			<sliceName value="Medicare Number"/>
 			<short value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
@@ -934,7 +929,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.type">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -944,7 +938,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -959,7 +952,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.type.text">
 			<path value="Patient.identifier.type.text"/>
-			<sliceName value="Medicare Number"/>
 			<definition value="Medicare Number descriptive text"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -970,7 +962,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.system">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="Medicare Number"/>
 			<short value="national namespace for medicare"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -981,7 +972,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.value">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="Medicare Number"/>
 			<short value="Medicare Number value including optional individual reference number"/>
 			<definition value="10 digit Medicare number with optional 11 digit individual reference number (IRN)"/>
 			<comment value="10 digit Medicare Number and optional 1 digit Individual Reference Number"/>
@@ -998,7 +988,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.period">
 			<path value="Patient.identifier.period"/>
-			<sliceName value="Medicare Number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -1007,7 +996,6 @@
 		</element>
 		<element id="Patient.identifier.medicare-number.period.end">
 			<path value="Patient.identifier.period.end"/>
-			<sliceName value="Medicare Number"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -1030,7 +1018,7 @@
 				<human value="DVA Number identifier type text must be 'DVA Number' when colour is not specified"/>
 				<expression value="exists(type.coding) and type.text != 'DVA Number'"/>
 			</constraint>
-				<constraint>
+			<constraint>
 				<key value="inv-dva-number-gold"/>
 				<severity value="error"/>
 				<human value="DVA Number identifier type text must be 'DVA Number (Gold)' when colour coding is DVG"/>
@@ -1048,7 +1036,7 @@
 				<human value="DVA Number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO"/>
 				<expression value="type.coding.code='DVO' and type.text != 'DVA Number (Orange)'"/>
 			</constraint>
-				<constraint>
+			<constraint>
 				<key value="inv-dva-number-text"/>
 				<severity value="error"/>
 				<human value="DVA Number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange)'"/>
@@ -1057,7 +1045,6 @@
 		</element>
 		<element id="Patient.identifier.dva-number.type">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="DVA Number"/>
 			<definition value="DVA colour identifer type"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -1067,7 +1054,6 @@
 		</element>
 		<element id="Patient.identifier.dva-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
-			<sliceName value="DVA Number"/>
 			<definition value="DVA colour coding"/>
 			<min value="0"/>
 			<max value="1"/>
@@ -1083,7 +1069,6 @@
 		</element>
 		<element id="Patient.identifier.dva-number.type.text">
 			<path value="Patient.identifier.type.text"/>
-			<sliceName value="DVA Number"/>
 			<definition value="DVA colour coding"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -1093,7 +1078,6 @@
 		</element>
 		<element id="Patient.identifier.dva-number.system">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="DVA Number"/>
 			<short value="DVA number identifier system"/>
 			<definition value="DVA Number assigned uri"/>
 			<min value="1"/>
@@ -1105,7 +1089,6 @@
 		</element>
 		<element id="Patient.identifier.dva-number.value">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="DVA Number"/>
 			<short value="DVA number value"/>
 			<definition value="Up to 9 digit value in the form AAXXNNNN[A]"/>
 			<comment value="Reference: http://meteor.aihw.gov.au/content/index.phtml/itemId/339127"/>
@@ -1133,7 +1116,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.type.hcc">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="Health Care Card"/>
 			<short value="Health Care Card Identifier Type"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="1"/>
@@ -1152,7 +1134,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.system.hcc">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="Health Care Card"/>
 			<short value="namespace for Centrelink CRN identifiers"/>
 			<definition value="namespace for CRN values"/>
 			<min value="1"/>
@@ -1164,7 +1145,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.value.hcc">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="Health Care Card"/>
 			<short value="Centrelink Customer Reference Number (CRN)"/>
 			<definition value="10 character identifier NNNNNNNNNA"/>
 			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
@@ -1192,7 +1172,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.type.pcc">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="Pensioner Concession Card"/>
 			<short value="Pensioner Concession Card Identifier Type"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="1"/>
@@ -1211,7 +1190,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.system.pcc">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="Pensioner Concession Card"/>
 			<short value="namespace for Centrelink CRN identifiers"/>
 			<definition value="namespace for CRN values"/>
 			<min value="1"/>
@@ -1223,7 +1201,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.value.pcc">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="Pensioner Concession Card"/>
 			<short value="Centrelink Customer Reference Number (CRN)"/>
 			<definition value="10 character identifier NNNNNNNNNA"/>
 			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
@@ -1251,7 +1228,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.type.scc">
 			<path value="Patient.identifier.type"/>
-			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="Commonwealth Seniors Health Card Identifier Type"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="1"/>
@@ -1270,7 +1246,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.system.scc">
 			<path value="Patient.identifier.system"/>
-			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="namespace for Centrelink CRN identifiers"/>
 			<definition value="namespace for CRN values"/>
 			<min value="1"/>
@@ -1282,7 +1257,6 @@
 		</element>
 		<element id="Patient.identifier.dhs-crn.value.scc">
 			<path value="Patient.identifier.value"/>
-			<sliceName value="Commonwealth Seniors Health Card"/>
 			<short value="Centrelink Customer Reference Number (CRN)"/>
 			<definition value="10 character identifier NNNNNNNNNA"/>
 			<comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
