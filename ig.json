@@ -4,7 +4,7 @@
   "source": "ig.xml",
   "dependencyList": [],
   "spreadsheets": [],
-  "special-urls": [ "http://hl7.org.au/fhir/v2/0203", "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0" ],
+  "special-urls": [ "http://hl7.org.au/fhir/v2/0203", "http://meteor.aihw.gov.au/content/index.phtml/itemId/430134#Codes", "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0" ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "ConceptMap": { "template-base": "cm.html" },
@@ -36,6 +36,10 @@
 		"template-format": "ex-format.html" 
 	},
 	"Location": { 
+		"template-base": "ex.html",
+		"template-format": "ex-format.html" 
+	},
+	"Address": { 
 		"template-base": "ex.html",
 		"template-format": "ex-format.html" 
 	}
@@ -100,6 +104,12 @@
 	"ValueSet/valueset-au-dva": {
 	  "base": "ValueSet-valueset-au-dva.html"
 	},
+	"CodeSystem/codesystem-au-address-states": {
+	  "base": "CodeSystem-codesystem-au-address-states.html"
+	},
+	"ValueSet/valueset-au-address-states": {
+	  "base": "ValueSet-valueset-au-address-states.html"
+	},
 	"StructureDefinition/au-practitioner": {
 	  "base": "StructureDefinition-au-practitioner.html"
 	},
@@ -117,6 +127,9 @@
 	},
 	"StructureDefinition/extension-au-ihi-record-status": {
 	  "base": "StructureDefinition-extension-au-ihi-record-status.html"
+	},
+	"StructureDefinition/au-address": {
+	  "base": "StructureDefinition-au-address.html"
 	}
   }
 }
