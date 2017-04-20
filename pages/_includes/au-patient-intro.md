@@ -1,6 +1,8 @@
-Australian Patient Profile
+Australian Human Patient Profile
 
 This profile defines a patient administration details structure that includes core localisation concepts.
+
+This definition is for human patients only, for non-human patients it is recommended the base Patient resource definition be used.
 
 #### Identifiers
 These definitions represent common data held in the Patient.identifier element.
