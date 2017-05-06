@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nofixedaddress" />
+  <meta>
+    <lastUpdated value="2017-05-06T00:11:12.166+10:00" />
+  </meta>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/nofixedaddress" />
+  <name value="Extension: No Fixed Address" />
+  <title value="No Fixed Address" />
+  <status value="draft" />
+  <date value="2017-05-05T22:59:54.9238589+10:00" />
+ 	<publisher value="Health Level Seven Australia (Patient Administration)"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org.au"/>
+		</telecom>
+	</contact>
+	<purpose value="no fixed address indicator"/>
+  <description value="indicator flag for no fixed address" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Address" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+  <element id="Extension">
+			<path value="Extension"/>
+			<short value="No Fixed Address Flag"/>
+			<definition value="No Fixed Address"/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+    <element id="Element.url">
+      <path value="Extension.url" />
+      <definition value="extension identity"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/nofixedaddress" />
+    </element>
+    <element id="Extension.valueBoolean">
+      <path value="Extension.valueBoolean" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <fixedBoolean value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
