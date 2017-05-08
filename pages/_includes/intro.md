@@ -17,12 +17,14 @@ to enable feedback to improve the content of this guide.
 An indication of FHIR profiles that are managed under HL7 Australia working groups follows. 
 
 __HL7 Australia Patient Administration Working Group__
+
 * [Patient](StructureDefinition-au-patient.html): identifying values (IHI, Medicare Number, DVA Number), indigenous status
 * [Practitioner](StructureDefinition-au-practitioner.html): identifiers (HPI-I, Prescriber Number)
 * [PractitionerRole](StructureDefinition-au-practitionerrole.html): identifiers (Provider Number), occupation role
 * [Organization](StructureDefinition-au-organisation.html): identifiers (HPI-O), industry class, industry activity
 
 __HL7 Australia Medications Working Group__
+
 * Medication: (tbd)
 * MedicationRequest: (tbd)
 * MedicationDispense: (tbd)
@@ -30,6 +32,7 @@ __HL7 Australia Medications Working Group__
 * Immunization: (tbd)
 
 __HL7 Australia Orders and Observations Working Group__
+
 * Observation (Vital Signs): (tbd)
 * Observation (Smoking Status): (tbd)
 * Observation (Pathology Results): (tbd)
