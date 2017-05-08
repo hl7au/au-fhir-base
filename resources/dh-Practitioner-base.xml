@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="dh-Practitioner-base" />
   <meta>
@@ -51,8 +51,8 @@
     </assigner>
   </identifier>
   <version value="1.0" />
-  <name value="Practitioner: Digital Health" />
-  <title value="Practitioner: Digital Health" />
+  <name value="Practitioner: Digital Health (discussion only)" />
+  <title value="Practitioner: Digital Health (discussion only)" />
   <status value="draft" />
   <date value="2016-11-23" />
   <publisher value="Australian Digital Health Agency" />
@@ -62,7 +62,7 @@
       <value value="https://www.digitalhealth.gov.au/" />
     </telecom>
   </contact>
-  <description value="Australian Digital Health Agency logical model of the FHIR Practitioner resource." />
+  <description value="Australian Digital Health Agency logical model of the FHIR Practitioner resource using AU base practitioner as base profile" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -92,6 +92,7 @@
   <abstract value="false" />
   <type value="Practitioner" />
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+   <derivation value="constraint" />
   <differential>
     <element>
       <path value="Practitioner" />
