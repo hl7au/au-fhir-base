@@ -22,6 +22,8 @@ __HL7 Australia Patient Administration Working Group__
 * [Practitioner](StructureDefinition-au-practitioner.html): identifiers (HPI-I, Prescriber Number)
 * [PractitionerRole](StructureDefinition-au-practitionerrole.html): identifiers (Provider Number), occupation role
 * [Organization](StructureDefinition-au-organisation.html): identifiers (HPI-O), industry class, industry activity
+* [Endpoint (discussion)](StructureDefinition-au-endpoint.html): service category, associated certificate
+* [Location (discussion)](StructureDefinition-au-location.html): address
 
 __HL7 Australia Medications Working Group__
 
