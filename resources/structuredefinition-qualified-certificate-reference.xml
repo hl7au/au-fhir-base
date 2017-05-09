@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="qualified-certificate-reference" />
+  <meta>
+    <lastUpdated value="2017-05-09T00:15:40.722+10:00" />
+  </meta>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/qualified-certificate-reference" />
+  <name value="Qualified Certificate Reference" />
+  <title value="Qualified Certificate Reference" />
+  <status value="draft" />
+  <date value="2017-05-08T20:25:21.1606983+10:00" />
+  <description value="Mechanism to reference or hold value of a certificate." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Endpoint" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+			<path value="Extension"/>
+			<short value="Qualfied Certificate Reference"/>
+			<definition value="Mechanism to reference or hold value of a certificate."/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/qualified-certificate-reference" />
+    </element>
+    <element>
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <type>
+        <code value="uri" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
