@@ -4,8 +4,10 @@
   <meta>
     <lastUpdated value="2017-05-11T10:08:20.115+10:00" />
   </meta>
-  <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml"></div></text>
+  	<text>
+		<status value="generated"/>
+		 <div xmlns="http://www.w3.org/1999/xhtml"><p>AU Patient</p></div>
+	</text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
   <version value="1.0" />
   <name value="Australian Patient (Human)" />
@@ -26,6 +28,9 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
   <derivation value="constraint" />
   <differential>
+	<element>
+		<path value="Patient"/>
+	</element>
     <element>
       <path value="Patient.extension" />
       <slicing>
