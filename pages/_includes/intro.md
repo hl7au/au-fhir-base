@@ -27,8 +27,8 @@ __HL7 Australia Patient Administration Working Group__
 
 __HL7 Australia Medications Working Group__
 
-* Medication: (tbd)
-* MedicationRequest: (tbd)
+* [Medication](StructureDefinition-au-medication.html): medication details (product, strength, form etc.), PBS code, manufacturer
+* [MedicationRequest](StructureDefinition-au-prescription.html): prescription details, concurrent supply, concession benefits, authority, approval etc.
 * MedicationDispense: (tbd)
 * MedicationStatement: (tbd)
 * Immunization: (tbd)
