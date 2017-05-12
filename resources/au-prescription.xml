@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-prescription" />
+  <meta>
+    <lastUpdated value="2017-05-11T10:38:29.771+10:00" />
+  </meta>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
+  <version value="0.1" />
+  <name value="Australian Prescription" />
+  <title value="Australian Prescription" />
+  <status value="draft" />
+  <date value="2017-05-11T09:51:36.6519188+10:00" />
+  <publisher value="Health Level Seven Australia (Medications WG)" />
+  <description value="Description of Australian prescription record" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+  <derivation value="constraint" />
+  <differential>
+	<element>
+		<path value="MedicationRequest"/>
+	</element>
+    <element>
+      <path value="MedicationRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="MedicationRequest.extension" />
+      <sliceName value="groundsForConcurrentSupply" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
