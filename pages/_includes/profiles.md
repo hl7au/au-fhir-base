@@ -11,11 +11,11 @@ These Profiles have been defined for this implementation guide.
 * [Australian Endpoint (discussion)](StructureDefinition-au-endpoint.html)
 * [Australian Location (discussion)](StructureDefinition-au-location.html)
 
-## Medications Profiles
+## Medications Profiles (discussion)
 
-* [Australian Medication](StructureDefinition-au-medication.html)
-* [Australian Prescription](StructureDefinition-au-prescription.html)
-* [PBS Pharmaceutical Manufacturer Organisation](StructureDefinition-au-pbs-pharma-manufacturer.html)
+* [Australian Medication (discussion)](StructureDefinition-au-medication.html)
+* [Australian Prescription (discussion)](StructureDefinition-au-prescription.html)
+* [PBS Pharmaceutical Manufacturer Organisation (discussion)](StructureDefinition-au-pbs-pharma-manufacturer.html)
 
 ## Profiles on Data Types (discussion)
 
