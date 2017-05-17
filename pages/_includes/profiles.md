@@ -20,7 +20,6 @@ These Profiles have been defined for this implementation guide.
 ## Profiles on Data Types (discussion)
 
 * [Australian Address (discussion)](StructureDefinition-au-address.html)
-* [International Address (discussion)](StructureDefinition-au-address-international.html)
 
 ## Structured Document Profiles (discussion)
 
