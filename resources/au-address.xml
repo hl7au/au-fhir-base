@@ -36,7 +36,7 @@
 				<key value="au-address-au-postalcode"/>
 				<severity value="error"/>
 				<human value="postal code for Australian address must be 4 digits"/>
-				<expression value="postalCode.matches('^\\d{4}$')"/>
+				<expression value="postalCode.exists().not() or postalCode.matches('^\\d{4}$')"/>
 			</constraint>
 			<constraint>
 				<key value="au-address-au-addr"/>

@@ -1,15 +1,12 @@
 Australian Local Address Profile
 
-This profile defines an profile on address for local Australian addresses
+This profile defines a profile on address for local Australian addresses. 
 
-#### Elements
+* State is bound to Australian States
+* Country is Australia
+* Extension for [No Fixed Address Flag](StructureDefinition-nofixedaddress.html)
 
-
-
-#### Extensions
-Definitions here describe extensions to the Address datatype.
-
-* No Fixed Address Flag
+This profile should not be used for international addresses, in that case use the base [Address](http://build.fhir.org/datatypes.html#Address) core definition
 
 
 #### Examples
