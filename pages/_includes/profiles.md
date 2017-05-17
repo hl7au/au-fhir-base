@@ -21,7 +21,6 @@ These Profiles have been defined for this implementation guide.
 
 * [Australian Address (discussion)](StructureDefinition-au-address.html)
 * [International Address (discussion)](StructureDefinition-au-address-international.html)
-* [No Fixed Address (discussion)](StructureDefinition-au-address-nofixedaddress.html)
 
 ## Structured Document Profiles (discussion)
 

@@ -1,6 +1,6 @@
 ## Australian Base Profiles Implementation Guide
 
-The following versions of Australian Base Profiles Implementation Guide are been published:
+The following versions of Australian Base Profiles Implementation Guide are published:
 
 * [Draft](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html): Current Constant Integration Build
 

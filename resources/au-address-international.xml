@@ -30,6 +30,28 @@
     <element>
       <path value="Address" />
     </element>
+     <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extensionnofixedaddress">
+      <path value="Address.extension" />
+      <sliceName value="noFixedAddress" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/nofixedaddress" />
+      </type>
+    </element>
     <element>
       <path value="Address.text" />
       <max value="0" />
