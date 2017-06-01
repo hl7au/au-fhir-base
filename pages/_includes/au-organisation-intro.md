@@ -9,6 +9,10 @@ These definitions represent common data held in the Organization.identifier elem
 
 The Healthcare provider identifier—organisation (HPI-O) is the numerical identifier that uniquely identifies organisations in Australia where healthcare is provided.
 
+* __ASIC Identifers__ (Australian Security and Investment Commission)
+
+ASIC identifiers ABN (Australian Business Number), ACN (Australian Company Number), ARBN (Australian Registered Body Number)
+
 #### Examples
 
 [Organisation with HPI-O and ANZSIC coded class/activity types](Organization-example0.html)

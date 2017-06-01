@@ -61,6 +61,12 @@ he or she lives"
 
 Indigenous status is defined as a coded concept associated with the patient.
 
+* __Close the Gap Registration__ 
+
+An extension to hold the registration to the Close the Gap co-payment scheme status for the patient.  The CTG PBS Co-payment 
+Measure improves access to PBS medicines for eligible Aboriginal and Torres Strait Islanders living with, or at risk of, 
+chronic disease.
+
 #### Examples
 
 [Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
