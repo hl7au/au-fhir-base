@@ -257,11 +257,17 @@
 				<human value="DVA Number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO"/>
 				<expression value="type.coding.code='DVO' and type.text != 'DVA Number (Orange)'"/>
 			</constraint>
+				<constraint>
+				<key value="inv-dva-number-lilac"/>
+				<severity value="error"/>
+				<human value="DVA Number identifier type text must be 'DVA Number (Lilac)' when colour coding is DVL"/>
+				<expression value="type.coding.code='DVL' and type.text != 'DVA Number (Lilac)'"/>
+			</constraint>
 			<constraint>
 				<key value="inv-dva-number-text"/>
 				<severity value="error"/>
-				<human value="DVA Number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange)'"/>
-				<expression value="type.text = 'DVA Number' or type.text = 'DVA Number (Gold)' or type.text = 'DVA Number (White)' or type.text = 'DVA Number (Orange)'"/>
+				<human value="DVA Number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange), 'DVA Number (Lilac)'"/>
+				<expression value="type.text = 'DVA Number' or type.text = 'DVA Number (Gold)' or type.text = 'DVA Number (White)' or type.text = 'DVA Number (Orange)' or type.text = 'DVA Number (Lilac)'" />
 			</constraint>
 		</element>
 		<element id="Patient.identifier.dva-number.type">
