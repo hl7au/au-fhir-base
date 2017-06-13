@@ -109,41 +109,87 @@
 			</example>
 			<maxLength value="16"/>
 		</element>
-		<element id="Organization.identifier.asic">
+		<element id="Organization.identifier.abn">
 			<path value="Organization.identifier"/>
-			<sliceName value="asic-business-identifier"/>
-			<short value="ASIC assigned identifier for business"/>
-			<definition value="ASIC assigned identifier for business/entity. That is ABN (Australian Business Number), ACN (Australian Company Number) or ARBN (Australian Registered Body Number)."/>
-			<constraint>
-				<key value="inv-asic-abn-name"/>
-				<severity value="error"/>
-				<human value="Type text must be 'ABN' when code is 'ABN'"/>
-				<expression value="type.coding.code='ABN' and type.text != 'ABN'"/>
-			</constraint>
+			<sliceName value="abn"/>
+			<short value="Australian Business Number - ASIC assigned identifier for business"/>
+			<definition value="ASIC assigned identifier for business/entity. ABN (Australian Business Number)."/>
 			<constraint>
 				<key value="inv-asic-abn-length"/>
 				<severity value="error"/>
 				<human value="'ABN' must be 11 digits"/>
 				<expression value="type.coding.code='ABN' and value.length()=11"/>
 			</constraint>
-			<constraint>
-				<key value="inv-asic-acn-name"/>
-				<severity value="error"/>
-				<human value="Type text must be 'ACN' when code is 'ACN'"/>
-				<expression value="type.coding.code='ACN' and type.text != 'ACN'"/>
-			</constraint>
+		</element>
+		<element>
+			<path value="Organization.identifier.type"/>
+			<min value="1"/>
+		</element>
+		<element>
+			<path value="Organization.identifier.type.text"/>
+			<min value="1"/>
+			<fixedString value="ABN"/>
+		</element>
+		<element>
+			<path value="Organization.identifier.system"/>
+			<min value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://business.gov.au/abn"/>
+		</element>
+		<element>
+			<path value="Organization.identifier.value"/>
+			<short value="ABN value"/>
+			<definition value="Australian Business Number identifier value"/>
+			<min value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+		</element>
+		<element id="Organization.identifier.acn">
+			<path value="Organization.identifier"/>
+			<sliceName value="acn"/>
+			<short value="Australian Company Number - ASIC assigned identifier for business"/>
+			<definition value="ASIC assigned identifier for business/entity. ACN (Australian Company Number)"/>
 			<constraint>
 				<key value="inv-asic-acn-length"/>
 				<severity value="error"/>
 				<human value="'ACN' must be 9 digits"/>
 				<expression value="type.coding.code='ACN' and value.length()=9"/>
 			</constraint>
-			<constraint>
-				<key value="inv-asic-arbn-name"/>
-				<severity value="error"/>
-				<human value="Type text must be 'ARBN' when code is 'ARBN'"/>
-				<expression value="type.coding.code='ARBN' and type.text != 'ARBN'"/>
-			</constraint>
+		</element>
+		<element>
+			<path value="Organization.identifier.type"/>
+			<min value="1"/>
+		</element>
+		<element>
+			<path value="Organization.identifier.type.text"/>
+			<min value="1"/>
+			<fixedString value="ACN"/>
+		</element>
+		<element>
+			<path value="Organization.identifier.system"/>
+			<min value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://business.gov.au/acn"/>
+		</element>
+		<element>
+			<path value="Organization.identifier.value"/>
+			<short value="ACN value"/>
+			<definition value="Australian Company Number identifier value"/>
+			<min value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+		</element>
+		<element id="Organization.identifier.arbn">
+			<path value="Organization.identifier"/>
+			<sliceName value="arbn"/>
+			<short value="Australian Registered Body Number - ASIC assigned identifier for business"/>
+			<definition value="ASIC assigned identifier for business/entity. ARBN (Australian Registered Body Number)."/>
 			<constraint>
 				<key value="inv-asic-arbn-length"/>
 				<severity value="error"/>
@@ -154,19 +200,11 @@
 		<element>
 			<path value="Organization.identifier.type"/>
 			<min value="1"/>
-			<binding>
-				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-					<valueString value="IdentifierType"/>
-				</extension>
-				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-					<valueBoolean value="true"/>
-				</extension>
-				<strength value="required"/>
-				<description value="ASIC identifier types"/>
-				<valueSetReference>
-					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-asic"/>
-				</valueSetReference>
-			</binding>
+		</element>
+		<element>
+			<path value="Organization.identifier.type.text"/>
+			<min value="1"/>
+			<fixedString value="ARBN"/>
 		</element>
 		<element>
 			<path value="Organization.identifier.system"/>
@@ -174,12 +212,12 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://business.gov.au"/>
+			<fixedUri value="http://business.gov.au/arbn"/>
 		</element>
 		<element>
 			<path value="Organization.identifier.value"/>
-			<short value="ASIC identifier value"/>
-			<definition value="ASIC identiffier value ABN, ACN or ARBN."/>
+			<short value="ARBN value"/>
+			<definition value="Australian Registered Body Number identifier value"/>
 			<min value="1"/>
 			<type>
 				<code value="string"/>
