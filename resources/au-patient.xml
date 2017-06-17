@@ -132,6 +132,10 @@
 			<path value="Patient.identifier.type"/>
 			<definition value="ihi"/>
 			<min value="1"/>
+			<binding>
+				<strength value="extensible"/>
+				<valueSetUri value="http://hl7.org/fhir/v2/0203"/>
+			</binding>
 		</element>
 		<element id="Patient.identifier.ihi.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -181,6 +185,10 @@
 			<path value="Patient.identifier.type"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<min value="1"/>
+			<binding>
+				<strength value="extensible"/>
+				<valueSetUri value="http://hl7.org/fhir/v2/0203"/>
+			</binding>
 		</element>
 		<element id="Patient.identifier.medicare-number.type.coding">
 			<path value="Patient.identifier.type.coding"/>
@@ -274,12 +282,7 @@
 			<path value="Patient.identifier.type"/>
 			<definition value="DVA colour identifer type"/>
 			<min value="1"/>
-		</element>
-		<element id="Patient.identifier.dva-number.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<definition value="DVA colour coding"/>
-			<max value="1"/>
-			<binding>
+				<binding>
 				<strength value="required"/>
 				<valueSetReference>
 					<reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-dva"/>
@@ -333,6 +336,10 @@
 				</coding>
 				<text value="Health Care Card Number"/>
 			</fixedCodeableConcept>
+			<binding>
+				<strength value="extensible"/>
+				<valueSetUri value="http://hl7.org/fhir/v2/0203"/>
+			</binding>
 		</element>
 		<element id="Patient.identifier.dhs-crn.system.hcc">
 			<path value="Patient.identifier.system"/>
@@ -373,6 +380,10 @@
 				</coding>
 				<text value="Pensioner Concession Card Number"/>
 			</fixedCodeableConcept>
+			<binding>
+				<strength value="extensible"/>
+				<valueSetUri value="http://hl7.org/fhir/v2/0203"/>
+			</binding>
 		</element>
 		<element id="Patient.identifier.dhs-crn.system.pcc">
 			<path value="Patient.identifier.system"/>
@@ -413,6 +424,10 @@
 				</coding>
 				<text value="Commonwealth Seniors Health Card"/>
 			</fixedCodeableConcept>
+			<binding>
+				<strength value="extensible"/>
+				<valueSetUri value="http://hl7.org.au/fhir/v2/0203"/>
+			</binding>
 		</element>
 		<element id="Patient.identifier.dhs-crn.system.scc">
 			<path value="Patient.identifier.system"/>
