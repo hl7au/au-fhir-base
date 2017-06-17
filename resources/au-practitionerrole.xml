@@ -135,5 +135,25 @@
 			<min value="0"/>
 			<max value="*"/>
 		</element>
+		        <element id="PractitionerRole.code.anzsco">
+            <path value="PractitionerRole.code"/>
+            <sliceName value="Job Role"/>
+            <short value="Practitioner Role"/>
+            <definition value="The main job role this practitioner plays"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <isSummary value="true"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="PractitionerRole"/>
+                </extension>
+                <strength value="required"/>
+                <description value="Used to categorize the provider role type"/>
+                <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco"/>
+            </binding>
+        </element>
 	</differential>
 </StructureDefinition>
