@@ -117,11 +117,6 @@
 				<targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation"/>
 			</type>
 		</element>
-		<element>
-			<path value="PractitionerRole.location"/>
-			<definition value="The location at which this practitioner is a provider"/>
-			<max value="1"/>
-		</element>
 		<element id="PractitionerRole.code.slicing">
 			<path value="PractitionerRole.code"/>
 			<slicing>
@@ -135,7 +130,7 @@
 			<min value="0"/>
 			<max value="*"/>
 		</element>
-		        <element id="PractitionerRole.code.anzsco">
+		<element id="PractitionerRole.code.anzsco">
             <path value="PractitionerRole.code"/>
             <sliceName value="Job Role"/>
             <short value="Practitioner Role"/>
@@ -155,5 +150,43 @@
                 <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco"/>
             </binding>
         </element>
+        		<element id="PractitionerRole.specialty.slicing">
+			<path value="PractitionerRole.specialty"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="Coding.system"/>
+				</discriminator>
+				<rules value="openAtEnd"/>
+			</slicing>
+			<definition value="Roles which this practitioner can perform."/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="PractitionerRole.specialty.anzsco">
+            <path value="PractitionerRole.specialty"/>
+            <sliceName value="Specialty Role"/>
+            <short value="Practitioner Specialty"/>
+            <definition value="Specialties this practitioner has"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <isSummary value="true"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="PractitionerRole"/>
+                </extension>
+                <strength value="required"/>
+                <description value="Used to categorize the provider role type"/>
+                <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco"/>
+            </binding>
+        </element>
+        	<element>
+			<path value="PractitionerRole.location"/>
+			<definition value="The location at which this practitioner is a provider"/>
+			<max value="1"/>
+		</element>
 	</differential>
 </StructureDefinition>
