@@ -49,6 +49,7 @@
 			<label value="indigenous status"/>
 			<short value="Australian Indigenous Status"/>
 			<definition value="Administrative Australian indigenous status coding"/>
+			<max value="1"/>
 			<type>
 				<code value="Extension"/>
 				<profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status"/>
@@ -60,6 +61,7 @@
 			<label value="close the gap registration"/>
 			<short value="Close the Gap Registration"/>
 			<definition value="Administrative indication that the patient has been registered for the close the gap benefit."/>
+			<max value="1"/>
 			<type>
 				<code value="Extension"/>
 				<profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration"/>
@@ -114,6 +116,7 @@
 			<sliceName value="IHI Status"/>
 			<short value="IHI Number Status"/>
 			<definition value="ihi number status extension"/>
+			<max value="1"/>
 			<type>
 				<code value="Extension"/>
 				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-status"/>
@@ -123,6 +126,7 @@
 			<path value="Patient.identifier.extension"/>
 			<sliceName value="IHI Record Status"/>
 			<definition value="ihi record status"/>
+			<max value="1"/>
 			<type>
 				<code value="Extension"/>
 				<profile value="http://hl7.org.au/fhir/StructureDefinition/extension-au-ihi-record-status"/>
@@ -179,7 +183,6 @@
 			<sliceName value="Medicare Number"/>
 			<short value="Medicare Number"/>
 			<definition value="Medicare Number assigned  to a patient"/>
-			<max value="1"/>
 		</element>
 		<element id="Patient.identifier.medicare-number.type">
 			<path value="Patient.identifier.type"/>
