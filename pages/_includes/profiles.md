@@ -13,6 +13,8 @@ These Profiles have been defined for this implementation guide.
 
 * [Australian Medication (discussion)](StructureDefinition-au-medication.html)
 * [Australian Prescription (discussion)](StructureDefinition-au-prescription.html)
+* [Australian Dispense Record (discussion)](StructureDefinition-au-dispenserecord.html)
+* [Australian Medication Statement (discussion)](StructureDefinition-au-medicationstatement.html)
 * [PBS Pharmaceutical Manufacturer Organisation (discussion)](StructureDefinition-au-pbs-pharma-manufacturer.html)
 
 ## Profiles on Data Types (discussion)
