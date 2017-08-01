@@ -248,7 +248,7 @@
 				<key value="inv-dva-number-unspecified"/>
 				<severity value="error"/>
 				<human value="DVA Number identifier type text must be 'DVA Number' when colour is not specified"/>
-				<expression value="exists(type.coding) and type.text != 'DVA Number'"/>
+				<expression value="type.coding.exists() and type.text != 'DVA Number'"/>
 			</constraint>
 			<constraint>
 				<key value="inv-dva-number-gold"/>
