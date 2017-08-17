@@ -9,15 +9,15 @@ These Profiles have been defined for this implementation guide.
 * [Australian Practitioner Role](StructureDefinition-au-practitionerrole.html)
 * [Australian Organisation](StructureDefinition-au-organisation.html)
 
-## Medications Profiles (discussion)
+## Medications Profiles (proposed)
 
-* [Australian Medication (discussion)](StructureDefinition-au-medication.html)
-* [Australian Prescription (discussion)](StructureDefinition-au-prescription.html)
-* [Australian Dispense Record (discussion)](StructureDefinition-au-dispenserecord.html)
-* [Australian Medication Statement (discussion)](StructureDefinition-au-medicationstatement.html)
-* [PBS Pharmaceutical Manufacturer Organisation (discussion)](StructureDefinition-au-pbs-pharma-manufacturer.html)
+* [Australian Medication (proposed)](StructureDefinition-au-medication.html)
+* [Australian Prescription (proposed)](StructureDefinition-au-prescription.html)
+* [Australian Dispense Record (proposed)](StructureDefinition-au-dispenserecord.html)
+* [Australian Medication Statement (proposed)](StructureDefinition-au-medicationstatement.html)
+* [PBS Pharmaceutical Manufacturer Organisation (proposed)](StructureDefinition-au-pbs-pharma-manufacturer.html)
 
-## Profiles on Data Types (discussion)
+## Profiles on Data Types (proposed)
 
-* [Australian Address (discussion)](StructureDefinition-au-address.html)
+* [Australian Address (proposed)](StructureDefinition-au-address.html)
 
