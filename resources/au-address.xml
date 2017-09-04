@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-address" />
   <meta>
-    <lastUpdated value="2017-09-05T08:01:22.977+10:00" />
+    <lastUpdated value="2017-09-05T08:13:11.853+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -80,8 +80,13 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/nofixedaddress" />
       </type>
     </element>
+    <element id="Address.state">
+      <path value="Address.state" />
+      <short value="Australian State and Territory when country is AU" />
+    </element>
     <element id="Address.country">
       <path value="Address.country" />
+      <short value="Prefer 2 digit ISO 3166 code" />
       <definition value="fixed value if present otherwise assumed to be Australia in this context" />
     </element>
   </differential>
