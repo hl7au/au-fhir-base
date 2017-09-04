@@ -1,13 +1,9 @@
-Australian Local Address Profile
+Address Profile for Australian Use
 
-This profile defines a profile on address for local Australian addresses. 
+This profile provided for use in an Australian context where some constraint on content is desirable to guarantee the quality of a local Australian address whilst still supporting
+other uses such as international addresses and unstructured addresses. 
 
-* State is bound to Australian States
-* Country is Australia
-* Extension for [No Fixed Address Flag](StructureDefinition-nofixedaddress.html)
-
-This profile should not be used for international addresses, in that case use the base [Address](http://build.fhir.org/datatypes.html#Address) core definition
-
+When the **country** element is set to the ISO 3166 two digit code **AU** this explicity asserts an Australian address profile is in use and contraints will be applied to **postalCode** and **state** elements.
 
 #### Examples
 

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-address" />
   <meta>
-    <lastUpdated value="2017-09-05T08:19:27.908+10:00" />
+    <lastUpdated value="2017-09-05T09:21:50.583+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -34,7 +34,7 @@
       <constraint>
         <key value="au-address-01" />
         <severity value="error" />
-        <human value="provider text or address line is required" />
+        <human value="Provision of text or address line is required" />
         <expression value="text.exists() or line.exists()" />
       </constraint>
       <constraint>
@@ -46,7 +46,7 @@
       <constraint>
         <key value="au-address-03" />
         <severity value="error" />
-        <human value="postal code for Australian address must be 4 digits" />
+        <human value="Postal code for Australian address must be 4 digits" />
         <expression value="(country='AU' and postalCode.exists()) implies postalCode.matches('^\\d{4}$')" />
       </constraint>
       <constraint>
