@@ -19,5 +19,5 @@ These Profiles have been defined for this implementation guide.
 
 ## Profiles on Data Types (proposed)
 
-* [Australian Address (proposed)](StructureDefinition-au-address.html)
+* [Australian Address](StructureDefinition-au-address.html)
 
