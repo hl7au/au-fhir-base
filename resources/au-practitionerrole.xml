@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-09-06T14:57:00.564+10:00" />
+    <lastUpdated value="2017-09-06T15:09:36.976+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -187,22 +187,6 @@
         <strength value="required" />
         <description value="Used to categorize the provider role type" />
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco" />
-      </binding>
-    </element>
-    <element id="PractitionerRole.specialty:nhsdcoreservices">
-      <path value="PractitionerRole.specialty" />
-      <sliceName value="nhsdcoreservices" />
-      <short value="NHSD provider services" />
-      <definition value="NHSD specialty of the practitioner; based on extended HI taxonomy." />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PractitionerSpecialty" />
-        </extension>
-        <strength value="required" />
-        <description value="NHS Cores Services" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-nhsd-core-services" />
-        </valueSetReference>
       </binding>
     </element>
     <element id="PractitionerRole.location">
