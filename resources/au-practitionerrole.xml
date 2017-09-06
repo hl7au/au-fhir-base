@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-09-06T15:09:36.976+10:00" />
+    <lastUpdated value="2017-09-06T23:22:05.605+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -48,14 +48,14 @@
       </slicing>
       <definition value="other identifiers" />
     </element>
-    <element id="PractitionerRole.identifier:providermumber">
+    <element id="PractitionerRole.identifier:providernumber">
       <path value="PractitionerRole.identifier" />
       <sliceName value="providernumber" />
       <short value="Australian provider number" />
       <definition value="Provider number for this practitioner role" />
       <max value="1" />
     </element>
-    <element id="PractitionerRole.identifier:providermumber.type">
+    <element id="PractitionerRole.identifier:providernumber.type">
       <path value="PractitionerRole.identifier.type" />
       <short value="Provider Number Identifier Type" />
       <definition value="Identifier type of provider number for this practitioner role" />
@@ -65,7 +65,7 @@
         <valueSetUri value="http://hl7.org/fhir/v2/0203" />
       </binding>
     </element>
-    <element id="PractitionerRole.identifier:providermumber.type.coding">
+    <element id="PractitionerRole.identifier:providernumber.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <short value="Provider Number Identifier Type Code" />
       <definition value="Provider number identifier type coding" />
@@ -179,7 +179,6 @@
       <sliceName value="specialtyrole" />
       <short value="Practitioner Specialty" />
       <definition value="Specialties this practitioner has" />
-      <max value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PractitionerRole" />
