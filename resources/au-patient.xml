@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
-
   <meta>
-    <lastUpdated value="2017-08-24T22:45:09.132+10:00" />
+    <lastUpdated value="2017-09-15T16:00:00.777+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -32,7 +31,7 @@
       <short value="Australian Human Patient" />
       <definition value="Patient in Australian context" />
     </element>
-    <element>
+    <element id="Patient.extension">
       <path value="Patient.extension" />
       <slicing>
         <discriminator>
@@ -74,7 +73,7 @@
           <type value="value" />
           <path value="type" />
         </discriminator>
-        <rules value="openAtEnd" />
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Patient.identifier:ihinumber">
@@ -97,7 +96,7 @@
         <expression value="value.startsWith('800360')" />
       </constraint>
     </element>
-    <element>
+    <element id="Patient.identifier:ihinumber.extension">
       <path value="Patient.identifier.extension" />
       <slicing>
         <discriminator>
