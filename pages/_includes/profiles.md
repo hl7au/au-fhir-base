@@ -11,7 +11,7 @@ These Profiles have been defined for this implementation guide.
 
 ## Medications Profiles
 
-* [Australian Medication] (StructureDefinition-au-medication.html)
+* [Australian Medication](StructureDefinition-au-medication.html)
 * [Australian Prescription](StructureDefinition-au-prescription.html)
 * [Australian Dispense Record](StructureDefinition-au-dispenserecord.html)
 * [Australian Medication Statement](StructureDefinition-au-medicationstatement.html)

@@ -27,8 +27,8 @@ __HL7 Australia Medications Working Group__
 
 * [Medication](StructureDefinition-au-medication.html): medication details (product, strength, form etc.), PBS code, manufacturer
 * [MedicationRequest](StructureDefinition-au-prescription.html): prescription details, concurrent supply, concession benefits, authority, approval etc.
-* [MedicationDispense]: (StructureDefinition-au-dispenserecord.html): record of dispensing, concurrent supply, concession benefits, authority, approval etc.
-* [MedicationStatement]: (StructureDefinition-au-medicationstatement.html): record patient has/will be taking a medication e.g. current medications
+* [MedicationDispense](StructureDefinition-au-dispenserecord.html): record of dispensing, concurrent supply, concession benefits, authority, approval etc.
+* [MedicationStatement](StructureDefinition-au-medicationstatement.html): record patient has/will be taking a medication e.g. current medications
 * Immunization: (tbd)
 
 __HL7 Australia Orders and Observations Working Group__
