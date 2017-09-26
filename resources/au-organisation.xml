@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organisation" />
   <meta>
-    <lastUpdated value="2017-09-15T16:04:42.167+10:00" />
+    <lastUpdated value="2017-09-26T11:31:35.077+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
   <p>AU Organisation</p>
 </div></text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
-  <name value="Australian Healthcare Organisation" />
+  <name value="Australian Organisation" />
   <title value="Australian Healthcare Organisation" />
   <status value="draft" />
   <date value="2017-03-11T06:30:54+00:00" />
@@ -19,7 +19,7 @@
       <value value="http://hl7.org.au/fhir" />
     </telecom>
   </contact>
-  <description value="Australian realm Organisation profile" />
+  <description value="Australian realm Organisation profile often healthcare or related service provision." />
   <purpose value="Tracking patient is the center of the healthcare process." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -28,6 +28,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
   <derivation value="constraint" />
   <differential>
+    <element id="Organization">
+      <path value="Organization" />
+      <short value="Australian Organisation" />
+      <definition value="Australian realm Organisation profile often healthcare or related service provision." />
+    </element>
     <element id="Organization.identifier:slice">
       <path value="Organization.identifier" />
       <slicing>
