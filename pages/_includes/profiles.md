@@ -8,6 +8,7 @@ These Profiles have been defined for this implementation guide.
 * [Australian Practitioner](StructureDefinition-au-practitioner.html)
 * [Australian Practitioner Role](StructureDefinition-au-practitionerrole.html)
 * [Australian Organisation](StructureDefinition-au-organisation.html)
+* [Australian Device](StructureDefinition-au-device.html)
 
 ## Medications Profiles
 
