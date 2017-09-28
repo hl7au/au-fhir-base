@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2017-09-28T14:25:57.788+10:00" />
+    <lastUpdated value="2017-09-28T14:47:17.995+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -63,17 +63,18 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
       </type>
     </element>
-    <element id="Patient.extension:birthPlace">
+    <element id="Patient.extension:birthTime">
       <path value="Patient.extension" />
-      <sliceName value="birthPlace" />
-      <short value="Birth place extension" />
-      <definition value="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements." />
-      <requirements value="Allows for the recording of a patient's time of birth which is useful in a paediatrics context." />
+      <sliceName value="birthTime" />
+      <short value="Patient birth time extension" />
+      <definition value="The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively." />
+      <comment value="This extension provides the ability to record the time of day the patient was born." />
+      <requirements value="Allows for the recording of a patient's time of birth (as well as their date of birth), which is useful in a paediatrics context." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
       </type>
     </element>
     <element id="Patient.identifier.slicing">
