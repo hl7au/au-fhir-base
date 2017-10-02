@@ -79,6 +79,12 @@ An extension to hold the indication of registration to the Close the Gap co-paym
 Measure improves access to PBS medicines for eligible Aboriginal and Torres Strait Islanders living with, or at risk of, 
 chronic disease.
 
+* __Birth Time__
+
+[Standard STU3 extension](http://hl7.org/fhir/STU3/extension-patient-birthtime.html)
+
+An extension to record the time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.
+
 #### Examples
 
 [Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
