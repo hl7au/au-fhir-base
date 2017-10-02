@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2017-10-02T15:04:16.416+11:00" />
+    <lastUpdated value="2017-10-02T17:17:06.326+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -295,6 +295,10 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
+    <element id="Patient.identifier:dvanumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
+    </element>
     <element id="Patient.identifier:dvanumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
@@ -453,6 +457,43 @@
         <valueString value="307111942H" />
       </example>
       <maxLength value="10" />
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber">
+      <path value="Patient.identifier" />
+      <sliceName value="medicalrecordnumber" />
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber.type">
+      <path value="Patient.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+      <fixedCoding>
+        <code value="MR" />
+        <display value="Medical record number" />
+      </fixedCoding>
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Medical Record Number" />
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:medicalrecordnumber.assigner">
+      <path value="Patient.identifier.assigner" />
+      <min value="1" />
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
