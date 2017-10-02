@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-pbs-pharma-manufacturer" />
   <meta>
-    <lastUpdated value="2017-05-11T10:37:15.113+10:00" />
+    <lastUpdated value="2017-10-02T22:30:52.633+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -22,10 +22,12 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
   <derivation value="constraint" />
   <differential>
-	<element>
-		<path value="Organization"/>
-	</element>
-    <element>
+    <element id="Organization">
+      <path value="Organization" />
+      <short value="PBS Pharmaceutical Manufacturer" />
+      <definition value="Known PBS Pharmaceutical Manufacturer Organisation" />
+    </element>
+    <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <slicing>
         <discriminator>
@@ -34,20 +36,23 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="PBS Manufacturer identifiers" />
     </element>
-    <element>
+    <element id="Organization.identifier:pbsManufacturer">
       <path value="Organization.identifier" />
       <sliceName value="pbsManufacturer" />
+      <short value="PBS Manufacturer Identifer" />
+      <definition value="PBS registered manufacturer identifier" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Organization.identifier:pbsManufacturer.system">
       <path value="Organization.identifier.system" />
       <short value="PBS manufacturer (placeholder URL)" />
       <definition value="PBS managed and published manufacturer identity" />
       <min value="1" />
       <fixedUri value="http://pbs.gov.au/identifier/manufacturer" />
     </element>
-    <element>
+    <element id="Organization.identifier:pbsManufacturer.value">
       <path value="Organization.identifier.value" />
       <min value="1" />
     </element>

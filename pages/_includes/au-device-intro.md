@@ -4,5 +4,5 @@ This profile provided for use in an Australian context where some constraint on 
 
 #### Examples
 
-[Australian Device](device-example0.html)
+[Australian Device](Device-example0.html)
 

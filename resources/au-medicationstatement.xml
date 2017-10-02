@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="au-medicationstatement"/>
-	<meta>
-		<lastUpdated value="2017-05-05T10:56:40.987+10:00"/>
-	</meta>
-	<url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
-	<name value="Australian Medication Statement"/>
-	<title value="Australian Medication Statement"/>
-	<status value="draft"/>
-	<date value="2017-05-05T10:53:27.720987+10:00"/>
-	<publisher value="HL7 Australia"/>
-	<fhirVersion value="3.0.0"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="MedicationStatement"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element>
-			<path value="MedicationStatement"/>
-		</element>
-		<element>
-			<path value="MedicationStatement.medicationReference"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
-			</type>
-		</element>
-		<element>
-			<path value="MedicationStatement.subject"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
-			</type>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-			</type>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
-			</type>
-		</element>
-	</differential>
+  <id value="au-medicationstatement" />
+  <meta>
+    <lastUpdated value="2017-10-02T22:22:43.617+11:00" />
+  </meta>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement" />
+  <name value="Australian Medication Statement" />
+  <title value="Australian Medication Statement" />
+  <status value="draft" />
+  <date value="2017-05-05T10:53:27.720987+10:00" />
+  <publisher value="HL7 Australia" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status" />
+      <definition value="A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally this will be active or completed" />
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medicationReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
+      </type>
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>
