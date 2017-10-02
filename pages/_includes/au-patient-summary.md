@@ -11,5 +11,6 @@ Australian Patient Profile contains:
 	* Choice (Identifier.type) - Health Care Card, Pensioner Concession Card, Commonwealth Seniors Health Card
 1. Optional Indigenous Status (as Extension)
 1. Optional Close the Gap Registration (as Extension)
+1. Optional Birth Time (as extension)
 1. Exclusion: Patient.animal (BackboneElement) - human only
 
