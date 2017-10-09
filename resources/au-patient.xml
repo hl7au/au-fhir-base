@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2017-10-02T23:18:41.267+11:00" />
+    <lastUpdated value="2017-10-10T01:08:51.592+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -75,6 +75,18 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
+      </type>
+    </element>
+    <element id="Patient.extension:birthPlace">
+      <path value="Patient.extension" />
+      <sliceName value="birthPlace" />
+      <short value="Place of Birth for patient" />
+      <definition value="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
       </type>
     </element>
     <element id="Patient.identifier.slicing">
