@@ -66,7 +66,7 @@
 				<reference value="StructureDefinition/close-the-gap-registration"/>
 			</sourceReference>
 		</resource>
-			<resource>
+		<resource>
 			<example value="false"/>
 			<sourceReference>
 				<reference value="StructureDefinition/au-address"/>
@@ -76,6 +76,12 @@
 			<example value="false"/>
 			<sourceReference>
 				<reference value="StructureDefinition/nofixedaddress"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/patient-birth-date-accuracy-indicator"/>
 			</sourceReference>
 		</resource>
 		<resource>
@@ -129,6 +135,24 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
+				<reference value="ValueSet/valueset-au-grounds-for-concurrent-supply"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/valueset-au-date-accuracy-indicator"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/valueset-au-address-states"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
 				<reference value="CodeSystem/codesystem-au-indigenous-status"/>
 			</sourceReference>
 		</resource>
@@ -171,7 +195,7 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-au-address-states"/>
+				<reference value="CodeSystem/codesystem-au-date-accuracy-indicator"/>
 			</sourceReference>
 		</resource>
 		<resource>
@@ -230,6 +254,46 @@
 			</sourceReference>
 		</resource>
 		<resource>
+			<example value="true"/>
+			<name value="Patient Birth Date Accuracy Indicator with AAA"/>
+			<description value="Shows a typical Patient Birth Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
+			<sourceReference>
+				<reference value="Patient/BirthDateAccuracyIndicatorAAAexample0"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Patient Birth Date Accuracy Indicator with AAU"/>
+			<description value="Shows a typical Patient Birth Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+			<sourceReference>
+				<reference value="Patient/BirthDateAccuracyIndicatorAAUexample1"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Patient Birth Date Accuracy Indicator with UAA"/>
+			<description value="Shows a typical Patient Birth Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
+			<sourceReference>
+				<reference value="Patient/BirthDateAccuracyIndicatorUAAexample2"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Patient Birth Date Accuracy Indicator with UEA"/>
+			<description value="Shows a typical Patient Birth Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
+			<sourceReference>
+				<reference value="Patient/BirthDateAccuracyIndicatorUEAexample3"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Patient Birth Date Accuracy Indicator with UUU"/>
+			<description value="Shows a typical Patient Birth Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
+			<sourceReference>
+				<reference value="Patient/BirthDateAccuracyIndicatorUUUexample4"/>
+			</sourceReference>
+		</resource>
+		<resource>
 			<example value="false"/>
 			<sourceReference>
 				<reference value="StructureDefinition/au-medication"/>
@@ -247,7 +311,7 @@
 				<reference value="StructureDefinition/au-dispenserecord"/>
 			</sourceReference>
 		</resource>
-			<resource>
+		<resource>
 			<example value="false"/>
 			<sourceReference>
 				<reference value="StructureDefinition/au-medicationstatement"/>
@@ -269,12 +333,6 @@
 			<example value="false"/>
 			<sourceReference>
 				<reference value="CodeSystem/codesystem-au-grounds-for-concurrent-supply"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/valueset-au-grounds-for-concurrent-supply"/>
 			</sourceReference>
 		</resource>
 		<resource>

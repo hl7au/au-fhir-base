@@ -89,7 +89,17 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
       </type>
     </element>
-    <element id="Patient.identifier.slicing">
+    <element id="Patient.extension:patientBirthDateAccuracyIndicator">
+      <path value="Patient.extension" />
+      <sliceName value="patientBirthDateAccuracyIndicator" />
+      <definition value="An extension to support the addition of birth date accuracy indicator data to the `Patient` resource, as well as the recording of invalid FHIR date of birth data" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/patient-birth-date-accuracy-indicator" />
+      </type>
+    </element>
+    <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
         <discriminator>

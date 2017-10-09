@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+
+    <id value="patientBirthDateAccuracyIndicatorAAA"/>
+
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This example demonstrates how an accurate date of birth would be represented.</p>
+            <p>This is a valid FHIR date.</p>
+            <ul>
+                <li>A structured date of birth: "1956-08-23"</li>
+                <li>A date of birth accuracy indicator of "AAA" indicating all components are
+                    accurate</li>
+                <li>The same date of birth value is also respresented as a string: "1956-08-23"</li>
+            </ul>
+        </div>
+    </text>
+
+    <extension
+        url="http://www.digitalhealth.gov.au/fhir/StructureDefinition/dh-extension-patient-birth-date-accuracy-indicator">
+
+        <!-- this part of the extension states that the date of birth is fully accurate -->
+        <extension url="dateAccuracyCoding">
+            <valueCoding>
+                <system value="http://meteor.aihw.gov.au/content/index.phtml/itemId/289952"/>
+                <code value="AAA"/>
+                <display value="Day, month and year are accurate"/>
+            </valueCoding>
+        </extension>
+
+        <!-- this part of the extension includes a string representation of the date of birth -->
+        <extension url="dateString">
+            <valueString value="1956-08-23"/>
+        </extension>
+    </extension>
+
+    <name>
+        <use value="official"/>
+        <family value="Erickson"/>
+        <given value="Milton"/>
+    </name>
+
+    <!-- the structured date of birth value -->
+    <birthDate value="1956-08-23"/>
+
+</Patient>
