@@ -4,11 +4,12 @@ These Profiles have been defined for this implementation guide.
 
 ## Administration Profiles
 
+* [Australian Device](StructureDefinition-au-device.html)
+* [Australian HealthcareService](StructureDefinition-au-healthcareservice.html)
 * [Australian Patient](StructureDefinition-au-patient.html)
 * [Australian Practitioner](StructureDefinition-au-practitioner.html)
 * [Australian Practitioner Role](StructureDefinition-au-practitionerrole.html)
 * [Australian Organisation](StructureDefinition-au-organisation.html)
-* [Australian Device](StructureDefinition-au-device.html)
 
 ## Medications Profiles
 

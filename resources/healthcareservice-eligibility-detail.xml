@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-10-10T12:12:33.39+11:00" />
+  </meta>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail" />
+  <name value="Healthcare Service Eligibility Detail" />
+  <title value="Healthcare Service Eligibility Detail" />
+  <status value="draft" />
+  <date value="2017-10-10T11:34:18.631+11:00" />
+  <description value="Extension to support multiple eligiblities" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="HealthcareService" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Healthcare Service Eligibility Detail" />
+      <definition value="Some detail of eligibility for a healthcare service." />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:eligibilityCoding">
+      <path value="Extension.extension" />
+      <sliceName value="eligibilityCoding" />
+      <short value="Coding for Eligbility Type" />
+      <definition value="Codes the type of healthcare service eligibility" />
+    </element>
+    <element id="Extension.extension:eligibilityCoding.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="eligibilityCoding" />
+    </element>
+    <element id="Extension.extension:eligibilityCoding.value[x]:valueCoding">
+      <path value="Extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Extension.extension:eligibilityNote">
+      <path value="Extension.extension" />
+      <sliceName value="eligibilityNote" />
+      <short value="Description of the Eligibility" />
+      <definition value="Description of eligibility which may include details of criteria or other details." />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:eligibilityNote.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="eligibilityNote" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

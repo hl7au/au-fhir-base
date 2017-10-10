@@ -18,18 +18,19 @@ An indication of FHIR profiles that are managed under HL7 Australia working grou
 
 __HL7 Australia Patient Administration Working Group__
 
-* [Patient](StructureDefinition-au-patient.html): identifying values (IHI, Medicare Number, DVA Number), indigenous status
-* [Practitioner](StructureDefinition-au-practitioner.html): identifiers (HPI-I, Prescriber Number)
-* [PractitionerRole](StructureDefinition-au-practitionerrole.html): identifiers (Provider Number), occupation role
-* [Organization](StructureDefinition-au-organisation.html): identifiers (HPI-O), industry class, industry activity
-* [Device](StructureDefinition-au-device.html): identifiers (PAI-D)
+* [Patient](StructureDefinition-au-patient.html): Patient demographic 
+* [Practitioner](StructureDefinition-au-practitioner.html): Individual practitioner
+* [PractitionerRole](StructureDefinition-au-practitionerrole.html): Practitioner in a role (Provider)
+* [Organization](StructureDefinition-au-organisation.html): Organisations responsible for services
+* [HealthcareService](StructureDefinition-au-healthcareservice.html): Healthcare service details
+* [Device](StructureDefinition-au-device.html): Devices including software systems
 
 __HL7 Australia Medications Working Group__
 
-* [Medication](StructureDefinition-au-medication.html): medication details (product, strength, form etc.), PBS code, manufacturer
-* [MedicationRequest](StructureDefinition-au-prescription.html): prescription details, concurrent supply, concession benefits, authority, approval etc.
-* [MedicationDispense](StructureDefinition-au-dispenserecord.html): record of dispensing, concurrent supply, concession benefits, authority, approval etc.
-* [MedicationStatement](StructureDefinition-au-medicationstatement.html): record patient has/will be taking a medication e.g. current medications
+* [Medication](StructureDefinition-au-medication.html): Medication/drug detail
+* [MedicationRequest](StructureDefinition-au-prescription.html): Prescription/order details
+* [MedicationDispense](StructureDefinition-au-dispenserecord.html): Dispense records
+* [MedicationStatement](StructureDefinition-au-medicationstatement.html): Statement of medication use
 * Immunization: (tbd)
 
 __HL7 Australia Orders and Observations Working Group__
