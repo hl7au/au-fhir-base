@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2017-10-10T01:08:51.592+11:00" />
+    <lastUpdated value="2017-10-18T22:48:37.655+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -48,7 +48,6 @@
       <label value="indigenous status" />
       <short value="Australian Indigenous Status" />
       <definition value="Administrative Australian indigenous status coding" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
@@ -59,7 +58,6 @@
       <sliceName value="closethegapregistration" />
       <label value="close the gap registration" />
       <definition value="Administrative indication that the patient has been registered for the close the gap benefit" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
@@ -71,7 +69,6 @@
       <short value="Patient birth time extension" />
       <comment value="This extension provides the ability to record the time of day the patient was born." />
       <requirements value="Allows for the recording of a patient's time of birth (as well as their date of birth), which is useful in a paediatrics context." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
@@ -80,23 +77,9 @@
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
-      <short value="Place of Birth for patient" />
-      <definition value="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
-      </type>
-    </element>
-    <element id="Patient.extension:patientBirthDateAccuracyIndicator">
-      <path value="Patient.extension" />
-      <sliceName value="patientBirthDateAccuracyIndicator" />
-      <definition value="An extension to support the addition of birth date accuracy indicator data to the `Patient` resource, as well as the recording of invalid FHIR date of birth data" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/patient-birth-date-accuracy-indicator" />
       </type>
     </element>
     <element id="Patient.identifier">
@@ -146,7 +129,6 @@
     <element id="Patient.identifier:ihinumber.extension:ihistatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihistatus" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
@@ -160,7 +142,6 @@
       <path value="Patient.identifier.extension" />
       <sliceName value="ihirecordstatus" />
       <definition value="IHI value record status associated with an IHI identifier" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
@@ -598,6 +579,28 @@
       </extension>
       <path value="Patient.identifier.assigner.display" />
       <min value="1" />
+    </element>
+     <element id="Patient.birthDate">
+		 <path value="Patient.birthDate" />
+    </element>
+    <element id="Patient.birthDate.extension">
+      <path value="Patient.birthDate.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.birthDate.extension:accuracyIndicator">
+      <path value="Patient.birthDate.extension" />
+      <sliceName value="accuracyIndicator" />
+      <short value="Patient Birth Date Accuracy Indicator extension." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
+      </type>
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
