@@ -98,18 +98,6 @@
 			<definition value="National identifier for the patient"/>
 			<requirements value="Identifier as assigned and available via Health Identifiers service"/>
 			<max value="1"/>
-			<constraint>
-				<key value="inv-ihi-0"/>
-				<severity value="error"/>
-				<human value="IHI is exactly 16 characters"/>
-				<expression value="value.length() = 16"/>
-			</constraint>
-			<constraint>
-				<key value="inv-ihi-1"/>
-				<severity value="error"/>
-				<human value="IHI prefix is 800360"/>
-				<expression value="value.startsWith('800360')"/>
-			</constraint>
 		</element>
 		<element id="Patient.identifier:ihinumber.extension">
 			<path value="Patient.identifier.extension"/>
@@ -193,6 +181,18 @@
 				<valueString value="8003608166690503"/>
 			</example>
 			<maxLength value="16"/>
+				<constraint>
+				<key value="inv-ihi-0"/>
+				<severity value="error"/>
+				<human value="IHI shall be an exactly 16 digit number"/>
+				<expression value="matches('^([0-9]{16})$'"/>
+			</constraint>
+			<constraint>
+				<key value="inv-ihi-1"/>
+				<severity value="error"/>
+				<human value="IHI prefix is 800360"/>
+				<expression value="startsWith('800360')"/>
+			</constraint>
 			<constraint>
 				<key value="inv-ihi-2"/>
 				<severity value="error"/>
