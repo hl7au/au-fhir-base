@@ -10,8 +10,8 @@
 	</text>
 	<url value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 	<version value="1.0"/>
-	<name value="Australian Patient"/>
-	<title value="Australian Patient"/>
+	<name value="AU Base Patient"/>
+	<title value="AU Base Patient"/>
 	<status value="draft"/>
 	<date value="2017-09-06T06:30:54+00:00"/>
 	<publisher value="Health Level Seven Australia (Patient Administration)"/>
@@ -148,11 +148,10 @@
 			<path value="Patient.identifier.type.coding"/>
 			<definition value="ihi"/>
 			<max value="1"/>
-			<fixedCoding>
+			<patternCoding>
 				<system value="http://hl7.org/fhir/v2/0203"/>
 				<code value="NI"/>
-				<display value="National unique individual identifier"/>
-			</fixedCoding>
+			</patternCoding>
 		</element>
 		<element id="Patient.identifier:ihinumber.type.text">
 			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -180,7 +179,7 @@
 				<valueString value="8003608166690503"/>
 			</example>
 			<maxLength value="16"/>
-				<constraint>
+			<constraint>
 				<key value="inv-ihi-0"/>
 				<severity value="error"/>
 				<human value="IHI shall be an exactly 16 digit number"/>
@@ -218,11 +217,10 @@
 			<path value="Patient.identifier.type.coding"/>
 			<definition value="Medicare Number assigned  to a patient"/>
 			<max value="1"/>
-			<fixedCoding>
+			<patternCoding>
 				<system value="http://hl7.org/fhir/v2/0203"/>
 				<code value="MC"/>
-				<display value="Patient's Medicare Number"/>
-			</fixedCoding>
+			</patternCoding>
 		</element>
 		<element id="Patient.identifier:medicarenumber.type.text">
 			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -354,14 +352,13 @@
 			<short value="Health Care Card Identifier Type"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="1"/>
-			<fixedCodeableConcept>
+			<patternCodeableConcept>
 				<coding>
 					<system value="http://hl7.org/fhir/v2/0203"/>
 					<code value="HC"/>
-					<display value="Health Card Number"/>
 				</coding>
 				<text value="Health Care Card Number"/>
-			</fixedCodeableConcept>
+			</patternCodeableConcept>
 			<binding>
 				<strength value="extensible"/>
 				<valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
@@ -398,14 +395,13 @@
 			<short value="Pensioner Concession Card Identifier Type"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="1"/>
-			<fixedCodeableConcept>
+			<patternCodeableConcept>
 				<coding>
 					<system value="http://hl7.org/fhir/v2/0203"/>
 					<code value="PEN"/>
-					<display value="Pension Number"/>
 				</coding>
 				<text value="Pensioner Concession Card Number"/>
-			</fixedCodeableConcept>
+			</patternCodeableConcept>
 			<binding>
 				<strength value="extensible"/>
 				<valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
@@ -442,14 +438,13 @@
 			<short value="Commonwealth Seniors Health Card Identifier Type"/>
 			<definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
 			<min value="1"/>
-			<fixedCodeableConcept>
+			<patternCodeableConcept>
 				<coding>
 					<system value="http://hl7.org.au/fhir/v2/0203"/>
 					<code value="SEN"/>
-					<display value="Commonwealth Seniors Health Card"/>
 				</coding>
 				<text value="Commonwealth Seniors Health Card"/>
-			</fixedCodeableConcept>
+			</patternCodeableConcept>
 			<binding>
 				<strength value="extensible"/>
 				<valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203"/>
@@ -500,11 +495,10 @@
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
-			<fixedCoding>
+			<patternCoding>
 				<system value="http://hl7.org/fhir/v2/0203"/>
 				<code value="MR"/>
-				<display value="Medical record number"/>
-			</fixedCoding>
+			</patternCoding>
 		</element>
 		<element id="Patient.identifier:medicalrecordnumber.type.text">
 			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -553,11 +547,10 @@
 			<path value="Patient.identifier.type.coding"/>
 			<min value="1"/>
 			<max value="1"/>
-			<fixedCoding>
+			<patternCoding>
 				<system value="http://hl7.org/fhir/v2/0203"/>
 				<code value="MB"/>
-				<display value="Member Number"/>
-			</fixedCoding>
+			</patternCoding>
 		</element>
 		<element id="Patient.identifier:insurernumber.type.text">
 			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
