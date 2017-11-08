@@ -1,4 +1,4 @@
-Australian HealthcareService Profile
+AU Base HealthcareService Profile
 
 This profile defines a healthcare service profile for the Australian context.
 

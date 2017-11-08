@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-prescription" />
   <meta>
-    <lastUpdated value="2017-11-08T14:33:46.961+11:00" />
+    <lastUpdated value="2017-11-08T14:56:52.114+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
   <version value="0.1" />
@@ -77,11 +77,10 @@
       <path value="MedicationRequest.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://hl7.org.au/fhir/v2/0203" />
         <code value="ETP" />
-        <display value="Electronic Transfer of Prescription Identifier" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="MedicationRequest.identifier:etpvendor.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -144,11 +143,10 @@
       <path value="MedicationRequest.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://hl7.org.au/fhir/v2/0203" />
         <code value="LPN" />
-        <display value="Local Prescription Number" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="MedicationRequest.identifier:script-number.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -156,7 +154,7 @@
       </extension>
       <path value="MedicationRequest.identifier.type.text" />
       <min value="1" />
-      <fixedString value="Prescription Number" />
+      <fixedString value="Local Prescription Number" />
     </element>
     <element id="MedicationRequest.identifier:script-number.system">
       <path value="MedicationRequest.identifier.system" />
@@ -164,7 +162,7 @@
     </element>
     <element id="MedicationRequest.identifier:script-number.value">
       <path value="MedicationRequest.identifier.value" />
-      <short value="Prescription Number " />
+      <short value="Prescription Number" />
       <min value="1" />
     </element>
     <element id="MedicationRequest.identifier:script-number.assigner">

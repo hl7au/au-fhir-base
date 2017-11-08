@@ -1,1 +1,1 @@
-Australian Endpoint
+AU Base Endpoint

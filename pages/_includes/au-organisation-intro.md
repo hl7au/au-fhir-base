@@ -1,4 +1,4 @@
-Australian Organization Profile
+AU Base Organization Profile
 
 This profile defines an organisation administration details structure that includes core localisation concepts.
 

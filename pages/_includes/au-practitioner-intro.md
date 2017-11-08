@@ -1,4 +1,4 @@
-Australian Practitioner Profile
+AU Base Practitioner Profile
 
 This profile defines a practitioner administration details structure that includes core localisation concepts.
 

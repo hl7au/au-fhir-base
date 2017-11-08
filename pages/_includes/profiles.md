@@ -4,22 +4,22 @@ These Profiles have been defined for this implementation guide.
 
 ## Administration Profiles
 
-* [Australian Device](StructureDefinition-au-device.html)
-* [Australian HealthcareService](StructureDefinition-au-healthcareservice.html)
-* [Australian Patient](StructureDefinition-au-patient.html)
-* [Australian Practitioner](StructureDefinition-au-practitioner.html)
-* [Australian Practitioner Role](StructureDefinition-au-practitionerrole.html)
-* [Australian Organisation](StructureDefinition-au-organisation.html)
+* [AU Base Device](StructureDefinition-au-device.html)
+* [AU Base HealthcareService](StructureDefinition-au-healthcareservice.html)
+* [AU Base Patient](StructureDefinition-au-patient.html)
+* [AU Base Practitioner](StructureDefinition-au-practitioner.html)
+* [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html)
+* [AU Base Organisation](StructureDefinition-au-organisation.html)
 
 ## Medications Profiles
 
-* [Australian Medication](StructureDefinition-au-medication.html)
-* [Australian Prescription](StructureDefinition-au-prescription.html)
-* [Australian Dispense Record](StructureDefinition-au-dispenserecord.html)
-* [Australian Medication Statement](StructureDefinition-au-medicationstatement.html)
+* [AU Base Medication](StructureDefinition-au-medication.html)
+* [AU Base Prescription](StructureDefinition-au-prescription.html)
+* [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html)
+* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html)
 * [PBS Pharmaceutical Manufacturer Organisation](StructureDefinition-au-pbs-pharma-manufacturer.html)
 
 ## Profiles on Data Types
 
-* [Australian Address](StructureDefinition-au-address.html)
+* [AU Base Address](StructureDefinition-au-address.html)
 

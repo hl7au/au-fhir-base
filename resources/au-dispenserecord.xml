@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-dispenserecord" />
   <meta>
-    <lastUpdated value="2017-11-08T14:34:09.186+11:00" />
+    <lastUpdated value="2017-11-08T14:55:23.909+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-dispenserecord" />
   <version value="0.1" />
@@ -79,17 +79,17 @@
       <path value="MedicationDispense.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://hl7.org.au/fhir/v2/0203" />
         <code value="ETP" />
-        <display value="Electronic Transfer of Prescription Identifier" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="MedicationDispense.identifier:etpvendor.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="MedicationDispense.identifier.type.text" />
+      <min value="1" />
       <fixedString value="ETP Identifier" />
     </element>
     <element id="MedicationDispense.identifier:etpvendor.system">
@@ -144,11 +144,17 @@
       <path value="MedicationDispense.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <fixedCoding>
-        <system value="http://hl7.org.au/fhir/v2/0203" />
+      <patternCoding>
         <code value="LPN" />
-        <display value="Electronic Transfer of Prescription Identifier" />
-      </fixedCoding>
+      </patternCoding>
+    </element>
+    <element id="MedicationDispense.identifier:scriptnumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationDispense.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Local Prescription Number" />
     </element>
     <element id="MedicationDispense.identifier:scriptnumber.system">
       <path value="MedicationDispense.identifier.system" />

@@ -1,4 +1,4 @@
-Australian Practitioner Role Profile
+AU Base Practitioner Role Profile
 
 This profile defines a provider role administration details structure that includes core localisation concepts.
 

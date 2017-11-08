@@ -1,4 +1,4 @@
-Australian Patient Profile
+AU Base Patient Profile
 
 This profile defines a patient administration details structure that includes core localisation concepts.
 
