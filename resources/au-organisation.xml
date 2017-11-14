@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organisation" />
   <meta>
-    <lastUpdated value="2017-11-14T11:05:28.013+11:00" />
+    <lastUpdated value="2017-11-14T14:05:45.125+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -70,11 +70,10 @@
       <short value="HPI-O Identifier Type Code" />
       <definition value="Coding for the identifier type" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://hl7.org.au/fhir/v2/0203" />
         <code value="NOI" />
-        <display value="National Organisation Identifier" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Organization.identifier:hpio.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

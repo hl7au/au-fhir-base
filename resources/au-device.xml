@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-device" />
   <meta>
-    <lastUpdated value="2017-11-14T11:02:15.05+11:00" />
+    <lastUpdated value="2017-11-14T14:04:49.663+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -73,11 +73,11 @@
     </element>
     <element id="Device.identifier:paid.type.coding">
       <path value="Device.identifier.type.coding" />
-      <fixedCoding>
+      <max value="1" />
+      <patternCoding>
         <system value="http://hl7.org.au/fhir/v2/0203" />
         <code value="NDI" />
-        <display value="National Device Identifier" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Device.identifier:paid.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

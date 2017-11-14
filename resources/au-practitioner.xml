@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <meta>
-    <lastUpdated value="2017-11-14T11:07:03.39+11:00" />
+    <lastUpdated value="2017-11-14T14:09:32.916+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -67,11 +67,10 @@
       <path value="Practitioner.identifier.type.coding" />
       <short value="HPI-I Identifier Type Code" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://hl7.org/fhir/v2/0203" />
         <code value="NPI" />
-        <display value="National provider identifier" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Practitioner.identifier:hpii.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -138,11 +137,10 @@
       <path value="Practitioner.identifier.type.coding" />
       <short value="Prescriber Number Type Code" />
       <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://hl7.org.au/fhir/v2/0203" />
         <code value="PRES" />
-        <display value="Prescriber Number" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Practitioner.identifier:prescribernumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -181,6 +179,10 @@
     <element id="Practitioner.identifier:ahpra.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://hl7.org.au/fhir/v2/0203" />
+        <code value="AHPRA" />
+      </patternCoding>
     </element>
     <element id="Practitioner.identifier:ahpra.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

@@ -1,1 +1,1 @@
-Australian PBS Manufacturer Organisation
+AU Base PBS Manufacturer profile contains:
