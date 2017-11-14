@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organisation" />
   <meta>
-    <lastUpdated value="2017-11-08T14:32:01.392+11:00" />
+    <lastUpdated value="2017-11-14T11:05:28.013+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -54,18 +54,6 @@
       <short value="HPI-O" />
       <definition value="National identifier Health Provider Identifier for Organisations" />
       <max value="1" />
-      <constraint>
-        <key value="inv-hpio-0" />
-        <severity value="error" />
-        <human value="HPI-O is exactly 16 characters" />
-        <expression value="value.length() = 16" />
-      </constraint>
-      <constraint>
-        <key value="inv-hpio-1" />
-        <severity value="error" />
-        <human value="HPI-O prefix is 800362" />
-        <expression value="value.startsWith('800362')" />
-      </constraint>
     </element>
     <element id="Organization.identifier:hpio.type">
       <path value="Organization.identifier.type" />
@@ -114,6 +102,24 @@
         <valueString value="8003627500000328" />
       </example>
       <maxLength value="16" />
+      <constraint>
+        <key value="inv-hpio-0" />
+        <severity value="error" />
+        <human value="The HPI-O shall be a 16 digit number." />
+        <expression value="matches('^([0-9]{16})$')" />
+      </constraint>
+      <constraint>
+        <key value="inv-hpio-2" />
+        <severity value="error" />
+        <human value="HPI-O prefix is 800362" />
+        <expression value="startsWith('800362')" />
+      </constraint>
+      <constraint>
+        <key value="inv-hpio-2" />
+        <severity value="error" />
+        <human value="The HPI-O Identifier shall pass the Luhn algorithm check" />
+        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
+      </constraint>
     </element>
     <element id="Organization.identifier.abn">
       <path value="Organization.identifier" />
@@ -238,18 +244,6 @@
       <short value="PAI-O" />
       <definition value="My Health Record Assigned Identity for Organisations " />
       <max value="1" />
-      <constraint>
-        <key value="inv-paio-0" />
-        <severity value="error" />
-        <human value="PAI-O is exactly 16 characters" />
-        <expression value="value.length() = 16" />
-      </constraint>
-      <constraint>
-        <key value="inv-paio-1" />
-        <severity value="error" />
-        <human value="PAI-O prefix is 800364" />
-        <expression value="value.startsWith('800364')" />
-      </constraint>
     </element>
     <element id="Organization.identifier:paio.type">
       <path value="Organization.identifier.type" />
@@ -287,6 +281,24 @@
         <valueString value="8003647500000328" />
       </example>
       <maxLength value="16" />
+      <constraint>
+        <key value="inv-paio-0" />
+        <severity value="error" />
+        <human value="The PAI-O shall be a 16 digit number." />
+        <expression value="matches('^([0-9]{16})$')" />
+      </constraint>
+      <constraint>
+        <key value="inv-paio-1" />
+        <severity value="error" />
+        <human value="The PAI-O prefix is 800364" />
+        <expression value="startsWith('800364')" />
+      </constraint>
+      <constraint>
+        <key value="inv-paio-2" />
+        <severity value="error" />
+        <human value="The PAI-O Identifier shall pass the Luhn algorithm check" />
+        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
+      </constraint>
     </element>
     <element id="Organization.identifier.csp">
       <path value="Organization.identifier" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <meta>
-    <lastUpdated value="2017-11-08T14:32:30.271+11:00" />
+    <lastUpdated value="2017-11-14T11:07:03.39+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -53,18 +53,6 @@
       <short value="HPI-I" />
       <definition value="National identifier Healthcare Provider Identifier for Individuals" />
       <max value="1" />
-      <constraint>
-        <key value="inv-hpii-0" />
-        <severity value="error" />
-        <human value="HPI-I is exactly 16 characters" />
-        <expression value="value.length() = 16" />
-      </constraint>
-      <constraint>
-        <key value="inv-hpii-1" />
-        <severity value="error" />
-        <human value="HPI-I prefix is 800361" />
-        <expression value="value.startsWith('800361')" />
-      </constraint>
     </element>
     <element id="Practitioner.identifier:hpii.type">
       <path value="Practitioner.identifier.type" />
@@ -110,15 +98,21 @@
       </example>
       <maxLength value="16" />
       <constraint>
-        <key value="inv-hpii-1" />
+        <key value="inv-hpii-0" />
         <requirements value="The value shall be a 16 digit number." />
         <severity value="error" />
-        <human value="The identifier shall be an exactly 16 digit number" />
+        <human value="The HPI-I shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
+        <key value="inv-hpii-1" />
+        <severity value="error" />
+        <human value="HPI-I prefix is 800361" />
+        <expression value="startsWith('800361')" />
+      </constraint>
+      <constraint>
         <key value="inv-hpii-2" />
-        <requirements value="The identifier shall pass the Luhn algorithm check" />
+        <requirements value="The HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />

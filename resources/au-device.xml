@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-device" />
   <meta>
-    <lastUpdated value="2017-11-08T14:34:29.269+11:00" />
+    <lastUpdated value="2017-11-14T11:02:15.05+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -105,25 +105,25 @@
       </example>
       <maxLength value="16" />
       <constraint>
-        <key value="inv-paid-1" />
-        <requirements value="The value shall be a 16 digit number." />
+        <key value="inv-paid-0" />
+        <requirements value="The PAI-D shall be a 16 digit number." />
         <severity value="error" />
         <human value="The identifier shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-paid-3" />
-        <requirements value="The PAI-D Identifier shall pass the Luhn algorithm check" />
-        <severity value="error" />
-        <human value="The identifier shall pass the Luhn algorithm check" />
-        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
-      </constraint>
-      <constraint>
-        <key value="inv-paid-2" />
+        <key value="inv-paid-1" />
         <requirements value="The PAI-D prefix is 8003640003" />
         <severity value="error" />
         <human value="The PAI-D prefix is 8003640003" />
         <expression value="startsWith('8003640003')" />
+      </constraint>
+      <constraint>
+        <key value="inv-paid-2" />
+        <requirements value="The PAI-D Identifier shall pass the Luhn algorithm check" />
+        <severity value="error" />
+        <human value="The identifier shall pass the Luhn algorithm check" />
+        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
     <element id="Device.patient">
