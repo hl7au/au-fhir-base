@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-11-08T14:32:27.867+11:00" />
+    <lastUpdated value="2017-11-14T11:11:07.662+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -197,22 +197,22 @@
       <path value="PractitionerRole.identifier.value" />
       <min value="1" />
       <constraint>
-        <key value="inv-caei-00" />
+        <key value="inv-caei-0" />
         <requirements value="The value shall be a 16 digit number." />
         <severity value="error" />
-        <human value="The identifier shall be an exactly 16 digit number" />
+        <human value="The CAEI shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-caei-01" />
+        <key value="inv-caei-1" />
         <severity value="error" />
-        <human value="The identifier SHALL contain a prefix of 900360" />
+        <human value="The CAEI SHALL contain a prefix of 900360" />
         <expression value="startsWith('900360')" />
       </constraint>
       <constraint>
-        <key value="inv-caei-02" />
+        <key value="inv-caei-2" />
         <severity value="error" />
-        <human value="The identifier shall pass the Luhn algorithm check" />
+        <human value="The CAEI shall pass the Luhn algorithm check" />
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
