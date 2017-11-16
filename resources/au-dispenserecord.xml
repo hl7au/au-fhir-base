@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-dispenserecord" />
   <meta>
-    <lastUpdated value="2017-11-08T14:55:23.909+11:00" />
+    <lastUpdated value="2017-11-16T14:56:57.935+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-dispenserecord" />
   <version value="0.1" />
@@ -53,13 +53,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationDispense.identifier:etpvendor">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier">
       <path value="MedicationDispense.identifier" />
-      <sliceName value="etpvendor" />
+      <sliceName value="etpVendorIdentifier" />
       <short value="ETP vendor identifier" />
       <definition value="Identifier assigned by ETP vendor e.g. ERx, Medisecure; typically provided as a barcode." />
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.type">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.type">
       <path value="MedicationDispense.identifier.type" />
       <min value="1" />
       <binding>
@@ -75,7 +75,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.type.coding">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.type.coding">
       <path value="MedicationDispense.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
@@ -84,7 +84,7 @@
         <code value="ETP" />
       </patternCoding>
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.type.text">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -92,25 +92,25 @@
       <min value="1" />
       <fixedString value="ETP Identifier" />
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.system">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.system">
       <path value="MedicationDispense.identifier.system" />
       <short value="ETP Vendor Identifier System URL" />
       <definition value="URL assigned by the ETP vendor allocating the identifier." />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.value">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.value">
       <path value="MedicationDispense.identifier.value" />
       <short value="ETP Vendor Identifier" />
       <definition value="ETP Vendor allocated identifier for the request this dispense record is fulfilling." />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.assigner">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.assigner">
       <path value="MedicationDispense.identifier.assigner" />
       <short value="ETP Vendor" />
       <definition value="ETP Vendor assigning this identifier" />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:etpvendor.assigner.display">
+    <element id="MedicationDispense.identifier:etpVendorIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -119,12 +119,12 @@
       <definition value="Name of the ETP vendor assigning this identifier." />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber">
+    <element id="MedicationDispense.identifier:localScriptNumber">
       <path value="MedicationDispense.identifier" />
-      <sliceName value="scriptnumber" />
+      <sliceName value="localScriptNumber" />
       <short value="Local Script Number" />
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.type">
+    <element id="MedicationDispense.identifier:localScriptNumber.type">
       <path value="MedicationDispense.identifier.type" />
       <min value="1" />
       <binding>
@@ -140,7 +140,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.type.coding">
+    <element id="MedicationDispense.identifier:localScriptNumber.type.coding">
       <path value="MedicationDispense.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
@@ -148,7 +148,7 @@
         <code value="LPN" />
       </patternCoding>
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.type.text">
+    <element id="MedicationDispense.identifier:localScriptNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -156,19 +156,19 @@
       <min value="1" />
       <fixedString value="Local Prescription Number" />
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.system">
+    <element id="MedicationDispense.identifier:localScriptNumber.system">
       <path value="MedicationDispense.identifier.system" />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.value">
+    <element id="MedicationDispense.identifier:localScriptNumber.value">
       <path value="MedicationDispense.identifier.value" />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.assigner">
+    <element id="MedicationDispense.identifier:localScriptNumber.assigner">
       <path value="MedicationDispense.identifier.assigner" />
       <min value="1" />
     </element>
-    <element id="MedicationDispense.identifier:scriptnumber.assigner.display">
+    <element id="MedicationDispense.identifier:localScriptNumber.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

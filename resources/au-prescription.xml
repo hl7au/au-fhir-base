@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-prescription" />
   <meta>
-    <lastUpdated value="2017-11-08T14:56:52.114+11:00" />
+    <lastUpdated value="2017-11-16T14:57:31.234+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
   <version value="0.1" />
@@ -53,13 +53,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.identifier:etpvendor">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier">
       <path value="MedicationRequest.identifier" />
-      <sliceName value="etpvendor" />
+      <sliceName value="etbVendorIdentifier" />
       <short value="Electronic Transfer of Prescription Supplier Identifier" />
       <definition value="Identifier assigned by ETP vendor e.g. ERx, Medisecure; typically provided as a barcode." />
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.type">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.type">
       <path value="MedicationRequest.identifier.type" />
       <min value="1" />
       <binding>
@@ -73,7 +73,7 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.type.coding">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.type.coding">
       <path value="MedicationRequest.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
@@ -82,7 +82,7 @@
         <code value="ETP" />
       </patternCoding>
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.type.text">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -90,25 +90,25 @@
       <min value="1" />
       <fixedString value="ETP Identifier" />
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.system">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.system">
       <path value="MedicationRequest.identifier.system" />
       <short value="ETP Vendor Identifier System URL" />
       <definition value="URL assigned by the ETP vendor allocating the identifier." />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.value">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.value">
       <path value="MedicationRequest.identifier.value" />
       <short value="ETP Vendor Identifier" />
       <definition value="ETP Vendor allocated identifier for the request this dispense record is fulfilling." />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.assigner">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.assigner">
       <path value="MedicationRequest.identifier.assigner" />
       <short value="ETP Vendor" />
       <definition value="ETP Vendor assigning this identifier" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:etpvendor.assigner.display">
+    <element id="MedicationRequest.identifier:etbVendorIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -117,13 +117,13 @@
       <definition value="Name of the ETP vendor assigning this identifier." />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:script-number">
+    <element id="MedicationRequest.identifier:localScriptNumber">
       <path value="MedicationRequest.identifier" />
-      <sliceName value="script-number" />
+      <sliceName value="localScriptNumber" />
       <short value="Local Prescription Number" />
       <definition value="Prescription number that can be referenced in the requester local system " />
     </element>
-    <element id="MedicationRequest.identifier:script-number.type">
+    <element id="MedicationRequest.identifier:localScriptNumber.type">
       <path value="MedicationRequest.identifier.type" />
       <min value="1" />
       <binding>
@@ -139,7 +139,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="MedicationRequest.identifier:script-number.type.coding">
+    <element id="MedicationRequest.identifier:localScriptNumber.type.coding">
       <path value="MedicationRequest.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
@@ -148,7 +148,7 @@
         <code value="LPN" />
       </patternCoding>
     </element>
-    <element id="MedicationRequest.identifier:script-number.type.text">
+    <element id="MedicationRequest.identifier:localScriptNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -156,20 +156,20 @@
       <min value="1" />
       <fixedString value="Local Prescription Number" />
     </element>
-    <element id="MedicationRequest.identifier:script-number.system">
+    <element id="MedicationRequest.identifier:localScriptNumber.system">
       <path value="MedicationRequest.identifier.system" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:script-number.value">
+    <element id="MedicationRequest.identifier:localScriptNumber.value">
       <path value="MedicationRequest.identifier.value" />
       <short value="Prescription Number" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:script-number.assigner">
+    <element id="MedicationRequest.identifier:localScriptNumber.assigner">
       <path value="MedicationRequest.identifier.assigner" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.identifier:script-number.assigner.display">
+    <element id="MedicationRequest.identifier:localScriptNumber.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
