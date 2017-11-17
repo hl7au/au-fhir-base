@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-11-16T14:48:26.145+11:00" />
+    <lastUpdated value="2017-11-17T12:28:02.487+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -288,11 +288,11 @@
       </slicing>
       <definition value="Roles which this practitioner can perform." />
     </element>
-    <element id="PractitionerRole.specialty:specialtyrole">
+    <element id="PractitionerRole.specialty:specialtyRole">
       <path value="PractitionerRole.specialty" />
-      <sliceName value="specialtyrole" />
+      <sliceName value="specialtyRole" />
       <short value="Practitioner Specialty" />
-      <definition value="Specialties this practitioner has" />
+      <definition value="Specialties for which this practitioner has capability to deliver in this role" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PractitionerRole" />
