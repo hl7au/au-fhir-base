@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+
+    <id value="DateAccuracyIndicatorAAUexample1"/>
+
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This example demonstrates how a birth or deceased date with an accurate day, month and unknown year would be represented.</p>
+            <p>Note that "0000-08-23" is a NOT a valid FHIR date.</p>
+            <p>Details include:</p>
+            <ul>
+                <li>A valid FHIR date example for birth date and deceased date is "2004-08-23” but not "0000-08-23".</li>
+                <li>A date accuracy indicator of "AAU" indicates that day and month are accurate but year is unknown.</li>
+                <li>When a code value contains "A", the corresponding date components (individual or combination) for birth or deceased dates must be accurate.</li>
+                <li>When a code value contains "U", the corresponding date components (individual or combination) for birth or deceased dates must be ignored.</li>
+            </ul>
+        </div>
+    </text>
+    
+    <birthDate value="2004-08-23">    
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">
+        <!-- this part of the extension states that date of birth is partially accurate -->
+            <valueCoding>
+                <system value="http://meteor.aihw.gov.au/content/index.phtml/itemId/289952"/>
+                <code value="AAU"/>
+                <display value="Day and month are accurate, year is unknown"/>
+            </valueCoding>
+        </extension>  
+    </birthDate>
+    
+    <deceasedDateTime value="2004-08-23T13:42:00+10:00">        
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">            
+            <!-- this part of the extension states that deceased date is partially accurate -->
+                <valueCoding>
+                    <system value="http://meteor.aihw.gov.au/content/index.phtml/itemId/289952"/>
+                    <code value="AAU"/>
+                    <display value="Day and month are accurate, year is unknown"/>
+                </valueCoding>
+        </extension>        
+    </deceasedDateTime>
+    
+</Patient>
