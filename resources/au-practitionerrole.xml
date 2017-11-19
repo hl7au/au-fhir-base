@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-11-14T16:32:03.968+11:00" />
+    <lastUpdated value="2017-11-17T12:28:02.487+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -50,14 +50,14 @@
       <short value="Australian Practitioner Role Identifiers" />
       <definition value="business identifiers" />
     </element>
-    <element id="PractitionerRole.identifier:providernumber">
+    <element id="PractitionerRole.identifier:providerNumber">
       <path value="PractitionerRole.identifier" />
-      <sliceName value="providernumber" />
+      <sliceName value="providerNumber" />
       <short value="Australian provider number" />
       <definition value="Provider number for this practitioner role" />
       <max value="1" />
     </element>
-    <element id="PractitionerRole.identifier:providernumber.type">
+    <element id="PractitionerRole.identifier:providerNumber.type">
       <path value="PractitionerRole.identifier.type" />
       <short value="Provider Number Identifier Type" />
       <definition value="Identifier type of provider number for this practitioner role" />
@@ -69,7 +69,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="PractitionerRole.identifier:providernumber.type.coding">
+    <element id="PractitionerRole.identifier:providerNumber.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <short value="Provider Number Identifier Type Code" />
       <definition value="Provider number identifier type coding" />
@@ -79,7 +79,7 @@
         <code value="UPIN" />
       </patternCoding>
     </element>
-    <element id="PractitionerRole.identifier:providermumber.type.text">
+    <element id="PractitionerRole.identifier:providerNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -89,13 +89,13 @@
       <min value="1" />
       <fixedString value="Medicare Provider Number" />
     </element>
-    <element id="PractitionerRole.identifier:providermumber.system">
+    <element id="PractitionerRole.identifier:providerNumber.system">
       <path value="PractitionerRole.identifier.system" />
       <definition value="Namespace of provider number for this practitioner role" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-provider-number" />
     </element>
-    <element id="PractitionerRole.identifier:providermumber.value">
+    <element id="PractitionerRole.identifier:providerNumber.value">
       <path value="PractitionerRole.identifier.value" />
       <short value="Medicare Provider Number Value" />
       <definition value="Provider number for this practitioner role" />
@@ -105,14 +105,14 @@
         <valueString value="2426621B" />
       </example>
     </element>
-    <element id="PractitionerRole.identifier:nationalprovideratorganisation">
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation">
       <path value="PractitionerRole.identifier" />
-      <sliceName value="nationalprovideratorganisation" />
+      <sliceName value="nationalProviderAtOrganisation" />
       <short value="Provider at Organisation Identifier" />
       <definition value="Combined HPI-I and HPI-O identifier to use as unique organisation based identifier for a practitioner." />
       <max value="1" />
     </element>
-    <element id="PractitionerRole.identifier:nationalprovideratorganisation.type">
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type">
       <path value="PractitionerRole.identifier.type" />
       <short value="National Provider at Organisation Identifier Type" />
       <definition value="Identifier type provider at organisation identifier for this practitioner role" />
@@ -130,7 +130,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="PractitionerRole.identifier:nationalprovideratorganisation.type.coding">
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <max value="1" />
       <patternCoding>
@@ -138,7 +138,7 @@
         <code value="NPIO" />
       </patternCoding>
     </element>
-    <element id="PractitionerRole.identifier:nationalprovideratorganisation.type.text">
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -148,13 +148,13 @@
       <min value="1" />
       <fixedString value="NPIO" />
     </element>
-    <element id="PractitionerRole.identifier:nationalprovideratorganisation.system">
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.system">
       <path value="PractitionerRole.identifier.system" />
       <definition value="Namespace of national provider at organisation identifier for this practitioner role" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/npio" />
     </element>
-    <element id="PractitionerRole.identifier:nationalprovideratorganisation.value">
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.value">
       <path value="PractitionerRole.identifier.value" />
       <short value="NPIO Value" />
       <min value="1" />
@@ -165,18 +165,18 @@
         <expression value="value.length() = 33" />
       </constraint>
     </element>
-    <element id="PractitionerRole.identifier:careagencyemployeeidentifier">
+    <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier">
       <path value="PractitionerRole.identifier" />
-      <sliceName value="careagencyemployeeidentifier" />
+      <sliceName value="careAgencyEmployeeIdentifier" />
       <short value="Care Agency Employee Identifier" />
       <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers. " />
       <max value="1" />
     </element>
-    <element id="PractitionerRole.identifier:careagencyemployeeidentifier.type">
+    <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.type">
       <path value="PractitionerRole.identifier.type" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.identifier:careagencyemployeeidentifier.type.coding">
+    <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <max value="1" />
       <patternCoding>
@@ -184,7 +184,7 @@
         <code value="EI" />
       </patternCoding>
     </element>
-    <element id="PractitionerRole.identifier:careagencyemployeeidentifier.type.text">
+    <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -192,12 +192,12 @@
       <min value="1" />
       <fixedString value="Care Agency Employee Identifier" />
     </element>
-    <element id="PractitionerRole.identifier:careagencyemployeeidentifier.system">
+    <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.system">
       <path value="PractitionerRole.identifier.system" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/caei/1.0" />
     </element>
-    <element id="PractitionerRole.identifier:careagencyemployeeidentifier.value">
+    <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.value">
       <path value="PractitionerRole.identifier.value" />
       <short value="CAEI Number Value" />
       <min value="1" />
@@ -221,17 +221,17 @@
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
-    <element id="PractitionerRole.identifier:employeenumber">
+    <element id="PractitionerRole.identifier:employeeNumber">
       <path value="PractitionerRole.identifier" />
-      <sliceName value="employeenumber" />
+      <sliceName value="employeeNumber" />
       <short value="Employee Number" />
       <definition value="Assigned identifier related to employment in this role" />
     </element>
-    <element id="PractitionerRole.identifier:employeenumber.type">
+    <element id="PractitionerRole.identifier:employeeNumber.type">
       <path value="PractitionerRole.identifier.type" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.identifier:employeenumber.type.coding">
+    <element id="PractitionerRole.identifier:employeeNumber.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <max value="1" />
       <patternCoding>
@@ -239,7 +239,7 @@
         <code value="EI" />
       </patternCoding>
     </element>
-    <element id="PractitionerRole.identifier:employeenumber.type.text">
+    <element id="PractitionerRole.identifier:employeeNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -247,16 +247,16 @@
       <min value="1" />
       <fixedString value="Employee Number" />
     </element>
-    <element id="PractitionerRole.identifier:employeenumber.value">
+    <element id="PractitionerRole.identifier:employeeNumber.value">
       <path value="PractitionerRole.identifier.value" />
       <short value="Employee Number Value" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.identifier:employeenumber.assigner">
+    <element id="PractitionerRole.identifier:employeeNumber.assigner">
       <path value="PractitionerRole.identifier.assigner" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.identifier:employeenumber.assigner.display">
+    <element id="PractitionerRole.identifier:employeeNumber.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -288,11 +288,11 @@
       </slicing>
       <definition value="Roles which this practitioner can perform." />
     </element>
-    <element id="PractitionerRole.specialty:specialtyrole">
+    <element id="PractitionerRole.specialty:specialtyRole">
       <path value="PractitionerRole.specialty" />
-      <sliceName value="specialtyrole" />
+      <sliceName value="specialtyRole" />
       <short value="Practitioner Specialty" />
-      <definition value="Specialties this practitioner has" />
+      <definition value="Specialties for which this practitioner has capability to deliver in this role" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PractitionerRole" />
