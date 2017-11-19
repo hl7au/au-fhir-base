@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
-    <lastUpdated value="2017-11-08T14:33:09.619+11:00" />
+    <lastUpdated value="2017-11-19T23:36:26.673+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -39,6 +39,10 @@
           <type value="value" />
           <path value="system" />
         </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
         <rules value="open" />
       </slicing>
     </element>
@@ -62,14 +66,22 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-gtin-codes" />
       </binding>
     </element>
-    <element id="Medication.code.coding:AMT">
+    <element id="Medication.code.coding:amtTPP">
       <path value="Medication.code.coding" />
-      <sliceName value="AMT" />
-      <short value="Medication AMT MP,MPP,TPP, MPUU, TP, TPUU, CTPP" />
-      <definition value="Code from http://snomed.info/sct" />
+      <sliceName value="amtTPP" />
+      <short value="AMT Trade Product Pack" />
       <binding>
         <strength value="required" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-amt-codes" />
+        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-amt-tpp" />
+      </binding>
+    </element>
+    <element id="Medication.code.coding:amtMPP">
+      <path value="Medication.code.coding" />
+      <sliceName value="amtMPP" />
+      <short value="AMT Medicinal Product Pack" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-amt-mpp" />
       </binding>
     </element>
     <element id="Medication.manufacturer">
