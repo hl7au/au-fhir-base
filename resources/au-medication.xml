@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
-    <lastUpdated value="2017-11-21T17:25:55.373+11:00" />
+    <lastUpdated value="2017-12-06T14:04:45.626+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -77,6 +77,28 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Medication.code.coding:amtTPP.extension">
+      <path value="Medication.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.code.coding:amtTPP.extension:category">
+      <path value="Medication.code.coding.extension" />
+      <sliceName value="category" />
+      <short value="Category of coding" />
+      <definition value="General category of coding to allow  usage of codes to be distinguished from the same CodeSystem" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-category" />
+      </type>
+    </element>
     <element id="Medication.code.coding:amtMPP">
       <path value="Medication.code.coding" />
       <sliceName value="amtMPP" />
@@ -85,6 +107,58 @@
         <strength value="required" />
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-amt-mpp-codes" />
       </binding>
+    </element>
+    <element id="Medication.code.coding:amtMPP.extension">
+      <path value="Medication.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.code.coding:amtMPP.extension:category">
+      <path value="Medication.code.coding.extension" />
+      <sliceName value="category" />
+      <short value="Category of coding" />
+      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-category" />
+      </type>
+    </element>
+    <element id="Medication.code.coding:amtCTPP">
+      <path value="Medication.code.coding" />
+      <sliceName value="amtCTPP" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-amt-ctpp-codes" />
+      </binding>
+    </element>
+    <element id="Medication.code.coding:amtCTPP.extension">
+      <path value="Medication.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.code.coding:amtCTPP.extension:category">
+      <path value="Medication.code.coding.extension" />
+      <sliceName value="category" />
+      <short value="Category of coding" />
+      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-category" />
+      </type>
     </element>
     <element id="Medication.manufacturer">
       <path value="Medication.manufacturer" />
