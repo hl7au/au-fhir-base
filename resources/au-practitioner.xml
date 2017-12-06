@@ -190,11 +190,17 @@
       </extension>
       <path value="Practitioner.identifier.type.text" />
       <min value="1" />
-      <fixedString value="Australian Health Practitioner Regulation Agency Number" />
+      <fixedString value="Australian Health Practitioner Regulation Agency Registration Number" />
     </element>
     <element id="Practitioner.identifier:ahpraNumber.value">
       <path value="Practitioner.identifier.value" />
       <min value="1" />
+      <constraint>
+        <key value="inv-ahpra-0" />
+        <severity value="error" />
+        <human value="The value shall start with 3 uppercase letters, followed by 10 digits." />
+        <expression value="matches('^[A-Z]{3}[0-9]{10}$')" />
+      </constraint>
     </element>
   </differential>
 </StructureDefinition>

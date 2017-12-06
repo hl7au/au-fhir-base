@@ -17,8 +17,13 @@ The Healthcare provider identifier—individual (HPI-I) is the numerical identif
 
 A unique numeric identifier for the prescriber of the Pharmaceutical Benefits Scheme (PBS) item for which the PBS benefit is being claimed.
 
+* __Australian Health Practitioner Regulation Agency Registration Number__
+
+[AHPRA description](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"}
+
+Since March 2012, practitioners have been allocated one unique registration number for each profession in which they are registered. This number stays with the practitioner for life, even if they have periods when they are not registered. Practitioners registered in more than one profession have one registration number for each profession.
 
 #### Examples
 
-[Practitioner with HPI-I and Prescriber Number](Practitioner-example0.html)
+[Practitioner with HPI-I, Prescriber Number and AHPRA Registration Number](Practitioner-example0.html)
 
