@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
-    <lastUpdated value="2017-12-06T14:04:45.626+11:00" />
+    <lastUpdated value="2017-12-07T22:54:18.642+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -49,8 +49,8 @@
     <element id="Medication.code.coding:pbs">
       <path value="Medication.code.coding" />
       <sliceName value="pbs" />
-      <short value="Medication PBS coding" />
-      <definition value="PBS code from http://pbs.gov.au/code/item" />
+      <short value="Medication PBS coding (ignore item context)" />
+      <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-pbs-codes" />
@@ -60,7 +60,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="gtin" />
       <short value="Medication Package GTIN" />
-      <definition value="GTIN value from http://www.gs1.org/gtin" />
+      <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-gtin-codes" />
@@ -87,16 +87,16 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code.coding:amtTPP.extension:category">
+    <element id="Medication.code.coding:amtTPP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
-      <sliceName value="category" />
-      <short value="Category of coding" />
-      <definition value="General category of coding to allow  usage of codes to be distinguished from the same CodeSystem" />
+      <sliceName value="medicationType" />
+      <short value="Type of medication coding" />
+      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-category" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
     <element id="Medication.code.coding:amtMPP">
@@ -118,21 +118,22 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code.coding:amtMPP.extension:category">
+    <element id="Medication.code.coding:amtMPP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
-      <sliceName value="category" />
-      <short value="Category of coding" />
+      <sliceName value="medicationType" />
+      <short value="Type of medication coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-category" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
     <element id="Medication.code.coding:amtCTPP">
       <path value="Medication.code.coding" />
       <sliceName value="amtCTPP" />
+      <short value="AMT Containered Trade Product Pack" />
       <binding>
         <strength value="required" />
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-amt-ctpp-codes" />
@@ -148,16 +149,16 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code.coding:amtCTPP.extension:category">
+    <element id="Medication.code.coding:amtCTPP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
-      <sliceName value="category" />
-      <short value="Category of coding" />
-      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
+      <sliceName value="medicationType" />
+      <short value="Type of medication coding" />
+      <definition value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-category" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
     <element id="Medication.manufacturer">
