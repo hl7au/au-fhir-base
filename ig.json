@@ -4,7 +4,7 @@
   "source": "ig.xml",
   "dependencyList": [],
   "spreadsheets": [],
-  "special-urls": [ "http://hl7.org.au/fhir/CodeSystem/medication-type", "http://hl7.org.au/fhir/v2/0203", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1269.0#Names", "http://meteor.aihw.gov.au/content/index.phtml/itemId/430134#Codes", "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "http://meteor.aihw.gov.au/content/index.phtml/itemId/294429#Codes", "http://ns.electronichealth.net.au/ci/dc/coding/grounds-for-concurrent-supply" ],
+  "special-urls": [ "http://mims.com.au", "http://www.gs1.org/gtin", "http://hl7.org.au/fhir/CodeSystem/medication-type", "http://hl7.org.au/fhir/v2/0203", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1269.0#Names", "http://meteor.aihw.gov.au/content/index.phtml/itemId/430134#Codes", "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "http://meteor.aihw.gov.au/content/index.phtml/itemId/294429#Codes", "http://ns.electronichealth.net.au/ci/dc/coding/grounds-for-concurrent-supply" ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "ConceptMap": { "template-base": "cm.html" },
@@ -196,8 +196,11 @@
 	"StructureDefinition/healthcareservice-eligibility-detail": {
 	  "base": "StructureDefinition-healthcareservice-eligibility-detail.html"
 	},
-	"ValueSet/valueset-mims-codes": {
-	  "base": "ValueSet-valueset-mims-codes.html"
+	"ValueSet/mims": {
+	  "base": "ValueSet-mims.html"
+	},
+	"CodeSystem/mims": {
+	  "base": "CodeSystem-mims.html"
 	},
 	"ValueSet/valueset-amt-codes": {
 	  "base": "ValueSet-valueset-amt-codes.html"
@@ -208,8 +211,11 @@
 	"ValueSet/valueset-amt-mpp-codes": {
 	  "base": "ValueSet-valueset-amt-mpp-codes.html"
 	},
-	"ValueSet/valueset-gtin-codes": {
-	  "base": "ValueSet-valueset-gtin-codes.html"
+	"ValueSet/gtin": {
+	  "base": "ValueSet-gtin.html"
+	},
+	"CodeSystem/gtin": {
+	  "base": "CodeSystem-gtin.html"
 	},
 	"ValueSet/valueset-pbs-codes": {
 	  "base": "ValueSet-valueset-pbs-codes.html"
