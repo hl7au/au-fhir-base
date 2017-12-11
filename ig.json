@@ -4,7 +4,7 @@
   "source": "ig.xml",
   "dependencyList": [],
   "spreadsheets": [],
-  "special-urls": [ "http://hl7.org.au/fhir/v2/0203", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1269.0#Names", "http://meteor.aihw.gov.au/content/index.phtml/itemId/430134#Codes", "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "http://meteor.aihw.gov.au/content/index.phtml/itemId/294429#Codes", "http://ns.electronichealth.net.au/ci/dc/coding/grounds-for-concurrent-supply" ],
+  "special-urls": [ "http://hl7.org.au/fhir/CodeSystem/medication-type", "http://hl7.org.au/fhir/v2/0203", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1269.0#Names", "http://meteor.aihw.gov.au/content/index.phtml/itemId/430134#Codes", "http://meteor.aihw.gov.au/content/index.phtml/itemId/602543#Codes", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0", "http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "http://meteor.aihw.gov.au/content/index.phtml/itemId/294429#Codes", "http://ns.electronichealth.net.au/ci/dc/coding/grounds-for-concurrent-supply" ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "ConceptMap": { "template-base": "cm.html" },
@@ -145,9 +145,6 @@
 	"StructureDefinition/au-practitionerrole": {
 	  "base": "StructureDefinition-au-practitionerrole.html"
 	},
-	"StructureDefinition/medication-type": {
-	  "base": "StructureDefinition-medication-type.html"
-	},
 	"StructureDefinition/indigenous-status": {
 	  "base": "StructureDefinition-indigenous-status.html"
 	},
@@ -169,8 +166,14 @@
 	"StructureDefinition/au-pbs-pharma-manufacturer": {
 	  "base": "StructureDefinition-au-pbs-pharma-manufacturer.html"
 	},
+	"StructureDefinition/medication-type": {
+	  "base": "StructureDefinition-medication-type.html"
+	},
 	"CodeSystem/au-medication-type": {
-	  "base": "CodeSystem-au-medication-type.html"
+	  "base": "CodeSystem-medication-type.html"
+	},
+		"ValueSet/medication-type": {
+	  "base": "ValueSet-medication-type.html"
 	},
 	"CodeSystem/au-grounds-for-concurrent-supply": {
 	  "base": "CodeSystem-au-grounds-for-concurrent-supply.html"
