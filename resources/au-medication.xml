@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
-    <lastUpdated value="2017-12-17T22:20:58.287+11:00" />
+    <lastUpdated value="2017-12-19T06:59:14.007+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -70,6 +70,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtTPP" />
       <short value="AMT Trade Product Pack" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -111,6 +112,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtMPP" />
       <short value="AMT Medicinal Product Pack" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -152,6 +154,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtCTPP" />
       <short value="AMT Containered Trade Product Pack" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -193,6 +196,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtTPUU" />
       <short value="AMT Trade Product Unit of Use" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -232,6 +236,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtMPUU" />
       <short value="AMT Medicinal Product Unit of Use" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -271,6 +276,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtTP" />
       <short value="AMT Trade Product" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -310,6 +316,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="amtMP" />
       <short value="AMT Medicinal Product" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -351,6 +358,65 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pbs-pharma-manufacturer" />
       </type>
+    </element>
+    <element id="Medication.ingredient">
+      <path value="Medication.ingredient" />
+      </element>
+    <element id="Medication.ingredient.item[x]">
+      <path value="Medication.ingredient.item[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Ingredient Product" />
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Medication.ingredient.item[x].item[x]:itemCodeableConcept">
+      <path value="Medication.ingredient.itemCodeableConcept" />
+      <sliceName value="itemCodeableConcept" />
+      <short value="Coded Ingredient Product" />
+      <definition value="Coding for a substance or medicinal product  that is an ingredient of the medication." />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Medication.ingredient.item[x].item[x]:itemCodeableConcept.coding">
+      <path value="Medication.ingredient.itemCodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.ingredient.item[x].item[x]:itemCodeableConcept.coding:amtTP">
+      <path value="Medication.ingredient.itemCodeableConcept.coding" />
+      <sliceName value="amtTP" />
+      <short value="AMT Trade Product Ingredient" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-amt-tp-codes" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Medication.ingredient.item[x].item[x]:itemCodeableConcept.coding:amtMP">
+      <path value="Medication.ingredient.itemCodeableConcept.coding" />
+      <sliceName value="amtMP" />
+      <short value="AMT Medicinal Product Ingredient" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-amt-mp-codes" />
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
