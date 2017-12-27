@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
-    <lastUpdated value="2017-12-22T23:50:37.738+11:00" />
+    <lastUpdated value="2017-12-27T15:14:57.147+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -63,7 +63,9 @@
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-gtin-codes" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-gtin" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Medication.code.coding:amtTPP">
