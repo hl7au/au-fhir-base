@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
@@ -358,6 +358,7 @@
       <path value="Medication.code.coding" />
       <sliceName value="mimsPackage" />
       <short value="MIMS Package" />
+      <min value="1" />
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -387,6 +388,7 @@
         <rules value="open" />
       </slicing>
       <short value="AU Ingredient Product" />
+      <max value="1"/>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
