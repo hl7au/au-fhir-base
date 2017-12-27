@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
-    <lastUpdated value="2017-12-27T15:14:57.147+11:00" />
+    <lastUpdated value="2017-12-27T15:27:25.215+11:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -64,7 +64,7 @@
       <binding>
         <strength value="required" />
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-gtin" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/gtin" />
         </valueSetReference>
       </binding>
     </element>
@@ -387,8 +387,6 @@
         <rules value="open" />
       </slicing>
       <short value="AU Ingredient Product" />
-      <min value="1"/>
-      <max value="1"/>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
