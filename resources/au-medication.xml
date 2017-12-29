@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
@@ -387,6 +387,8 @@
         <rules value="open" />
       </slicing>
       <short value="AU Ingredient Product" />
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
