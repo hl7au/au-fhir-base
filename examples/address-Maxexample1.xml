@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Patient xmlns="http://hl7.org/fhir">
+    
+    <id value="Maxexample1"/>
+      
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This is a maximal example for address profile.</p>
+            <p>This sample XML contains Patient as a parent element since the address complex datatype does not contain neither .xsd nor .sch files to validate the structure of the XML.</p>
+        </div>
+    </text>
+    
+    <address>
+              
+        <use value="work" />                
+        <type value = "postal"/>        
+        <text value="1111 Greenwich Ct
+            RG
+            5th floor
+            Brisbane, QLD 4000" />
+        
+        <line value="1050 W concard Blvd" />
+        <line value="RG 5th floor" />        
+        <city value="Brisbane" />        
+        <district value="Brisbane District"/>        
+        <state value="QLD" />        
+        <postalCode value="4000" />        
+        <country value="Australia"/>
+        
+        <period>
+            <start value="2013-06-08T10:57:34+01:00"/> 
+        </period>
+        
+    </address>
+    
+</Patient>
