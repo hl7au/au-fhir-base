@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-11-23T23:22:30.567+11:00" />
+    <lastUpdated value="2018-01-25T10:48:55.874+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -288,18 +288,36 @@
       </slicing>
       <definition value="Roles which this practitioner can perform." />
     </element>
-    <element id="PractitionerRole.specialty:specialtyRole">
+    <element id="PractitionerRole.specialty:anzscoRole">
       <path value="PractitionerRole.specialty" />
-      <sliceName value="specialtyRole" />
-      <short value="Practitioner Specialty" />
-      <definition value="Specialties for which this practitioner has capability to deliver in this role" />
+      <sliceName value="anzscoRole" />
+      <short value="ANZSCO Practitioner Specialty" />
+      <definition value="Specialties for which this practitioner has capability to deliver in this role coded as ANZSCO" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PractitionerRole" />
         </extension>
         <strength value="required" />
-        <description value="Used to categorize the provider role type" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco" />
+        <description value="Used to categorize the ANZSCO provider role type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty:snomedSpecialty">
+      <path value="PractitionerRole.specialty" />
+      <sliceName value="snomedSpecialty" />
+      <short value="SNOMED Practitioner Specialty" />
+      <definition value="Specialties for which this practitioner has capability to deliver in this role coded as SNOMED" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerSpecialty" />
+        </extension>
+        <strength value="required" />
+        <description value="Used to categorize the SNOMED provider role type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-snomed-practitioner-role" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="PractitionerRole.location">
