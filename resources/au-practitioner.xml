@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <meta>
-    <lastUpdated value="2017-11-23T23:22:46.225+11:00" />
+    <lastUpdated value="2018-01-25T23:45:40.784+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -191,6 +191,12 @@
       <path value="Practitioner.identifier.type.text" />
       <min value="1" />
       <fixedString value="Australian Health Practitioner Regulation Agency Registration Number" />
+    </element>
+    <element id="Practitioner.identifier:ahpraNumber.system">
+      <path value="Practitioner.identifier.system" />
+      <short value="namespace for AHPRA number" />
+      <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/ahpra-number" />
     </element>
     <element id="Practitioner.identifier:ahpraNumber.value">
       <path value="Practitioner.identifier.value" />
