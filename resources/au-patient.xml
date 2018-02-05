@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2018-02-05T15:57:09.335+11:00" />
+    <lastUpdated value="2018-02-05T16:09:39.187+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -362,7 +362,7 @@
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/crn" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-customer-reference-number" />
     </element>
     <element id="Patient.identifier:healthcarecard.value">
       <path value="Patient.identifier.value" />
@@ -405,7 +405,7 @@
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-prescriber-number" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-customer-reference-number" />
     </element>
     <element id="Patient.identifier:pensionerconcessioncard.value">
       <path value="Patient.identifier.value" />
@@ -448,7 +448,7 @@
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/crn" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-customer-reference-number" />
     </element>
     <element id="Patient.identifier:commonwealthseniorshealthcard.value">
       <path value="Patient.identifier.value" />
@@ -606,6 +606,8 @@
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />
+	  <min value="0" />
+      <max value="1" />
       <slicing>
         <discriminator>
           <type value="type" />
