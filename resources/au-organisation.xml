@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organisation" />
   <meta>
-    <lastUpdated value="2017-11-23T23:22:05.259+11:00" />
+    <lastUpdated value="2018-02-07T11:53:00.775+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -354,32 +354,6 @@
         <valueString value="8003635500000327" />
       </example>
       <maxLength value="16" />
-    </element>
-    <element id="Organization.type">
-      <path value="Organization.type" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="Coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
-    </element>
-    <element id="Organization.type:organizationType">
-      <path value="Organization.type" />
-      <sliceName value="organizationType" />
-      <short value="Organisation Type" />
-      <definition value="The kind of organization that this is coded as ANZSIC type" />
-      <comment value="Australian and New Zealand standard classification of industry category level 1 class type" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="OrganizationType" />
-        </extension>
-        <strength value="required" />
-        <description value="Used to categorize the organization type" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-anzsic-restricted" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>

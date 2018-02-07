@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2018-02-03T09:57:21.682+11:00" />
+    <lastUpdated value="2018-02-07T11:50:42.961+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -287,22 +287,6 @@
         <rules value="open" />
       </slicing>
       <definition value="Roles which this practitioner can perform." />
-    </element>
-    <element id="PractitionerRole.specialty:anzscoRole">
-      <path value="PractitionerRole.specialty" />
-      <sliceName value="anzscoRole" />
-      <short value="ANZSCO Practitioner Specialty" />
-      <definition value="Specialties for which this practitioner has capability to deliver in this role coded as ANZSCO" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PractitionerRole" />
-        </extension>
-        <strength value="required" />
-        <description value="Used to categorize the ANZSCO provider role type" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-anzsco" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="PractitionerRole.specialty:snomedRole">
       <path value="PractitionerRole.specialty" />
