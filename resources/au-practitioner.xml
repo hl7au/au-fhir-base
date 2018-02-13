@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <meta>
-    <lastUpdated value="2018-02-03T09:58:05.427+11:00" />
+    <lastUpdated value="2018-02-13T16:22:46.739+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -33,7 +33,7 @@
       <path value="Practitioner" />
       <short value="Australian Practitioner" />
     </element>
-    <element id="Practitioner.identifier.slicing">
+    <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
       <slicing>
         <discriminator>
@@ -190,7 +190,7 @@
       </extension>
       <path value="Practitioner.identifier.type.text" />
       <min value="1" />
-      <fixedString value="Australian Health Practitioner Regulation Agency Registration Number" />
+      <fixedString value="AHPRA Registration Number" />
     </element>
     <element id="Practitioner.identifier:ahpraNumber.system">
       <path value="Practitioner.identifier.system" />
