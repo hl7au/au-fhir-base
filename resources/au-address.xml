@@ -41,7 +41,7 @@
       <constraint>
         <key value="au-address-02" />
         <severity value="error" />
-        <human value="If country is AU then state shall be in Australian States and Territiries valueset" />
+        <human value="If country is AU then state shall be in Australian States and Territories valueset" />
         <expression value="(country='AU' and state.exists()) implies state in 'http://hl7.org.au/fhir/ValueSet/valueset-au-address-states'" />
       </constraint>
       <constraint>
@@ -53,7 +53,7 @@
       <constraint>
         <key value="au-address-05" />
         <severity value="error" />
-        <human value="When noFixedAddress is present and 'true' then the Adress.type must be equal to 'physical'" />
+        <human value="When noFixedAddress is present and 'true' then the Address.type must be equal to 'physical'" />
         <expression value="extension.where(url='http://hl7.org.au/fhir/StructureDefinition/nofixedaddress' and value=true).exists() implies type='physical'" />
       </constraint>
       <constraint>
