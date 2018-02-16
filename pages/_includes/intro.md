@@ -31,14 +31,7 @@ __HL7 Australia Medications Working Group__
 * [AU Base MedicationRequest](StructureDefinition-au-prescription.html): Prescription/order details
 * [AU Base MedicationDispense](StructureDefinition-au-dispenserecord.html): Dispense records
 * [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html): Statement of medication use
-* Immunization: (tbd)
-
-__HL7 Australia Orders and Observations Working Group__
-
-* Observation (Vital Signs): (tbd)
-* Observation (Smoking Status): (tbd)
-* Observation (Pathology Results): (tbd)
-* DiagnosticReport: (tbd)
+* [AU Base Immunisation](StructureDefinition-au-immunisation.html): Immunisation details recording
 
 ## Usage
 

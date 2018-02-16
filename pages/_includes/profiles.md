@@ -17,6 +17,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Prescription](StructureDefinition-au-prescription.html)
 * [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html)
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html)
+* [AU Base Immunisation](StructureDefinition-au-immunisation.html)
 * [PBS Pharmaceutical Manufacturer Organisation](StructureDefinition-au-pbs-pharma-manufacturer.html)
 
 ## Profiles on Data Types
