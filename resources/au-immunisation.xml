@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-immunisation" />
   <meta>
-    <lastUpdated value="2018-02-17T00:46:50.832+11:00" />
+    <lastUpdated value="2018-02-20T11:36:37.183+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-immunisation" />
   <version value="1.0" />
-  <name value="AU Base Immunisation" />
+  <name value="AUBaseImmunisation" />
   <title value="AU Base Immunisation" />
   <status value="draft" />
   <date value="2018-02-16T17:10:30.171+11:00" />
@@ -155,6 +155,10 @@
     <element id="Immunization.explanation.reasonNotGiven">
       <path value="Immunization.explanation.reasonNotGiven" />
       <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
         <rules value="open" />
       </slicing>
     </element>
