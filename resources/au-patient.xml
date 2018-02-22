@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2018-02-20T11:37:18.806+11:00" />
+    <lastUpdated value="2018-02-21T15:59:21.062+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -86,7 +86,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.identifier:ihinumber">
+    <element id="Patient.identifier:ihiNumber">
       <path value="Patient.identifier" />
       <sliceName value="ihiNumber" />
       <short value="National Individual Health Identifier" />
@@ -104,7 +104,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.identifier:ihinumber.extension:ihistatus">
+    <element id="Patient.identifier:ihiNumber.extension:ihiStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiStatus" />
       <type>
@@ -112,11 +112,7 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
       </type>
     </element>
-    <element id="Patient.identifier:ihinumber.extension:ihistatus.url">
-      <path value="Patient.identifier.extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
-    </element>
-    <element id="Patient.identifier:ihinumber.extension:ihirecordstatus">
+    <element id="Patient.identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
       <definition value="IHI value record status associated with an IHI identifier" />
@@ -125,11 +121,7 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
       </type>
     </element>
-    <element id="Patient.identifier:ihinumber.extension:ihirecordstatus.url">
-      <path value="Patient.identifier.extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
-    </element>
-    <element id="Patient.identifier:ihinumber.type">
+    <element id="Patient.identifier:ihiNumber.type">
       <path value="Patient.identifier.type" />
       <definition value="ihi" />
       <min value="1" />
@@ -138,7 +130,7 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Patient.identifier:ihinumber.type.coding">
+    <element id="Patient.identifier:ihiNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <definition value="ihi" />
       <max value="1" />
@@ -147,7 +139,7 @@
         <code value="NI" />
       </patternCoding>
     </element>
-    <element id="Patient.identifier:ihinumber.type.text">
+    <element id="Patient.identifier:ihiNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -156,14 +148,14 @@
       <min value="1" />
       <fixedString value="IHI" />
     </element>
-    <element id="Patient.identifier:ihinumber.system">
+    <element id="Patient.identifier:ihiNumber.system">
       <path value="Patient.identifier.system" />
       <short value="national namespace for ihi" />
       <definition value="This namespace is used for qualified identifiers to represent Individual Healthcare Identifier (IHI) numbers. An example of the syntax of an IHI represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/ihi/1.0/8003600000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0" />
     </element>
-    <element id="Patient.identifier:ihinumber.value">
+    <element id="Patient.identifier:ihiNumber.value">
       <path value="Patient.identifier.value" />
       <short value="Individual Health Identifier number" />
       <definition value="The 16 digit unique identifier for consumers of healthcare services" />
@@ -192,13 +184,13 @@
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
-    <element id="Patient.identifier:medicarenumber">
+    <element id="Patient.identifier:medicareNumber">
       <path value="Patient.identifier" />
       <sliceName value="medicareNumber" />
       <short value="Medicare Number" />
       <definition value="Medicare Number assigned  to a patient" />
     </element>
-    <element id="Patient.identifier:medicarenumber.type">
+    <element id="Patient.identifier:medicareNumber.type">
       <path value="Patient.identifier.type" />
       <definition value="Medicare Number assigned  to a patient" />
       <min value="1" />
@@ -207,7 +199,7 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Patient.identifier:medicarenumber.type.coding">
+    <element id="Patient.identifier:medicareNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <definition value="Medicare Number assigned  to a patient" />
       <max value="1" />
@@ -216,7 +208,7 @@
         <code value="MC" />
       </patternCoding>
     </element>
-    <element id="Patient.identifier:medicarenumber.type.text">
+    <element id="Patient.identifier:medicareNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -225,17 +217,16 @@
       <min value="1" />
       <fixedString value="Medicare Number" />
     </element>
-    <element id="Patient.identifier:medicarenumber.system">
+    <element id="Patient.identifier:medicareNumber.system">
       <path value="Patient.identifier.system" />
       <short value="national namespace for medicare" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-number" />
     </element>
-    <element id="Patient.identifier:medicarenumber.value">
+    <element id="Patient.identifier:medicareNumber.value">
       <path value="Patient.identifier.value" />
       <short value="Medicare Number value including optional individual reference number" />
-      <definition value="10 digit Medicare number with optional 11 digit individual reference number (IRN)" />
-      <comment value="10 digit Medicare Number and optional 1 digit Individual Reference Number" />
+      <definition value="10 digit Medicare number with optional 11th digit individual reference number (IRN)" />
       <min value="1" />
       <example>
         <label value="Medicare number" />
@@ -243,15 +234,15 @@
       </example>
       <maxLength value="11" />
     </element>
-    <element id="Patient.identifier:medicarenumber.period">
+    <element id="Patient.identifier:medicareNumber.period">
       <path value="Patient.identifier.period" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:medicarenumber.period.end">
+    <element id="Patient.identifier:medicareNumber.period.end">
       <path value="Patient.identifier.period.end" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:dvanumber">
+    <element id="Patient.identifier:dvaNumber">
       <path value="Patient.identifier" />
       <sliceName value="dvaNumber" />
       <short value="DVA Number" />
@@ -294,7 +285,7 @@
         <expression value="type.text = 'DVA Number' or type.text = 'DVA Number (Gold)' or type.text = 'DVA Number (White)' or type.text = 'DVA Number (Orange)' or type.text = 'DVA Number (Lilac)'" />
       </constraint>
     </element>
-    <element id="Patient.identifier:dvanumber.type">
+    <element id="Patient.identifier:dvaNumber.type">
       <path value="Patient.identifier.type" />
       <definition value="DVA colour identifer type" />
       <min value="1" />
@@ -303,11 +294,11 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Patient.identifier:dvanumber.type.coding">
+    <element id="Patient.identifier:dvaNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <max value="1" />
     </element>
-    <element id="Patient.identifier:dvanumber.type.text">
+    <element id="Patient.identifier:dvaNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -315,14 +306,14 @@
       <definition value="DVA colour coding" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:dvanumber.system">
+    <element id="Patient.identifier:dvaNumber.system">
       <path value="Patient.identifier.system" />
       <short value="DVA number identifier system" />
       <definition value="DVA Number assigned uri" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/dva" />
     </element>
-    <element id="Patient.identifier:dvanumber.value">
+    <element id="Patient.identifier:dvaNumber.value">
       <path value="Patient.identifier.value" />
       <short value="DVA number value" />
       <definition value="Up to 9 digit value in the form AAXXNNNN[A]" />
@@ -334,14 +325,14 @@
       </example>
       <maxLength value="9" />
     </element>
-    <element id="Patient.identifier:healthcarecard">
+    <element id="Patient.identifier:healthcareCard">
       <path value="Patient.identifier" />
       <sliceName value="healthcareCard" />
       <short value="Health Care Card Identifier" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <max value="1" />
     </element>
-    <element id="Patient.identifier:healthcarecard.type">
+    <element id="Patient.identifier:healthcareCard.type">
       <path value="Patient.identifier.type" />
       <short value="Health Care Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
@@ -358,14 +349,14 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Patient.identifier:healthcarecard.system">
+    <element id="Patient.identifier:healthcareCard.system">
       <path value="Patient.identifier.system" />
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
-    <element id="Patient.identifier:healthcarecard.value">
+    <element id="Patient.identifier:healthcareCard.value">
       <path value="Patient.identifier.value" />
       <short value="Centrelink Customer Reference Number (CRN)" />
       <definition value="10 character identifier NNNNNNNNNA" />
@@ -377,14 +368,14 @@
       </example>
       <maxLength value="10" />
     </element>
-    <element id="Patient.identifier:pensionerconcessioncard">
+    <element id="Patient.identifier:pensionerConcessionCard">
       <path value="Patient.identifier" />
       <sliceName value="pensionerConcessionCard" />
       <short value="Pensioner Concession Card Identifier" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <max value="1" />
     </element>
-    <element id="Patient.identifier:pensionerconcessioncard.type">
+    <element id="Patient.identifier:pensionerConcessionCard.type">
       <path value="Patient.identifier.type" />
       <short value="Pensioner Concession Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
@@ -401,14 +392,14 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Patient.identifier:pensionerconcessioncard.system">
+    <element id="Patient.identifier:pensionerConcessionCard.system">
       <path value="Patient.identifier.system" />
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
-    <element id="Patient.identifier:pensionerconcessioncard.value">
+    <element id="Patient.identifier:pensionerConcessionCard.value">
       <path value="Patient.identifier.value" />
       <short value="Centrelink Customer Reference Number (CRN)" />
       <definition value="10 character identifier NNNNNNNNNA" />
@@ -420,14 +411,14 @@
       </example>
       <maxLength value="10" />
     </element>
-    <element id="Patient.identifier:commonwealthseniorshealthcard">
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard">
       <path value="Patient.identifier" />
       <sliceName value="commonwealthSeniorsHealthCard" />
       <short value="Commonwealth Seniors Health Card Identifier" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <max value="1" />
     </element>
-    <element id="Patient.identifier:commonwealthseniorshealthcard.type">
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type">
       <path value="Patient.identifier.type" />
       <short value="Commonwealth Seniors Health Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
@@ -444,14 +435,14 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Patient.identifier:commonwealthseniorshealthcard.system">
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.system">
       <path value="Patient.identifier.system" />
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
-    <element id="Patient.identifier:commonwealthseniorshealthcard.value">
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.value">
       <path value="Patient.identifier.value" />
       <short value="Centrelink Customer Reference Number (CRN)" />
       <definition value="10 character identifier NNNNNNNNNA" />
@@ -463,13 +454,13 @@
       </example>
       <maxLength value="10" />
     </element>
-    <element id="Patient.identifier:medicalrecordnumber">
+    <element id="Patient.identifier:medicalRecordNumber">
       <path value="Patient.identifier" />
       <sliceName value="medicalRecordNumber" />
       <short value="Medical Record Number" />
       <definition value="An assigned medical record number." />
     </element>
-    <element id="Patient.identifier:medicalrecordnumber.type">
+    <element id="Patient.identifier:medicalRecordNumber.type">
       <path value="Patient.identifier.type" />
       <min value="1" />
       <binding>
@@ -485,7 +476,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:medicalrecordnumber.type.coding">
+    <element id="Patient.identifier:medicalRecordNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
@@ -494,7 +485,7 @@
         <code value="MR" />
       </patternCoding>
     </element>
-    <element id="Patient.identifier:medicalrecordnumber.type.text">
+    <element id="Patient.identifier:medicalRecordNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -502,28 +493,28 @@
       <min value="1" />
       <fixedString value="Medical Record Number" />
     </element>
-    <element id="Patient.identifier:medicalrecordnumber.system">
+    <element id="Patient.identifier:medicalRecordNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Medical recrord number system url" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:medicalrecordnumber.value">
+    <element id="Patient.identifier:medicalRecordNumber.value">
       <path value="Patient.identifier.value" />
       <short value="Medical record number value" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:medicalrecordnumber.assigner">
+    <element id="Patient.identifier:medicalRecordNumber.assigner">
       <path value="Patient.identifier.assigner" />
       <short value="Medical recrord number assigning entity" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:insurernumber">
+    <element id="Patient.identifier:insurerNumber">
       <path value="Patient.identifier" />
       <sliceName value="insurerNumber" />
       <short value="Private Health Insurance Member Number" />
       <definition value="An insurer's member number " />
     </element>
-    <element id="Patient.identifier:insurernumber.type">
+    <element id="Patient.identifier:insurerNumber.type">
       <path value="Patient.identifier.type" />
       <min value="1" />
       <binding>
@@ -539,7 +530,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:insurernumber.type.coding">
+    <element id="Patient.identifier:insurerNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
@@ -548,7 +539,7 @@
         <code value="MB" />
       </patternCoding>
     </element>
-    <element id="Patient.identifier:insurernumber.type.text">
+    <element id="Patient.identifier:insurerNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -556,16 +547,16 @@
       <min value="1" />
       <fixedString value="Private Health Insurance Member Number" />
     </element>
-    <element id="Patient.identifier:insurernumber.value">
+    <element id="Patient.identifier:insurerNumber.value">
       <path value="Patient.identifier.value" />
       <short value="Private health insurer member number" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:insurernumber.assigner">
+    <element id="Patient.identifier:insurerNumber.assigner">
       <path value="Patient.identifier.assigner" />
       <min value="1" />
     </element>
-    <element id="Patient.identifier:insurernumber.assigner.display">
+    <element id="Patient.identifier:insurerNumber.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
