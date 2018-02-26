@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <meta>
-    <lastUpdated value="2018-02-20T11:37:17.197+11:00" />
+    <lastUpdated value="2018-02-22T23:54:10.583+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -48,8 +48,8 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Australian Practitioner Role Identifiers" />
-      <definition value="business identifiers" />
+      <short value="Practitioner role identifiers" />
+      <definition value="business identifiers for practitioner in a role" />
     </element>
     <element id="PractitionerRole.identifier:providerNumber">
       <path value="PractitionerRole.identifier" />
@@ -266,6 +266,7 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
+      <short value="Individual practitioner in this role" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
@@ -273,6 +274,7 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
+      <short value="Organisation where role is performed" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
@@ -287,6 +289,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Practitioner specialties" />
       <definition value="Roles which this practitioner can perform." />
     </element>
     <element id="PractitionerRole.specialty:snomedRole">
