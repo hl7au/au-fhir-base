@@ -598,9 +598,7 @@
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />
-	  <min value="0" />
-      <max value="1" />
-      <slicing>
+	  <slicing>
         <discriminator>
           <type value="type" />
           <path value="$this" />
@@ -608,6 +606,8 @@
         <rules value="open" />
       </slicing>
       <definition value="Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional." />
+	  <min value="0" />
+      <max value="1" />
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <path value="Patient.deceased[x]" />
