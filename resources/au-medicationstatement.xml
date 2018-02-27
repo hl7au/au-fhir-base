@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medicationstatement" />
   <meta>
-    <lastUpdated value="2018-02-20T11:38:43.884+11:00" />
+    <lastUpdated value="2018-02-28T00:55:46.44+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement" />
   <name value="AUBaseMedicationStatement" />
@@ -17,11 +17,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
   <derivation value="constraint" />
   <differential>
-    <element id="MedicationStatement.status">
-      <path value="MedicationStatement.status" />
-      <definition value="A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally this will be active or completed" />
+    <element id="MedicationStatement">
+      <path value="MedicationStatement" />
+      <short value="Medication Summary Statement " />
     </element>
-    <element id="MedicationStatement.medication[x]">
+    <element id="MedicationStatement.medicationReference">
       <path value="MedicationStatement.medicationReference" />
       <type>
         <code value="Reference" />
