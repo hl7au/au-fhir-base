@@ -17,6 +17,7 @@ than the resources themselves. Guidance from early implementation will help addr
 All artifacts in this specification are assigned a "Maturity Level", known as FMM (after the well known CMM  grades). The FMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
 The following FMM levels are defined:
 
+{:start="0"}
 0. The resource or profile (artifact) has been published on the current build. This level is synonymous with Draft.
 
 1. PLUS the artifact produces no warnings during the build process and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation. 
@@ -29,4 +30,4 @@ The following FMM levels are defined:
 
 5. PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems in more than one country
 
-"Normative": the artifact is now considered stable
+6. "Normative": the artifact is now considered stable
