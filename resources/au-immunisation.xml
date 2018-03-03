@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-immunisation" />
   <meta>
-    <lastUpdated value="2018-02-20T11:36:37.183+11:00" />
+    <lastUpdated value="2018-03-02T15:28:05.353+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-immunisation" />
   <version value="1.0" />
@@ -93,17 +93,15 @@
       <path value="Immunization.practitioner.role" />
       <short value="Administering Role" />
       <min value="1" />
-      <fixedCodeableConcept>
-        <coding>
-          <code value="AP" />
-          <display value="Administering Provider" />
-        </coding>
-        <text value="Administering Provider" />
-      </fixedCodeableConcept>
     </element>
     <element id="Immunization.practitioner:administeredBy.role.coding">
       <path value="Immunization.practitioner.role.coding" />
       <min value="1" />
+      <fixedCoding>
+        <system value="http://hl7.org/fhir/v2/0443" />
+        <code value="AP" />
+        <display value="Administering Provider" />
+      </fixedCoding>
     </element>
     <element id="Immunization.practitioner:administeredBy.role.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -111,6 +109,7 @@
       </extension>
       <path value="Immunization.practitioner.role.text" />
       <min value="1" />
+      <fixedString value="Administering Provider" />
     </element>
     <element id="Immunization.practitioner:administeredBy.actor">
       <path value="Immunization.practitioner.actor" />
@@ -140,6 +139,14 @@
         <display value="Ordering Provider" />
       </fixedCoding>
     </element>
+    <element id="Immunization.practitioner:approvedBy.role.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Immunization.practitioner.role.text" />
+      <min value="1" />
+      <fixedString value="Ordering Provider" />
+    </element>
     <element id="Immunization.practitioner:approvedBy.actor">
       <path value="Immunization.practitioner.actor" />
       <short value="Approving provider" />
@@ -165,16 +172,22 @@
     <element id="Immunization.explanation.reasonNotGiven:snomedctReasonNotGiven">
       <path value="Immunization.explanation.reasonNotGiven" />
       <sliceName value="snomedctReasonNotGiven" />
-      <short value="SNOMED-CT Reason for Not Giving" />
+      <short value="SNOMED-CT coded reason" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NoImmunizationReason" />
+        </extension>
+        <strength value="required" />
+        <description value="SNOMED-CT coded reason" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/reason-not-given" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Immunization.explanation.reasonNotGiven:snomedctReasonNotGiven.coding">
       <path value="Immunization.explanation.reasonNotGiven.coding" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetUri value="http://fhir/ValueSet/valueset-au-snomed-reason-not-given" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>

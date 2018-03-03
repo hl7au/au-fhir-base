@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
-    <lastUpdated value="2018-02-21T15:59:21.062+11:00" />
+    <lastUpdated value="2018-03-03T10:37:06.434+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
@@ -43,27 +43,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.extension:indigenousStatus">
-      <path value="Patient.extension" />
-      <sliceName value="indigenousStatus" />
-      <label value="indigenous status" />
-      <short value="Australian Indigenous Status" />
-      <definition value="Administrative Australian indigenous status coding" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
-      </type>
-    </element>
-    <element id="Patient.extension:closeTheGapRegistration">
-      <path value="Patient.extension" />
-      <sliceName value="closeTheGapRegistration" />
-      <label value="close the gap registration" />
-      <definition value="Administrative indication that the patient has been registered for the close the gap benefit" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
-      </type>
-    </element>
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
@@ -71,6 +50,32 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
       </type>
+    </element>
+    <element id="Patient.extension:indigenousStatus">
+      <path value="Patient.extension" />
+      <sliceName value="indigenousStatus" />
+      <short value="Indigenous status" />
+      <definition value="NHDD based indigenous status for a patient" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:closeTheGapRegistration">
+      <path value="Patient.extension" />
+      <sliceName value="closeTheGapRegistration" />
+      <short value="Close the Gap Registration" />
+      <definition value="Close the Gap registration indicator for a patient" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
@@ -127,7 +132,9 @@
       <min value="1" />
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Patient.identifier:ihiNumber.type.coding">
@@ -196,7 +203,9 @@
       <min value="1" />
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Patient.identifier:medicareNumber.type.coding">
@@ -291,7 +300,9 @@
       <min value="1" />
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Patient.identifier:dvaNumber.type.coding">
@@ -346,7 +357,9 @@
       </patternCodeableConcept>
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Patient.identifier:healthcareCard.system">
@@ -389,7 +402,9 @@
       </patternCodeableConcept>
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Patient.identifier:pensionerConcessionCard.system">
@@ -432,7 +447,9 @@
       </patternCodeableConcept>
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.system">
@@ -472,7 +489,7 @@
         </extension>
         <strength value="extensible" />
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
     </element>
@@ -526,7 +543,7 @@
         </extension>
         <strength value="extensible" />
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
     </element>
@@ -581,8 +598,11 @@
     <element id="Patient.birthDate.extension:accuracyIndicator">
       <path value="Patient.birthDate.extension" />
       <sliceName value="accuracyIndicator" />
-      <short value="Date Accuracy Indicator" />
-      <definition value="Birthdate accuracy indicator." />
+      <short value="Date Accuracy Indicator extension." />
+      <definition value="General date accuracy indicator coding." />
+      <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
@@ -598,8 +618,6 @@
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />
-	  <min value="0" />
-      <max value="1" />
       <slicing>
         <discriminator>
           <type value="type" />
@@ -608,6 +626,8 @@
         <rules value="open" />
       </slicing>
       <definition value="Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional." />
+	  <min value="0" />
+      <max value="1" />
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <path value="Patient.deceased[x]" />
@@ -640,7 +660,11 @@
     <element id="Patient.deceased[x]:deceasedDateTime.extension:accuracyIndicator">
       <path value="Patient.deceased[x].extension" />
       <sliceName value="accuracyIndicator" />
-      <short value="Deceased date time accuracy indicator" />
+      <short value="Date Accuracy Indicator extension." />
+      <definition value="General date accuracy indicator coding." />
+      <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />

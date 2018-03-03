@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organisation" />
   <meta>
-    <lastUpdated value="2018-02-20T11:35:04.699+11:00" />
+    <lastUpdated value="2018-03-02T17:52:17.034+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -47,6 +47,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Organisation identifiers" />
     </element>
     <element id="Organization.identifier:hpio">
       <path value="Organization.identifier" />
@@ -328,7 +329,7 @@
         <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Organization.identifier.csp.type.text">
+    <element id="Organization.identifier:csp.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -338,14 +339,14 @@
       <min value="1" />
       <fixedString value="CSP" />
     </element>
-    <element id="Organization.identifier.csp.identifier.system">
+    <element id="Organization.identifier:csp.system">
       <path value="Organization.identifier.system" />
       <short value="Namespace uri for CSP Number values" />
       <definition value="This namespace is used for qualified identifiers to represent Contracted Service Provider (CSP) numbers. An example of the syntax of a CSP number represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/csp/1.0/8003630000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/csp/1.0" />
     </element>
-    <element id="Organization.identifier.csp.value">
+    <element id="Organization.identifier:csp.value">
       <path value="Organization.identifier.value" />
       <definition value="This is an organisational identifier for organisations that are contracted service providers." />
       <min value="1" />
@@ -354,6 +355,45 @@
         <valueString value="8003635500000327" />
       </example>
       <maxLength value="16" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Organisation types" />
+    </element>
+    <element id="Organization.type:anzsicClassType">
+      <path value="Organization.type" />
+      <sliceName value="anzsicClassType" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <description value="ANZSIC Class" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/anzsic-restricted-class" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Organization.type:anzsicActivityType">
+      <path value="Organization.type" />
+      <sliceName value="anzsicActivityType" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <description value="ANZSIC Activity" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/anzsic-restricted-activity" />
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
