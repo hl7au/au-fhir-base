@@ -35,6 +35,37 @@
 	<fhirVersion value="3.0.1"/>
 	<package>
 		<name value="base"/>
+	
+	<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/no-fixed-address"/>
+			</sourceReference>
+		</resource>	
+		<resource>
+		<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/medication-type"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/indigenous-status"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/close-the-gap-registration"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/grounds-for-concurrent-supply"/>
+			</sourceReference>
+		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
@@ -47,6 +78,81 @@
 				<reference value="StructureDefinition/ihi-record-status"/>
 			</sourceReference>
 		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/date-accuracy-indicator"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/healthcareservice-eligibility-detail"/>
+			</sourceReference>
+		</resource>
+		
+				
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/indigenous-status"/>
+			</sourceReference>
+		</resource>
+				<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/ihi-status"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/ihi-record-status"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/pbs-item"/>
+			</sourceReference>
+		</resource>
+		<resource>
+      <example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/indigenous-status"/>
+			</sourceReference>
+		</resource>
+				<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/ihi-status"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/ihi-record-status"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/mims"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/anzsco"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/anzsic-restricted"/>
+			</sourceReference>
+		</resource>
+
 		<resource>
 			<example value="false"/>
 			<sourceReference>
@@ -80,111 +186,66 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="StructureDefinition/medication-type"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="StructureDefinition/indigenous-status"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="StructureDefinition/close-the-gap-registration"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="StructureDefinition/no-fixed-address"/>
-			</sourceReference>
-		</resource>	
-		<resource>
-			<example value="false"/>
-			<sourceReference>
 				<reference value="StructureDefinition/au-address"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="StructureDefinition/date-accuracy-indicator"/>
+				<reference value="StructureDefinition/au-device"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-au-indigenous-status"/>
+				<reference value="StructureDefinition/au-healthcareservice"/>
+			</sourceReference>
+		</resource>
+
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/snomed-healthcareservice-role"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-au-ihi-status"/>
+				<reference value="ValueSet/snomed-practitioner-role"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-au-ihi-record-status"/>
+				<reference value="ValueSet/au-hl7v2-0203"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-snomed-healthcareservice-role"/>
+				<reference value="ValueSet/grounds-for-concurrent-supply"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-snomed-practitioner-role"/>
+				<reference value="ValueSet/date-accuracy-indicator"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-au-hl7v2-0203"/>
+				<reference value="ValueSet/au-address-states"/>
 			</sourceReference>
 		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/au-grounds-for-concurrent-supply"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/valueset-au-date-accuracy-indicator"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/valueset-au-address-states"/>
-			</sourceReference>
-		</resource>
-			<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/valueset-pbs-codes"/>
-			</sourceReference>
-		</resource>
+
 			<resource>
 			<example value="false"/>
 			<sourceReference>
 				<reference value="ValueSet/mims"/>
 			</sourceReference>
 		</resource>
-				<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="CodeSystem/mims"/>
-			</sourceReference>
-		</resource>
+
 			<resource>
 			<example value="false"/>
 			<sourceReference>
@@ -200,55 +261,61 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-codes"/>
+				<reference value="ValueSet/amt-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-tpp-codes"/>
+				<reference value="ValueSet/amt-tpp-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-ctpp-codes"/>
+				<reference value="ValueSet/amt-ctpp-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-mp-codes"/>
+				<reference value="ValueSet/amt-mp-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-tp-codes"/>
+				<reference value="ValueSet/amt-tp-codes"/>
 			</sourceReference>
 		</resource>
 				<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-mpuu-codes"/>
+				<reference value="ValueSet/amt-mpuu-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-tpuu-codes"/>
+				<reference value="ValueSet/amt-tpuu-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/valueset-amt-mpp-codes"/>
+				<reference value="ValueSet/amt-mpp-codes"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
 				<reference value="ValueSet/gtin"/>
+			</sourceReference>
+		</resource>
+				<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/reason-not-given"/>
 			</sourceReference>
 		</resource>
 		<resource>
@@ -266,73 +333,45 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="ValueSet/au-medication-type"/>
+				<reference value="ValueSet/medication-type"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="CodeSystem/au-medication-type"/>
+				<reference value="CodeSystem/medication-type"/>
+			</sourceReference>
+		</resource>
+
+
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/anzsic-restricted-class"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="CodeSystem/codesystem-au-indigenous-status"/>
+				<reference value="ValueSet/anzsic-restricted-activity"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="CodeSystem/codesystem-au-ihi-status"/>
+				<reference value="CodeSystem/au-hl7v2-0203"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="CodeSystem/codesystem-au-ihi-record-status"/>
+				<reference value="CodeSystem/au-address-states"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="CodeSystem/codesystem-anzsco"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="CodeSystem/codesystem-anzsic-restricted"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/valueset-anzsic-restricted-class"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="ValueSet/valueset-anzsic-restricted-activity"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="CodeSystem/codesystem-au-hl7v2-0203"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="CodeSystem/codesystem-au-address-states"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="CodeSystem/codesystem-au-date-accuracy-indicator"/>
+				<reference value="CodeSystem/date-accuracy-indicator"/>
 			</sourceReference>
 		</resource>
 		<resource>
@@ -519,39 +558,16 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="StructureDefinition/grounds-for-concurrent-supply"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
 				<reference value="StructureDefinition/au-pbs-pharma-manufacturer"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="CodeSystem/au-grounds-for-concurrent-supply"/>
+				<reference value="CodeSystem/grounds-for-concurrent-supply"/>
 			</sourceReference>
 		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="StructureDefinition/au-device"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="StructureDefinition/au-healthcareservice"/>
-			</sourceReference>
-		</resource>
-		<resource>
-			<example value="false"/>
-			<sourceReference>
-				<reference value="StructureDefinition/healthcareservice-eligibility-detail"/>
-			</sourceReference>
-		</resource>
+
 		<resource>
  		  <example value="true"/>
 			<name value="Medication Example Generic Pack"/>
