@@ -1,6 +1,6 @@
-Extension Date Accuracy Indicator
+Extension: Date Accuracy Indicator
 
-This profile provided for use in an Australian context where an indicator on date accuracy is needed
+This extension applies to the Date or DateTime datatypes and indicates the asserted accuracy of the associated date via a coding.
 
 #### Examples
 1. [Patient with date accuracy indicator of "AAA" indicating all components are accurate.](Patient-DateAccuracyIndicatorAAAexample0.html)

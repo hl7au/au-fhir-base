@@ -1,4 +1,6 @@
-Extension: Australian IHI Status
+Extension: IHI Status
 
-##### **Context of Use**
-[Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier)
+This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) 
+
+This is the IHI value status and describes whether verification of the identifier of the individual has occurred and is based on the evidence available of a person's identity.
+

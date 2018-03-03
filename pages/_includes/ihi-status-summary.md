@@ -1,4 +1,4 @@
 Extension: Australian IHI Status
 
-1. Optional status value
+1. Required IHI status (as Coding)
 

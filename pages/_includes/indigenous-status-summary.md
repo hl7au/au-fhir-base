@@ -1,3 +1,3 @@
 Extension: Indigenous Status
 
-1. Indigenous Status Code
+1. Required Indigenous Status Code (as Coding)

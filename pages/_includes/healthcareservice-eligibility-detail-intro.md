@@ -1,5 +1,5 @@
-Australian Healthcare Service Eligibility Details Extension
+Extension: Healthcare Service Eligibility Details
 
-This profile defines a healthcare service profile for the Australian context.
+This extension applies to the HealthcareService resource and allows enhanced eligibiliy status value for a healthcare service to be recorded.
 
 

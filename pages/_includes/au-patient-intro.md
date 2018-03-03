@@ -7,15 +7,17 @@ These definitions represent common data held in the Patient.identifier element.
 
 * __Individual Healthcare Identifier - IHI__ 
 
-[METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495){:target="_blank"}
-
 [Namespace Description](http://ns.electronichealth.net.au/id/hi/ihi/1.0/index.html){:target="_blank"}
+
+[METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495){:target="_blank"}
 
 The numerical identifier that uniquely identifies each individual in the Australian healthcare system.
 
 The IHI identifier may also include extension properties IHI Status and IHI Record Status associated with the IHI value.
 
 * __Medicare Number__ 
+
+[Namespace Description](http://ns.electronichealth.net.au/id/medicare-number/index.html){:target="_blank"}
 
 [METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/270101){:target="_blank"}
 
@@ -31,6 +33,8 @@ Medicare number may also include an expiry date associated with the number.
 
 * __DVA (Department of Veterans' Affairs) Number__ 
 
+[Namespace Description](http://ns.electronichealth.net.au/id/dva/index.html){:target="_blank"}
+
 [METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/339127){:target="_blank"}
 
 The data should not be used by private sector organisations for any purpose unless specifically authorised by law. For example, 
@@ -42,6 +46,8 @@ DVA number may also include details of the specific card colour associated with 
 * __Health Care Card Number__ 
 * __Pensioner Concession Card Number__ 
 * __Commonwealth Seniors Health Card Number__ 
+
+[Namespace Description](http://ns.electronichealth.net.au/id/centrelink-customer-reference-number/index.html){:target="_blank"}
 
 [METeOR CRN Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/270098){:target="_blank"}
 
@@ -83,7 +89,7 @@ chronic disease.
 
 An extension to record the time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.
 
-#### Examples
+**Examples**
 
 [Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
 

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organisation" />
   <meta>
-    <lastUpdated value="2018-03-02T17:52:17.034+11:00" />
+    <lastUpdated value="2018-03-04T01:07:57.979+11:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -62,8 +62,10 @@
       <definition value="Element describing the type of identifier" />
       <min value="1" />
       <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Organization.identifier:hpio.type.coding">
@@ -81,20 +83,21 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Organization.identifier.type.text" />
-      <short value="HPI-O Identifier Type Descriptive Text" />
+      <short value="HPI-O text description" />
       <definition value="Descriptive text for the identifier type" />
       <min value="1" />
       <fixedString value="HPI-O" />
     </element>
     <element id="Organization.identifier:hpio.system">
       <path value="Organization.identifier.system" />
-      <short value="Namespace uri for HPI-O values" />
+      <short value="Namespace URI for HPI-O" />
       <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0" />
     </element>
     <element id="Organization.identifier:hpio.value">
       <path value="Organization.identifier.value" />
+      <short value="HPI-O value" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <min value="1" />
       <example>
@@ -137,8 +140,10 @@
       <path value="Organization.identifier.type" />
       <min value="1" />
       <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Organization.identifier:abn.type.text">
@@ -176,8 +181,10 @@
       <path value="Organization.identifier.type" />
       <min value="1" />
       <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Organization.identifier:acn.type.text">
@@ -215,8 +222,10 @@
       <path value="Organization.identifier.type" />
       <min value="1" />
       <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Organization.identifier:arbn.type.text">
@@ -251,8 +260,10 @@
       <definition value="Element describing the type of identifier" />
       <min value="1" />
       <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Organization.identifier:paio.type.text">
@@ -325,8 +336,10 @@
       <definition value="Element describing the type of identifier" />
       <min value="1" />
       <binding>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/valueset-au-hl7v2-0203" />
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Organization.identifier:csp.type.text">

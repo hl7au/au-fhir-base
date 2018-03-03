@@ -1,3 +1,3 @@
-Extension: Australian IHI Record Status
+Extension: IHI Record Status
 
-1. Optional IHI record status 
+1. Required IHI status (as Coding)

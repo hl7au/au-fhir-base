@@ -1,3 +1,3 @@
 Extension: No Fixed Address
 
-1. No Fixed Address Flag
+1. Required No Fixed Address Flag (as Boolean)
