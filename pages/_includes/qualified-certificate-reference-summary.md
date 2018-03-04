@@ -1,1 +1,0 @@
-Qualified Certificate Reference
