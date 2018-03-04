@@ -1,4 +1,4 @@
-**AU Base Organization Profile** *[FMM Level [0](guidance.html)]*
+**AU Base Organization Profile** *[FMM Level [1](guidance.html)]*
 
 This profile defines an organisation administration details structure that includes core localisation concepts.
 
