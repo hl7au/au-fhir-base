@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2018-03-09T17:29:03.329+11:00" />
+  </meta>
+  <url value="http://example.org/example1" />
+  <name value="MyPatient" />
+  <status value="draft" />
+  <date value="2018-03-09T17:20:23.459+11:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.identifier:sliceDonorId">
+      <path value="Patient.identifier" />
+      <sliceName value="sliceDonorId" />
+    </element>
+    <element id="Patient.identifier:sliceDonorId.type">
+      <path value="Patient.identifier.type" />
+      <min value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v2/0203" />
+          <code value="DR" />
+          <display value="Donor Registration Number" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:sliceDonorId.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/id/national-donor-identifier" />
+    </element>
+    <element id="Patient.identifier:sliceMedicalRecordNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="sliceMedicalRecordNumber" />
+    </element>
+    <element id="Patient.identifier:sliceMedicalRecordNumber.type">
+      <path value="Patient.identifier.type" />
+      <min value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v2/0203" />
+          <code value="MR" />
+          <display value="Medical record number" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:sliceMedicalRecordNumber.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
