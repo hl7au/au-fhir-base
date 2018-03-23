@@ -47,6 +47,10 @@
       <path value="MedicationDispense.identifier" />
       <slicing>
         <discriminator>
+          <type value="pattern" />
+          <path value="type" />
+        </discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>

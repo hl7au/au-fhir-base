@@ -36,12 +36,12 @@
       <path value="Device.identifier" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="pattern" />
+          <path value="type" />
         </discriminator>
         <discriminator>
           <type value="value" />
-          <path value="type" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
