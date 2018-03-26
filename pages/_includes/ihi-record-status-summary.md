@@ -1,3 +1,3 @@
 Extension: IHI Record Status
 
-1. Required IHI status (as Coding)
+1. Required IHI Record status (as Coding)
