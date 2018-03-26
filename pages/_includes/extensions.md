@@ -1,4 +1,13 @@
 # {{ page.title }}
 
 These extensions have been defined for this implementation guide.
-{% include list-simple-extensions.xhtml %}
+
+* [NoFixedAddress](StructureDefinition-no-fixed-address.html)
+* [MedicationType](StructureDefinition-medication-type.html)
+* [AustralianIndigenousStatus](StructureDefinition-indigenous-status.html)
+* [CloseTheGapRegistration](StructureDefinition-close-the-gap-registration.html)
+* [GroundsForConcurrentSupplyOfMedication](StructureDefinition-grounds-for-concurrent-supply.html)
+* [IHIStatus](StructureDefinition-ihi-status.html)
+* [IHIRecordStatus](StructureDefinition-ihi-record-status.html)
+* [DateAccuracyIndicator](StructureDefinition-date-accuracy-indicator.html)
+* [HealthcareServiceEligibilityDetail](StructureDefinition-healthcareservice-eligibility-detail.html)
