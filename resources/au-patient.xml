@@ -54,34 +54,24 @@
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension" />
       <sliceName value="indigenousStatus" />
-      <short value="Indigenous status" />
-      <definition value="NHDD based indigenous status for a patient" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Patient.extension:closeTheGapRegistration">
       <path value="Patient.extension" />
       <sliceName value="closeTheGapRegistration" />
-      <short value="Close the Gap Registration" />
-      <definition value="Close the Gap registration indicator for a patient" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="value" />
           <path value="type" />
         </discriminator>
         <discriminator>
@@ -128,8 +118,14 @@
     </element>
     <element id="Patient.identifier:ihiNumber.type">
       <path value="Patient.identifier.type" />
-      <definition value="ihi" />
+      <short value="Coded identifier type for IHI" />
+      <definition value="Coded identifier type for IHI" />
       <min value="1" />
+    </element>
+    <element id="Patient.identifier:ihiNumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <definition value="ihi" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
@@ -137,14 +133,16 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:ihiNumber.type.coding">
-      <path value="Patient.identifier.type.coding" />
-      <definition value="ihi" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="NI" />
-      </patternCoding>
+    <element id="Patient.identifier:ihiNumber.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <short value="Required system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:ihiNumber.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="NI" />
     </element>
     <element id="Patient.identifier:ihiNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -201,6 +199,11 @@
       <path value="Patient.identifier.type" />
       <definition value="Medicare Number assigned  to a patient" />
       <min value="1" />
+    </element>
+    <element id="Patient.identifier:medicareNumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <definition value="Medicare Number assigned  to a patient" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
@@ -208,14 +211,15 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:medicareNumber.type.coding">
-      <path value="Patient.identifier.type.coding" />
-      <definition value="Medicare Number assigned  to a patient" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="MC" />
-      </patternCoding>
+    <element id="Patient.identifier:medicareNumber.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:medicareNumber.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="MC" />
     </element>
     <element id="Patient.identifier:medicareNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -298,16 +302,22 @@
       <path value="Patient.identifier.type" />
       <definition value="DVA colour identifer type" />
       <min value="1" />
+    </element>
+    <element id="Patient.identifier:dvaNumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
+      <constraint>
+        <key value="inv-dva-number-coding" />
+        <severity value="error" />
+        <human value="DVA color coding must be DVL, DVW, DVO or DVG" />
+        <expression value="code='DVL' or code='DVW' or code='DVO' or code='DVG' " />
+      </constraint>
       <binding>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="Patient.identifier:dvaNumber.type.coding">
-      <path value="Patient.identifier.type.coding" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:dvaNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -348,19 +358,34 @@
       <short value="Health Care Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
-          <code value="HC" />
-        </coding>
-        <text value="Health Care Card Number" />
-      </patternCodeableConcept>
+    </element>
+    <element id="Patient.identifier:healthcareCard.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:healthcareCard.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:healthcareCard.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="HC" />
+    </element>
+    <element id="Patient.identifier:healthcareCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Health Care Card Number" />
     </element>
     <element id="Patient.identifier:healthcareCard.system">
       <path value="Patient.identifier.system" />
@@ -393,19 +418,34 @@
       <short value="Pensioner Concession Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
-          <code value="PEN" />
-        </coding>
-        <text value="Pensioner Concession Card Number" />
-      </patternCodeableConcept>
+    </element>
+    <element id="Patient.identifier:pensionerConcessionCard.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:pensionerConcessionCard.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:pensionerConcessionCard.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="PEN" />
+    </element>
+    <element id="Patient.identifier:pensionerConcessionCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Pensioner Concession Card Number" />
     </element>
     <element id="Patient.identifier:pensionerConcessionCard.system">
       <path value="Patient.identifier.system" />
@@ -439,18 +479,36 @@
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
       <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org.au/fhir/v2/0203" />
-          <code value="SEN" />
-        </coding>
         <text value="Commonwealth Seniors Health Card" />
       </patternCodeableConcept>
+    </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-020" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="SEN" />
+    </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Commonwealth Seniors Health Card" />
     </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.system">
       <path value="Patient.identifier.system" />
@@ -480,27 +538,27 @@
     <element id="Patient.identifier:medicalRecordNumber.type">
       <path value="Patient.identifier.type" />
       <min value="1" />
+    </element>
+    <element id="Patient.identifier:medicalRecordNumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:medicalRecordNumber.type.coding">
-      <path value="Patient.identifier.type.coding" />
+    <element id="Patient.identifier:medicalRecordNumber.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
       <min value="1" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="MR" />
-      </patternCoding>
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:medicalRecordNumber.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="MR" />
     </element>
     <element id="Patient.identifier:medicalRecordNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -534,27 +592,27 @@
     <element id="Patient.identifier:insurerNumber.type">
       <path value="Patient.identifier.type" />
       <min value="1" />
+    </element>
+    <element id="Patient.identifier:insurerNumber.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:insurerNumber.type.coding">
-      <path value="Patient.identifier.type.coding" />
+    <element id="Patient.identifier:insurerNumber.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
       <min value="1" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="MB" />
-      </patternCoding>
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Patient.identifier:insurerNumber.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="MB" />
     </element>
     <element id="Patient.identifier:insurerNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
