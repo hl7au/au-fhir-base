@@ -182,16 +182,6 @@
     <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.type">
       <path value="PractitionerRole.identifier.type" />
       <min value="1" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
-        <strength value="extensible" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/identifier-type" />
-      </binding>
     </element>
     <element id="PractitionerRole.identifier:careAgencyEmployeeIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -275,6 +265,7 @@
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.assigner">
       <path value="PractitionerRole.identifier.assigner" />
+      <short value="Employing organisation" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.assigner.display">
@@ -282,6 +273,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="PractitionerRole.identifier.assigner.display" />
+      <short value="Employing organisation name" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.practitioner">
