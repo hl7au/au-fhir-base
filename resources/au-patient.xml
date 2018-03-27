@@ -72,11 +72,11 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="type" />
+          <path value="system" />
         </discriminator>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="type" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -656,11 +656,6 @@
     <element id="Patient.birthDate.extension:accuracyIndicator">
       <path value="Patient.birthDate.extension" />
       <sliceName value="accuracyIndicator" />
-      <short value="Date Accuracy Indicator extension." />
-      <definition value="General date accuracy indicator coding." />
-      <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
@@ -684,8 +679,6 @@
         <rules value="open" />
       </slicing>
       <definition value="Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional." />
-	  <min value="0" />
-      <max value="1" />
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <path value="Patient.deceased[x]" />
@@ -718,11 +711,6 @@
     <element id="Patient.deceased[x]:deceasedDateTime.extension:accuracyIndicator">
       <path value="Patient.deceased[x].extension" />
       <sliceName value="accuracyIndicator" />
-      <short value="Date Accuracy Indicator extension." />
-      <definition value="General date accuracy indicator coding." />
-      <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
