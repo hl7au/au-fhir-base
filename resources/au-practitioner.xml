@@ -37,10 +37,6 @@
       <path value="Practitioner.identifier" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
-          <path value="type" />
-        </discriminator>
-        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -58,21 +54,27 @@
       <path value="Practitioner.identifier.type" />
       <short value="HPI-I Identifier Type" />
       <min value="1" />
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Practitioner.identifier:hpii.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <short value="HPI-I Identifier Type Code" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="NPI" />
-      </patternCoding>
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Practitioner.identifier:hpii.type.coding.system">
+      <path value="Practitioner.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="Practitioner.identifier:hpii.type.coding.code">
+      <path value="Practitioner.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="NPI" />
     </element>
     <element id="Practitioner.identifier:hpii.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -130,21 +132,27 @@
       <path value="Practitioner.identifier.type" />
       <short value="Prescriber Number Type" />
       <min value="1" />
-      <binding>
-        <strength value="extensible" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Practitioner.identifier:prescriberNumber.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <short value="Prescriber Number Type Code" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org.au/fhir/v2/0203" />
-        <code value="PRES" />
-      </patternCoding>
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Practitioner.identifier:prescriberNumber.type.coding.system">
+      <path value="Practitioner.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+    </element>
+    <element id="Practitioner.identifier:prescriberNumber.type.coding.code">
+      <path value="Practitioner.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="PRES" />
     </element>
     <element id="Practitioner.identifier:prescriberNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -179,26 +187,26 @@
     <element id="Practitioner.identifier:ahpraNumber.type">
       <path value="Practitioner.identifier.type" />
       <min value="1" />
+    </element>
+    <element id="Practitioner.identifier:ahpraNumber.type.coding">
+      <path value="Practitioner.identifier.type.coding" />
+      <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
     </element>
-    <element id="Practitioner.identifier:ahpraNumber.type.coding">
-      <path value="Practitioner.identifier.type.coding" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org.au/fhir/v2/0203" />
-        <code value="AHPRA" />
-      </patternCoding>
+    <element id="Practitioner.identifier:ahpraNumber.type.coding.system">
+      <path value="Practitioner.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+    </element>
+    <element id="Practitioner.identifier:ahpraNumber.type.coding.code">
+      <path value="Practitioner.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="AHPRA" />
     </element>
     <element id="Practitioner.identifier:ahpraNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

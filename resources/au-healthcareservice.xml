@@ -47,10 +47,6 @@
       <path value="HealthcareService.identifier" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
-          <path value="type" />
-        </discriminator>
-        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -67,27 +63,27 @@
     <element id="HealthcareService.identifier:hpio.type">
       <path value="HealthcareService.identifier.type" />
       <min value="1" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="HealthcareService.identifier:hpio.type.coding">
       <path value="HealthcareService.identifier.type.coding" />
       <short value="HPI-O Identifier Type Code" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org.au/fhir/v2/0203" />
-        <code value="NOI" />
-      </patternCoding>
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="HealthcareService.identifier:hpio.type.coding.system">
+      <path value="HealthcareService.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+    </element>
+    <element id="HealthcareService.identifier:hpio.type.coding.code">
+      <path value="HealthcareService.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="NOI" />
     </element>
     <element id="HealthcareService.identifier:hpio.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -114,10 +110,22 @@
         <valueString value="8003627500000328" />
       </example>
       <constraint>
-        <key value="inv-hpio-1" />
+        <key value="inv-hpio-0" />
         <severity value="error" />
         <human value="The HPI-O shall be a 16 digit number." />
         <expression value="matches('^([0-9]{16})$')" />
+      </constraint>
+      <constraint>
+        <key value="inv-hpio-1" />
+        <severity value="error" />
+        <human value="HPI-O prefix is 800362" />
+        <expression value="startsWith('800362')" />
+      </constraint>
+      <constraint>
+        <key value="inv-hpio-2" />
+        <severity value="error" />
+        <human value="The HPI-O Identifier shall pass the Luhn algorithm check" />
+        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
     <element id="HealthcareService.type">
