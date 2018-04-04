@@ -1,3 +1,3 @@
 Extension: Close the Gap Registration
 
-1. Close the Gap Registration Status
+1. Required Close The Gap Registration (as boolean)
