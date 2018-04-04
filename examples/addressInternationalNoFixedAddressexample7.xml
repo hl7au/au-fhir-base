@@ -4,20 +4,19 @@
     
     <text>
         <status value="additional"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">            
-            <p>This sample XML is an example for the use case of no fixed international address.</p>
-            <p>This sample XML contains Patient as a parent element since the address complex datatype does not contain neither .xsd nor .sch files to validate the structure of the XML.</p>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This example demonstrates how an address outside of Australia can be represented as a 'no fixed address'.</p>
         </div>
     </text> 
     
     <address>        
         <extension url="http://hl7.org.au/fhir/StructureDefinition/no-fixed-address">
-            <valueBoolean value="true"/>
             <!-- this part of the extension states that address is no fixed address -->
+            <valueBoolean value="true"/>
         </extension>      
-        <use value="work"/>
+        <use value="home"/>
         <type value="physical"/>
-        <text value="NO FIXED ADDRESS Auckalnd, North Island 5000"/>        
+        <text value="NO FIXED ADDRESS Auckland, North Island 5000"/>
         <country value="NZ"/>
         <period>
             <start value="2013-06-08T10:57:34+01:00"/>
