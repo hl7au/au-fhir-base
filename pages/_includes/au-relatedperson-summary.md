@@ -1,5 +1,6 @@
 AU Base relatedperson profile contains:
 
+1. Base: RelatedPerson (as RelatedPerson)
 1. Optional IHI (as Identifier)
 	* Optional IHI status
 	* Optional IHI record status
