@@ -22,5 +22,5 @@ These Profiles have been defined for this implementation guide.
 
 ## Profiles on Data Types
 
-* [AU Base Address](StructureDefinition-au-address.html)
+* [Base Australian Address](StructureDefinition-au-address.html)
 
