@@ -1,6 +1,6 @@
-**AU Base relatedPerson Profile**
+**AU Base RelatedPerson Profile**
 
-This profile defines a relatedPerson administration details structure that includes core localisation concepts.
+This profile defines a RelatedPerson administration details structure that includes core localisation concepts.
 
 #### Identifiers
 These definitions represent common data held in the RelatedPerson.identifier element.
