@@ -31,7 +31,7 @@
     <element id="Patient">
       <path value="Patient" />
       <short value="Australian Patient" />
-      <definition value="Patient in Australian context" />
+      <definition value="Patient in Australian context." />
     </element>
     <element id="Patient.extension">
       <path value="Patient.extension" />
@@ -46,8 +46,6 @@
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
-	  <min value="0" />
-	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
@@ -56,8 +54,6 @@
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension" />
       <sliceName value="indigenousStatus" />
-	  <min value="0" />
-	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
@@ -66,8 +62,6 @@
     <element id="Patient.extension:closeTheGapRegistration">
       <path value="Patient.extension" />
       <sliceName value="closeTheGapRegistration" />
-	  <min value="0" />
-	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
@@ -108,8 +102,6 @@
     <element id="Patient.identifier:ihiNumber.extension:ihiStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiStatus" />
-	  <min value="0" />
-	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
@@ -119,8 +111,6 @@
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
       <definition value="IHI value record status associated with an IHI identifier" />
-	  <min value="0" />
-	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
@@ -667,10 +657,7 @@
       <path value="Patient.birthDate.extension" />
       <sliceName value="accuracyIndicator" />
       <short value="Date Accuracy Indicator extension." />
-      <definition value="General date accuracy indicator coding." />
       <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
@@ -679,8 +666,6 @@
     <element id="Patient.birthDate.extension:birthTime">
       <path value="Patient.birthDate.extension" />
       <sliceName value="birthTime" />
-	  <min value="0" />
-	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
@@ -696,8 +681,6 @@
         <rules value="open" />
       </slicing>
       <definition value="Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional." />
-	  <min value="0" />
-      <max value="1" />
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <path value="Patient.deceased[x]" />
@@ -731,10 +714,7 @@
       <path value="Patient.deceased[x].extension" />
       <sliceName value="accuracyIndicator" />
       <short value="Date Accuracy Indicator extension." />
-      <definition value="General date accuracy indicator coding." />
       <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
