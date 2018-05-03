@@ -244,9 +244,11 @@
     <element id="Practitioner.qualification:ahpraRegistration">
       <path value="Practitioner.qualification" />
       <sliceName value="ahpraRegistration" />
+      <short value="AHPRA Qualificiation Details" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier">
       <path value="Practitioner.qualification.identifier" />
+      <short value="AHPRA Registration Number" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -257,6 +259,12 @@
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type.coding">
       <path value="Practitioner.qualification.identifier.type.coding" />
       <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type.coding.system">
       <path value="Practitioner.qualification.identifier.type.coding.system" />
@@ -284,6 +292,16 @@
     <element id="Practitioner.qualification:ahpraRegistration.identifier.value">
       <path value="Practitioner.qualification.identifier.value" />
       <min value="1" />
+      <constraint>
+        <key value="inv-ahpra-qual-0" />
+        <severity value="error" />
+        <human value="The value shall start with 3 uppercase letters, followed by 10 digits." />
+        <expression value="matches('^[A-Z]{3}[0-9]{10}$')" />
+      </constraint>
+    </element>
+    <element id="Practitioner.qualification:ahpraRegistration.code">
+      <path value="Practitioner.qualification.code" />
+      <short value="AHPRA role" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code.coding">
       <path value="Practitioner.qualification.code.coding" />
@@ -294,26 +312,16 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="AHPRA role coding" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code.coding:anzscoCoding">
       <path value="Practitioner.qualification.code.coding" />
       <sliceName value="anzscoCoding" />
-    </element>
-    <element id="Practitioner.qualification:ahpraRegistration.code.coding:anzscoCoding.system">
-      <path value="Practitioner.qualification.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" />
-    </element>
-    <element id="Practitioner.qualification:ahpraRegistration.code.coding:anzscoCoding.code">
-      <path value="Practitioner.qualification.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Practitioner.qualification:ahpraRegistration.code.coding:anzscoCoding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Practitioner.qualification.code.coding.display" />
-      <min value="1" />
+      <short value="ANZSCO coded role" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://api.healthterminologies.gov.au/integration/v2/fhir/ValueSet/anzsco-1" />
+      </binding>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -331,6 +339,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.qualification.issuer.display" />
+      <min value="1" />
       <fixedString value="AHPRA" />
     </element>
   </differential>
