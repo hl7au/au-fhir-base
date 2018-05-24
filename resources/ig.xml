@@ -26,615 +26,536 @@
     </telecom>
   </contact>
   <description value="Australian realm RelatedPerson profile"/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="RelatedPerson"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-  <derivation value="constraint"/>
-  <differential>
-    <element id="RelatedPerson">
-      <path value="RelatedPerson"/>
-    </element>
-    <element id="RelatedPerson.identifier">
-      <path value="RelatedPerson.identifier"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <discriminator>
-          <type value="value"/>
-          <path value="type"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="ihiNumber"/>
-      <short value="National Individual Health Identifier"/>
-      <definition value="National identifier for the patient"/>
-      <requirements value="Identifier as assigned and available via Health Identifiers service"/>
-      <max value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension">
-      <path value="RelatedPerson.identifier.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus">
-      <path value="RelatedPerson.identifier.extension"/>
-      <sliceName value="ihiStatus"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status"/>
-      </type>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus">
-      <path value="RelatedPerson.identifier.extension"/>
-      <sliceName value="ihiRecordStatus"/>
-      <definition value="IHI value record status associated with an IHI identifier"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"/>
-      </type>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <short value="Coded identifier type for IHI"/>
-      <definition value="Coded identifier type for IHI"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <definition value="ihi"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <short value="Required system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="NI"/>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <definition value="ihi"/>
-      <min value="1"/>
-      <fixedString value="IHI"/>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="national namespace for ihi"/>
-      <definition
-        value="This namespace is used for qualified identifiers to represent Individual Healthcare Identifier (IHI) numbers. An example of the syntax of an IHI represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/ihi/1.0/8003600000000000"/>
-      <min value="1"/>
-      <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Individual Health Identifier number"/>
-      <definition value="The 16 digit unique identifier for consumers of healthcare services"/>
-      <min value="1"/>
-      <example>
-        <label value="IHI number"/>
-        <valueString value="8003608166690503"/>
-      </example>
-      <maxLength value="16"/>
-      <constraint>
-        <key value="inv-ihi-0"/>
-        <severity value="error"/>
-        <human value="IHI shall be an exactly 16 digit number"/>
-        <expression value="matches('^([0-9]{16})$')"/>
-      </constraint>
-      <constraint>
-        <key value="inv-ihi-1"/>
-        <severity value="error"/>
-        <human value="IHI prefix is 800360"/>
-        <expression value="startsWith('800360')"/>
-      </constraint>
-      <constraint>
-        <key value="inv-ihi-2"/>
-        <severity value="error"/>
-        <human value="IHI shall pass the Luhn algorithm check"/>
-        <expression
-          value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)"
-        />
-      </constraint>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="medicareNumber"/>
-      <short value="Medicare Number"/>
-      <definition value="Medicare Number assigned  to a patient"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <definition value="Medicare Number assigned  to a patient"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <definition value="Medicare Number assigned  to a patient"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="MC"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <definition value="Medicare Number descriptive text"/>
-      <min value="1"/>
-      <fixedString value="Medicare Number"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="national namespace for medicare"/>
-      <min value="1"/>
-      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Medicare Number value including optional individual reference number"/>
-      <definition
-        value="10 digit Medicare number with optional 11th digit individual reference number (IRN)"/>
-      <min value="1"/>
-      <example>
-        <label value="Medicare number"/>
-        <valueString value="32788511952"/>
-      </example>
-      <maxLength value="11"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.period">
-      <path value="RelatedPerson.identifier.period"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicareNumber.period.end">
-      <path value="RelatedPerson.identifier.period.end"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:dvaNumber">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="dvaNumber"/>
-      <short value="DVA Number"/>
-      <definition value="Department of Veterans' Affairs number"/>
-      <max value="1"/>
-      <constraint>
-        <key value="inv-dva-number-unspecified"/>
-        <severity value="error"/>
-        <human
-          value="DVA Number identifier type text must be 'DVA Number' when colour is not specified"/>
-        <expression value="type.coding.exists() and type.text != 'DVA Number'"/>
-      </constraint>
-      <constraint>
-        <key value="inv-dva-number-gold"/>
-        <severity value="error"/>
-        <human
-          value="DVA Number identifier type text must be 'DVA Number (Gold)' when colour coding is DVG"/>
-        <expression value="type.coding.code='DVG' and type.text != 'DVA Number (Gold)'"/>
-      </constraint>
-      <constraint>
-        <key value="inv-dva-number-white"/>
-        <severity value="error"/>
-        <human
-          value="DVA Number identifier type text must be 'DVA Number (White)' when colour coding is DVW"/>
-        <expression value="type.coding.code='DVW' and type.text != 'DVA Number (White)'"/>
-      </constraint>
-      <constraint>
-        <key value="inv-dva-number-orange"/>
-        <severity value="error"/>
-        <human
-          value="DVA Number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO"/>
-        <expression value="type.coding.code='DVO' and type.text != 'DVA Number (Orange)'"/>
-      </constraint>
-      <constraint>
-        <key value="inv-dva-number-lilac"/>
-        <severity value="error"/>
-        <human
-          value="DVA Number identifier type text must be 'DVA Number (Lilac)' when colour coding is DVL"/>
-        <expression value="type.coding.code='DVL' and type.text != 'DVA Number (Lilac)'"/>
-      </constraint>
-      <constraint>
-        <key value="inv-dva-number-text"/>
-        <severity value="error"/>
-        <human
-          value="DVA Number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange), 'DVA Number (Lilac)'"/>
-        <expression
-          value="type.text = 'DVA Number' or type.text = 'DVA Number (Gold)' or type.text = 'DVA Number (White)' or type.text = 'DVA Number (Orange)' or type.text = 'DVA Number (Lilac)'"
-        />
-      </constraint>
-    </element>
-    <element id="RelatedPerson.identifier:dvaNumber.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <definition value="DVA colour identifer type"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:dvaNumber.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <max value="1"/>
-      <constraint>
-        <key value="inv-dva-number-coding"/>
-        <severity value="error"/>
-        <human value="DVA color coding must be DVL, DVW, DVO or DVG"/>
-        <expression value="code='DVL' or code='DVW' or code='DVO' or code='DVG'"/>
-      </constraint>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:dvaNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <definition value="DVA colour coding"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:dvaNumber.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="DVA number identifier system"/>
-      <definition value="DVA Number assigned uri"/>
-      <min value="1"/>
-      <fixedUri value="http://ns.electronichealth.net.au/id/dva"/>
-    </element>
-    <element id="RelatedPerson.identifier:dvaNumber.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="DVA number value"/>
-      <definition value="Up to 9 digit value in the form AAXXNNNN[A]"/>
-      <comment value="Reference: http://meteor.aihw.gov.au/content/index.phtml/itemId/339127"/>
-      <min value="1"/>
-      <example>
-        <label value="DVA number"/>
-        <valueString value="NBUR9080"/>
-      </example>
-      <maxLength value="9"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="healthcareCard"/>
-      <short value="Health Care Card Identifier"/>
-      <definition
-        value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
-      <max value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <short value="Health Care Card Identifier Type"/>
-      <definition
-        value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="HC"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <min value="1"/>
-      <fixedString value="Health Care Card Number"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="namespace for Centrelink CRN identifiers"/>
-      <definition value="namespace for CRN values"/>
-      <min value="1"/>
-      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
-    </element>
-    <element id="RelatedPerson.identifier:healthcareCard.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Centrelink Customer Reference Number (CRN)"/>
-      <definition value="10 character identifier NNNNNNNNNA"/>
-      <comment
-        value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
-      <min value="1"/>
-      <example>
-        <label value="DHS CRN"/>
-        <valueString value="307111942H"/>
-      </example>
-      <maxLength value="10"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="pensionerConcessionCard"/>
-      <short value="Pensioner Concession Card Identifier"/>
-      <definition
-        value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
-      <max value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <short value="Pensioner Concession Card Identifier Type"/>
-      <definition
-        value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="PEN"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <min value="1"/>
-      <fixedString value="Pensioner Concession Card Number"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="namespace for Centrelink CRN identifiers"/>
-      <definition value="namespace for CRN values"/>
-      <min value="1"/>
-      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Centrelink Customer Reference Number (CRN)"/>
-      <definition value="10 character identifier NNNNNNNNNA"/>
-      <comment
-        value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
-      <min value="1"/>
-      <example>
-        <label value="DHS CRN"/>
-        <valueString value="307111942H"/>
-      </example>
-      <maxLength value="10"/>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="commonwealthSeniorsHealthCard"/>
-      <short value="Commonwealth Seniors Health Card Identifier"/>
-      <definition
-        value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
-      <max value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <short value="Commonwealth Seniors Health Card Identifier Type"/>
-      <definition
-        value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number"/>
-      <min value="1"/>
-      <patternCodeableConcept>
-        <text value="Commonwealth Seniors Health Card"/>
-      </patternCodeableConcept>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="SEN"/>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <min value="1"/>
-      <fixedString value="Commonwealth Seniors Health Card"/>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="namespace for Centrelink CRN identifiers"/>
-      <definition value="namespace for CRN values"/>
-      <min value="1"/>
-      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Centrelink Customer Reference Number (CRN)"/>
-      <definition value="10 character identifier NNNNNNNNNA"/>
-      <comment
-        value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services."/>
-      <min value="1"/>
-      <example>
-        <label value="DHS CRN"/>
-        <valueString value="307111942H"/>
-      </example>
-      <maxLength value="10"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="medicalRecordNumber"/>
-      <short value="Medical Record Number"/>
-      <definition value="An assigned medical record number."/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <min value="1"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="MR"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <min value="1"/>
-      <fixedString value="Medical Record Number"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.system">
-      <path value="RelatedPerson.identifier.system"/>
-      <short value="Medical recrord number system url"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Medical record number value"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:medicalRecordNumber.assigner">
-      <path value="RelatedPerson.identifier.assigner"/>
-      <short value="Medical recrord number assigning entity"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber">
-      <path value="RelatedPerson.identifier"/>
-      <sliceName value="insurerNumber"/>
-      <short value="Private Health Insurance Member Number"/>
-      <definition value="An insurer's member number "/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.type">
-      <path value="RelatedPerson.identifier.type"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.type.coding">
-      <path value="RelatedPerson.identifier.type.coding"/>
-      <min value="1"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.type.coding.system">
-      <path value="RelatedPerson.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.type.coding.code">
-      <path value="RelatedPerson.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="MB"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.type.text"/>
-      <min value="1"/>
-      <fixedString value="Private Health Insurance Member Number"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.value">
-      <path value="RelatedPerson.identifier.value"/>
-      <short value="Private health insurer member number"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.assigner">
-      <path value="RelatedPerson.identifier.assigner"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.identifier:insurerNumber.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="RelatedPerson.identifier.assigner.display"/>
-      <min value="1"/>
-    </element>
-    <element id="RelatedPerson.patient">
-      <path value="RelatedPerson.patient"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
-      </type>
-    </element>
-  </differential>
-</StructureDefinition>
+  <fhirVersion value="3.0.1"/>  
+  <package>
+    <name value="base"/>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/no-fixed-address"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/medication-type"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/indigenous-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/close-the-gap-registration"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/grounds-for-concurrent-supply"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/ihi-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/ihi-record-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/date-accuracy-indicator"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/healthcareservice-eligibility-detail"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/indigenous-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/ihi-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/ihi-record-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/pbs-item"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/indigenous-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/ihi-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/ihi-record-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/mims"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/anzsco"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/anzsic-restricted"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-patient"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-practitioner"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-practitionerrole"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-organisation"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-immunisation"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-address"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-device"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-healthcareservice"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/snomed-healthcareservice-role"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/snomed-practitioner-role"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/au-hl7v2-0203"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/grounds-for-concurrent-supply"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/date-accuracy-indicator"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/au-address-states"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/mims"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/australian-vaccine"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/australian-vaccine"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-tpp-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-ctpp-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-mp-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-tp-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-mpuu-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-tpuu-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/amt-mpp-codes"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/gtin"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/reason-not-given"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/gtin"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/pbs-item"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/medication-type"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/medication-type"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/anzsic-restricted-class"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/anzsic-restricted-activity"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/au-hl7v2-0203"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/au-address-states"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/date-accuracy-indicator"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient with IHI and Medicare Number"/>
+      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
+      <sourceReference>
+        <reference value="Patient/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient with IHI and DVA Number"/>
+      <description value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
+      <sourceReference>
+        <reference value="Patient/example1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Practitioner with HPI-I and Prescriber Number"/>
+      <description value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
+      <sourceReference>
+        <reference value="Practitioner/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Practitioner Role with Provider Number and ANZSCO coded role"/>
+      <description value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
+      <sourceReference>
+        <reference value="PractitionerRole/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Organisation with HPI-O and ANZSIC coded class/activity types"/>
+      <description value="Shows a typical organisation using the identifer profile for HPI-O and organisation class/activity types using ANZSIC"/>
+      <sourceReference>
+        <reference value="Organization/example0"/>
+      </sourceReference>
+    </resource>
+	  <resource>
+      <example value="true"/>
+      <name value="HealthcareService with HPI-O, ANZSIC coded class/activity types, and eligibility"/>
+      <description value="Shows a typical healthcare service using the identifer profile for HPI-O, organisation class/activity types using ANZSIC, and eligibility information"/>
+      <sourceReference>
+        <reference value="HealthcareService/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Location example"/>
+      <sourceReference>
+        <reference value="Location/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Device with PAI-D"/>
+      <description value="Shows a typical device using the identifer profile for PAI-D"/>
+      <sourceReference>
+        <reference value="Device/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient Birth Date Accuracy Indicator with AAA"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
+      <sourceReference>
+        <reference value="Patient/DateAccuracyIndicatorAAAexample0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient Birth Date Accuracy Indicator with AAU"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+      <sourceReference>
+        <reference value="Patient/DateAccuracyIndicatorAAUexample1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient Birth Date Accuracy Indicator with UAA"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
+      <sourceReference>
+        <reference value="Patient/DateAccuracyIndicatorUAAexample2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient Birth Date Accuracy Indicator with UEA"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
+      <sourceReference>
+        <reference value="Patient/DateAccuracyIndicatorUEAexample3"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Patient Birth Date Accuracy Indicator with UUU"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
+      <sourceReference>
+        <reference value="Patient/DateAccuracyIndicatorUUUexample4"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Minimal Address"/>
+      <description value="Shows a typical Address with minimal elements"/>
+      <sourceReference>
+        <reference value="Patient/addressMinexample0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Maximal Address"/>
+      <description value="Shows a typical Address with maximal elements"/>
+      <sourceReference>
+        <reference value="Patient/addressMaxexample1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Structured Australian Adddress"/>
+      <description value="Shows a typical Address with structured australian address"/>
+      <sourceReference>
+        <reference value="Patient/addressStructuredAustralianAddressexample2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Unstructured Australian Adddress"/>
+      <description value="Shows a typical Address with unstructured australian address"/>
+      <sourceReference>
+        <reference value="Patient/addressUnstructuredAustralianAddressexample3"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Australian No Fixed Address"/>
+      <description value="Shows a typical Address with australian no fixed address"/>
+      <sourceReference>
+        <reference value="Patient/addressAustralianNoFixedAddressexample4"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-medication"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-prescription"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dispenserecord"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-medicationstatement"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-pbs-pharma-manufacturer"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/grounds-for-concurrent-supply"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Example Generic Pack"/>
+      <sourceReference>
+        <reference value="Medication/example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Example Brand Pack"/>
+      <sourceReference>
+        <reference value="Medication/example1"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <page>
+    <source value="index.html"/>
+    <title value="Australian Base Profiles Implementation Guide"/>
+    <kind value="page"/>
+  </page>
+</ImplementationGuide>
