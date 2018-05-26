@@ -5,12 +5,12 @@ These Profiles have been defined for this implementation guide.
 ## Administration Profiles
 
 * [AU Base Device](StructureDefinition-au-device.html)
-* [AU Base HealthcareService](StructureDefinition-au-healthcareservice.html)
+* [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html)
 * [AU Base Patient](StructureDefinition-au-patient.html)
 * [AU Base Practitioner](StructureDefinition-au-practitioner.html)
 * [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html)
 * [AU Base Organisation](StructureDefinition-au-organisation.html)
-* [AU Base RelatedPerson](StructureDefinition-au-relatedperson.html)
+* [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 ## Medications Profiles
 
