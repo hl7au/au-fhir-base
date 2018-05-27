@@ -177,60 +177,6 @@
         <valueString value="453221" />
       </example>
     </element>
-    <element id="Practitioner.identifier:ahpraNumber">
-      <path value="Practitioner.identifier" />
-      <sliceName value="ahpraNumber" />
-      <short value="Australian Health Practitioner Regulation Agency Number" />
-      <definition value="Australian Health Practitioner Regulation Agency number indication registration of a health practitioner" />
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.type">
-      <path value="Practitioner.identifier.type" />
-      <min value="1" />
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.type.coding">
-      <path value="Practitioner.identifier.type.coding" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.type.coding.system">
-      <path value="Practitioner.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.type.coding.code">
-      <path value="Practitioner.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="AHPRA" />
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Practitioner.identifier.type.text" />
-      <min value="1" />
-      <fixedString value="AHPRA Registration Number" />
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.system">
-      <path value="Practitioner.identifier.system" />
-      <short value="namespace for AHPRA number" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/id/ahpra-registration-number" />
-    </element>
-    <element id="Practitioner.identifier:ahpraNumber.value">
-      <path value="Practitioner.identifier.value" />
-      <min value="1" />
-      <constraint>
-        <key value="inv-ahpra-0" />
-        <severity value="error" />
-        <human value="The value shall start with 3 uppercase letters, followed by 10 digits." />
-        <expression value="matches('^[A-Z]{3}[0-9]{10}$')" />
-      </constraint>
-    </element>
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification" />
       <slicing>

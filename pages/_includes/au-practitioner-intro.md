@@ -20,6 +20,9 @@ The Healthcare provider identifier—individual (HPI-I) is the numerical identif
 
 A unique numeric identifier for the prescriber of the Pharmaceutical Benefits Scheme (PBS) item for which the PBS benefit is being claimed.
 
+
+#### Qualifications
+
 * __Australian Health Practitioner Regulation Agency Registration Number__
 
 [AHPRA description](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"}
