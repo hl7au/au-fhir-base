@@ -190,6 +190,8 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+	  <min value="1" />
+	  <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -197,8 +199,6 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
       </type>
-	  <min value="1" />
-	  <max value="1" />
     </element>
     <element id="MedicationRequest.medication[x]:medicationCoded">
       <path value="MedicationRequest.medication[x]" />

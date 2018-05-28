@@ -30,6 +30,8 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+	  <min value="1" />
+	  <max value="1" />
 	  <type>
         <code value="CodeableConcept" />
       </type>
@@ -37,8 +39,6 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
       </type>
-	  <min value="1" />
-	  <max value="1" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCoded">
       <path value="MedicationStatement.medication[x]" />
@@ -47,7 +47,7 @@
         <code value="CodeableConcept" />
       </type>
     </element>
-	   <element id="MedicationStatement.medication[x]:medicationCoded.coding">
+	<element id="MedicationStatement.medication[x]:medicationCoded.coding">
       <path value="MedicationStatement.medication[x].coding" />
       <slicing>
         <discriminator>
