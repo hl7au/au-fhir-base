@@ -44,16 +44,24 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Immunization.vaccineCode.coding:australianVaccineCode">
+    <element id="Immunization.vaccineCode.coding:snomedVaccineCode">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="australianVaccineCode" />
-      <short value="Australian Vaccine Code" />
+      <sliceName value="snomedVaccineCode" />
+      <short value="Australian Vaccine (SNOMED)" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/australian-vaccine" />
-        </valueSetReference>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-vaccine-1" />
+      </binding>
+    </element>
+    <element id="Immunization.vaccineCode.coding:airVaccineCode">
+      <path value="Immunization.vaccineCode.coding" />
+      <sliceName value="airVaccineCode" />
+      <short value="AIR Vaccine" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://api.healthterminologies.gov.au/integration/v2/fhir/ValueSet/$expand?url=https%3A%2F%2Fwww.humanservices.gov.au%2Forganisations%2Fhealth-professionals%2Fenablers%2Fair-vaccine-code-formats" />
       </binding>
     </element>
     <element id="Immunization.patient">
@@ -161,33 +169,27 @@
     </element>
     <element id="Immunization.explanation.reasonNotGiven">
       <path value="Immunization.explanation.reasonNotGiven" />
+      <short value="Reason immunisation did not occur" />
+    </element>
+    <element id="Immunization.explanation.reasonNotGiven.coding">
+      <path value="Immunization.explanation.reasonNotGiven.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Coded reason" />
     </element>
-    <element id="Immunization.explanation.reasonNotGiven:snomedctReasonNotGiven">
-      <path value="Immunization.explanation.reasonNotGiven" />
-      <sliceName value="snomedctReasonNotGiven" />
-      <short value="SNOMED-CT coded reason" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="NoImmunizationReason" />
-        </extension>
-        <strength value="required" />
-        <description value="SNOMED-CT coded reason" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/reason-not-given" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Immunization.explanation.reasonNotGiven:snomedctReasonNotGiven.coding">
+    <element id="Immunization.explanation.reasonNotGiven.coding:snomedReasonCode">
       <path value="Immunization.explanation.reasonNotGiven.coding" />
-      <min value="1" />
-      <max value="1" />
+      <sliceName value="snomedReasonCode" />
+      <short value="Coded Reason (SNOMED-CT)" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
