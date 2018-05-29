@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/codesystem.xsd">
-	<id value="anzsic-restricted"/>
+	<id value="codesystem-anzsic-restricted"/>
 	<meta>
 		<lastUpdated value="2016-12-06T12:22:34.981+11:00"/>
 	</meta>
@@ -11,7 +11,6 @@
 			<p>
 				<b>Copyright Statement:</b> Copyright Australian Bureau of Statistics
 			</p>
-			<p>As used in NEHTA-1970:2014 PCEHR Document Exchange Service - Logical Service Specification v1.3.1</p>
 		</div>
 	</text>
 	<url value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
@@ -20,10 +19,10 @@
 		<value value="urn:oid:1.2.36.1.2001.1005.47"/>
 	</identifier>
 	<version value="2.0.0"/>
-	<name value="ANZSIC -- Australian and New Zealand Standard Industrial Classification 2006"/>
+	<name value="ANZSIC -- Australian and New Zealand Standard Industrial Classification"/>
 	<status value="draft"/>
 	<experimental value="true"/>
- <date value="2018-02-28"/>
+		 <date value="2016-07-12"/>
 	<publisher value="Australian Bureau of Statistics"/>
 	<contact>
 		<telecom>
@@ -31,20 +30,21 @@
 			<value value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
 		</telecom>
 	</contact>
-	<description value="Developed for use in the collection, analysis and dissemination of industry classification statistics in Australia and New Zealand (2006). "/>
+	<description value="Developed for use in the collection, analysis and dissemination of industry classification statistics in Australia and New Zealand."/>
 	<copyright value="Copyright Australian Bureau of Statistics"/>
 	<caseSensitive value="true"/>
+	<valueSet value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
 	<content value="complete"/>
 	<count value="219"/>
 	<concept>
 		<code value="4271"/>
 		<display value="Retail Pharmacy"/>
 		<concept>
-			<code value="42711"/>
+			<code value="4271-1"/>
 			<display value="Pharmacy, retail, operation"/>
 		</concept>
 		<concept>
-			<code value="42712"/>
+			<code value="4271-2"/>
 			<display value="Community Pharmacy"/>
 		</concept>
 	</concept>
@@ -52,7 +52,7 @@
 		<code value="4623"/>
 		<display value="Transport"/>
 		<concept>
-			<code value="46231"/>
+			<code value="4623-1"/>
 			<display value="Transport"/>
 		</concept>
 	</concept>
@@ -60,27 +60,27 @@
 		<code value="5910"/>
 		<display value="Internet Service Providers and Web Search Portals"/>
 		<concept>
-			<code value="59101"/>
+			<code value="5910-1"/>
 			<display value="Internet access provision"/>
 		</concept>
 		<concept>
-			<code value="59102"/>
+			<code value="5910-2"/>
 			<display value="Internet access service, on-line"/>
 		</concept>
 		<concept>
-			<code value="59103"/>
+			<code value="5910-3"/>
 			<display value="Internet search portal operation"/>
 		</concept>
 		<concept>
-			<code value="59105"/>
+			<code value="5910-5"/>
 			<display value="Internet service provision (ISP)"/>
 		</concept>
 		<concept>
-			<code value="59106"/>
+			<code value="5910-6"/>
 			<display value="Portal web search operation"/>
 		</concept>
 		<concept>
-			<code value="59107"/>
+			<code value="5910-7"/>
 			<display value="Web search portal operation"/>
 		</concept>
 	</concept>
@@ -88,59 +88,59 @@
 		<code value="5921"/>
 		<display value="Data Processing and Web Hosting Services"/>
 		<concept>
-			<code value="59211"/>
+			<code value="5921-1"/>
 			<display value="Application hosting"/>
 		</concept>
 		<concept>
-			<code value="592110"/>
+			<code value="5921-10"/>
 			<display value="Data processing computer service"/>
 		</concept>
 		<concept>
-			<code value="592111"/>
+			<code value="5921-11"/>
 			<display value="Disk and diskette conversion and recertification service"/>
 		</concept>
 		<concept>
-			<code value="592112"/>
+			<code value="5921-12"/>
 			<display value="Electronic data processing service"/>
 		</concept>
 		<concept>
-			<code value="592113"/>
+			<code value="5921-13"/>
 			<display value="Microfiche or microfilm recording and imaging service"/>
 		</concept>
 		<concept>
-			<code value="592114"/>
+			<code value="5921-14"/>
 			<display value="Optical scanning service"/>
 		</concept>
 		<concept>
-			<code value="592115"/>
+			<code value="5921-15"/>
 			<display value="Web hosting"/>
 		</concept>
 		<concept>
-			<code value="59212"/>
+			<code value="5921-2"/>
 			<display value="Application service provision"/>
 		</concept>
 		<concept>
-			<code value="59213"/>
+			<code value="5921-3"/>
 			<display value="Audio and visual media streaming service"/>
 		</concept>
 		<concept>
-			<code value="59214"/>
+			<code value="5921-4"/>
 			<display value="Automated data processing service"/>
 		</concept>
 		<concept>
-			<code value="59215"/>
+			<code value="5921-5"/>
 			<display value="Computer input preparation service"/>
 		</concept>
 		<concept>
-			<code value="59216"/>
+			<code value="5921-6"/>
 			<display value="Computer time leasing or renting"/>
 		</concept>
 		<concept>
-			<code value="59218"/>
+			<code value="5921-8"/>
 			<display value="Data capture imaging service"/>
 		</concept>
 		<concept>
-			<code value="59219"/>
+			<code value="5921-9"/>
 			<display value="Data entry service (electronic)"/>
 		</concept>
 	</concept>
@@ -148,11 +148,11 @@
 		<code value="5922"/>
 		<display value="Electronic Information Storage Services"/>
 		<concept>
-			<code value="59221"/>
+			<code value="5922-1"/>
 			<display value="Computer data storage and retrieval service (except library service)"/>
 		</concept>
 		<concept>
-			<code value="59222"/>
+			<code value="5922-2"/>
 			<display value="Electronic information storage and retrieval service (except library service)"/>
 		</concept>
 	</concept>
@@ -160,15 +160,15 @@
 		<code value="6321"/>
 		<display value="Health Insurance"/>
 		<concept>
-			<code value="63211"/>
+			<code value="6321-1"/>
 			<display value="Dental insurance provision"/>
 		</concept>
 		<concept>
-			<code value="63212"/>
+			<code value="6321-2"/>
 			<display value="Funeral benefit provision"/>
 		</concept>
 		<concept>
-			<code value="63213"/>
+			<code value="6321-3"/>
 			<display value="Health insurance provision"/>
 		</concept>
 	</concept>
@@ -176,11 +176,11 @@
 		<code value="6910"/>
 		<display value="Scientific Research Services"/>
 		<concept>
-			<code value="69101"/>
+			<code value="6910-1"/>
 			<display value="Medical research service"/>
 		</concept>
 		<concept>
-			<code value="69102"/>
+			<code value="6910-2"/>
 			<display value="Social science research service"/>
 		</concept>
 	</concept>
@@ -188,7 +188,7 @@
 		<code value="6961"/>
 		<display value="Corporate Head Office Management Services"/>
 		<concept>
-			<code value="69611"/>
+			<code value="6961-1"/>
 			<display value="Corporate head office management"/>
 		</concept>
 	</concept>
@@ -196,15 +196,15 @@
 		<code value="6999"/>
 		<display value="Other Professional, Scientific and Technical Services n.e.c."/>
 		<concept>
-			<code value="69991"/>
+			<code value="6999-1"/>
 			<display value="Interpretation service"/>
 		</concept>
 		<concept>
-			<code value="69992"/>
+			<code value="6999-2"/>
 			<display value="Professional, scientific and technical services n.e.c."/>
 		</concept>
 		<concept>
-			<code value="69993"/>
+			<code value="6999-3"/>
 			<display value="Translation service"/>
 		</concept>
 	</concept>
@@ -212,31 +212,31 @@
 		<code value="7000"/>
 		<display value="Computer System Design and Related Services"/>
 		<concept>
-			<code value="70001"/>
+			<code value="7000-1"/>
 			<display value="Computer hardware consulting service"/>
 		</concept>
 		<concept>
-			<code value="70002"/>
+			<code value="7000-2"/>
 			<display value="Computer programming service"/>
 		</concept>
 		<concept>
-			<code value="70003"/>
+			<code value="7000-3"/>
 			<display value="Computer software consulting service"/>
 		</concept>
 		<concept>
-			<code value="70004"/>
+			<code value="7000-4"/>
 			<display value="Internet and web design consulting service"/>
 		</concept>
 		<concept>
-			<code value="70005"/>
+			<code value="7000-5"/>
 			<display value="Software development (customised) service (except publishing)"/>
 		</concept>
 		<concept>
-			<code value="70006"/>
+			<code value="7000-6"/>
 			<display value="Software installation service"/>
 		</concept>
 		<concept>
-			<code value="70007"/>
+			<code value="7000-7"/>
 			<display value="Systems analysis service"/>
 		</concept>
 	</concept>
@@ -244,23 +244,23 @@
 		<code value="7291"/>
 		<display value="Office Administrative Services"/>
 		<concept>
-			<code value="72911"/>
+			<code value="7291-1"/>
 			<display value="Billing and record-keeping service"/>
 		</concept>
 		<concept>
-			<code value="72913"/>
+			<code value="7291-3"/>
 			<display value="Clerical service"/>
 		</concept>
 		<concept>
-			<code value="72914"/>
+			<code value="7291-4"/>
 			<display value="Office administrative service n.e.c."/>
 		</concept>
 		<concept>
-			<code value="72915"/>
+			<code value="7291-5"/>
 			<display value="Payroll processing"/>
 		</concept>
 		<concept>
-			<code value="72916"/>
+			<code value="7291-6"/>
 			<display value="Reception service"/>
 		</concept>
 	</concept>
@@ -268,15 +268,15 @@
 		<code value="7294"/>
 		<display value="Call Centre Operation"/>
 		<concept>
-			<code value="72941"/>
+			<code value="7294-1"/>
 			<display value="Telephone answering service"/>
 		</concept>
 		<concept>
-			<code value="72942"/>
+			<code value="7294-2"/>
 			<display value="Telephone call centre operation"/>
 		</concept>
 		<concept>
-			<code value="72943"/>
+			<code value="7294-3"/>
 			<display value="Voice mailbox service"/>
 		</concept>
 	</concept>
@@ -284,7 +284,7 @@
 		<code value="7511"/>
 		<display value="Central Government Healthcare Administration"/>
 		<concept>
-			<code value="75111"/>
+			<code value="7511-1"/>
 			<display value="Divisions of General Practice"/>
 		</concept>
 	</concept>
@@ -292,7 +292,7 @@
 		<code value="7521"/>
 		<display value="State Government Healthcare Administration"/>
 		<concept>
-			<code value="75211"/>
+			<code value="7521-1"/>
 			<display value="State Government Healthcare Administration"/>
 		</concept>
 	</concept>
@@ -300,7 +300,7 @@
 		<code value="7531"/>
 		<display value="Local Government Healthcare Administration"/>
 		<concept>
-			<code value="75311"/>
+			<code value="7531-1"/>
 			<display value="Local Government Healthcare Administration"/>
 		</concept>
 	</concept>
@@ -308,7 +308,7 @@
 		<code value="7561"/>
 		<display value="General Health Administration"/>
 		<concept>
-			<code value="75611"/>
+			<code value="7561-1"/>
 			<display value="General Health Administration"/>
 		</concept>
 	</concept>
@@ -316,7 +316,7 @@
 		<code value="7562"/>
 		<display value="Provision and administration of public health program"/>
 		<concept>
-			<code value="75621"/>
+			<code value="7562-1"/>
 			<display value="Provision and administration of public health program"/>
 		</concept>
 	</concept>
@@ -324,27 +324,27 @@
 		<code value="8102"/>
 		<display value="Higher Education"/>
 		<concept>
-			<code value="81022"/>
+			<code value="8102-2"/>
 			<display value="Postgraduate school, university operation"/>
 		</concept>
 		<concept>
-			<code value="81023"/>
+			<code value="8102-3"/>
 			<display value="Research school, university operation"/>
 		</concept>
 		<concept>
-			<code value="81024"/>
+			<code value="8102-4"/>
 			<display value="Specialist institute or college"/>
 		</concept>
 		<concept>
-			<code value="81025"/>
+			<code value="8102-5"/>
 			<display value="Teachers' college operation"/>
 		</concept>
 		<concept>
-			<code value="81026"/>
+			<code value="8102-6"/>
 			<display value="Undergraduate school, university operation"/>
 		</concept>
 		<concept>
-			<code value="81027"/>
+			<code value="8102-7"/>
 			<display value="University operation"/>
 		</concept>
 	</concept>
@@ -352,75 +352,75 @@
 		<code value="8401"/>
 		<display value="Hospitals (except Psychiatric Hospitals)"/>
 		<concept>
-			<code value="84011"/>
+			<code value="8401-1"/>
 			<display value="Children's Hospital"/>
 		</concept>
 		<concept>
-			<code value="840110"/>
+			<code value="8401-10"/>
 			<display value="Women's Hospital"/>
 		</concept>
 		<concept>
-			<code value="840111"/>
+			<code value="8401-11"/>
 			<display value="Public day centre/hospital"/>
 		</concept>
 		<concept>
-			<code value="840112"/>
+			<code value="8401-12"/>
 			<display value="Public freestanding day surgery centre"/>
 		</concept>
 		<concept>
-			<code value="840113"/>
+			<code value="8401-13"/>
 			<display value="Private day centre/hospital"/>
 		</concept>
 		<concept>
-			<code value="840114"/>
+			<code value="8401-14"/>
 			<display value="Private freestanding day surgery centre"/>
 		</concept>
 		<concept>
-			<code value="840115"/>
+			<code value="8401-15"/>
 			<display value="Public acute care Hospital"/>
 		</concept>
 		<concept>
-			<code value="840116"/>
+			<code value="8401-16"/>
 			<display value="Private acute care Hospital"/>
 		</concept>
 		<concept>
-			<code value="840117"/>
+			<code value="8401-17"/>
 			<display value="Veterans Affairs Hospital"/>
 		</concept>
 		<concept>
-			<code value="840118"/>
+			<code value="8401-18"/>
 			<display value="Defence Force Hospital"/>
 		</concept>
 		<concept>
-			<code value="84012"/>
+			<code value="8401-2"/>
 			<display value="Day Hospital nec"/>
 		</concept>
 		<concept>
-			<code value="84013"/>
+			<code value="8401-3"/>
 			<display value="Ear, nose and throat hospital"/>
 		</concept>
 		<concept>
-			<code value="84014"/>
+			<code value="8401-4"/>
 			<display value="Eye Hospital"/>
 		</concept>
 		<concept>
-			<code value="84015"/>
+			<code value="8401-5"/>
 			<display value="General Hospital"/>
 		</concept>
 		<concept>
-			<code value="84016"/>
+			<code value="8401-6"/>
 			<display value="Hospital (except psychiatric or veterinary hospitals"/>
 		</concept>
 		<concept>
-			<code value="84017"/>
+			<code value="8401-7"/>
 			<display value="Infectious diseases hospital (including human quarantine stations)"/>
 		</concept>
 		<concept>
-			<code value="84018"/>
+			<code value="8401-8"/>
 			<display value="Maternity Hospital"/>
 		</concept>
 		<concept>
-			<code value="84019"/>
+			<code value="8401-9"/>
 			<display value="Obstetric Hospital"/>
 		</concept>
 	</concept>
@@ -428,11 +428,11 @@
 		<code value="8402"/>
 		<display value="Mental Health Hospitals"/>
 		<concept>
-			<code value="84021"/>
+			<code value="8402-1"/>
 			<display value="Public Mental Health Hospital"/>
 		</concept>
 		<concept>
-			<code value="84022"/>
+			<code value="8402-2"/>
 			<display value="Private Mental Health Hospital"/>
 		</concept>
 	</concept>
@@ -440,23 +440,23 @@
 		<code value="8511"/>
 		<display value="General Practice"/>
 		<concept>
-			<code value="85111"/>
+			<code value="8511-1"/>
 			<display value="Flying doctor service"/>
 		</concept>
 		<concept>
-			<code value="85112"/>
+			<code value="8511-2"/>
 			<display value="General medical practitioner service"/>
 		</concept>
 		<concept>
-			<code value="85113"/>
+			<code value="8511-3"/>
 			<display value="General practice medical clinic service"/>
 		</concept>
 		<concept>
-			<code value="85114"/>
+			<code value="8511-4"/>
 			<display value="Rural general medical practice service"/>
 		</concept>
 		<concept>
-			<code value="85115"/>
+			<code value="8511-5"/>
 			<display value="Community Health Care"/>
 		</concept>
 	</concept>
@@ -464,79 +464,79 @@
 		<code value="8512"/>
 		<display value="Specialist Medical Services"/>
 		<concept>
-			<code value="85121"/>
+			<code value="8512-1"/>
 			<display value="Allergy specialist service"/>
 		</concept>
 		<concept>
-			<code value="851210"/>
+			<code value="8512-10"/>
 			<display value="Orthopaedic service"/>
 		</concept>
 		<concept>
-			<code value="851211"/>
+			<code value="8512-11"/>
 			<display value="Paediatric service"/>
 		</concept>
 		<concept>
-			<code value="851212"/>
+			<code value="8512-12"/>
 			<display value="Psychiatry service"/>
 		</concept>
 		<concept>
-			<code value="851213"/>
+			<code value="8512-13"/>
 			<display value="Rheumatology service"/>
 		</concept>
 		<concept>
-			<code value="851214"/>
+			<code value="8512-14"/>
 			<display value="Specialist medical clinic service"/>
 		</concept>
 		<concept>
-			<code value="851215"/>
+			<code value="8512-15"/>
 			<display value="Specialist medical practitioner service nec"/>
 		</concept>
 		<concept>
-			<code value="851216"/>
+			<code value="8512-16"/>
 			<display value="Specialist surgical service"/>
 		</concept>
 		<concept>
-			<code value="851217"/>
+			<code value="8512-17"/>
 			<display value="Thoracic specialist service"/>
 		</concept>
 		<concept>
-			<code value="851218"/>
+			<code value="8512-18"/>
 			<display value="Urology service"/>
 		</concept>
 		<concept>
-			<code value="851219"/>
+			<code value="8512-19"/>
 			<display value="Emergency Department Services"/>
 		</concept>
 		<concept>
-			<code value="85122"/>
+			<code value="8512-2"/>
 			<display value="Anaesthetist service"/>
 		</concept>
 		<concept>
-			<code value="85123"/>
+			<code value="8512-3"/>
 			<display value="Dermatology Service"/>
 		</concept>
 		<concept>
-			<code value="85124"/>
+			<code value="8512-4"/>
 			<display value="Ear, nose and throat specialist service"/>
 		</concept>
 		<concept>
-			<code value="85125"/>
+			<code value="8512-5"/>
 			<display value="Gynaecology services"/>
 		</concept>
 		<concept>
-			<code value="85126"/>
+			<code value="8512-6"/>
 			<display value="Hair transplant service (by registered medical practitioner)"/>
 		</concept>
 		<concept>
-			<code value="85127"/>
+			<code value="8512-7"/>
 			<display value="Neurology service"/>
 		</concept>
 		<concept>
-			<code value="85128"/>
+			<code value="8512-8"/>
 			<display value="Obstetrics service"/>
 		</concept>
 		<concept>
-			<code value="85129"/>
+			<code value="8512-9"/>
 			<display value="Ophthalmology service"/>
 		</concept>
 	</concept>
@@ -544,19 +544,19 @@
 		<code value="8520"/>
 		<display value="Pathology and Diagnostic Imaging Services"/>
 		<concept>
-			<code value="85201"/>
+			<code value="8520-1"/>
 			<display value="Diagnostic imaging service"/>
 		</concept>
 		<concept>
-			<code value="85202"/>
+			<code value="8520-2"/>
 			<display value="Medical laboratory service"/>
 		</concept>
 		<concept>
-			<code value="85203"/>
+			<code value="8520-3"/>
 			<display value="Pathology laboratory service"/>
 		</concept>
 		<concept>
-			<code value="85204"/>
+			<code value="8520-4"/>
 			<display value="X-ray clinic service"/>
 		</concept>
 	</concept>
@@ -564,51 +564,51 @@
 		<code value="8531"/>
 		<display value="Dental Services"/>
 		<concept>
-			<code value="85311"/>
+			<code value="8531-1"/>
 			<display value="Conservative dental service"/>
 		</concept>
 		<concept>
-			<code value="853110"/>
+			<code value="8531-10"/>
 			<display value="Pedodontics service"/>
 		</concept>
 		<concept>
-			<code value="853111"/>
+			<code value="8531-11"/>
 			<display value="Periodontic service"/>
 		</concept>
 		<concept>
-			<code value="853112"/>
+			<code value="8531-12"/>
 			<display value="Prosthodontics service"/>
 		</concept>
 		<concept>
-			<code value="85312"/>
+			<code value="8531-2"/>
 			<display value="Dental hospital (out-patient)"/>
 		</concept>
 		<concept>
-			<code value="85313"/>
+			<code value="8531-3"/>
 			<display value="Dental practice service"/>
 		</concept>
 		<concept>
-			<code value="85314"/>
+			<code value="8531-4"/>
 			<display value="Dental practitioner service"/>
 		</concept>
 		<concept>
-			<code value="85315"/>
+			<code value="8531-5"/>
 			<display value="Dental surgery service"/>
 		</concept>
 		<concept>
-			<code value="85316"/>
+			<code value="8531-6"/>
 			<display value="Endodontic service"/>
 		</concept>
 		<concept>
-			<code value="85317"/>
+			<code value="8531-7"/>
 			<display value="Oral pathology service"/>
 		</concept>
 		<concept>
-			<code value="85318"/>
+			<code value="8531-8"/>
 			<display value="Oral surgery service"/>
 		</concept>
 		<concept>
-			<code value="85319"/>
+			<code value="8531-9"/>
 			<display value="Orthodontic service"/>
 		</concept>
 	</concept>
@@ -616,27 +616,27 @@
 		<code value="8532"/>
 		<display value="Optometry and Optical Dispensing"/>
 		<concept>
-			<code value="85321"/>
+			<code value="8532-1"/>
 			<display value="Contact lens dispensing"/>
 		</concept>
 		<concept>
-			<code value="85322"/>
+			<code value="8532-2"/>
 			<display value="Eye testing (optometrist)"/>
 		</concept>
 		<concept>
-			<code value="85323"/>
+			<code value="8532-3"/>
 			<display value="Optical dispensing"/>
 		</concept>
 		<concept>
-			<code value="85324"/>
+			<code value="8532-4"/>
 			<display value="Optician service"/>
 		</concept>
 		<concept>
-			<code value="85325"/>
+			<code value="8532-5"/>
 			<display value="Orthoptic service"/>
 		</concept>
 		<concept>
-			<code value="85326"/>
+			<code value="8532-6"/>
 			<display value="Spectacles dispensing"/>
 		</concept>
 	</concept>
@@ -644,7 +644,7 @@
 		<code value="8533"/>
 		<display value="Physiotherapy Services"/>
 		<concept>
-			<code value="85331"/>
+			<code value="8533-1"/>
 			<display value="Physiotherapy Services"/>
 		</concept>
 	</concept>
@@ -652,11 +652,11 @@
 		<code value="8534"/>
 		<display value="Chiropractic and Osteopathic Services"/>
 		<concept>
-			<code value="85341"/>
+			<code value="8534-1"/>
 			<display value="Chiropractic"/>
 		</concept>
 		<concept>
-			<code value="85342"/>
+			<code value="8534-2"/>
 			<display value="Osteopathic Services"/>
 		</concept>
 	</concept>
@@ -664,67 +664,67 @@
 		<code value="8539"/>
 		<display value="Other Allied Health Services"/>
 		<concept>
-			<code value="853910"/>
+			<code value="8539-10"/>
 			<display value="Hydropathic service"/>
 		</concept>
 		<concept>
-			<code value="853911"/>
+			<code value="8539-11"/>
 			<display value="Midwifery service"/>
 		</concept>
 		<concept>
-			<code value="853912"/>
+			<code value="8539-12"/>
 			<display value="Naturopathic service"/>
 		</concept>
 		<concept>
-			<code value="853913"/>
+			<code value="8539-13"/>
 			<display value="Nursing service"/>
 		</concept>
 		<concept>
-			<code value="853914"/>
+			<code value="8539-14"/>
 			<display value="Occupational therapy service"/>
 		</concept>
 		<concept>
-			<code value="853915"/>
+			<code value="8539-15"/>
 			<display value="Podiatry service"/>
 		</concept>
 		<concept>
-			<code value="853916"/>
+			<code value="8539-16"/>
 			<display value="Speech pathology service"/>
 		</concept>
 		<concept>
-			<code value="853917"/>
+			<code value="8539-17"/>
 			<display value="Therapeutic massage service"/>
 		</concept>
 		<concept>
-			<code value="853918"/>
+			<code value="8539-18"/>
 			<display value="Extended Allied Health services"/>
 		</concept>
 		<concept>
-			<code value="85392"/>
+			<code value="8539-2"/>
 			<display value="Aromatherapy service"/>
 		</concept>
 		<concept>
-			<code value="85394"/>
+			<code value="8539-4"/>
 			<display value="Clinical psychology service"/>
 		</concept>
 		<concept>
-			<code value="85395"/>
+			<code value="8539-5"/>
 			<display value="Dental hygiene service"/>
 		</concept>
 		<concept>
-			<code value="85396"/>
+			<code value="8539-6"/>
 			<display value="Dietician service"/>
 		</concept>
 		<concept>
-			<code value="85397"/>
+			<code value="8539-7"/>
 			<display value="Hearing aid dispensing"/>
 		</concept>
 		<concept>
-			<code value="85398"/>
+			<code value="8539-8"/>
 			<display value="Herbalist service"/>
 		</concept>
 		<concept>
-			<code value="85399"/>
+			<code value="8539-9"/>
 			<display value="Homoeopathic service"/>
 		</concept>
 	</concept>
@@ -732,11 +732,11 @@
 		<code value="8591"/>
 		<display value="Ambulance Services"/>
 		<concept>
-			<code value="85911"/>
+			<code value="8591-1"/>
 			<display value="Aerial ambulance service"/>
 		</concept>
 		<concept>
-			<code value="85912"/>
+			<code value="8591-2"/>
 			<display value="Ambulance service"/>
 		</concept>
 	</concept>
@@ -744,35 +744,35 @@
 		<code value="8599"/>
 		<display value="Other Healthcare Services n.e.c."/>
 		<concept>
-			<code value="85991"/>
+			<code value="8599-1"/>
 			<display value="Blood bank operation"/>
 		</concept>
 		<concept>
-			<code value="85992"/>
+			<code value="8599-2"/>
 			<display value="Health assessment service"/>
 		</concept>
 		<concept>
-			<code value="85993"/>
+			<code value="8599-3"/>
 			<display value="Healthcare service nec"/>
 		</concept>
 		<concept>
-			<code value="85994"/>
+			<code value="8599-4"/>
 			<display value="Community Health Facility"/>
 		</concept>
 		<concept>
-			<code value="85995"/>
+			<code value="8599-5"/>
 			<display value="Public Community Health Centre"/>
 		</concept>
 		<concept>
-			<code value="85996"/>
+			<code value="8599-6"/>
 			<display value="Private (non-profit) Community Health Centre"/>
 		</concept>
 		<concept>
-			<code value="85998"/>
+			<code value="8599-8"/>
 			<display value="Community health facility - mental"/>
 		</concept>
 		<concept>
-			<code value="85999"/>
+			<code value="8599-9"/>
 			<display value="Community health facility ‰ÿ other"/>
 		</concept>
 	</concept>
@@ -780,27 +780,27 @@
 		<code value="8601"/>
 		<display value="Aged Care Residential Services"/>
 		<concept>
-			<code value="86011"/>
+			<code value="8601-1"/>
 			<display value="Private profit nursing home for the aged"/>
 		</concept>
 		<concept>
-			<code value="86012"/>
+			<code value="8601-2"/>
 			<display value="Government nursing home for the aged"/>
 		</concept>
 		<concept>
-			<code value="86013"/>
+			<code value="8601-3"/>
 			<display value="Private charitable nursing home for the aged"/>
 		</concept>
 		<concept>
-			<code value="86014"/>
+			<code value="8601-4"/>
 			<display value="State government hostel for the aged"/>
 		</concept>
 		<concept>
-			<code value="86015"/>
+			<code value="8601-5"/>
 			<display value="Charitable hostels for the aged"/>
 		</concept>
 		<concept>
-			<code value="86016"/>
+			<code value="8601-6"/>
 			<display value="Local government hostel for the aged"/>
 		</concept>
 	</concept>
@@ -808,35 +808,35 @@
 		<code value="8609"/>
 		<display value="Other Residential Care Services"/>
 		<concept>
-			<code value="86091"/>
+			<code value="8609-1"/>
 			<display value="Private charitable nursing home for young disabled"/>
 		</concept>
 		<concept>
-			<code value="86092"/>
+			<code value="8609-2"/>
 			<display value="Private profit nursing home for young disabled"/>
 		</concept>
 		<concept>
-			<code value="86093"/>
+			<code value="8609-3"/>
 			<display value="Government nursing home for young disabled"/>
 		</concept>
 		<concept>
-			<code value="86094"/>
+			<code value="8609-4"/>
 			<display value="Other charitable hostel"/>
 		</concept>
 		<concept>
-			<code value="86095"/>
+			<code value="8609-5"/>
 			<display value="Other State government hostel"/>
 		</concept>
 		<concept>
-			<code value="86096"/>
+			<code value="8609-6"/>
 			<display value="Other Local government hostel"/>
 		</concept>
 		<concept>
-			<code value="86097"/>
+			<code value="8609-7"/>
 			<display value="Public alcohol and drug treatment centre"/>
 		</concept>
 		<concept>
-			<code value="86098"/>
+			<code value="8609-8"/>
 			<display value="Private alcohol and drug treatment centre"/>
 		</concept>
 	</concept>
@@ -844,23 +844,23 @@
 		<code value="8710"/>
 		<display value="Child Care Services"/>
 		<concept>
-			<code value="87101"/>
+			<code value="8710-1"/>
 			<display value="Before and/or after school care service"/>
 		</concept>
 		<concept>
-			<code value="87102"/>
+			<code value="8710-2"/>
 			<display value="Child care service"/>
 		</concept>
 		<concept>
-			<code value="87103"/>
+			<code value="8710-3"/>
 			<display value="Childminding service"/>
 		</concept>
 		<concept>
-			<code value="87105"/>
+			<code value="8710-5"/>
 			<display value="Family day care service"/>
 		</concept>
 		<concept>
-			<code value="87106"/>
+			<code value="8710-6"/>
 			<display value="Children's play programs"/>
 		</concept>
 	</concept>
@@ -868,39 +868,39 @@
 		<code value="8790"/>
 		<display value="Other Social Assistance Services"/>
 		<concept>
-			<code value="87901"/>
+			<code value="8790-1"/>
 			<display value="Adoption service"/>
 		</concept>
 		<concept>
-			<code value="87902"/>
+			<code value="8790-2"/>
 			<display value="Adult day care centre operation"/>
 		</concept>
 		<concept>
-			<code value="87903"/>
+			<code value="8790-3"/>
 			<display value="Aged care assistance service"/>
 		</concept>
 		<concept>
-			<code value="87904"/>
+			<code value="8790-4"/>
 			<display value="Alcoholics anonymous operation"/>
 		</concept>
 		<concept>
-			<code value="87905"/>
+			<code value="8790-5"/>
 			<display value="Disabilities assistance service"/>
 		</concept>
 		<concept>
-			<code value="87906"/>
+			<code value="8790-6"/>
 			<display value="Marriage guidance service"/>
 		</concept>
 		<concept>
-			<code value="87907"/>
+			<code value="8790-7"/>
 			<display value="Operation of soup kitchen (including mobile)"/>
 		</concept>
 		<concept>
-			<code value="87908"/>
+			<code value="8790-8"/>
 			<display value="Welfare counselling service"/>
 		</concept>
 		<concept>
-			<code value="87909"/>
+			<code value="8790-9"/>
 			<display value="Youth welfare service"/>
 		</concept>
 	</concept>
@@ -908,7 +908,7 @@
 		<code value="9111"/>
 		<display value="Health and Fitness Centres and Gymnasia Operation"/>
 		<concept>
-			<code value="91111"/>
+			<code value="9111-1"/>
 			<display value="Health and Fitness Centres and Gymnasia Operation"/>
 		</concept>
 	</concept>
