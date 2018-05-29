@@ -73,6 +73,18 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
       </type>
     </element>
+    <element id="Patient.extension:mothersMaidenName">
+      <path value="Patient.extension" />
+      <sliceName value="mothersMaidenName" />
+      <short value="Mother's Maiden name" />
+      <definition value="Mother's maiden (unmarried) name, commonly collected to help verify patient identity." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName" />
+      </type>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
@@ -203,7 +215,7 @@
       <path value="Patient.identifier" />
       <sliceName value="medicareNumber" />
       <short value="Medicare Number" />
-      <definition value="Medicare Number assigned  to a patient" />
+      <definition value="Medicare Number assigned  to a patient.  This includes temporary and full Medicare card numbers." />
     </element>
     <element id="Patient.identifier:medicareNumber.type">
       <path value="Patient.identifier.type" />
@@ -259,10 +271,13 @@
     </element>
     <element id="Patient.identifier:medicareNumber.period">
       <path value="Patient.identifier.period" />
+      <short value="Medicare validity period" />
       <min value="1" />
     </element>
     <element id="Patient.identifier:medicareNumber.period.end">
       <path value="Patient.identifier.period.end" />
+      <short value="Medicare Expiry Date" />
+      <definition value="Expiry date for medicare number. This is typically month and year only but may incude day date part when this is a temporary medicare number." />
       <min value="1" />
     </element>
     <element id="Patient.identifier:dvaNumber">

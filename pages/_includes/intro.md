@@ -24,6 +24,7 @@ __HL7 Australia Patient Administration Working Group__
 * [AU Base Organization](StructureDefinition-au-organisation.html): Organisations responsible for services
 * [AU Base HealthcareService](StructureDefinition-au-healthcareservice.html): Healthcare service details
 * [AU Base Device](StructureDefinition-au-device.html): Devices including software systems
+* [AU Base RelatedPerson](StructureDefinition-au-relatedperson.html): Person that is related to a patient
 
 __HL7 Australia Medications Working Group__
 

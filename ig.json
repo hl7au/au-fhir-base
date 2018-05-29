@@ -4,7 +4,7 @@
   "source": "ig.xml",
   "dependencyList": [],
   "spreadsheets": [],
-  "special-urls": [ "urn:iso:std:iso:3166", "http://mims.com.au", "http://www.gs1.org/gtin",  "http://pbs.gov.au/code/item", "http://hl7.org.au/fhir/v2/0203",  "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1", "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1", "https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1" ],
+  "special-urls": [ "urn:iso:std:iso:3166", "http://mims.com.au/mims-codes", "http://www.gs1.org/gtin",  "http://pbs.gov.au/code/item", "http://hl7.org.au/fhir/v2/0203",  "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1", "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1", "https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1" ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "ConceptMap": { "template-base": "cm.html" },
@@ -64,8 +64,7 @@
     "qa": "qa",
     "specification": "http://hl7.org/fhir/STU3"
   },
-  "resources": {
-	  
+  "resources": {  
 	"StructureDefinition/indigenous-status": {
 	  "base": "StructureDefinition-indigenous-status.html"
 	},
@@ -93,33 +92,6 @@
    "StructureDefinition/healthcareservice-eligibility-detail": {
 	  "base": "StructureDefinition-healthcareservice-eligibility-detail.html"
 	},
-
-
-	"CodeSystem/indigenous-status": {
-	  "base": "CodeSystem-indigenous-status.html"
-	},
-	"ValueSet/indigenous-status": {
-	  "base": "ValueSet-indigenous-status.html"
-	},
-	"CodeSystem/ihi-status": {
-	  "base": "CodeSystem-ihi-status.html"
-	},
-	"ValueSet/ihi-status": {
-	  "base": "ValueSet-ihi-status.html"
-	},
-	"CodeSystem/ihi-record-status": {
-	  "base": "CodeSystem-ihi-record-status.html"
-	},
-	"ValueSet/ihi-record-status": {
-	  "base": "ValueSet-ihi-record-status.html"	},
-	  
-	"CodeSystem/codesystem-anzsco": {
-	  "base": "CodeSystem-codesystem-anzsco.html"
-	},
-		
-	"ValueSet/valueset-anzsco": {
-	  "base": "ValueSet-anzsco.html"
-	},
 	"ValueSet/snomed-practitioner-role": {
 	  "base": "Valueset-snomed-practitioner-role.html"
 	},
@@ -144,18 +116,6 @@
 	"ValueSet/au-hl7v2-0203": {
 	  "base": "ValueSet-au-hl7v2-0203.html"
 	},
-	"CodeSystem/au-address-states": {
-	  "base": "CodeSystem-codesystem-au-address-states.html"
-	},
-	"CodeSystem/address-countries": {
-	  "base": "CodeSystem-codesystem-au-address-countries.html"
-	},
-	"ValueSet/address-countries": {
-	  "base": "ValueSet-valueset-au-address-countries.html"
-	},
-	"ValueSet/au-address-states": {
-	  "base": "ValueSet-valueset-au-address-states.html"
-	},
 	"StructureDefinition/au-practitioner": {
 	  "base": "StructureDefinition-au-practitioner.html"
 	},
@@ -177,26 +137,23 @@
 	"StructureDefinition/au-dispenserecord": {
 	  "base": "StructureDefinition-au-dispenserecord.html"
 	},
+	"StructureDefinition/au-medicationstatement": {
+	  "base": "StructureDefinition-au-medicationstatement.html"
+	},
 	"StructureDefinition/au-practitionerrole": {
 	  "base": "StructureDefinition-au-practitionerrole.html"
 	},
 	"StructureDefinition/au-pbs-pharma-manufacturer": {
 	  "base": "StructureDefinition-au-pbs-pharma-manufacturer.html"
 	},
-	"CodeSystem/australian-vaccine": {
-	  "base": "CodeSystem-australian-vaccine.html"
-	},
-	"ValueSet/australian-vaccine": {
-	  "base": "ValueSet-australian-vaccine.html"
+	"StructureDefinition/au-relatedperson": {
+	  "base": "StructureDefinition-au-relatedperson.html"
 	},
 	"CodeSystem/medication-type": {
 	  "base": "CodeSystem-medication-type.html"
 	},
 	  "ValueSet/medication-type": {
 	  "base": "ValueSet-medication-type.html"
-	},
-	"CodeSystem/grounds-for-concurrent-supply": {
-	  "base": "CodeSystem-au-grounds-for-concurrent-supply.html"
 	},
 	"ValueSet/date-accuracy-indicator": {
 	  "base": "ValueSet-date-accuracy-indicator.html"
@@ -251,9 +208,6 @@
 	},
 	"ValueSet/pbs-item": {
 	  "base": "ValueSet-pbs-item.html"
-	},
-	"ValueSet/reason-not-given": {
-	  "base": "ValueSet-reason-not-given.html"
 	}
   }
 }

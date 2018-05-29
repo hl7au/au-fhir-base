@@ -28,6 +28,8 @@ The following FMM levels are defined:
 
 4. PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the resource is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
 
-5. PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems in more than one country
+5. PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
 
 6. "Normative": the artifact is now considered stable
+
+Reference should also be made to [Version Management Policy](http://build.fhir.org/versions.html)
