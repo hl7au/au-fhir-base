@@ -12,3 +12,4 @@ These extensions have been defined for this implementation guide.
 * [DateAccuracyIndicator](StructureDefinition-date-accuracy-indicator.html)
 * [HealthcareServiceEligibilityDetail](StructureDefinition-healthcareservice-eligibility-detail.html)
 * [AttesterRelatedParty](StructureDefinition-attester-related-party.html)
+* [SectionAuthor](StructureDefinition-section-author.html)
