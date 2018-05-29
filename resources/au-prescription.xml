@@ -221,7 +221,7 @@
         <rules value="open" />
       </slicing>
     </element>
-	<element id="MedicationRequest.medication[x]:medicationCoded.coding:pbs">
+    <element id="MedicationRequest.medication[x]:medicationCoded.coding:pbs">
       <path value="MedicationRequest.medication[x].coding" />
       <sliceName value="pbs" />
       <short value="Medication PBS coding (ignore item context)" />
@@ -565,6 +565,26 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
+    </element>
+    <element id="MedicationRequest.authoredOn">
+      <path value="MedicationRequest.authoredOn" />
+      <short value="Created date" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest">
+      <path value="MedicationRequest.dispenseRequest" />
+      <short value="Requested dispensing" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
+      <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
+      <short value="Maximumn repeats authorised" />
+    </element>
+    <element id="MedicationRequest.substitution">
+      <path value="MedicationRequest.substitution" />
+      <short value="Brand substitution details" />
+    </element>
+    <element id="MedicationRequest.substitution.allowed">
+      <path value="MedicationRequest.substitution.allowed" />
+      <short value="Brand substitution flag" />
     </element>
   </differential>
 </StructureDefinition>
