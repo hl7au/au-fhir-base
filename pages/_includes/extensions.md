@@ -11,3 +11,6 @@ These extensions have been defined for this implementation guide.
 * [IHIRecordStatus](StructureDefinition-ihi-record-status.html)
 * [DateAccuracyIndicator](StructureDefinition-date-accuracy-indicator.html)
 * [HealthcareServiceEligibilityDetail](StructureDefinition-healthcareservice-eligibility-detail.html)
+* [AttesterRelatedParty](StructureDefinition-attester-related-party.html)
+* [SectionAuthor](StructureDefinition-section-author.html)
+* [InformationRecipient](Structuredefinition-information-recipient.html)
