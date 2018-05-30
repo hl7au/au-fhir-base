@@ -31,7 +31,6 @@
   <differential>
     <element id="RelatedPerson">
       <path value="RelatedPerson" />
-      <alias value="Individual" />
     </element>
     <element id="RelatedPerson.identifier">
       <path value="RelatedPerson.identifier" />
@@ -51,7 +50,7 @@
       <path value="RelatedPerson.identifier" />
       <sliceName value="ihiNumber" />
       <short value="National Individual Health Identifier" />
-      <definition value="National identifier for the related person" />
+      <definition value="National identifier for the person" />
       <requirements value="Identifier as assigned and available via Health Identifiers service" />
       <max value="1" />
     </element>
@@ -68,46 +67,51 @@
     <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus">
       <path value="RelatedPerson.identifier.extension" />
       <sliceName value="ihiStatus" />
-      <short value="IHI Status" />
-      <definition value="IHI number status associated with an IHI identifier." />
-      <min value="0" />
-      <max value="1" />
+	  <min value="0" />
+	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="RelatedPerson.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
-      <short value="IHI Record Status" />
-      <definition value="Known IHI record status associated with an IHI identifier." />
-      <min value="0" />
-      <max value="1" />
+      <definition value="IHI value record status associated with an IHI identifier" />
+	  <min value="0" />
+	  <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <definition value="ihi" />
+      <short value="Coded identifier type for IHI" />
+      <definition value="Coded identifier type for IHI" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
       <definition value="ihi" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="NI" />
-      </patternCoding>
       <binding>
         <strength value="required" />
-        <valueSetUri value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
       </binding>
+    </element>
+    <element id="RelatedPerson.identifier:ihiNumber.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <short value="Required system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:ihiNumber.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="NI" />
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -158,27 +162,33 @@
       <path value="RelatedPerson.identifier" />
       <sliceName value="medicareNumber" />
       <short value="Medicare Number" />
-      <definition value="Medicare Number assigned to a related person" />
+      <definition value="Medicare Number assigned  to a person.  This includes temporary and full Medicare card numbers." />
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <definition value="Medicare Number assigned to a related person" />
+      <definition value="Medicare Number assigned  to a person" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
-      <definition value="Medicare Number assigned to a related person" />
+      <definition value="Medicare Number assigned  to a person" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="MC" />
-      </patternCoding>
       <binding>
         <strength value="required" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="RelatedPerson.identifier:medicareNumber.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:medicareNumber.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="MC" />
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -198,8 +208,7 @@
     <element id="RelatedPerson.identifier:medicareNumber.value">
       <path value="RelatedPerson.identifier.value" />
       <short value="Medicare Number value including optional individual reference number" />
-      <definition value="10 digit Medicare number with optional 11 digit individual reference number (IRN)" />
-      <comment value="10 digit Medicare Number and optional 1 digit Individual Reference Number" />
+      <definition value="10 digit Medicare number with optional 11th digit individual reference number (IRN)" />
       <min value="1" />
       <example>
         <label value="Medicare number" />
@@ -209,10 +218,13 @@
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.period">
       <path value="RelatedPerson.identifier.period" />
+      <short value="Medicare validity period" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.period.end">
       <path value="RelatedPerson.identifier.period.end" />
+      <short value="Medicare Expiry Date" />
+      <definition value="Expiry date for medicare number. This is typically month and year only but may incude day date part when this is a temporary medicare number." />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:dvaNumber">
@@ -266,6 +278,12 @@
     <element id="RelatedPerson.identifier:dvaNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
       <max value="1" />
+      <constraint>
+        <key value="inv-dva-number-coding" />
+        <severity value="error" />
+        <human value="DVA color coding must be DVL, DVW, DVO or DVG" />
+        <expression value="code='DVL' or code='DVW' or code='DVO' or code='DVG'" />
+      </constraint>
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -312,13 +330,6 @@
       <short value="Health Care Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
-          <code value="HC" />
-        </coding>
-        <text value="Health Care Card Number" />
-      </patternCodeableConcept>
     </element>
     <element id="RelatedPerson.identifier:healthcareCard.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
@@ -330,12 +341,30 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="RelatedPerson.identifier:healthcareCard.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:healthcareCard.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="HC" />
+    </element>
+    <element id="RelatedPerson.identifier:healthcareCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="RelatedPerson.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Health Care Card Number" />
+    </element>
     <element id="RelatedPerson.identifier:healthcareCard.system">
       <path value="RelatedPerson.identifier.system" />
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/crn" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
     <element id="RelatedPerson.identifier:healthcareCard.value">
       <path value="RelatedPerson.identifier.value" />
@@ -361,13 +390,6 @@
       <short value="Pensioner Concession Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
-          <code value="PEN" />
-        </coding>
-        <text value="Pensioner Concession Card Number" />
-      </patternCodeableConcept>
     </element>
     <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
@@ -379,12 +401,30 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="PEN" />
+    </element>
+    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="RelatedPerson.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Pensioner Concession Card Number" />
+    </element>
     <element id="RelatedPerson.identifier:pensionerConcessionCard.system">
       <path value="RelatedPerson.identifier.system" />
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/crn" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
     <element id="RelatedPerson.identifier:pensionerConcessionCard.value">
       <path value="RelatedPerson.identifier.value" />
@@ -411,10 +451,6 @@
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
       <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org.au/fhir/v2/0203" />
-          <code value="SEN" />
-        </coding>
         <text value="Commonwealth Seniors Health Card" />
       </patternCodeableConcept>
     </element>
@@ -428,12 +464,30 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="SEN" />
+    </element>
+    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="RelatedPerson.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Commonwealth Seniors Health Card" />
+    </element>
     <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.system">
       <path value="RelatedPerson.identifier.system" />
       <short value="namespace for Centrelink CRN identifiers" />
       <definition value="namespace for CRN values" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/crn" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
     <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.value">
       <path value="RelatedPerson.identifier.value" />
@@ -461,16 +515,22 @@
       <path value="RelatedPerson.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="MR" />
-      </patternCoding>
       <binding>
         <strength value="required" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="MR" />
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -509,16 +569,22 @@
       <path value="RelatedPerson.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://hl7.org/fhir/v2/0203" />
-        <code value="MB" />
-      </patternCoding>
       <binding>
         <strength value="required" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="RelatedPerson.identifier:insurerNumber.type.coding.system">
+      <path value="RelatedPerson.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v2/0203" />
+    </element>
+    <element id="RelatedPerson.identifier:insurerNumber.type.coding.code">
+      <path value="RelatedPerson.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="MB" />
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -551,29 +617,5 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </type>
     </element>
-    <element id="RelatedPerson.telecom">
-      <path value="RelatedPerson.telecom" />
-      <short value="Contact detail for the related person" />
-      <definition value="Contact detail for the related person, e.g. a telephone number or an email address." />
-      <alias value="Electronic Contact Details" />
-      <alias value="Telecommunication Details" />
-      <alias value="Telephone Number" />
-      <alias value="Phone Number" />
-      <alias value="Fax Number" />
-      <alias value="Pager" />
-      <alias value="Email Address" />
-      <alias value="Electronic Communication Details Electronic Address Group (Standards Australia AS4846.2014)" />
-    </element>
-    <element id="RelatedPerson.gender">
-      <path value="RelatedPerson.gender" />
-      <alias value="Administrative Gender" />
-    </element>
-    <element id="RelatedPerson.birthDate">
-      <path value="RelatedPerson.birthDate" />
-      <label value="Birth Date" />
-      <alias value="Birth Date" />
-      <alias value="Birth Date and Time" />
-      <alias value="DOB" />
-    </element>
-  </differential>
+      </differential>
 </StructureDefinition>
