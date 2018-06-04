@@ -1,4 +1,4 @@
-AU Base relatedperson profile contains:
+AU Base RelatedPerson profile contains:
 
 1. Base: RelatedPerson (as RelatedPerson)
 1. Optional IHI (as Identifier)
