@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-composition" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-composition" />
+  <version value="0.1" />
+  <name value="AUBaseComposition" />
+  <title value="AU Base Composition" />
+  <status value="draft" />
+  <publisher value="Health Level Seven Australia (Patient Administration)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.org.au/fhir" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Australian realm Base Composition profile." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Composition">
+      <path value="Composition" />
+    </element>
+    <element id="Composition.extension">
+      <path value="Composition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.extension:compositionAuthorRole">
+      <path value="Composition.extension" />
+      <sliceName value="compositionAuthorRole" />
+      <short value="Authoring PractitionerRole" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/composition-author-role" />
+      </type>
+    </element>
+    <element id="Composition.extension:informationRecipient">
+      <path value="Composition.extension" />
+      <sliceName value="informationRecipient" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/information-recipient" />
+      </type>
+    </element>
+    <element id="Composition.attester">
+      <path value="Composition.attester" />
+    </element>
+    <element id="Composition.attester.extension">
+      <path value="Composition.attester.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.attester.extension:attesterRelatedParty">
+      <path value="Composition.attester.extension" />
+      <sliceName value="attesterRelatedParty" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/attester-related-party" />
+      </type>
+    </element>
+    <element id="Composition.section">
+      <path value="Composition.section" />
+    </element>
+    <element id="Composition.section.extension">
+      <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section.extension:sectionAuthor">
+      <path value="Composition.section.extension" />
+      <sliceName value="sectionAuthor" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/section-author" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

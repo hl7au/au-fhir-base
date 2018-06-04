@@ -11,6 +11,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html)
 * [AU Base Organisation](StructureDefinition-au-organisation.html)
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html)
+* [AU Base Composition](StructureDefinition-au-composition.html)
 
 ## Medications Profiles
 
