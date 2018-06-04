@@ -281,7 +281,7 @@
       <constraint>
         <key value="inv-dva-number-coding" />
         <severity value="error" />
-        <human value="DVA color coding must be DVL, DVW, DVO or DVG" />
+        <human value="DVA colour coding must be DVL, DVW, DVO or DVG" />
         <expression value="code='DVL' or code='DVW' or code='DVO' or code='DVG'" />
       </constraint>
       <binding>
@@ -542,7 +542,7 @@
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="Medical recrord number system url" />
+      <short value="Medical record number system url" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.value">
@@ -552,7 +552,7 @@
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.assigner">
       <path value="RelatedPerson.identifier.assigner" />
-      <short value="Medical recrord number assigning entity" />
+      <short value="Medical record number assigning entity" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:insurerNumber">
@@ -616,6 +616,16 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </type>
+    </element>
+	<element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1"/>
+      </binding>
     </element>
       </differential>
 </StructureDefinition>
