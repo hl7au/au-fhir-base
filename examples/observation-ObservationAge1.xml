@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="ObservationAge1"/>
+
+	<status value="final"/>
+	
+	
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="424144002"/>
+				<display value="Current chronological age"/>
+			</coding>
+		</code>
+	
+	
+	
+	<subject>
+		<reference value="Patient/example0"/>
+		<display value="Franklin"/>
+	</subject>
+
+
+	<valueQuantity>
+		<value value="4.12"/>
+		<unit value="10^12/L"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="10*12/L"/>
+	</valueQuantity>
+
+
+	
+</Observation>
