@@ -22,18 +22,17 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="Age or Age Range of Patient"/> 
-      <definition value="The chronological age or age range of a patient."/>
+      <short value="Age or Age Range of Patient" />
+      <definition value="The chronological age or age range of a patient." />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
           <code value="424144002" />
-          <display value="Current chronological age" />
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
