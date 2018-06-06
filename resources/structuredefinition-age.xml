@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="age"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/age"/>
+  <name value="Age"/>
+  <title value="Age"/>
+  <status value="draft"/>
+  <publisher value="Health Level Seven Australia (Patient Administration)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org.au"/>
+    </telecom>
+  </contact>
+  <description
+    value="The age or age range of a patient at a point in time, associated with a specific record or event."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <contextType value="resource"/>
+  <context value="Composition"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <min value="0"/>
+      <max value="*"/>
+      <short value="Age"/> 
+	  <definition value="The age or age range of a patient at a point in time, associated with a specific record or event."/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/age"/>
+    </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference"/>
+      <sliceName value="valueReference"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-observation-age"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

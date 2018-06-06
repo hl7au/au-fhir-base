@@ -15,3 +15,4 @@ These extensions have been defined for this implementation guide.
 * [SectionAuthor](StructureDefinition-section-author.html)
 * [InformationRecipient](Structuredefinition-information-recipient.html)
 * [CompositionAuthorRole](Structuredefinition-composition-author-role.html)
+* [Age](Structuredefinition-age.html)
