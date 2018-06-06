@@ -12,6 +12,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Organisation](StructureDefinition-au-organisation.html)
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 * [AU Base Composition](StructureDefinition-au-composition.html)
+* [AU Base Observation Age](StructureDefinition-au-observation-age.html)
 
 ## Medications Profiles
 
