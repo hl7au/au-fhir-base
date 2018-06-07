@@ -24,6 +24,7 @@
   <differential>
     <element id="Composition">
       <path value="Composition" />
+      <short value="Composition for Australian realm"/> 
     </element>
     <element id="Composition.extension">
       <path value="Composition.extension" />
@@ -38,7 +39,7 @@
     <element id="Composition.extension:compositionAuthorRole">
       <path value="Composition.extension" />
       <sliceName value="compositionAuthorRole" />
-      <short value="Authoring PractitionerRole"/> 
+      <short value="Practitioner role that authored the composition"/> 
       <definition value="A practitioner role that authored this composition. This is not to be confused with who typed in the information."/>
       <min value="0" />
       <max value="*" />
@@ -50,7 +51,7 @@
     <element id="Composition.extension:informationRecipient">
       <path value="Composition.extension" />
       <sliceName value="informationRecipient" />
-      <short value="Information Recipient"/>
+      <short value="Who and/or what should receive a copy of the composition"/>
       <definition value="A recipient who should receive a copy of the composition. A recipient is an entity to whom a copy of the composition is directed at the time of authoring of the composition."/>
       <min value="0" />
       <max value="*" />
@@ -75,7 +76,7 @@
     <element id="Composition.attester.extension:attesterRelatedParty">
       <path value="Composition.attester.extension" />
       <sliceName value="attesterRelatedParty" />
-      <short value="Attester as a RelatedPerson"/> 
+      <short value="Related person that attested the composition"/> 
       <definition value="A related person that attested this composition."/>
       <min value="0" />
       <max value="1" />
@@ -100,7 +101,7 @@
     <element id="Composition.section.extension:sectionAuthor">
       <path value="Composition.section.extension" />
       <sliceName value="sectionAuthor" />
-      <short value="Section Author"/>
+      <short value="Who and/or what authored the section"/>
       <definition value="Identifies who is responsible for the information in this section, not necessarily who typed it in."/>
       <min value="0" />
       <max value="*" />
