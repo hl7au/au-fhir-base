@@ -1,3 +1,3 @@
 Extension: Section Author
 
-This extension Identifies who is responsible for the information in this section.
+This extension applies to the Composition resource and identifies who is responsible for the information in this section.
