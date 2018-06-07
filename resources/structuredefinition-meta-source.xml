@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="meta-source" />
+  <meta>
+    <lastUpdated value="2018-03-05T15:41:09.744+11:00" />
+  </meta>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/meta-source" />
+  <name value="SourceSystemURI" />
+  <title value="Source System URI" />
+  <status value="draft" />
+  <date value="2018-03-05T01:02:05.508+11:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Meta" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Preadopt STU4 Meta.source" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/meta-source" />
+    </element>
+    <element id="Extension.value[x]:valueUri">
+      <path value="Extension.valueUri" />
+      <sliceName value="valueUri" />
+      <short value="Source system URI" />
+      <definition value="A uri that identifies the source system of the resource. This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc." />
+      <comment value="In the provenance resource, this corresponds to Provenance.entity.what[x]. The exact use of the source (and the implied Provenance.entity.role) is left to implementer discretion. Only one nominated source is allowed; for additional provenance details, a full Provenance resource should be used." />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
