@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="encryption-certificate-pem-x509" />
+  <meta>
+    <lastUpdated value="2018-03-05T00:46:34.361+11:00" />
+  </meta>
+  <text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Encrypting Qualified Certificate Reference</p>
+</div></text>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509" />
+  <name value="EncryptionCertificatePEMx509" />
+  <title value="Encryption Certificate PEM X509" />
+  <status value="draft" />
+  <date value="2017-05-08T20:25:21.1606983+10:00" />
+  <description value="Mechanism to hold value of an X509 certificate in PEM format for encrypting." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Endpoint" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="PEM X509 Certificate" />
+      <definition value="Mechanism hold the value of an X509 certificate as a string (base64 encoded PEM certificate)" />
+      <isModifier value="false" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="Base64 encoded string PEM format X509 certificate" />
+      <definition value="Base64 endcoded string containing PEM (RFC 7468) formatted X509 certificate" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
