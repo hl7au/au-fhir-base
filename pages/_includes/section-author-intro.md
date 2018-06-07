@@ -1,3 +1,3 @@
 Extension: Section Author
 
-This extension Identifies who is responsible for the information in this section.
+This extension applies to a Composition.section and indicates the PractitionerRole as the author (responsible party) of the composition section. 

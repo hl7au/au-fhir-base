@@ -14,25 +14,20 @@ to enable feedback to improve the content of this guide.
 
 ## Scope
 
-An indication of FHIR profiles that are managed under HL7 Australia working groups follows. 
+This document presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR STU3 specification. 
+* [Profiles](profiles.html) - are useful constraints of core FHIR resources and datatype for Australian use
+* [Extensions](extensions.html) - are FHIR extensions that are added for local use, covering needed Australian concepts
+* [Terminologies](terminology.html) - are defined or referenced code systems and value sets for Australia context
 
-__HL7 Australia Patient Administration Working Group__
+FHIR profiles are managed under HL7 Australia working groups and projects:
 
-* [AU Base Patient](StructureDefinition-au-patient.html): Patient demographic 
-* [AU Base Practitioner](StructureDefinition-au-practitioner.html): Individual practitioner
-* [AU Base PractitionerRole](StructureDefinition-au-practitionerrole.html): Practitioner in a role (Provider)
-* [AU Base Organization](StructureDefinition-au-organisation.html): Organisations responsible for services
-* [AU Base HealthcareService](StructureDefinition-au-healthcareservice.html): Healthcare service details
-* [AU Base Device](StructureDefinition-au-device.html): Devices including software systems
-* [AU Base RelatedPerson](StructureDefinition-au-relatedperson.html): Person that is related to a patient
+* [HL7 Australia Patient Administration Working Group](https://confluence.hl7australia.com/display/PA/Patient+Administration+Work+Group)
+* [HL7 Australia Medications Working Group](https://confluence.hl7australia.com/display/MED/Medications+Work+Group)
+* [HL7 Australia Orders and Observations Working Group](https://confluence.hl7australia.com/display/OO/Orders+and+Observations+Work+Group)
+* [HL7 Australia Child Health Working Group](https://confluence.hl7australia.com/display/CHWG/Child+Health+Working+Group)
+* [HL7 Argonaut Australia Project](https://confluence.hl7australia.com/display/AFR/HL7+Australia+Standards+Development)
 
-__HL7 Australia Medications Working Group__
-
-* [AU Base Medication](StructureDefinition-au-medication.html): Medication/drug detail
-* [AU Base MedicationRequest](StructureDefinition-au-prescription.html): Prescription/order details
-* [AU Base MedicationDispense](StructureDefinition-au-dispenserecord.html): Dispense records
-* [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html): Statement of medication use
-* [AU Base Immunisation](StructureDefinition-au-immunisation.html): Immunisation details recording
+Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liasion Officer](mailto:wglo@hl7.org.au)
 
 ## Usage
 
