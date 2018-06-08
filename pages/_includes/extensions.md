@@ -34,5 +34,5 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Encryption Ceritficate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
 
 ## FHIR R4 Preadoption
-* [Metadata Source](StructureDefinition-metasource.html) - simple provenance metadata as per R4 Meta.source
+* [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](Structuredefinition-composition-author-role.html) - PractitonerRole support as per R4
