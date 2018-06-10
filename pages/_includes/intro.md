@@ -1,10 +1,5 @@
-## {{ page.title }}
-{:.no_toc}
+# {{ page.title }}
 
-<!-- TOC -->
-
-* Do not remove this line (it will not be displayed)
-{:toc}
 
 ## Introduction
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.

@@ -1,10 +1,4 @@
-## {{ page.title }}
-{:.no_toc}
-
-<!-- TOC -->
-
-* Do not remove this line (it will not be displayed)
-{:toc}
+# {{ page.title }}
 
 # Maturity Levels 
 These levels used for this Implementation Guide are associated with the [FHIR Maturity Model](http://build.fhir.org/versions.html#maturity) and adjusted for local use.
