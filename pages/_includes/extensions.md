@@ -17,6 +17,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Close The Gap Registration](StructureDefinition-close-the-gap-registration.html) - patient flag, CTG eligible
 * [Grounds For Concurrent Supply Of Medication](StructureDefinition-grounds-for-concurrent-supply.html) - dispensing request/suppy record 
 * [Medication long-term indicator](StructureDefinition-medication-long-term.html) - Medication long-term indicator
+* [Medication Batch Serial Number](StructureDefinition-medication-batch-serialnumber.html) - Identifier assigned to a drug at the time of manufacture
 
 ## Composition
 * [Related Persion Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
