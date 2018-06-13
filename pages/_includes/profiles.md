@@ -10,7 +10,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Organisation](StructureDefinition-au-organisation.html) - responsible legal organisation
 * [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - service delivery entity provided by an organisation
 * [AU Base Device](StructureDefinition-au-device.html) - device with local identifiers
-* [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related persion with local identifiers
+* [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
 
 
 ## Medications Profiles
