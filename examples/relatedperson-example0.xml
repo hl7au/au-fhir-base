@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example0"/>
+
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <text value="INSEE"/>
+    </type>
+    <system value="urn:oid:1.2.250.1.61"/>
+    <value value="272117510400399"/>
+  </identifier>
+  <active value="true"/>
+
+  <patient>
+    <reference value="Patient/example0"/>
+  </patient>
+
+  <relationship>
+    <coding>
+      <system value="http://hl7.org/fhir/v2/0131"/>
+      <code value="N"/>
+    </coding>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <code value="WIFE"/>
+    </coding>
+  </relationship>
+
+  <name>
+    <family value="du Marche">
+      <!--    the "du" part is a family name prefix (VV in iso 21090)    -->
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="VV"/>
+      </extension>
+    </family>
+    <given value="Benedicte"/>
+  </name>
+
+  <telecom>
+    <system value="phone"/>
+    <value value="+33 (237) 998327"/>
+  </telecom>
+
+  <gender value="female"/>
+
+  <address>
+    <line value="43, Place du Marche Sainte Catherine"/>
+    <city value="Paris"/>
+    <postalCode value="75004"/>
+    <country value="FRA"/>
+  </address>
+
+  <photo>
+    <contentType value="image/jpeg"/>
+    <url value="Binary/f016"/>
+  </photo>
+</RelatedPerson>
