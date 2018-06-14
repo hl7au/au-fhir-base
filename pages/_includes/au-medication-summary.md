@@ -12,4 +12,9 @@ AU Base Medication profile contains:
 1. Optional MIMS Package (as Coding)
 1. Optional PBS Pharmaceutical Manufacturer (as Reference)
 1. Optional AMT Medicinal Product Ingredients (as Coding)
+1. Optional and single package.content 
+1. Optional and single package.batch
+    * Optional MedicationBatchSerialNumber (as Extension)
+
+
 
