@@ -8,7 +8,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Healthcare Service Eligibility Detail](StructureDefinition-healthcareservice-eligibility-detail.html) - multiple eligibilities 
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) - accuracy description for dates
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
-* [IHI RecordS tatus](StructureDefinition-ihi-record-status.html) - identifier record status
+* [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
 
 ## Medication
@@ -16,16 +16,18 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
 * [Close The Gap Registration](StructureDefinition-close-the-gap-registration.html) - patient flag, CTG eligible
 * [Grounds For Concurrent Supply Of Medication](StructureDefinition-grounds-for-concurrent-supply.html) - dispensing request/suppy record 
+* [Long Term](StructureDefinition-medication-long-term.html) - Medication long-term indicator
+* [Medication Batch Serial Number](StructureDefinition-medication-batch-serialnumber.html) - Identifier assigned to a drug at the time of manufacture
 
 ## Composition
-* [Related Persion Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
+* [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
 * [Section Author](StructureDefinition-section-author.html) - author for a composition section
 * [Information Recipient](Structuredefinition-information-recipient.html) - record of intended composition recipient
 * [Composition Author Role](Structuredefinition-composition-author-role.html) - composition practitioner role (R4 preadopt)
 
 ## HL7 V2 Identity
-* [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - - identity attribute for v2 endpoints
-* [HL7 V2 Receiving Facility](StructureDefinition-au-receivingfacility.html) - - identity attribute for v2 endpoints
+* [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
+* [HL7 V2 Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
 * [HL7 V2 Assigning Authority](StructureDefinition-au-assigningauthority.html) - v2 namespace for an identifier
 
 ## Endpoint Attributes

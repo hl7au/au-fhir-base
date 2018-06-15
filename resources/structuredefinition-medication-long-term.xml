@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="medication-long-term" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term" />
+  <name value="MedicationLongTerm" />
+  <title value="Long Term" />
+  <status value="draft" />
+  <publisher value="Health Level Seven Australia (Patient Administration)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.org.au/fhir" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An indicator of whether the medication will be re-prescribed, re-dispensed, or re-administered, over a period of time." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="MedicationStatement" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Medication Long Term" />
+      <definition value="Medication long-term indicator" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term" />
+    </element>
+    <element id="Extension.value[x]:valueBoolean">
+      <path value="Extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
