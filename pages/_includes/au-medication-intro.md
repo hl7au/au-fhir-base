@@ -12,3 +12,7 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 * Medication.isBrand
 * Medication.isOverCounter
 * Medication.package.container
+
+**Examples**
+
+[Dose based medication](Medication-MedicationDoseBased.html)
