@@ -5,68 +5,99 @@
         <lastUpdated value="2013-05-28T22:12:21Z"/>
     </meta>
     <text>
-        <status value="extensions"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">           
-            <p>
-                <b> id</b> : multiple information recipients and author role</p>
-            <p>
-                <b> meta</b> : </p>
-            <p>
-                <b> status</b> : final</p>
-            <p>
-                <b> type</b> : Discharge Summary Note <span> (Details : {LOINC
-                    code '18842-5' = 'Discharge Summarization Note)</span>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p><b>Generated Narrative with Details</b></p>
+            <p><b>id</b>: composition-different-authors</p>            
+            <p><b>status</b>: final</p>
+            <p><b>type</b>: Discharge Summarization Note <span
+                    style="background: LightGoldenRodYellow">(Details : {LOINC code '18842-5' =
+                    'Discharge summary)</span></p>
+            <p><b>date</b>: 03/06/2018 12:30:02 PM</p>
+            <p><b>author</b>: <a href="Practitioner-example0.html">Doctor Mayo. Generated Summary:
+                    id: example0; HPI-I = 8003610833334085, Prescriber Number = 453221, Australian
+                    Health Practitioner Regulation Agency Registration Number = MED0000932945;
+                    active; Helen Mayo ; helen.mayo@downunderhospital.com.au(WORK)</a></p>
+            <p><b>title</b>: Discharge Summary</p>
+            <p><b>Extension:</b>The Reason for admission section content has been authored by practitioner:<a
+                href="Practitioner-example0.html">Dr. Mayo</a>
             </p>
-            
-            <p>
-                <b> date</b> : June 3, 2018 12:30:02 PM</p>
-            <p>
-                <b> author</b> :<a href="Practitioner-example0.html">Dr. Mayo</a>
+            <p><b>Extension:</b>The Medications on Discharge section content has been authored by practitionerRole:<a
+                href="PractitionerRole-example0.html">Cardiologist</a>
             </p>
-            <p>
-                <b> Extension: patient as section author</b> :<a href="Patient-example0.html">Stella Franklin</a>
-            </p>
-            <p>
-                <b> Extension: patient as section author</b> :<a href="Practitioner-example0.html">Dr. Mayo</a>
-            </p>
-            <p>
-                <b> title</b> : Discharge Summary</p>
-            
         </div>
     </text>
-    
-    <extension url="http://hl7.org.au/fhir/StructureDefinition/section-author">
-        <valueReference>
-            <reference value="Patient/example0"/>
-            <display value="Franklin"/>            
-        </valueReference>
-    </extension>
-    
-    <extension url="http://hl7.org.au/fhir/StructureDefinition/section-author">
-        <valueReference>
-            <reference value="Practitioner/example0"/>
-            <display value="Doctor Mayo"/>           
-        </valueReference>
-    </extension>
-    
+
     <status value="final"/>
     <type>
         <coding>
             <system value="http://loinc.org"/>
             <code value="18842-5"/>
         </coding>
-        <text value="Discharge Summarozation Note"/>
+        <text value="Discharge Summarization Note"/>
     </type>
     <subject>
         <reference value="Patient/example0"/>
         <display value="Franklin"/>
     </subject>
-    
+
     <date value="2018-06-03T12:30:02Z"/>
     <author>
         <reference value="Practitioner/example0"/>
         <display value="Doctor Mayo"/>
     </author>
     <title value="Discharge Summary"/>
-    
+
+    <section>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/section-author">
+            <valueReference>
+                <reference value="Practitioner/example0"/>
+                <display value="Doctor Mayo"/>
+            </valueReference>
+        </extension>
+        <title value="Reason for admission"/>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="29299-5"/>
+                <display value="Reason for visit Narrative"/>
+            </coding>
+        </code>
+        <text>
+            <status value="extensions"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p> This section content has been authored by practitioner:<a
+                        href="Practitioner-example0.html">Dr. Mayo</a>
+                </p>
+            </div>
+        </text>
+
+    </section>
+
+    <section>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/section-author">
+            <valueReference>
+                <reference value="PractitionerRole/example0"/>
+                <display value="Cardiologist"/>
+            </valueReference>
+        </extension>
+        <title value="Medications on Discharge"/> 
+        <code> 
+            <coding> 
+                <system value="http://loinc.org"/> 
+                <code value="10183-2"/> 
+                <display value="Hospital discharge medications Narrative"/> 
+            </coding> 
+        </code> 
+        <text>
+            <status value="extensions"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p> This section content has been authored by practitionerRole:<a
+                        href="PractitionerRole-example0.html">Cardiologist</a>
+                </p>
+            </div>
+        </text>
+
+    </section>
+
 </Composition>
