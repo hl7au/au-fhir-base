@@ -4,25 +4,17 @@
   <id value="WithAttesterRelatedParty"/>
 
   <text>
-    <status value="generated"/>
+    <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Subject</b>: Stella Franklin</p>
       <p>
-        <b>Generated Narrative with Details</b>
+        <b>Additional Narrative with Details</b>
       </p>
       <p><b>id</b>: WithAttesterRelatedParty</p>
       <p><b>status</b>: preliminary</p>
       <p><b>type</b>: Patient Goals, preferences, and priorities upon death <span
           style="background: LightGoldenRodYellow">(Details : {LOINC code '81337-8' = 'Patient
           Goals, preferences, and priorities upon death)</span></p>
-      <p><b>class</b>: Do not resuscitate <span style="background: LightGoldenRodYellow">(Details :
-          { http://loinc.org code 'LP173410-4' = 'LP173410-4)</span></p>
-      <p><b>encounter</b>: <a href="Encounter-example0.html">Generated Summary: id: example0;
-          Encounter_Roel_20130404 (TEMP); status: finished; <span
-            title="{http://hl7.org/fhir/v3/ActCode AMB}">ambulatory</span>; <span
-            title="Codes: {http://snomed.info/sct 11429006}">Consultation</span>; <span
-            title="Codes: {http://snomed.info/sct 17621005}">Normal</span>; <span title="Codes: "
-            >The patient had fever peaks over the last couple of days. He is worried about these
-            peaks.</span></a></p>
       <p><b>date</b>: 01/02/2018 12:30:02 PM</p>
       <p><b>author</b>: <a href="Practitioner-example0.html">Dr. Helen Mayo. Generated Summary: id:
           example0; HPI-I = 8003610833334085, Prescriber Number = 453221, Australian Health
@@ -59,6 +51,13 @@
           <td>04/01/2012 9:10:14 AM</td>
         </tr>
       </table>
+      <p/>
+      <h3>Patient Goals and priorities upon death</h3>
+      <p><b>Goals</b>: Patient wants to remain as pain free as possible.</p>
+      <p><b>Preferences</b>: Patient wants a social life and does not want aggressive treatment that
+        would prevent her from being social. Patient does not want to be resuscitated.</p>
+      <p><b>Priorities</b>: Remaining pain free as much as possible is a priority over not being
+        resuscitated.</p>
     </div>
   </text>
 
@@ -72,23 +71,10 @@
     <text value="Patient Goals, preferences, and priorities upon death"/>
   </type>
 
-  <class>
-    <coding>
-      <system value="http://loinc.org"/>
-      <code value="LP173410-4"/>
-    </coding>
-    <text value="Do not resuscitate"/>
-  </class>
-
   <subject>
     <reference value="Patient/example0"/>
     <display value="Stella Franklin"/>
   </subject>
-
-  <!--      The Encounter resource. Points directly to an Encounter resource. Contains the dates of admission, specialty etc.      -->
-  <encounter>
-    <reference value="Encounter/example0"/>
-  </encounter>
 
   <date value="2018-02-01T12:30:02Z"/>
 
@@ -101,10 +87,10 @@
 
   <confidentiality value="N"/>
 
-  <!--      Attester Related Party     -->
+  <!--       Attester Related Party      -->
   <attester id="attester001">
-    <extension id="aRelatedParty"
-      url="http://hl7.org.au/fhir/StructureDefinition/attester-related-party">
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/attester-related-party"
+      id="aRelatedParty">
       <valueReference>
         <reference value="RelatedPerson/example0"/>
       </valueReference>
@@ -114,28 +100,23 @@
   </attester>
 
   <section>
-    <title value="History of family member diseases"/>
-    <code>
-      <coding>
-        <system value="http://loinc.org"/>
-        <code value="10157-6"/>
-        <display value="History of family member diseases Narrative"/>
-      </coding>
-    </code>
+    <title value="Patient Goals and priorities upon death"/>
+
     <text>
-      <status value="generated"/>
+      <status value="additional"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p> History of family member diseases - not available</p>
+        <p>
+          <b>Additional Narrative</b>
+        </p>
+        <p><b>Goals</b>: Patient wants to remain as pain free as possible.</p>
+        <p><b>Preferences</b>: Patient wants a social life and does not want aggressive treatment
+          that would prevent her from being social. Patient does not want to be resuscitated.</p>
+        <p><b>Priorities</b>: Remaining pain free as much as possible is a priority over not being
+          resuscitated.</p>
       </div>
     </text>
-    <mode value="snapshot"/>
-    <emptyReason>
-      <coding>
-        <system value="http://hl7.org/fhir/list-empty-reason"/>
-        <code value="withheld"/>
-        <display value="Information Withheld"/>
-      </coding>
-    </emptyReason>
+
+    <mode value="changes"/>
   </section>
 
 </Composition>
