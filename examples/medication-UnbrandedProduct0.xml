@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+        <id value="UnbrandedProduct0"/>
+        <code>
+          <coding>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+              <valueCoding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                <code value="UPDSF"/>
+                <display value="Unbranded product with strengths and form"/>
+              </valueCoding>
+            </extension>
+            <system value="http://snomed.info/sct"/>
+            <code value="23527011000036104"/>
+            <display value="clarithromycin 500 mg tablet"/>
+          </coding>
+          <text value="Clarithromycin 500mg Tablet"/>
+        </code>
+        <form>
+          <text value="Tablet"/>
+        </form>
+        <ingredient>
+          <itemCodeableConcept>
+            <coding>
+              <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                <valueCoding>
+                  <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                  <code value="UPD"/>
+                  <display value="Unbranded product with no strengths or form"/>
+                </valueCoding>
+              </extension>
+              <system value="http://snomed.info/sct"/>
+              <code value="21836011000036107"/>
+              <display value="clarithromycin"/>
+            </coding>
+            <text value="Clarithromycin"/>
+          </itemCodeableConcept>
+          <amount>
+            <numerator>
+              <value value="500"/>
+              <unit value="mg"/>
+            </numerator>
+            <denominator>
+              <value value="1"/>
+              <unit value="unit"/>
+            </denominator>
+          </amount>
+        </ingredient>
+      </Medication>
+  

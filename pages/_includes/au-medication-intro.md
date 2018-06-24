@@ -12,3 +12,13 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 * Medication.isBrand
 * Medication.isOverCounter
 * Medication.package.container
+
+**Examples**
+
+* [Fluconazole Dose Based Medication](Medication-MedicationDoseBased.html)
+* [Paracetamol Generic Pack](medication-GenericPack0.html)
+* [Nexium Hp7 Brand Pack](medication-BrandedPack0.html)
+* [Nexium Hp7 Combination Package with Product Parts](medication-CombinationPackage0.html)
+* [Clarithromycin 500mg Tablet Unbranded Product](medication-UnbrandedProduct0.html)
+* [Esomeprazole 20mg Tablet Unbranded Product](medication-UnbrandedProduct1.html)
+* [Amoxicillin 500mg Capsule Unbranded Product](medication-UnbrandedProduct2.html)
