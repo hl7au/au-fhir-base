@@ -8,5 +8,5 @@ This Composition profile provided for use in an Australian context.
 
 [Composition with some sections having a different section author to the composition author](Composition-composition-different-authors.html)
 
-[Composition with related person as attester party](composition-WithAttesterRelatedParty.html)
+[Composition with related person as attester party](Composition-WithAttesterRelatedParty.html)
 
