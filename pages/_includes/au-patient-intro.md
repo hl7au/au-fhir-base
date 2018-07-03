@@ -1,4 +1,4 @@
-**AU Base Patient Profile** *[FMM Level [<sup>[1]</sup>](guidance.html)]*
+**AU Base Patient Profile** *[FMM Level [1](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines a patient administration details structure that includes core localisation concepts.
 
