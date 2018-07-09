@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+    <id value="FixedDoseCombinationMedicineStribild"/>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Manually Generated Narrative</b>
+            </p>
+            <p>This is the structure for the <a
+                    href="https://www.safetyandquality.gov.au/wp-content/uploads/2016/03/National-guidelines-for-onscreen-display-of-clinical-medicines-information.pdf#page=34"
+                    >Product with four or more active ingredients</a> example given in the National
+                guidelines for on-screen display of clinical medicines information document.</p>
+            <p>The fixed dose combination medicine Stribild contains:<ul>
+                    <li>tenofovir disoproxil fumarate 300 mg</li>
+                    <li>emtricitabine 200 mg</li>
+                    <li>elvitegravir 150 mg</li>
+                    <li>cobicistat 150 mg</li></ul>
+            </p>
+        </div>
+    </text>
+    <code>
+        <coding>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                <valueCoding>
+                    <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                    <code value="BPD"/>
+                    <display value="Branded product with no strengths or form"/>
+                </valueCoding>
+            </extension>
+            <system value="http://snomed.info/sct"/>
+            <code value="154481000036105"/>
+            <display value="Stribild"/>
+        </coding>
+    </code>
+    <form>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385055001"/>
+            <display value="Tablet"/>
+        </coding>
+    </form>
+    <ingredient>
+        <itemCodeableConcept>
+            <coding>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                    <valueCoding>
+                        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                        <code value="UPD"/>
+                        <display value="Unbranded product with no strengths or form"/>
+                    </valueCoding>
+                </extension>
+                <system value="http://snomed.info/sct"/>
+                <code value="2624011000036108"/>
+                <display value="tenofovir disoproxil fumarate"/>
+            </coding>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <amount>
+            <numerator>
+                <value value="300"/>
+                <unit value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="unit"/>
+            </denominator>
+        </amount>
+    </ingredient>
+    <ingredient>
+        <itemCodeableConcept>
+            <coding>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                    <valueCoding>
+                        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                        <code value="UPD"/>
+                        <display value="Unbranded product with no strengths or form"/>
+                    </valueCoding>
+                </extension>
+                <system value="http://snomed.info/sct"/>
+                <code value="2070011000036109"/>
+                <display value="emtricitabine"/>
+            </coding>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <amount>
+            <numerator>
+                <value value="200"/>
+                <unit value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="unit"/>
+            </denominator>
+        </amount>
+    </ingredient>
+    <ingredient>
+        <itemCodeableConcept>
+            <coding>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                    <valueCoding>
+                        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                        <code value="UPD"/>
+                        <display value="Unbranded product with no strengths or form"/>
+                    </valueCoding>
+                </extension>
+                <system value="http://snomed.info/sct"/>
+                <code value="154421000036109"/>
+                <display value="elvitegravir"/>
+            </coding>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <amount>
+            <numerator>
+                <value value="150"/>
+                <unit value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="unit"/>
+            </denominator>
+        </amount>
+    </ingredient>
+    <ingredient>
+        <itemCodeableConcept>
+            <coding>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                    <valueCoding>
+                        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                        <code value="UPD"/>
+                        <display value="Unbranded product with no strengths or form"/>
+                    </valueCoding>
+                </extension>
+                <system value="http://snomed.info/sct"/>
+                <code value="154431000036106"/>
+                <display value="cobicistat"/>
+            </coding>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <amount>
+            <numerator>
+                <value value="150"/>
+                <unit value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="unit"/>
+            </denominator>
+        </amount>
+    </ingredient>
+</Medication>
