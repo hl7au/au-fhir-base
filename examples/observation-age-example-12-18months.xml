@@ -1,0 +1,34 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="observation-age-example-12-18months"/>
+
+    <status value="final"/>
+
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="424144002"/>
+            <display value="Current chronological age"/>
+        </coding>
+    </code>
+
+    <subject>
+        <reference value="Patient/example0"/>
+        <display value="Stella Franklin"/>
+    </subject>
+
+    <valueRange>
+        <low>
+            <value value="12"/>
+            <unit value="month"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mo"/>
+        </low>
+        <high>
+            <value value="18"/>
+            <unit value="month"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mo"/>
+        </high>
+    </valueRange>
+
+</Observation>
