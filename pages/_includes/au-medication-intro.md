@@ -22,4 +22,4 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 * [Clarithromycin 500mg Tablet Unbranded Product](medication-UnbrandedProduct0.html)
 * [Esomeprazole 20mg Tablet Unbranded Product](medication-UnbrandedProduct1.html)
 * [Amoxicillin 500mg Capsule Unbranded Product](medication-UnbrandedProduct2.html)
-* [Stribild - fixed dose combination medicine](Medication-FixedDoseCombinationMedicineStribild.html)
+* [Stribild Fixed Dose Combination Medication](Medication-FixedDoseCombinationMedicineStribild.html)
