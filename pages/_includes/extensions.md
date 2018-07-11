@@ -18,6 +18,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Grounds For Concurrent Supply Of Medication](StructureDefinition-grounds-for-concurrent-supply.html) - dispensing request/suppy record 
 * [Long Term](StructureDefinition-medication-long-term.html) - Medication long-term indicator
 * [Medication Batch Serial Number](StructureDefinition-medication-batch-serialnumber.html) - Identifier assigned to a drug at the time of manufacture
+* [Medication Brand Name](StructureDefinition-medication-brand-name.html) - text brand name that can be added to profiles
+* [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
 
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
