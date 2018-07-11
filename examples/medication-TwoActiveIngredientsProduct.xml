@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+    <id value="TwoActiveIngredientsProduct"/>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+           
+            <p>This is the structure for the <a
+                    href="https://www.safetyandquality.gov.au/wp-content/uploads/2016/03/National-guidelines-for-onscreen-display-of-clinical-medicines-information.pdf#page=32"
+                    >Two active ingredients product</a> example given in the National guidelines for
+                on-screen display of clinical medicines information document:</p>
+            <p><b>perindopril arginine</b> 10 mg + <b>amLODIPIne</b> 10 mg – tablet </p>
+        </div>
+    </text>
+    <form>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385055001"/>
+            <display value="Tablet"/>
+        </coding>
+    </form>
+    <ingredient>
+        <itemCodeableConcept>
+            <coding>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                    <valueCoding>
+                        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                        <code value="UPD"/>
+                        <display value="Unbranded product with no strengths or form"/>
+                    </valueCoding>
+                </extension>
+                <system value="http://snomed.info/sct"/>
+                <code value="2460011000036108"/>
+                <display value="perindopril arginine"/>
+            </coding>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <amount>
+            <numerator>
+                <value value="10"/>
+                <unit value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="unit"/>
+            </denominator>
+        </amount>
+    </ingredient>
+    <ingredient>
+        <itemCodeableConcept>
+            <coding>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                    <valueCoding>
+                        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                        <code value="UPD"/>
+                        <display value="Unbranded product with no strengths or form"/>
+                    </valueCoding>
+                </extension>
+                <system value="http://snomed.info/sct"/>
+                <code value="1792011000036100"/>
+                <display value="amlodipine"/>
+            </coding>
+        </itemCodeableConcept>
+        <isActive value="true"/>
+        <amount>
+            <numerator>
+                <value value="10"/>
+                <unit value="mg"/>
+            </numerator>
+            <denominator>
+                <value value="1"/>
+                <unit value="unit"/>
+            </denominator>
+        </amount>
+    </ingredient>
+</Medication>
