@@ -21,4 +21,5 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 * [Nexium Hp7 Combination Package with Product Parts](medication-CombinationPackage0.html)
 * [Clarithromycin 500mg Tablet Unbranded Product](medication-UnbrandedProduct0.html)
 * [Esomeprazole 20mg Tablet Unbranded Product](medication-UnbrandedProduct1.html)
-* [Amoxicillin 500mg Capsule Unbranded Product](medication-UnbrandedProduct2.html)
+* [Amoxicillin 500mg Capsule Unbranded Product](medication-UnbrandedProduct2.html) 
+* [Norvasc 10 mg Tablet Brand Product with Batch Details](Medication-BrandProductwithBatchDetails0.html)
