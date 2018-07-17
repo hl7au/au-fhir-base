@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-condition" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-condition" />
+  <name value="AUBaseCondition " />
+  <title value="AU Base Condition" />
+  <status value="draft" />
+  <date value="2018-07-16" />
+  <description value="Australian realm Base Condition profile." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <short value="Australian context Condition information" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+    </element>
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.code.coding:coding">
+      <path value="Condition.code.coding" />
+      <sliceName value="coding" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1" />
+      </binding>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+    </element>
+    <element id="Condition.bodySite.coding">
+      <path value="Condition.bodySite.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.bodySite.coding:coding">
+      <path value="Condition.bodySite.coding" />
+      <sliceName value="coding" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
+      </binding>
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+    </element>
+    <element id="Condition.evidence.code">
+      <path value="Condition.evidence.code" />
+    </element>
+    <element id="Condition.evidence.code.coding">
+      <path value="Condition.evidence.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.evidence.code.coding:coding">
+      <path value="Condition.evidence.code.coding" />
+      <sliceName value="coding" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
