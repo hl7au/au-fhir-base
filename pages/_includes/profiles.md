@@ -24,7 +24,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Observation Age](StructureDefinition-au-observation-age.html) - record of age at a point in time
 
 ## Clinical Profiles
-* [AU Base Condition](StructureDefinition-au-condition.html) - ...
+* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
