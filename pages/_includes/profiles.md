@@ -25,6 +25,8 @@ These Profiles have been defined for this implementation guide.
 
 ## Orders and Observations Profiles
 * [AU Base Observation Age](StructureDefinition-au-observation-age.html) - record of age at a point in time
+* [AU Body Site](StructureDefinition-au-bodysite.html) - body site with local coding
+
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
