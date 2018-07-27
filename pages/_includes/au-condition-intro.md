@@ -1,5 +1,5 @@
 **AU Condition** *[FMM Level [3](guidance.html)]*
 
-This Condition profile provided for use in an Australian context.
+This profile defines a condition for use in an Australian context.
 
 
