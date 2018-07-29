@@ -13,7 +13,7 @@
     <name value="HL7 Australia Patient Administration Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="http://confluence.hl7australia.com/display/PA/Patient+Administration+Work+Group"/>
+      <value value="http://confluence.hl7australia.com/display/PA/PatientAdministrationWorkGroup"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -21,7 +21,7 @@
     <name value="HL7 Australia Orders and Observations Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/OO/Orders+and+Observations+Work+Group"/>
+      <value value="https://confluence.hl7australia.com/display/OO/OrdersandObservationsWorkGroup"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -29,7 +29,7 @@
     <name value="HL7 Australia Medications Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/MED/Medications+Work+Group"/>
+      <value value="https://confluence.hl7australia.com/display/MED/MedicationsWorkGroup"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -619,6 +619,34 @@
         <reference value="Medication/BrandedPack0"/>
       </sourceReference>
     </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Medication Example Brand Pack With Single Active Ingredient"/>      
+	  <sourceReference>
+        <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Medication Example with two active ingredients product"/>      
+      <sourceReference>
+        <reference value="Medication/TwoActiveIngredientsProduct0"/>
+      </sourceReference>
+     </resource>
+	 <resource>
+      <example value="true"/>
+      <name value="Medication Example with four or more active ingredients"/>      
+      <sourceReference>
+        <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
+      </sourceReference>
+     </resource>
+	 <resource>
+      <example value="true"/>   
+      <name value="Medication Example Brand Pack with Batch Details"/>     
+     <sourceReference>        
+        <reference value="Medication/BrandProductwithBatchDetails0"/>
+      </sourceReference>
+     </resource>
     <resource>
       <example value="true"/>
       <name value="Observation Age Value Range - 12 to 18 months"/>
