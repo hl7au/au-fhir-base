@@ -41,10 +41,10 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:clinical-condition">
+    <element id="Condition.code.coding:snomedclinical-condition">
       <path value="Condition.code.coding"/>
-      <sliceName value="clinical-condition"/>
-      <short value="Clinical Condition"/>
+      <sliceName value="snomedCondition"/>
+      <short value="Clinical Condition (SNOMED CT)"/>
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -54,9 +54,9 @@
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
     </element>
-    <element id="Condition.bodySite.coding:body-site">
+    <element id="Condition.bodySite.coding:snomedbody-site">
       <path value="Condition.bodySite.coding"/>
-      <short value="Body Site"/>
+      <short value="Body Site (SNOMED CT)"/>
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -106,10 +106,10 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.evidence.code.coding:clinical-finding">
+    <element id="Condition.evidence.code.coding:snomedclinical-finding">
       <path value="Condition.evidence.code.coding"/>
-      <sliceName value="clinical-finding"/>
-      <short value="Clinical Finding"/>
+      <sliceName value="snomedFinding"/>
+      <short value="Clinical Finding (SNOMED CT)"/>
       <max value="1" />
       <binding>
         <strength value="required" />
