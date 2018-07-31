@@ -31,4 +31,4 @@ These Profiles have been defined for this implementation guide.
 
 ## Profiles on Data Types
 * [Base Australian Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
-
+* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding (AMT)
