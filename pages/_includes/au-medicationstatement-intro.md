@@ -2,6 +2,6 @@
 
 **Examples**
 
-[Practitioner reports patient is taking Roferon A three times a week](MedicationStatement-MedicationStatement0.html)
+[Practitioner reports patient is taking Roferon-A three times a week on Mon Wed Sat](MedicationStatement-MedicationStatementexample0.html)
 
-[Patient reports long-term use of medication Zoloft](MedicationStatement-MedicationStatement1.html)
+[Long-term use of medication Zoloft](MedicationStatement-MedicationStatementexample1.html)
