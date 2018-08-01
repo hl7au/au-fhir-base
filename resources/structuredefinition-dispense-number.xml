@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="dispense-number" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
+  <version value="0.1" />
   <name value="DispenseNumber" />
   <title value="Number of this Dispense" />
   <status value="draft" />
@@ -32,13 +33,13 @@
       <path value="Extension.url" />
       <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
     </element>
-    <element id="Extension.value[x]:valueInteger">
-      <path value="Extension.valueInteger" />
-      <sliceName value="valueInteger" />
+    <element id="Extension.value[x]:valuePositiveInt">
+      <path value="Extension.valuePositiveInt" />
+      <sliceName value="valuePositiveInt" />
       <short value="Dispense number" />
       <min value="1" />
       <type>
-        <code value="integer" />
+        <code value="positiveInt" />
       </type>
     </element>
   </differential>

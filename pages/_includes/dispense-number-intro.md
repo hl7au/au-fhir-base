@@ -1,3 +1,5 @@
 Extension: Dispense Number
 
-This extension applies to the Dispense Record Profile and provides A numeric value that represents the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats. This count includes the first dispense. It has the value 1 when there are no repeats.
+This extension applies to MedicationDispense resource and the value indicates the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats. This count includes the first dispense. It has the value 1 when there are no repeats.
+
+Each prescribed item possesses a predetermined number of times it may be dispensed; the number is 1 (for the original prescription) + the maximum number of repeats. This extension (Dispense Number) indicates which dispensing of the item is being attempted by the dispense that the associated dispense record documents. Its value is one more than the number of times the prescribed item has successfully been dispensed prior to this dispensing. Its value increments by one each time a dispense act is successfully completed. 
