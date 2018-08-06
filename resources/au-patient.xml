@@ -46,6 +46,8 @@
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
+	  <min value="0" />
+	  <max value="1" />
       <short value="Patient Birth Place" />
       <type>
         <code value="Extension" />
@@ -59,6 +61,8 @@
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension" />
       <sliceName value="indigenousStatus" />
+	  <min value="0" />
+	  <max value="1" />
       <short value="Patient Indigenous Status" />
       <type>
         <code value="Extension" />
@@ -68,6 +72,8 @@
     <element id="Patient.extension:closeTheGapRegistration">
       <path value="Patient.extension" />
       <sliceName value="closeTheGapRegistration" />
+	  <min value="0" />
+	  <max value="1" />
       <short value="Patient Close the Gap Registration" />
       <type>
         <code value="Extension" />
@@ -77,6 +83,8 @@
     <element id="Patient.extension:mothersMaidenName">
       <path value="Patient.extension" />
       <sliceName value="mothersMaidenName" />
+      <min value="0" />
+      <max value="1" />
       <short value="Patient Mother's Maiden name" />
       <type>
         <code value="Extension" />
@@ -122,6 +130,8 @@
     <element id="Patient.identifier:ihiNumber.extension:ihiStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiStatus" />
+	  <min value="0" />
+	  <max value="1" />
       <short value="IHI Number Status" />
       <type>
         <code value="Extension" />
@@ -131,6 +141,8 @@
     <element id="Patient.identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
+	  <min value="0" />
+	  <max value="1" />
       <short value="IHI Number Record Status" />
       <definition value="IHI value record status associated with an IHI identifier" />
       <type>
@@ -683,6 +695,8 @@
       <sliceName value="accuracyIndicator" />
       <short value="Birth Date Accuracy Indicator" />
       <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
@@ -710,6 +724,8 @@
         <rules value="open" />
       </slicing>
       <definition value="Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional." />
+	  <min value="0" />
+      <max value="1" />
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <path value="Patient.deceased[x]" />
@@ -744,6 +760,8 @@
       <sliceName value="accuracyIndicator" />
       <short value="Deceased Date Accuracy Indicator" />
       <comment value="In some circumstances, systems may only date or datetime data that has unknown or estimated parts.  This coding establises the acuraccy of the day, month and year parts." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />

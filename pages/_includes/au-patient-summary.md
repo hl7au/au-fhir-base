@@ -1,19 +1,27 @@
-AU Base Patient profile contains:
+This profile contains the following variations from [Patient](http://hl7.org/fhir/StructureDefinition/Patient):
 
-1. Base: Patient (as Patient)
-1. Optional IHI (as Identifier)
-	* Optional IHI status
-	* Optional IHI record status
-1. Optional Medicare Number (as Identifier)
-1. Optional DVA Number (as Identifier)
-1. Optional Concession Card Number (as Identifier)
-	* Choice (Identifier.type) - Health Care Card, Pensioner Concession Card, Commonwealth Seniors Health Card
-1. Optional Medical Record Numbers (as Identifer)
-1. Optional Private Health Insurance Member Numbers (as Identifier)
-1. Optional Birth Time (as birthDate Extension)
-1. Optional Birth Date Accuracy Indicator (as birthDate Extension)
-1. Optional Deceased Date Accuracy Indicator (as deceasedDateTime Extension)
-1. Optional Indigenous Status (as Extension)
-1. Optional Close the Gap Registration (as Extension)
-1. Optional Place of Birth (as Extension)
+      1. Patient Birth Place extension
+      1. Patient Indigenous Status extension
+      1. Patient Close the Gap Registration extension
+      1. Patient Mother's Maiden name extension
+      1. identifier sliced
+         2. National Individual Health Identifier
+            3. IHI Number Status extension
+            3. IHI Number Record Status extension
+         2. Medicare Number
+         2. DVA Number
+         2. Health Care Card Identifier
+         2. Pensioner Concession Card Identifier
+         2. Commonwealth Seniors Health Card Identifier
+         2. Medical Record Number
+         2. Private Health Insurance Member Number
+      1. birthDate
+            3. Birth Date Accuracy Indicator extension
+            3. Birth Time extension
+      1. deceased[x] sliced
+         2. Deceased Indicator
+         2. Deceased Date Time
+            3. Deceased Date Accuracy Indicator extension
+      1. generalPractitioner
+      1. managingOrganization
 
