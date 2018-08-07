@@ -2,4 +2,4 @@
 
 **Examples**
 
-[Non-administration of a vaccine and reason not given](Immunization-immunization-notGiven-example0.html)
+[Non-administration of varicella-zoster live vaccine due to refusal](Immunization-immunization-notGiven-example0.html)
