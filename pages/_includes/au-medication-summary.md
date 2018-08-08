@@ -11,6 +11,7 @@ AU Base Medication profile contains:
 1. Optional AMT Medicinal Product (as code Coding)
 1. Optional MIMS Package (as code Coding)
 1. Optional PBS Pharmaceutical Manufacturer (as Reference)
+1. Optional form.coding slice with required binding to Medication Form value set
 1. Optional AMT Medicinal Product Ingredients (as ingredient.item Coding)
 1. Optional MedicationBatchSerialNumber (as package.batch Extension)
 
