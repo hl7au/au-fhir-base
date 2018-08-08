@@ -1,6 +1,6 @@
 This profile contains the following variations from [RelatedPerson](http://hl7.org/fhir/STU3/RelatedPerson):
 
-1. zero or more <span style='color:green'>identifier</span> sliced
+1. zero or more <span style='color:green'>identifier</span>  sliced
    * at most one National Individual Health Identifier slice
       * at most one ihiStatus extension
       * at most one ihiRecordStatus extension

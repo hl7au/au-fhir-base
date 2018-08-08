@@ -19,7 +19,7 @@
         <xsl:if test="$parts[count($parts)] = 'extension'"> extension</xsl:if></xsl:if>
       </xsl:if>
       <xsl:if test="f:sliceName and not(contains(f:path/@value,'.extension'))"><xsl:text>&#x20;slice</xsl:text></xsl:if>
-      <xsl:if test="(f:sliceName or f:short or f:slicing or count($parts)=2) and ( (count($parts)=2 and $parts[count($parts)] = 'extension' ) or not(contains(f:path/@value,'.extension')))"><xsl:if test="f:slicing">sliced</xsl:if><xsl:text>
+      <xsl:if test="(f:sliceName or f:short or f:slicing or count($parts)=2) and ( (count($parts)=2 and $parts[count($parts)] = 'extension' ) or not(contains(f:path/@value,'.extension')))"><xsl:if test="f:slicing"> sliced</xsl:if><xsl:text>
 </xsl:text></xsl:if>
       
     </xsl:if>

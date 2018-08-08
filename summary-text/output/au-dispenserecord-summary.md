@@ -1,12 +1,12 @@
 This profile contains the following variations from [MedicationDispense](http://hl7.org/fhir/STU3/MedicationDispense):
 
 
-1. zero or more <span style='color:green'>identifier</span> sliced
+1. zero or more <span style='color:green'>identifier</span>  sliced
    * zero or more ETP vendor identifier slice
    * zero or more Local Script Number slice
-1. exactly one <span style='color:green'>medication[x]</span> sliced
+1. exactly one <span style='color:green'>medication[x]</span>  sliced
     slice
-1.  <span style='color:green'>medication[x].coding</span> sliced
+1.  <span style='color:green'>medication[x].coding</span>  sliced
    *  Medication PBS coding (ignore item context) slice
    *  Medication Package GTIN slice
    *  AMT Trade Product Pack slice

@@ -1,12 +1,12 @@
 This profile contains the following variations from [MedicationRequest](http://hl7.org/fhir/STU3/MedicationRequest):
 
 
-1. zero or more <span style='color:green'>identifier</span> sliced
+1. zero or more <span style='color:green'>identifier</span>  sliced
    * zero or more Electronic Transfer of Prescription Supplier Identifier slice
    * zero or more Local Prescription Number slice
-1. exactly one <span style='color:green'>medication[x]</span> sliced
+1. exactly one <span style='color:green'>medication[x]</span>  sliced
     slice
-1.  <span style='color:green'>medication[x].coding</span> sliced
+1.  <span style='color:green'>medication[x].coding</span>  sliced
    *  Medication PBS coding (ignore item context) slice
    *  Medication Package GTIN slice
    *  AMT Trade Product Pack slice
