@@ -28,7 +28,7 @@
   <differential>
     <element id="Immunization">
       <path value="Immunization" />
-      <short value="AU Base Immunisation" />
+      <short value="Australian context Immunisation information" />
     </element>
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode" />
@@ -81,6 +81,10 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
       </type>
+    </element>
+    <!--    <element id="Immunization.site"> added so as to trigger the child element <element id="Immunization.site.coding"> to appear in the Differential. -->
+    <element id="Immunization.site">
+      <path value="Immunization.site"/>
     </element>
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding"/>
@@ -201,35 +205,41 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
     </element>
+    <!--    <element id="Immunization.vaccinationProtocol"> added so as to trigger the child element <element id="Immunization.vaccinationProtocol.doseStatus.coding"> to appear in the Differential. -->
+    <element id="Immunization.vaccinationProtocol">
+      <path value="Immunization.vaccinationProtocol"/>
+    </element>
+    <!--    <element id="Immunization.vaccinationProtocol.doseStatus"> added so as to trigger the child element <element id="Immunization.vaccinationProtocol.doseStatus.coding"> to appear in the Differential. -->    
     <element id="Immunization.vaccinationProtocol.doseStatus">
       <path value="Immunization.vaccinationProtocol.doseStatus"/>
+    </element>
+    <element id="Immunization.vaccinationProtocol.doseStatus.coding">
+      <path value="Immunization.vaccinationProtocol.doseStatus.coding"/>
       <slicing>
         <discriminator>
           <type value="value"/>
-          <path value="coding"/>
+          <path value="code"/>
         </discriminator>
-        <ordered value="false"/>
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus:doseStatusNotAvailable">
-      <path value="Immunization.vaccinationProtocol.doseStatus"/>
-      <sliceName value="doseStatusNotAvailable"/>
-    </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus:doseStatusNotAvailable.coding">
+    <element id="Immunization.vaccinationProtocol.doseStatus.coding:notAvailable">
       <path value="Immunization.vaccinationProtocol.doseStatus.coding"/>
+      <sliceName value="notAvailable"/>
+      
+      <short value="doseStatus not available"/>
       <fixedCoding>
         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
         <code value="NAVU"/>
         <display value="Not available"/>
       </fixedCoding>
     </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus:doseStatusNotAvailable.text">
+    <element id="Immunization.vaccinationProtocol.doseStatus.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true"/>
       </extension>
       <path value="Immunization.vaccinationProtocol.doseStatus.text"/>
-      <min value="1"/>
+      <short value="Not available"/>
       <fixedString value="Not available"/>
     </element>
   </differential>
