@@ -4,8 +4,8 @@ This profile is provided for use in an Australian context where some constraint 
 other uses such as unstructured addresses. 
 
 #### Examples
-1. [Address with minimum required elements.](Patient-addressMinexample0.html)
-1. [Address with maximum required elements.](Patient-addressMaxexample1.html)
-1. [Address with Structured Australian Address.](Patient-addressStructuredAustralianAddressexample2.html)
-1. [Address with Unstructured Australian Address.](Patient-addressUnstructuredAustralianAddressexample3.html)
-1. [Address with Australian No Fixed Address.](Patient-addressAustralianNoFixedAddressexample4.html)
+[Postal and work address in Darwin, NT](Patient-addressStructuredAustralianAddressexample2.html)
+
+[Level 1, 300 George St, Brisbane, QLD 4000](Patient-addressUnstructuredAustralianAddressexample3.html)
+
+[No fixed address in Melbourne, VIC 3000](Patient-addressAustralianNoFixedAddressexample4.html)
