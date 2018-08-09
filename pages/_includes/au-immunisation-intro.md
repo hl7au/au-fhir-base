@@ -2,4 +2,4 @@
 
 **Examples**
 
-[Administration of Australian Immunisation Register compliant Infanrix-Hep B vaccine](Immunization-immunization-givenAIRCompliant-example1.html)
+[Administration of Australian Immunisation Register compliant Infanrix-Hep B vaccine](Immunization-immunization-example1.html)
