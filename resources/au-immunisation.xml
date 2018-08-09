@@ -48,12 +48,12 @@
     </element>
     <element id="Immunization.vaccineCode.coding:snomedVaccineCode">
       <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="snomedVaccineCode" />
-      <short value="Australian Vaccine (SNOMED)" />
+      <sliceName value="amtVaccineCode" />
+      <short value="AMT Vaccine" />
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-vaccine-1" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding:airVaccineCode">
@@ -89,6 +89,7 @@
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding"/>
       <short value="Immunisation Anatomical Site"/>
+      <max value="1"/>
       <binding>
         <strength value="required"/>
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1"/>
@@ -225,22 +226,13 @@
     </element>
     <element id="Immunization.vaccinationProtocol.doseStatus.coding:notAvailable">
       <path value="Immunization.vaccinationProtocol.doseStatus.coding"/>
-      <sliceName value="notAvailable"/>
-      
+      <sliceName value="doseStatusNotAvailable"/>
       <short value="doseStatus not available"/>
       <fixedCoding>
         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
         <code value="NAVU"/>
         <display value="Not available"/>
       </fixedCoding>
-    </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="Immunization.vaccinationProtocol.doseStatus.text"/>
-      <short value="Not available"/>
-      <fixedString value="Not available"/>
     </element>
   </differential>
 </StructureDefinition>
