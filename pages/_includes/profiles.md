@@ -24,7 +24,7 @@ These Profiles have been defined for this implementation guide.
 ## Orders and Observations Profiles
 * [AU Base Observation Age](StructureDefinition-au-observation-age.html) - record of age at a point in time
 * [AU Body Site](StructureDefinition-au-bodysite.html) - body site with local coding
-
+* [AU Base Body Height](StructureDefinition-au-bodyheight.html) - record of body height at a point in time
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
