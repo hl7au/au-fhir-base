@@ -1,4 +1,5 @@
 **AU Body Height** *[FMM Level [0](guidance.html)]*
 
-This profile provided for use in an Australian context where some constraints on content is desirable to guarantee the quality of a body height.
+This profile defines a body height information structure for use in an Australian context that tightens the BodyHeightCode slice, aligning to the proposed R4 Vital Signs Body Height profile.
 
+As per the R4 Vital Signs guidance, a separate profile for Body Length is not supported. This observation may be supplemented with an additional coding element containing the LOINC code 8306-3 -Body height - lying (i.e., body length - typically used for infants).
