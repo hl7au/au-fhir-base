@@ -2,4 +2,4 @@
 
 **Examples**
 
-[Administration of Infanrix Hexa vaccine](Immunization-immunization-example2.html)
+[Administration of a vaccine](Immunization-immunization-example2.html)
