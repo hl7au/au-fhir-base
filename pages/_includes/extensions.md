@@ -24,8 +24,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
 * [Section Author](StructureDefinition-section-author.html) - author for a composition section
-* [Information Recipient](Structuredefinition-information-recipient.html) - record of intended composition recipient
-* [Composition Author Role](Structuredefinition-composition-author-role.html) - composition practitioner role (R4 preadopt)
+* [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
+* [Composition Author Role](StructureDefinition-composition-author-role.html) - composition practitioner role (R4 preadopt)
 
 ## HL7 V2 Identity
 * [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
