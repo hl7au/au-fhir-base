@@ -1,8 +1,11 @@
 **AU Observation Age Profile**
+
 This profile defines the chronological age or age range of a patient.
 
 **Examples**
 
-[Patient ObservationAge1](Observation-ObservationAge1.html)
-
-[Patient ObservationAge2](Observation-ObservationAge2.html)
+* [4 years](Observation-observation-age-example-4years.html)
+* [6 months and over](Observation-observation-age-example-6monthsandover.html)
+* [6 months to 5 years](Observation-observation-age-example-6monthsto5years.html)
+* [12 to 18 months](Observation-observation-age-example-12-18months.html)
+* [12 months](Observation-observation-age-example-12months.html)

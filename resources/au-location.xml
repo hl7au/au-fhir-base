@@ -9,12 +9,14 @@
   <p>AU Location</p>
 </div></text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-location" />
-  <name value="AU Base Location" />
+  <version value="0.1" />
+  <name value="AUBaseLocation" />
   <title value="AU Base Location" />
   <status value="draft" />
-  <date value="2017-05-09T15:15:45.4042835+10:00" />
+  <date value="2018-08-03" />
   <publisher value="Health Level Seven Australia (Patient Administration)" />
-  <description value="Australian context location" />
+  <description value="Base profile for Australian context Location" />
+  <purpose value="Details of the location." />
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -22,23 +24,52 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
   <derivation value="constraint" />
   <differential>
-    <element id="Location.address">
-      <path value="Location.address" />
-      <type>
-        <code value="Address" />
-      </type>
-      <type>
-        <code value="Address" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address-international" />
-      </type>
-      <type>
-        <code value="Address" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address-nofixedaddress" />
-      </type>
-      <type>
-        <code value="Address" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
-      </type>
+    <element id="Location">
+      <path value="Location" />
+      <short value="Australian location " />
+    </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Location.identifier:nataSite">
+      <path value="Location.identifier" />
+      <sliceName value="nataSite" />
+      <short value="NATA Site Number" />
+      <definition value="Identifier of a location associated with accreditation by NATA" />
+    </element>
+    <element id="Location.identifier:nataSite.type">
+      <path value="Location.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="Location.identifier:nataSite.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Location.identifier.type.text" />
+      <short value="NATA Site Number" />
+      <min value="1" />
+      <fixedString value="NATA Site Number" />
+    </element>
+    <element id="Location.identifier:nataSite.system">
+      <path value="Location.identifier.system" />
+      <short value="Namespace for NATA Site Number" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/id/nata-site" />
+    </element>
+    <element id="Location.identifier:nataSite.value">
+      <path value="Location.identifier.value" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

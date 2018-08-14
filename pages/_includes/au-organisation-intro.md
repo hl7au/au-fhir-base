@@ -38,5 +38,5 @@ ASIC identifiers ABN (Australian Business Number), ACN (Australian Company Numbe
 
 **Examples**
 
-[Organisation with HPI-O and ANZSIC coded class/activity types](Organization-example0.html)
+[Organisation with HPI-O](Organization-example0.html)
 

@@ -3,17 +3,17 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/implementationguide.xsd">
   <id value="au-base"/>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
-  <version value="0.9.1"/>
+  <version value="0.9.2"/>
   <name value="Implementation Guide Template"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-07-08"/>
+  <date value="2018-08-14"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="http://confluence.hl7australia.com/display/PA/Patient+Administration+Work+Group"/>
+      <value value="http://confluence.hl7australia.com/display/PA/PatientAdministrationWorkGroup"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -21,7 +21,7 @@
     <name value="HL7 Australia Orders and Observations Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/OO/Orders+and+Observations+Work+Group"/>
+      <value value="https://confluence.hl7australia.com/display/OO/OrdersandObservationsWorkGroup"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -29,7 +29,7 @@
     <name value="HL7 Australia Medications Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/MED/Medications+Work+Group"/>
+      <value value="https://confluence.hl7australia.com/display/MED/MedicationsWorkGroup"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -171,12 +171,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/anzsic-restricted"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/au-patient"/>
       </sourceReference>
     </resource>
@@ -196,6 +190,12 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-organisation"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-location"/>
       </sourceReference>
     </resource>
     <resource>
@@ -339,18 +339,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/anzsic-restricted-class"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/anzsic-restricted-activity"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="CodeSystem/au-hl7v2-0203"/>
       </sourceReference>
     </resource>
@@ -400,6 +388,22 @@
         <reference value="Patient/example1"/>
       </sourceReference>
     </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Patient with no birth date, and is eligible for close the gap registration"/>
+      <description value="Shows a patient with the extension for indigenous Status and the extension for Close the Gap Registration, with no birth date."/>
+      <sourceReference>
+        <reference value="Patient/example2"/>
+      </sourceReference>
+	</resource>
+	<resource>
+      <example value="true"/>
+      <name value="Patient Birth time of day of birth"/>
+	  <description value="Shows a typical patient with birth date and birth time"/>
+      <sourceReference>
+        <reference value="Patient/example3"/>
+      </sourceReference>
+	</resource>
     <resource>
       <example value="true"/>
       <name value="Practitioner with HPI-I and Prescriber Number"/>
@@ -418,16 +422,16 @@
     </resource>
     <resource>
       <example value="true"/>
-      <name value="Organisation with HPI-O and ANZSIC coded class/activity types"/>
-      <description value="Shows a typical organisation using the identifer profile for HPI-O and organisation class/activity types using ANZSIC"/>
+      <name value="Organisation with HPI-O"/>
+      <description value="Shows a typical organisation using the identifer profile for HPI-O"/>
       <sourceReference>
         <reference value="Organization/example0"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="true"/>
-      <name value="HealthcareService with HPI-O, ANZSIC coded class/activity types, and eligibility"/>
-      <description value="Shows a typical healthcare service using the identifer profile for HPI-O, organisation class/activity types using ANZSIC, and eligibility information"/>
+      <name value="HealthcareService with HPI-O and eligibility"/>
+      <description value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
       <sourceReference>
         <reference value="HealthcareService/example0"/>
       </sourceReference>
@@ -527,23 +531,7 @@
         <reference value="Patient/addressAustralianNoFixedAddressexample4"/>
       </sourceReference>
     </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value"/>
-      <description value="Shows a typical Age of Patient"/>
-      <sourceReference>
-        <reference value="Observation/ObservationAge1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range"/>
-      <description value="Shows a typical Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/ObservationAge2"/>
-      </sourceReference>
-    </resource>
-    <resource>
+	  <resource>
       <example value="true"/>
       <name value="Composition with attester party"/>
       <description value="Shows a typical composition with a related party as attester"/>
@@ -551,7 +539,7 @@
         <reference value="Composition/example0"/>
       </sourceReference>
     </resource>
-    <resource>
+	  <resource>
       <example value="true"/>
       <name value="Related person as attester party"/>
       <description value="Shows a typical related person example"/>
@@ -601,6 +589,30 @@
     </resource>
     <resource>
       <example value="true"/>
+      <name value="Medication Statement"/>
+      <description value="Shows a typical informative example of a record of a patient's use of medication"/>
+      <sourceReference>
+        <reference value="MedicationStatement/MedicationStatementexample0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Statement"/>
+      <description value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
+      <sourceReference>
+        <reference value="MedicationStatement/MedicationStatementexample1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Statement"/>
+      <description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
+      <sourceReference>
+        <reference value="MedicationStatement/MedicationStatementexample2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
       <name value="composition-multiple-information-recipients-and-author-role"/>
       <description value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
       <sourceReference>
@@ -646,6 +658,12 @@
       </sourceReference>
     </resource>
     <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dosage"/>
+      </sourceReference>
+    </resource>        
+    <resource>
       <example value="true"/>
       <name value="Medication Example Generic Pack"/>
       <sourceReference>
@@ -657,6 +675,80 @@
       <name value="Medication Example Brand Pack"/>
       <sourceReference>
         <reference value="Medication/BrandedPack0"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Medication Example Brand Pack With Single Active Ingredient"/>      
+	  <sourceReference>
+        <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Medication Example with two active ingredients product"/>      
+      <sourceReference>
+        <reference value="Medication/TwoActiveIngredientsProduct0"/>
+      </sourceReference>
+     </resource>
+	 <resource>
+      <example value="true"/>
+      <name value="Medication Example with four or more active ingredients"/>      
+      <sourceReference>
+        <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
+      </sourceReference>
+     </resource>
+	 <resource>
+      <example value="true"/>   
+      <name value="Medication Example Brand Pack with Batch Details"/>     
+     <sourceReference>        
+        <reference value="Medication/BrandProductwithBatchDetails0"/>
+      </sourceReference>
+     </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 12 to 18 months"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-12-18months"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 12 months"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-12months"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 4 years"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-4years"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 6 months and over"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-6monthsandover"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 6 months to 5 years"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-6monthsto5years"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-bodysite"/>
       </sourceReference>
     </resource>
   </package>

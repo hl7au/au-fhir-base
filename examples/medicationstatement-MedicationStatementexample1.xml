@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="MedicationStatementexample1"/>
+
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-long-term">
+        <valueBoolean value="true"/>
+    </extension>
+
+    <status value="active"/>
+
+    <medicationCodeableConcept>
+        <coding>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                <valueCoding>
+                    <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                    <code value="BPD"/>
+                    <display value="Branded product with no strengths or form"/>
+                </valueCoding>
+            </extension>
+            <system value="http://snomed.info/sct"/>
+            <code value="3559011000036109"/>
+            <display value="Zoloft"/>
+        </coding>
+    </medicationCodeableConcept>
+    
+    <dateAsserted value = "2018-07-25"/>
+
+    <subject>
+        <reference value="Patient/example0"/>
+        <display value="Franklin"/>
+    </subject>
+
+    <taken value="y"/>   
+    
+    <note>
+        <text value="The patient is not sure when exactly started taking the medication but is certain it's been over a year"/>        
+    </note>
+
+</MedicationStatement>

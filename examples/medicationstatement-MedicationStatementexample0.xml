@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="MedicationStatementexample0"/>    
+   
+    <status value="active"/>
+    
+    <medicationCodeableConcept>
+        <coding>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+                <valueCoding>
+                    <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                    <code value="BPDSF"/>
+                    <display value="Branded product with strengths and form"/>
+                </valueCoding>
+            </extension>
+            <system value="http://snomed.info/sct"/>
+            <code value="6166011000036106"/>
+            <display value="Roferon-A 9 million units/0.5 mL injection solution, 0.5 mL syringe"/>
+        </coding>
+    </medicationCodeableConcept>
+    
+    <effectivePeriod>        
+        <start value="2018-06-25"/> 
+    </effectivePeriod>        
+    
+    <dateAsserted value = "2018-07-25"/>
+    
+    <informationSource>
+        <reference value="Practitioner/example0"/>
+        <display value="Doctor Mayo"/>
+    </informationSource>
+    
+    <subject>
+        <reference value="Patient/example0"/>
+        <display value="Franklin"/>
+    </subject>
+    
+    <taken value="y"/>   
+     
+    <dosage>        
+        
+        <timing>
+            <repeat>
+                <frequency value="3"/>
+                <period value="1"/>
+                <periodUnit value="wk"/>
+                <dayOfWeek value="mon"/>
+                <dayOfWeek value="wed"/>
+                <dayOfWeek value="sat"/>
+            </repeat>
+        </timing>             
+       
+    </dosage>
+</MedicationStatement>

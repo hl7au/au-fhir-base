@@ -21,6 +21,28 @@
       <path value="MedicationStatement" />
       <short value="Medication Summary Statement" />
     </element>
+    <element id="MedicationStatement.extension">
+      <path value="MedicationStatement.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationStatement.extension:longTerm">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="longTerm" />
+      <short value="Medication Long Term" />
+      <definition value="Medication long-term indicator" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term" />
+      </type>
+    </element>
     <element id="MedicationStatement.medication[x]">
       <path value="MedicationStatement.medication[x]" />
       <slicing>
@@ -32,7 +54,8 @@
       </slicing>
 	  <min value="1" />
 	  <max value="1" />
-	  <type>
+      <short value="Medication Detail" />
+      <type>
         <code value="CodeableConcept" />
       </type>
       <type>
@@ -43,11 +66,12 @@
     <element id="MedicationStatement.medication[x]:medicationCoded">
       <path value="MedicationStatement.medication[x]" />
       <sliceName value="medicationCoded" />
+      <short value="Coded Medication" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
-	<element id="MedicationStatement.medication[x]:medicationCoded.coding">
+    <element id="MedicationStatement.medication[x]:medicationCoded.coding">
       <path value="MedicationStatement.medication[x].coding" />
       <slicing>
         <discriminator>
@@ -60,8 +84,9 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Medication Codes" />
     </element>
-	<element id="MedicationStatement.medication[x]:medicationCoded.coding:pbs">
+    <element id="MedicationStatement.medication[x]:medicationCoded.coding:pbs">
       <path value="MedicationStatement.medication[x].coding" />
       <sliceName value="pbs" />
       <short value="Medication PBS coding (ignore item context)" />
@@ -386,6 +411,7 @@
     <element id="MedicationStatement.medication[x]:medicationReference">
       <path value="MedicationStatement.medication[x]" />
       <sliceName value="medicationReference" />
+      <short value="Medication Reference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
@@ -393,6 +419,7 @@
     </element>
     <element id="MedicationStatement.subject">
       <path value="MedicationStatement.subject" />
+      <short value="AU Patient | Patient | Group" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />

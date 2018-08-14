@@ -41,7 +41,7 @@
       <path value="Extension.url" />
       <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
     </element>
-    <element id="Extension.valueCoding:valueCoding">
+    <element id="Extension.value[x]:valueCoding">
       <path value="Extension.valueCoding" />
       <sliceName value="valueCoding" />
       <short value="IHI Record Status Code" />
@@ -53,7 +53,9 @@
       <binding>
         <strength value="required" />
         <description value="IHI Record Status" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1" />
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1" />
+        </valueSetReference>
       </binding>
     </element>
   </differential>
