@@ -1,3 +1,3 @@
 Extension: Dispense Number
 
-1. Required Dispense Number (as Positive Integer)
+1. Required Dispense Number (as Integer)
