@@ -9,4 +9,4 @@ other uses such as unstructured addresses.
 
 [Level 1, 300 George St, Brisbane, QLD 4000](Patient-address-example1.html)
 
-[No fixed address in Melbourne, VIC 3000](Patient-address-example2.html)
+[No fixed address in Melbourne, VIC](Patient-address-example2.html)
