@@ -222,6 +222,12 @@
         <reference value="StructureDefinition/au-healthcareservice"/>
       </sourceReference>
     </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-condition"/>
+      </sourceReference>
+    </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
@@ -382,6 +388,22 @@
         <reference value="Patient/example1"/>
       </sourceReference>
     </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Patient with no birth date, and is eligible for close the gap registration"/>
+      <description value="Shows a patient with the extension for indigenous Status and the extension for Close the Gap Registration, with no birth date."/>
+      <sourceReference>
+        <reference value="Patient/example2"/>
+      </sourceReference>
+	</resource>
+	<resource>
+      <example value="true"/>
+      <name value="Patient Birth time of day of birth"/>
+	  <description value="Shows a typical patient with birth date and birth time"/>
+      <sourceReference>
+        <reference value="Patient/example3"/>
+      </sourceReference>
+	</resource>
     <resource>
       <example value="true"/>
       <name value="Practitioner with HPI-I and Prescriber Number"/>
@@ -567,6 +589,30 @@
     </resource>
     <resource>
       <example value="true"/>
+      <name value="Medication Statement"/>
+      <description value="Shows a typical informative example of a record of a patient's use of medication"/>
+      <sourceReference>
+        <reference value="MedicationStatement/MedicationStatementexample0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Statement"/>
+      <description value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
+      <sourceReference>
+        <reference value="MedicationStatement/MedicationStatementexample1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Statement"/>
+      <description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
+      <sourceReference>
+        <reference value="MedicationStatement/MedicationStatementexample2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
       <name value="composition-multiple-information-recipients-and-author-role"/>
       <description value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
       <sourceReference>
@@ -611,6 +657,12 @@
         <reference value="StructureDefinition/au-pbs-pharma-manufacturer"/>
       </sourceReference>
     </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dosage"/>
+      </sourceReference>
+    </resource>        
     <resource>
       <example value="true"/>
       <name value="Medication Example Generic Pack"/>
@@ -691,6 +743,12 @@
       <description value="Shows an example Age Range of Patient"/>
       <sourceReference>
         <reference value="Observation/observation-age-example-6monthsto5years"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-bodysite"/>
       </sourceReference>
     </resource>
   </package>
