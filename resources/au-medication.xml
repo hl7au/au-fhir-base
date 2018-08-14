@@ -27,6 +27,28 @@
       <short value="Australian context Medication information" />
       <definition value="Medication content use in an Australian context.  Includes concepts that are specific to Australian usage." />
     </element>
+    <element id="Medication.extension">
+      <path value="Medication.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.extension:pbsManufacturerSupplier">
+      <path value="Medication.extension" />
+      <sliceName value="pbsManufacturerSupplier" />
+      <short value="PBS Manufacturer Supplier" />
+      <definition value="This is a reference to the entity that is responsible for the supply of the medicine in context" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/pbs-manufacturer-supplier" />
+      </type>
+    </element>
     <element id="Medication.code">
       <path value="Medication.code" />
       <short value="Coding for the Medicine" />
@@ -370,13 +392,8 @@
     </element>
     <element id="Medication.manufacturer">
       <path value="Medication.manufacturer" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pbs-pharma-manufacturer" />
-      </type>
-    </element>
-    <element id="Medication.form">
-      <path value="Medication.form" />      
+      <short value="Physical Product Manufacturer Organisation" />
+      <definition value="Manufacturer of the actual physical medicine product" />
     </element>
     <element id="Medication.form.coding">
       <path value="Medication.form.coding" />
@@ -387,16 +404,16 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <max value="1"/>
+      <max value="1" />
     </element>
     <element id="Medication.form.coding:snomedForm">
       <path value="Medication.form.coding" />
       <sliceName value="snomedForm" />
-      <short value="Medication Form (SNOMED CT)"/>
-      <max value="1"/>
+      <short value="Medication Form (SNOMED CT)" />
+      <max value="1" />
       <binding>
-        <strength value="required"/>
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1"/>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1" />
       </binding>
     </element>
     <element id="Medication.ingredient">
@@ -413,8 +430,6 @@
         <rules value="open" />
       </slicing>
       <short value="AU Ingredient Product" />
-      <min value="1"/>
-      <max value="1"/>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
@@ -451,19 +466,14 @@
       <path value="Medication.ingredient.amount" />
       <short value="Strength of Ingredient" />
     </element>
-    <element id="Medication.package">
-      <path value="Medication.package" />      
-    </element>
     <element id="Medication.package.content">
-      <path value="Medication.package.content" />  
-      <min value="0"/>
+      <path value="Medication.package.content" />
       <max value="1" />
     </element>
     <element id="Medication.package.batch">
-      <path value="Medication.package.batch" />  
-      <min value="0"/>
+      <path value="Medication.package.batch" />
       <max value="1" />
-    </element>    
+    </element>
     <element id="Medication.package.batch.extension">
       <path value="Medication.package.batch.extension" />
       <slicing>
@@ -479,13 +489,10 @@
       <sliceName value="MedicationBatchSerialNumber" />
       <short value="Medication Batch Serial Number" />
       <definition value="Identifier assigned to a drug at the time of manufacture." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-batch-serialnumber" />
       </type>
     </element>
-    
   </differential>
 </StructureDefinition>
