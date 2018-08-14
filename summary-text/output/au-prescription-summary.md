@@ -24,8 +24,8 @@ This profile contains the following variations from [MedicationRequest](http://h
    *  AMT Medicinal Product slice
       *  medicationType extension
    *  MIMS Package slice
-1.  <span style='color:green'>medication[x]</span>  slice
-1. exactly one <span style='color:green'>subject</span> 
+1.  <span style='color:green'>medication[x]</span> as AU Base Medication slice
+1. exactly one <span style='color:green'>subject</span> as AU Base Patient | Patient | Group
 1. at most one <span style='color:green'>authoredOn</span> Created date
 1. at most one <span style='color:green'>dispenseRequest</span> Requested dispensing
 1. at most one <span style='color:green'>substitution</span> Brand substitution details

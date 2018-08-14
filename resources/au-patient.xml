@@ -513,9 +513,6 @@
       <short value="Commonwealth Seniors Health Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-      <patternCodeableConcept>
-        <text value="Commonwealth Seniors Health Card" />
-      </patternCodeableConcept>
     </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding">
       <path value="Patient.identifier.type.coding" />
@@ -771,7 +768,7 @@
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
-      <short value="AU Practitioner | AU Organisation" />
+      <short value="AU Base Practitioner | AU Base Organisation" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
@@ -783,7 +780,7 @@
     </element>
     <element id="Patient.managingOrganization">
       <path value="Patient.managingOrganization" />
-      <short value="AU Organisation" />
+      <short value="AU Base Organisation" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />

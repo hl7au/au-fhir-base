@@ -1,4 +1,4 @@
-Extension: Section Author
+This profile contains the following variations from [Extension](http://hl7.org/fhir/STU3/Extension):
 
-1. Required Author (as [Practitioner](http://hl7.org/fhir/STU3/Practitioner.html) or [Device](http://hl7.org/fhir/STU3/Device.html) or [Patient](http://hl7.org/fhir/STU3/Patient.html) or [RelatedPerson](http://hl7.org/fhir/STU3/relatedperson.html) or [PractitionerRole](http://hl7.org/fhir/STU3/PractitionerRole.html) or [Organization](http://hl7.org/fhir/STU3/Organization.html))
-
+1. exactly one <span style='color:green'>url</span> 
+1. exactly one <span style='color:green'>valueReference</span>  slice

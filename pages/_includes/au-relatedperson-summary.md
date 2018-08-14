@@ -11,5 +11,5 @@ This profile contains the following variations from [RelatedPerson](http://hl7.o
    * at most one Commonwealth Seniors Health Card Identifier slice
    * zero or more Medical Record Number slice
    * zero or more Private Health Insurance Member Number slice
-1. exactly one <span style='color:green'>patient</span> 
+1. exactly one <span style='color:green'>patient</span> as AU Base Patient
 1. at most one <span style='color:green'>relationship</span> 

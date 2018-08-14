@@ -20,6 +20,9 @@ This profile contains the following variations from [Medication](http://hl7.org/
       * at most one medicationType extension
    * at most one MIMS Package slice
 1. at most one <span style='color:green'>manufacturer</span> 
+1. at most one <span style='color:green'>form</span> 
+1. at most one <span style='color:green'>form.coding</span>  sliced
+   * at most one Medication Form (SNOMED CT) slice
 1. zero or more <span style='color:green'>ingredient</span> 
 1. exactly one <span style='color:green'>ingredient.item[x]</span> AU Ingredient Product sliced
    *  Coded Ingredient Product slice

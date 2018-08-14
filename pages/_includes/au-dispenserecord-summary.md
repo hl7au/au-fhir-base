@@ -24,5 +24,5 @@ This profile contains the following variations from [MedicationDispense](http://
    *  AMT Medicinal Product slice
       *  medicationType extension
    *  MIMS Package slice
-1.  <span style='color:green'>medication[x]</span>  slice
-1. at most one <span style='color:green'>subject</span> 
+1.  <span style='color:green'>medication[x]</span> as AU Base Medication slice
+1. at most one <span style='color:green'>subject</span> as AU Base Patient | Patient | Group

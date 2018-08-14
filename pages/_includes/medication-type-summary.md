@@ -1,3 +1,4 @@
-Medication Type Extension
+This profile contains the following variations from [Extension](http://hl7.org/fhir/STU3/Extension):
 
-1. Required Medication Type (as Coding)
+1. exactly one <span style='color:green'>url</span> 
+    slice

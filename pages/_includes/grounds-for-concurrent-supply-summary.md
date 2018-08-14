@@ -1,3 +1,4 @@
-Extension: Grounds for Concurrent Supply
+This profile contains the following variations from [Extension](http://hl7.org/fhir/STU3/Extension):
 
-1. Required Grounds for Concurrent Supply (as Coding)
+1. exactly one <span style='color:green'>url</span> 
+    slice
