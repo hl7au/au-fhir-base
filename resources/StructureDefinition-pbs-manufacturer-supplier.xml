@@ -36,12 +36,37 @@
       <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/pbs-manufacturer-supplier" />
     </element>
     <element id="Extension.value[x]:valueReference">
-      <path value="Extension.valueReference" />
+      <path value="Extension.value[x]" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/Organization" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pbs-pharma-manufacturer" />
+      </type>
+    </element>
+    <element id="Extension.value[x]:valueReference.identifier">
+      <path value="Extension.value[x].identifier" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x]:valueReference.identifier.system">
+      <path value="Extension.value[x].identifier.system" />
+      <short value="PBS Manufacturer Supplier Identifier URI (placeholder)" />
+      <min value="1" />
+      <fixedUri value="http://pbs.gov.au/identifier/manufacturer" />
+    </element>
+    <element id="Extension.value[x]:valueReference.identifier.value">
+      <path value="Extension.value[x].identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x]:valueReference.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.value[x].display" />
+      <short value="Manufacturer Supplier Name of Organisation" />
     </element>
   </differential>
 </StructureDefinition>
