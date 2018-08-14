@@ -62,6 +62,12 @@
     </element>
     <element id="Composition.attester">
       <path value="Composition.attester" />
+	  <constraint>
+        <key value="inv-com-0" />
+        <severity value="error" />
+        <human value="Related party or party shall exist but not both" />
+        <expression value="attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists() xor attester.party.exists()" />
+    </constraint>
     </element>
     <element id="Composition.attester.extension">
       <path value="Composition.attester.extension" />

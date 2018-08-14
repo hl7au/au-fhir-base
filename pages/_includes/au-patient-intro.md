@@ -26,3 +26,7 @@ Extensions used in this profile:
 [Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
 
 [Patient with IHI and DVA Number](Patient-example1.html)
+
+[Patient with no birth date, and eligible for close the gap registration](Patient-example2.html)
+
+[Patient with BirthTime](Patient-example3.html)
