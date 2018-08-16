@@ -2,4 +2,4 @@
 
 **Examples**
 
-[Administration of a vaccine](Immunization-immunization-example2.html)
+[Administration of a vaccine with administering provider and protocol](Immunization-immunization-example2.html)
