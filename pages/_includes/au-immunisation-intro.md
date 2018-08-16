@@ -2,4 +2,4 @@
 
 **Examples**
 
-[Administration of a vaccine (record compliant with AIR)](Immunization-immunization-example1.html)
+[Administration of a vaccine - record compliant with Australian Immunisation Register (AIR)](Immunization-immunization-example1.html)
