@@ -9,6 +9,6 @@ These definitions represent common data held in the PractitionerRole.identifier 
 
 **Examples**
 
-[Practitioner Role with Provider Number and ANZSCO coded role](PractitionerRole-example0.html)
+[Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
 
