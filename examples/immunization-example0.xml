@@ -1,0 +1,44 @@
+<Immunization xmlns="http://hl7.org/fhir">
+	<id value="immunization-example0"/>
+	<status value="completed"/>
+	<notGiven value="true"/>
+	<vaccineCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="830851000168105"/>
+			<display value="varicella-zoster live vaccine"/>
+		</coding>
+	</vaccineCode>
+	<patient>
+		<reference value="Patient/example1"/>
+		<display value="Harry DAN"/>
+	</patient>
+	<date value="2017-08-15"/>
+	<primarySource value="true"/>
+	<practitioner>
+		<role>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0443"/>
+				<code value="AP"/>
+				<display value="Administering Provider"/>
+			</coding>
+			<text value="Administering Provider"/>
+		</role>
+		<actor>
+			<reference value="Practitioner/example0"/> 
+			<display value="Dr Helen Mayo"/>
+		</actor>
+	</practitioner>
+	<note>
+		<text value="Patient refused administration of Zostavax"/>
+	</note>
+	<explanation>
+		<reasonNotGiven>
+			<coding>
+				<system value="http://hl7.org/fhir/v3/ActReason"/>
+				<code value="PATOBJ"/>
+				<display value="patient objection"/>
+			</coding>
+		</reasonNotGiven>
+	</explanation>
+</Immunization>
