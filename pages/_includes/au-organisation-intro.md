@@ -1,4 +1,4 @@
-**AU Base Organization Profile** *[FMM Level [1](guidance.html)]*
+**  AU Base Organization Profile** *[FMM Level [1](guidance.html)]*
 
 This profile defines an organisation administration details structure that includes core localisation concepts.
 
@@ -39,4 +39,6 @@ ASIC identifiers ABN (Australian Business Number), ACN (Australian Company Numbe
 **Examples**
 
 [Organisation with HPI-O](Organization-example0.html)
+
+[Albion Hospital with Australian Business Number](Organization-example1.html)
 
