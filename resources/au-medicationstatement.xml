@@ -52,9 +52,9 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-	  <min value="1" />
-	  <max value="1" />
       <short value="Medication Detail" />
+    <min value="1" />
+	  <max value="1" />      
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -441,15 +441,15 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
-      </slicing>
+      </slicing>      
     </element>
     <element id="MedicationStatement.reasonNotTaken.coding:snomedReasonNotTaken">
       <path value="MedicationStatement.reasonNotTaken.coding" />
       <sliceName value="snomedReasonNotTaken" />
-      <short value="Medication Reason Not Taken (SNOMED CT)" />
+      <short value="Reason Not Taken (SNOMED CT)" />
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -466,15 +466,15 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
     </element>
     <element id="MedicationStatement.reasonCode.coding:snomedReasonTaken">
       <path value="MedicationStatement.reasonCode.coding" />
-      <sliceName value="snomedReasonTaken" />
-      <short value="Medication Reason Taken (SNOMED CT)" />
+      <sliceName value="snomedReasonCode" />
+      <short value="Reason For Medication (SNOMED CT)" />
       <max value="1" />
       <binding>
         <strength value="required" />
