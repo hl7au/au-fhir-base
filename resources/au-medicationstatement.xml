@@ -433,5 +433,60 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
     </element>
+    <element id="MedicationStatement.reasonNotTaken">
+      <path value="MedicationStatement.reasonNotTaken" />      
+    </element>
+    <element id="MedicationStatement.reasonNotTaken.coding">
+      <path value="MedicationStatement.reasonNotTaken.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationStatement.reasonNotTaken.coding:snomedReasonNotTaken">
+      <path value="MedicationStatement.reasonNotTaken.coding" />
+      <sliceName value="snomedReasonNotTaken" />
+      <short value="Medication Reason Not Taken (SNOMED CT)" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-not-taken-1" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="MedicationStatement.reasonCode">
+      <path value="MedicationStatement.reasonCode" />      
+    </element>
+    <element id="MedicationStatement.reasonCode.coding">
+      <path value="MedicationStatement.reasonCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationStatement.reasonCode.coding:snomedReasonTaken">
+      <path value="MedicationStatement.reasonCode.coding" />
+      <sliceName value="snomedReasonTaken" />
+      <short value="Medication Reason Taken (SNOMED CT)" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage" />
+      <type>
+        <code value="Dosage" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
+      </type>
+    </element>    
   </differential>
 </StructureDefinition>
