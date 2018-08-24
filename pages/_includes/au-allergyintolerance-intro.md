@@ -6,4 +6,4 @@ This profile defines an allergy intolerance information structure including core
 
 [Ibuprofen allergy, with a manifestation of urticaria](AllergyIntolerance-allergyintolerance-example0.html)
 
-[Self-reported allergy to eggs, with manifestations of hives, nausea and vomiting](AllergyIntolerance-allergyintolerance-example1.html)
+[Self-reported allergy to eggs](AllergyIntolerance-allergyintolerance-example1.html)
