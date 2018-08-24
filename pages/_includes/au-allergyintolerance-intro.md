@@ -1,4 +1,4 @@
-Base Australian Allergy Intolerance Profile
+AU Base AllergyIntolerance
 
 This profile defines an allergy intolerance information structure including core localisation concepts for Australia.
 

@@ -11,7 +11,14 @@
   <status value="draft"/>
   <date value="2018-08-20"/>
   <publisher value="Health Level Seven Australia"/>
-  <description value="Base profile for Australian context Allergy Intolerance"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Base profile for Australian context AllergyIntolerance"/>
   <purpose value="Details of the allergy intolerance."/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
@@ -22,10 +29,11 @@
   <differential>
     <element id="AllergyIntolerance">
       <path value="AllergyIntolerance"/>
-      <short value="Australian context Allergy Intolerance information"/>
+      <short value="Australian context AllergyIntolerance information"/>
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code"/>
+      <min value="1"/>
     </element>
     <element id="AllergyIntolerance.code.coding">
       <path value="AllergyIntolerance.code.coding"/>
@@ -38,10 +46,10 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="AllergyIntolerance.code.coding:indicatorHypersensitivityIntoleranceToSubstance">
+    <element id="AllergyIntolerance.code.coding:snomedAllergyCode">
       <path value="AllergyIntolerance.code.coding"/>
-      <sliceName value="indicatorHypersensitivityIntoleranceToSubstance"/>
-      <short value="Indicator Hypersensitivity Intolerance to Substance"/>
+      <sliceName value="snomedAllergyCode"/>
+      <short value="Indicator of Hypersensitivity or Intolerance to Substance (SNOMED CT)"/>
       <max value="1"/>
       <binding>
         <strength value="required"/>
@@ -50,10 +58,6 @@
     </element>
     <element id="AllergyIntolerance.patient">
       <path value="AllergyIntolerance.patient"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </type>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
@@ -106,13 +110,14 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="AllergyIntolerance.reaction.substance.coding:adverseReactionAgent">
+    <element id="AllergyIntolerance.reaction.substance.coding:snomedSubstance">
       <path value="AllergyIntolerance.reaction.substance.coding"/>
-      <sliceName value="adverseReactionAgent"/>
-      <short value="Adverse Reaction Agent"/>
+      <sliceName value="snomedSubstance"/>
+      <short value="Adverse Reaction Agent (SNOMED CT)"/>
+      <max value="1"/>
       <binding>
         <strength value="required"/>
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 "/>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1"/>
       </binding>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
@@ -129,10 +134,10 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="AllergyIntolerance.reaction.manifestation.coding:clinicalFinding">
+    <element id="AllergyIntolerance.reaction.manifestation.coding:snomedManifestation">
       <path value="AllergyIntolerance.reaction.manifestation.coding"/>
-      <sliceName value="clinicalFinding"/>
-      <short value="Clinical Finding"/>
+      <sliceName value="snomedManifestation"/>
+      <short value="Clinical Finding (SNOMED CT)"/>
       <binding>
         <strength value="required"/>
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
