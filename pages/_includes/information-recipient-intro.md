@@ -4,4 +4,4 @@ This extension applies to the Composition resource and allows recording of inten
 
 **Examples**
 
-[Composition with multiple information recipients and one author role](composition-multiple-information-recipients-and-author-role.html)
+[Composition with multiple information recipients and one author role](Composition-multiple-information-recipients-and-author-role.html)
