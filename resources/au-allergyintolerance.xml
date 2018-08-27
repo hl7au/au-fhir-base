@@ -19,7 +19,6 @@
     </telecom>
   </contact>
   <description value="Base profile for Australian context AllergyIntolerance"/>
-  <purpose value="Details of the allergy intolerance."/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -33,7 +32,6 @@
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code"/>
-      <min value="1"/>
     </element>
     <element id="AllergyIntolerance.code.coding">
       <path value="AllergyIntolerance.code.coding"/>
@@ -49,7 +47,7 @@
     <element id="AllergyIntolerance.code.coding:snomedAllergyCode">
       <path value="AllergyIntolerance.code.coding"/>
       <sliceName value="snomedAllergyCode"/>
-      <short value="Indicator of Hypersensitivity or Intolerance to Substance (SNOMED CT)"/>
+      <short value="Allergy or Intolerance to Substance (SNOMED CT)"/>
       <max value="1"/>
       <binding>
         <strength value="required"/>
@@ -113,7 +111,7 @@
     <element id="AllergyIntolerance.reaction.substance.coding:snomedSubstance">
       <path value="AllergyIntolerance.reaction.substance.coding"/>
       <sliceName value="snomedSubstance"/>
-      <short value="Adverse Reaction Agent (SNOMED CT)"/>
+      <short value="Substance or Agent (SNOMED CT)"/>
       <max value="1"/>
       <binding>
         <strength value="required"/>
