@@ -63,18 +63,25 @@
       <short value="Provider Number Identifier Type" />
       <definition value="Identifier type of provider number for this practitioner role" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="PractitionerRole.identifier:providerNumber.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <short value="Provider Number Identifier Type Code" />
       <definition value="Provider number identifier type coding" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="PractitionerRole.identifier:providerNumber.type.coding.system">
       <path value="PractitionerRole.identifier.type.coding.system" />
@@ -124,16 +131,23 @@
       <short value="National Provider at Organisation Identifier Type" />
       <definition value="Identifier type provider at organisation identifier for this practitioner role" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding">
-      <path value="PractitionerRole.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding">
+      <path value="PractitionerRole.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding.system">
       <path value="PractitionerRole.identifier.type.coding.system" />
@@ -229,16 +243,23 @@
     <element id="PractitionerRole.identifier:employeeNumber.type">
       <path value="PractitionerRole.identifier.type" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:employeeNumber.type.coding">
-      <path value="PractitionerRole.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="PractitionerRole.identifier:employeeNumber.type.coding">
+      <path value="PractitionerRole.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.type.coding.system">
       <path value="PractitionerRole.identifier.type.coding.system" />
