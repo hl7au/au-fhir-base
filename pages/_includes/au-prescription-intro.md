@@ -2,5 +2,5 @@
 
 **Examples**
 
-[Active order with dispense request and grounds for concurrent supply](MedicationRequest-medicationrequest-example1.html)
+[Medication order with dispense request and grounds for concurrent supply](MedicationRequest-medicationrequest-example1.html)
 
