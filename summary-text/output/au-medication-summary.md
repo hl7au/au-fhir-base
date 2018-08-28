@@ -1,5 +1,6 @@
 This profile contains the following variations from [Medication](http://hl7.org/fhir/STU3/Medication):
 
+1. at most one PBS Manufacturer Supplier extension
 1. at most one <span style='color:green'>code</span> Coding for the Medicine
 1. zero or more <span style='color:green'>code.coding</span>  sliced
    * zero or more Medication PBS coding (ignore item context) slice
@@ -19,8 +20,7 @@ This profile contains the following variations from [Medication](http://hl7.org/
    * at most one AMT Medicinal Product slice
       * at most one medicationType extension
    * at most one MIMS Package slice
-1. at most one <span style='color:green'>manufacturer</span> 
-1. at most one <span style='color:green'>form</span> 
+1. at most one <span style='color:green'>manufacturer</span> Physical Product Manufacturer Organisation
 1. at most one <span style='color:green'>form.coding</span>  sliced
    * at most one Medication Form (SNOMED CT) slice
 1. zero or more <span style='color:green'>ingredient</span> 
@@ -28,5 +28,4 @@ This profile contains the following variations from [Medication](http://hl7.org/
    *  Coded Ingredient Product slice
 1.  <span style='color:green'>ingredient.item[x].coding</span>  sliced
    *  AMT Medicinal Product Ingredient slice
-1. at most one <span style='color:green'>package</span> 
       * at most one Medication Batch Serial Number extension
