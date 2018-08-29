@@ -90,17 +90,24 @@
       <short value="Coded identifier type for IHI" />
       <definition value="Coded identifier type for IHI" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
       <definition value="ihi" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
@@ -168,17 +175,24 @@
       <path value="RelatedPerson.identifier.type" />
       <definition value="Medicare Number assigned  to a person" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
       <definition value="Medicare Number assigned  to a person" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
@@ -274,6 +288,19 @@
       <path value="RelatedPerson.identifier.type" />
       <definition value="DVA colour identifer type" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="RelatedPerson.identifier:dvaNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
@@ -284,12 +311,6 @@
         <human value="DVA colour coding must be DVL, DVW, DVO or DVG" />
         <expression value="code='DVL' or code='DVW' or code='DVO' or code='DVG'" />
       </constraint>
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="RelatedPerson.identifier:dvaNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -330,6 +351,19 @@
       <short value="Health Care Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="RelatedPerson.identifier:healthcareCard.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
@@ -390,16 +424,23 @@
       <short value="Pensioner Concession Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-    </element>
-    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding">
-      <path value="RelatedPerson.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding">
+      <path value="RelatedPerson.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="RelatedPerson.identifier:pensionerConcessionCard.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
@@ -453,16 +494,23 @@
       <patternCodeableConcept>
         <text value="Commonwealth Seniors Health Card" />
       </patternCodeableConcept>
-    </element>
-    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding">
-      <path value="RelatedPerson.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding">
+      <path value="RelatedPerson.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
@@ -510,17 +558,24 @@
     <element id="RelatedPerson.identifier:medicalRecordNumber.type">
       <path value="RelatedPerson.identifier.type" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
@@ -564,17 +619,24 @@
     <element id="RelatedPerson.identifier:insurerNumber.type">
       <path value="RelatedPerson.identifier.type" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.type.coding">
       <path value="RelatedPerson.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
@@ -612,21 +674,21 @@
     </element>
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
-	  <short value="AU Base Patient" />
+      <short value="AU Base Patient" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </type>
     </element>
-	<element id="RelatedPerson.relationship">
+    <element id="RelatedPerson.relationship">
       <path value="RelatedPerson.relationship" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PatientRelationshipType" />
         </extension>
         <strength value="extensible" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1"/>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1" />
       </binding>
     </element>
-      </differential>
+  </differential>
 </StructureDefinition>

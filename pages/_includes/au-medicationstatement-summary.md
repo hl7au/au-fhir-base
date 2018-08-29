@@ -23,3 +23,10 @@ This profile contains the following variations from [MedicationStatement](http:/
    *  MIMS Package slice
 1.  <span style='color:green'>medication[x]</span> as Medication Reference slice
 1. exactly one <span style='color:green'>subject</span> as AU Patient | Patient | Group
+1. zero or more <span style='color:green'>reasonNotTaken</span> 
+1. zero or more <span style='color:green'>reasonNotTaken.coding</span>  sliced
+   * at most one Reason Not Taken (SNOMED CT) slice
+1. zero or more <span style='color:green'>reasonCode</span> 
+1. zero or more <span style='color:green'>reasonCode.coding</span>  sliced
+   * at most one Reason For Medication (SNOMED CT) slice
+1. zero or more <span style='color:green'>dosage</span> 

@@ -31,12 +31,12 @@
     <element id="Patient">
       <path value="Patient" />
       <short value="Australian Patient" />
-      <definition value="Patient in Australian context." />	
-	  <constraint>
+      <definition value="Patient in Australian context." />
+      <constraint>
         <key value="inv-pat-0" />
         <severity value="error" />
         <human value="If there is a birth time its date shall be the birth date" />
-        <expression value="birthDate.extension.where(url='http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()"/>
+        <expression value="birthDate.extension.where(url='http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
       </constraint>
     </element>
     <element id="Patient.extension">
@@ -153,17 +153,24 @@
       <short value="Coded identifier type for IHI" />
       <definition value="Coded identifier type for IHI" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Types" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.identifier:ihiNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <definition value="ihi" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Patient.identifier:ihiNumber.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -231,17 +238,24 @@
       <path value="Patient.identifier.type" />
       <definition value="Medicare Number assigned  to a patient" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Types" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.identifier:medicareNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <definition value="Medicare Number assigned  to a patient" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Patient.identifier:medicareNumber.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -337,6 +351,19 @@
       <path value="Patient.identifier.type" />
       <definition value="DVA colour identifer type" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Types" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.identifier:dvaNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
@@ -347,12 +374,6 @@
         <human value="DVA colour coding must be DVL, DVW, DVO or DVG" />
         <expression value="code='DVL' or code='DVW' or code='DVO' or code='DVG'" />
       </constraint>
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Patient.identifier:dvaNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -393,16 +414,23 @@
       <short value="Health Care Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-    </element>
-    <element id="Patient.identifier:healthcareCard.type.coding">
-      <path value="Patient.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Types" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:healthcareCard.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="Patient.identifier:healthcareCard.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -453,16 +481,23 @@
       <short value="Pensioner Concession Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-    </element>
-    <element id="Patient.identifier:pensionerConcessionCard.type.coding">
-      <path value="Patient.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Types" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:pensionerConcessionCard.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="Patient.identifier:pensionerConcessionCard.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -513,16 +548,23 @@
       <short value="Commonwealth Seniors Health Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
-    </element>
-    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding">
-      <path value="Patient.identifier.type.coding" />
-      <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
         <strength value="required" />
+        <description value="Local Identifier Types" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <max value="1" />
     </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -570,17 +612,24 @@
     <element id="Patient.identifier:medicalRecordNumber.type">
       <path value="Patient.identifier.type" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Types" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.identifier:medicalRecordNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Patient.identifier:medicalRecordNumber.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -624,17 +673,24 @@
     <element id="Patient.identifier:insurerNumber.type">
       <path value="Patient.identifier.type" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Local Identifier Types" />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.identifier:insurerNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Patient.identifier:insurerNumber.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -673,8 +729,8 @@
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
       <short value="Date of birth extended for time and accuracy indicator" />
-      <requirements value="Age of the individual drives many clinical processes. May include accuracy indicator and specific birth time." />	   
-	</element>
+      <requirements value="Age of the individual drives many clinical processes. May include accuracy indicator and specific birth time." />
+    </element>
     <element id="Patient.birthDate.extension">
       <path value="Patient.birthDate.extension" />
       <slicing>
