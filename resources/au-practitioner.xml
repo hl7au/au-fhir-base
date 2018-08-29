@@ -313,5 +313,25 @@
       <min value="1" />
       <fixedString value="AHPRA" />
     </element>
+    <element id="Practitioner.communication">
+      <path value="Practitioner.communication" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
+          <valueReference>
+            <reference value="http://hl7.org/fhir/ValueSet/all-languages" />
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Language" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-1" />
+        </valueSetReference>
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
