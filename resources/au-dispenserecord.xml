@@ -43,6 +43,19 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply" />
       </type>
     </element>
+    <element id="MedicationDispense.extension:MyExtension">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="MyExtension" />
+      <short value="Number of this Dispense" />
+      <definition value="This extension applies to the MedicationDispense resource and the value indicates the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats. " />
+      <comment value="It has the value 1 when there are no repeats. The value increments by one each time a dispense act is successfully completed. " />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
+      </type>
+    </element>
     <element id="MedicationDispense.identifier">
       <path value="MedicationDispense.identifier" />
       <slicing>
@@ -203,8 +216,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-	  <min value="1" />
-	  <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -580,6 +591,85 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
+    </element>
+    <element id="MedicationDispense.authorizingPrescription">
+      <path value="MedicationDispense.authorizingPrescription" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
+      </type>
+    </element>
+    <element id="MedicationDispense.receiver">
+      <path value="MedicationDispense.receiver" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+    </element>
+    <element id="MedicationDispense.dosageInstruction">
+      <path value="MedicationDispense.dosageInstruction" />
+      <type>
+        <code value="Dosage" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
+      </type>
+    </element>
+    <element id="MedicationDispense.dosageInstruction.additionalInstruction">
+      <path value="MedicationDispense.dosageInstruction.additionalInstruction" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.dosageInstruction.asNeeded[x]">
+      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.dosageInstruction.asNeeded[x]:asNeeded">
+      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
+      <sliceName value="asNeeded" />
+    </element>
+    <element id="MedicationDispense.dosageInstruction.asNeeded[x]:asNeeded.coding">
+      <path value="MedicationDispense.dosageInstruction.asNeeded[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.dosageInstruction.route.coding">
+      <path value="MedicationDispense.dosageInstruction.route.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationDispense.dosageInstruction.method.coding">
+      <path value="MedicationDispense.dosageInstruction.method.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
   </differential>
 </StructureDefinition>
