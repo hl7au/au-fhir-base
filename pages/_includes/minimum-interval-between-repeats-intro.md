@@ -4,4 +4,4 @@ This extension allows the definition of a duration indicating the minimum allowe
 
 **Examples**
 
-[Medication order with dispense request and minimum interval between repeats](MedicationRequest-medicationrequest-example1.html)
+[Medication order with dispense request and minimum interval between repeats](MedicationRequest-medicationrequest-example0.html)
