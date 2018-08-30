@@ -5,4 +5,4 @@ may or has supplied multiple repeats of a medication prescription at one time.
 
 **Examples**
 
-[Active order with dispense request and grounds for concurrent supply](MedicationRequest-medicationrequest-example1.html)
+[Medication order with dispense request and grounds for concurrent supply](MedicationRequest-medicationrequest-example1.html)

@@ -19,6 +19,10 @@
         </type>
         <system value="http://www.example.org/prescriptions"/>
         <value value="2468974"/>
+        <assigner>
+            <reference value="Organization/example0"/>
+            <display value="Downunder Hospital"/>
+        </assigner>
     </identifier>
     <status value="active"/>
     <intent value="order"/>
@@ -27,7 +31,7 @@
     </medicationReference>
     <subject>
         <reference value="Patient/example0"/>
-        <display value="Franklin"/>
+        <display value="Stella Franklin"/>
     </subject>
     <authoredOn value="2018-08-25"/>
     <requester>
@@ -43,7 +47,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="86406008"/>
-            <display value="Human immunodeficiency virus infection (disorder)"/>
+            <display value="Human immunodeficiency virus infection"/>
         </coding>
     </reasonCode>
     <note>
@@ -54,13 +58,20 @@
         <additionalInstruction>
             <coding>
                 <system value="http://snomed.info/sct"/>
+                <code value="311504000"/>
+                <display value="With or after food"/>
+            </coding>
+        </additionalInstruction>
+        <additionalInstruction>
+            <coding>
+                <system value="http://snomed.info/sct"/>
                 <code value="418849000"/>
                 <display
                     value="Warning. Follow the printed instructions you have been given with this medicine"
                 />
             </coding>
         </additionalInstruction>
-        <patientInstruction value="Take one tablet a day. Always take with meal."/>
+        <patientInstruction value="Take one tablet a day. Always take with food."/>
         <timing>
             <repeat>
                 <frequency value="1"/>
@@ -72,14 +83,14 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="26643006"/>
-                <display value="Oral Route"/>
+                <display value="Oral route"/>
             </coding>
         </route>
         <method>
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="421521009"/>
-                <display value="Swallow - dosing instruction imperative (qualifier value)"/>
+                <display value="Swallow"/>
             </coding>
         </method>
         <doseQuantity>

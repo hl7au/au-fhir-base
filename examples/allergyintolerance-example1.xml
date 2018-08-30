@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="allergyintolerance-example1"/>
+
+  <clinicalStatus value="active"/>
+
+  <verificationStatus value="unconfirmed"/>
+
+  <type value="allergy"/>
+
+  <category value="food"/>
+
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="91930004"/>
+      <display value="Allergy to eggs"/>
+    </coding>
+  </code>
+
+  <patient>
+    <reference value="Patient/example2"/>
+    <display value="Sally Grant"/>
+  </patient>
+
+  <onsetAge>
+    <value value="4"/>
+    <unit value="year"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="a"/>
+  </onsetAge>
+
+  <assertedDate value="2018-03-07"/>
+
+  <asserter>
+    <reference value="Patient/example2"/>
+    <display value="Sally Grant"/>
+  </asserter>
+
+  <reaction>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="247472004"/>
+        <display value="Hives"/>
+      </coding>
+    </manifestation>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="422587007"/>
+        <display value="Nausea"/>
+      </coding>
+    </manifestation>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="422400008"/>
+        <display value="Vomiting"/>
+      </coding>
+    </manifestation>
+  </reaction>
+
+</AllergyIntolerance>

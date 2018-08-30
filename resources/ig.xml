@@ -3,17 +3,17 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/implementationguide.xsd">
   <id value="au-base"/>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
-  <version value="0.9.2"/>
+  <version value="0.9.3"/>
   <name value="Implementation Guide Template"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-08-19"/>
+  <date value="2018-08-28"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="http://confluence.hl7australia.com/display/PA/PatientAdministrationWorkGroup"/>
+      <value value="http://confluence.hl7australia.com/display/PA"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -21,7 +21,7 @@
     <name value="HL7 Australia Orders and Observations Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/OO/OrdersandObservationsWorkGroup"/>
+      <value value="https://confluence.hl7australia.com/display/OO"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -29,13 +29,27 @@
     <name value="HL7 Australia Medications Working Group"/>
     <telecom>
       <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/MED/MedicationsWorkGroup"/>
+      <value value="https://confluence.hl7australia.com/display/MED"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7 Australia Child Health Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7australia.com/display/CHWG"/>
       <use value="work"/>
     </telecom>
   </contact>
   <fhirVersion value="3.0.1"/>
   <package>
     <name value="base"/>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/minimum-interval-between-repeats"/>
+      </sourceReference>
+    </resource>
 	<resource>
       <example value="false"/>
       <sourceReference>
@@ -637,6 +651,12 @@
     <resource>
       <example value="false"/>
       <sourceReference>
+        <reference value="StructureDefinition/au-allergyintolerance"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
         <reference value="StructureDefinition/au-medication"/>
       </sourceReference>
     </resource>
@@ -783,7 +803,28 @@
       <example value="true"/>
       <name value="AU Prescription example"/>
       <sourceReference>
+        <reference value="MedicationRequest/medicationrequest-example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="AU Prescription example"/>
+      <sourceReference>
         <reference value="MedicationRequest/medicationrequest-example1"/>
+      </sourceReference>
+    </resource>    
+    <resource>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - ibuprofen allergy"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/allergyintolerance-example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - egg allergy"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/allergyintolerance-example1"/>
       </sourceReference>
     </resource>
 </package>

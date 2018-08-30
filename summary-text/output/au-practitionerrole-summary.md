@@ -9,4 +9,4 @@ This profile contains the following variations from [PractitionerRole](http://hl
 1. at most one <span style='color:green'>organization</span> as AU Base Organisation
 1. zero or more <span style='color:green'>specialty</span> Practitioner specialties sliced
    * zero or more SNOMED Practitioner Specialty slice
-1. at most one <span style='color:green'>location</span> 
+1. at most one <span style='color:green'>location</span> Location of Provider
