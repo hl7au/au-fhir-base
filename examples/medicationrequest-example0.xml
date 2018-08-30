@@ -19,10 +19,12 @@
         </type>
         <system value="http://www.example.org/etp/prescriptions"/>
         <value value="5689214"/>
+        <assigner>
+            <display value="ACME Software"/>
+        </assigner>
     </identifier>
     <status value="active"/>
     <intent value="order"/>
-    <priority value="routine"/>
     <medicationCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -32,7 +34,7 @@
     </medicationCodeableConcept>
     <subject>
         <reference value="Patient/example0"/>
-        <display value="Franklin"/>
+        <display value="Stella Franklin"/>
     </subject>
     <authoredOn value="2018-07-15"/>
     <requester>
@@ -65,14 +67,14 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="203082005"/>
-                <display value="Fibromyalgia (disorder)"/>
+                <display value="Fibromyalgia"/>
             </coding>
         </asNeededCodeableConcept>
         <route>
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="26643006"/>
-                <display value="Oral Route (qualifier value)"/>
+                <display value="Oral route"/>
             </coding>
         </route>
         <doseQuantity>
