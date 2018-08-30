@@ -1,675 +1,643 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-dispenserecord" />
+  <id value="au-dispenserecord"/>
   <meta>
-    <lastUpdated value="2018-03-03T06:38:51.483+11:00" />
+    <lastUpdated value="2018-03-03T06:38:51.483+11:00"/>
   </meta>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-dispenserecord" />
-  <version value="0.1" />
-  <name value="AUBaseDispenseRecord" />
-  <title value="AU Base Dispense Record" />
-  <status value="draft" />
-  <date value="2017-05-11T09:51:36.6519188+10:00" />
-  <publisher value="Health Level Seven Australia (Medications WG)" />
-  <description value="Description of Australian dispense record" />
-  <fhirVersion value="3.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="MedicationDispense" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
-  <derivation value="constraint" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-dispenserecord"/>
+  <version value="0.1"/>
+  <name value="AUBaseDispenseRecord"/>
+  <title value="AU Base Dispense Record"/>
+  <status value="draft"/>
+  <date value="2017-05-11T09:51:36.6519188+10:00"/>
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
+  <description value="Description of Australian dispense record"/>
+  <fhirVersion value="3.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MedicationDispense"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="MedicationDispense">
-      <path value="MedicationDispense" />
-      <short value="Australian Dispense Record" />
-      <definition value="Record of dispensing" />
+      <path value="MedicationDispense"/>
+      <short value="Australian Dispense Record"/>
+      <definition value="Record of dispensing"/>
     </element>
     <element id="MedicationDispense.extension">
-      <path value="MedicationDispense.extension" />
+      <path value="MedicationDispense.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.extension:groundsForConcurrentSupply">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="groundsForConcurrentSupply" />
-      <max value="1" />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="groundsForConcurrentSupply"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply"/>
       </type>
     </element>
-    <element id="MedicationDispense.extension:MyExtension">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="MyExtension" />
-      <short value="Number of this Dispense" />
-      <definition value="This extension applies to the MedicationDispense resource and the value indicates the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats. " />
-      <comment value="It has the value 1 when there are no repeats. The value increments by one each time a dispense act is successfully completed. " />
-      <min value="0" />
-      <max value="1" />
+    <element id="MedicationDispense.extension:dispenseNumber">
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="dispenseNumber"/>
+      <min value="0"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number"/>
       </type>
     </element>
     <element id="MedicationDispense.identifier">
-      <path value="MedicationDispense.identifier" />
+      <path value="MedicationDispense.identifier"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="value"/>
+          <path value="system"/>
         </discriminator>
         <discriminator>
-          <type value="value" />
-          <path value="type" />
+          <type value="value"/>
+          <path value="type"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier">
-      <path value="MedicationDispense.identifier" />
-      <sliceName value="etpVendorIdentifier" />
-      <short value="ETP vendor identifier" />
-      <definition value="Identifier assigned by ETP vendor e.g. ERx, Medisecure; typically provided as a barcode." />
+      <path value="MedicationDispense.identifier"/>
+      <sliceName value="etpVendorIdentifier"/>
+      <short value="ETP vendor identifier"/>
+      <definition
+        value="Identifier assigned by ETP vendor e.g. ERx, Medisecure; typically provided as a barcode."
+      />
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.type">
-      <path value="MedicationDispense.identifier.type" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.type"/>
+      <min value="1"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
+          <valueString value="IdentifierType"/>
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
+          <valueBoolean value="true"/>
         </extension>
-        <strength value="required" />
-        <description value="Local Identifier Type" />
+        <strength value="required"/>
+        <description value="Local Identifier Type"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.type.coding">
-      <path value="MedicationDispense.identifier.type.coding" />
-      <min value="1" />
-      <max value="1" />
+      <path value="MedicationDispense.identifier.type.coding"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.type.coding.system">
-      <path value="MedicationDispense.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+      <path value="MedicationDispense.identifier.type.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.type.coding.code">
-      <path value="MedicationDispense.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="ETP" />
+      <path value="MedicationDispense.identifier.type.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="ETP"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.identifier.type.text" />
-      <min value="1" />
-      <fixedString value="ETP Identifier" />
+      <path value="MedicationDispense.identifier.type.text"/>
+      <min value="1"/>
+      <fixedString value="ETP Identifier"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.system">
-      <path value="MedicationDispense.identifier.system" />
-      <short value="ETP Vendor Identifier System URL" />
-      <definition value="URL assigned by the ETP vendor allocating the identifier." />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.system"/>
+      <short value="ETP Vendor Identifier System URL"/>
+      <definition value="URL assigned by the ETP vendor allocating the identifier."/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.value">
-      <path value="MedicationDispense.identifier.value" />
-      <short value="ETP Vendor Identifier" />
-      <definition value="ETP Vendor allocated identifier for the request this dispense record is fulfilling." />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.value"/>
+      <short value="ETP Vendor Identifier"/>
+      <definition
+        value="ETP Vendor allocated identifier for the request this dispense record is fulfilling."/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.assigner">
-      <path value="MedicationDispense.identifier.assigner" />
-      <short value="ETP Vendor" />
-      <definition value="ETP Vendor assigning this identifier" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.assigner"/>
+      <short value="ETP Vendor"/>
+      <definition value="ETP Vendor assigning this identifier"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:etpVendorIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.identifier.assigner.display" />
-      <short value="ETP Vendor Name" />
-      <definition value="Name of the ETP vendor assigning this identifier." />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.assigner.display"/>
+      <short value="ETP Vendor Name"/>
+      <definition value="Name of the ETP vendor assigning this identifier."/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber">
-      <path value="MedicationDispense.identifier" />
-      <sliceName value="localScriptNumber" />
-      <short value="Local Script Number" />
+      <path value="MedicationDispense.identifier"/>
+      <sliceName value="localScriptNumber"/>
+      <short value="Local Script Number"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.type">
-      <path value="MedicationDispense.identifier.type" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.type"/>
+      <min value="1"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
+          <valueString value="IdentifierType"/>
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
+          <valueBoolean value="true"/>
         </extension>
-        <strength value="required" />
-        <description value="Local Identifier Type" />
+        <strength value="required"/>
+        <description value="Local Identifier Type"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.type.coding">
-      <path value="MedicationDispense.identifier.type.coding" />
-      <min value="1" />
-      <max value="1" />
+      <path value="MedicationDispense.identifier.type.coding"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.type.coding.system">
-      <path value="MedicationDispense.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+      <path value="MedicationDispense.identifier.type.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.type.coding.code">
-      <path value="MedicationDispense.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="LPN" />
+      <path value="MedicationDispense.identifier.type.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="LPN"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.identifier.type.text" />
-      <min value="1" />
-      <fixedString value="Local Prescription Number" />
+      <path value="MedicationDispense.identifier.type.text"/>
+      <min value="1"/>
+      <fixedString value="Local Prescription Number"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.system">
-      <path value="MedicationDispense.identifier.system" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.system"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.value">
-      <path value="MedicationDispense.identifier.value" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.value"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.assigner">
-      <path value="MedicationDispense.identifier.assigner" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.assigner"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localScriptNumber.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.identifier.assigner.display" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.assigner.display"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.medication[x]">
-      <path value="MedicationDispense.medication[x]" />
+      <path value="MedicationDispense.medication[x]"/>
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="type"/>
+          <path value="$this"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
+      <min value="1"/>
+      <max value="1"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
       </type>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded">
-      <path value="MedicationDispense.medication[x]" />
-      <sliceName value="medicationCoded" />
+      <path value="MedicationDispense.medication[x]"/>
+      <sliceName value="medicationCoded"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding">
-      <path value="MedicationDispense.medication[x].coding" />
+      <path value="MedicationDispense.medication[x].coding"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="value"/>
+          <path value="system"/>
         </discriminator>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="value"/>
+          <path value="code"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:pbs">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="pbs" />
-      <short value="Medication PBS coding (ignore item context)" />
-      <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="pbs"/>
+      <short value="Medication PBS coding (ignore item context)"/>
+      <definition
+        value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/pbs-item"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:gtin">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="gtin" />
-      <short value="Medication Package GTIN" />
-      <definition value="GTIN value from http://www.gs1.org/gtin." />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="gtin"/>
+      <short value="Medication Package GTIN"/>
+      <definition value="GTIN value from http://www.gs1.org/gtin."/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/gtin" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/gtin"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtTPP" />
-      <short value="AMT Trade Product Pack" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtTPP"/>
+      <short value="AMT Trade Product Pack"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-tpp-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-tpp-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
-      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <short value="Type of medication coding"/>
+      <definition
+        value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="BPG" />
-        <display value="Branded package with no container" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="BPG"/>
+        <display value="Branded package with no container"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtMPP" />
-      <short value="AMT Medicinal Product Pack" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtMPP"/>
+      <short value="AMT Medicinal Product Pack"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-mpp-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-mpp-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
-      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <short value="Type of medication coding"/>
+      <definition
+        value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="UPG" />
-        <display value="Unbranded package with no container" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="UPG"/>
+        <display value="Unbranded package with no container"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtCTPP" />
-      <short value="AMT Containered Trade Product Pack" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtCTPP"/>
+      <short value="AMT Containered Trade Product Pack"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
-      <definition value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <short value="Type of medication coding"/>
+      <definition
+        value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="BPGC" />
-        <display value="Branded package with container" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="BPGC"/>
+        <display value="Branded package with container"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtTPUU" />
-      <short value="AMT Trade Product Unit of Use" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtTPUU"/>
+      <short value="AMT Trade Product Unit of Use"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="BPDSF" />
-        <display value="Branded product with strengths and form" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="BPDSF"/>
+        <display value="Branded product with strengths and form"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtMPUU" />
-      <short value="AMT Medicinal Product Unit of Use" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtMPUU"/>
+      <short value="AMT Medicinal Product Unit of Use"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="UPDSF" />
-        <display value="Unbranded product with strengths and form" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="UPDSF"/>
+        <display value="Unbranded product with strengths and form"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtTP" />
-      <short value="AMT Trade Product" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtTP"/>
+      <short value="AMT Trade Product"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-tp-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-tp-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="BPD" />
-        <display value="Branded product with no strengths or form" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="BPD"/>
+        <display value="Branded product with no strengths or form"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amtMP" />
-      <short value="AMT Medicinal Product" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amtMP"/>
+      <short value="AMT Medicinal Product"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/amt-mp-codes" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/amt-mp-codes"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP.extension:medicationType">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationType" />
-      <max value="1" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP.extension:medicationType">
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationType"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP.extension:medicationType.valueCoding:valueCoding">
-      <path value="MedicationDispense.medication[x].coding.extension.valueCoding" />
-      <sliceName value="valueCoding" />
+    <element
+      id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP.extension:medicationType.valueCoding:valueCoding">
+      <path value="MedicationDispense.medication[x].coding.extension.valueCoding"/>
+      <sliceName value="valueCoding"/>
       <fixedCoding>
-        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
-        <code value="UPD" />
-        <display value="Unbranded product with no strengths or form" />
+        <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+        <code value="UPD"/>
+        <display value="Unbranded product with no strengths or form"/>
       </fixedCoding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:mimsPackage">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="mimsPackage" />
-      <short value="MIMS Package" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="mimsPackage"/>
+      <short value="MIMS Package"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/mims" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/mims"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationReference">
-      <path value="MedicationDispense.medication[x]" />
-      <sliceName value="medicationReference" />
-      <short value="AU Base Medication" />
+      <path value="MedicationDispense.medication[x]"/>
+      <sliceName value="medicationReference"/>
+      <short value="AU Base Medication"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
       </type>
     </element>
     <element id="MedicationDispense.subject">
-      <path value="MedicationDispense.subject" />
-      <short value="AU Base Patient | Patient | Group" />
+      <path value="MedicationDispense.subject"/>
+      <short value="AU Base Patient | Patient | Group"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
     </element>
     <element id="MedicationDispense.authorizingPrescription">
-      <path value="MedicationDispense.authorizingPrescription" />
+      <path value="MedicationDispense.authorizingPrescription"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-prescription"/>
       </type>
     </element>
     <element id="MedicationDispense.receiver">
-      <path value="MedicationDispense.receiver" />
+      <path value="MedicationDispense.receiver"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
       </type>
     </element>
     <element id="MedicationDispense.dosageInstruction">
-      <path value="MedicationDispense.dosageInstruction" />
+      <path value="MedicationDispense.dosageInstruction"/>
       <type>
-        <code value="Dosage" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
+        <code value="Dosage"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage"/>
       </type>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.additionalInstruction">
-      <path value="MedicationDispense.dosageInstruction.additionalInstruction" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded[x]">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded[x]:asNeeded">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
-      <sliceName value="asNeeded" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded[x]:asNeeded.coding">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.route.coding">
-      <path value="MedicationDispense.dosageInstruction.route.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.method.coding">
-      <path value="MedicationDispense.dosageInstruction.method.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
   </differential>
 </StructureDefinition>
+
+
