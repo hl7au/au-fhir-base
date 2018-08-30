@@ -1,4 +1,4 @@
-**AU Base AllergyIntolerance** *[FMM Level [0](guidance.html)]*
+**AU Base AllergyIntolerance** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines an allergy intolerance information structure including core localisation concepts for Australia.
 

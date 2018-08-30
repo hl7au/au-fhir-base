@@ -1,1 +1,1 @@
-**AU Base Dispense Record** *[FMM Level [0](guidance.html)]*
+**AU Base Dispense Record** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
