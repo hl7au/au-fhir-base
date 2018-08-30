@@ -13,14 +13,15 @@
         <type>
             <coding>
                 <system value="http://hl7.org.au/fhir/v2/0203"/>
-                <code value="ETP"/>
+                <code value="LPN"/>
             </coding>
-            <text value="ETP Identifier"/>
+            <text value="Local Prescription Number"/>
         </type>
-        <system value="http://www.example.org/etp/prescriptions"/>
-        <value value="5689214"/>
+        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003627500000328"/>
+        <value value="53720010"/>
         <assigner>
-            <display value="ACME Software"/>
+            <reference value="Organization/example0"/>
+            <display value="Downunder Hospital"/>
         </assigner>
     </identifier>
     <status value="active"/>
@@ -63,13 +64,7 @@
                 <periodUnit value="h"/>
             </repeat>
         </timing>
-        <asNeededCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="203082005"/>
-                <display value="Fibromyalgia"/>
-            </coding>
-        </asNeededCodeableConcept>
+       <asNeededBoolean value="true"/>	
         <route>
             <coding>
                 <system value="http://snomed.info/sct"/>
