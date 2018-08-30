@@ -66,7 +66,7 @@
         <key value="inv-com-0" />
         <severity value="error" />
         <human value="Related party or party shall exist but not both" />
-        <expression value="attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists() xor attester.party.exists()" />
+        <expression value="(attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists() and attester.party.exists()).not()" />
     </constraint>
     </element>
     <element id="Composition.attester.extension">
