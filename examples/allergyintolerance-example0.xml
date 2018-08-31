@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="allergyintolerance-example0"/>
+
+  <clinicalStatus value="active"/>
+
+  <verificationStatus value="confirmed"/>
+
+  <type value="allergy"/>
+
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387207008"/>
+      <display value="Ibuprofen"/>
+    </coding>
+  </code>
+
+  <patient>
+    <reference value="Patient/example1"/>
+    <display value="Harry DAN"/>
+  </patient>
+
+  <assertedDate value="2016-03-07"/>
+
+  <recorder>
+    <reference value="Practitioner/example0"/>
+    <display value="Dr Helen Mayo"/>
+  </recorder>
+
+  <reaction>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="126485001"/>
+        <display value="Urticaria"/>
+      </coding>
+    </manifestation>
+  </reaction>
+
+</AllergyIntolerance>

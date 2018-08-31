@@ -1,4 +1,4 @@
-**AU Base HealthcareService** *[FMM Level [1](guidance.html)]*
+**AU Base HealthcareService** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines a healthcare service profile for the Australian context.
 

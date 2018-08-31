@@ -1,4 +1,4 @@
-**AU Base Practitioner Profile** *[FMM Level [1](guidance.html)]*
+**AU Base Practitioner Profile** *[FMM Level [1](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines a practitioner administration details structure that includes core localisation concepts.
 
