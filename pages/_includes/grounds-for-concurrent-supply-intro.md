@@ -5,4 +5,4 @@ may or has supplied multiple repeats of a medication prescription at one time.
 
 **Examples**
 
-[Medication order with dispense request and grounds for concurrent supply](MedicationRequest-medicationrequest-example1.html)
+[Prescription for Stribild  with concurrent supply](MedicationRequest-medicationrequest-example1.html)
