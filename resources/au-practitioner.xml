@@ -9,19 +9,20 @@
   <p>AU Practitioner</p>
 </div></text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+  <version value="0.1"/>
   <name value="AUBasePractitioner" />
   <title value="AU Base Practitioner" />
   <status value="draft" />
   <date value="2017-03-11T06:30:54+00:00" />
-  <publisher value="Health Level Seven Australia (Patient Administration)" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
       <value value="http://hl7.org.au" />
+      <use value="work" />
     </telecom>
   </contact>
   <description value="Base profile for Australian context Practitioner" />
-  <purpose value="Details of a practitioner" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -312,6 +313,15 @@
       <path value="Practitioner.qualification.issuer.display" />
       <min value="1" />
       <fixedString value="AHPRA" />
+    </element>
+    <element id="Practitioner.communication">
+      <path value="Practitioner.communication" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-1" />
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
