@@ -1,4 +1,4 @@
-**AU Base RelatedPerson Profile**
+**AU Base RelatedPerson Profile**  *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines a related person administration details structure that includes core localisation concepts.
 
