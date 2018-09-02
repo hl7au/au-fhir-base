@@ -2,18 +2,17 @@
 
 This profile defines a healthcare service profile for the Australian context.
 
+
 #### Identifiers
-These definitions represent common data held in the HealthcareService.identifier element.
+These definitions represent common data held in the HealthcareService.identifier element:
+* Healthcare Provider Identifier for Organisation - HPI-O [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"}
 
-* __Healthcare Provider Identifier - HealthcareService__
-
-[METeOR Description](http://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"}
-
-[Namespace Description](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"}
-
-The Healthcare provider identifier—organisation (HPI-O) is the numerical identifier that uniquely identifies (network) organisations in Australia where healthcare is provided.
-
+#### Extensions
+Extensions used in this profile:
+* Healthcare Service: Healthcare Service Eligibility Detail [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail){:target="_blank"}
 
 **Examples**
 
 [HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
+
+[Albion Hospital Radiology Service](HealthcareService-example1.html)

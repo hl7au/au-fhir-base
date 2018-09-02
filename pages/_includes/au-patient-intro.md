@@ -11,14 +11,14 @@ These definitions represent common data held in the Patient.identifier element:
 
 #### Extensions
 Extensions used in this profile:
-* Patient: Indigenous Status [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
-* Patient: Close the Gap Registration [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
+* Patient: Indigenous Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/indigenous-status) [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
+* Patient: Close the Gap Registration [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration) [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
 * Patient: Birth Place (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/birthPlace)
 * Patient: Mother's Maiden Name (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName)
 * Patient.birthDate: Birth Time (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/STU3/extension-patient-birthtime.html)
 * Patient.birthDate, Patient.deceasedDateTime: Date Accuracy Indicator [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator)
 * Patient.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
-* Patient.identifier(IHI): IHI Record Status [<sup>[1]</sup>](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)
+* Patient.identifier(IHI): IHI Record Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-record-status)
 
 
 **Examples**
