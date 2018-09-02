@@ -40,3 +40,5 @@ ASIC identifiers ABN (Australian Business Number), ACN (Australian Company Numbe
 
 [Organisation with HPI-O](Organization-example0.html)
 
+[Albion Hospital with Australian Business Number](Organization-example1.html)
+
