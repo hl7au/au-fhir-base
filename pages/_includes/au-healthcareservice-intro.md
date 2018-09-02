@@ -17,3 +17,5 @@ The Healthcare provider identifier—organisation (HPI-O) is the numerical ident
 **Examples**
 
 [HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
+
+[Albion Hospital Radiology Service](HealthcareService-example1.html)
