@@ -8,7 +8,7 @@ These definitions represent common data held in the Organization.identifier elem
 * My Health Record (PCEHR) Assigned Identity for Organisations - PAI-O [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/pcehr/paio/1.0/index.html){:target="_blank"}
 * Contracted Service Provider Number - CSP [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/csp/1.0/index.html){:target="_blank"}
 * ASIC Identifiers - Australian Business Number, Australian Company Number, Australian Registered Body Number [<sup>[1]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"} [<sup>[2]</sup>](http://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/australian-company-numbers/australian-company-number-digit-check){:target="_blank"}
-
+* NATA Accreditation Number [<sup>[1]</sup>](http://hl7.org.au/id/nata-accreditation/index.html){:target="_blank"}
 
 **Examples**
 
