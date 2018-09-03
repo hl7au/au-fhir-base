@@ -1,6 +1,6 @@
 This profile contains the following variations from [Medication](http://hl7.org/fhir/STU3/Medication):
 
-1. at most one PBS Manufacturer Supplier extension
+1. at most one PBS Sponsor extension
 1. at most one <span style='color:green'>code</span> Coding for the Medicine
 1. zero or more <span style='color:green'>code.coding</span>  sliced
    * zero or more Medication PBS coding (ignore item context) slice
