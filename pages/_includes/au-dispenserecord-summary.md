@@ -10,19 +10,19 @@ This profile contains the following variations from [MedicationDispense](http://
    *  Medication PBS coding (ignore item context) slice
    *  Medication Package GTIN slice
    *  AMT Trade Product Pack slice
-  *  Type of medication coding extension
+      *  Type of medication coding extension
    *  AMT Medicinal Product Pack slice
-  *  Type of medication coding extension
+      *  Type of medication coding extension
    *  AMT Containered Trade Product Pack slice
-  *  Type of medication coding extension
+      *  Type of medication coding extension
    *  AMT Trade Product Unit of Use slice
-  *  medicationType extension
+      *  Type of medication coding extension
    *  AMT Medicinal Product Unit of Use slice
-  *  medicationType extension
+      *  Type of medication coding extension
    *  AMT Trade Product slice
-  *  medicationType extension
+      *  Type of medication coding extension
    *  AMT Medicinal Product slice
-  *  medicationType extension
+      *  Type of medication coding extension
    *  MIMS Package slice
 1.  <span style='color:green'>medication[x]</span> as AU Base Medication slice
 1. at most one <span style='color:green'>subject</span> as AU Base Patient | Patient | Group
