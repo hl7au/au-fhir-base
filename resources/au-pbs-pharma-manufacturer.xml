@@ -9,8 +9,8 @@
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-pbs-pharma-manufacturer" />
   <version value="0.1" />
-  <name value="PBSPharmaceuticalManufacturer" />
-  <title value="PBS Pharmaceutical Manufacturer" />
+  <name value="PBSSponsor" />
+  <title value="PBS Sponsor" />
   <status value="draft" />
   <date value="2017-05-11T10:23:15.934097+10:00" />
   <publisher value="Health Level Seven Australia (Medications WG)" />
@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Details of manufacturer/supplier of medication as listed on the PBS" />
+  <description value="Details of manufacturer/supplier of medication as listed on the PBS, this is the organisation responsible for the supply of medication." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -31,8 +31,8 @@
   <differential>
     <element id="Organization">
       <path value="Organization" />
-      <short value="PBS Pharmaceutical Manufacturer" />
-      <definition value="Known PBS Pharmaceutical Manufacturer Organisation" />
+      <short value="PBS Sponsor" />
+      <definition value="Sponsor organisation is responsible for the supply of medication products. Often referred to as PBS manufacturer." />
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
@@ -43,23 +43,24 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="PBS Manufacturer identifiers" />
+      <short value="PBS Sponsor identifiers" />
     </element>
-    <element id="Organization.identifier:pbsManufacturer">
+    <element id="Organization.identifier:pbsSponsor">
       <path value="Organization.identifier" />
-      <sliceName value="pbsManufacturer" />
-      <short value="PBS Manufacturer Identifer" />
-      <definition value="PBS registered manufacturer identifier" />
+      <sliceName value="pbsSponsor" />
+      <short value="PBS Sponsor Identifer" />
+      <definition value="PBS registered sponsor identifier" />
+	  <min value="1" />
       <max value="1" />
     </element>
-    <element id="Organization.identifier:pbsManufacturer.system">
+    <element id="Organization.identifier:pbsSponsor.system">
       <path value="Organization.identifier.system" />
-      <short value="PBS manufacturer (placeholder URL)" />
-      <definition value="PBS managed and published manufacturer identity" />
+      <short value="PBS sponsor" />
+      <definition value="PBS managed and published sponsor identity" />
       <min value="1" />
-      <fixedUri value="http://pbs.gov.au/identifier/manufacturer" />
+      <fixedUri value="http://pbs.gov.au/code/manufacturer" />
     </element>
-    <element id="Organization.identifier:pbsManufacturer.value">
+    <element id="Organization.identifier:pbsSponsor.value">
       <path value="Organization.identifier.value" />
       <min value="1" />
     </element>

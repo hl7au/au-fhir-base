@@ -13,4 +13,6 @@ These definitions represent common data held in the PractitionerRole.identifier 
 
 [Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
+[Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
+
 
