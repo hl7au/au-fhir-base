@@ -1,4 +1,4 @@
-**AU Base Dispense Record** *[FMM Level [0](guidance.html)]*
+**AU Base Dispense Record** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines a dispense record information structure including core localisation concepts for Australia.
 
@@ -13,5 +13,5 @@ Extensions used in this profile:
 * MedicationDispense: Grounds for Concurrent Supply [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply)
 * MedicationDispense: Dispense Number [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/dispense-number)
 * MedicationDispense.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
+ 
 
-* 

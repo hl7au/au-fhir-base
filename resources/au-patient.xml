@@ -12,7 +12,7 @@
   <title value="AU Base Patient" />
   <status value="draft" />
   <date value="2017-09-06T06:30:54+00:00" />
-  <publisher value="Health Level Seven Australia (Patient Administration)" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
@@ -52,9 +52,9 @@
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
+	  <short value="Patient Birth Place" />
 	  <min value="0" />
-	  <max value="1" />
-      <short value="Patient Birth Place" />
+	  <max value="1" />     
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
@@ -63,9 +63,9 @@
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension" />
       <sliceName value="indigenousStatus" />
+	  <short value="Patient Indigenous Status" />
 	  <min value="0" />
-	  <max value="1" />
-      <short value="Patient Indigenous Status" />
+	  <max value="1" />    
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
@@ -74,9 +74,9 @@
     <element id="Patient.extension:closeTheGapRegistration">
       <path value="Patient.extension" />
       <sliceName value="closeTheGapRegistration" />
+	  <short value="Patient Close the Gap Registration" />
 	  <min value="0" />
 	  <max value="1" />
-      <short value="Patient Close the Gap Registration" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/close-the-gap-registration" />
@@ -85,9 +85,9 @@
     <element id="Patient.extension:mothersMaidenName">
       <path value="Patient.extension" />
       <sliceName value="mothersMaidenName" />
+	  <short value="Patient Mother's Maiden name" />
       <min value="0" />
       <max value="1" />
-      <short value="Patient Mother's Maiden name" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName" />
@@ -128,9 +128,9 @@
     <element id="Patient.identifier:ihiNumber.extension:ihiStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiStatus" />
+	  <short value="IHI Number Status" />
 	  <min value="0" />
-	  <max value="1" />
-      <short value="IHI Number Status" />
+	  <max value="1" />    
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
@@ -139,10 +139,10 @@
     <element id="Patient.identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
+	  <short value="IHI Number Record Status" />
+	  <definition value="IHI value record status associated with an IHI identifier" />
 	  <min value="0" />
-	  <max value="1" />
-      <short value="IHI Number Record Status" />
-      <definition value="IHI value record status associated with an IHI identifier" />
+	  <max value="1" />        
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
@@ -821,6 +821,18 @@
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
       </type>
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication"/>
+    </element>
+    <element id="Patient.communication.language">
+      <path value="Patient.communication.language" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />

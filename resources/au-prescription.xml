@@ -11,7 +11,14 @@
   <status value="draft" />
   <date value="2017-05-11T09:51:36.6519188+10:00" />
   <publisher value="Health Level Seven Australia (Medications WG)" />
-  <description value="Description of Australian prescription record" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.org.au/fhir" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Prescription record for Australian context" />
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -37,6 +44,8 @@
     <element id="MedicationRequest.extension:groundsForConcurrentSupply">
       <path value="MedicationRequest.extension" />
       <sliceName value="groundsForConcurrentSupply" />
+	  <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply" />
@@ -594,17 +603,112 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
     </element>
+    <element id="MedicationRequest.supportingInformation">
+      <path value="MedicationRequest.supportingInformation" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationRequest.supportingInformation:BodyHeight">
+      <path value="MedicationRequest.supportingInformation" />
+      <sliceName value="bodyHeight" />
+      <short value="Observation of body height" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-bodyheight" />
+      </type>
+    </element>
+    <element id="MedicationRequest.supportingInformation:BodyWeight">
+      <path value="MedicationRequest.supportingInformation" />
+      <sliceName value="bodyWeight" />
+      <short value="Observation of body weight" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-bodyweight" />
+      </type>
+    </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
       <short value="Created date" />
     </element>
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester" />
+    </element>
+    <element id="MedicationRequest.requester.agent">
+      <path value="MedicationRequest.requester.agent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-device" />
+      </type>
+    </element>
+    <element id="MedicationRequest.requester.onBehalfOf">
+      <path value="MedicationRequest.requester.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
+    </element>
+    <element id="MedicationRequest.recorder">
+      <path value="MedicationRequest.recorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+    </element>
+    <element id="MedicationRequest.reasonCode">
+      <path value="MedicationRequest.reasonCode" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationRequestReason" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/condition-code" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.dosageInstruction">
+      <path value="MedicationRequest.dosageInstruction"/>
+      <type>
+        <code value="Dosage"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage"/>
+      </type>
+    </element>
     <element id="MedicationRequest.dispenseRequest">
       <path value="MedicationRequest.dispenseRequest" />
       <short value="Requested dispensing" />
+    </element>    
+    <element id="MedicationRequest.dispenseRequest.performer">
+      <path value="MedicationRequest.dispenseRequest.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
     </element>
     <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
       <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
-      <short value="Maximumn repeats authorised" />
+      <short value="Maximum repeats authorised" />
     </element>
     <element id="MedicationRequest.substitution">
       <path value="MedicationRequest.substitution" />
@@ -613,6 +717,14 @@
     <element id="MedicationRequest.substitution.allowed">
       <path value="MedicationRequest.substitution.allowed" />
       <short value="Brand substitution flag" />
+    </element>
+	<element id="MedicationRequest.priorPrescription">
+      <path value="MedicationRequest.priorPrescription" />
+      <short value="A prescription that is being replaced" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

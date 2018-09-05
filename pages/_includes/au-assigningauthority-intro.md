@@ -1,4 +1,5 @@
 Assigning Authority Extension
+
 This extension defines a HL7v2 assigning authority value for HL7v2 identification for routing.
 
 This content provides the values for a sender to use where assigning authority components should be valued in fields in HL7 messages. 

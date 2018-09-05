@@ -42,8 +42,9 @@ This guide is the product of collaborative work undertaken with participants fro
 * Australian FHIR Implementers' Community
 * HL7 Australia Membership 
 * HL7 Australia Patient Administration Working Group
-* HL7 Australia Medications Working Group
 * HL7 Australia Orders and Observations Working Group
+* HL7 Australia Medications Working Group
+* HL7 Australia Child Health Working Group
 * Australian Digital Health Agency
 * Secure Messaging Technical Working Group
 

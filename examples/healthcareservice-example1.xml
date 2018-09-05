@@ -1,0 +1,42 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+	<id value="example1"/>		
+	<active value="true"/>
+	<providedBy> 
+		<reference value="Organization/example1"/> 
+		<display value="Albion Hospital"/> 
+	</providedBy> 	
+	<category> 
+		<coding> 
+			<system value="http://hl7.org/fhir/service-category"/> 
+			<code value="30"/> 
+			<display value="Specialist Radiology/Imaging"/> 
+		</coding>
+	</category> 
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="708175003"/>
+			<display value="Diagnostic imaging service"/>
+		</coding>		
+	</specialty>
+	<specialty>		
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="708174004"/>
+			<display value="Interventional radiology service"/>
+		</coding>
+	</specialty>
+	<location>
+		<reference value="Location/example1"/>
+	</location>
+	<name value="Albion Hospital Radiology Service"/> 
+	<availableTime> 
+		<daysOfWeek value="mon"/> 
+		<daysOfWeek value="tue"/> 
+		<daysOfWeek value="wed"/>
+		<daysOfWeek value="thu"/> 
+		<daysOfWeek value="fri"/> 
+		<availableStartTime value="08:30:00"/> 
+		<availableEndTime value="17:30:00"/> 
+	</availableTime> 	
+	</HealthcareService>

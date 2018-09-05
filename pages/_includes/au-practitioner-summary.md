@@ -7,3 +7,4 @@ This profile contains the following variations from [Practitioner](http://hl7.or
    * zero or more AHPRA Qualificiation Details slice
 1. zero or more <span style='color:green'>qualification.code.coding</span> AHPRA role coding sliced
    * zero or more ANZSCO coded role slice
+1. zero or more <span style='color:green'>communication</span> 
