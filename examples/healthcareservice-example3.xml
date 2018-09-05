@@ -1,0 +1,46 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+	<id value="example3"/>			
+	<providedBy> 
+		<reference value="Organization/example3"/> 
+		<display value="Devonport Clinic"/> 
+	</providedBy> 	
+	<category> 
+		<coding> 
+			<system value="http://hl7.org/fhir/service-category"/> 
+			<code value="17"/> 
+			<display value="General Practice"/> 
+		</coding>
+	</category> 
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="700232004"/>
+			<display value="General medical service"/>
+		</coding>		
+	</specialty>
+	<location>
+		<reference value="Location/example3"/>
+	</location>
+	<name value="Devenport Clinic"/> 
+	<telecom>
+		<system value="phone"/>
+		<value value="(03) 8543 5555"/>
+		<use value="work"/>
+	</telecom>
+	<availableTime> 
+		<daysOfWeek value="mon"/> 
+		<daysOfWeek value="tue"/> 
+		<daysOfWeek value="wed"/>
+		<daysOfWeek value="thu"/> 
+		<daysOfWeek value="fri"/> 
+		<availableStartTime value="08:30:00"/> 
+		<availableEndTime value="17:30:00"/> 
+	</availableTime> 	
+	<notAvailable> 
+		<description value="Boxing Day"/> 
+		<during> 
+			<start value="2019-12-26T00:01:00+10:00"/> 
+			<end value="2019-12-26T23:59:00+10:00"/> 
+		</during>  
+	</notAvailable> 
+	</HealthcareService>
