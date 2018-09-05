@@ -4,7 +4,10 @@ This profile defines a medication statement information structure including core
 
 #### Extensions
 Extensions used in this profile:
-* MedicationStatement: medication-long-term [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-long-term){:target="_blank"}
+* MedicationStatement: Long Term [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-long-term)
+* MedicationStatement.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
+
+
 
 **Examples**
 
