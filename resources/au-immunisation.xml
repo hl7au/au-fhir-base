@@ -67,15 +67,13 @@
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
-      <short value="AU Base Patient" />
-      <type>
+       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </type>
     </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
-      <short value="AU Base Organisation (vaccine manufacturer)" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
@@ -135,7 +133,7 @@
     </element>
     <element id="Immunization.practitioner:administeredBy.actor">
       <path value="Immunization.practitioner.actor" />
-      <short value="AU Base Practitioner (administered by)" />
+      <short value="Administering practitioner" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
@@ -171,7 +169,7 @@
     </element>
     <element id="Immunization.practitioner:approvedBy.actor">
       <path value="Immunization.practitioner.actor" />
-      <short value="AU Base Practitioner (approving practitioner)" />
+      <short value="Approving practitioner" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
@@ -179,8 +177,7 @@
     </element>
     <element id="Immunization.explanation">
       <path value="Immunization.explanation" />
-      <short value="Reasons for (Non)Immunisation" />
-    </element>
+     </element>
     <element id="Immunization.explanation.reasonNotGiven">
       <path value="Immunization.explanation.reasonNotGiven" />
       <short value="Reason immunisation did not occur" />
@@ -226,7 +223,7 @@
     <element id="Immunization.vaccinationProtocol.doseStatus.coding:notAvailable">
       <path value="Immunization.vaccinationProtocol.doseStatus.coding"/>
       <sliceName value="doseStatusNotAvailable"/>
-      <short value="Dose status not available"/>
+      <short value="Dose Status Not Available"/>
       <max value="1"/>
       <fixedCoding>
         <system value="http://hl7.org/fhir/v3/NullFlavor"/>
