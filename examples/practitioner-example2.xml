@@ -1,0 +1,49 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+	<id value="example2enlarging"/>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="EI"/>
+				<display value="Employee Number"/>
+			</coding>
+			<text value="Employee Number"/>
+		</type>
+		<system value="http://example.org/albionhospital"/>
+		<value value="45678"/>
+		<assigner>
+			<reference value="Organization/example1"/>
+			<display value="Albion Hospital"/>			
+		</assigner>
+	</identifier>
+	<name>
+		<family value="Peter"/>
+		<given value="Winslow"/>
+		<prefix value="Dr"/>
+	</name>
+	<qualification> 
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://hl7.org.au/fhir/v2/0203"/>
+					<code value="AHPRA"/>
+					<display value="Australian Health Practitioner Regulation Agency Registration Number"/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="MED0000932847"/>
+		</identifier>
+		<code> 
+			<coding> 
+				<system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/> 
+				<code value="253915"/> 
+				<display value="Pathologist"/> 
+			</coding>		
+			<text value="Pathologist"/>
+		</code> 		
+		<issuer> 
+			<display value="AHPRA"/> 
+		</issuer> 
+	</qualification>
+</Practitioner>

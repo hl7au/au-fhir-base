@@ -1,0 +1,69 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+	<id value="example1"/>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="EI"/>
+				<display value="Employee number"/>				
+			</coding>	
+			<text value="Employee number"/>
+		</type>
+		<system value="http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556"/>
+		<value value="peterwinslow44"/>		
+	</identifier>	
+	<practitioner>
+		<reference value="Practitioner/example2"/>
+	</practitioner>
+	<organization>
+		<reference value="Organization/example1"/>
+	</organization>
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="85733003"/>
+			<display value="Pathologist"/>
+		</coding>
+	</specialty>
+	<location>
+		<reference value="Location/example1"/>
+	</location>
+	<healthcareService> 
+		<reference value="HealthcareService/example1"/> 
+	</healthcareService> 
+	<telecom>
+		<system value="email"/>
+		<value value="peter.winslow@amail.com.au"/>
+		<use value="work"/>
+	</telecom>
+	<availableTime> 
+		<daysOfWeek value="mon"/> 
+		<daysOfWeek value="tue"/>
+		<daysOfWeek value="wed"/>
+		<daysOfWeek value="thu"/> 
+		<daysOfWeek value="fri"/> 
+		<availableStartTime value="08:30:00"/> 
+		<availableEndTime value="17:30:00"/> 
+	</availableTime> 
+	<notAvailable> 
+		<description value="New Years Day"/> 
+		<during> 
+			<start value="2019-01-26T00:01:00+10:00"/> 
+			<end value="2019-01-01222T23:59:00+10:00"/> 
+		</during> 
+	</notAvailable> 
+	<notAvailable> 
+		<description value="Royal Hobart Regatta"/> 
+		<during> 
+			<start value="2019-02-11T00:01:00+10:00"/> 
+			<end value="2019-02-11T23:59:00+10:00"/> 
+		</during>  
+	</notAvailable> 
+	<notAvailable> 
+		<description value="Royal Hobart Regatta"/> 
+		<during> 
+			<start value="2020-02-10T00:01:00+10:00"/> 
+			<end value="2020-02-10T23:59:00+10:00"/> 
+		</during>  
+	</notAvailable> 
+</PractitionerRole>
