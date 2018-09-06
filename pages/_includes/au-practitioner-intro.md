@@ -20,3 +20,4 @@ These definitions represent common data held in the Practitioner.qualification e
 
 [Qualified Radiologist](Practitioner-example1.html)
 
+[Qualified Pathologist](Practitioner-example2.html)
