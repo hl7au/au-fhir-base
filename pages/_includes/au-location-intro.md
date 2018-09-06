@@ -4,5 +4,5 @@
 
 [Site at 33 Slobodian Street, Albion, QLD](Location-example1.html)
 
-[Site at Sandy Bay Road, Strahan, TAS](Location-example3.html)
+[Family medicine clinic at Sandy Bay Road, Strahan, TAS](Location-example3.html)
 
