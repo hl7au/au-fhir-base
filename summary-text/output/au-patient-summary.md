@@ -23,5 +23,5 @@ This profile contains the following variations from [Patient](http://hl7.org/fhi
    *  Deceased Date Time slice
       *  Deceased Date Accuracy Indicator extension
 1. zero or more <span style='color:green'>communication</span> 
-1. zero or more <span style='color:green'>generalPractitioner</span> as AU Base Practitioner | AU Base Organisation
-1. at most one <span style='color:green'>managingOrganization</span> as AU Base Organisation
+1. zero or more <span style='color:green'>generalPractitioner</span> AU Base Practitioner | AU Base Organisation (au-practitioner \| au-organisation)
+1. at most one <span style='color:green'>managingOrganization</span> AU Base Organisation (au-organisation)
