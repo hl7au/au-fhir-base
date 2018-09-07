@@ -4,4 +4,4 @@
 
 [Site at 33 Slobodian Street, Albion, QLD](Location-example1.html)
 
-[Site with a NATA Site Number at 33 Slobodian Street, Albion, QLD](Location-example2.html)
+[Location with a NATA Site Number at 33 Slobodian Street, Albion, QLD](Location-example2.html)
