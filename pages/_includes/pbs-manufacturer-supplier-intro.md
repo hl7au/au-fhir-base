@@ -1,1 +1,1 @@
-This profile defines an organisation with a PBS-assigned code responsible for the supply of medication.
+This extension applies to the Medication resource and provides a reference to the sponsor organisation that is responsible for the supply of the medicine.
