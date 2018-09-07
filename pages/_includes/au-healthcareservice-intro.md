@@ -1,7 +1,6 @@
 **AU Base HealthcareService** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
-This profile defines a healthcare service profile for the Australian context.
-
+This profile defines a healthcare service administration details structure that includes core localisation concepts.
 
 #### Identifiers
 These definitions represent common data held in the HealthcareService.identifier element:
