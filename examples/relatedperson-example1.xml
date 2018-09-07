@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example1"/>
+  <!--<identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="MC"/>
+        <display value="Patient's Medicare Number"/>
+      </coding>
+      <text value="Medicare Number"/>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+    <value value="1234567892"/>
+    <period>
+      <end value="2019-05"/>
+    </period>
+  </identifier>-->
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/example1"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="133932002"/>
+      <display value="Carer"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Grant"/>
+    <given value="Sally"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="sgrant@amail.com.au"/>
+    <use value="work"/>
+  </telecom>
+  <gender value="female"/>
+  <address>
+		<line value="999 Astor Terrace"/>
+		<city value="Springhill"/>
+		<state value="QLD"/>
+		<postalCode value="4000"/>
+		<country value="Australia"/>
+	</address>
+</RelatedPerson>
