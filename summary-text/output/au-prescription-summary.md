@@ -25,11 +25,11 @@ This profile contains the following variations from [MedicationRequest](http://h
    *  AMT Medicinal Product slice
       *  medicationType extension
    *  MIMS Package slice
-1.  <span style='color:green'>medication[x]</span> as AU Base Medication slice
-1. exactly one <span style='color:green'>subject</span> as AU Base Patient | Patient | Group
+1.  <span style='color:green'>medication[x]</span> AU Base Medication (au-medication) slice
+1. exactly one <span style='color:green'>subject</span> AU Base Patient | Patient | Group (au-patient \| Patient \| Group)
 1. zero or more <span style='color:green'>supportingInformation</span>  sliced
-1. at most one <span style='color:green'>supportingInformation</span> as Observation of body height slice
-1. at most one <span style='color:green'>supportingInformation</span> as Observation of body weight slice
+1. at most one <span style='color:green'>supportingInformation</span> Observation of body height (au-bodyheight) slice
+1. at most one <span style='color:green'>supportingInformation</span> Observation of body weight (au-bodyweight) slice
 1. at most one <span style='color:green'>authoredOn</span> Created date
 1. at most one <span style='color:green'>requester</span> 
 1. at most one <span style='color:green'>recorder</span> 
@@ -37,4 +37,4 @@ This profile contains the following variations from [MedicationRequest](http://h
 1. zero or more <span style='color:green'>dosageInstruction</span> 
 1. at most one <span style='color:green'>dispenseRequest</span> Requested dispensing
 1. at most one <span style='color:green'>substitution</span> Brand substitution details
-1. at most one <span style='color:green'>priorPrescription</span> as A prescription that is being replaced
+1. at most one <span style='color:green'>priorPrescription</span> A prescription that is being replaced (au-prescription)

@@ -5,8 +5,8 @@ This profile contains the following variations from [PractitionerRole](http://hl
    * at most one Provider at Organisation Identifier slice
    * at most one Care Agency Employee Identifier slice
    * zero or more Employee Number slice
-1. at most one <span style='color:green'>practitioner</span> as AU Base Practitioner
-1. at most one <span style='color:green'>organization</span> as AU Base Organisation
+1. at most one <span style='color:green'>practitioner</span> AU Base Practitioner (au-practitioner)
+1. at most one <span style='color:green'>organization</span> AU Base Organisation (au-organisation)
 1. zero or more <span style='color:green'>specialty</span> Practitioner specialties sliced
    * zero or more SNOMED Practitioner Specialty slice
 1. at most one <span style='color:green'>location</span> Location of Provider
