@@ -60,7 +60,7 @@
       <min value="0"/>
       <max value="1"/>
     </element>
-    <element id="Dosage.asNeeded[x]">
+    <element id="Dosage.asNeeded[x]:asNeeded">
       <path value="Dosage.asNeeded[x]" />
       <sliceName value="asNeeded" />
       <short value="Coded Reason For Take &quot;as needed&quot;" />
@@ -68,7 +68,7 @@
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Dosage.asNeeded[x].coding">
+    <element id="Dosage.asNeeded[x]:asNeeded.coding">
       <path value="Dosage.asNeeded[x].coding" />
       <slicing>
         <discriminator>
@@ -78,7 +78,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Dosage.asNeeded[x].coding">
+    <element id="Dosage.asNeeded[x]:asNeeded.coding:coding">
       <path value="Dosage.asNeeded[x].coding" />
       <sliceName value="snomedFinding" />
       <short value="Clinical Finding (SNOMED CT)"/>
@@ -112,7 +112,7 @@
         <rules value="open" />
       </slicing>      
     </element>
-    <element id="Dosage.route.coding">
+    <element id="Dosage.route.coding:coding">
       <path value="Dosage.route.coding" />
       <sliceName value="snomedRoute" />
       <short value="Route of Administration (SNOMED CT)"/>
@@ -135,7 +135,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Dosage.method.coding">
+    <element id="Dosage.method.coding:coding">
       <path value="Dosage.method.coding" />
       <sliceName value="snomedMethod" />
       <short value="SNOMED CT Administration Method"/>
