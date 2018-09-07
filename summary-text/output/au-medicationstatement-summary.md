@@ -21,8 +21,8 @@ This profile contains the following variations from [MedicationStatement](http:/
    *  AMT Medicinal Product slice
       *  medicationType extension
    *  MIMS Package slice
-1.  <span style='color:green'>medication[x]</span> as Medication Reference slice
-1. exactly one <span style='color:green'>subject</span> as AU Patient | Patient | Group
+1.  <span style='color:green'>medication[x]</span> Medication Reference (au-medication) slice
+1. exactly one <span style='color:green'>subject</span> AU Patient | Patient | Group (au-patient \| Patient \| Group)
 1. zero or more <span style='color:green'>reasonNotTaken</span> 
 1. zero or more <span style='color:green'>reasonNotTaken.coding</span>  sliced
    * at most one Reason Not Taken (SNOMED CT) slice
