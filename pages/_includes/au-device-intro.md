@@ -4,7 +4,7 @@ This profile defines a device administration details structure that includes cor
 
 #### Identifiers
 These definitions represent common data held in the Device.identifier element:
-* My Health Record Assigned Identity for Devices - PAI-D [<sup>[1]</sup>](http://http://ns.electronichealth.net.au/id/pcehr/paid/1.0/index.html){:target="_blank"}
+* My Health Record Assigned Identity for Devices, (formerly known as PCEHR Assigned Identity - Device) - PAI-D [<sup>[1]</sup>](http://http://ns.electronichealth.net.au/id/pcehr/paid/1.0/index.html){:target="_blank"}
 
 **Examples**
 
