@@ -1,0 +1,1 @@
+This profile defines an organisation with a PBS-assigned code responsible for the supply of medication.
