@@ -17,4 +17,4 @@ Extensions used in this profile:
 
 [Albion Hospital Radiology Service](HealthcareService-example1.html)
 
-[Devonport Family Medicine Clinic General Practitioner Service](HealthcareService-example3.html)
+[Strahan General Practitioner Services](HealthcareService-example3.html)

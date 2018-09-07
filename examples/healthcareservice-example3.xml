@@ -18,6 +18,13 @@
 			<display value="General medical service"/>
 		</coding>		
 	</specialty>
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="898309901000087102"/>
+			<display value="Travel medicine clinic service"/>
+		</coding>		
+	</specialty>
 	<location>
 		<reference value="Location/example3"/>
 	</location>
@@ -36,11 +43,10 @@
 		<availableStartTime value="08:00:00"/> 
 		<availableEndTime value="20:00:00"/> 
 	</availableTime> 	
-	<notAvailable> 
-		<description value="Boxing Day"/> 
-		<during> 
-			<start value="2019-12-26T00:01:00+10:00"/> 
-			<end value="2019-12-26T23:59:00+10:00"/> 
-		</during>  
-	</notAvailable> 
+	<availableTime> 
+		<daysOfWeek value="sat"/> 
+		<daysOfWeek value="sun"/> 		
+		<availableStartTime value="10:00:00"/> 
+		<availableEndTime value="16:00:00"/> 
+	</availableTime> 	
 	</HealthcareService>

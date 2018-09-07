@@ -13,4 +13,4 @@ These definitions represent common data held in the PractitionerRole.identifier 
 
 [Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
 
-[General Practitioner with HPI-I](PractitionerRole-example3.html)
+[General Practitioner with Medicare Provider Number](PractitionerRole-example3.html)

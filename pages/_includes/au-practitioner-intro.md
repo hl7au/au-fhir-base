@@ -20,5 +20,5 @@ These definitions represent common data held in the Practitioner.qualification e
 
 [Qualified Radiologist](Practitioner-example1.html)
 
-[Qualified General Practitioner](Practitioner-example3.html)
+[AHPRA qualified General Practitioner](Practitioner-example3.html)
 
