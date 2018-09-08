@@ -1,18 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-pbs-pharma-manufacturer" />
+  <id value="au-pbs-sponsor" />
   <meta>
-    <lastUpdated value="2018-02-20T11:37:51.072+11:00" />
+    <lastUpdated value="2018-09-08T11:37:51.072+11:00" />
   </meta>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="pa" />
-  </extension>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pbs-pharma-manufacturer" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pbs-sponsor" />
   <version value="0.1" />
   <name value="PBSSponsor" />
   <title value="PBS Sponsor" />
   <status value="draft" />
-  <date value="2017-05-11T10:23:15.934097+10:00" />
+  <date value="2018-09-08" />
   <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
@@ -21,7 +18,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Details of manufacturer/supplier of medication that is the organisation with a PBS-assigned administrative code responsible for the supply of medication." />
+  <description value="Details of PBS sponsor organisation that is responsible for the supply of products listed." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -32,7 +29,7 @@
     <element id="Organization">
       <path value="Organization" />
       <short value="A PBS sponsor for medications in an Australian healthcare context" />
-      <definition value="Sponsor organisation is responsible for the supply of medication products and is resigtered with the Pharmaceutical Benefits Scheme. Often referred to as PBS manufacturer." />
+      <definition value="Details of PBS sponsor organisation that is responsible for the supply of products resigtered with the Pharmaceutical Benefits Scheme. Often referred to as PBS manufacturer." />
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
