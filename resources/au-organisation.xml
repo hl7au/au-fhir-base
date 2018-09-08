@@ -142,7 +142,7 @@
         <key value="inv-asic-abn-length" />
         <severity value="error" />
         <human value="'ABN' must be 11 digits" />
-        <expression value="type.coding.code='ABN' and value.length()=11" />
+        <expression value="value.length()=11" />
       </constraint>
     </element>
     <element id="Organization.identifier:abn.type">
@@ -177,7 +177,7 @@
         <key value="inv-asic-acn-length" />
         <severity value="error" />
         <human value="'ACN' must be 9 digits" />
-        <expression value="type.coding.code='ACN' and value.length()=9" />
+        <expression value="value.length()=9" />
       </constraint>
     </element>
     <element id="Organization.identifier:acn.type">
@@ -212,7 +212,7 @@
         <key value="inv-asic-arbn-length" />
         <severity value="error" />
         <human value="'ARBN' must be 9 digits" />
-        <expression value="type.coding.code='ARBN' and value.length()=9" />
+        <expression value="value.length()=9" />
       </constraint>
     </element>
     <element id="Organization.identifier:arbn.type">
