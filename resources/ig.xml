@@ -7,7 +7,7 @@
   <name value="Implementation Guide Template"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-08-28"/>
+  <date value="2018-09-08"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -41,6 +41,12 @@
       <use value="work"/>
     </telecom>
   </contact>
+  <jurisdiction> 
+    <coding> 
+      <system value="urn:iso:std:iso:3166"/> 
+      <code value="AU"/> 
+    </coding> 
+  </jurisdiction> 
   <fhirVersion value="3.0.1"/>
   <package>
     <name value="base"/>
@@ -83,7 +89,7 @@
 	<resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/pbs-manufacturer-supplier"/>
+        <reference value="StructureDefinition/pbs-sponsor"/>
       </sourceReference>
     </resource>
     <resource>
@@ -131,12 +137,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/grounds-for-concurrent-supply"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/ihi-status"/>
       </sourceReference>
     </resource>
@@ -156,6 +156,12 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/dispense-number"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/composition-author-role"/>
       </sourceReference>
     </resource>
     <resource>
@@ -185,24 +191,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-relatedperson"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-composition"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-observation-age"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/medication-long-term"/>
       </sourceReference>
     </resource>
@@ -215,19 +203,25 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/pbs-item"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/mims"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/au-patient"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-observation-age"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-relatedperson"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-composition"/>
       </sourceReference>
     </resource>
     <resource>
@@ -295,12 +289,49 @@
       <sourceReference>
         <reference value="StructureDefinition/au-bodyweight"/>
       </sourceReference>
-    </resource>    <resource>
+    </resource> 
+     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/composition-author-role"/>
+        <reference value="StructureDefinition/au-pbs-sponsor"/>
       </sourceReference>
     </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-allergyintolerance"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-medication"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-prescription"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dispenserecord"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-medicationstatement"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dosage"/>
+      </sourceReference>
+    </resource>   
     <resource>
       <example value="false"/>
       <sourceReference>
@@ -353,6 +384,18 @@
       <example value="false"/>
       <sourceReference>
         <reference value="ValueSet/amt-tp-codes"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/pbs-item"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/mims"/>
       </sourceReference>
     </resource>
     <resource>
@@ -408,49 +451,13 @@
       <sourceReference>
         <reference value="CodeSystem/au-hl7v2-0203"/>
       </sourceReference>
-    </resource>
-	<resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-pbs-pharma-manufacturer"/>
-      </sourceReference>
-    </resource>
+    </resource>   
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-allergyintolerance"/>
+        <reference value="ValueSet/grounds-for-concurrent-supply"/>
       </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medication"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-prescription"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-dispenserecord"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medicationstatement"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-dosage"/>
-      </sourceReference>
-    </resource>        
+    </resource>	
     <resource>
       <example value="true"/>
       <name value="Medication Example Generic Pack"/>

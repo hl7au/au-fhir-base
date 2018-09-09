@@ -1,27 +1,29 @@
 This profile contains the following variations from [Patient](http://hl7.org/fhir/STU3/Patient):
 
-1. at most one Patient Birth Place extension
-1. at most one Patient Indigenous Status extension
-1. at most one Patient Close the Gap Registration extension
-1. at most one Patient Mother's Maiden name extension
-1. zero or more <span style='color:green'>identifier</span>  sliced
-   * at most one National Individual Health Identifier slice
-      * at most one IHI Number Status extension
-      * at most one IHI Number Record Status extension
-   * zero or more Medicare Number slice
-   * at most one DVA Number slice
-   * at most one Health Care Card Identifier slice
-   * at most one Pensioner Concession Card Identifier slice
-   * at most one Commonwealth Seniors Health Card Identifier slice
-   * zero or more Medical Record Number slice
-   * zero or more Private Health Insurance Member Number slice
-1. at most one <span style='color:green'>birthDate</span> Date of birth extended for time and accuracy indicator
-      * at most one Birth Date Accuracy Indicator extension
-      * at most one Birth Time extension
-1. at most one <span style='color:green'>deceased[x]</span>  sliced
-   *  Deceased Indicator slice
-   *  Deceased Date Time slice
-      *  Deceased Date Accuracy Indicator extension
-1. zero or more <span style='color:green'>communication</span> 
-1. zero or more <span style='color:green'>generalPractitioner</span> AU Base Practitioner | AU Base Organisation (au-practitioner \| au-organisation)
-1. at most one <span style='color:green'>managingOrganization</span> AU Base Organisation (au-organisation)
+1. zero or more <span style='color:green'> extension </span>  sliced
+  * at most one Patient Birth Place extension
+  * at most one Patient Indigenous Status extension
+  * at most one Patient Close the Gap Registration extension
+  * at most one Patient Mother's Maiden name extension
+1. zero or more <span style='color:green'> identifier </span>  sliced
+  * at most one <span style='color:green'> identifier </span> National Individual Health Identifier
+    * at most one IHI Number Status extension
+    * at most one IHI Number Record Status extension
+  * zero or more <span style='color:green'> identifier </span> Medicare Number
+  * at most one <span style='color:green'> identifier </span> DVA Number
+  * at most one <span style='color:green'> identifier </span> Health Care Card Identifier
+  * at most one <span style='color:green'> identifier </span> Pensioner Concession Card Identifier
+  * at most one <span style='color:green'> identifier </span> Commonwealth Seniors Health Card Identifier
+  * zero or more <span style='color:green'> identifier </span> Medical Record Number
+  * zero or more <span style='color:green'> identifier </span> Private Health Insurance Member Number
+1. at most one <span style='color:green'> birthDate </span> Date of birth extended for time and accuracy indicator
+    * at most one Birth Date Accuracy Indicator extension
+    * at most one Birth Time extension
+  * at most one <span style='color:green'> valueDateTime </span> 
+1. at most one <span style='color:green'> deceased[x] </span>  sliced
+  *  <span style='color:green'> deceased[x] </span> Deceased Indicator
+  *  <span style='color:green'> deceased[x] </span> Deceased Date Time
+    *  Deceased Date Accuracy Indicator extension
+1. zero or more <span style='color:green'> communication </span> 
+1. zero or more <span style='color:green'> generalPractitioner </span> Usual GP practice or practitioner (au-practitioner \| au-organisation)
+1. at most one <span style='color:green'> managingOrganization </span> Patient managing organisation (au-organisation)
