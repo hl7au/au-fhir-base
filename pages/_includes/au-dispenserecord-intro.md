@@ -4,8 +4,7 @@ This profile defines a dispense record information structure including core loca
 
 #### Identifiers
 These definitions represent common data held in the MedicationDispense.identifier element:
-* ETP Vendor Identifier
-* Local Script Number
+* Local Dispense Identifier - dispenser system identifier for this record.
 
 
 #### Extensions
