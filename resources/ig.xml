@@ -7,7 +7,7 @@
   <name value="Implementation Guide Template"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2018-08-28"/>
+  <date value="2018-09-08"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -41,9 +41,45 @@
       <use value="work"/>
     </telecom>
   </contact>
+  <jurisdiction> 
+    <coding> 
+      <system value="urn:iso:std:iso:3166"/> 
+      <code value="AU"/> 
+    </coding> 
+  </jurisdiction> 
   <fhirVersion value="3.0.1"/>
   <package>
     <name value="base"/>
+	 <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-receivingapplication"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-receivingfacility"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-assigningauthority"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/meta-source"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/encryption-certificate-pem-x509"/>
+      </sourceReference>
+    </resource>
 	<resource>
       <example value="false"/>
       <sourceReference>
@@ -53,7 +89,7 @@
 	<resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/pbs-manufacturer-supplier"/>
+        <reference value="StructureDefinition/pbs-sponsor"/>
       </sourceReference>
     </resource>
     <resource>
@@ -101,12 +137,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/grounds-for-concurrent-supply"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/ihi-status"/>
       </sourceReference>
     </resource>
@@ -126,6 +156,12 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/dispense-number"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/composition-author-role"/>
       </sourceReference>
     </resource>
     <resource>
@@ -155,24 +191,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-relatedperson"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-composition"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-observation-age"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/medication-long-term"/>
       </sourceReference>
     </resource>
@@ -185,19 +203,25 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/pbs-item"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/mims"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/au-patient"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-observation-age"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-relatedperson"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-composition"/>
       </sourceReference>
     </resource>
     <resource>
@@ -265,12 +289,49 @@
       <sourceReference>
         <reference value="StructureDefinition/au-bodyweight"/>
       </sourceReference>
-    </resource>    <resource>
+    </resource> 
+     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/composition-author-role"/>
+        <reference value="StructureDefinition/au-pbs-sponsor"/>
       </sourceReference>
     </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-allergyintolerance"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-medication"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-prescription"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dispenserecord"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-medicationstatement"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/au-dosage"/>
+      </sourceReference>
+    </resource>   
     <resource>
       <example value="false"/>
       <sourceReference>
@@ -323,6 +384,18 @@
       <example value="false"/>
       <sourceReference>
         <reference value="ValueSet/amt-tp-codes"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/pbs-item"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/mims"/>
       </sourceReference>
     </resource>
     <resource>
@@ -378,38 +451,191 @@
       <sourceReference>
         <reference value="CodeSystem/au-hl7v2-0203"/>
       </sourceReference>
-    </resource>
+    </resource>   
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-receivingapplication"/>
+        <reference value="ValueSet/grounds-for-concurrent-supply"/>
+      </sourceReference>
+    </resource>	
+    <resource>
+      <example value="true"/>
+      <name value="Medication Example Generic Pack"/>
+      <sourceReference>
+        <reference value="Medication/GenericPack0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Example Brand Pack"/>
+      <sourceReference>
+        <reference value="Medication/BrandedPack0"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Medication Example Brand Pack With Single Active Ingredient"/>      
+	  <sourceReference>
+        <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="true"/>
+      <name value="Medication Example with two active ingredients product"/>      
+      <sourceReference>
+        <reference value="Medication/TwoActiveIngredientsProduct0"/>
+      </sourceReference>
+     </resource>
+	 <resource>
+      <example value="true"/>
+      <name value="Medication Example with four or more active ingredients"/>      
+      <sourceReference>
+        <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
+      </sourceReference>
+     </resource>
+	 <resource>
+      <example value="true"/>   
+      <name value="Medication Example Brand Pack with Batch Details"/>     
+     <sourceReference>        
+        <reference value="Medication/BrandProductwithBatchDetails0"/>
+      </sourceReference>
+     </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 12 to 18 months"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-12-18months"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 12 months"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-12months"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 4 years"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-4years"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 6 months and over"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-6monthsandover"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Observation Age Value Range - 6 months to 5 years"/>
+      <description value="Shows an example Age Range of Patient"/>
+      <sourceReference>
+        <reference value="Observation/observation-age-example-6monthsto5years"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-receivingfacility"/>
+        <reference value="StructureDefinition/au-bodysite"/>
       </sourceReference>
-    </resource>
+    </resource>   
     <resource>
-      <example value="false"/>
+      <example value="true"/>
+      <name value="Immunization - non-administration"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-assigningauthority"/>
+        <reference value="Immunization/immunization-example0"/>
       </sourceReference>
     </resource>
     <resource>
-      <example value="false"/>
+      <example value="true"/>
+      <name value="Immunization administered example simple AIR Compliant"/>
       <sourceReference>
-        <reference value="StructureDefinition/meta-source"/>
+        <reference value="Immunization/immunization-example1"/>
       </sourceReference>
-    </resource>
+    </resource> 
     <resource>
-      <example value="false"/>
+      <example value="true"/>
+      <name value="Immunization administered example"/>
       <sourceReference>
-        <reference value="StructureDefinition/encryption-certificate-pem-x509"/>
+        <reference value="Immunization/immunization-example2"/>
+      </sourceReference>
+    </resource>  
+    <resource>
+      <example value="true"/>
+      <name value="AU Prescription example"/>
+      <sourceReference>
+        <reference value="MedicationRequest/medicationrequest-example0"/>
       </sourceReference>
     </resource>
     <resource>
+      <example value="true"/>
+      <name value="AU Prescription example"/>
+      <sourceReference>
+        <reference value="MedicationRequest/medicationrequest-example1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/> 
+    <name value="Practitioner as a Radiologist"/>
+      <description value="Shows a typical Practitioner as a Radiologist"/>
+      <sourceReference>
+        <reference value="Practitioner/example1"/>
+      </sourceReference>
+    </resource>    
+    <resource>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - ibuprofen allergy"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/allergyintolerance-example0"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Location of a Practitioner as a Radiologist"/>
+      <description value="Shows a typical location at which this practitioner provides care"/>
+      <sourceReference>
+        <reference value="Location/example1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Organisation of a Radiologist"/>
+      <description value="Shows a typical Organisation the Radiologist belongs to"/>
+      <sourceReference>
+        <reference value="Organization/example1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Practitioner Role as a Radiologist"/>
+      <description value="Shows a typical Practitioner Role as a Radiologist"/>
+      <sourceReference>
+        <reference value="PractitionerRole/example1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Healthcare Service of a Radiologist"/>
+      <description value="Shows a typical Healthcare Service the Radiologist belongs to"/>
+      <sourceReference>
+        <reference value="HealthcareService/example1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - egg allergy"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/allergyintolerance-example1"/>
+      </sourceReference>
+    </resource>
+	  <resource>
       <example value="true"/>
       <name value="Patient with IHI and Medicare Number"/>
       <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
@@ -646,225 +872,6 @@
       <description value="Shows a typical composition with different authors"/>
       <sourceReference>
         <reference value="Composition/composition-different-authors"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-allergyintolerance"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medication"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-prescription"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-dispenserecord"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medicationstatement"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-pbs-pharma-manufacturer"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-dosage"/>
-      </sourceReference>
-    </resource>        
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example Generic Pack"/>
-      <sourceReference>
-        <reference value="Medication/GenericPack0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example Brand Pack"/>
-      <sourceReference>
-        <reference value="Medication/BrandedPack0"/>
-      </sourceReference>
-    </resource>
-	<resource>
-      <example value="true"/>
-      <name value="Medication Example Brand Pack With Single Active Ingredient"/>      
-	  <sourceReference>
-        <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
-      </sourceReference>
-    </resource>
-	<resource>
-      <example value="true"/>
-      <name value="Medication Example with two active ingredients product"/>      
-      <sourceReference>
-        <reference value="Medication/TwoActiveIngredientsProduct0"/>
-      </sourceReference>
-     </resource>
-	 <resource>
-      <example value="true"/>
-      <name value="Medication Example with four or more active ingredients"/>      
-      <sourceReference>
-        <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
-      </sourceReference>
-     </resource>
-	 <resource>
-      <example value="true"/>   
-      <name value="Medication Example Brand Pack with Batch Details"/>     
-     <sourceReference>        
-        <reference value="Medication/BrandProductwithBatchDetails0"/>
-      </sourceReference>
-     </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 12 to 18 months"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-12-18months"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 12 months"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-12months"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 4 years"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-4years"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 6 months and over"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-6monthsandover"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 6 months to 5 years"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-6monthsto5years"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-bodysite"/>
-      </sourceReference>
-    </resource>   
-    <resource>
-      <example value="true"/>
-      <name value="Immunization - non-administration"/>
-      <sourceReference>
-        <reference value="Immunization/immunization-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Immunization administered example simple AIR Compliant"/>
-      <sourceReference>
-        <reference value="Immunization/immunization-example1"/>
-      </sourceReference>
-    </resource> 
-    <resource>
-      <example value="true"/>
-      <name value="Immunization administered example"/>
-      <sourceReference>
-        <reference value="Immunization/immunization-example2"/>
-      </sourceReference>
-    </resource>  
-    <resource>
-      <example value="true"/>
-      <name value="AU Prescription example"/>
-      <sourceReference>
-        <reference value="MedicationRequest/medicationrequest-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="AU Prescription example"/>
-      <sourceReference>
-        <reference value="MedicationRequest/medicationrequest-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/> 
-    <name value="Practitioner as a Radiologist"/>
-      <description value="Shows a typical Practitioner as a Radiologist"/>
-      <sourceReference>
-        <reference value="Practitioner/example1"/>
-      </sourceReference>
-    </resource>    
-    <resource>
-      <example value="true"/>
-      <name value="AllergyIntolerance example - ibuprofen allergy"/>
-      <sourceReference>
-        <reference value="AllergyIntolerance/allergyintolerance-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Location of a Practitioner as a Radiologist"/>
-      <description value="Shows a typical location at which this practitioner provides care"/>
-      <sourceReference>
-        <reference value="Location/example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Organisation of a Radiologist"/>
-      <description value="Shows a typical Organisation the Radiologist belongs to"/>
-      <sourceReference>
-        <reference value="Organization/example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Practitioner Role as a Radiologist"/>
-      <description value="Shows a typical Practitioner Role as a Radiologist"/>
-      <sourceReference>
-        <reference value="PractitionerRole/example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Healthcare Service of a Radiologist"/>
-      <description value="Shows a typical Healthcare Service the Radiologist belongs to"/>
-      <sourceReference>
-        <reference value="HealthcareService/example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-    <name value="AllergyIntolerance example - egg allergy"/>
-      <sourceReference>
-        <reference value="AllergyIntolerance/allergyintolerance-example1"/>
       </sourceReference>
     </resource>
 </package>

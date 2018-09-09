@@ -321,31 +321,31 @@
         <key value="inv-dva-number-unspecified" />
         <severity value="error" />
         <human value="DVA Number identifier type text must be 'DVA Number' when colour is not specified" />
-        <expression value="type.coding.exists() and type.text != 'DVA Number'" />
+        <expression value="type.coding.empty() implies type.text = 'DVA Number'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-gold" />
         <severity value="error" />
         <human value="DVA Number identifier type text must be 'DVA Number (Gold)' when colour coding is DVG" />
-        <expression value="type.coding.code='DVG' and type.text != 'DVA Number (Gold)'" />
+        <expression value="type.coding.code='DVG' implies type.text = 'DVA Number (Gold)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-white" />
         <severity value="error" />
         <human value="DVA Number identifier type text must be 'DVA Number (White)' when colour coding is DVW" />
-        <expression value="type.coding.code='DVW' and type.text != 'DVA Number (White)'" />
+        <expression value="type.coding.code='DVW' implies type.text = 'DVA Number (White)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-orange" />
         <severity value="error" />
         <human value="DVA Number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO" />
-        <expression value="type.coding.code='DVO' and type.text != 'DVA Number (Orange)'" />
+        <expression value="type.coding.code='DVO' implies type.text = 'DVA Number (Orange)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-lilac" />
         <severity value="error" />
         <human value="DVA Number identifier type text must be 'DVA Number (Lilac)' when colour coding is DVL" />
-        <expression value="type.coding.code='DVL' and type.text != 'DVA Number (Lilac)'" />
+        <expression value="type.coding.code='DVL' implies type.text = 'DVA Number (Lilac)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-text" />
@@ -850,7 +850,7 @@
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
-      <short value="AU Base Practitioner | AU Base Organisation" />
+      <short value="Usual GP practice or practitioner" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
@@ -862,7 +862,7 @@
     </element>
     <element id="Patient.managingOrganization">
       <path value="Patient.managingOrganization" />
-      <short value="AU Base Organisation" />
+      <short value="Patient managing organisation" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />

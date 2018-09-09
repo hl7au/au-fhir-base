@@ -91,14 +91,6 @@
             "base": "StructureDefinition-minimum-interval-between-repeats.html",
             "defns": "StructureDefinition-minimum-interval-between-repeats-definitions.html"
         },
-           "StructureDefinition/au-condition": {
-	          "base": "StructureDefinition-au-condition.html",
-           "defns": "StructureDefinition-au-condition-definitions.html"
-      	},
-      	"StructureDefinition/au-allergyintolerance": {
-            "base": "StructureDefinition-au-allergyintolerance.html",
-            "defns": "StructureDefinition-au-allergyintolerance-definitions.html"
-        },
         "StructureDefinition/close-the-gap-registration": {
             "base": "StructureDefinition-close-the-gap-registration.html",
             "defns": "StructureDefinition-close-the-gap-registration-definitions.html"
@@ -123,9 +115,9 @@
             "base": "StructureDefinition-grounds-for-concurrent-supply.html",
             "defns": "StructureDefinition-grounds-for-concurrent-supply-definitions.html"
         },
-		"StructureDefinition/pbs-manufacturer-supplier": {
-            "base": "StructureDefinition-pbs-manufacturer-supplier.html",
-            "defns": "StructureDefinition-pbs-manufacturer-supplier-definitions.html"
+		"StructureDefinition/pbs-sponsor": {
+            "base": "StructureDefinition-pbs-sponsor.html",
+            "defns": "StructureDefinition-pbs-sponsor-definitions.html"
         },
         "StructureDefinition/medication-type": {
             "base": "StructureDefinition-medication-type.html",
@@ -171,9 +163,29 @@
             "base": "StructureDefinition-encryption-certificate-pem-x509.html",
             "defns": "StructureDefinition-encryption-certificate-pem-x509-definitions.html"            
             },
+		 "StructureDefinition/medication-brand-name": {
+            "base": "StructureDefinition-medication-brand-name.html",
+             "defns": "StructureDefinition-medication-brand-name-definitions.html"
+            },
+       "StructureDefinition/medication-generic-name": {
+            "base": "StructureDefinition-medication-generic-name.html",
+             "defns": "StructureDefinition-medication-generic-name-definitions.html"
+            },
+		 "StructureDefinition/medication-long-term": {
+            "base": "StructureDefinition-medication-long-term.html",
+            "defns": "StructureDefinition-medication-long-term-definitions.html"
+            },
+        "StructureDefinition/medication-batch-serialnumber": {
+            "base": "StructureDefinition-medication-batch-serialnumber.html",
+            "defns": "StructureDefinition-medication-batch-serialnumber-definitions.html"
+            },
         "StructureDefinition/meta-source": {
             "base": "StructureDefinition-meta-source.html",
             "defns": "StructureDefinition-meta-source-definitions.html" 
+            },
+		"StructureDefinition/composition-author-role": {
+            "base": "StructureDefinition-composition-author-role.html",
+            "defns": "StructureDefinition-composition-author-role-definitions.html"
             },
         "StructureDefinition/au-composition": {
             "base": "StructureDefinition-au-composition.html",
@@ -183,29 +195,9 @@
             "base": "StructureDefinition-au-observation-age.html",
              "defns": "StructureDefinition-au-observation-age-definitions.html"           
             },
-        "StructureDefinition/medication-long-term": {
-            "base": "StructureDefinition-medication-long-term.html",
-            "defns": "StructureDefinition-medication-long-term-definitions.html"
-            },
-        "StructureDefinition/medication-batch-serialnumber": {
-            "base": "StructureDefinition-medication-batch-serialnumber.html",
-            "defns": "StructureDefinition-medication-batch-serialnumber-definitions.html"
-            },
-        "ValueSet/snomed-practitioner-role": {
-            "base": "Valueset-snomed-practitioner-role.html",
-            "defns": "Valueset-snomed-practitioner-role-definitions.html"
-            },
         "StructureDefinition/au-patient": {
             "base": "StructureDefinition-au-patient.html",
             "defns": "StructureDefinition-au-patient-definitions.html"
-            },
-        "CodeSystem/au-hl7v2-0203": {
-            "base": "CodeSystem-au-hl7v2-0203.html",
-            "defns": "CodeSystem-au-hl7v2-0203-definitions.html"
-            },
-        "ValueSet/au-hl7v2-0203": {
-            "base": "ValueSet-au-hl7v2-0203.html",
-            "defns": "ValueSet-au-hl7v2-0203-definitions.html"
             },
         "StructureDefinition/au-practitioner": {
             "base": "StructureDefinition-au-practitioner.html",
@@ -215,6 +207,10 @@
             "base": "StructureDefinition-au-organisation.html",
             "defns": "StructureDefinition-au-organisation-definitions.html" 
         },
+	    "StructureDefinition/au-bodysite": {
+            "base": "StructureDefinition-au-bodysite.html",
+            "defns": "StructureDefinition-au-bodysite-definitions.html"
+            },
 		"StructureDefinition/au-location": {
             "base": "StructureDefinition-au-location.html",
             "defns": "StructureDefinition-au-location-definitions.html" 
@@ -247,27 +243,43 @@
             "base": "StructureDefinition-au-practitionerrole.html",
              "defns": "StructureDefinition-au-practitionerrole-definitions.html"
             },
-        "StructureDefinition/au-pbs-pharma-manufacturer": {
-            "base": "StructureDefinition-au-pbs-pharma-manufacturer.html",
-             "defns": "StructureDefinition-au-pbs-pharma-manufacturer-definitions.html"
+        "StructureDefinition/au-pbs-sponsor": {
+            "base": "StructureDefinition-au-pbs-sponsor.html",
+             "defns": "StructureDefinition-au-pbs-sponsor-definitions.html"
             },
         "StructureDefinition/au-relatedperson": {
             "base": "StructureDefinition-au-relatedperson.html",
             "defns": "StructureDefinition-au-relatedperson-definitions.html"
             },
-        "StructureDefinition/composition-author-role": {
-            "base": "StructureDefinition-composition-author-role.html",
-            "defns": "StructureDefinition-composition-author-role-definitions.html"
-            },
         "StructureDefinition/au-dosage": {
             "base": "StructureDefinition-au-dosage.html",
             "defns": "StructureDefinition-au-dosage-definitions.html"
         },
+		"StructureDefinition/au-condition": {
+	          "base": "StructureDefinition-au-condition.html",
+           "defns": "StructureDefinition-au-condition-definitions.html"
+      	},
+      	"StructureDefinition/au-allergyintolerance": {
+            "base": "StructureDefinition-au-allergyintolerance.html",
+            "defns": "StructureDefinition-au-allergyintolerance-definitions.html"
+        },
+		 "StructureDefinition/au-bodyheight": {
+            "base": "StructureDefinition-au-bodyheight.html",
+            "defns": "StructureDefinition-au-bodyheight-definitions.html"
+            },
+        "StructureDefinition/au-bodyweight": {
+            "base": "StructureDefinition-au-bodyweight.html",
+            "defns": "StructureDefinition-au-bodyweight-definitions.html"
+            },	
+	   "StructureDefinition/au-device": {
+            "base": "StructureDefinition-au-device.html",
+            "defns": "StructureDefinition-au-device-definitions.html"
+            },  
         "CodeSystem/medication-type": {
             "base": "CodeSystem-medication-type.html",
              "defns": "CodeSystem-medication-type-definitions.html"
             },
-        "ValueSet/medication-type": {
+       "ValueSet/medication-type": {
             "base": "ValueSet-medication-type.html",
             "defns": "ValueSet-medication-type-definitions.html"
             },
@@ -283,17 +295,17 @@
             "base": "ValueSet-grounds-for-concurrent-supply.html",
             "defns": "ValueSet-grounds-for-concurrent-supply-definitions.html"
             },
-        "StructureDefinition/au-device": {
-            "base": "StructureDefinition-au-device.html",
-            "defns": "StructureDefinition-au-device-definitions.html"
+	    "ValueSet/snomed-practitioner-role": {
+            "base": "Valueset-snomed-practitioner-role.html",
+            "defns": "Valueset-snomed-practitioner-role-definitions.html"
             },
-        "StructureDefinition/au-bodyheight": {
-            "base": "StructureDefinition-au-bodyheight.html",
-            "defns": "StructureDefinition-au-bodyheight-definitions.html"
+		 "CodeSystem/au-hl7v2-0203": {
+            "base": "CodeSystem-au-hl7v2-0203.html",
+            "defns": "CodeSystem-au-hl7v2-0203-definitions.html"
             },
-        "StructureDefinition/au-bodyweight": {
-            "base": "StructureDefinition-au-bodyweight.html",
-            "defns": "StructureDefinition-au-bodyweight-definitions.html"
+        "ValueSet/au-hl7v2-0203": {
+            "base": "ValueSet-au-hl7v2-0203.html",
+            "defns": "ValueSet-au-hl7v2-0203-definitions.html"
             },
         "ValueSet/mims": {
             "base": "ValueSet-mims.html",
@@ -354,18 +366,6 @@
         "ValueSet/snomed-healthcareservice-services": {
             "base": "ValueSet-snomed-healthcareservice-services.html",
             "defns": "ValueSet-snomed-healthcareservice-services-definitions.html"
-            },
-        "StructureDefinition/medication-brand-name": {
-            "base": "StructureDefinition-medication-brand-name.html",
-             "defns": "StructureDefinition-medication-brand-name-definitions.html"
-            },
-       "StructureDefinition/medication-generic-name": {
-            "base": "StructureDefinition-medication-generic-name.html",
-             "defns": "StructureDefinition-medication-generic-name-definitions.html"
-            },
-       "StructureDefinition/au-bodysite": {
-            "base": "StructureDefinition-au-bodysite.html",
-            "defns": "StructureDefinition-au-bodysite-definitions.html"
             }
     }
 }
