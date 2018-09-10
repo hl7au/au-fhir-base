@@ -6,7 +6,7 @@ This profile contains the following variations from [MedicationDispense](http://
 1. zero or more <span style='color:green'> identifier </span>  sliced
    * zero or more <span style='color:green'> identifier </span> Local Dispense Identifier
 1. exactly one <span style='color:green'> medication[x] </span>  sliced
-   * <span style='color:green'> medication[x] </span> Coded medocation
+   * <span style='color:green'> medication[x] </span> Coded medication
    * <span style='color:green'> coding </span> Medication PBS coding (ignore item context)
    * <span style='color:green'> coding </span> Medication Package GTIN
    * <span style='color:green'> coding </span> AMT Trade Product Pack
