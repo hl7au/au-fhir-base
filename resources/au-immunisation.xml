@@ -64,6 +64,7 @@
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
+	  <short value="Immunised patient" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
@@ -71,6 +72,8 @@
     </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
+	  <short value="Vaccine product manufacturer" />
+	  <definition value="Physical vaccine product administered manufacturer."/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
@@ -217,7 +220,7 @@
     <element id="Immunization.explanation.reasonNotGiven.coding:snomedReasonCode">
       <path value="Immunization.explanation.reasonNotGiven.coding" />
       <sliceName value="snomedReasonCode" />
-      <short value="Coded Reason (SNOMED CT)" />
+      <short value="Coded reason (SNOMED CT)" />
       <binding>
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
