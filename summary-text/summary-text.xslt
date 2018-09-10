@@ -11,12 +11,12 @@
     
     <xsl:variable name="isextension" select="$parts[count($parts)]= 'extension' and not(f:slicing)"/>
     <xsl:if test="$isextension"><xsl:text>
-</xsl:text><xsl:if test="count($parts) > 2"><xsl:text>&#x20;&#x20;</xsl:text></xsl:if>&#x20;&#x20;* <xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/><xsl:text> </xsl:text><xsl:if test="not(f:short)"><xsl:value-of select="f:sliceName/@value"/></xsl:if>  <xsl:value-of select="f:short/@value"/> extension</xsl:if>
+</xsl:text><xsl:if test="count($parts) > 2"><xsl:text>&#x20;&#x20;&#x20;</xsl:text></xsl:if>* <xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/><xsl:text> </xsl:text><xsl:if test="not(f:short)"><xsl:value-of select="f:sliceName/@value"/></xsl:if>  <xsl:value-of select="f:short/@value"/> extension</xsl:if>
     <xsl:if test="not($isextension) and (count($parts)=2 or f:sliceName)">
       <xsl:variable name="isslice" select="f:sliceName"/>
       <xsl:if test="$isslice">
 <xsl:text>
-&#x20;&#x20;</xsl:text>* </xsl:if><xsl:if test="not($isslice)">
+</xsl:text>* </xsl:if><xsl:if test="not($isslice)">
 1. </xsl:if><xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/><xsl:text> </xsl:text>&lt;span style='color:green'&gt; <xsl:value-of select="$parts[count($parts)]"/> &lt;/span&gt; <xsl:value-of select="f:short/@value"/>
 <xsl:if test="f:type/f:code/@value='Reference' and not(f:slicing)"> (<xsl:for-each select="f:type[f:code/@value='Reference' and f:targetProfile]"><xsl:if test="position()!=1"> \| </xsl:if><xsl:value-of select="tokenize(f:targetProfile/@value, '/')[position()=last()]"/></xsl:for-each>)</xsl:if>
 <xsl:if test="f:slicing"> sliced</xsl:if>

@@ -10,19 +10,19 @@ This profile contains the following variations from [MedicationDispense](http://
 *  <span style='color:green'> coding </span> Medication PBS coding (ignore item context)
 *  <span style='color:green'> coding </span> Medication Package GTIN
 *  <span style='color:green'> coding </span> AMT Trade Product Pack
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> AMT Medicinal Product Pack
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> AMT Containered Trade Product Pack
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> AMT Trade Product Unit of Use
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> AMT Medicinal Product Unit of Use
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> AMT Trade Product
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> AMT Medicinal Product
-  *  Type of medication coding extension
+   *  Type of medication coding extension
 *  <span style='color:green'> coding </span> MIMS Package
 *  <span style='color:green'> medication[x] </span> AU Base Medication (au-medication)
 1. at most one <span style='color:green'> subject </span> Subject of dispened medication (au-patient \| Group)
