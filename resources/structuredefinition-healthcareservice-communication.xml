@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="healthcareservice-communication" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-communication" />
+  <name value="HealthcareServiceCommunication" />
+  <title value="HealthcareS Service Communication" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="HealthcareService" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Healthcare Service Communication" />
+      <definition value="Communication languages support the healthcare service can provide" />
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-communication" />
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept">
+      <path value="Extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
