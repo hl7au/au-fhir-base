@@ -16,4 +16,4 @@ Extensions used in this profile:
 
 **Examples**
 
-[Carer for a patient](RelatedPerson-example1.html)
+[Carer Mary Smith](RelatedPerson-example1.html)
