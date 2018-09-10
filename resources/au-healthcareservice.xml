@@ -50,6 +50,18 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail" />
       </type>
     </element>
+    <element id="HealthcareService.extension:communication">
+      <path value="HealthcareService.extension" />
+      <sliceName value="communication" />
+      <short value="Healthcare service communication languages" />
+      <definition value="Communication languages support the healthcare service can provide" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-communication" />
+      </type>
+    </element>
     <element id="HealthcareService.identifier">
       <path value="HealthcareService.identifier" />
       <slicing>
@@ -115,8 +127,7 @@
     <element id="HealthcareService.identifier:hpio.system">
       <path value="HealthcareService.identifier.system" />
       <short value="Namespace URI for HPI-O" />
-      <definition
-        value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000" />
+      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0" />
     </element>
@@ -144,9 +155,7 @@
         <key value="inv-hpio-2" />
         <severity value="error" />
         <human value="The HPI-O Identifier shall pass the Luhn algorithm check" />
-        <expression
-          value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)"
-         />
+        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
     <element id="HealthcareService.providedBy">
@@ -158,7 +167,6 @@
     </element>
     <element id="HealthcareService.specialty">
       <path value="HealthcareService.specialty" />
-	  <short value="Healthcare service specialty SNOMED CT" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -171,6 +179,7 @@
     <element id="HealthcareService.specialty:snomedRole">
       <path value="HealthcareService.specialty" />
       <sliceName value="snomedRole" />
+      <short value="Healthcare service specialty SNOMED CT" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="service-specialty" />
