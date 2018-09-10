@@ -24,7 +24,7 @@ This profile contains the following variations from [MedicationDispense](http://
    * <span style='color:green'> coding </span> AMT Medicinal Product
       * Type of medication coding extension
    * <span style='color:green'> coding </span> MIMS Package
-   * <span style='color:green'> medication[x] </span> AU Base Medication (Reference as: au-medication)
+   * <span style='color:green'> medication[x] </span> Dispensed medication (Reference as: au-medication)
 1. at most one <span style='color:green'> subject </span> Subject of dispened medication (Reference as: au-patient \| Group)
 1. zero or more <span style='color:green'> authorizingPrescription </span>  (Reference as: au-prescription)
 1. zero or more <span style='color:green'> receiver </span>  (Reference as: au-patient \| au-practitioner)

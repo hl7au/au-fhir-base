@@ -25,7 +25,7 @@ This profile contains the following variations from [MedicationRequest](http://h
    * <span style='color:green'> coding </span> AMT Medicinal Product
       * Type of medication coding extension
    * <span style='color:green'> coding </span> MIMS Package
-   * <span style='color:green'> medication[x] </span> AU Base Medication (Reference as: au-medication)
+   * <span style='color:green'> medication[x] </span> Prescribed medication (Reference as: au-medication)
 1. exactly one <span style='color:green'> subject </span> Subject of Prescription (Reference as: au-patient \| Group)
 1. zero or more <span style='color:green'> supportingInformation </span>  sliced
    * at most one <span style='color:green'> supportingInformation </span> Observation of body height (Reference as: au-bodyheight)

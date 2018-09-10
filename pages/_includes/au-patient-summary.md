@@ -19,7 +19,6 @@ This profile contains the following variations from [Patient](http://hl7.org/fhi
 1. at most one <span style='color:green'> birthDate </span> Date of birth extended for time and accuracy indicator
       * at most one Birth Date Accuracy Indicator extension
       * at most one Birth Time extension
-   * at most one <span style='color:green'> valueDateTime </span> 
 1. at most one <span style='color:green'> deceased[x] </span>  sliced
    * <span style='color:green'> deceased[x] </span> Deceased Indicator
    * <span style='color:green'> deceased[x] </span> Deceased Date Time
