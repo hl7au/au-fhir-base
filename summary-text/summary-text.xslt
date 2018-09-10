@@ -11,13 +11,13 @@
     
     <xsl:variable name="isextension" select="$parts[count($parts)]= 'extension' and not(f:slicing)"/>
     <xsl:if test="$isextension"><xsl:text>
-</xsl:text><xsl:if test="count($parts) > 2"><xsl:text>&#x20;&#x20;&#x20;</xsl:text></xsl:if>&#x20;&#x20;* <xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/><xsl:text> </xsl:text><xsl:if test="not(f:short)"><xsl:value-of select="f:sliceName/@value"/></xsl:if>  <xsl:value-of select="f:short/@value"/> extension</xsl:if>
+</xsl:text><xsl:if test="count($parts) > 2"><xsl:text>&#x20;&#x20;&#x20;</xsl:text></xsl:if>&#x20;&#x20;&#x20;* <xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/><xsl:if test="not(f:short)"><xsl:value-of select="f:sliceName/@value"/></xsl:if>  <xsl:value-of select="f:short/@value"/> extension</xsl:if>
     <xsl:if test="not($isextension) and (count($parts)=2 or f:sliceName)">
       <xsl:variable name="isslice" select="f:sliceName"/>
       <xsl:if test="$isslice">
 <xsl:text>
-</xsl:text>&#x20;&#x20;* </xsl:if><xsl:if test="not($isslice)">
-1. </xsl:if><xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/><xsl:text> </xsl:text>&lt;span style='color:green'&gt; <xsl:value-of select="$parts[count($parts)]"/> &lt;/span&gt; <xsl:value-of select="f:short/@value"/>
+</xsl:text>&#x20;&#x20;&#x20;* </xsl:if><xsl:if test="not($isslice)">
+1. </xsl:if><xsl:apply-templates select="//f:snapshot/f:element[@id = $idvalue]" mode="card"/>&lt;span style='color:green'&gt; <xsl:value-of select="$parts[count($parts)]"/> &lt;/span&gt; <xsl:value-of select="f:short/@value"/>
 <xsl:if test="f:type/f:code/@value='Reference' and not(f:slicing)"> (Reference as: <xsl:for-each select="f:type[f:code/@value='Reference' and f:targetProfile]"><xsl:if test="position()!=1"> \| </xsl:if><xsl:value-of select="tokenize(f:targetProfile/@value, '/')[position()=last()]"/></xsl:for-each>)</xsl:if>
 <xsl:if test="f:slicing"> sliced</xsl:if>
     </xsl:if>
@@ -28,6 +28,7 @@
      <xsl:if test="f:min/@value='0' and f:max/@value!='1' and f:max/@value!='*'">zero to <xsl:value-of select="f:max/@value"/></xsl:if>
      <xsl:if test="(f:min/@value='1' and f:max/@value='1') or (not(f:max) and not(f:min))">exactly one</xsl:if>
      <xsl:if test="f:min/@value='1' and f:max/@value='*'">one or more</xsl:if>
-     <xsl:if test="f:min/@value='1' and f:max/@value!='1' and f:max/@value!='*'">one to <xsl:value-of select="f:max/@value"/></xsl:if>     
+     <xsl:if test="f:min/@value='1' and f:max/@value!='1' and f:max/@value!='*'">one to <xsl:value-of select="f:max/@value"/></xsl:if>    
+     <xsl:text> </xsl:text> 
   </xsl:template>
 </xsl:stylesheet>
