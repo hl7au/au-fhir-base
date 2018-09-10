@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example1"/>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/example1"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="133932002"/>
+      <display value="Carer"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Smith"/>
+    <given value="Mary"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="msmith@example.amail.com.au"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="(02)01234567"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="female"/>
+  <address>
+		<line value="255 Gadsby Street"/>
+		<city value="Blacktown"/>
+		<state value="NSW"/>
+		<postalCode value="2148"/>
+		<country value="AU"/>
+	</address>
+</RelatedPerson>
