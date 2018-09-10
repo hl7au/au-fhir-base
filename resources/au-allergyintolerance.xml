@@ -47,7 +47,7 @@
     <element id="AllergyIntolerance.code.coding:snomedAllergyCode">
       <path value="AllergyIntolerance.code.coding"/>
       <sliceName value="snomedAllergyCode"/>
-      <short value="Allergy or Intolerance to Substance (SNOMED CT)"/>
+      <short value="Allergy or intolerance to substance (SNOMED CT)"/>
       <max value="1"/>
       <binding>
         <strength value="required"/>
@@ -56,6 +56,7 @@
     </element>
     <element id="AllergyIntolerance.patient">
       <path value="AllergyIntolerance.patient"/>
+	  <short value="Patient with allergy/intolerance"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
@@ -63,6 +64,7 @@
     </element>
     <element id="AllergyIntolerance.recorder">
       <path value="AllergyIntolerance.recorder"/>
+	  <short value="Condition recorded by"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
@@ -78,6 +80,7 @@
     </element>
     <element id="AllergyIntolerance.asserter">
       <path value="AllergyIntolerance.asserter"/>
+	  <short value="Condition asserted by"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>

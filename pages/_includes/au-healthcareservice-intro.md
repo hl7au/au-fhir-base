@@ -15,3 +15,5 @@ Extensions used in this profile:
 [HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
 
 [Albion Hospital Radiology Service](HealthcareService-example1.html)
+
+[Strahan General Practitioner Services](HealthcareService-example3.html)

@@ -10,3 +10,5 @@ These definitions represent common data held in the Location.identifier element:
 
 [Site at 33 Slobodian Street, Albion, QLD](Location-example1.html)
 
+[Family medicine clinic at Sandy Bay Road, Strahan, TAS](Location-example3.html)
+
