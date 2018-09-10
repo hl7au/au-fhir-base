@@ -19,7 +19,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html) - dispensing details with common local coding (AMT, MIMS, GTIN, etc.) and attributes (RBS/RPBS details, grounds for concurrent supply, etc.)
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history with common local coding (AMT, MIMS, etc.) 
 * [AU Base Immunisation](StructureDefinition-au-immunisation.html) - immunisation record with common local coding 
-* [PBS Sponsor](StructureDefinition-pbs-sponsor.html) - PBS sponsor organisation (manufacturer/supplier)
+* [PBS Sponsor](StructureDefinition-au-pbs-sponsor.html) - PBS sponsor organisation (manufacturer/supplier)
 
 ## Orders and Observations Profiles
 * [AU Base Observation Age](StructureDefinition-au-observation-age.html) - record of age at a point in time
