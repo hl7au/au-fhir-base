@@ -5,9 +5,11 @@
     <lastUpdated value="2018-03-03T23:12:07.355+11:00" />
   </meta>
   <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>AU Practitioner Role</p>
-</div></text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>AU Practitioner Role</p>
+    </div>
+  </text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
   <version value="0.1" />
   <name value="AUBasePractitionerRole" />
@@ -32,8 +34,7 @@
   <differential>
     <element id="PractitionerRole">
       <path value="PractitionerRole" />
-      <short value="Australian practitioner role at a location" />
-      <definition value="Provider at a location." />
+      <short value="A practitioner in a healthcare role in an Australian healthcare context" />
     </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
@@ -231,7 +232,9 @@
         <key value="inv-caei-2" />
         <severity value="error" />
         <human value="The CAEI shall pass the Luhn algorithm check" />
-        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
+        <expression
+          value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)"
+         />
       </constraint>
     </element>
     <element id="PractitionerRole.identifier:employeeNumber">
@@ -299,7 +302,7 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
-      <short value="AU Base Practitioner" />
+      <short value="Practitioner in this role" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
@@ -307,7 +310,7 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
-      <short value="AU Base Organisation" />
+      <short value="Organisation managing this role" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
@@ -323,7 +326,6 @@
         <rules value="open" />
       </slicing>
       <short value="Practitioner specialties" />
-      <definition value="Roles which this practitioner can perform." />
     </element>
     <element id="PractitionerRole.specialty:snomedRole">
       <path value="PractitionerRole.specialty" />
@@ -343,9 +345,17 @@
     </element>
     <element id="PractitionerRole.location">
       <path value="PractitionerRole.location" />
-      <short value="Location of Provider" />
-      <definition value="Single location of provision of services for this role.  This is aligned with the use of an associated location specific Medicare Provider Number." />
-      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-location" />
+      </type>
+    </element>
+    <element id="PractitionerRole.healthcareService">
+      <path value="PractitionerRole.healthcareService" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

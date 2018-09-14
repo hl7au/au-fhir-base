@@ -5,11 +5,13 @@
     <lastUpdated value="2018-03-04T21:30:08.008+11:00" />
   </meta>
   <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>AU Practitioner</p>
-</div></text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>AU Practitioner</p>
+    </div>
+  </text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
-  <version value="0.1"/>
+  <version value="0.1" />
   <name value="AUBasePractitioner" />
   <title value="AU Base Practitioner" />
   <status value="draft" />
@@ -32,7 +34,7 @@
   <differential>
     <element id="Practitioner">
       <path value="Practitioner" />
-      <short value="Australian Practitioner" />
+      <short value="A practitioner in an Australian healthcare context" />
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
@@ -100,7 +102,8 @@
     <element id="Practitioner.identifier:hpii.system">
       <path value="Practitioner.identifier.system" />
       <short value="national namespace for hpi-i" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Providier Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000" />
+      <definition
+        value="This namespace is used for qualified identifiers to represent Healthcare Providier Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
     </element>
@@ -130,7 +133,9 @@
         <requirements value="The HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm check" />
-        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
+        <expression
+          value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)"
+         />
       </constraint>
     </element>
     <element id="Practitioner.identifier:prescriberNumber">
@@ -205,6 +210,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Practitioner.qualification.issuer">
+      <path value="Practitioner.qualification.issuer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration">
       <path value="Practitioner.qualification" />
@@ -305,6 +317,10 @@
     <element id="Practitioner.qualification:ahpraRegistration.issuer">
       <path value="Practitioner.qualification.issuer" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.issuer.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

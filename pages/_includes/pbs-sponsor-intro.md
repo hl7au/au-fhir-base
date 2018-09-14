@@ -1,0 +1,1 @@
+This extension applies to the Medication resource and provides a reference to the sponsor organisation that is responsible for the supply of the medicine.

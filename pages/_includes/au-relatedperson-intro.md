@@ -13,3 +13,9 @@ These definitions represent common data held in the RelatedPerson.identifier ele
 Extensions used in this profile:
 * RelatedPerson.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
 * RelatedPerson.identifier(IHI): IHI Record Status [<sup>[1]</sup>](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)
+
+**Examples**
+
+[Benedicte du Marche as a next of kin](RelatedPerson-example0.html)
+
+[Mary Smith as a carer](RelatedPerson-example1.html)

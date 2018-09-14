@@ -1,15 +1,15 @@
 This profile contains the following variations from [RelatedPerson](http://hl7.org/fhir/STU3/RelatedPerson):
 
-1. zero or more <span style='color:green'>identifier</span>  sliced
-   * at most one National Individual Health Identifier slice
+1. zero or more <span style='color:green'> identifier </span>  sliced
+   * at most one <span style='color:green'> identifier </span> National Individual Health Identifier
       * at most one ihiStatus extension
       * at most one ihiRecordStatus extension
-   * zero or more Medicare Number slice
-   * at most one DVA Number slice
-   * at most one Health Care Card Identifier slice
-   * at most one Pensioner Concession Card Identifier slice
-   * at most one Commonwealth Seniors Health Card Identifier slice
-   * zero or more Medical Record Number slice
-   * zero or more Private Health Insurance Member Number slice
-1. exactly one <span style='color:green'>patient</span> as AU Base Patient
-1. at most one <span style='color:green'>relationship</span> 
+   * zero or more <span style='color:green'> identifier </span> Medicare Number
+   * at most one <span style='color:green'> identifier </span> DVA Number
+   * at most one <span style='color:green'> identifier </span> Health Care Card Identifier
+   * at most one <span style='color:green'> identifier </span> Pensioner Concession Card Identifier
+   * at most one <span style='color:green'> identifier </span> Commonwealth Seniors Health Card Identifier
+   * zero or more <span style='color:green'> identifier </span> Medical Record Number
+   * zero or more <span style='color:green'> identifier </span> Private Health Insurance Member Number
+1. exactly one <span style='color:green'> patient </span> Patient record this person relates to (Reference as: au-patient)
+1. at most one <span style='color:green'> relationship </span> 

@@ -1,6 +1,6 @@
-Extension: Healthcare Service Eligibility Details
+Extension: Healthcare Service Eligibility Detail
 
-This extension applies to the HealthcareService resource and allows enhanced eligibiliy status value for a healthcare service to be recorded.
+This extension applies to the HealthcareService resource and allows enhanced eligibility status value for a healthcare service to be recorded.
 
 **Examples**
 

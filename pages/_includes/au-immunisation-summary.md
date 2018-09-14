@@ -1,18 +1,15 @@
 This profile contains the following variations from [Immunization](http://hl7.org/fhir/STU3/Immunization):
 
-1. exactly one <span style='color:green'>vaccineCode</span> Vaccine Administered
-1. zero or more <span style='color:green'>vaccineCode.coding</span>  sliced
-   * at most one AMT Vaccine slice
-   * at most one AIR Vaccine slice
-1. exactly one <span style='color:green'>patient</span> as AU Base Patient
-1. at most one <span style='color:green'>manufacturer</span> as AU Base Organisation (vaccine manufacturer)
-1. at most one <span style='color:green'>site</span> 
-1. zero or more <span style='color:green'>practitioner</span> Immunisation performer(s) sliced
-   * at most one Immunisation Administered By slice
-   * at most one Immunisation Approved By slice
-1. at most one <span style='color:green'>explanation</span> Reasons for (Non)Immunisation
-1. zero or more <span style='color:green'>explanation.reasonNotGiven.coding</span> Coded reason sliced
-   * zero or more Coded Reason (SNOMED-CT) slice
-1. zero or more <span style='color:green'>vaccinationProtocol</span> 
-1. zero or more <span style='color:green'>vaccinationProtocol.doseStatus.coding</span>  sliced
-   * at most one Dose status not available slice
+1. exactly one <span style='color:green'> vaccineCode </span> Vaccine Administered
+   * at most one <span style='color:green'> coding </span> AMT Vaccine
+   * at most one <span style='color:green'> coding </span> AIR Vaccine
+1. exactly one <span style='color:green'> patient </span> Immunised patient (Reference as: au-patient)
+1. at most one <span style='color:green'> manufacturer </span> Vaccine product manufacturer (Reference as: au-organisation)
+1. at most one <span style='color:green'> site </span> 
+1. zero or more <span style='color:green'> practitioner </span> Immunisation performer(s) sliced
+   * at most one <span style='color:green'> practitioner </span> Immunisation Administered By
+   * at most one <span style='color:green'> practitioner </span> Immunisation Approved By
+1. at most one <span style='color:green'> explanation </span> 
+   * zero or more <span style='color:green'> coding </span> Coded reason (SNOMED CT)
+1. zero or more <span style='color:green'> vaccinationProtocol </span> 
+   * at most one <span style='color:green'> coding </span> Dose Status Not Available

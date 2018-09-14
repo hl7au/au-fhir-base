@@ -1,0 +1,52 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+	<id value="example3"/>			
+	<providedBy> 
+		<reference value="Organization/example3"/> 
+		<display value="Devonport Family Medicine Clinic"/> 
+	</providedBy> 	
+	<category> 
+		<coding> 
+			<system value="http://hl7.org/fhir/service-category"/> 
+			<code value="17"/> 
+			<display value="General Practice"/> 
+		</coding>
+	</category> 
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="700232004"/>
+			<display value="General medical service"/>
+		</coding>		
+	</specialty>
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="898309901000087102"/>
+			<display value="Travel medicine clinic service"/>
+		</coding>		
+	</specialty>
+	<location>
+		<reference value="Location/example3"/>
+	</location>
+	<name value="General Practitioner services"/> 
+	<telecom>
+		<system value="phone"/>
+		<value value="(03) 8543 5555"/>
+		<use value="work"/>
+	</telecom>
+	<availableTime> 
+		<daysOfWeek value="mon"/> 
+		<daysOfWeek value="tue"/> 
+		<daysOfWeek value="wed"/>
+		<daysOfWeek value="thu"/> 
+		<daysOfWeek value="fri"/> 
+		<availableStartTime value="08:00:00"/> 
+		<availableEndTime value="20:00:00"/> 
+	</availableTime> 	
+	<availableTime> 
+		<daysOfWeek value="sat"/> 
+		<daysOfWeek value="sun"/> 		
+		<availableStartTime value="10:00:00"/> 
+		<availableEndTime value="16:00:00"/> 
+	</availableTime> 	
+	</HealthcareService>
