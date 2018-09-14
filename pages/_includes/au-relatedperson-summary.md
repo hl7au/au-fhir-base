@@ -11,5 +11,4 @@ This profile contains the following variations from [RelatedPerson](http://hl7.o
    * at most one <span style='color:green'> identifier </span> Commonwealth Seniors Health Card Identifier
    * zero or more <span style='color:green'> identifier </span> Medical Record Number
    * zero or more <span style='color:green'> identifier </span> Private Health Insurance Member Number
-1. exactly one <span style='color:green'> patient </span> Patient record this person relates to (Reference as: au-patient)
 1. at most one <span style='color:green'> relationship </span> 
