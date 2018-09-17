@@ -3,7 +3,7 @@ This profile contains the following variations from [Patient](http://hl7.org/fhi
 1. zero or more <span style='color:green'> extension </span>  sliced
    * at most one Patient Birth Place extension
    * at most one Patient Indigenous Status extension
-   * at most one Patient Close the Gap Registration extension
+   * at most one Patient Closing the Gap Registration extension
    * at most one Patient Mother's Maiden name extension
 1. zero or more <span style='color:green'> identifier </span>  sliced
    * at most one <span style='color:green'> identifier </span> National Individual Health Identifier
