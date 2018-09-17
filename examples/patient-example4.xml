@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example4"/>    
+ <name>
+    <family value="Stepanove"/>
+    <given value="Sasha"/>
+  </name>  
+  <telecom>
+    <system value="phone"/>
+    <value value="(03) 4455 6677"/>
+  </telecom>  
+  <gender value="female"/>
+  <birthDate value="2008-08-08"/> 
+  <address>
+		<line value="55 Sarah Street"/>
+    <city value="Strahan"/>
+    <state value="TAS"/>
+    <postalCode value="7468"/>
+		<country value="AU"/>
+	</address>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0131"/>
+        <code value="N"/>
+        <display value="Next-of-Kin"/>
+      </coding>
+    </relationship>
+    <name>
+      <family value="Stepanove"/> 
+      <given value="Savannah"/> 
+    </name>
+    <telecom>
+      <system value="phone"/> 
+      <value value="0490389999"/> 
+      <use value="mobile"/>
+    </telecom>
+  </contact>
+  <generalPractitioner>
+    <reference value="Practitioner/example3"/> 
+  </generalPractitioner>
+  <managingOrganization> 
+    <reference value="Organization/example3"/> 
+  </managingOrganization> 
+</Patient>

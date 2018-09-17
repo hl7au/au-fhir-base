@@ -30,3 +30,6 @@ Extensions used in this profile:
 [Patient with no birth date, and eligible for close the gap registration](Patient-example2.html)
 
 [Patient with BirthTime](Patient-example3.html)
+
+[Patient born in 2008](Patient-example4.html)
+
