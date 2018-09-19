@@ -300,22 +300,6 @@
       <short value="Employing organisation name" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.practitioner">
-      <path value="PractitionerRole.practitioner" />
-      <short value="Practitioner in this role" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
-      </type>
-    </element>
-    <element id="PractitionerRole.organization">
-      <path value="PractitionerRole.organization" />
-      <short value="Organisation managing this role" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
-      </type>
-    </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <slicing>
@@ -342,20 +326,6 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/snomed-practitioner-role" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="PractitionerRole.location">
-      <path value="PractitionerRole.location" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-location" />
-      </type>
-    </element>
-    <element id="PractitionerRole.healthcareService">
-      <path value="PractitionerRole.healthcareService" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
