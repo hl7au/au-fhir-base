@@ -26,6 +26,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Body Site](StructureDefinition-au-bodysite.html) - body site with local coding
 * [AU Base Body Height](StructureDefinition-au-bodyheight.html) - observation of body height
 * [AU Base Body Weight](StructureDefinition-au-bodyweight.html) - observation of body weight
+* [AU Base Head Circumference](StructureDefinition-au-headcircum.html) - observation of head circumference
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
