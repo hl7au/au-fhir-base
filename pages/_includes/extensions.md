@@ -13,7 +13,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
-* [Close The Gap Registration](StructureDefinition-close-the-gap-registration.html) - patient flag, CTG eligible
+* [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
 * [Dispense Number](StructureDefinition-dispense-number.html) - number of this dispense
 * [Grounds For Concurrent Supply Of Medication](StructureDefinition-grounds-for-concurrent-supply.html) - dispensing request/suppy record 
 * [Long Term](StructureDefinition-medication-long-term.html) - Medication long-term indicator
