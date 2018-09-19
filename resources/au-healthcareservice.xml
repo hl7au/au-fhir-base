@@ -158,13 +158,6 @@
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
-    <element id="HealthcareService.providedBy">
-      <path value="HealthcareService.providedBy" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
-      </type>
-    </element>
     <element id="HealthcareService.specialty">
       <path value="HealthcareService.specialty" />
       <slicing>
@@ -190,20 +183,6 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-services" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="HealthcareService.location">
-      <path value="HealthcareService.location" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-location" />
-      </type>
-    </element>
-    <element id="HealthcareService.coverageArea">
-      <path value="HealthcareService.coverageArea" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-location" />
-      </type>
     </element>
     <element id="HealthcareService.eligibility">
       <path value="HealthcareService.eligibility" />
