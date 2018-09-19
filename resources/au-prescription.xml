@@ -45,7 +45,7 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="groundsForConcurrentSupply" />
       <short value="Grounds for concurrent supply of medication" />
-	  <min value="0" />
+	    <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -56,6 +56,8 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="minimumIntervalBetweenRepeats" />
       <definition value="The supplied duration must pass between dispensing of repeats of the associated medication request." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/minimum-interval-between-repeats" />
@@ -247,8 +249,8 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-	  <min value="1" />
-	  <max value="1" />
+	    <min value="1" />
+	    <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
