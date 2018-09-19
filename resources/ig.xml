@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/implementationguide.xsd">
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/implementationguide.xsd">
   <id value="au-base"/>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
   <version value="0.9.3"/>
@@ -41,16 +43,16 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <jurisdiction> 
-    <coding> 
-      <system value="urn:iso:std:iso:3166"/> 
-      <code value="AU"/> 
-    </coding> 
-  </jurisdiction> 
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
   <fhirVersion value="3.0.1"/>
   <package>
     <name value="base"/>
-	 <resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-receivingapplication"/>
@@ -80,19 +82,19 @@
         <reference value="StructureDefinition/encryption-certificate-pem-x509"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/minimum-interval-between-repeats"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/pbs-sponsor"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/healthcareservice-communication"/>
@@ -157,14 +159,14 @@
       <sourceReference>
         <reference value="StructureDefinition/date-accuracy-indicator"/>
       </sourceReference>
-    </resource>	
+    </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/dispense-number"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/composition-author-role"/>
@@ -212,13 +214,13 @@
         <reference value="StructureDefinition/au-patient"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-observation-age"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-relatedperson"/>
@@ -248,7 +250,7 @@
         <reference value="StructureDefinition/au-organisation"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-location"/>
@@ -278,7 +280,7 @@
         <reference value="StructureDefinition/au-healthcareservice"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-condition"/>
@@ -295,8 +297,8 @@
       <sourceReference>
         <reference value="StructureDefinition/au-bodyweight"/>
       </sourceReference>
-    </resource> 
-     <resource>
+    </resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-pbs-sponsor"/>
@@ -337,7 +339,7 @@
       <sourceReference>
         <reference value="StructureDefinition/au-dosage"/>
       </sourceReference>
-    </resource>   
+    </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
@@ -392,7 +394,7 @@
         <reference value="ValueSet/amt-tp-codes"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="ValueSet/pbs-item"/>
@@ -457,13 +459,13 @@
       <sourceReference>
         <reference value="CodeSystem/au-hl7v2-0203"/>
       </sourceReference>
-    </resource>   
+    </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
         <reference value="ValueSet/grounds-for-concurrent-supply"/>
       </sourceReference>
-    </resource>	
+    </resource>
     <resource>
       <example value="true"/>
       <name value="Medication Example Generic Pack"/>
@@ -478,34 +480,34 @@
         <reference value="Medication/BrandedPack0"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="true"/>
-      <name value="Medication Example Brand Pack With Single Active Ingredient"/>      
-	  <sourceReference>
+      <name value="Medication Example Brand Pack With Single Active Ingredient"/>
+      <sourceReference>
         <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="true"/>
-      <name value="Medication Example with two active ingredients product"/>      
+      <name value="Medication Example with two active ingredients product"/>
       <sourceReference>
         <reference value="Medication/TwoActiveIngredientsProduct0"/>
       </sourceReference>
-     </resource>
-	 <resource>
+    </resource>
+    <resource>
       <example value="true"/>
-      <name value="Medication Example with four or more active ingredients"/>      
+      <name value="Medication Example with four or more active ingredients"/>
       <sourceReference>
         <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
       </sourceReference>
-     </resource>
-	 <resource>
-      <example value="true"/>   
-      <name value="Medication Example Brand Pack with Batch Details"/>     
-     <sourceReference>        
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Medication Example Brand Pack with Batch Details"/>
+      <sourceReference>
         <reference value="Medication/BrandProductwithBatchDetails0"/>
       </sourceReference>
-     </resource>
+    </resource>
     <resource>
       <example value="true"/>
       <name value="Observation Age Value Range - 12 to 18 months"/>
@@ -551,7 +553,7 @@
       <sourceReference>
         <reference value="StructureDefinition/au-bodysite"/>
       </sourceReference>
-    </resource>   
+    </resource>
     <resource>
       <example value="true"/>
       <name value="Immunization - non-administration"/>
@@ -565,14 +567,14 @@
       <sourceReference>
         <reference value="Immunization/immunization-example1"/>
       </sourceReference>
-    </resource> 
+    </resource>
     <resource>
       <example value="true"/>
       <name value="Immunization administered example"/>
       <sourceReference>
         <reference value="Immunization/immunization-example2"/>
       </sourceReference>
-    </resource>  
+    </resource>
     <resource>
       <example value="true"/>
       <name value="AU Prescription example"/>
@@ -588,13 +590,13 @@
       </sourceReference>
     </resource>
     <resource>
-      <example value="true"/> 
-    <name value="Practitioner as a Radiologist"/>
+      <example value="true"/>
+      <name value="Practitioner as a Radiologist"/>
       <description value="Shows a typical Practitioner as a Radiologist"/>
       <sourceReference>
         <reference value="Practitioner/example1"/>
       </sourceReference>
-    </resource>    
+    </resource>
     <resource>
       <example value="true"/>
       <name value="AllergyIntolerance example - ibuprofen allergy"/>
@@ -681,10 +683,11 @@
         <reference value="AllergyIntolerance/allergyintolerance-example1"/>
       </sourceReference>
     </resource>
-	  <resource>
+    <resource>
       <example value="true"/>
       <name value="Patient with IHI and Medicare Number"/>
-      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
+      <description
+        value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
       <sourceReference>
         <reference value="Patient/example0"/>
       </sourceReference>
@@ -692,31 +695,33 @@
     <resource>
       <example value="true"/>
       <name value="Patient with IHI and DVA Number"/>
-      <description value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
+      <description
+        value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
       <sourceReference>
         <reference value="Patient/example1"/>
       </sourceReference>
     </resource>
-	<resource>
+    <resource>
       <example value="true"/>
       <name value="Patient with no birth date, and is eligible for Closing the Gap registration"/>
       <description value="Shows a patient with the extension for indigenous Status and the extension for Closing the Gap registration, with no birth date."/>
       <sourceReference>
         <reference value="Patient/example2"/>
       </sourceReference>
-	</resource>
-	<resource>
+    </resource>
+    <resource>
       <example value="true"/>
       <name value="Patient Birth time of day of birth"/>
-	  <description value="Shows a typical patient with birth date and birth time"/>
+      <description value="Shows a typical patient with birth date and birth time"/>
       <sourceReference>
         <reference value="Patient/example3"/>
       </sourceReference>
-	</resource>
+    </resource>
     <resource>
       <example value="true"/>
       <name value="Practitioner with HPI-I and Prescriber Number"/>
-      <description value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
+      <description
+        value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
       <sourceReference>
         <reference value="Practitioner/example0"/>
       </sourceReference>
@@ -724,7 +729,8 @@
     <resource>
       <example value="true"/>
       <name value="Practitioner Role with Provider Number and ANZSCO coded role"/>
-      <description value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
+      <description
+        value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
       <sourceReference>
         <reference value="PractitionerRole/example0"/>
       </sourceReference>
@@ -740,7 +746,8 @@
     <resource>
       <example value="true"/>
       <name value="HealthcareService with HPI-O and eligibility"/>
-      <description value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
+      <description
+        value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
       <sourceReference>
         <reference value="HealthcareService/example0"/>
       </sourceReference>
@@ -763,7 +770,8 @@
     <resource>
       <example value="true"/>
       <name value="Patient Birth Date Accuracy Indicator with AAA"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
       <sourceReference>
         <reference value="Patient/DateAccuracyIndicatorAAAexample0"/>
       </sourceReference>
@@ -771,7 +779,8 @@
     <resource>
       <example value="true"/>
       <name value="Patient Birth Date Accuracy Indicator with AAU"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
       <sourceReference>
         <reference value="Patient/DateAccuracyIndicatorAAUexample1"/>
       </sourceReference>
@@ -779,7 +788,8 @@
     <resource>
       <example value="true"/>
       <name value="Patient Birth Date Accuracy Indicator with UAA"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
       <sourceReference>
         <reference value="Patient/DateAccuracyIndicatorUAAexample2"/>
       </sourceReference>
@@ -787,7 +797,8 @@
     <resource>
       <example value="true"/>
       <name value="Patient Birth Date Accuracy Indicator with UEA"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
       <sourceReference>
         <reference value="Patient/DateAccuracyIndicatorUEAexample3"/>
       </sourceReference>
@@ -795,7 +806,8 @@
     <resource>
       <example value="true"/>
       <name value="Patient Birth Date Accuracy Indicator with UUU"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
       <sourceReference>
         <reference value="Patient/DateAccuracyIndicatorUUUexample4"/>
       </sourceReference>
@@ -824,7 +836,7 @@
         <reference value="Patient/address-example2"/>
       </sourceReference>
     </resource>
-	  <resource>
+    <resource>
       <example value="true"/>
       <name value="Composition with attester party"/>
       <description value="Shows a typical composition with a related party as attester"/>
@@ -832,7 +844,7 @@
         <reference value="Composition/example0"/>
       </sourceReference>
     </resource>
-	  <resource>
+    <resource>
       <example value="true"/>
       <name value="Related person as attester party"/>
       <description value="Shows a typical related person example"/>
@@ -891,7 +903,8 @@
     <resource>
       <example value="true"/>
       <name value="Medication Statement"/>
-      <description value="Shows a typical informative example of a record of a patient's use of medication"/>
+      <description
+        value="Shows a typical informative example of a record of a patient's use of medication"/>
       <sourceReference>
         <reference value="MedicationStatement/MedicationStatementexample0"/>
       </sourceReference>
@@ -899,7 +912,8 @@
     <resource>
       <example value="true"/>
       <name value="Medication Statement"/>
-      <description value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
+      <description
+        value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
       <sourceReference>
         <reference value="MedicationStatement/MedicationStatementexample1"/>
       </sourceReference>
@@ -907,7 +921,8 @@
     <resource>
       <example value="true"/>
       <name value="Medication Statement"/>
-      <description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
+      <description
+        value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
       <sourceReference>
         <reference value="MedicationStatement/MedicationStatementexample2"/>
       </sourceReference>
@@ -915,7 +930,8 @@
     <resource>
       <example value="true"/>
       <name value="composition-multiple-information-recipients-and-author-role"/>
-      <description value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
+      <description
+        value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
       <sourceReference>
         <reference value="Composition/multiple-information-recipients-and-author-role"/>
       </sourceReference>
@@ -928,7 +944,39 @@
         <reference value="Composition/composition-different-authors"/>
       </sourceReference>
     </resource>
-</package>
+    <resource>
+      <example value="true"/>
+      <name value="Location of a Practitioner as a Pathologist"/>
+      <description value="Shows a typical location at which this practitioner provides care"/>
+      <sourceReference>
+        <reference value="Location/example2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Practitioner Role as a Pathologist"/>
+      <description value="Shows a typical Practitioner Role as a Pathologist"/>
+      <sourceReference>
+        <reference value="PractitionerRole/example2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Healthcare Service of a Pathologist"/>
+      <description value="Shows a typical Healthcare Service the Pathologist belongs to"/>
+      <sourceReference>
+        <reference value="HealthcareService/example2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <name value="Practitioner as a Pathologist"/>
+      <description value="Shows a typical Practitioner as a Pathologist"/>
+      <sourceReference>
+        <reference value="Practitioner/example2"/>
+      </sourceReference>
+    </resource>
+  </package>
   <page>
     <source value="index.html"/>
     <title value="Australian Base Profiles Implementation Guide"/>

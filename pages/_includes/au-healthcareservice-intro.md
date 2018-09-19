@@ -16,4 +16,7 @@ Extensions used in this profile:
 
 [Albion Hospital Radiology Service](HealthcareService-example1.html)
 
+[Albion Hospital Pathology Service](HealthcareService-example2.html)
+
 [Strahan General Practitioner Services](HealthcareService-example3.html)
+
