@@ -24,5 +24,3 @@ This profile contains the following variations from [Patient](http://hl7.org/fhi
    * <span style='color:green'> deceased[x] </span> Deceased Date Time
       * Deceased Date Accuracy Indicator extension
 1. zero or more <span style='color:green'> communication </span> 
-1. zero or more <span style='color:green'> generalPractitioner </span> Usual GP practice or practitioner (Reference as: au-practitioner \| au-organisation)
-1. at most one <span style='color:green'> managingOrganization </span> Patient managing organisation (Reference as: au-organisation)
