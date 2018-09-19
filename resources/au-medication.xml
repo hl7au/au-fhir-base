@@ -439,6 +439,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <max value="1"/>
       <max value="1" />
     </element>
     <element id="Medication.form.coding:snomedForm">
@@ -465,6 +466,8 @@
         <rules value="open" />
       </slicing>
       <short value="Medication ingredient" />
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
