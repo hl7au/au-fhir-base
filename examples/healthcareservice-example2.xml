@@ -1,0 +1,35 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+	<id value="example2"/>		
+	<active value="true"/>
+	<providedBy> 
+		<reference value="Organization/example1"/> 
+		<display value="Albion Hospital"/> 
+	</providedBy> 	
+	<category> 
+		<coding> 
+			<system value="http://hl7.org/fhir/service-category"/> 
+			<code value="26"/> 
+			<display value="Specialist Clinical Pathology"/> 
+		</coding>
+	</category> 
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="310074003"/>
+			<display value="Pathology service"/>
+		</coding>		
+	</specialty>
+	<location>
+		<reference value="Location/example2"/>
+	</location>
+	<name value="Albion Hospital Pathology Service"/> 
+	<availableTime> 
+		<daysOfWeek value="mon"/> 
+		<daysOfWeek value="tue"/> 
+		<daysOfWeek value="wed"/>
+		<daysOfWeek value="thu"/> 
+		<daysOfWeek value="fri"/> 
+		<availableStartTime value="08:30:00"/> 
+		<availableEndTime value="17:30:00"/> 
+	</availableTime> 	
+	</HealthcareService>

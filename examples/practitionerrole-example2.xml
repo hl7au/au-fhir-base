@@ -1,0 +1,48 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+	<id value="example2"/>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0203"/>
+				<code value="EI"/>
+				<display value="Employee number"/>				
+			</coding>	
+			<text value="Employee number"/>
+		</type>
+		<system value="http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556"/>
+		<value value="peterwinslow44"/>		
+	</identifier>	
+	<practitioner>
+		<reference value="Practitioner/example2"/>
+	</practitioner>
+	<organization>
+		<reference value="Organization/example1"/>
+	</organization>
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="85733003"/>
+			<display value="General pathologist"/>
+		</coding>
+	</specialty>
+	<location>
+		<reference value="Location/example2"/>
+	</location>
+	<healthcareService> 
+		<reference value="HealthcareService/example2"/> 
+	</healthcareService> 
+	<telecom>
+		<system value="email"/>
+		<value value="peter.winslow@amail.com.au"/>
+		<use value="work"/>
+	</telecom>
+	<availableTime> 
+		<daysOfWeek value="mon"/> 
+		<daysOfWeek value="tue"/>
+		<daysOfWeek value="wed"/>
+		<daysOfWeek value="thu"/> 
+		<daysOfWeek value="fri"/> 
+		<availableStartTime value="08:30:00"/> 
+		<availableEndTime value="17:30:00"/> 
+	</availableTime> 
+</PractitionerRole>

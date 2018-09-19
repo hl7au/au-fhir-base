@@ -15,4 +15,6 @@ These definitions represent common data held in the PractitionerRole.identifier 
 
 [Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
 
+[Pathologist with ABN-scoped employee number](PractitionerRole-example2.html)
+
 [General Practitioner with Medicare Provider Number](PractitionerRole-example3.html)
