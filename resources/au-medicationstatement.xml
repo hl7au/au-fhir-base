@@ -82,6 +82,8 @@
         <rules value="open" />
       </slicing>
       <short value="Medication Detail" />
+      <min value="1" />
+	  <max value="1" />      
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -459,6 +461,9 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
+    </element>
+    <element id="MedicationStatement.reasonNotTaken">
+      <path value="MedicationStatement.reasonNotTaken" />      
     </element>
     <element id="MedicationStatement.reasonNotTaken.coding">
       <path value="MedicationStatement.reasonNotTaken.coding" />
