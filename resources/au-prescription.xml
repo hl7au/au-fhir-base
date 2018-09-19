@@ -676,52 +676,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.asNeeded[x]">
-      <path value="MedicationRequest.dosageInstruction.asNeeded[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-	  <min value="0"/>
-	  <max value="1"/>
-    </element>
-    <element id="MedicationRequest.dosageInstruction.asNeeded[x]:asNeeded">
-      <path value="MedicationRequest.dosageInstruction.asNeeded[x]" />
-      <sliceName value="asNeeded" />
-    </element>
-    <element id="MedicationRequest.dosageInstruction.asNeeded[x]:asNeeded.coding">
-      <path value="MedicationRequest.dosageInstruction.asNeeded[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding">
-      <path value="MedicationRequest.dosageInstruction.route.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding">
-      <path value="MedicationRequest.dosageInstruction.method.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="MedicationRequest.dispenseRequest">
       <path value="MedicationRequest.dispenseRequest" />
       <short value="Requested dispensing" />
