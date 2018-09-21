@@ -33,3 +33,5 @@ Extensions used in this profile:
 
 [Patient born in 2008](Patient-example4.html)
 
+[Patient as a Mother](Patient-example5.html)
+

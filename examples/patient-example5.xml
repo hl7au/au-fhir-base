@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example5"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="MC"/>
+        <display value="Patient's Medicare Number"/>
+      </coding>
+      <text value="Medicare Number"/>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+    <value value="22968184811"/>
+    <period>
+      <end value="2022-12"/>
+    </period>
+  </identifier>
+ <name>
+   <family value="Simmons"/>
+   <given value="Sarah"/>
+  </name>  
+  <telecom>
+    <system value="phone"/>
+    <value value="(03) 4455 6677"/>
+  </telecom>  
+  <gender value="female"/>
+  <birthDate value="1977-09-07"/> 
+  <address>
+		<line value="55 Sarah Street"/>
+    <city value="Strahan"/>
+    <state value="TAS"/>
+    <postalCode value="7468"/>
+		<country value="AU"/>
+	</address>
+  <generalPractitioner>
+    <reference value="Practitioner/example3"/> 
+  </generalPractitioner>
+  <managingOrganization> 
+    <reference value="Organization/example3"/> 
+  </managingOrganization> 
+</Patient>
