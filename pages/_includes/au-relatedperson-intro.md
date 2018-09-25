@@ -19,3 +19,5 @@ Extensions used in this profile:
 [Benedicte du Marche as a next of kin](RelatedPerson-example0.html)
 
 [Mary Smith as a carer](RelatedPerson-example1.html)
+
+[Sarah Simmons as the mother of Suzanne Simmons](RelatedPerson-example2.html)
