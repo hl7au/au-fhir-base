@@ -33,5 +33,5 @@ Extensions used in this profile:
 
 [Patient born in 2008](Patient-example4.html)
 
-[Patient as a mother](Patient-example5.html)
+[Patient Sarah Simmons linked to related person Sarah Simmons](Patient-example5.html)
 
