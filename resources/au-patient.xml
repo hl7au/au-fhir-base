@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <meta>
     <lastUpdated value="2018-03-03T10:37:06.434+11:00" />
   </meta>
   <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml" />
-  </text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
   <version value="0.1" />
   <name value="AUBasePatient" />
@@ -38,9 +36,7 @@
         <key value="inv-pat-0" />
         <severity value="error" />
         <human value="If there is a birth time its date shall be the birth date" />
-        <expression
-          value="birthDate.extension.where(url='http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()"
-         />
+        <expression value="birthDate.extension.where(url='http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
       </constraint>
     </element>
     <element id="Patient.extension">
@@ -117,7 +113,6 @@
       <short value="National Individual Health Identifier" />
       <definition value="National identifier for the patient" />
       <requirements value="Identifier as assigned and available via Health Identifiers service" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:ihiNumber.extension">
       <path value="Patient.identifier.extension" />
@@ -156,7 +151,6 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for IHI" />
       <definition value="Coded identifier type for IHI" />
-      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -193,14 +187,12 @@
       </extension>
       <path value="Patient.identifier.type.text" />
       <definition value="ihi" />
-      <min value="1" />
       <fixedString value="IHI" />
     </element>
     <element id="Patient.identifier:ihiNumber.system">
       <path value="Patient.identifier.system" />
       <short value="national namespace for ihi" />
-      <definition
-        value="This namespace is used for qualified identifiers to represent Individual Healthcare Identifier (IHI) numbers. An example of the syntax of an IHI represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/ihi/1.0/8003600000000000" />
+      <definition value="This namespace is used for qualified identifiers to represent Individual Healthcare Identifier (IHI) numbers. An example of the syntax of an IHI represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/ihi/1.0/8003600000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0" />
     </element>
@@ -230,9 +222,7 @@
         <key value="inv-ihi-2" />
         <severity value="error" />
         <human value="IHI shall pass the Luhn algorithm check" />
-        <expression
-          value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)"
-         />
+        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
     <element id="Patient.identifier:medicareNumber">
@@ -244,7 +234,6 @@
     <element id="Patient.identifier:medicareNumber.type">
       <path value="Patient.identifier.type" />
       <definition value="Medicare Number assigned  to a patient" />
-      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -280,7 +269,6 @@
       </extension>
       <path value="Patient.identifier.type.text" />
       <definition value="Medicare Number descriptive text" />
-      <min value="1" />
       <fixedString value="Medicare Number" />
     </element>
     <element id="Patient.identifier:medicareNumber.system">
@@ -316,7 +304,6 @@
       <sliceName value="dvaNumber" />
       <short value="DVA Number" />
       <definition value="Department of Veterans' Affairs number" />
-      <max value="1" />
       <constraint>
         <key value="inv-dva-number-unspecified" />
         <severity value="error" />
@@ -357,7 +344,6 @@
     <element id="Patient.identifier:dvaNumber.type">
       <path value="Patient.identifier.type" />
       <definition value="DVA colour identifer type" />
-      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -388,7 +374,6 @@
       </extension>
       <path value="Patient.identifier.type.text" />
       <definition value="DVA colour coding" />
-      <min value="1" />
     </element>
     <element id="Patient.identifier:dvaNumber.system">
       <path value="Patient.identifier.system" />
@@ -414,13 +399,11 @@
       <sliceName value="healthcareCard" />
       <short value="Health Care Card Identifier" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:healthcareCard.type">
       <path value="Patient.identifier.type" />
       <short value="Health Care Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
-      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -454,7 +437,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.type.text" />
-      <min value="1" />
       <fixedString value="Health Care Card Number" />
     </element>
     <element id="Patient.identifier:healthcareCard.system">
@@ -481,13 +463,11 @@
       <sliceName value="pensionerConcessionCard" />
       <short value="Pensioner Concession Card Identifier" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:pensionerConcessionCard.type">
       <path value="Patient.identifier.type" />
       <short value="Pensioner Concession Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
-      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -521,7 +501,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.type.text" />
-      <min value="1" />
       <fixedString value="Pensioner Concession Card Number" />
     </element>
     <element id="Patient.identifier:pensionerConcessionCard.system">
@@ -548,13 +527,11 @@
       <sliceName value="commonwealthSeniorsHealthCard" />
       <short value="Commonwealth Seniors Health Card Identifier" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.type">
       <path value="Patient.identifier.type" />
       <short value="Commonwealth Seniors Health Card Identifier Type" />
       <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
-      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -588,7 +565,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.type.text" />
-      <min value="1" />
       <fixedString value="Commonwealth Seniors Health Card" />
     </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.system">
@@ -653,7 +629,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.type.text" />
-      <min value="1" />
       <fixedString value="Medical Record Number" />
     </element>
     <element id="Patient.identifier:medicalRecordNumber.system">
@@ -714,7 +689,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.type.text" />
-      <min value="1" />
       <fixedString value="Private Health Insurance Member Number" />
     </element>
     <element id="Patient.identifier:insurerNumber.value">
