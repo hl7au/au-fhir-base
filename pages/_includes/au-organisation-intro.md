@@ -14,7 +14,7 @@ These definitions represent common data held in the Organization.identifier elem
 
 [Organisation with HPI-O](Organization-example0.html)
 
-[Albion Hospital with Australian Business Number and NATA accreditation number](Organization-example1.html)
+[Albion Hospital with Australian Business Number](Organization-example1.html)
 
 [Devonport Family Medicine Clinic with Australian Business Number](Organization-example3.html)
 
