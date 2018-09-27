@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example3"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="MC"/>
+        <display value="Patient's Medicare Number"/>
+      </coding>
+      <text value="Medicare Number"/>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+    <value value="22968184812"/>
+    <period>
+      <end value="2022-12"/>
+    </period>
+  </identifier>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/example4"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/RoleCode"/>
+      <code value="FTH"/>
+      <display value="father"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Simmons"/>
+    <given value="Bill"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="billsimmons@example.amail.com.au"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="(03) 4455 6677"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1975-04-01"/>
+  <address>
+    <line value="55 Sarah Street"/>
+    <city value="Strahan"/>
+    <state value="TAS"/>
+    <postalCode value="7468"/>
+    <country value="AU"/>
+  </address>
+</RelatedPerson>
