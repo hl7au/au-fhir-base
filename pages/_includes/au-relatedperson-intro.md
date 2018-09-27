@@ -21,3 +21,5 @@ Extensions used in this profile:
 [Mary Smith as a carer](RelatedPerson-example1.html)
 
 [Sarah Simmons as the mother of Suzanne Simmons](RelatedPerson-example2.html)
+
+[Bill Simmons as a father of Suzanne Simmons](RelatedPerson-example3.html)
