@@ -5,5 +5,5 @@ This allows an endpoint entry to define a suitable certficate for use in communi
 
 The value recorded is an X509 certificate in PEM format as per [RFC7468](https://tools.ietf.org/html/rfc7468)
 
-[Endpoint with secure message extensions](Endpoint-endpoint-example0.html)
+[Endpoint with secure message extensions](Endpoint-example0.html)
 
