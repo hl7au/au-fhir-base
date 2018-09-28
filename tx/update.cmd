@@ -6,7 +6,6 @@ curl -d "@CodeSystem-mims.xml" -H "Content-Type: application/fhir+xml" -X PUT ht
 curl -d "@CodeSystem-pbs-item.xml" -H "Content-Type: application/fhir+xml" -X PUT http://tx.hl7.org.au/fhir/CodeSystem/pbs-item
  
 
-curl -d "@ValueSet-amt-codes.xml" -H "Content-Type: application/fhir+xml" -X PUT http://tx.hl7.org.au/fhir/ValueSet/amt-codes
 curl -d "@ValueSet-amt-ctpp-codes.xml" -H "Content-Type: application/fhir+xml" -X PUT http://tx.hl7.org.au/fhir/ValueSet/amt-ctpp-codes
 curl -d "@ValueSet-amt-mp-codes.xml" -H "Content-Type: application/fhir+xml" -X PUT http://tx.hl7.org.au/fhir/ValueSet/amt-mp-codes
 curl -d "@ValueSet-amt-mpp-codes.xml" -H "Content-Type: application/fhir+xml" -X PUT http://tx.hl7.org.au/fhir/ValueSet/amt-mpp-codes
