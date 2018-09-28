@@ -10,4 +10,6 @@ Example HL7v2 fields that will use this are:
 * PV1-9 Consulting Doctor (XCN) field
 * OBR-28 Result copies to (XCN)
 
+[Practitioner role with identifier including assigning authority](PractitionerRole-example4.html)
+
 
