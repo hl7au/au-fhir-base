@@ -10,5 +10,6 @@ It is recommended to include multiple codings where brand and generic medication
 This generic name can be included as an additional name representation of the generic medication and may be used in the case where no generic coded concept is available.
 
 [Medication with generic name text](Medication-BrandedPack1.html)
+[Prescription with generic name text](MedicationRequest-example2.html)
 
 
