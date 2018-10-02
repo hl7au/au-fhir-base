@@ -1,6 +1,6 @@
 **AU Device** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
-This profile defines a device administration details structure that includes core localisation concepts.
+This profile defines a device administration details structure that includes core localisation concepts for use in an Australian context.
 
 #### Identifiers
 These definitions represent common data held in the Device.identifier element:
