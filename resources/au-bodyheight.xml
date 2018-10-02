@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-bodyheight" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-bodyheight" />
@@ -11,11 +11,11 @@
     <telecom>
       <system value="url" />
       <value value="http://hl7.org.au/fhir" />
-      <use value="work"/>
+      <use value="work" />
     </telecom>
   </contact>
   <description value="Australian realm Body Height profile derived from STU3 Vital Signs Body Height profile." />
-  <copyright value="This resource contains content from LOINC™ (http://loinc.org). The LOINC Table, LOINC Table Core, LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Hierarchies, LOINC Linguistic Variants File, LOINC/RSNA Radiology Playbook, and LOINC/IEEE Medical Device Code Mapping Table are copyright © 1995-2017, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license."/>
+  <copyright value="This resource contains content from LOINC™ (http://loinc.org). The LOINC Table, LOINC Table Core, LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Hierarchies, LOINC Linguistic Variants File, LOINC/RSNA Radiology Playbook, and LOINC/IEEE Medical Device Code Mapping Table are copyright © 1995-2017, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -28,25 +28,38 @@
       <short value="An observation of body height in an Australian healthcare context" />
     </element>
     <element id="Observation.code">
-      <path value="Observation.code" />      
+      <path value="Observation.code" />
+      <short value="Required body height code" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
+      <short value="Required LOINC coding" />
       <min value="1" />
     </element>
     <element id="Observation.code.coding:BodyHeightCode">
       <path value="Observation.code.coding" />
       <sliceName value="BodyHeightCode" />
+      <short value="Body height code" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Observation.code.coding:BodyHeightCode.system">
       <path value="Observation.code.coding.system" />
+      <short value="LOINC coding system" />
       <min value="1" />
     </element>
     <element id="Observation.code.coding:BodyHeightCode.code">
       <path value="Observation.code.coding.code" />
+      <short value="Body height LOINC code" />
       <min value="1" />
-    </element>    
+    </element>
+    <element id="Observation.valueQuantity:valueQuantity">
+      <path value="Observation.valueQuantity" />
+      <sliceName value="valueQuantity" />
+    </element>
+    <element id="Observation.component.valueQuantity:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+    </element>
   </differential>
 </StructureDefinition>
