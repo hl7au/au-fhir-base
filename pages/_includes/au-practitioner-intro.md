@@ -1,12 +1,13 @@
 **AU Base Practitioner Profile** *[FMM Level [1](http://build.fhir.org/versions.html#maturity)]*
 
-This profile defines a practitioner administration details structure that includes core localisation concepts.
+This profile defines a practitioner administration details structure that includes core localisation concepts for use in an Australian context.
 
 #### Identifiers
 These definitions represent common data held in the Practitioner.identifier element:
 
 * Healthcare Provider Identifier - Individual - HPII [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpii/1.0/index.html){:target="_blank"} 
 * Prescriber Number [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/medicare-prescriber-number/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/600762){:target="_blank"}
+* Care Agency Employee Identifier [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/pcehr/caei/1.0/index.html){:target="_blank"} 
 
 #### Qualifications
 These definitions represent common data held in the Practitioner.qualification element:
