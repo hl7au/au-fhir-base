@@ -1,6 +1,6 @@
 **AU Base HealthcareService** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
-This profile defines a healthcare service administration details structure that includes core localisation concepts.
+This profile defines a healthcare service administration details structure that includes core localisation concepts for use in an Australian context.
 
 #### Identifiers
 These definitions represent common data held in the HealthcareService.identifier element:
@@ -9,6 +9,7 @@ These definitions represent common data held in the HealthcareService.identifier
 #### Extensions
 Extensions used in this profile:
 * Healthcare Service: Healthcare Service Eligibility Detail [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail){:target="_blank"}
+* Healthcare Service: Healthcare Service Communication [<sup>[2]</sup>](http://hl7.org.au/fhir/StructureDefinition/healthcareservice-communication){:target="_blank"}
 
 **Examples**
 

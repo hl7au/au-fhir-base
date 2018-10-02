@@ -6,6 +6,7 @@ These extensions have been defined for this implementation guide.
 Related to administration records such as patient, practitioner, practitioner role, health care service etc.
 * [Australian Indigenous Status](StructureDefinition-indigenous-status.html) - patient status
 * [Healthcare Service Eligibility Detail](StructureDefinition-healthcareservice-eligibility-detail.html) - multiple eligibilities 
+* [Healthcare Service Communication](StructureDefinition-healthcareservice-communication.html) - languages supported by a healthcare service
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) - accuracy description for dates
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
