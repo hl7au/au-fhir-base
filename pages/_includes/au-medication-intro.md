@@ -1,7 +1,7 @@
 **AU Base Medication** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
-This profile defines a medication information structure including core localisation concepts for Australia. 
-Wherever possible, the structure for medication information profiled here, has been aligned to the proposed R4 [Medication](http://hl7.org/fhir/2018May/medication.html). In support of alignment it is expected that value of Medication.package.content.item is the same as Medication.code; and the following elements have been profile to allow a maximum cardinality of 1:
+This profile defines a medication structure including core localisation concepts for use in an Australian context. 
+Wherever possible, the structure for medication information profiled here, has been aligned to the proposed R4 [Medication](http://hl7.org/fhir/2018May/medication.html). In support of alignment it is expected that value of Medication.package.content.item is the same as Medication.code; and the following elements have been profiled to allow a maximum cardinality of 1:
 
 * Medication.package
 * Medication.package.content
@@ -17,6 +17,8 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 Extensions used in this profile:
 * Medication: PBS Sponsor [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/pbs-manufacturer-supplier)
 * Medication.code.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
+* Medication: Medication Brand Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
+* Medication: Medication Generic Drug Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
 
 
 **Examples**
