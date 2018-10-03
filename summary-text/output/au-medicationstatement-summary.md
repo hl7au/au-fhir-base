@@ -1,4 +1,4 @@
-This profile contains the following variations from [MedicationStatement](http://hl7.org/fhir/STU3/MedicationStatement.html):
+This profile contains the following variations from [MedicationStatement](http://hl7.org/fhir/STU3/MedicationStatement):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * zero or more Medication long term indicator extension

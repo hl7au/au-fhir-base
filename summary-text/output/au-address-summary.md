@@ -1,4 +1,4 @@
-This profile contains the following variations from [Address](http://hl7.org/fhir/STU3/Address.html):
+This profile contains the following variations from [Address](http://hl7.org/fhir/STU3/Address):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * at most one noFixedAddress extension

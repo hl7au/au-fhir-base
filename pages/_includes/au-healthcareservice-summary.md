@@ -1,4 +1,4 @@
-This profile contains the following variations from [HealthcareService](http://hl7.org/fhir/STU3/HealthcareService.html):
+This profile contains the following variations from [HealthcareService](http://hl7.org/fhir/STU3/HealthcareService):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * zero or more Healthcare service eligibility detail extension

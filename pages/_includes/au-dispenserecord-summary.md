@@ -1,4 +1,4 @@
-This profile contains the following variations from [MedicationDispense](http://hl7.org/fhir/STU3/MedicationDispense.html):
+This profile contains the following variations from [MedicationDispense](http://hl7.org/fhir/STU3/MedicationDispense):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * at most one Grounds for concurrent supply of medication extension

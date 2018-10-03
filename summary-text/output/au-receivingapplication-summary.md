@@ -1,4 +1,4 @@
-This profile contains the following variations from [Extension](http://hl7.org/fhir/STU3/Extension.html):
+This profile contains the following variations from [Extension](http://hl7.org/fhir/STU3/Extension):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * at most one Application identifier extension

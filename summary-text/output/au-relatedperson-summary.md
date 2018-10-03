@@ -1,4 +1,4 @@
-This profile contains the following variations from [RelatedPerson](http://hl7.org/fhir/STU3/RelatedPerson.html):
+This profile contains the following variations from [RelatedPerson](http://hl7.org/fhir/STU3/RelatedPerson):
 
 1. zero or more <span style='color:green'> identifier </span>  sliced
    * zero or more <span style='color:green'> identifier </span> National Individual Health Identifier

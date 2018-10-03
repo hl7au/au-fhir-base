@@ -3,7 +3,7 @@
 	<xsl:output method="text"/>
 	<xsl:template match="f:StructureDefinition">
     <xsl:variable name="isprofileref" select="contains(f:baseDefinition/@value, f:type/@value)"/>
-    <xsl:result-document href="{concat(f:id/@value,'-summary.md')}" method="text">This profile contains the following variations from [<xsl:if test="$isprofileref"><xsl:value-of select="replace(f:baseDefinition/@value,'http://hl7.org/fhir/StructureDefinition/','')"/></xsl:if><xsl:if test="not($isprofileref)"><xsl:value-of select="f:type/@value"/></xsl:if>](<xsl:value-of select="replace(f:baseDefinition/@value,'http://hl7.org/fhir/StructureDefinition/','http://hl7.org/fhir/STU3/')"/><xsl:if test="$isprofileref">.html</xsl:if>):
+    <xsl:result-document href="{concat(f:id/@value,'-summary.md')}" method="text">This profile contains the following variations from [<xsl:if test="not($isprofileref)"><xsl:value-of select="replace(f:baseDefinition/@value,'http://hl7.org/fhir/StructureDefinition/','')"/></xsl:if><xsl:if test="$isprofileref"><xsl:value-of select="f:type/@value"/></xsl:if>](<xsl:value-of select="replace(f:baseDefinition/@value,'http://hl7.org/fhir/StructureDefinition/','http://hl7.org/fhir/STU3/')"/><xsl:if test="not($isprofileref)">.html</xsl:if>):
 <xsl:apply-templates select="f:differential/f:element[ fn:position() != 1]"/>
 </xsl:result-document>
  </xsl:template>

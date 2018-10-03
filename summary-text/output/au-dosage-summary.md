@@ -1,4 +1,4 @@
-This profile contains the following variations from [Dosage](http://hl7.org/fhir/STU3/Dosage.html):
+This profile contains the following variations from [Dosage](http://hl7.org/fhir/STU3/Dosage):
 
 1. zero or more <span style='color:green'> additionalInstruction </span>  sliced
    * zero or more <span style='color:green'> additionalInstruction </span> SNOMED CT Additional Instruction

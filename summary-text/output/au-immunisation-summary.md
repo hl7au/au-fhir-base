@@ -1,4 +1,4 @@
-This profile contains the following variations from [Immunization](http://hl7.org/fhir/STU3/Immunization.html):
+This profile contains the following variations from [Immunization](http://hl7.org/fhir/STU3/Immunization):
 
 1. exactly one <span style='color:green'> vaccineCode </span> Vaccine Administered
    * at most one <span style='color:green'> coding </span> AMT Vaccine

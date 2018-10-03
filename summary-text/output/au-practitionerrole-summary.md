@@ -1,4 +1,4 @@
-This profile contains the following variations from [PractitionerRole](http://hl7.org/fhir/STU3/PractitionerRole.html):
+This profile contains the following variations from [PractitionerRole](http://hl7.org/fhir/STU3/PractitionerRole):
 
 1. zero or more <span style='color:green'> identifier </span> Practitioner role identifiers sliced
    * zero or more <span style='color:green'> identifier </span> Australian provider number

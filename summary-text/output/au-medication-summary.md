@@ -1,4 +1,4 @@
-This profile contains the following variations from [Medication](http://hl7.org/fhir/STU3/Medication.html):
+This profile contains the following variations from [Medication](http://hl7.org/fhir/STU3/Medication):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * at most one PBS sponsor extension
