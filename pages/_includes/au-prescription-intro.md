@@ -3,7 +3,7 @@
 This profile defines a medication request structure including core localisation concepts for use as a prescription in an Australian context.
 
 #### Identifiers
-These definitions represent common data held in the MedicationDispense.identifier element:
+These definitions represent common data held in the MedicationRequest.identifier element:
 * Electronic Transfer of Prescription Supplier Identifier - ETP vendor system identifier 
 * Local Prescription Number - prescription system identifier for this record [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/index.html){:target="_blank"}
 
