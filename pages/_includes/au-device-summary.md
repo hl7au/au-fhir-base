@@ -1,4 +1,4 @@
-This profile contains the following variations from [Device](http://hl7.org/fhir/STU3/Device):
+This profile contains the following variations from [Device](http://hl7.org/fhir/STU3/Device.html):
 
 1. zero or more <span style='color:green'> identifier </span>  sliced
    * at most one <span style='color:green'> identifier </span> PAI-D
