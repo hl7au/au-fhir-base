@@ -2,7 +2,7 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"  xmlns:f="http://hl7.org/fhir">
 	<xsl:output method="text"/>
 	<xsl:template match="f:StructureDefinition">
-    <xsl:variable name="isprofileref" select="contains(f:type/@value, f:type/@value)"/>
+    <xsl:variable name="isprofileref" select="contains(f:baseDefinition/@value, f:type/@value)"/>
     <xsl:result-document href="{concat(f:id/@value,'-summary.md')}" method="text">This profile contains the following variations from [<xsl:if test="$isprofileref"><xsl:value-of select="replace(f:baseDefinition/@value,'http://hl7.org/fhir/StructureDefinition/','')"/></xsl:if><xsl:if test="not($isprofileref)"><xsl:value-of select="f:type/@value"/></xsl:if>](<xsl:value-of select="replace(f:baseDefinition/@value,'http://hl7.org/fhir/StructureDefinition/','http://hl7.org/fhir/STU3/')"/><xsl:if test="$isprofileref">.html</xsl:if>):
 <xsl:apply-templates select="f:differential/f:element[ fn:position() != 1]"/>
 </xsl:result-document>
