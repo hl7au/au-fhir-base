@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Australian realm Device profile." />
+  <description value="Australian realm Device profile" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -46,14 +46,14 @@
     <element id="Device.identifier:paid">
       <path value="Device.identifier" />
       <sliceName value="paid" />
-      <short value="PAI-D" />
+      <short value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D)" />
       <definition value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers. An identifier for devices which may author documents on behalf of organisations." />
       <max value="1" />
     </element>
     <element id="Device.identifier:paid.type">
       <path value="Device.identifier.type" />
-      <short value="PAI-D Identifier Type" />
-      <definition value="Element describing the type of identifier" />
+      <short value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) identifier type" />
+      <definition value="Element describing the type of identifier." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -87,13 +87,13 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Device.identifier.type.text" />
-      <short value="PAI-D Identifier Type Descriptive Text" />
-      <definition value="Descriptive text for the identifier type" />
+      <short value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) Identifier type descriptive text" />
+      <definition value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) Identifier type descriptive text." />
       <fixedString value="PAI-D" />
     </element>
     <element id="Device.identifier:paid.system">
       <path value="Device.identifier.system" />
-      <short value="The national namespace for PAI-D numbers" />
+      <short value="The national namespace for My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers" />
       <definition value="This namespace is used for qualified identifiers to represent My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/paid/1.0" />
@@ -117,7 +117,7 @@
         <key value="inv-paid-1" />
         <requirements value="The PAI-D prefix is 8003640003" />
         <severity value="error" />
-        <human value="The PAI-D prefix is 8003640003" />
+        <human value="The My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) prefix is 8003640003" />
         <expression value="startsWith('8003640003')" />
       </constraint>
       <constraint>
