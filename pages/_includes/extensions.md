@@ -42,4 +42,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
-* [Composition Author Role](Structuredefinition-composition-author-role.html) - PractitonerRole support as per R4
+* [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
