@@ -44,7 +44,7 @@
     <element id="MedicationRequest.extension:groundsForConcurrentSupply">
       <path value="MedicationRequest.extension" />
       <sliceName value="groundsForConcurrentSupply" />
-      <short value="Grounds for concurrent supply of medication" />
+      <short value="Grounds for Concurrent Supply of Medication" />
 	    <min value="0" />
       <max value="1" />
       <type>
@@ -149,19 +149,19 @@
     </element>
     <element id="MedicationRequest.identifier:etpVendorIdentifier.system">
       <path value="MedicationRequest.identifier.system" />
-      <short value="ETP Vendor Identifier System URL" />
+      <short value="ETP vendor identifier system URL" />
       <definition value="URL assigned by the ETP vendor allocating the identifier." />
       <min value="1" />
     </element>
     <element id="MedicationRequest.identifier:etpVendorIdentifier.value">
       <path value="MedicationRequest.identifier.value" />
-      <short value="ETP Vendor Identifier" />
+      <short value="ETP vendor identifier" />
       <definition value="ETP Vendor allocated identifier for the request this dispense record is fulfilling." />
       <min value="1" />
     </element>
     <element id="MedicationRequest.identifier:etpVendorIdentifier.assigner">
       <path value="MedicationRequest.identifier.assigner" />
-      <short value="ETP Vendor" />
+      <short value="ETP vendor" />
       <definition value="ETP Vendor assigning this identifier" />
       <min value="1" />
     </element>
@@ -170,7 +170,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="MedicationRequest.identifier.assigner.display" />
-      <short value="ETP Vendor Name" />
+      <short value="ETP vendor name" />
       <definition value="Name of the ETP vendor assigning this identifier." />
       <min value="1" />
     </element>
@@ -226,7 +226,7 @@
     </element>
     <element id="MedicationRequest.identifier:localScriptNumber.value">
       <path value="MedicationRequest.identifier.value" />
-      <short value="Prescription Number" />
+      <short value="Prescription number" />
       <min value="1" />
     </element>
     <element id="MedicationRequest.identifier:localScriptNumber.assigner">
@@ -262,7 +262,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded">
       <path value="MedicationRequest.medication[x]" />
       <sliceName value="medicationCoded" />
-      <short value="Coded medication" />
+      <short value="Coded Medication" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -284,7 +284,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:pbs">
       <path value="MedicationRequest.medication[x].coding" />
       <sliceName value="pbs" />
-      <short value="Medication PBS coding (ignore item context)" />
+      <short value="Medication PBS Coding (ignore item context)" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
@@ -330,7 +330,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtTPP.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -372,7 +372,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtMPP.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -414,7 +414,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtCTPP.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -456,7 +456,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtTPUU.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -497,7 +497,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtMPUU.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -538,7 +538,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtTP.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -579,7 +579,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:amtMP.extension:medicationType">
       <path value="MedicationRequest.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -610,7 +610,7 @@
     <element id="MedicationRequest.medication[x]:medicationReference">
       <path value="MedicationRequest.medication[x]" />
       <sliceName value="medicationReference" />
-      <short value="Prescribed medication" />
+      <short value="Prescribed Medication" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
@@ -630,7 +630,7 @@
     <element id="MedicationRequest.supportingInformation:bodyHeight">
       <path value="MedicationRequest.supportingInformation" />
       <sliceName value="bodyHeight" />
-      <short value="Observation of body height" />
+      <short value="Observation of Body Height" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -640,7 +640,7 @@
     <element id="MedicationRequest.supportingInformation:bodyWeight">
       <path value="MedicationRequest.supportingInformation" />
       <sliceName value="bodyWeight" />
-      <short value="Observation of body weight" />
+      <short value="Observation of Body Weight" />
       <max value="1" />
       <type>
         <code value="Reference" />
