@@ -4,11 +4,6 @@
   <meta>
     <lastUpdated value="2018-02-20T10:13:30.584+11:00"/>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">Eligibility details to allow multiple entries to exist
-      (e.g. multiple programs)</div>
-  </text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail"/>
   <version value="0.1"/>
   <name value="HealthcareServiceEligibilityDetail"/>
@@ -35,8 +30,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Healthcare Service Eligibility Detail"/>
-      <definition value="Some detail of eligibility for a healthcare service."/>
+      <short value="Healthcare service eligibility detail"/>
+      <definition value="Requirements for eligibility for a healthcare service."/>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -53,8 +48,8 @@
     <element id="Extension.extension:eligibilityCoding">
       <path value="Extension.extension"/>
       <sliceName value="eligibilityCoding"/>
-      <short value="Coding for Eligbility Type"/>
-      <definition value="Codes the type of healthcare service eligibility"/>
+      <short value="Coding of Eligibility"/>
+      <definition value="Coding of eligibility requirements for a healthcare service."/>
     </element>
     <element id="Extension.extension:eligibilityCoding.url">
       <path value="Extension.extension.url"/>
@@ -71,9 +66,9 @@
     <element id="Extension.extension:eligibilityNote">
       <path value="Extension.extension"/>
       <sliceName value="eligibilityNote"/>
-      <short value="Description of the Eligibility"/>
+      <short value="Description of Eligibility"/>
       <definition
-        value="Description of eligibility which may include details of criteria or other details."/>
+        value="Description of eligibility requirements for a healthcare service. This may include details of criteria or other details."/>
       <max value="1"/>
     </element>
     <element id="Extension.extension:eligibilityNote.url">

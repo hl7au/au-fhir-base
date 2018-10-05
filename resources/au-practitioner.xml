@@ -51,12 +51,12 @@
     <element id="Practitioner.identifier:hpii">
       <path value="Practitioner.identifier" />
       <sliceName value="hpii" />
-      <short value="HPI-I" />
-      <definition value="National identifier Healthcare Provider Identifier for Individuals" />
+      <short value="Healthcare Provider Identifier – Individual (HPI-I)" />
+      <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)."/>
     </element>
     <element id="Practitioner.identifier:hpii.type">
       <path value="Practitioner.identifier.type" />
-      <short value="HPI-I Identifier Type" />
+      <short value="Coded identifier type for HPI-I" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -65,7 +65,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="Local Identfier Type" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
@@ -73,7 +73,6 @@
     </element>
     <element id="Practitioner.identifier:hpii.type.coding">
       <path value="Practitioner.identifier.type.coding" />
-      <short value="HPI-I Identifier Type Code" />
       <max value="1" />
     </element>
     <element id="Practitioner.identifier:hpii.type.coding.system">
@@ -91,18 +90,18 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.identifier.type.text" />
-      <short value="HPI-I Identifier Type Descriptive Text" />
       <fixedString value="HPI-I" />
     </element>
     <element id="Practitioner.identifier:hpii.system">
       <path value="Practitioner.identifier.system" />
-      <short value="national namespace for hpi-i" />
+      <short value="Namespace for HPI-I" />
       <definition value="This namespace is used for qualified identifiers to represent Healthcare Providier Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
     </element>
     <element id="Practitioner.identifier:hpii.value">
       <path value="Practitioner.identifier.value" />
+	  <short value="HPI-I number" />
       <min value="1" />
       <example>
         <label value="HPI-I number" />
@@ -113,7 +112,7 @@
         <key value="inv-hpii-0" />
         <requirements value="The value shall be a 16 digit number." />
         <severity value="error" />
-        <human value="The HPI-I shall be an exactly 16 digit number" />
+        <human value="HPI-I shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
@@ -124,7 +123,7 @@
       </constraint>
       <constraint>
         <key value="inv-hpii-2" />
-        <requirements value="The HPI-I shall pass the Luhn algorithm check" />
+        <requirements value="HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
@@ -134,11 +133,11 @@
       <path value="Practitioner.identifier" />
       <sliceName value="prescriberNumber" />
       <short value="Prescriber Number" />
-      <definition value="Medicare Australia allocated prescriber number" />
+      <definition value="Medicare Australia allocated prescriber number." />
     </element>
     <element id="Practitioner.identifier:prescriberNumber.type">
       <path value="Practitioner.identifier.type" />
-      <short value="Prescriber Number Type" />
+      <short value="Coded identifier type for prescriber number" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -147,7 +146,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="Local Identifier Type" />
+        <description value="Local identifier type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
@@ -155,7 +154,6 @@
     </element>
     <element id="Practitioner.identifier:prescriberNumber.type.coding">
       <path value="Practitioner.identifier.type.coding" />
-      <short value="Prescriber Number Type Code" />
       <max value="1" />
     </element>
     <element id="Practitioner.identifier:prescriberNumber.type.coding.system">
@@ -173,31 +171,32 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.identifier.type.text" />
-      <short value="Prescriber Number Identifier Type Descriptive Text" />
       <fixedString value="Prescriber Number" />
     </element>
     <element id="Practitioner.identifier:prescriberNumber.system">
       <path value="Practitioner.identifier.system" />
-      <short value="namespace for prescriber number" />
+      <short value="Namespace for prescriber number" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-prescriber-number" />
     </element>
     <element id="Practitioner.identifier:prescriberNumber.value">
       <path value="Practitioner.identifier.value" />
+	  <short value="Prescriber number" />
       <min value="1" />
       <example>
-        <label value="Prescriber Number" />
+        <label value="prescriber number" />
         <valueString value="453221" />
       </example>
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier">
       <path value="Practitioner.identifier" />
       <sliceName value="careAgencyEmployeeIdentifier" />
-      <short value="Care Agency Employee Identifier" />
+      <short value="Care Agency Employee (CAE) Identifier" />
       <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers. " />
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type">
       <path value="Practitioner.identifier.type" />
+	  <short value="Identifier type for CAE identifier" />
       <min value="1" />
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type.text">
@@ -209,30 +208,31 @@
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.system">
       <path value="Practitioner.identifier.system" />
+	  <short value="Namespace for CAE identifier" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/caei/1.0" />
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.value">
       <path value="Practitioner.identifier.value" />
-      <short value="CAEI Number Value" />
+      <short value="CAE identifier number" />
       <min value="1" />
       <constraint>
         <key value="inv-caei-0" />
         <requirements value="The value shall be a 16 digit number." />
         <severity value="error" />
-        <human value="The CAEI shall be an exactly 16 digit number" />
+        <human value="CAE identifier shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
         <key value="inv-caei-1" />
         <severity value="error" />
-        <human value="The CAEI SHALL contain a prefix of 900360" />
+        <human value="CAE identifier shall contain a prefix of 900360" />
         <expression value="startsWith('900360')" />
       </constraint>
       <constraint>
         <key value="inv-caei-2" />
         <severity value="error" />
-        <human value="The CAEI shall pass the Luhn algorithm check" />
+        <human value="CAE identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
@@ -249,16 +249,18 @@
     <element id="Practitioner.qualification:ahpraRegistration">
       <path value="Practitioner.qualification" />
       <sliceName value="ahpraRegistration" />
-      <short value="AHPRA Qualificiation Details" />
+      <short value="Australian Health Practitioner Regulation Agency (AHPRA) Qualification Details" />
+      <definition value="Details of registration with the Australian Health Practitioner Regulation Authority (AHPRA)." />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier">
       <path value="Practitioner.qualification.identifier" />
-      <short value="AHPRA Registration Number" />
+      <short value="AHPRA registration number" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type">
       <path value="Practitioner.qualification.identifier.type" />
+      <short value="Coded identifier type for AHPRA registration number"/>
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -294,16 +296,22 @@
       </extension>
       <path value="Practitioner.qualification.identifier.type.text" />
       <min value="1" />
-      <fixedString value="AHPRA Registration Number" />
+      <fixedString value="AHPRA registration number" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.system">
       <path value="Practitioner.qualification.identifier.system" />
+      <short value="Namespace for AHPRA registration number"/>
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/ahpra-registration-number" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.value">
       <path value="Practitioner.qualification.identifier.value" />
+      <short value="AHPRA registration number"/>
       <min value="1" />
+      <example>
+        <label value="AHPRA registration number" />
+        <valueString value="ANZ1234567890" />
+      </example>      
       <constraint>
         <key value="inv-ahpra-qual-0" />
         <severity value="error" />
@@ -329,7 +337,8 @@
     <element id="Practitioner.qualification:ahpraRegistration.code.coding:anzscoCoding">
       <path value="Practitioner.qualification.code.coding" />
       <sliceName value="anzscoCoding" />
-      <short value="ANZSCO coded role" />
+      <short value="ANZSCO Coded Role" />
+      <definition value="Role coded from Australian and New Zealand Standard Classification of Occupations (ANZSCO)." />
       <binding>
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1" />

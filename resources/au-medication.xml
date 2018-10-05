@@ -47,8 +47,8 @@
     <element id="Medication.extension:pbsSponsor">
       <path value="Medication.extension" />
       <sliceName value="pbsSponsor" />
-      <short value="PBS sponsor" />
-      <definition value="This is a reference to the organisation sponsor that is responsible for the supply of the medicine." />
+      <short value="PBS Sponsor" />
+      <definition value="Reference to the sponsor organisation that is responsible for the supply of the medicine." />
       <min value="0" />
       <max value="1" />
       <type>
@@ -60,8 +60,6 @@
       <path value="Medication.extension" />
       <sliceName value="brandName" />
       <short value="Medication Brand Name" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -72,8 +70,6 @@
       <path value="Medication.extension" />
       <sliceName value="genericName" />
       <short value="Medication Generic Drug Name" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -82,7 +78,7 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code" />
-      <short value="Coding for the Medicine" />
+      <short value="Coding for the medicine" />
       <definition value="Australian coding slices are typical medicine/product concept codes.&#xD;&#xA;&#xD;&#xA;A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems." />
     </element>
     <element id="Medication.code.coding">
@@ -102,7 +98,7 @@
     <element id="Medication.code.coding:pbs">
       <path value="Medication.code.coding" />
       <sliceName value="pbs" />
-      <short value="Medication PBS coding (ignore item context)" />
+      <short value="PBS Item Code"/>
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
@@ -114,7 +110,7 @@
     <element id="Medication.code.coding:gtin">
       <path value="Medication.code.coding" />
       <sliceName value="gtin" />
-      <short value="Medication Package GTIN" />
+      <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />
@@ -148,7 +144,7 @@
     <element id="Medication.code.coding:amtTPP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -190,7 +186,7 @@
     <element id="Medication.code.coding:amtMPP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -232,7 +228,7 @@
     <element id="Medication.code.coding:amtCTPP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -274,7 +270,7 @@
     <element id="Medication.code.coding:amtTPUU.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -315,7 +311,7 @@
     <element id="Medication.code.coding:amtMPUU.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -356,7 +352,7 @@
     <element id="Medication.code.coding:amtTP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -397,7 +393,7 @@
     <element id="Medication.code.coding:amtMP.extension:medicationType">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -427,7 +423,7 @@
     </element>
     <element id="Medication.manufacturer">
       <path value="Medication.manufacturer" />
-      <short value="Physical Product Manufacturer Organisation" />
+      <short value="Physical product manufacturer organisation" />
       <definition value="Manufacturer of the actual physical medicine product" />
     </element>
     <element id="Medication.form.coding">
@@ -440,7 +436,6 @@
         <rules value="open" />
       </slicing>
       <max value="1"/>
-      <max value="1" />
     </element>
     <element id="Medication.form.coding:snomedForm">
       <path value="Medication.form.coding" />
@@ -502,7 +497,7 @@
     </element>
     <element id="Medication.ingredient.amount">
       <path value="Medication.ingredient.amount" />
-      <short value="Strength of Ingredient" />
+      <short value="Strength of ingredient" />
     </element>
     <element id="Medication.package.content">
       <path value="Medication.package.content" />

@@ -32,7 +32,7 @@
   <differential>
     <element id="Location">
       <path value="Location" />
-      <short value="A physical location in an Australian healthcare context" />
+      <short value="A location in an Australian healthcare context" />
     </element>
     <element id="Location.identifier">
       <path value="Location.identifier" />
@@ -51,26 +51,31 @@
     <element id="Location.identifier:nataSite">
       <path value="Location.identifier" />
       <sliceName value="nataSite" />
-      <short value="NATA Site Number" />
-      <definition value="Identifier of a location associated with accreditation by NATA" />
+      <short value="National Association of Testing Authorities (NATA) Site Number" />
+      <definition value="Identifier of a location associated with accreditation by National Association of Testing Authorities (NATA)." />
     </element>
     <element id="Location.identifier:nataSite.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Location.identifier.type.text" />
-      <short value="NATA Site Number" />
+      <short value="National Association of Testing Authorities (NATA) site number" />
       <fixedString value="NATA Site Number" />
     </element>
     <element id="Location.identifier:nataSite.system">
       <path value="Location.identifier.system" />
-      <short value="Namespace for NATA Site Number" />
+      <short value="Namespace for NATA site number" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/nata-site" />
     </element>
     <element id="Location.identifier:nataSite.value">
       <path value="Location.identifier.value" />
+      <short value="NATA site number"/>
       <min value="1" />
+      <example>
+        <label value="NATA site number" />
+        <valueString value="16289" />
+      </example>
     </element>
   </differential>
 </StructureDefinition>

@@ -1,12 +1,13 @@
 **AU Base Medication Statement**  *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
 
-This profile defines a medication statement information structure including core localisation concepts for Australia. 
+This profile defines a medication statement structure including core localisation concepts for use in an Australian context. 
 
 #### Extensions
 Extensions used in this profile:
 * MedicationStatement: Long Term [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-long-term)
 * MedicationStatement.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
-
+* MedicationStatement: Medication Brand Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
+* MedicationStatement: Medication Generic Drug Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
 
 
 **Examples**

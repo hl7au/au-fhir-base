@@ -28,7 +28,7 @@
   <differential>
     <element id="MedicationDispense">
       <path value="MedicationDispense" />
-      <short value="Australian dispense record" />
+      <short value="A dispense record for a medication for a patient in an Australian healthcare context" />
       <definition value="Dispensing of a medication to patient in an Australian healthcare contex" />
     </element>
     <element id="MedicationDispense.extension">
@@ -44,7 +44,7 @@
     <element id="MedicationDispense.extension:groundsForConcurrentSupply">
       <path value="MedicationDispense.extension" />
       <sliceName value="groundsForConcurrentSupply" />
-      <short value="Grounds for concurrent supply of medication" />
+      <short value="Grounds for Concurrent Supply of Medication" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -54,7 +54,7 @@
     <element id="MedicationDispense.extension:dispenseNumber">
       <path value="MedicationDispense.extension" />
       <sliceName value="dispenseNumber" />
-      <short value="Number of this dispense" />
+      <short value="Number of this Dispense" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
@@ -64,8 +64,6 @@
       <path value="MedicationDispense.extension" />
       <sliceName value="brandName" />
       <short value="Medication Brand Name" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -76,8 +74,6 @@
       <path value="MedicationDispense.extension" />
       <sliceName value="genericName" />
       <short value="Medication Generic Drug Name" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -105,6 +101,7 @@
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type">
       <path value="MedicationDispense.identifier.type" />
+      <short value="Coded identifier type for local dispense identifier" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -145,10 +142,12 @@
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.system">
       <path value="MedicationDispense.identifier.system" />
+      <short value="Namespace for local dispense record identifier" />
       <min value="1" />
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.value">
       <path value="MedicationDispense.identifier.value" />
+      <short value="Dispense record identifier" />
       <min value="1" />
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.assigner">
@@ -184,7 +183,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded">
       <path value="MedicationDispense.medication[x]" />
       <sliceName value="medicationCoded" />
-      <short value="Coded medication" />
+      <short value="Coded Dispensed Medication" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -206,7 +205,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:pbs">
       <path value="MedicationDispense.medication[x].coding" />
       <sliceName value="pbs" />
-      <short value="Medication PBS coding (ignore item context)" />
+      <short value="PBS Item Code" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
@@ -218,7 +217,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:gtin">
       <path value="MedicationDispense.medication[x].coding" />
       <sliceName value="gtin" />
-      <short value="Medication Package GTIN" />
+      <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />
@@ -252,7 +251,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPP.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -294,7 +293,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPP.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -336,7 +335,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtCTPP.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <definition value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem" />
       <max value="1" />
       <type>
@@ -378,7 +377,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTPUU.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -419,7 +418,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMPUU.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -460,7 +459,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtTP.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -501,7 +500,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amtMP.extension:medicationType">
       <path value="MedicationDispense.medication[x].coding.extension" />
       <sliceName value="medicationType" />
-      <short value="Type of medication coding" />
+      <short value="Type of Medication Coding" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -532,7 +531,7 @@
     <element id="MedicationDispense.medication[x]:medicationReference">
       <path value="MedicationDispense.medication[x]" />
       <sliceName value="medicationReference" />
-      <short value="Dispensed medication" />
+      <short value="Dispensed Medication" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
