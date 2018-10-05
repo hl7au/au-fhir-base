@@ -48,7 +48,7 @@
       <path value="Medication.extension" />
       <sliceName value="pbsSponsor" />
       <short value="PBS Sponsor" />
-      <definition value="This is a reference to the organisation sponsor that is responsible for the supply of the medicine." />
+      <definition value="Reference to the sponsor organisation that is responsible for the supply of the medicine." />
       <min value="0" />
       <max value="1" />
       <type>
@@ -60,8 +60,6 @@
       <path value="Medication.extension" />
       <sliceName value="brandName" />
       <short value="Medication Brand Name" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -72,8 +70,6 @@
       <path value="Medication.extension" />
       <sliceName value="genericName" />
       <short value="Medication Generic Drug Name" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -102,7 +98,7 @@
     <element id="Medication.code.coding:pbs">
       <path value="Medication.code.coding" />
       <sliceName value="pbs" />
-      <short value="Medication PBS coding (ignore item context)" />
+      <short value="PBS Item Code"/>
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
@@ -114,7 +110,7 @@
     <element id="Medication.code.coding:gtin">
       <path value="Medication.code.coding" />
       <sliceName value="gtin" />
-      <short value="Medication Package GTIN" />
+      <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />

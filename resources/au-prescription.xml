@@ -55,7 +55,7 @@
     <element id="MedicationRequest.extension:minimumIntervalBetweenRepeats">
       <path value="MedicationRequest.extension" />
       <sliceName value="minimumIntervalBetweenRepeats" />
-      <definition value="The supplied duration must pass between dispensing of repeats of the associated medication request." />
+      <short value="Minimum Interval Between Repeats" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -67,7 +67,6 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="brandName" />
       <short value="Medication Brand Name" />
-      <definition value="Optional Extension Element - found in all resources." />
       <min value="0" />
       <max value="1" />
       <type>
@@ -79,7 +78,6 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="genericName" />
       <short value="Medication Generic Drug Name" />
-      <definition value="Optional Extension Element - found in all resources." />
       <min value="0" />
       <max value="1" />
       <type>
@@ -284,7 +282,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:pbs">
       <path value="MedicationRequest.medication[x].coding" />
       <sliceName value="pbs" />
-      <short value="Medication PBS Coding (ignore item context)" />
+      <short value="PBS Item Code" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
@@ -296,7 +294,7 @@
     <element id="MedicationRequest.medication[x]:medicationCoded.coding:gtin">
       <path value="MedicationRequest.medication[x].coding" />
       <sliceName value="gtin" />
-      <short value="Medication Package GTIN" />
+      <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />
