@@ -58,7 +58,7 @@
     </element>
     <element id="PractitionerRole.identifier:providerNumber.type">
       <path value="PractitionerRole.identifier.type" />
-      <short value="Provider number identifier type" />
+      <short value="Coded identifier type for provider number" />
       <definition value="Identifier type of provider number for this practitioner role." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -76,7 +76,6 @@
     </element>
     <element id="PractitionerRole.identifier:providerNumber.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
-      <short value="Provider number identifier type code" />
       <definition value="Provider number identifier type coding." />
       <max value="1" />
     </element>
@@ -95,35 +94,35 @@
         <valueBoolean value="true" />
       </extension>
       <path value="PractitionerRole.identifier.type.text" />
-      <short value="Provider number identifier type descriptive text" />
       <definition value="Provider number identifier type descriptive text." />
       <fixedString value="Medicare Provider Number" />
     </element>
     <element id="PractitionerRole.identifier:providerNumber.system">
       <path value="PractitionerRole.identifier.system" />
+      <short value="Namespace for Medicare provider number"/>
       <definition value="Namespace of provider number for this practitioner role." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-provider-number" />
     </element>
     <element id="PractitionerRole.identifier:providerNumber.value">
       <path value="PractitionerRole.identifier.value" />
-      <short value="Medicare provider number value" />
+      <short value="Medicare provider number" />
       <definition value="Provider number for this practitioner role." />
       <min value="1" />
       <example>
-        <label value="Provider number" />
+        <label value="Medicare provider number" />
         <valueString value="2426621B" />
       </example>
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation">
       <path value="PractitionerRole.identifier" />
       <sliceName value="nationalProviderAtOrganisation" />
-      <short value="Provider at Organisation Identifier" />
+      <short value="National Provider at Organisation Identifier" />
       <definition value="Combined Healthcare Provider Identifier – Individual (HPI-I) and Healthcare Provider Identifier – Organisation (HPI-O) identifier to use as unique organisation based identifier for a practitioner." />
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type">
       <path value="PractitionerRole.identifier.type" />
-      <short value="National provider at organisation identifier type" />
+      <short value="Coded identifier type for national provider identifier at organisation" />
       <definition value="Identifier type provider at organisation identifier for this practitioner role." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -158,19 +157,19 @@
         <valueBoolean value="true" />
       </extension>
       <path value="PractitionerRole.identifier.type.text" />
-      <short value="National provider at organisation identifer type descriptive text" />
       <definition value="National provider at organisation identifer (NPI-O) type descriptive text." />
       <fixedString value="NPIO" />
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.system">
       <path value="PractitionerRole.identifier.system" />
-      <definition value="Namespace of national provider at organisation identifier for this practitioner role." />
+      <short value="Namespace for national provider identifier (HPI-I) at organisation with national identifier (HPI-O)" />
+      <definition value="Namespace of national provider identifier (HPI-I) at organisation with national identifier (HPI-O)." />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/npio" />
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.value">
       <path value="PractitionerRole.identifier.value" />
-      <short value="National provider identifier for organisation (NPIO) Value" />
+      <short value="National provider identifier at organisation in the form HPI-I@HPI-O" />
       <min value="1" />
       <constraint>
         <key value="inv-npio-0" />
@@ -187,6 +186,7 @@
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.type">
       <path value="PractitionerRole.identifier.type" />
+      <short value="Coded identifier type for employee number" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -227,7 +227,7 @@
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.value">
       <path value="PractitionerRole.identifier.value" />
-      <short value="Employee number value" />
+      <short value="Employee number" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.assigner">
