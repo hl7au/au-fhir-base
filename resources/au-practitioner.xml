@@ -249,7 +249,7 @@
     <element id="Practitioner.qualification:ahpraRegistration">
       <path value="Practitioner.qualification" />
       <sliceName value="ahpraRegistration" />
-      <short value="AHPRA Qualification Details" />
+      <short value="Australian Health Practitioner Regulation Agency (AHPRA) Qualification Details" />
       <definition value="Details of registration with the Australian Health Practitioner Regulation Authority (AHPRA)." />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier">
@@ -260,6 +260,7 @@
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type">
       <path value="Practitioner.qualification.identifier.type" />
+      <short value="Coded identifier type for AHPRA registration number"/>
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -299,11 +300,13 @@
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.system">
       <path value="Practitioner.qualification.identifier.system" />
+      <short value="Namespace for AHPRA registration number"/>
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/ahpra-registration-number" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.value">
       <path value="Practitioner.qualification.identifier.value" />
+      <short value="AHPRA registration number"/>
       <min value="1" />
       <example>
         <label value="AHPRA registration number" />
