@@ -28,7 +28,7 @@
   <differential>
     <element id="MedicationDispense">
       <path value="MedicationDispense" />
-      <short value="Australian dispense record" />
+      <short value="A dispense record for a medication for a patient in an Australian healthcare context" />
       <definition value="Dispensing of a medication to patient in an Australian healthcare contex" />
     </element>
     <element id="MedicationDispense.extension">
@@ -101,6 +101,7 @@
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type">
       <path value="MedicationDispense.identifier.type" />
+      <short value="Coded identifier type for local dispense identifier" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -141,10 +142,12 @@
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.system">
       <path value="MedicationDispense.identifier.system" />
+      <short value="Namespace for local dispense record identifier" />
       <min value="1" />
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.value">
       <path value="MedicationDispense.identifier.value" />
+      <short value="Dispense record identifier" />
       <min value="1" />
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.assigner">
@@ -180,7 +183,7 @@
     <element id="MedicationDispense.medication[x]:medicationCoded">
       <path value="MedicationDispense.medication[x]" />
       <sliceName value="medicationCoded" />
-      <short value="Coded Medication" />
+      <short value="Coded Dispensed Medication" />
       <type>
         <code value="CodeableConcept" />
       </type>
