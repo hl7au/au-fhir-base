@@ -12,7 +12,7 @@ These definitions represent common data held in the Practitioner.identifier elem
 #### Qualifications
 These definitions represent common data held in the Practitioner.qualification element:
 
-* Australian Health Practitioner Regulation Agency Registration Number [<sup>[1]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number)
+* Australian Health Practitioner Regulation Agency Registration Number (AHPRA) [<sup>[1]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number)
 
 
 **Examples**
