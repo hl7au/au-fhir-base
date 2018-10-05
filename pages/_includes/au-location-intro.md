@@ -4,7 +4,7 @@ This profile defines a location administration details structure that includes c
 
 #### Identifiers
 These definitions represent common data held in the Location.identifier element:
-* NATA Site Number [<sup>[1]</sup>](http://hl7.org.au/id/nata-site/index.html){:target="_blank"}
+* National Association of Testing Authorities (NATA) Site Number [<sup>[1]</sup>](http://hl7.org.au/id/nata-site/index.html){:target="_blank"}
 
 **Examples**
 
