@@ -8,5 +8,4 @@ This profile contains the following variations from [Dosage](http://hl7.org/fhir
 1. at most one <span style='color:green'> site </span> 
 1. at most one <span style='color:green'> route </span> 
    * at most one <span style='color:green'> coding </span> Route of Administration (SNOMED CT)
-1. at most one <span style='color:green'> method </span> 
    * at most one <span style='color:green'> coding </span> SNOMED CT Administration Method

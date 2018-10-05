@@ -11,6 +11,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
+* [Healthcare Service Communication](StructureDefinition-healthcareservice-communication.html) - languages supported at a healthcare service
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
@@ -42,4 +43,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
-* [Composition Author Role](Structuredefinition-composition-author-role.html) - PractitonerRole support as per R4
+* [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
