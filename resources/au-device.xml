@@ -46,13 +46,13 @@
     <element id="Device.identifier:paid">
       <path value="Device.identifier" />
       <sliceName value="paid" />
-      <short value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D)" />
+      <short value="My Health Record Assigned Identity for Devices (PAI-D)" />
       <definition value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers. An identifier for devices which may author documents on behalf of organisations." />
       <max value="1" />
     </element>
     <element id="Device.identifier:paid.type">
       <path value="Device.identifier.type" />
-      <short value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) identifier type" />
+      <short value="Coded identifier type for PAI-D" />
       <definition value="Element describing the type of identifier." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -87,19 +87,18 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Device.identifier.type.text" />
-      <short value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) Identifier type descriptive text" />
-      <definition value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) Identifier type descriptive text." />
       <fixedString value="PAI-D" />
     </element>
     <element id="Device.identifier:paid.system">
       <path value="Device.identifier.system" />
-      <short value="The national namespace for My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers" />
-      <definition value="This namespace is used for qualified identifiers to represent My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers." />
+      <short value="Namespace for PAI-D" />
+      <definition value="This namespace is used for qualified identifiers to represent My Health Record Assigned Identity for Devices (PAI-D) numbers." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/paid/1.0" />
     </element>
     <element id="Device.identifier:paid.value">
       <path value="Device.identifier.value" />
+	  <short value="PAI-D number"/>
       <min value="1" />
       <example>
         <label value="PAI-D number" />
@@ -110,14 +109,14 @@
         <key value="inv-paid-0" />
         <requirements value="The PAI-D shall be a 16 digit number." />
         <severity value="error" />
-        <human value="The identifier shall be an exactly 16 digit number" />
+        <human value="The PAI-D shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
         <key value="inv-paid-1" />
         <requirements value="The PAI-D prefix is 8003640003" />
         <severity value="error" />
-        <human value="The My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) prefix is 8003640003" />
+        <human value="The PAI-D prefix is 8003640003" />
         <expression value="startsWith('8003640003')" />
       </constraint>
       <constraint>

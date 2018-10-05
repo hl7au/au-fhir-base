@@ -67,6 +67,7 @@
     <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus">
       <path value="RelatedPerson.identifier.extension" />
       <sliceName value="ihiStatus" />
+	  <short value="Individual Healthcare Identifier (IHI) Number Status" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
@@ -75,6 +76,7 @@
     <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="RelatedPerson.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
+	  <short value="Individual Healthcare Identifier (IHI) Number Record Status" />
       <definition value="Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier" />
       <type>
         <code value="Extension" />
@@ -83,7 +85,7 @@
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Individual Healthcare Identifier (IHI) identifier type" />
+      <short value="Coded identifier type for IHI" />
       <definition value="Coded identifier type for Individual Healthcare Identifier (IHI)" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -93,7 +95,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="Local identifier type" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
@@ -106,7 +108,6 @@
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.type.coding.system">
       <path value="RelatedPerson.identifier.type.coding.system" />
-      <short value="Required system" />
       <min value="1" />
       <fixedUri value="http://hl7.org/fhir/v2/0203" />
     </element>
@@ -125,14 +126,14 @@
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="National namespace for Individual Healthcare Identifier (IHI)" />
+      <short value="Namespace for IHI" />
       <definition value="This namespace is used for qualified identifiers to represent Individual Healthcare Identifier (IHI) numbers. An example of the syntax of an IHI represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/ihi/1.0/8003600000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0" />
     </element>
     <element id="RelatedPerson.identifier:ihiNumber.value">
       <path value="RelatedPerson.identifier.value" />
-      <short value="Individual Healthcare Identifier (IHI) number" />
+      <short value="IHI number" />
       <definition value="The 16 digit unique identifier for consumers of healthcare services." />
       <min value="1" />
       <example>
@@ -143,19 +144,19 @@
       <constraint>
         <key value="inv-ihi-0" />
         <severity value="error" />
-        <human value="Individual Healthcare Identifier (IHI) shall be an exactly 16 digit number" />
+        <human value="IHI shall be an exactly 16 digit number" />
         <expression value="matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
         <key value="inv-ihi-1" />
         <severity value="error" />
-        <human value="Individual Healthcare Identifier (IHI) prefix is 800360" />
+        <human value="IHI prefix is 800360" />
         <expression value="startsWith('800360')" />
       </constraint>
       <constraint>
         <key value="inv-ihi-2" />
         <severity value="error" />
-        <human value="Individual Healthcare Identifier (IHI) shall pass the Luhn algorithm check" />
+        <human value="IHI shall pass the Luhn algorithm check" />
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
@@ -167,7 +168,7 @@
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Medicare number identifier type" />
+      <short value="Coded identifier type for Medicare number" />
       <definition value="Medicare number assigned  to a person." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -208,13 +209,13 @@
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="National namespace for Medicare" />
+      <short value="Namespace for Medicare number" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-number" />
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.value">
       <path value="RelatedPerson.identifier.value" />
-      <short value="Medicare number value including optional individual reference number" />
+      <short value="Medicare number including optional individual reference number" />
       <definition value="10 digit Medicare number with optional 11th digit individual reference number (IRN)" />
       <min value="1" />
       <example>
@@ -225,12 +226,12 @@
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.period">
       <path value="RelatedPerson.identifier.period" />
-      <short value="Medicare validity period" />
+      <short value="Medicare number validity period" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:medicareNumber.period.end">
       <path value="RelatedPerson.identifier.period.end" />
-      <short value="Medicare expiry date" />
+      <short value="Medicare number expiry date" />
       <definition value="Expiry date for Medicare number. This is typically month and year only but may include day date part when this is a temporary Medicare number." />
       <min value="1" />
     </element>
@@ -242,43 +243,43 @@
       <constraint>
         <key value="inv-dva-number-unspecified" />
         <severity value="error" />
-        <human value="DVA Number identifier type text must be 'DVA Number' when colour is not specified" />
+        <human value="DVA number identifier type text must be 'DVA Number' when colour is not specified" />
         <expression value="type.coding.exists() and type.text != 'DVA Number'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-gold" />
         <severity value="error" />
-        <human value="DVA Number identifier type text must be 'DVA Number (Gold)' when colour coding is DVG" />
+        <human value="DVA number identifier type text must be 'DVA Number (Gold)' when colour coding is DVG" />
         <expression value="type.coding.code='DVG' and type.text != 'DVA Number (Gold)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-white" />
         <severity value="error" />
-        <human value="DVA Number identifier type text must be 'DVA Number (White)' when colour coding is DVW" />
+        <human value="DVA number identifier type text must be 'DVA Number (White)' when colour coding is DVW" />
         <expression value="type.coding.code='DVW' and type.text != 'DVA Number (White)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-orange" />
         <severity value="error" />
-        <human value="DVA Number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO" />
+        <human value="DVA number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO" />
         <expression value="type.coding.code='DVO' and type.text != 'DVA Number (Orange)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-lilac" />
         <severity value="error" />
-        <human value="DVA Number identifier type text must be 'DVA Number (Lilac)' when colour coding is DVL" />
+        <human value="DVA number identifier type text must be 'DVA Number (Lilac)' when colour coding is DVL" />
         <expression value="type.coding.code='DVL' and type.text != 'DVA Number (Lilac)'" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-text" />
         <severity value="error" />
-        <human value="DVA Number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange), 'DVA Number (Lilac)'" />
+        <human value="DVA number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange), 'DVA Number (Lilac)'" />
         <expression value="type.text = 'DVA Number' or type.text = 'DVA Number (Gold)' or type.text = 'DVA Number (White)' or type.text = 'DVA Number (Orange)' or type.text = 'DVA Number (Lilac)'" />
       </constraint>
     </element>
     <element id="RelatedPerson.identifier:dvaNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Department of Veterans' Affairs (DVA) number identifier type" />
+      <short value="Coded identifier type for DVA number" />
       <definition value="Department of Veterans' Affairs (DVA) colour identifer type provides method to determine which type of DVA card is." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -288,7 +289,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="Local identifier type" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
@@ -314,13 +315,13 @@
     <element id="RelatedPerson.identifier:dvaNumber.system">
       <path value="RelatedPerson.identifier.system" />
       <short value="Department of Veterans' Affairs (DVA) number identifier system" />
-      <definition value="Department of Veterans' Affairs (DVA) number assigned uri" />
+      <definition value="DVA number assigned uri." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/dva" />
     </element>
     <element id="RelatedPerson.identifier:dvaNumber.value">
       <path value="RelatedPerson.identifier.value" />
-      <short value="Department of Veterans' Affairs (DVA) number value" />
+      <short value="DVA number" />
       <definition value="Up to 9 digit value in the form AAXXNNNN[A]." />
       <comment value="Reference: http://meteor.aihw.gov.au/content/index.phtml/itemId/339127" />
       <min value="1" />
@@ -333,13 +334,13 @@
     <element id="RelatedPerson.identifier:healthcareCard">
       <path value="RelatedPerson.identifier" />
       <sliceName value="healthcareCard" />
-      <short value="Health Care Card Identifier" />
-      <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number." />
+      <short value="Health Care Card Number" />
+      <definition value="Concession Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number." />
     </element>
     <element id="RelatedPerson.identifier:healthcareCard.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Healthcare Card identifier type" />
-      <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Healthcare Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number." />
+      <short value="Coded identifier type for Health Care Card number" />
+      <definition value="Concession Card Number assigned to a person by Centrelink, this can be Healthcare Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number." />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -349,7 +350,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="Local identifier type" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
@@ -379,14 +380,14 @@
     </element>
     <element id="RelatedPerson.identifier:healthcareCard.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="Namespace for Centrelink Customer Reference Number (CRN) identifiers" />
+      <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
       <definition value="Namespace for Customer Reference Number (CRN) values" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
     <element id="RelatedPerson.identifier:healthcareCard.value">
       <path value="RelatedPerson.identifier.value" />
-      <short value="Centrelink Customer Reference Number (CRN)" />
+      <short value="Centrelink CRN" />
       <definition value="10 character identifier NNNNNNNNNA." />
       <comment value="A personal identifier assigned by Centrelink for the purposes of identifying people (and organisations) eligible for specific services." />
       <min value="1" />
@@ -399,13 +400,13 @@
     <element id="RelatedPerson.identifier:pensionerConcessionCard">
       <path value="RelatedPerson.identifier" />
       <sliceName value="pensionerConcessionCard" />
-      <short value="Pensioner Concession Card Identifier" />
-      <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card number." />
+      <short value="Pensioner Concession Card Number" />
+      <definition value="Concession Card Number assigned to a person by Centrelink, this can be Health Card Card, Pensioner Concession Card or Commonwealth Seniors Health Card number." />
     </element>
     <element id="RelatedPerson.identifier:pensionerConcessionCard.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Pensioner concession card identifier type" />
-      <definition value="Concesion card number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card number" />
+      <short value="Coded identifier type for Pensioner Concession Card number" />
+      <definition value="Concession card number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card number" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -445,7 +446,7 @@
     </element>
     <element id="RelatedPerson.identifier:pensionerConcessionCard.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="Namespace for Centrelink Customer Reference Number (CRN) identifiers" />
+      <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
       <definition value="Namespace for Centrelink Customer Reference Number (CRN) values." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
@@ -465,13 +466,13 @@
     <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard">
       <path value="RelatedPerson.identifier" />
       <sliceName value="commonwealthSeniorsHealthCard" />
-      <short value="Commonwealth Seniors Health Card Identifier" />
-      <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
+      <short value="Commonwealth Seniors Health Card Number" />
+      <definition value="Concession Card Number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
     </element>
     <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Commonwealth seniors health card identifier type" />
-      <definition value="Concesion Card Number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
+      <short value="Coded identifier type for Commonwealth Seniors Health Card number" />
+      <definition value="Concession Card Number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number" />
       <min value="1" />
       <patternCodeableConcept>
         <text value="Commonwealth Seniors Health Card" />
@@ -514,7 +515,7 @@
     </element>
     <element id="RelatedPerson.identifier:commonwealthSeniorsHealthCard.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="Namespace for Centrelink Customer Reference Number (CRN) identifiers" />
+      <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
       <definition value="Namespace for Centrelink Customer Reference Number (CRN) values." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
@@ -539,7 +540,7 @@
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Medical record number identfier type" />
+      <short value="Coded identifier type for MRN" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -549,7 +550,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="Local identifier type" />
+        <description value="Local Identifier Type" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
@@ -579,12 +580,12 @@
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.system">
       <path value="RelatedPerson.identifier.system" />
-      <short value="Medical record number system url" />
+      <short value="Medical record number system namespace" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.value">
       <path value="RelatedPerson.identifier.value" />
-      <short value="Medical record number value" />
+      <short value="Medical record number" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:medicalRecordNumber.assigner">
@@ -600,7 +601,7 @@
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.type">
       <path value="RelatedPerson.identifier.type" />
-      <short value="Insurer Number Identifier Type" />
+      <short value="Coded identifier type for private health insurance member number" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -640,11 +641,11 @@
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.value">
       <path value="RelatedPerson.identifier.value" />
-      <short value="Private health insurer member number" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.assigner">
       <path value="RelatedPerson.identifier.assigner" />
+	  <short value="Private health insurer" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.assigner.display">
