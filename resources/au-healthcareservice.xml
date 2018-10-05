@@ -74,14 +74,14 @@
       </slicing>
       <short value="Healthcare service identifiers" />
     </element>
-    <element id="Organization.identifier:hpio">
-      <path value="Organization.identifier" />
+    <element id="HealthcareService.identifier:hpio">
+      <path value="HealthcareService.identifier" />
       <sliceName value="hpio" />
       <short value="Healthcare Provider Identifier – Organisation (HPI-O)" />
       <definition value="National identifier Health Provider Identifier for Organisations (HPI-O)." />
     </element>
-    <element id="Organization.identifier:hpio.type">
-      <path value="Organization.identifier.type" />
+    <element id="HealthcareService.identifier:hpio.type">
+      <path value="HealthcareService.identifier.type" />
       <short value="Identifier type for HPI-O" />
       <definition value="Healthcare Provider Identifier – Organisation (HPI-O) identifier type." />
       <binding>
@@ -98,38 +98,38 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Organization.identifier:hpio.type.coding">
-      <path value="Organization.identifier.type.coding" />
+    <element id="HealthcareService.identifier:hpio.type.coding">
+      <path value="HealthcareService.identifier.type.coding" />
 	  <definition value="hpi-o" />
       <max value="1" />
     </element>
-    <element id="Organization.identifier:hpio.type.coding.system">
-      <path value="Organization.identifier.type.coding.system" />
+    <element id="HealthcareService.identifier:hpio.type.coding.system">
+      <path value="HealthcareService.identifier.type.coding.system" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
     </element>
-    <element id="Organization.identifier:hpio.type.coding.code">
-      <path value="Organization.identifier.type.coding.code" />
+    <element id="HealthcareService.identifier:hpio.type.coding.code">
+      <path value="HealthcareService.identifier.type.coding.code" />
       <min value="1" />
       <fixedCode value="NOI" />
     </element>
-    <element id="Organization.identifier:hpio.type.text">
+    <element id="HealthcareService.identifier:hpio.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
-      <path value="Organization.identifier.type.text" />
+      <path value="HealthcareService.identifier.type.text" />
 	  <definition value="hpi-o" />
       <fixedString value="HPI-O" />
     </element>
-    <element id="Organization.identifier:hpio.system">
-      <path value="Organization.identifier.system" />
+    <element id="HealthcareService.identifier:hpio.system">
+      <path value="HealthcareService.identifier.system" />
       <short value="Namespace for HPI-O" />
       <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0" />
     </element>
-    <element id="Organization.identifier:hpio.value">
-      <path value="Organization.identifier.value" />
+    <element id="HealthcareService.identifier:hpio.value">
+      <path value="HealthcareService.identifier.value" />
       <short value="HPI-O number" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <min value="1" />
