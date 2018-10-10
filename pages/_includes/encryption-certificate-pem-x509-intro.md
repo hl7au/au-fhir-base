@@ -1,4 +1,4 @@
-Encryption Certificate PEM X509
+**Encryption Certificate PEM X509**  *[[FMM Level 1](guidance.html)]*
 This extension is defined to support encrypting certficate content for use with an endpoint.
 
 This allows an endpoint entry to define a suitable certficate for use in communications on the associated channel.

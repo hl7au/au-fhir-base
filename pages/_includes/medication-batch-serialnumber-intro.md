@@ -1,4 +1,4 @@
-Extension: Medication Batch Serial Number
+**Extension: Medication Batch Serial Number** *[[FMM Level 0](guidance.html)]*
 
 This extension applies to the Medication resource and provides an identifier assigned to a drug at the time of manufacture.
 

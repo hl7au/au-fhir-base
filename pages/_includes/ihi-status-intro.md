@@ -1,4 +1,4 @@
-Extension: IHI Status
+**Extension: IHI Status** *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) 
 

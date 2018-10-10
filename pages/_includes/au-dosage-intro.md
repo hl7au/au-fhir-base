@@ -1,4 +1,4 @@
-**AU Dosage** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Dosage**  *[[FMM Level 0](guidance.html)]*
 
 This profile defines a dosage structure including core localisation concepts for use in an Australian context.
 

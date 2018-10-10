@@ -1,4 +1,4 @@
-**AU Observation Age Profile** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Observation Age Profile** *[[FMM Level 0](guidance.html)]*
 
 This profile defines the chronological age or age range of a patient.
 

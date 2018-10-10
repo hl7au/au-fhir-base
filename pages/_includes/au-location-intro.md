@@ -1,4 +1,4 @@
-**AU Base Location Profile** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Location Profile** *[[FMM Level 0](guidance.html)]*
 
 This profile defines a location administration details structure that includes core localisation concepts for use in an Australian context.
 

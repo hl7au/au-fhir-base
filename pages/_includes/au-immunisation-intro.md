@@ -1,4 +1,4 @@
-**AU Base Immunisation** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Immunisation** *[[FMM Level 0](guidance.html)]*
 
 This profile defines an immunisation structure including core localisation concepts for use in an Australian context. 
 
