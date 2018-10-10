@@ -5,5 +5,4 @@ This extension applies to the Medication resource and is defining organisation a
 #### Identifiers
 These definitions represent common data held in the Organization.identifier element:
 
-
 * PBS Sponsor Identifier 
