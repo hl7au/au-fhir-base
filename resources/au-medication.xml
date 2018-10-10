@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medication" />
   <meta>
@@ -8,7 +8,7 @@
     <valueCode value="phx" />
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="AUBaseMedication" />
   <title value="AU Base Medication" />
   <status value="draft" />
@@ -98,7 +98,7 @@
     <element id="Medication.code.coding:pbs">
       <path value="Medication.code.coding" />
       <sliceName value="pbs" />
-      <short value="PBS Item Code"/>
+      <short value="PBS Item Code" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
@@ -420,6 +420,14 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/mims" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Medication.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Medication.code.text" />
+      <short value="Medication primary text" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry." />
     </element>
     <element id="Medication.manufacturer">
       <path value="Medication.manufacturer" />

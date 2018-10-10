@@ -5,7 +5,7 @@
     <lastUpdated value="2018-03-03T06:38:51.483+11:00" />
   </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-dispenserecord" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="AUBaseDispenseRecord" />
   <title value="AU Base Dispense Record" />
   <status value="draft" />
@@ -529,6 +529,14 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/mims" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="MedicationDispense.medication[x]:medicationCoded.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationDispense.medication[x].text" />
+      <short value="Medication primary text" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry." />
     </element>
     <element id="MedicationDispense.medication[x]:medicationReference">
       <path value="MedicationDispense.medication[x]" />
