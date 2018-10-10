@@ -1,4 +1,4 @@
-**AU Device** *[[FMM Level 0](guidance.html)]*
+**AU Device** *[[FMM Level 1](guidance.html)]*
 
 This profile defines a device administration details structure that includes core localisation concepts for use in an Australian context.
 
