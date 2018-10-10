@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-specimen"/>
   <meta>
     <lastUpdated value="2018-10-09T06:34:11.248+11:00" />
   </meta>
@@ -7,7 +8,6 @@
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
       <p>AU Specimen</p>
     </div></text>
-  <id value="au-specimen"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-specimen"/>
   <name value="AUBaseSpecimen"/>
   <title value="AU Base Specimen"/>
@@ -21,7 +21,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="Australian realm Specimen profile"/>
+  <description value="Australian realm Base Specimen profile."/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -31,6 +31,7 @@
   <differential>
     <element id="Specimen">
       <path value="Specimen" />
+      <short value="Australian context Specimen information" />
     </element>
     <element id="Specimen.type">
       <path value="Specimen.type" />
@@ -55,6 +56,13 @@
         <strength value="required"/>
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-type-1"/>
       </binding>
+    </element>
+    <element id="Specimen.parent">
+      <path value="Specimen.parent"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen"/>
+      </type>
     </element>
     <element id="Specimen.collection">
       <path value="Specimen.collection" />
