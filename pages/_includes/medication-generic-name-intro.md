@@ -1,4 +1,4 @@
-**Extension: Medication Generic Name**  *[[FMM Level 0](guidance.html)]*
+**Extension: Medication Generic Name**  *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and provides generic name of a medication.
 

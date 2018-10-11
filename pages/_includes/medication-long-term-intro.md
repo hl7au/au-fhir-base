@@ -1,4 +1,4 @@
-**Extension: Medication long-term indicator**  *[[FMM Level 0](guidance.html)]*
+**Extension: Medication long-term indicator**  *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the MedicationStatement resource and provides an indicator of long term medication use. 
 

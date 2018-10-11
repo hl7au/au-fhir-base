@@ -1,4 +1,4 @@
-**AU Observation Age Profile** *[[FMM Level 0](guidance.html)]*
+**AU Observation Age Profile** *[[FMM Level 1](guidance.html)]*
 
 This profile defines the chronological age or age range of a patient.
 
