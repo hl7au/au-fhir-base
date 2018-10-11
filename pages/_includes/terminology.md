@@ -20,6 +20,6 @@ Code systems used in this implementation guide.
 
 # Services
 
-HL7 Australia published terminologies are also available via open FHIR server http://tx.hl7.org.au/fhir
+HL7 Australia published terminologies are also available via open FHIR server [http://tx.hl7.org.au/fhir](http://tx.hl7.org.au/fhir)
 
 This service intends to supply services CodeSystem and ValueSet artefacts as defined in this implementation guide.
