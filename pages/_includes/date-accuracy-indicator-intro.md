@@ -1,4 +1,4 @@
-**Extension: Date Accuracy Indicator** *[[FMM Level 0](guidance.html)]*
+**Extension: Date Accuracy Indicator** *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the Date or DateTime datatypes and indicates the asserted accuracy of the associated date via a coding.
 

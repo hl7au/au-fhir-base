@@ -1,4 +1,4 @@
-**AU Base Address Profile** *[[FMM Level 0](guidance.html)]*
+**AU Base Address Profile** *[[FMM Level 1](guidance.html)]*
 
 This profile is provided for use in an Australian context where some constraint on content is desirable to guarantee the quality of an Australian address whilst still supporting
 other uses such as unstructured addresses. 

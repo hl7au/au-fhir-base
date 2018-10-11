@@ -39,12 +39,8 @@ implementation. This implementation guide will be used as the basis for Australi
 ## Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
-* Australian FHIR Implementers' Community
-* HL7 Australia Membership 
-* HL7 Australia Patient Administration Working Group
-* HL7 Australia Orders and Observations Working Group
-* HL7 Australia Medications Working Group
-* HL7 Australia Child Health Working Group
+* Australian FHIR Implementers Community
+* HL7 Australia Working Groups
 * Australian Digital Health Agency
 * Secure Messaging Technical Working Group
 

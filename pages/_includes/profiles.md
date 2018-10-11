@@ -14,12 +14,12 @@ These Profiles have been defined for this implementation guide.
 
 
 ## Medications Profiles
-* [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding (AMT, MIMS, GTIN, etc.) and attributes (PBS/RPBS information, etc.)
-* [AU Base Prescription](StructureDefinition-au-prescription.html) - prescribing details with common local coding (AMT, MIMS, etc.) and attributes (RBS/RPBS details, grounds for concurrent supply, etc.)
-* [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html) - dispensing details with common local coding (AMT, MIMS, GTIN, etc.) and attributes (RBS/RPBS details, grounds for concurrent supply, etc.)
-* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history with common local coding (AMT, MIMS, etc.) 
+* [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and administrative attributes
+* [AU Base Prescription](StructureDefinition-au-prescription.html) - prescribing/ordering details with common local coding and administrative attributes
+* [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html) - dispensing details with common local coding and administrative attributes
+* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and administrative attributes
 * [AU Base Immunisation](StructureDefinition-au-immunisation.html) - immunisation record with common local coding 
-* [PBS Sponsor](StructureDefinition-au-pbs-sponsor.html) - PBS sponsor organisation (manufacturer/supplier)
+* [PBS Sponsor](StructureDefinition-au-pbs-sponsor.html) - referenced PBS sponsor organisation (manufacturer/supplier)
 
 ## Orders and Observations Profiles
 * [AU Base Observation Age](StructureDefinition-au-observation-age.html) - record of age at a point in time
@@ -30,12 +30,12 @@ These Profiles have been defined for this implementation guide.
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
-* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with core localisation concepts for Australia.
+* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
 
 ## Profiles on Data Types
 * [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
-* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding (AMT)
+* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
 
