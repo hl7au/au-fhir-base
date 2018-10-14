@@ -1,4 +1,4 @@
-**AU Base HealthcareService** *[[FMM Level 1](guidance.html)]*
+**AU Base HealthcareService** *[[FMM Level 2](guidance.html)]*
 
 This profile defines a healthcare service administration details structure that includes core localisation concepts for use in an Australian context.
 

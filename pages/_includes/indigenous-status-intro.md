@@ -1,4 +1,4 @@
-**Extension: Indigenous Status** *[[FMM Level 1](guidance.html)]*
+**Extension: Indigenous Status** *[[FMM Level 2](guidance.html)]*
 
 This extension applies to the Patient resource and provides a coding for Australian indigenous status of the patient.
 

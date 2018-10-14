@@ -1,4 +1,4 @@
-**Assigning Authority Extension**  *[[FMM Level 1](guidance.html)]*
+**Assigning Authority Extension**  *[[FMM Level 2](guidance.html)]*
 
 This extension defines a HL7v2 assigning authority value for HL7v2 identification for routing.
 

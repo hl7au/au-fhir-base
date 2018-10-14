@@ -1,4 +1,4 @@
-**Extension: No Fixed Address**  *[[FMM Level 1](guidance.html)]*
+**Extension: No Fixed Address**  *[[FMM Level 2](guidance.html)]*
 
 This extension applies to the Address datatype and indicates that there is an assertion that there is no fixed address.
 
