@@ -1,4 +1,4 @@
-**Extension: Healthcare Service Eligibility Detail** *[[FMM Level 1](guidance.html)]*
+**Extension: Healthcare Service Eligibility Detail** *[[FMM Level 2](guidance.html)]*
 
 This extension applies to the HealthcareService resource and allows enhanced eligibility status value for a healthcare service to be recorded.
 
