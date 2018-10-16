@@ -1,4 +1,4 @@
-**AU Composition** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Composition**  *[[FMM Level 1](guidance.html)]*
 
 This profile defines a composition structure that includes core localisation concepts for use in an Australian context.
 

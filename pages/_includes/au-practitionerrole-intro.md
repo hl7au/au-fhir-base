@@ -1,4 +1,4 @@
-**AU Base Practitioner Role Profile** *[FMM Level [1](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Practitioner Role Profile** *[[FMM Level 2](guidance.html)]*
 
 This profile defines a practitioner role administration details structure that includes core localisation concepts for use in an Australian context.
 

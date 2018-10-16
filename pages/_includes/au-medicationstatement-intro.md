@@ -1,4 +1,4 @@
-**AU Base Medication Statement**  *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Medication Statement**  *[[FMM Level 1](guidance.html)]*
 
 This profile defines a medication statement structure including core localisation concepts for use in an Australian context. 
 

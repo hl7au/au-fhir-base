@@ -1,4 +1,4 @@
-Extension: IHI Record Status
+**Extension: IHI Record Status**  *[[FMM Level 2](guidance.html)]*
 
 This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) 
 

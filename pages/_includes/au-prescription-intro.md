@@ -1,4 +1,4 @@
-**AU Base Prescription** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Prescription** *[[FMM Level 1](guidance.html)]*
 
 This profile defines a medication request structure including core localisation concepts for use as a prescription in an Australian context.
 

@@ -1,15 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <meta>
     <lastUpdated value="2018-03-04T21:30:08.008+11:00" />
   </meta>
   <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
-  <p>AU Practitioner</p>
-</div></text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>AU Practitioner</p>
+    </div>
+  </text>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
-  <version value="0.1" />
+  <version value="1.0.0"/>
   <name value="AUBasePractitioner" />
   <title value="AU Base Practitioner" />
   <status value="draft" />
@@ -52,7 +54,7 @@
       <path value="Practitioner.identifier" />
       <sliceName value="hpii" />
       <short value="Healthcare Provider Identifier – Individual (HPI-I)" />
-      <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)."/>
+      <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
     </element>
     <element id="Practitioner.identifier:hpii.type">
       <path value="Practitioner.identifier.type" />
@@ -101,7 +103,7 @@
     </element>
     <element id="Practitioner.identifier:hpii.value">
       <path value="Practitioner.identifier.value" />
-	  <short value="HPI-I number" />
+      <short value="HPI-I number" />
       <min value="1" />
       <example>
         <label value="HPI-I number" />
@@ -181,7 +183,7 @@
     </element>
     <element id="Practitioner.identifier:prescriberNumber.value">
       <path value="Practitioner.identifier.value" />
-	  <short value="Prescriber number" />
+      <short value="Prescriber number" />
       <min value="1" />
       <example>
         <label value="prescriber number" />
@@ -192,11 +194,11 @@
       <path value="Practitioner.identifier" />
       <sliceName value="careAgencyEmployeeIdentifier" />
       <short value="Care Agency Employee (CAE) Identifier" />
-      <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers. " />
+      <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers." />
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type">
       <path value="Practitioner.identifier.type" />
-	  <short value="Identifier type for CAE identifier" />
+      <short value="Identifier type for CAE identifier" />
       <min value="1" />
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type.text">
@@ -208,7 +210,7 @@
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.system">
       <path value="Practitioner.identifier.system" />
-	  <short value="Namespace for CAE identifier" />
+      <short value="Namespace for CAE identifier" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/caei/1.0" />
     </element>
@@ -260,7 +262,7 @@
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type">
       <path value="Practitioner.qualification.identifier.type" />
-      <short value="Coded identifier type for AHPRA registration number"/>
+      <short value="Coded identifier type for AHPRA registration number" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -300,18 +302,18 @@
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.system">
       <path value="Practitioner.qualification.identifier.system" />
-      <short value="Namespace for AHPRA registration number"/>
+      <short value="Namespace for AHPRA registration number" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/ahpra-registration-number" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.value">
       <path value="Practitioner.qualification.identifier.value" />
-      <short value="AHPRA registration number"/>
+      <short value="AHPRA registration number" />
       <min value="1" />
       <example>
         <label value="AHPRA registration number" />
         <valueString value="ANZ1234567890" />
-      </example>      
+      </example>
       <constraint>
         <key value="inv-ahpra-qual-0" />
         <severity value="error" />
@@ -321,34 +323,15 @@
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code">
       <path value="Practitioner.qualification.code" />
-      <short value="AHPRA role" />
-    </element>
-    <element id="Practitioner.qualification:ahpraRegistration.code.coding">
-      <path value="Practitioner.qualification.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <short value="AHPRA role coding" />
-    </element>
-    <element id="Practitioner.qualification:ahpraRegistration.code.coding:anzscoCoding">
-      <path value="Practitioner.qualification.code.coding" />
-      <sliceName value="anzscoCoding" />
-      <short value="ANZSCO Coded Role" />
-      <definition value="Role coded from Australian and New Zealand Standard Classification of Occupations (ANZSCO)." />
-      <binding>
-        <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1" />
-      </binding>
+      <short value="AHPRA codings" />
+      <definition value="AHPRA registration type, sub-type, profession, division and specialty." />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.qualification.code.text" />
+      <short value="AHPRA Registration Role" />
       <min value="1" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.issuer">

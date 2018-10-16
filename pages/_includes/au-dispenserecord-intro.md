@@ -1,4 +1,4 @@
-**AU Base Dispense Record** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Dispense Record**  *[[FMM Level 1](guidance.html)]*
 
 This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context.
 

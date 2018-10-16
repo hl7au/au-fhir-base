@@ -1,4 +1,4 @@
-**AU Base Organization Profile** *[FMM Level [0](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Organization Profile** *[[FMM Level 2](guidance.html)]*
 
 This profile defines an organisation administration details structure that includes core localisation concepts for use in an Australian context.
 
