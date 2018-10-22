@@ -22,17 +22,6 @@
       <path value="Extension" />
       <short value="PBS sponsor" />
       <definition value="Reference to the sponsor organisation that is responsible for the supply of the medicine." />
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

@@ -33,17 +33,6 @@
       <short value="Minimum time between repeat dispensing of the medication" />
       <definition value="The supplied duration that must pass between dispensing of repeats of the associated medication request." />
       <max value="1" />
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
