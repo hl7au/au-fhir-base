@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="minimum-interval-between-repeats" />
-  <meta>
-    <lastUpdated value="2018-03-03T10:52:36.201+11:00" />
-  </meta>
   <url value="http://hl7.org.au/fhir/StructureDefinition/minimum-interval-between-repeats" />
   <version value="1.0.0"/>
   <name value="MinimumIntervalBetweenRepeats" />
@@ -33,17 +30,6 @@
       <short value="Minimum time between repeat dispensing of the medication" />
       <definition value="The supplied duration that must pass between dispensing of repeats of the associated medication request." />
       <max value="1" />
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
