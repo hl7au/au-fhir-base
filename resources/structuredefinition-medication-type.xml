@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="medication-type" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="MedicationType" />
   <title value="Medication Type" />
   <status value="draft" />
@@ -12,15 +12,18 @@
     <telecom>
       <system value="url" />
       <value value="http://hl7.org.au" />
-      <use value="work"/>
+      <use value="work" />
     </telecom>
   </contact>
   <description value="To indicate a classification of the type of medication." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="datatype" />
-  <context value="Coding" />
+  <contextType value="resource" />
+  <context value="Medication.code.coding" />
+  <context value="MedicationRequest.medicationCodeableConcept.coding" />
+  <context value="MedicationDispense.medicationCodeableConcept.coding" />
+  <context value="MedicationStatement.medicationCodeableConcept.coding" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
