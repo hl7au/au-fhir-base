@@ -19,6 +19,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html) - dispensing details with common local coding and administrative attributes
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and administrative attributes
 * [AU Base Immunisation](StructureDefinition-au-immunisation.html) - immunisation record with common local coding 
+* [AU Base Immunisation Recommendation](StructureDefinition-au-immunisationrecommendation.html) - immunisation recommendations with core localisation concepts
 * [PBS Sponsor](StructureDefinition-au-pbs-sponsor.html) - referenced PBS sponsor organisation (manufacturer/supplier)
 
 ## Orders and Observations Profiles
