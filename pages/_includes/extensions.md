@@ -23,6 +23,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
 * [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) - minimum allowed dispensing interval
 * [PBS Sponsor Organisation](StructureDefinition-pbs-sponsor.html) - sponsor organisation that is responsible for the supply of the medicine
+* [Administration Witness](StructureDefinition-medication-administration-witness.html) - witness to administration of a medication
 
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
