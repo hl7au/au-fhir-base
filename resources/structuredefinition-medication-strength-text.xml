@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="medication-strength-text" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/medication-strength-text" />
+  <version value="0.9.0" />
+  <name value="MedicationStrengthText" />
+  <title value="Medication Strength Text" />
+  <status value="draft" />
+  <date value="2018-11-14" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Medication" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Medication Strength Text" />
+      <definition value="A textual representation of medication strength to support systems with limited atomic ingredient data support." />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/medication-strength-text" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="Strength text" />
+      <definition value="A textual representation of medication strength to support systems with limited atomic ingredient data support." />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
