@@ -31,6 +31,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Section Author](StructureDefinition-section-author.html) - author for a composition section
 * [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - composition practitioner role (R4 preadopt)
+* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
 
 ## HL7 V2 Identity
 * [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
