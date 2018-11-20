@@ -26,8 +26,8 @@
       <path value="MedicationAdministration" />
       <short value="A record of medication administered to a patient in an Australian healthcare context" />
     </element>
-	<element id="MedicationAdministration.performer.extension">
-      <path value="MedicationAdministration.performer.extension" />
+    <element id="MedicationAdministration.extension">
+      <path value="MedicationAdministration.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -36,17 +36,15 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationAdministration.performer.extension:administrationWitness">
-      <path value="MedicationAdministration.performer.extension" />
+    <element id="MedicationAdministration.extension:administrationWitness">
+      <path value="MedicationAdministration.extension" />
       <sliceName value="administrationWitness" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-administration-witness" />
       </type>
     </element>
-	<element id="MedicationAdministration.medication[x]">
+    <element id="MedicationAdministration.medication[x]">
       <path value="MedicationAdministration.medication[x]" />
       <slicing>
         <discriminator>
@@ -57,7 +55,7 @@
       </slicing>
       <short value="Medication Detail" />
       <min value="1" />
-	  <max value="1" />  
+      <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
