@@ -57,11 +57,8 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1"/>
       </binding>
     </element>
-    <element id="AllergyIntolerance.recorder">
-      <path value="AllergyIntolerance.recorder"/>
-    </element>
-    <element id="AllergyIntolerance.recorder.extension">
-      <path value="AllergyIntolerance.recorder.extension"/>
+    <element id="AllergyIntolerance.extension">
+      <path value="AllergyIntolerance.extension"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -70,10 +67,10 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="AllergyIntolerance.recorder.extension:recorderRelatedPerson">
-      <path value="AllergyIntolerance.recorder.extension"/>
+    <element id="AllergyIntolerance.extension:recorderRelatedPerson">
+      <path value="AllergyIntolerance.extension"/>
       <sliceName value="recorderRelatedPerson"/>
-      <short value="Recorder as a related person"/>
+      <short value="Related person that recorded the sensitivity"/>
       <definition value="Reference to related person that recorded the record and takes responsibility for its content."/>
       <min value="0"/>
       <max value="1"/>
