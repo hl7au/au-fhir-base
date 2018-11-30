@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="list-source-role" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/list-source-role" />
+  <name value="ListSourceRole" />
+  <title value="List Authoring PractitionerRole" />
+  <status value="draft" />
+  <date value="2018-11-30" />
+  <publisher value="Health Level Seven Australia (Medications WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.org.au/fhir" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A practitioner role that authored this list." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="List" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <max value="1" />
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/list-source-role" />
+    </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/stu3/practitionerrole.html" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
