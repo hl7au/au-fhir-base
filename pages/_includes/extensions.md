@@ -26,12 +26,14 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Administration Witness](StructureDefinition-medication-administration-witness.html) - witness to administration of a medication
 * [Strength Text](StructureDefinition-medication-strength-text.html) - text representation of medication strength
 
+## Clinical
+* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
+
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
 * [Section Author](StructureDefinition-section-author.html) - author for a composition section
 * [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - composition practitioner role (R4 preadopt)
-* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
 
 ## HL7 V2 Identity
 * [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
@@ -46,3 +48,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
+* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
