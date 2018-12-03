@@ -26,24 +26,6 @@
       <path value="MedicationAdministration" />
       <short value="A record of medication administered to a patient in an Australian healthcare context" />
     </element>
-    <element id="MedicationAdministration.extension">
-      <path value="MedicationAdministration.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationAdministration.extension:administrationWitness">
-      <path value="MedicationAdministration.extension" />
-      <sliceName value="administrationWitness" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-administration-witness" />
-      </type>
-    </element>
     <element id="MedicationAdministration.medication[x]">
       <path value="MedicationAdministration.medication[x]" />
       <slicing>
@@ -54,8 +36,6 @@
         <rules value="open" />
       </slicing>
       <short value="Medication Detail" />
-      <min value="1" />
-      <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -420,6 +400,32 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
+      </type>
+    </element>
+    <element id="MedicationAdministration.performer">
+      <path value="MedicationAdministration.performer" />
+      <short value="Medication adminstration participants" />
+    </element>
+    <element id="MedicationAdministration.performer.extension">
+      <path value="MedicationAdministration.performer.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationAdministration.performer.extension:medicationAdministrationWitness">
+      <path value="MedicationAdministration.performer.extension" />
+      <sliceName value="medicationAdministrationWitness" />
+      <short value="Witness to administration" />
+      <definition value="Witness is considered a participant in performing of medication administration." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-administration-witness" />
       </type>
     </element>
   </differential>
