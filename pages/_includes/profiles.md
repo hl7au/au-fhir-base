@@ -30,6 +30,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Body Weight](StructureDefinition-au-bodyweight.html) - observation of body weight
 * [AU Base Head Circumference](StructureDefinition-au-headcircum.html) - observation of head circumference
 * [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
+* [AU Base No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
