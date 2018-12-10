@@ -27,6 +27,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Strength Text](StructureDefinition-medication-strength-text.html) - text representation of medication strength
 
 ## Clinical
+* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 
 ## Composition
@@ -48,4 +49,5 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
+* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
