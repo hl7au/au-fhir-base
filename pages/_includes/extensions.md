@@ -28,6 +28,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 ## Clinical
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
+* [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
@@ -49,3 +50,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
+* [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
