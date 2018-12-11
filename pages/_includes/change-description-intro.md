@@ -1,10 +1,8 @@
 **Extension: Change Description**  *[[FMM Level 1](guidance.html)]*
 
-This extension applies to the List resource and provides a narrative description of the change including reason for change for an item. 
+This extension applies to the List resource and provides a narrative description of the change to an item in a list entry. The narrative description may include the reason for the change to an item. 
 
-TBD: 
-....add more about how is to be used, in regards to flag etc
-...in medication list this will be describing a change for a medicine item...
+This extension may be used in conjunction with the flag element of a list entry, for example in a medicine list a medication item flagged as ceased may use this extension to hold the reason for cessation such as the medication item has caused serious adverse effects.
 
 **Examples**
 

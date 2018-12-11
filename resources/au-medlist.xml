@@ -2,9 +2,20 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-medlist"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+  <version value="1.0.0"/>
   <name value="AUMedicineList"/>
   <title value="AU Medicine List"/>
   <status value="draft"/>
+  <date value="2018-11-30" />
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org.au/fhir"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="List of medications for Australian context"/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -14,7 +25,7 @@
   <differential>
     <element id="List">
       <path value="List"/>
-      <short value="A list of a medications in an Australian healthcare context"/>
+      <short value="A list of medications in an Australian healthcare context"/>
       <constraint>
         <key value="inv-lst-0"/>
         <severity value="error"/>
@@ -59,7 +70,7 @@
     <element id="List.entry.extension:changeDescription">
       <path value="List.entry.extension"/>
       <sliceName value="changeDescription"/>
-      <short value="Description of the change"/>
+      <short value="Description of the change to the item"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
