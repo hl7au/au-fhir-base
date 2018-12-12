@@ -38,6 +38,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -49,12 +50,13 @@
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
-      <short value="The asserter of the statement" />
+      <short value="Asserter of the statement" />
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Coded value of the observation" />
+      <min value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
