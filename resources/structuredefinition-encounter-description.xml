@@ -15,7 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="Short description, overview or summary of an encounter."/>
+  <description value="Narrative description of an encounter."/>
   <fhirVersion value="3.0.1"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -27,9 +27,9 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Short description, overview or summary of an encounter"/>
+      <short value="Narrative description of an encounter"/>
       <definition
-        value="Short description, overview or summary of a clinical event and its reasons."/>
+        value="Narrative description, overview or summary of a clinical event and its reasons."/>
       <max value="1" />
     </element>
     <element id="Extension.url">
@@ -44,18 +44,6 @@
       <type>
         <code value="string"/>
       </type>
-      <example>
-        <label value="1"/>
-        <valueString
-          value="Admitted for elective bronchoscopy for assessment of left lingular and bibasal pneumonia. No focal endobronchial pathology identified. No evidence of malignancy and no pathogens isolated on bronchial brushings and washings."
-        />
-      </example>
-      <example>
-        <label value="2"/>
-        <valueString
-          value="3/52 ago involved in a rear end motor vehicle accident, mid-velocity impact; complaining of neck pain, dizziness, nausea and difficulties concentrating. Disturbed sleep. No spinal cord signs."
-        />
-      </example>
     </element>
   </differential>
 </StructureDefinition>
