@@ -1,109 +1,126 @@
 {
-  "sct-edition": "http://snomed.info/sct/32506021000036107",
-  "version": "3.0.1",
-  "source": "ig.xml",
-  
-  "dependencyList": [],
-  "spreadsheets": [],
-  "special-urls": [ "urn:iso:std:iso:3166", "http://hl7.org.au/fhir/sid/icpc-2plus", "http://www.mims.com.au/codes", "http://www.gs1.org/gtin",  "http://pbs.gov.au/code/item", "http://hl7.org.au/fhir/v2/0203",  "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0", "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0", "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1", "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1", "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1", "https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1" ],
-  "extraTemplates": [ "mappings" ],
-  "defaults": {
-    "ConceptMap": { "template-base": "cm.html" },
-    "Any": {
-      "template-base": "base.html",
-      "template-format": "format.html"
+    "sct-edition": "http://snomed.info/sct/32506021000036107",
+    "version": "3.0.1",
+    "source": "ig.xml",
+    "dependencyList": [],
+    "spreadsheets": [],
+    "special-urls": [
+        "urn:iso:std:iso:3166",
+        "http://hl7.org.au/fhir/sid/icpc-2plus",
+        "http://www.mims.com.au/codes",
+        "http://www.gs1.org/gtin",
+        "http://pbs.gov.au/code/item",
+        "http://hl7.org.au/fhir/v2/0203",
+        "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+        "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0",
+        "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+        "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
+        "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1",
+        "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+        "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+        "https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1"
+    ],
+    "extraTemplates": ["mappings"],
+    "defaults": {
+        "ConceptMap": {"template-base": "cm.html"},
+        "Any": {
+            "template-base": "base.html",
+            "template-format": "format.html"
+        },
+        "StructureDefinition": {
+            "template-base": "sd.html",
+            "template-defns": "sd-definitions.html",
+            "template-mappings": "sd-mappings.html"
+        },
+        "ValueSet": {"template-base": "vs.html"},
+        "CodeSystem": {"template-base": "cs.html"},
+        "Patient": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Composition": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "HealthcareService": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Practitioner": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "PractitionerRole": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Organization": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Specimen": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Location": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Address": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Medication": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Immunization": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "ImmunizationRecommendation": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "MedicationRequest": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "AllergyIntolerance": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "RelatedPerson": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        },
+        "Endpoint": {
+            "template-base": "ex.html",
+            "template-format": "ex-format.html"
+        }
     },
-    "StructureDefinition": {
-      "template-base": "sd.html",
-      "template-defns": "sd-definitions.html",
-      "template-mappings": "sd-mappings.html"
+    "tool": "jekyll",
+    "license": "CC0-1.0",
+    "canonicalBase": "http://hl7.org.au/fhir",
+    "paths": {
+        "temp": "temp",
+        "resources": [
+            "resources",
+            "examples"
+        ],
+        "pages": "pages",
+        "txCache": "txCache",
+        "output": "output",
+        "qa": "qa",
+        "specification": "http://hl7.org/fhir/STU3"
     },
-    "ValueSet": { "template-base": "vs.html"},
-    "CodeSystem": { "template-base": "cs.html" },
-	"Patient": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html"
-	},
-	"Composition": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"HealthcareService": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"Practitioner": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"PractitionerRole": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"Organization": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"Specimen": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"Location": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"Address": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"Medication": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},    
-	"Immunization": {
-        "template-base": "ex.html",
-        "template-format": "ex-format.html"
-    },    
-	"ImmunizationRecommendation": {
-        "template-base": "ex.html",
-        "template-format": "ex-format.html"
-    },
-	"MedicationRequest": { 
-		"template-base": "ex.html",
-		"template-format": "ex-format.html" 
-	},
-	"AllergyIntolerance": {
-		"template-base": "ex.html",
-		"template-format": "ex-format.html"
-	},
-	"RelatedPerson": {
-		"template-base": "ex.html",
-		"template-format": "ex-format.html"
-	},
-	"Endpoint": {
-		"template-base": "ex.html",
-		"template-format": "ex-format.html"
-	}
-  },
-  "tool": "jekyll",
-  "license": "CC0-1.0",
-  "canonicalBase": "http://hl7.org.au/fhir",
-  "paths": {
-    "temp": "temp",
-    "resources": [ "resources", "examples" ],
-    "pages": "pages",
-    "txCache": "txCache",
-    "output": "output",
-    "qa": "qa",
-    "specification": "http://hl7.org/fhir/STU3"
-  },
-  "npm-name" : "hl7.fhir.au.base",
+    "npm-name": "hl7.fhir.au.base",
     "resources": {
         "StructureDefinition/indigenous-status": {
             "base": "StructureDefinition-indigenous-status.html",
             "defns": "StructureDefinition-indigenous-status-definitions.html"
         },
-		"StructureDefinition/minimum-interval-between-repeats": {
+        "StructureDefinition/minimum-interval-between-repeats": {
             "base": "StructureDefinition-minimum-interval-between-repeats.html",
             "defns": "StructureDefinition-minimum-interval-between-repeats-definitions.html"
         },
@@ -131,11 +148,11 @@
             "base": "StructureDefinition-grounds-for-concurrent-supply.html",
             "defns": "StructureDefinition-grounds-for-concurrent-supply-definitions.html"
         },
-		"StructureDefinition/pbs-sponsor": {
+        "StructureDefinition/pbs-sponsor": {
             "base": "StructureDefinition-pbs-sponsor.html",
             "defns": "StructureDefinition-pbs-sponsor-definitions.html"
         },
-		"StructureDefinition/healthcareservice-communication": {
+        "StructureDefinition/healthcareservice-communication": {
             "base": "StructureDefinition-healthcareservice-communication.html",
             "defns": "StructureDefinition-healthcareservice-communication-definitions.html"
         },
@@ -178,266 +195,270 @@
         "StructureDefinition/au-receivingapplication": {
             "base": "StructureDefinition-au-receivingapplication.html",
             "defns": "StructureDefinition-au-receivingapplication-definitions.html"
-         },
+        },
         "StructureDefinition/encryption-certificate-pem-x509": {
             "base": "StructureDefinition-encryption-certificate-pem-x509.html",
-            "defns": "StructureDefinition-encryption-certificate-pem-x509-definitions.html"            
-            },
-		 "StructureDefinition/medication-brand-name": {
+            "defns": "StructureDefinition-encryption-certificate-pem-x509-definitions.html"
+        },
+        "StructureDefinition/medication-brand-name": {
             "base": "StructureDefinition-medication-brand-name.html",
-             "defns": "StructureDefinition-medication-brand-name-definitions.html"
-            },
-       "StructureDefinition/medication-generic-name": {
+            "defns": "StructureDefinition-medication-brand-name-definitions.html"
+        },
+        "StructureDefinition/medication-generic-name": {
             "base": "StructureDefinition-medication-generic-name.html",
-             "defns": "StructureDefinition-medication-generic-name-definitions.html"
-            },
-		"StructureDefinition/medication-long-term": {
+            "defns": "StructureDefinition-medication-generic-name-definitions.html"
+        },
+        "StructureDefinition/medication-long-term": {
             "base": "StructureDefinition-medication-long-term.html",
             "defns": "StructureDefinition-medication-long-term-definitions.html"
-            },
-		"StructureDefinition/medication-administration-witness": {
+        },
+        "StructureDefinition/medication-administration-witness": {
             "base": "StructureDefinition-medication-administration-witness.html",
             "defns": "StructureDefinition-medication-administration-witness-definitions.html"
-            },
-		"StructureDefinition/medication-strength-text": {
+        },
+        "StructureDefinition/medication-strength-text": {
             "base": "StructureDefinition-medication-strength-text.html",
             "defns": "StructureDefinition-medication-strength-text-definitions.html"
-            },
+        },
         "StructureDefinition/medication-batch-serialnumber": {
             "base": "StructureDefinition-medication-batch-serialnumber.html",
             "defns": "StructureDefinition-medication-batch-serialnumber-definitions.html"
-            },
+        },
         "StructureDefinition/meta-source": {
             "base": "StructureDefinition-meta-source.html",
-            "defns": "StructureDefinition-meta-source-definitions.html" 
-            },
-		"StructureDefinition/composition-author-role": {
+            "defns": "StructureDefinition-meta-source-definitions.html"
+        },
+        "StructureDefinition/composition-author-role": {
             "base": "StructureDefinition-composition-author-role.html",
             "defns": "StructureDefinition-composition-author-role-definitions.html"
-            },			
-	   "StructureDefinition/recorder-related-person": {
+        },
+        "StructureDefinition/recorder-related-person": {
             "base": "StructureDefinition-recorder-related-person.html",
             "defns": "StructureDefinition-recorder-related-person-definitions.html"
-            },
+        },
         "StructureDefinition/au-composition": {
             "base": "StructureDefinition-au-composition.html",
-            "defns": "StructureDefinition-au-composition-definitions.html"            
-            },
+            "defns": "StructureDefinition-au-composition-definitions.html"
+        },
         "StructureDefinition/au-observation-age": {
             "base": "StructureDefinition-au-observation-age.html",
-             "defns": "StructureDefinition-au-observation-age-definitions.html"           
-            },
+            "defns": "StructureDefinition-au-observation-age-definitions.html"
+        },
         "StructureDefinition/au-patient": {
             "base": "StructureDefinition-au-patient.html",
             "defns": "StructureDefinition-au-patient-definitions.html"
-            },
+        },
         "StructureDefinition/au-practitioner": {
             "base": "StructureDefinition-au-practitioner.html",
-            "defns": "StructureDefinition-au-practitioner-definitions.html" 
-            },
+            "defns": "StructureDefinition-au-practitioner-definitions.html"
+        },
         "StructureDefinition/au-organisation": {
             "base": "StructureDefinition-au-organisation.html",
-            "defns": "StructureDefinition-au-organisation-definitions.html" 
+            "defns": "StructureDefinition-au-organisation-definitions.html"
         },
-	    "StructureDefinition/au-bodysite": {
+        "StructureDefinition/au-bodysite": {
             "base": "StructureDefinition-au-bodysite.html",
             "defns": "StructureDefinition-au-bodysite-definitions.html"
         },
-         "StructureDefinition/au-specimen": {
+        "StructureDefinition/au-specimen": {
             "base": "StructureDefinition-au-specimen.html",
-            "defns": "StructureDefinition-au-specimen-definitions.html" 
+            "defns": "StructureDefinition-au-specimen-definitions.html"
         },
-		"StructureDefinition/au-location": {
+        "StructureDefinition/au-location": {
             "base": "StructureDefinition-au-location.html",
-            "defns": "StructureDefinition-au-location-definitions.html" 
+            "defns": "StructureDefinition-au-location-definitions.html"
         },
         "StructureDefinition/au-medication": {
             "base": "StructureDefinition-au-medication.html",
             "defns": "StructureDefinition-au-medication-definitions.html"
-            },
+        },
         "StructureDefinition/au-healthcareservice": {
             "base": "StructureDefinition-au-healthcareservice.html",
             "defns": "StructureDefinition-au-healthcareservice-definitions.html"
-            },
+        },
         "StructureDefinition/au-prescription": {
             "base": "StructureDefinition-au-prescription.html",
             "defns": "StructureDefinition-au-prescription-definitions.html"
-            },
+        },
         "StructureDefinition/au-immunisation": {
             "base": "StructureDefinition-au-immunisation.html",
             "defns": "StructureDefinition-au-immunisation-definitions.html"
-            },
+        },
         "StructureDefinition/au-immunisationrecommendation": {
             "base": "StructureDefinition-au-immunisationrecommendation.html",
             "defns": "StructureDefinition-au-immunisationrecommendation-definitions.html"
-            },
+        },
         "StructureDefinition/au-dispenserecord": {
             "base": "StructureDefinition-au-dispenserecord.html",
             "defns": "StructureDefinition-au-dispenserecord-definitions.html"
-            },
+        },
         "StructureDefinition/au-medicationstatement": {
             "base": "StructureDefinition-au-medicationstatement.html",
-             "defns": "StructureDefinition-au-medicationstatement-definitions.html"
-            },
-		"StructureDefinition/au-medicationadministration": {
+            "defns": "StructureDefinition-au-medicationstatement-definitions.html"
+        },
+        "StructureDefinition/au-medicationadministration": {
             "base": "StructureDefinition-au-medicationadministration.html",
-             "defns": "StructureDefinition-au-medicationadministration-definitions.html"
-            },
+            "defns": "StructureDefinition-au-medicationadministration-definitions.html"
+        },
         "StructureDefinition/au-practitionerrole": {
             "base": "StructureDefinition-au-practitionerrole.html",
-             "defns": "StructureDefinition-au-practitionerrole-definitions.html"
-            },
+            "defns": "StructureDefinition-au-practitionerrole-definitions.html"
+        },
         "StructureDefinition/au-pbs-sponsor": {
             "base": "StructureDefinition-au-pbs-sponsor.html",
-             "defns": "StructureDefinition-au-pbs-sponsor-definitions.html"
-            },
+            "defns": "StructureDefinition-au-pbs-sponsor-definitions.html"
+        },
         "StructureDefinition/au-relatedperson": {
             "base": "StructureDefinition-au-relatedperson.html",
             "defns": "StructureDefinition-au-relatedperson-definitions.html"
-            },
+        },
         "StructureDefinition/au-dosage": {
             "base": "StructureDefinition-au-dosage.html",
             "defns": "StructureDefinition-au-dosage-definitions.html"
         },
-		"StructureDefinition/au-condition": {
-	          "base": "StructureDefinition-au-condition.html",
-           "defns": "StructureDefinition-au-condition-definitions.html"
-      	},
-      	"StructureDefinition/au-allergyintolerance": {
+        "StructureDefinition/au-condition": {
+            "base": "StructureDefinition-au-condition.html",
+            "defns": "StructureDefinition-au-condition-definitions.html"
+        },
+        "StructureDefinition/au-allergyintolerance": {
             "base": "StructureDefinition-au-allergyintolerance.html",
             "defns": "StructureDefinition-au-allergyintolerance-definitions.html"
         },
-		 "StructureDefinition/au-bodyheight": {
+        "StructureDefinition/au-bodyheight": {
             "base": "StructureDefinition-au-bodyheight.html",
             "defns": "StructureDefinition-au-bodyheight-definitions.html"
-            },
+        },
         "StructureDefinition/au-bodyweight": {
             "base": "StructureDefinition-au-bodyweight.html",
             "defns": "StructureDefinition-au-bodyweight-definitions.html"
-            },
-		"StructureDefinition/au-headcircum": {
+        },
+        "StructureDefinition/au-headcircum": {
             "base": "StructureDefinition-au-headcircum.html",
             "defns": "StructureDefinition-au-headcircum-definitions.html"
-            },			
-	   "StructureDefinition/au-device": {
+        },
+        "StructureDefinition/au-device": {
             "base": "StructureDefinition-au-device.html",
             "defns": "StructureDefinition-au-device-definitions.html"
-            }, 
-      "StructureDefinition/change-description": {
+        },
+        "StructureDefinition/change-description": {
             "base": "StructureDefinition-change-description.html",
             "defns": "StructureDefinition-change-description-definitions.html"
-            }, 
-     "StructureDefinition/list-source-role": {
+        },
+        "StructureDefinition/list-source-role": {
             "base": "StructureDefinition-list-source-role.html",
             "defns": "StructureDefinition-list-source-role-definitions.html"
-            }, 
-     "StructureDefinition/au-medlist": {
+        },
+        "StructureDefinition/au-medlist": {
             "base": "StructureDefinition-au-medlist.html",
             "defns": "StructureDefinition-au-medlist-definitions.html"
-            }, 
-	   "StructureDefinition/recorder": {
+        },
+        "StructureDefinition/recorder": {
             "base": "StructureDefinition-recorder.html",
             "defns": "StructureDefinition-recorder-definitions.html"
-            },
-     "CodeSystem/medication-type": {
+        },
+        "StructureDefinition/encounter-description": {
+            "base": "StructureDefinition-encounter-description.html",
+            "defns": "StructureDefinition-encounter-description-definitions.html"
+        },
+        "CodeSystem/medication-type": {
             "base": "CodeSystem-medication-type.html",
-             "defns": "CodeSystem-medication-type-definitions.html"
-            },
-       "ValueSet/medication-type": {
+            "defns": "CodeSystem-medication-type-definitions.html"
+        },
+        "ValueSet/medication-type": {
             "base": "ValueSet-medication-type.html",
             "defns": "ValueSet-medication-type-definitions.html"
-            },
-		 "CodeSystem/service-provision-conditions": {
+        },
+        "CodeSystem/service-provision-conditions": {
             "base": "CodeSystem-service-provision-conditions.html",
-             "defns": "CodeSystem-service-provision-conditions-definitions.html"
-            },
-		"ValueSet/service-provision-conditions": {
+            "defns": "CodeSystem-service-provision-conditions-definitions.html"
+        },
+        "ValueSet/service-provision-conditions": {
             "base": "ValueSet-service-provision-conditions.html",
             "defns": "ValueSet-service-provision-conditions-definitions.html"
-            },
+        },
         "ValueSet/date-accuracy-indicator": {
             "base": "ValueSet-date-accuracy-indicator.html",
             "defns": "ValueSet-date-accuracy-indicator-definitions.html"
-            },
+        },
         "CodeSystem/date-accuracy-indicator": {
             "base": "CodeSystem-date-accuracy-indicator.html",
             "defns": "CodeSystem-date-accuracy-indicator-definitions.html"
-            },
+        },
         "ValueSet/grounds-for-concurrent-supply": {
             "base": "ValueSet-grounds-for-concurrent-supply.html",
             "defns": "ValueSet-grounds-for-concurrent-supply-definitions.html"
-            },
-		 "CodeSystem/au-hl7v2-0203": {
+        },
+        "CodeSystem/au-hl7v2-0203": {
             "base": "CodeSystem-au-hl7v2-0203.html",
             "defns": "CodeSystem-au-hl7v2-0203-definitions.html"
-            },
+        },
         "ValueSet/au-hl7v2-0203": {
             "base": "ValueSet-au-hl7v2-0203.html",
             "defns": "ValueSet-au-hl7v2-0203-definitions.html"
-            },
+        },
         "ValueSet/mims": {
             "base": "ValueSet-mims.html",
             "defns": "ValueSet-mims-definitions.html"
-            },
+        },
         "CodeSystem/mims": {
             "base": "CodeSystem-mims.html",
             "defns": "CodeSystem-mims-definitions.html"
-            },
+        },
         "ValueSet/icpc2plus": {
             "base": "ValueSet-icpc2plus.html",
             "defns": "ValueSet-icpc2plus-definitions.html"
-            },
+        },
         "CodeSystem/icpc2plus": {
             "base": "CodeSystem-icpc2plus.html",
             "defns": "CodeSystem-icpc2plus-definitions.html"
-            },
+        },
         "ValueSet/amt-ctpp-codes": {
             "base": "ValueSet-amt-ctpp-codes.html",
             "defns": "ValueSet-amt-ctpp-codes-definitions.html"
-            },
+        },
         "ValueSet/amt-tpp-codes": {
             "base": "ValueSet-amt-tpp-codes.html",
             "defns": "ValueSet-amt-tpp-codes-definitions.html"
-            },
+        },
         "ValueSet/amt-tp-codes": {
             "base": "ValueSet-amt-tp-codes.html",
             "defns": "ValueSet-amt-tp-codes-definitions.html"
-            },
+        },
         "ValueSet/amt-mp-codes": {
             "base": "ValueSet-amt-mp-codes.html",
             "defns": "ValueSet-amt-mp-codes-definitions.html"
-            },
+        },
         "ValueSet/amt-mpp-codes": {
             "base": "ValueSet-amt-mpp-codes.html",
             "defns": "ValueSet-amt-mpp-codes-definitions.html"
-            },
+        },
         "ValueSet/amt-mpuu-codes": {
             "base": "ValueSet-amt-mpuu-codes.html",
             "defns": "ValueSet-amt-mpuu-codes-definitions.html"
-            },
+        },
         "ValueSet/amt-tpuu-codes": {
             "base": "ValueSet-amt-tpuu-codes.html",
             "defns": "ValueSet-amt-tpuu-codes-definitions.html"
-            },
+        },
         "ValueSet/gtin": {
             "base": "ValueSet-gtin.html",
             "defns": "ValueSet-gtin-definitions.html"
-            },
+        },
         "CodeSystem/gtin": {
             "base": "CodeSystem-gtin.html",
             "defns": "CodeSystem-gtin-definitions.html"
-            },
+        },
         "CodeSystem/pbs-item": {
             "base": "CodeSystem-pbs-item.html",
             "defns": "CodeSystem-pbs-item-definitions.html"
-            },
+        },
         "ValueSet/pbs-item": {
             "base": "ValueSet-pbs-item.html",
             "defns": "ValueSet-pbs-item-definitions.html"
-            },
+        },
         "ValueSet/snomed-healthcareservice-services": {
             "base": "ValueSet-snomed-healthcareservice-services.html",
             "defns": "ValueSet-snomed-healthcareservice-services-definitions.html"
-            }
+        }
     }
 }
