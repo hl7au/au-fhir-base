@@ -52,6 +52,11 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/list-source-role" />
       </type>
     </element>
+    <element id="List.entry">
+      <path value="List.entry" />
+      <short value="Medicine list entry" />
+      <definition value="List of medicine type entries" />
+    </element>
     <element id="List.entry.extension">
       <path value="List.entry.extension" />
       <slicing>
@@ -74,6 +79,7 @@
     </element>
     <element id="List.entry.flag">
       <path value="List.entry.flag" />
+      <short value="Medicine item change" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ListItemFlag" />
