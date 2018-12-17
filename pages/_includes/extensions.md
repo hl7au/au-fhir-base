@@ -11,6 +11,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
+* [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
