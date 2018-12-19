@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="norelevantfinding-nohistoryofprocedure"/>
+    <id value="norelevantfinding-example3"/>
     <status value="final"/>
     <code>
         <coding>
@@ -13,11 +13,15 @@
         <reference value="Patient/example0"/>
     </subject>
     <effectiveDateTime value="2018-10-23"/>
+    <performer>
+        <reference value="Practitioner/example3"/>
+    </performer>
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="416128008"/>
-            <display value="No history of procedure"/>
-        </coding>
+            <code value="1200661000168109"/>
+            <display value="No current medications"/>
+        </coding>        
+        <text value="Patient not taking any medications"/>
     </valueCodeableConcept>
 </Observation>
