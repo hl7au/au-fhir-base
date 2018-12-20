@@ -6,8 +6,6 @@ This observation may be time bound, e.g. the patient is not currently taking med
 
 An assertion of no relevant finding may be used in continuity of care or transfer or care related lists and composition sections. One possible use scenario is in a summary document to positively state that there is no known history of conditions for  a patient. In such a scenario it is expected that status will be 'final'.
 
-Note: Forthcoming work around this profile will bind valueCodeableConcept to Assertion Of Absence value set.
-
 **Examples**
 
 [No history of procedure](observation-norelevantfinding-example0.html)
