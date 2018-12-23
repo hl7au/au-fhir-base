@@ -6,6 +6,6 @@ The description may include a summary of the issues or problems, management stra
 
 **Examples**
 
-[Admitted for elective bronchoscopy](Encounter-example0.html)
+[Admitted for elective bronchoscopy](Encounter-encounter-example0.html)
 
-[Involved in a rear end motor vehicle accident](Encounter-example1.html)
+[Involved in a rear end motor vehicle accident](Encounter-encounter-example1.html)
