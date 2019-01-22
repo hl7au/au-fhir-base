@@ -28,6 +28,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Strength Text](StructureDefinition-medication-strength-text.html) - text representation of medication strength
 * [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
 * [List Source Role](StructureDefinition-list-source-role.html) - list practitioner role (R4 preadopt) 
+* [Author Role](StructureDefinition-author-role.html) - author practitioner role (R4 preadopt)
 
 ## Clinical
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
@@ -55,3 +56,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [List Source Role](StructureDefinition-list-source-role.html) - PractitonerRole support as per R4
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
+* [Author Role](StructureDefinition-author-role.html) - author practitioner role as per R4 
