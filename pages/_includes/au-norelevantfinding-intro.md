@@ -8,10 +8,10 @@ An assertion of no relevant finding may be used in continuity of care or transfe
 
 **Examples**
 
-[No history of procedure](observation-norelevantfinding-example0.html)
+[No history of procedure](Observation-norelevantfinding-example0.html)
 
-[No history of immunisation](observation-norelevantfinding-example1.html)
+[No history of immunisation](Observation-norelevantfinding-example1.html)
 
-[No known history of conditions](observation-norelevantfinding-example2.html)
+[No known history of conditions](Observation-norelevantfinding-example2.html)
 
-[Patient not taking any medications](observation-norelevantfinding-example3.html)
+[Patient not taking any medications](Observation-norelevantfinding-example3.html)
