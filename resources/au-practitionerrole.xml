@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitionerrole" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
@@ -43,13 +43,13 @@
       <short value="Practitioner role identifiers" />
       <definition value="Business identifiers for practitioner in a role." />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber">
+    <element id="PractitionerRole.identifier:medicareProviderNumber">
       <path value="PractitionerRole.identifier" />
-      <sliceName value="providerNumber" />
-      <short value="Australian Provider Number" />
-      <definition value="Provider number for this practitioner role." />
+      <sliceName value="medicareProviderNumber" />
+      <short value="Australian Medicare Provider Number" />
+      <definition value="Medicare provider number for this practitioner role." />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.type">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.type">
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for provider number" />
       <definition value="Identifier type of provider number for this practitioner role." />
@@ -67,22 +67,22 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.type.coding">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.type.coding">
       <path value="PractitionerRole.identifier.type.coding" />
       <definition value="Provider number identifier type coding." />
       <max value="1" />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.type.coding.system">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.type.coding.system">
       <path value="PractitionerRole.identifier.type.coding.system" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.type.coding.code">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.type.coding.code">
       <path value="PractitionerRole.identifier.type.coding.code" />
       <min value="1" />
       <fixedCode value="UPIN" />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.type.text">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -90,14 +90,14 @@
       <definition value="Provider number identifier type descriptive text." />
       <fixedString value="Medicare Provider Number" />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.system">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.system">
       <path value="PractitionerRole.identifier.system" />
       <short value="Namespace for Medicare provider number" />
       <definition value="Namespace of provider number for this practitioner role." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-provider-number" />
     </element>
-    <element id="PractitionerRole.identifier:providerNumber.value">
+    <element id="PractitionerRole.identifier:medicareProviderNumber.value">
       <path value="PractitionerRole.identifier.value" />
       <short value="Medicare provider number" />
       <definition value="Provider number for this practitioner role." />
@@ -255,12 +255,12 @@
       <path value="PractitionerRole.specialty.coding" />
       <sliceName value="snomedctSpecialty" />
       <short value="SNOMED CT Practitioner Specialty" />
-      <definition value=" Specialties for which this practitioner has capability to deliver in this role coded as SNOMED CT." />
+      <definition value="Specialties for which this practitioner has capability to deliver in this role coded as SNOMED CT." />
       <binding>
         <strength value="required" />
         <description value="SNOMED CT Practitioner Role" />
         <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 " />
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
         </valueSetReference>
       </binding>
     </element>
