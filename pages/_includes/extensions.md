@@ -12,6 +12,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
 * [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
+* [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
@@ -55,3 +56,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [List Source Role](StructureDefinition-list-source-role.html) - PractitonerRole support as per R4
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
+* [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
