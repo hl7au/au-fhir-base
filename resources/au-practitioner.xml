@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="AUBasePractitioner" />
   <title value="AU Base Practitioner" />
   <status value="draft" />
@@ -122,13 +122,13 @@
         <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
-    <element id="Practitioner.identifier:prescriberNumber">
+    <element id="Practitioner.identifier:medicarePrescriberNumber">
       <path value="Practitioner.identifier" />
-      <sliceName value="prescriberNumber" />
-      <short value="Prescriber Number" />
+      <sliceName value="medicarePrescriberNumber" />
+      <short value="Medicare Prescriber Number" />
       <definition value="Medicare Australia allocated prescriber number." />
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.type">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.type">
       <path value="Practitioner.identifier.type" />
       <short value="Coded identifier type for prescriber number" />
       <binding>
@@ -145,36 +145,36 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.type.coding">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <max value="1" />
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.type.coding.system">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.type.coding.code">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
       <min value="1" />
       <fixedCode value="PRES" />
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.type.text">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.identifier.type.text" />
       <fixedString value="Prescriber Number" />
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.system">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.system">
       <path value="Practitioner.identifier.system" />
       <short value="Namespace for prescriber number" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-prescriber-number" />
     </element>
-    <element id="Practitioner.identifier:prescriberNumber.value">
+    <element id="Practitioner.identifier:medicarePrescriberNumber.value">
       <path value="Practitioner.identifier.value" />
-      <short value="Prescriber number" />
+      <short value="Medicare Prescriber number" />
       <min value="1" />
       <example>
         <label value="prescriber number" />
