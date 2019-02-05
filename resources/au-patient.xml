@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="AUBasePatient" />
   <title value="AU Base Patient" />
   <status value="draft" />
@@ -227,8 +227,8 @@
     </element>
     <element id="Patient.identifier:medicareNumber.type">
       <path value="Patient.identifier.type" />
-	  <short value="Coded identifier type for Medicare number"/>
-      <definition value="Medicare number assigned to a patient." />	  
+      <short value="Coded identifier type for Medicare number" />
+      <definition value="Medicare number assigned to a patient." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -338,7 +338,7 @@
     </element>
     <element id="Patient.identifier:dvaNumber.type">
       <path value="Patient.identifier.type" />
-	  <short value="Coded identifier type for DVA number"/>
+      <short value="Coded identifier type for DVA number" />
       <definition value="Department of Veterans' Affairs (DVA) colour identifier type." />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -400,6 +400,7 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for Health Care Card number" />
       <definition value="Concession Card number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card number." />
+      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -464,6 +465,7 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for Pensioner Concession Card number" />
       <definition value="Concession Card number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card number" />
+      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -528,6 +530,7 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for Commonwealth Seniors Health Card number" />
       <definition value="Concession Card number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card number." />
+      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -590,7 +593,7 @@
     </element>
     <element id="Patient.identifier:medicalRecordNumber.type">
       <path value="Patient.identifier.type" />
-	  <short value="Coded identifier type for MRN"/>
+      <short value="Coded identifier type for MRN" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -651,7 +654,7 @@
     </element>
     <element id="Patient.identifier:insurerNumber.type">
       <path value="Patient.identifier.type" />
-	  <short value="Coded identifier type for private health insurance member number"/>
+      <short value="Coded identifier type for private health insurance member number" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -691,12 +694,12 @@
     </element>
     <element id="Patient.identifier:insurerNumber.value">
       <path value="Patient.identifier.value" />
-	  <short value="Private health insurance member number"/>
+      <short value="Private health insurance member number" />
       <min value="1" />
     </element>
     <element id="Patient.identifier:insurerNumber.assigner">
       <path value="Patient.identifier.assigner" />
-	  <short value="Private health insurer" />
+      <short value="Private health insurer" />
       <min value="1" />
     </element>
     <element id="Patient.identifier:insurerNumber.assigner.display">
