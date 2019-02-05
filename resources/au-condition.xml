@@ -2,17 +2,17 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-condition" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-condition" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="AUBaseCondition" />
   <title value="AU Base Condition" />
   <status value="draft" />
   <date value="2018-07-16" />
-  <publisher value="Health Level Seven Australia"/>
+  <publisher value="Health Level Seven Australia" />
   <contact>
     <telecom>
-      <system value="url"/>
-      <value value="http://hl7.org.au/fhir"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="http://hl7.org.au/fhir" />
+      <use value="work" />
     </telecom>
   </contact>
   <description value="Australian realm Base Condition profile." />
@@ -63,21 +63,23 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:snomedclinical-condition">
-      <path value="Condition.code.coding"/>
-      <sliceName value="snomedCondition"/>
-      <short value="Clinical Condition (SNOMED CT)"/>
+    <element id="Condition.code.coding:snomedCondition">
+      <path value="Condition.code.coding" />
+      <sliceName value="snomedCondition" />
+      <short value="Clinical Condition (SNOMED CT)" />
       <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1" />
       </binding>
     </element>
-    <element id="Condition.bodySite">
-      <path value="Condition.bodySite" />
+    <element id="Condition.code.coding:snomedCondition.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.bodySite.coding:snomedbody-site">
-      <path value="Condition.bodySite.coding"/>
+    <element id="Condition.bodySite.coding">
+      <path value="Condition.bodySite.coding" />
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -86,9 +88,11 @@
     </element>
     <element id="Condition.evidence">
       <path value="Condition.evidence" />
+      <short value="Supporting evidence for condition" />
     </element>
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code" />
+      <short value="Evidence manifestation/symptom " />
     </element>
     <element id="Condition.evidence.code.coding">
       <path value="Condition.evidence.code.coding" />
@@ -100,11 +104,12 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
+      <short value="Evidence code defined by a terminology system" />
     </element>
-    <element id="Condition.evidence.code.coding:snomedclinical-finding">
-      <path value="Condition.evidence.code.coding"/>
-      <sliceName value="snomedFinding"/>
-      <short value="Clinical Finding (SNOMED CT)"/>
+    <element id="Condition.evidence.code.coding:snomedFinding">
+      <path value="Condition.evidence.code.coding" />
+      <sliceName value="snomedFinding" />
+      <short value="Clinical Finding (SNOMED CT)" />
       <max value="1" />
       <binding>
         <strength value="required" />
