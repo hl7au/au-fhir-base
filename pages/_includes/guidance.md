@@ -29,7 +29,7 @@ The following FMM levels are defined:
 
 **FMM 1** DRAFT 0 PLUS the artifact produces no warnings during the build process and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation. 
 
-**FMM 2** FMM 2 PLUS the artifact has been tested and successfully exchanged between at least three independently developed systems leveraging at least 80% of the core data elements using semi-realistic data and scenarios based on at least one of the declared scopes of the resource (e.g. at a connectathon). These interoperability results must have been reported to and accepted by the responsible working group.
+**FMM 2** FMM 1 PLUS the artifact has been tested and successfully exchanged between at least three independently developed systems leveraging at least 80% of the core data elements using semi-realistic data and scenarios based on at least one of the declared scopes of the resource (e.g. at a connectathon). These interoperability results must have been reported to and accepted by the responsible working group.
 
 **FMM 3** FMM 2 PLUS the artifact has been verified by the work group as meeting the [Trial Use Quality Guidelines](http://wiki.hl7.org/index.php?title=DSTU_2_QA_guidelines) and has been subject to a round of formal balloting; has at least 10 implementer comments recorded in the tracker drawn from at least 3 organizations resulting in at least one substantive change
 
