@@ -7,11 +7,12 @@ Wherever possible, the structure for medication information profiled here, has b
 * Medication.package.content
 * Medication.package.batch
 
-The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/medication.html)  have been removed from the standard structure of R4 [Medication](http://hl7.org/fhir/2018May/medication.html), and for this reason it is recommended use of these elements is not encouraged:
+The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/medication.html)  have been removed from the standard structure of R4 [Medication](http://hl7.org/fhir/2018May/medication.html) and replaced with standard extensions, for this reason the direct use of these elements is not encouraged:
 
 * Medication.isBrand
 * Medication.isOverCounter
 * Medication.package.container
+* Medication.image
 
 #### Extensions
 Extensions used in this profile:
