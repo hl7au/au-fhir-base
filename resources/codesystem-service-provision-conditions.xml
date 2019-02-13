@@ -22,45 +22,42 @@
   <description value="The code(s) that detail the conditions under which the healthcare service is available/offered. Australian concepts."/>
   <caseSensitive value="true"/>
   <valueSet value="http://hl7.org.au/fhir/ValueSet/service-provision-conditions"/>
-  <content value="complete"/>
-  <concept>
-    <code value="nofee"/>
-    <display value="No Fee"/>
-    <definition value="No fee applies"/>
-  </concept>
-  <concept>
-    <code value="nofeemt"/>
-    <display value="No Fee (means tested)"/>
-    <definition value="No fee applied based on a means test"/>
-  </concept>
-  <concept>
-    <code value="bulkbilling"/>
-    <display value="Bulk Billing Only"/>
-    <definition value="Bulk billing service only"/>
-  </concept>
-  <concept>
-    <code value="feesapply"/>
-    <display value="Fees Apply"/>
-    <definition value="Fees apply to services"/>
-  </concept>
-  <concept>
-    <code value="donation"/>
-    <display value="By Donation"/>
-    <definition value="Donation for service"/>
-  </concept>
-  <concept>
-    <code value="copayment"/>
-    <display value="Co-payment"/>
-    <definition value="Co-payment applies for service"/>
-  </concept>
-  <concept>
-    <code value="other"/>
-    <display value="Other Option"/>
-    <definition value="Other payment options apply"/>
-  </concept>
-  <concept>
-    <code value="feesandbulkbilling"/>
-    <display value="Fees and Bulk Billing"/>
-    <definition value="Fees and bulk billing for service applies"/>
-  </concept>
+ <compositional value="false" />
+	<versionNeeded value="true" />
+	<content value="complete" />
+	<concept>
+		<code value="NFE" />
+		<display value="No Fee" />
+		<definition value="All or some of the services provided are offered free of charge." />
+	</concept>
+	<concept>
+		<code value="NFM" />
+		<display value="No Fee (means tested)" />
+		<definition value="All or some of the services provided are offered free of charge, however the decision on the costs associated with the service or procedures offered will depend on a means test outcome." />
+	</concept>
+	<concept>
+		<code value="BBO" />
+		<display value="Bulk Billing Only" />
+		<definition value="Bulk Billing is offered under Medicare." />
+	</concept>
+	<concept>
+		<code value="FAP" />
+		<display value="Fees Apply" />
+		<definition value="All or some of the services provided are offered at the Healthcare Service" />
+	</concept>
+	<concept>
+		<code value="DON" />
+		<display value="By Donation" />
+		<definition value="All or some of the services provided are offered on a donation basis. The expectation on the donation is not defined." />
+	</concept>
+	<concept>
+		<code value="COP" />
+		<display value="Co-payment" />
+		<definition value="All or some of the services provided are subject to a co-payment, which may be in combination with Private Insurance." />
+	</concept>
+	<concept>
+		<code value="FBB" />
+		<display value="Fees and Bulk Billing" />
+		<definition value="All or some of the services provided are offered subject to a payment in combination with Bulk Billing." />
+	</concept>	
 </CodeSystem>
