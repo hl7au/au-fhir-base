@@ -14,11 +14,11 @@
     "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\pages"
   }],
   "url" : "http://hl7.org.au/fhir/ImplementationGuide/au-base",
-  "version" : "1.0.0",
+  "version" : "1.0.1",
   "name" : "Implementation Guide Template",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2018-10-04T00:00:00+10:00",
+  "date" : "2018-12-17T00:00:00+11:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia Patient Administration Working Group",
@@ -216,6 +216,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/author-role"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/healthcareservice-eligibility-detail"
       },
       "exampleBoolean" : false,
@@ -265,6 +272,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/recorder-related-person"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/au-patient"
       },
       "exampleBoolean" : false,
@@ -273,6 +287,13 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/au-observation-age"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-norelevantfinding"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -447,6 +468,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/encounter-description"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/snomed-healthcareservice-services"
       },
       "exampleBoolean" : false,
@@ -511,6 +539,20 @@
     {
       "reference" : {
         "reference" : "CodeSystem/mims"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/medicine-item-change"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/medicine-item-change"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -608,6 +650,27 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/change-description"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/list-source-role"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medlist"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "Medication/GenericPack0"
       },
       "name" : "Medication Example Generic Pack",
@@ -696,6 +759,42 @@
       },
       "name" : "Observation Age Value Range - 6 months to 5 years",
       "description" : "Shows an example Age Range of Patient",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Observation/norelevantfinding-example0"
+      },
+      "name" : "Observation of no relevant finding of procedure",
+      "description" : "Shows an example of no history of procedure",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Observation/norelevantfinding-example1"
+      },
+      "name" : "Observation of no relevant finding of immunisations",
+      "description" : "Shows an example of no history of immunisation",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Observation/norelevantfinding-example2"
+      },
+      "name" : "Observation of no relevant finding of known history of conditions",
+      "description" : "Shows an example of no known history of conditions",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Observation/norelevantfinding-example3"
+      },
+      "name" : "Observation of no relevant finding of patient taking any medications",
+      "description" : "Shows an example of patient not taking any medications",
       "exampleBoolean" : true,
       "groupingId" : "p1"
     },
@@ -1254,6 +1353,33 @@
       "name" : "Organisation with source",
       "description" : "Shows a typical organisation with a source reference",
       "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Encounter/encounter-example0"
+      },
+      "name" : "Encounter with description",
+      "description" : "Encounter with encounter description",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Encounter/encounter-example1"
+      },
+      "name" : "Encounter with narative description",
+      "description" : "Encounter with narrative description",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/recorder"
+      },
+      "name" : "Recorder",
+      "description" : "Reference to an individual who recorded the record and takes responsibility for its content.",
+      "exampleBoolean" : false,
       "groupingId" : "p1"
     }],
     "page" : {
