@@ -24,9 +24,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Patient">
-	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use"/> 
-      </extension> 
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+      </extension>
       <path value="Patient" />
       <short value="A patient in an Australian healthcare context" />
       <definition value="Demographics and other administrative information about an individual receiving care or other health-related services." />
@@ -99,7 +99,7 @@
           <path value="system" />
         </discriminator>
         <discriminator>
-          <type value="value" />
+          <type value="pattern" />
           <path value="type" />
         </discriminator>
         <rules value="open" />
