@@ -169,6 +169,14 @@
         </valueSetReference>
       </binding>
     </element> 
+	<element id="Patient.identifier:ihiNumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <definition value="ihi" />
+      <fixedString value="IHI" />
+    </element>
     <element id="Patient.identifier:ihiNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for IHI" />
