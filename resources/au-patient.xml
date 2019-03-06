@@ -241,7 +241,15 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:medicareNumber.system">
+    <element id="Patient.identifier:medicareNumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <definition value="Medicare number descriptive text." />
+      <fixedString value="Medicare Number" />
+    </element>
+	<element id="Patient.identifier:medicareNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for Medicare number" />
       <min value="1" />
@@ -336,7 +344,14 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Patient.identifier:dvaNumber.system">
+    <element id="Patient.identifier:dvaNumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <definition value="Type of DVA card (specific colour may be provided)" />
+    </element>   
+	<element id="Patient.identifier:dvaNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for DVA number" />
       <definition value="DVA number assigned uri." />
@@ -385,6 +400,13 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:healthcareCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <fixedString value="Health Care Card Number" />
     </element>
     <element id="Patient.identifier:healthcareCard.system">
       <path value="Patient.identifier.system" />
@@ -436,6 +458,13 @@
         </valueSetReference>
       </binding>
     </element> 
+    <element id="Patient.identifier:pensionerConcessionCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <fixedString value="Pensioner Concession Card Number" />
+    </element>
     <element id="Patient.identifier:pensionerConcessionCard.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
@@ -486,6 +515,13 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <fixedString value="Commonwealth Seniors Health Card" />
+    </element>
     <element id="Patient.identifier:commonwealthSeniorsHealthCard.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
@@ -535,6 +571,13 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Patient.identifier:medicalRecordNumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <fixedString value="Medical Record Number" />
+    </element>
     <element id="Patient.identifier:medicalRecordNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Medical record number system namespace" />
@@ -580,6 +623,13 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="Patient.identifier:insurerNumber.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.type.text" />
+      <fixedString value="Private Health Insurance Member Number" />
     </element>
     <element id="Patient.identifier:insurerNumber.value">
       <path value="Patient.identifier.value" />
