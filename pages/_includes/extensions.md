@@ -13,6 +13,9 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
 * [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
+* [Encounter Origin Organization](StructureDefinition-encounter-origin-organization.html) - Encounter hospitalization origin as an organisation (R4 preadopt)
+* [Encounter Destination Organization](StructureDefinition-encounter-destination-organization.html) - Encounter hospitalization destination as an organisation (R4 preadopt)
+* [Participant Practitioner Role](StructureDefinition-participant-practitionerrole.html) - Participant as PractitionerRole (R4 preadopt)
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
@@ -57,3 +60,6 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
+* [Encounter Origin Organization](StructureDefinition-encounter-origin-organization.html) - Encounter hospitalization origin as an organisation as per R4
+* [Encounter Destination Organization](StructureDefinition-encounter-destination-organization.html) - Encounter hospitalization destination as an organisation as per R4
+* [Participant Practitioner Role](StructureDefinition-participant-practitionerrole.html) - Participant as PractitionerRole as per R4
