@@ -111,6 +111,12 @@
       <short value="National Individual Healthcare Identifier (IHI)" />
       <definition value="National Healthcare Identifier (IHI) for the patient." />
       <requirements value="Identifier as assigned and available via Healthcare Identifiers (HI) service." />
+	  <constraint>
+        <key value="inv-ihi-value-1" />
+        <severity value="error" />
+        <human value="IHI prefix is 800360" />
+        <expression value="value.startsWith('800360')" />
+      </constraint>
     </element>
     <element id="Patient.identifier:ihiNumber.extension">
       <path value="Patient.identifier.extension" />
