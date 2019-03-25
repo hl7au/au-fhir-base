@@ -5,3 +5,6 @@ This profile defines an encounter structure including core localisation concepts
 #### Extensions
 Extensions used in this profile:
 * Encounter Description [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-encounter-description.html)
+* Healthcare service [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-healthcare-service.html)
+* Encounter Origin Organization [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-encounter-origin-organization.html)
+* Encounter Destination Organization [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-encounter-destination-organization.html)
