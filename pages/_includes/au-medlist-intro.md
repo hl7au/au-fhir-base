@@ -14,3 +14,12 @@ Extensions used in this profile:
 
 **Examples**
 
+[Current medicine list authored by practitioner role (referenced)](List-e0a6c4a6-4e97-11e9-8647-d663bd873d93.html)
+
+[Practitioner asserts patient has no known current medication](List-bdaf4fda-4e98-11e9-8647-d663bd873d93.html)
+
+[Current medicine on discharge (Bundle)](Bundle-9309d080-4e97-11e9-8647-d663bd873d93.html)
+
+[Current and ceased medicines](List-0ebc46a8-4ea8-11e9-8647-d663bd873d93.html)
+
+

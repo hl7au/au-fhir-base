@@ -17,3 +17,5 @@ Extensions used in this profile:
 [Long-term use of medication Zoloft](MedicationStatement-MedicationStatementexample1.html)
 
 [Practitioner reports patient has had Diflucan](MedicationStatement-MedicationStatementexample2.html)
+
+
