@@ -3,22 +3,22 @@
   "id" : "au-base",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\resources"
+    "valueString" : "C:\\work\\git\\au-fhir-base-fork\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\examples"
+    "valueString" : "C:\\work\\git\\au-fhir-base-fork\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\pages"
+    "valueString" : "C:\\work\\git\\au-fhir-base-fork\\pages"
   }],
   "url" : "http://hl7.org.au/fhir/ImplementationGuide/au-base",
-  "version" : "1.0.1",
+  "version" : "1.0.2",
   "name" : "Implementation Guide Template",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2019-02-20T00:00:00+11:00",
+  "date" : "2010-02-15T00:00:00+10:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia Patient Administration Working Group",
@@ -1380,6 +1380,51 @@
       "name" : "Recorder",
       "description" : "Reference to an individual who recorded the record and takes responsibility for its content.",
       "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "List/e0a6c4a6-4e97-11e9-8647-d663bd873d93"
+      },
+      "name" : "Medicine List example with referenced entries",
+      "description" : "Medicine List example with referenced entries",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "List/bdaf4fda-4e98-11e9-8647-d663bd873d93"
+      },
+      "name" : "Medicine List example - no known current medicine",
+      "description" : "Medicine List example - no known current medicine",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/9309d080-4e97-11e9-8647-d663bd873d93"
+      },
+      "name" : "Medicine List in a bundle",
+      "description" : "Medicine List in a bundle",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "List/0ebc46a8-4ea8-11e9-8647-d663bd873d93"
+      },
+      "name" : "Medicine List with changes",
+      "description" : "Medicine List with changes",
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/f12d073e-4e99-11e9-8647-d663bd873d93"
+      },
+      "name" : "Patient",
+      "description" : "Patient",
+      "exampleBoolean" : true,
       "groupingId" : "p1"
     }],
     "page" : {
