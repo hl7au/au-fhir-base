@@ -13,8 +13,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
 * [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
-* [Encounter Origin Organization](StructureDefinition-encounter-origin-organization.html) - Encounter hospitalization origin as an organisation (R4 preadopt)
-* [Encounter Destination Organization](StructureDefinition-encounter-destination-organization.html) - Encounter hospitalization destination as an organisation (R4 preadopt)
+* [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation (R4 preadopt)
+* [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation (R4 preadopt)
 * [Associated Practitioner Role](StructureDefinition-associated-practitionerrole.html) - Associated practitioner role
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
 
@@ -61,5 +61,5 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
-* [Encounter Origin Organization](StructureDefinition-encounter-origin-organization.html) - Encounter hospitalization origin as an organisation as per R4
-* [Encounter Destination Organization](StructureDefinition-encounter-destination-organization.html) - Encounter hospitalization destination as an organisation as per R4
+* [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation as per R4
+* [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation as per R4

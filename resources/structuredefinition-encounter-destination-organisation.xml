@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="encounter-origin-organization" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/encounter-origin-organization" />
+  <id value="encounter-destination-organisation" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/encounter-destination-organisation" />
   <version value="1.0.0" />
-  <name value="EncounterOriginOrganization" />
-  <title value="Encounter Origin Organization" />
+  <name value="EncounterDestinationOrganisation" />
+  <title value="Encounter Destination Organisation" />
   <status value="draft" />
   <date value="2019-03-19" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
@@ -15,12 +15,12 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension pre-adopts (from R4) the reference to an organization to identify an organisation from which a patient was admitted." />
+  <description value="This extension pre-adopts (from R4) the reference to an organisation to which a patient was discharged." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Encounter" />
+  <context value="Encounter.hospitalization" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -30,12 +30,13 @@
         <valueCode value="draft" />
       </extension>
       <path value="Extension" />
-      <short value="Encounter origin organization" />
-      <definition value="Organization from which the patient came before admission." />
+      <short value="Encounter destination organisation" />
+      <definition value="Organisation to which the patient is discharged." />
+      <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/encounter-origin-organization" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/encounter-destination-organisation" />
     </element>
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />
