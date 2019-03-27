@@ -1,3 +1,3 @@
-**Extension: Encounter Origin Organization** *[[FMM Level 0](guidance.html)]*
+**Extension: Encounter Origin Organisation** *[[FMM Level 0](guidance.html)]*
 
-This extension pre-adopts (from R4) the reference to an organization to identify an organisation from which a patient was admitted.
+This extension pre-adopts (from R4) the reference to an organisation from which a patient was admitted.
