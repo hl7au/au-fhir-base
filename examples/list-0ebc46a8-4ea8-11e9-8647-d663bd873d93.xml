@@ -2,11 +2,11 @@
 <List xmlns="http://hl7.org/fhir">
     <id value="0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
     <text>
-        <status value="additional"/>
+        <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Consultation Note</h1>
+            <h1>MEDICINE LIST</h1>
 
-            <h2>Patient</h2>
+            <h2>PATIENT</h2>
             <table>
                 <tbody>
                     <tr>
@@ -23,16 +23,20 @@
                         <th>Gender</th>
                         <td>Male</td>
                     </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>2 Round Court, QLD 4113</td>
+                    </tr>
                 </tbody>
             </table>
 
-            <h2>Practitioner</h2>
+            <h2>SOURCE OF MEDICINE LIST</h2>
             <table>
                 <tbody>
                     <tr>
                         <th>Name</th>
                         <td>
-                            <p>Given Name: Iam Practitioner</p>
+                            <p>Iam Practitioner</p>
                         </td>
                     </tr>
                     <tr>
@@ -50,7 +54,7 @@
                 </tbody>
             </table>
 
-            <h2>Consultation details</h2>
+            <h2>CONSULTATION DETAILS</h2>
             <table>
                 <tbody>
                     <tr>
@@ -66,7 +70,7 @@
                 </tbody>
             </table>
 
-            <h3>Current Medicines</h3>
+            <h3>CURRENT MEDICINES</h3>
             <table border="1">
                 <thead>
                     <tr>
@@ -103,7 +107,7 @@
                         <td>Panadol Osteo</td>
                         <td>Two tablets every 6-8 hours when required.</td>
                         <td>Osteoarthritis, pain relief</td>
-                        <td/>
+                        <td>Unchanged</td>
                         <td/>
                         <td>No more than 6 tablets in 24hr</td>
                     </tr>
@@ -119,7 +123,7 @@
                 </tbody>
             </table>
 
-            <h3>Ceased Medicines</h3>
+            <h3>CEASED MEDICINES</h3>
             <table border="1">
                 <thead>
                     <tr>
@@ -275,6 +279,13 @@
             </name>
             <gender value="male"/>
             <birthDate value="1953-09-14"/>
+            <address>
+                <use value="home"/>
+                <line value="2 Round Court"/>
+                <state value="QLD"/>
+                <postalCode value="4113"/>
+                <country value="Australia"/>
+            </address>
             <generalPractitioner>
                 <reference value="#36294aee-4eab-11e9-8647-d663bd873d93"/>
             </generalPractitioner>
@@ -462,6 +473,13 @@
         </item>
     </entry>
     <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+                <display value="Unchanged"/>
+            </coding>
+        </flag>
         <item>
             <reference value="#70c4f4b8-4f24-11e9-8647-d663bd873d9"/>
         </item>

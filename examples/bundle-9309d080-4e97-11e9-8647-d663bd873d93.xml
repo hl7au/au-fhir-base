@@ -11,7 +11,7 @@
   </identifier>
   <type value="collection"/>
   <entry>
-    <fullUrl value="urn:uuid:bf059e62-4ea1-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:e229b450-4e9c-11e9-8647-d663bd873d93"/>
     <resource>
       <List>
         <id value="e229b450-4e9c-11e9-8647-d663bd873d93"/>
@@ -25,11 +25,7 @@
               <tbody>
                 <tr>
                   <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <td>Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -40,8 +36,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -50,16 +54,20 @@
             <table>
               <tbody>
                 <tr>
-                  <th>Name</th>
-                  <td>
-                    <p>Prefix: Dr</p>
-                    <p>Given Name: Helen</p>
-                    <p>Family Name: Mayo</p>
-                  </td>
+                  <th>Hospital name</th>
+                  <td>Downunder Hospital</td>
                 </tr>
                 <tr>
-                  <th>Role</th>
-                  <td>Cardiologist</td>
+                  <th>Hospital address</th>
+                  <td>3 McGregor Street, Blacktown, NSW 2148, Australia</td>
+                </tr>
+                <tr>
+                  <th>Telephone number</th>
+                  <td>(02)555 3333</td>
+                </tr>
+                <tr>
+                  <th>Doctor</th>
+                  <td>Dr Helen Mayo, Cardiologist</td>
                 </tr>
                 <tr>
                   <th>HPI-I</th>
@@ -69,18 +77,10 @@
                   <th>Prescriber Number</th>
                   <td>453221</td>
                 </tr>
-                <tr>
-                  <th>Telephone number</th>
-                  <td>Mobile: 025553333</td>
-                </tr>
-                <tr>
-                  <th>Organisation name</th>
-                  <td>Downunder Hospital</td>
-                </tr>
               </tbody>
             </table>
 
-            <h2>Current Medication on Discharge</h2>
+            <h2>Current Medication on Discharge at 19/03/2019</h2>
             <table border="1">
               <thead>
                 <tr>
@@ -271,7 +271,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:9f778bac-4ea4-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
         <id value="f12d073e-4e99-11e9-8647-d663bd873d93"/>
@@ -303,8 +303,8 @@
           <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-status">
             <valueCoding>
               <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"/>
-              <code value="Active"/>
-              <display value="Active"/>
+              <code value="active"/>
+              <display value="active"/>
             </valueCoding>
           </extension>
           <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status">
@@ -326,9 +326,9 @@
           <value value="8003608166690503"/>
         </identifier>
         <name>
-          <prefix value="Mr"/>
           <family value="Jones"/>
           <given value="Nicholas"/>
+          <prefix value="Mr"/>
         </name>
         <telecom>
           <system value="email"/>
@@ -354,7 +354,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:bf05a146-4ea1-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:9024d4a6-4ea0-11e9-8647-d663bd873d93"/>
     <resource>
       <PractitionerRole>
         <id value="9024d4a6-4ea0-11e9-8647-d663bd873d93"/>
@@ -406,9 +406,6 @@
             <display value="Cardiologist"/>
           </coding>
         </specialty>
-        <location>
-          <reference value="Location/example0"/>
-        </location>
         <telecom>
           <system value="phone"/>
           <value value="025553333"/>
@@ -418,7 +415,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:bf05a2cc-4ea1-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93"/>
     <resource>
       <Practitioner>
         <id value="9024d118-4ea0-11e9-8647-d663bd873d93"/>
@@ -546,8 +543,7 @@
             <p><b>identifier</b>: HPI-O = 8003627500000328</p>
             <p><b>active</b>: true</p>
             <p><b>name</b>: Downunder Hospital</p>
-            <p><b>telecom</b>: helen.mayo@downunderhospital.com.au(WORK)</p>
-            <p><b>address</b>: 3 McGregor Street Blacktown NSW 2148 Australia (WORK)</p>
+            <p><b>address</b>: 3 McGregor Street Blacktown NSW 2148 Australia</p>
           </div>
         </text>
         <identifier>
@@ -564,13 +560,7 @@
         </identifier>
         <active value="true"/>
         <name value="Downunder Hospital"/>
-        <telecom>
-          <system value="email"/>
-          <value value="helen.mayo@downunderhospital.com.au"/>
-          <use value="work"/>
-        </telecom>
         <address>
-          <use value="work"/>
           <line value="3 McGregor Street"/>
           <city value="Blacktown"/>
           <state value="NSW"/>
@@ -581,7 +571,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:f70d4178-4ea3-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="e36cef42-4ea3-11e9-8647-d663bd873d93"/>
@@ -700,14 +690,28 @@
           <text value="Depression."/>
         </reasonCode>
         <dosage>
-          <text value="0.5 qam"/>
+          <text value="Take HALF a tablet dispersed in water in the MORNING."/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+              <when value="MORN"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="0.5"/>
+            <unit value="TAB"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="TAB"/>
+          </doseQuantity>
         </dosage>
       </MedicationStatement>
     </resource>
   </entry>
 
   <entry>
-    <fullUrl value="urn:uuid:349774fe-4ea5-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="fbc87b14-4ea4-11e9-8647-d663bd873d93"/>
@@ -809,16 +813,28 @@
           <text value="To thin the blood to prevent heart attack or stroke."/>
         </reasonCode>
         <dosage>
-          <text value="1 qam"/>
+          <text value="Swallow whole ONE tablet in the MORNING WITH FOOD."/>
           <patientInstruction
-            value="Swallow whole after food. If develop swollen ankles, difficulty in breathing, black stools or vomit that looks like coffee grounds, stop taking the medicine and contact the doctor without delay. It may be advisable to stop taking aspirin 7 days before planed surgery and some dental procedure; discuss with your doctor or dentist."
-          />
+            value="Swallow whole after food. If develop swollen ankles, difficulty in breathing, black stools or vomit that looks like coffee grounds, stop taking the medicine and contact the doctor without delay. It may be advisable to stop taking aspirin 7 days before planed surgery and some dental procedure; discuss with your doctor or dentist."/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <periodUnit value="d"/>
+              <when value="MORN"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="1"/>
+            <unit value="TAB"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="TAB"/>
+          </doseQuantity>
         </dosage>
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:91b52dc0-4ea5-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="9b6194f8-4ea5-11e9-8647-d663bd873d93"/>
@@ -917,17 +933,28 @@
           <text value="To thin the blood to prevent heart attack or stroke."/>
         </reasonCode>
         <dosage>
-          <text value="1 bds"/>
+          <text value="Take ONE tablet TWICE a day."/>
           <patientInstruction
-            value="Do not take more than one aspirin tablet or capsule each day while being
-            treated with this medicine."
-          />
+            value="Do not take more than one aspirin tablet or capsule each day while being treated with this medicine."/>
+          <timing>
+            <repeat>
+              <frequency value="2"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="1"/>
+            <unit value="TAB"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="TAB"/>
+          </doseQuantity>
         </dosage>
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:c6393b86-4ea5-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="cede882c-4ea5-11e9-8647-d663bd873d93"/>
@@ -1022,16 +1049,27 @@
         </subject>
         <taken value="y"/>
         <dosage>
-          <text value="1 n"/>
-          <patientInstruction
-            value="Swallow whole with a glass of fluid, do not crush or chew the tablets. Take regularly and do not miss the doses. Do not stop taking suddenly unless otherwise advised by your doctor. This medicine may affect mental alertness and/or coordination. If affected do not drive or operate machinery. Avoid eating grapefruit or drinking grapefruit juice while taking this medicine. "
-          />
+          <text value="Take ONE capsule at NIGHT."/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+              <when value="NIGHT"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="1"/>
+            <unit value="CAP"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="CAP"/>
+          </doseQuantity>
         </dosage>
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:ff8dcece-4ea5-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="f0a81ae0-4ea5-11e9-8647-d663bd873d93"/>
@@ -1166,20 +1204,29 @@
         </subject>
         <taken value="y"/>
         <dosage>
-          <text value="1n"/>
+          <text value="Swallow whole ONE tablet at NIGHT."/>
           <patientInstruction
-            value="Swallow whole with a glass of fluid, do not crush or chew the tablets. Take
-            regularly and do not miss doses. Do not stop taking suddenly unless advised by
-            your doctor. This medicine may affect mental alertness and/or operate machinery.
-            If affected do not drive or operate machinery. Avoid eating grapefruit or
-            drinking grapefruit juice while being treated with this medicine."
-          />
+            value="Swallow whole with a glass of fluid, do not crush or chew the tablets. Take regularly and do not miss doses. Do not stop taking suddenly unless advised by your doctor. This medicine may affect mental alertness and/or operate machinery. If affected do not drive or operate machinery. Avoid eating grapefruit or drinking grapefruit juice while being treated with this medicine."/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+              <when value="NIGHT"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="1"/>
+            <unit value="TAB"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="TAB"/>
+          </doseQuantity>
         </dosage>
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:1c3b2292-4ea6-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="2450a7ea-4ea6-11e9-8647-d663bd873d93"/>
@@ -1287,24 +1334,25 @@
           <text value="Chest pain."/>
         </reasonCode>
         <dosage>
-          <text value="prn"/>
+          <text
+            value="Place ONE tablet under the tongue and allow to dissolve when needed for chest pain. DISCARD CONTENTS THREE MONTHS AFTER OPENING."/>
           <patientInstruction
-            value="Sit or lie down before use as it may cause dizziness. Get up gradually from
-            sitting or lying to minimise this effect. Place half to one tablet under the
-            tongue. Do not swallow it. After the pain has been relieved, spit out what is
-            left of the tablet to avoid adverse effects such as headache. It is important to
-            store these tablets properly or they may not work as well. Keep them in the
-            original glass bottle away from moisture, heat and light. Do not carry them
-            close to your body. Write the date on the bottle when you open it and discard
-            any unused tablets 3 months later (after that time, they will not be reliably
-            effective)."
-          />
+            value="Sit or lie down before use as it may cause dizziness. Get up gradually from sitting or lying to minimise this effect. Place half to one tablet under the tongue. Do not swallow it. After the pain has been relieved, spit out what is left of the tablet to avoid adverse effects such as headache. It is important to store these tablets properly or they may not work as well. Keep them in the original glass bottle away from moisture, heat and light. Do not carry them close to your body. Write the date on the bottle when you open it and discard any unused tablets 3 months later (after that time, they will not be reliably effective)."/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+              <when value="MORN"/>
+            </repeat>
+          </timing>
+          <asNeededBoolean value="true"/>
         </dosage>
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:57e978b6-4ea6-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="613a96e8-4ea6-11e9-8647-d663bd873d93"/>
@@ -1443,19 +1491,29 @@
           <text value="To relieve chest pain associated with angina."/>
         </reasonCode>
         <dosage>
-          <text value="1 n"/>
+          <text value="Take ONE tablet at NIGHT."/>
           <patientInstruction
-            value="Avoid eating grapefruit or drinking grapefruit juice while being treated with
-          this medicine as this could increase the chances of side-effects occurring. Seek
-          medical advice promptly if your urine is dark (brown) or you have any muscle
-          pain, tenderness or weakness."
-          />
-        </dosage>
+            value="Avoid eating grapefruit or drinking grapefruit juice while being treated with this medicine as this could increase the chances of side-effects occurring. Seek medical advice promptly if your urine is dark (brown) or you have any muscle pain, tenderness or weakness."/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+              <when value="NIGHT"/>
+            </repeat>
+          </timing>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="TAB"/>
+              <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+              </dosage>
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:836bfdc4-4ea6-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93"/>
     <resource>
       <MedicationStatement>
         <id value="91296398-4ea6-11e9-8647-d663bd873d93"/>
@@ -1553,7 +1611,22 @@
           <text value="For reducing blood pressure, angina or disturbances of heart rhythm."/>
         </reasonCode>
         <dosage>
-          <text value="1 bd"/>
+          <text value="Take ONE tablet TWICE a day."/>
+          <timing>
+            <repeat>
+              <frequency value="2"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+              <when value="MORN"/>
+              <when value="HS"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="1"/>
+            <unit value="TAB"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="TAB"/>
+          </doseQuantity>
         </dosage>
       </MedicationStatement>
     </resource>
