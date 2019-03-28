@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Base profile for Australian context Practitioner Role (Individual Provider)" />
+  <description value="This profile defines a practitioner role administration details structure that includes core localisation concepts for use in an Australian context." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -34,12 +34,12 @@
       <path value="PractitionerRole.identifier" />
       <slicing>
         <discriminator>
+          <type value="pattern" />
+          <path value="type" />
+        </discriminator>
+		<discriminator>
           <type value="value" />
           <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="type" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -56,6 +56,12 @@
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for provider number" />
       <definition value="Identifier type of provider number for this practitioner role." />
+	  <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org.au/fhir/v2/0203" />
+          <code value="UPIN" />
+        </coding>
+      </patternCodeableConcept>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -69,21 +75,6 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="PractitionerRole.identifier:medicareProviderNumber.type.coding">
-      <path value="PractitionerRole.identifier.type.coding" />
-      <definition value="Provider number identifier type coding." />
-      <max value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:medicareProviderNumber.type.coding.system">
-      <path value="PractitionerRole.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
-    </element>
-    <element id="PractitionerRole.identifier:medicareProviderNumber.type.coding.code">
-      <path value="PractitionerRole.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="UPIN" />
     </element>
     <element id="PractitionerRole.identifier:medicareProviderNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -120,6 +111,12 @@
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for national provider identifier at organisation" />
       <definition value="Identifier type provider at organisation identifier for this practitioner role." />
+	  <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org.au/fhir/v2/0203" />
+          <code value="NPIO" />
+        </coding>
+      </patternCodeableConcept>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -133,20 +130,6 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding">
-      <path value="PractitionerRole.identifier.type.coding" />
-      <max value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding.system">
-      <path value="PractitionerRole.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
-    </element>
-    <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.coding.code">
-      <path value="PractitionerRole.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="NPIO" />
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -184,6 +167,12 @@
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for employee number" />
       <min value="1" />
+	  <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v2/0203" />
+          <code value="EI" />
+        </coding>
+      </patternCodeableConcept>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -197,21 +186,6 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="PractitionerRole.identifier:employeeNumber.type.coding">
-      <path value="PractitionerRole.identifier.type.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:employeeNumber.type.coding.system">
-      <path value="PractitionerRole.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/v2/0203" />
-    </element>
-    <element id="PractitionerRole.identifier:employeeNumber.type.coding.code">
-      <path value="PractitionerRole.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="EI" />
     </element>
     <element id="PractitionerRole.identifier:employeeNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

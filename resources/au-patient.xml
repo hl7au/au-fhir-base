@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Australian realm Patient profile" />
+  <description value="This profile defines a patient administration details structure that includes core localisation concepts for use in an Australian context." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -111,6 +111,24 @@
       <short value="National Individual Healthcare Identifier (IHI)" />
       <definition value="National Healthcare Identifier (IHI) for the patient." />
       <requirements value="Identifier as assigned and available via Healthcare Identifiers (HI) service." />
+      <constraint>
+        <key value="inv-ihi-value-0" />
+        <severity value="error" />
+        <human value="IHI shall be an exactly 16 digit number" />
+        <expression value="value.matches('^([0-9]{16})$')" />
+      </constraint>
+      <constraint>
+        <key value="inv-ihi-value-1" />
+        <severity value="error" />
+        <human value="IHI prefix is 800360" />
+        <expression value="value.startsWith('800360')" />
+      </constraint>
+      <constraint>
+        <key value="inv-ihi-value-2" />
+        <severity value="error" />
+        <human value="IHI shall pass the Luhn algorithm check" />
+        <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+      </constraint>
     </element>
     <element id="Patient.identifier:ihiNumber.extension">
       <path value="Patient.identifier.extension" />
@@ -195,24 +213,6 @@
         <valueString value="8003608166690503" />
       </example>
       <maxLength value="16" />
-      <constraint>
-        <key value="inv-ihi-0" />
-        <severity value="error" />
-        <human value="IHI shall be an exactly 16 digit number" />
-        <expression value="matches('^([0-9]{16})$')" />
-      </constraint>
-      <constraint>
-        <key value="inv-ihi-1" />
-        <severity value="error" />
-        <human value="IHI prefix is 800360" />
-        <expression value="startsWith('800360')" />
-      </constraint>
-      <constraint>
-        <key value="inv-ihi-2" />
-        <severity value="error" />
-        <human value="IHI shall pass the Luhn algorithm check" />
-        <expression value="(((select(substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)" />
-      </constraint>
     </element>
     <element id="Patient.identifier:medicareNumber">
       <path value="Patient.identifier" />
