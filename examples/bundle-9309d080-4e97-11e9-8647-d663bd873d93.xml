@@ -16,7 +16,7 @@
       <List>
         <id value="e229b450-4e9c-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h1>Current Medication on Discharge</h1>
 
@@ -24,8 +24,8 @@
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>Nicholas Jones </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -80,7 +80,7 @@
               </tbody>
             </table>
 
-            <h2>Current Medication on Discharge at 19/03/2019</h2>
+            <h2>Current Medicines List on Discharge at 19/03/2019</h2>
             <table border="1">
               <thead>
                 <tr>
@@ -576,18 +576,14 @@
       <MedicationStatement>
         <id value="e36cef42-4ea3-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -598,8 +594,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -681,6 +685,7 @@
             <system value="http://snomed.info/sct"/>
             <code value="2952011000036104"/>
           </coding>
+          <text value="FLUOXETINE 20mg TABLETS, LOVAN,PROZAC,ZACTIN"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
@@ -716,18 +721,14 @@
       <MedicationStatement>
         <id value="fbc87b14-4ea4-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -738,8 +739,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -804,6 +813,7 @@
             <code value="3338011000036100"/>
             <display value="cartia"/>
           </coding>
+          <text value="ASPIRIN 100mg EC TABLET, CARTIA"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
@@ -839,18 +849,14 @@
       <MedicationStatement>
         <id value="9b6194f8-4ea5-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -861,8 +867,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -924,13 +938,14 @@
             <code value="32101000036105"/>
             <display value="Brilinta"/>
           </coding>
+          <text value="TICAGRELOR 90mg TABLETS, BRILINTA"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
         <taken value="y"/>
         <reasonCode>
-          <text value="To thin the blood to prevent heart attack or stroke."/>
+          <text value="For angina or to keep the blood thin."/>
         </reasonCode>
         <dosage>
           <text value="Take ONE tablet TWICE a day."/>
@@ -941,6 +956,8 @@
               <frequency value="2"/>
               <period value="1"/>
               <periodUnit value="d"/>
+              <when value="MORN"/>
+              <when value="HS"/>
             </repeat>
           </timing>
           <doseQuantity>
@@ -959,18 +976,14 @@
       <MedicationStatement>
         <id value="cede882c-4ea5-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -981,8 +994,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -1043,6 +1064,7 @@
             <code value="929850011000036100"/>
             <display value="Omacor"/>
           </coding>
+          <text value="OMEGA-3-ACID ETHYL ESTERS 1000mg CAPSULES, OMACOR"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
@@ -1055,7 +1077,7 @@
               <frequency value="1"/>
               <period value="1"/>
               <periodUnit value="d"/>
-              <when value="NIGHT"/>
+              <when value="HS"/>
             </repeat>
           </timing>
           <doseQuantity>
@@ -1074,18 +1096,14 @@
       <MedicationStatement>
         <id value="f0a81ae0-4ea5-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -1096,8 +1114,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -1198,6 +1224,7 @@
             <code value="501000168108"/>
             <display value="Nifedipine XR (Apo)"/>
           </coding>
+          <text value="NIFEDIPINE 30mg CONTROLLED RELEASE TABLETS, ADEFIN XL 30, ADALAT OROS, ADEFIN OROS, ADDOS XR 30, APO-NIFEDIPINE XR"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
@@ -1212,7 +1239,7 @@
               <frequency value="1"/>
               <period value="1"/>
               <periodUnit value="d"/>
-              <when value="NIGHT"/>
+              <when value="HS"/>
             </repeat>
           </timing>
           <doseQuantity>
@@ -1232,18 +1259,14 @@
         <id value="2450a7ea-4ea6-11e9-8647-d663bd873d93"/>
 
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -1254,8 +1277,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -1325,13 +1356,14 @@
             <code value="3935011000036104"/>
             <display value="Anginine"/>
           </coding>
+          <text value="GLYCERIL TRINITRATE 600mcg (30) SUBLINGUAL TABLETS, ANGININE"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
         <taken value="n"/>
         <reasonCode>
-          <text value="Chest pain."/>
+          <text value="To relieve chest pain associated with angina."/>
         </reasonCode>
         <dosage>
           <text
@@ -1343,7 +1375,6 @@
               <frequency value="1"/>
               <period value="1"/>
               <periodUnit value="d"/>
-              <when value="MORN"/>
             </repeat>
           </timing>
           <asNeededBoolean value="true"/>
@@ -1356,20 +1387,15 @@
     <resource>
       <MedicationStatement>
         <id value="613a96e8-4ea6-11e9-8647-d663bd873d93"/>
-
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -1380,8 +1406,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -1482,6 +1516,7 @@
             <code value="19751000036109"/>
             <display value="Lorstat"/>
           </coding>
+          <text value="ATORVASTATIN 80mg TABLETS, APO-ATORVASTATIN, LIPITOR, LORSTAT"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
@@ -1499,16 +1534,16 @@
               <frequency value="1"/>
               <period value="1"/>
               <periodUnit value="d"/>
-              <when value="NIGHT"/>
+              <when value="HS"/>
             </repeat>
           </timing>
-            <doseQuantity>
-              <value value="1"/>
-              <unit value="TAB"/>
-              <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-              <code value="TAB"/>
-            </doseQuantity>
-              </dosage>
+          <doseQuantity>
+            <value value="1"/>
+            <unit value="TAB"/>
+            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
+            <code value="TAB"/>
+          </doseQuantity>
+        </dosage>
       </MedicationStatement>
     </resource>
   </entry>
@@ -1518,18 +1553,14 @@
       <MedicationStatement>
         <id value="91296398-4ea6-11e9-8647-d663bd873d93"/>
         <text>
-          <status value="additional"/>
+          <status value="extensions"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <h2>Patient</h2>
             <table>
               <tbody>
                 <tr>
-                  <th>Patient name</th>
-                  <td>
-                    <p>Prefix: Mr</p>
-                    <p>Given Name: Nicholas</p>
-                    <p>Family Name: Jones</p>
-                  </td>
+                  <th>Name</th>
+                  <td>Mr Nicholas Jones </td>
                 </tr>
                 <tr>
                   <th>DoB</th>
@@ -1540,8 +1571,16 @@
                   <td>Male</td>
                 </tr>
                 <tr>
+                  <th>Indigenous status</th>
+                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+                </tr>
+                <tr>
                   <th>IHI</th>
                   <td>8003608166690503</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>
                 </tr>
               </tbody>
             </table>
@@ -1602,6 +1641,19 @@
             <code value="4275011000036101"/>
             <display value="Minax"/>
           </coding>
+          <coding>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+              <valueCoding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
+                <code value="BPD"/>
+                <display value="Branded product with no strengths or form"/>
+              </valueCoding>
+            </extension>
+            <system value="http://snomed.info/sct"/>
+            <code value="3906011000036103"/>
+            <display value="Betaloc"/>
+          </coding>
+          <text value="METOPROLOL 50mg TABLETS, MINAX 50, BETALOC "/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
