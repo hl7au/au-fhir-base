@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-healthcareservice" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
-  <version value="1.0.0" />
+  <version value="1.0.0"/>
   <name value="AUBaseHealthcareService" />
   <title value="AU Base Healthcare Service" />
   <status value="draft" />
@@ -24,9 +24,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="HealthcareService">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use" />
-      </extension>
+	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use"/> 
+      </extension> 
       <path value="HealthcareService" />
       <short value="A healthcare service in an Australian healthcare context" />
       <definition value="The details of a healthcare service." />
@@ -66,7 +66,7 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-        <discriminator>
+		<discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -79,7 +79,7 @@
       <sliceName value="hpio" />
       <short value="Healthcare Provider Identifier – Organisation (HPI-O)" />
       <definition value="National identifier Health Provider Identifier for Organisations (HPI-O)." />
-      <constraint>
+	  <constraint>
         <key value="inv-hpio-0" />
         <severity value="error" />
         <human value="HPI-O shall be an exactly 16 digit number" />
@@ -102,7 +102,7 @@
       <path value="HealthcareService.identifier.type" />
       <short value="Identifier type for HPI-O" />
       <definition value="Healthcare Provider Identifier – Organisation (HPI-O) identifier type." />
-      <patternCodeableConcept>
+	  <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org.au/fhir/v2/0203" />
           <code value="NOI" />
@@ -127,7 +127,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="HealthcareService.identifier.type.text" />
-      <definition value="hpi-o" />
+	  <definition value="hpi-o" />
       <fixedString value="HPI-O" />
     </element>
     <element id="HealthcareService.identifier:hpio.system">
@@ -179,7 +179,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding" />
+          <path value="coding.system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -189,11 +189,10 @@
       <path value="HealthcareService.serviceProvisionCode" />
       <sliceName value="auServiceProvisionCode" />
       <short value="Australian service provision conditions" />
-    </element>
-    <element id="HealthcareService.serviceProvisionCode:auServiceProvisionCode.coding">
-      <path value="HealthcareService.serviceProvisionCode.coding" />
-      <min value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ServiceProvisionConditions" />
+        </extension>
         <strength value="required" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/service-provision-conditions" />
