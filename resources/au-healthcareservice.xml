@@ -180,7 +180,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.system" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -190,11 +190,13 @@
       <path value="HealthcareService.serviceProvisionCode" />
       <sliceName value="auServiceProvisionCode" />
       <short value="Australian service provision conditions" />
+    </element>
+    <element id="HealthcareService.serviceProvisionCode:auServiceProvisionCode.coding">
+      <path value="HealthcareService.serviceProvisionCode.coding" />
+      <min value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ServiceProvisionConditions" />
-        </extension>
         <strength value="required" />
+        <description value="Service provision conditions" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/service-provision-conditions" />
         </valueSetReference>
