@@ -3,22 +3,22 @@
   "id" : "au-base",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\resources"
+    "valueString" : "C:\\work\\git\\au-fhir-base-fork\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\examples"
+    "valueString" : "C:\\work\\git\\au-fhir-base-fork\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "D:\\Oridashi\\Repositories\\au-fhir-base\\pages"
+    "valueString" : "C:\\work\\git\\au-fhir-base-fork\\pages"
   }],
   "url" : "http://hl7.org.au/fhir/ImplementationGuide/au-base",
-  "version" : "1.0.1",
+  "version" : "1.0.2",
   "name" : "Implementation Guide Template",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2019-02-20T00:00:00+11:00",
+  "date" : "2010-02-15T00:00:00+10:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia Patient Administration Working Group",
@@ -1379,6 +1379,14 @@
       },
       "name" : "Recorder",
       "description" : "Reference to an individual who recorded the record and takes responsibility for its content.",
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-encounter"
+      },
+      "name" : "AU Base Encounter",
       "exampleBoolean" : false,
       "groupingId" : "p1"
     }],
