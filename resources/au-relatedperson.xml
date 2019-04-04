@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-relatedperson" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
-  <version value="1.0.0"/>
+  <version value="1.0.0" />
   <name value="AUBaseRelatedPerson" />
   <title value="AU Base Related Person" />
   <status value="draft" />
@@ -37,7 +37,7 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-		<discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -50,7 +50,7 @@
       <short value="National Individual Healthcare Identifier (IHI)" />
       <definition value="National Individual Healthcare Identifier (IHI) for the person" />
       <requirements value="Identifier as assigned and available via Healthcare Identifiers (HI) service" />
-	  <constraint>
+      <constraint>
         <key value="inv-ihi-value-0" />
         <severity value="error" />
         <human value="IHI shall be an exactly 16 digit number" />
@@ -82,7 +82,7 @@
     <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus">
       <path value="RelatedPerson.identifier.extension" />
       <sliceName value="ihiStatus" />
-	  <short value="Individual Healthcare Identifier (IHI) Number Status" />
+      <short value="Individual Healthcare Identifier (IHI) Number Status" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
@@ -91,7 +91,7 @@
     <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="RelatedPerson.identifier.extension" />
       <sliceName value="ihiRecordStatus" />
-	  <short value="Individual Healthcare Identifier (IHI) Number Record Status" />
+      <short value="Individual Healthcare Identifier (IHI) Number Record Status" />
       <definition value="Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier" />
       <type>
         <code value="Extension" />
@@ -101,7 +101,7 @@
     <element id="RelatedPerson.identifier:ihiNumber.type">
       <path value="RelatedPerson.identifier.type" />
       <short value="Coded identifier type for IHI" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="NI" />
@@ -157,7 +157,7 @@
       <path value="RelatedPerson.identifier.type" />
       <short value="Coded identifier type for Medicare number" />
       <definition value="Medicare number assigned  to a person." />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="MC" />
@@ -310,7 +310,7 @@
       <short value="Coded identifier type for Health Care Card number" />
       <definition value="Concession Card Number assigned to a person by Centrelink, this can be Healthcare Card, Pensioner Concession Card or Commonwealth Seniors Health Card Number." />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="HC" />
@@ -367,7 +367,7 @@
       <short value="Coded identifier type for Pensioner Concession Card number" />
       <definition value="Concession card number assigned to a person by Centrelink, this can be Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card number" />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="PEN" />
@@ -480,7 +480,7 @@
       <path value="RelatedPerson.identifier.type" />
       <short value="Coded identifier type for MRN" />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="MR" />
@@ -532,7 +532,7 @@
       <path value="RelatedPerson.identifier.type" />
       <short value="Coded identifier type for private health insurance member number" />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="MB" />
@@ -561,12 +561,12 @@
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.value">
       <path value="RelatedPerson.identifier.value" />
-	  <short value="Private health insurance member number"/>
+      <short value="Private health insurance member number" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.assigner">
       <path value="RelatedPerson.identifier.assigner" />
-	  <short value="Private health insurer" />
+      <short value="Private health insurer" />
       <min value="1" />
     </element>
     <element id="RelatedPerson.identifier:insurerNumber.assigner.display">

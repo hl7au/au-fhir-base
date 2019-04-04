@@ -51,19 +51,19 @@
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
       <short value="Patient Birth Place" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
       </type>
     </element>
+    <element id="Patient.extension:birthPlace.valueAddress:valueAddress">
+      <path value="Patient.extension.valueAddress" />
+      <sliceName value="valueAddress" />
+    </element>
     <element id="Patient.extension:indigenousStatus">
       <path value="Patient.extension" />
       <sliceName value="indigenousStatus" />
       <short value="Patient Indigenous Status" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
@@ -73,8 +73,6 @@
       <path value="Patient.extension" />
       <sliceName value="closingTheGapRegistration" />
       <short value="Patient Closing the Gap Registration" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration" />
@@ -84,12 +82,14 @@
       <path value="Patient.extension" />
       <sliceName value="mothersMaidenName" />
       <short value="Patient Mother's Maiden Name" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName" />
       </type>
+    </element>
+    <element id="Patient.extension:mothersMaidenName.valueString:valueString">
+      <path value="Patient.extension.valueString" />
+      <sliceName value="valueString" />
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
@@ -98,7 +98,7 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-		<discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -144,8 +144,6 @@
       <path value="Patient.identifier.extension" />
       <sliceName value="ihiStatus" />
       <short value="Individual Healthcare Identifier (IHI) Number Status" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
@@ -156,8 +154,6 @@
       <sliceName value="ihiRecordStatus" />
       <short value="Individual Healthcare Identifier (IHI) Number Record Status" />
       <definition value="Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
@@ -167,8 +163,7 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for IHI" />
       <definition value="Coded identifier type for Individual Healthcare Identifier (IHI)." />
-      <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="NI" />
@@ -187,8 +182,8 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element> 
-	<element id="Patient.identifier:ihiNumber.type.text">
+    </element>
+    <element id="Patient.identifier:ihiNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -224,7 +219,6 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for Medicare number" />
       <definition value="Medicare number assigned to a patient." />
-	  <min value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
@@ -253,7 +247,7 @@
       <definition value="Medicare number descriptive text." />
       <fixedString value="Medicare Number" />
     </element>
-	<element id="Patient.identifier:medicareNumber.system">
+    <element id="Patient.identifier:medicareNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for Medicare number" />
       <min value="1" />
@@ -347,8 +341,8 @@
       </extension>
       <path value="Patient.identifier.type.text" />
       <definition value="Type of DVA card (specific colour may be provided)" />
-    </element>   
-	<element id="Patient.identifier:dvaNumber.system">
+    </element>
+    <element id="Patient.identifier:dvaNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for DVA number" />
       <definition value="DVA number assigned uri." />
@@ -454,7 +448,7 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element> 
+    </element>
     <element id="Patient.identifier:pensionerConcessionCard.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
@@ -665,8 +659,6 @@
       <sliceName value="accuracyIndicator" />
       <short value="Birth Date Accuracy Indicator" />
       <comment value="In some circumstances, systems may only have date or datetime data that has unknown or estimated parts.  This coding establishes the acuraccy of the day, month and year parts." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
@@ -677,12 +669,14 @@
       <sliceName value="birthTime" />
       <short value="Birth Time" />
       <definition value="The time of day that the patient was born. This includes the date to ensure that the timezone information can be communicated effectively." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
       </type>
+    </element>
+    <element id="Patient.birthDate.extension:birthTime.valueDateTime:valueDateTime">
+      <path value="Patient.birthDate.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />
@@ -694,8 +688,6 @@
         <rules value="open" />
       </slicing>
       <definition value="Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional." />
-      <min value="0" />
-      <max value="1" />
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <path value="Patient.deceased[x]" />
@@ -730,15 +722,10 @@
       <sliceName value="accuracyIndicator" />
       <short value="Deceased Date Accuracy Indicator" />
       <comment value="In some circumstances, systems may only have date or datetime data that has unknown or estimated parts.  This coding establishes the acuraccy of the day, month and year parts." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" />
       </type>
-    </element>
-    <element id="Patient.communication">
-      <path value="Patient.communication" />
     </element>
     <element id="Patient.communication.language">
       <path value="Patient.communication.language" />
