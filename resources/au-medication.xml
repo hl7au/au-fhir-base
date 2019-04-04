@@ -27,9 +27,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Medication">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use" />
-      </extension>
+	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use"/> 
+      </extension> 
       <path value="Medication" />
       <short value="A medication in an Australian healthcare context" />
       <definition value="Medication content use in an Australian context.  Includes concepts that are specific to Australian usage." />
@@ -48,6 +48,8 @@
       <path value="Medication.extension" />
       <sliceName value="pbsSponsor" />
       <short value="PBS Sponsor" />
+      <definition value="Reference to the sponsor organisation that is responsible for the supply of the medicine." />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -58,6 +60,7 @@
       <path value="Medication.extension" />
       <sliceName value="brandName" />
       <short value="Medication Brand Name" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name" />
@@ -67,17 +70,17 @@
       <path value="Medication.extension" />
       <sliceName value="genericName" />
       <short value="Medication Generic Drug Name" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name" />
       </type>
     </element>
     <element id="Medication.extension:strengthText">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft" />
-      </extension>
       <path value="Medication.extension" />
       <sliceName value="strengthText" />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-strength-text" />
@@ -85,18 +88,25 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Coding for the medicine" />
       <definition value="Australian coding slices are typical medicine/product concept codes.&#xD;&#xA;&#xD;&#xA;A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems." />
     </element>
-    <element id="Medication.code:pbs">
-      <path value="Medication.code" />
+    <element id="Medication.code.coding">
+      <path value="Medication.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.code.coding:pbs">
+      <path value="Medication.code.coding" />
       <sliceName value="pbs" />
       <short value="PBS Item Code" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
@@ -107,12 +117,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:pbs.coding">
+    <element id="Medication.code.coding:gtin">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:gtin">
-      <path value="Medication.code" />
       <sliceName value="gtin" />
       <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
@@ -123,14 +129,11 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:gtin.coding">
+    <element id="Medication.code.coding:amtTPP">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtTPP">
-      <path value="Medication.code" />
       <sliceName value="amtTPP" />
       <short value="AMT Trade Product Pack" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -138,8 +141,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtTPP.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtTPP.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -148,8 +151,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtTPP.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtTPP.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
@@ -159,8 +162,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtTPP.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtTPP.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -168,14 +171,11 @@
         <display value="Branded package with no container" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtTPP.coding">
+    <element id="Medication.code.coding:amtMPP">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtMPP">
-      <path value="Medication.code" />
       <sliceName value="amtMPP" />
       <short value="AMT Medicinal Product Pack" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -183,8 +183,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtMPP.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtMPP.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -193,8 +193,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtMPP.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtMPP.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
@@ -204,8 +204,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtMPP.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtMPP.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -213,14 +213,11 @@
         <display value="Unbranded package with no container" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtMPP.coding">
+    <element id="Medication.code.coding:amtCTPP">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtCTPP">
-      <path value="Medication.code" />
       <sliceName value="amtCTPP" />
       <short value="AMT Containered Trade Product Pack" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -228,8 +225,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtCTPP.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtCTPP.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -238,8 +235,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtCTPP.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtCTPP.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <definition value="General type of coding to allow usage of codes to be distinguished from the same CodeSystem" />
@@ -249,8 +246,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtCTPP.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtCTPP.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -258,14 +255,11 @@
         <display value="Branded package with container" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtCTPP.coding">
+    <element id="Medication.code.coding:amtTPUU">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtTPUU">
-      <path value="Medication.code" />
       <sliceName value="amtTPUU" />
       <short value="AMT Trade Product Unit of Use" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -273,8 +267,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtTPUU.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtTPUU.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -283,8 +277,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtTPUU.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtTPUU.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <max value="1" />
@@ -293,8 +287,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtTPUU.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtTPUU.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -302,14 +296,11 @@
         <display value="Branded product with strengths and form" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtTPUU.coding">
+    <element id="Medication.code.coding:amtMPUU">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtMPUU">
-      <path value="Medication.code" />
       <sliceName value="amtMPUU" />
       <short value="AMT Medicinal Product Unit of Use" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -317,8 +308,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtMPUU.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtMPUU.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -327,8 +318,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtMPUU.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtMPUU.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <max value="1" />
@@ -337,8 +328,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtMPUU.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtMPUU.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -346,14 +337,11 @@
         <display value="Unbranded product with strengths and form" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtMPUU.coding">
+    <element id="Medication.code.coding:amtTP">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtTP">
-      <path value="Medication.code" />
       <sliceName value="amtTP" />
       <short value="AMT Trade Product" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -361,8 +349,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtTP.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtTP.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -371,8 +359,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtTP.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtTP.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <max value="1" />
@@ -381,8 +369,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtTP.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtTP.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -390,14 +378,11 @@
         <display value="Branded product with no strengths or form" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtTP.coding">
+    <element id="Medication.code.coding:amtMP">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:amtMP">
-      <path value="Medication.code" />
       <sliceName value="amtMP" />
       <short value="AMT Medicinal Product" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -405,8 +390,8 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:amtMP.extension">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtMP.extension">
+      <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -415,8 +400,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.code:amtMP.extension:medicationType">
-      <path value="Medication.code.extension" />
+    <element id="Medication.code.coding:amtMP.extension:medicationType">
+      <path value="Medication.code.coding.extension" />
       <sliceName value="medicationType" />
       <short value="Type of Medication Coding" />
       <max value="1" />
@@ -425,8 +410,8 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="Medication.code:amtMP.extension:medicationType.valueCoding:valueCoding">
-      <path value="Medication.code.extension.valueCoding" />
+    <element id="Medication.code.coding:amtMP.extension:medicationType.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
         <system value="http://hl7.org.au/fhir/CodeSystem/medication-type" />
@@ -434,14 +419,11 @@
         <display value="Unbranded product with no strengths or form" />
       </fixedCoding>
     </element>
-    <element id="Medication.code:amtMP.coding">
+    <element id="Medication.code.coding:mimsPackage">
       <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:mimsPackage">
-      <path value="Medication.code" />
       <sliceName value="mimsPackage" />
       <short value="MIMS Package" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSetReference>
@@ -449,11 +431,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Medication.code:mimsPackage.coding">
-      <path value="Medication.code.coding" />
-      <min value="1" />
-    </element>
-    <element id="Medication.code:mimsPackage.text">
+    <element id="Medication.code.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -465,6 +443,9 @@
       <path value="Medication.manufacturer" />
       <short value="Physical product manufacturer organisation" />
       <definition value="Manufacturer of the actual physical medicine product" />
+    </element>
+    <element id="Medication.form">
+      <path value="Medication.form"/>
     </element>
     <element id="Medication.form.coding">
       <path value="Medication.form.coding" />
@@ -501,6 +482,8 @@
         <rules value="open" />
       </slicing>
       <short value="Medication ingredient" />
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
@@ -537,6 +520,9 @@
       <path value="Medication.ingredient.amount" />
       <short value="Strength of ingredient" />
     </element>
+    <element id="Medication.package">
+      <path value="Medication.package"/>
+    </element>
     <element id="Medication.package.content">
       <path value="Medication.package.content" />
       <max value="1" />
@@ -560,6 +546,8 @@
       <sliceName value="MedicationBatchSerialNumber" />
       <short value="Medication Batch Serial Number" />
       <definition value="Identifier assigned to a drug at the time of manufacture." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-batch-serialnumber" />
