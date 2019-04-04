@@ -150,26 +150,12 @@
     </element>
     <element id="HealthcareService.specialty">
       <path value="HealthcareService.specialty" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Healthcare service provided specialties" />
-    </element>
-    <element id="HealthcareService.specialty:snomedRole">
-      <path value="HealthcareService.specialty" />
-      <sliceName value="snomedRole" />
-      <short value="Healthcare Service Specialty SNOMED CT" />
-    </element>
-    <element id="HealthcareService.specialty:snomedRole.coding">
-      <path value="HealthcareService.specialty.coding" />
-      <min value="1" />
       <binding>
-        <strength value="required" />
-        <description value="SNOMED-CT Health Service Roles" />
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="service-specialty" />
+        </extension>
+        <strength value="preferred" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-services" />
         </valueSetReference>
@@ -177,29 +163,12 @@
     </element>
     <element id="HealthcareService.serviceProvisionCode">
       <path value="HealthcareService.serviceProvisionCode" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Healthcare service provision conditions" />
-    </element>
-    <element id="HealthcareService.serviceProvisionCode:auServiceProvisionCode">
-      <path value="HealthcareService.serviceProvisionCode" />
-      <sliceName value="auServiceProvisionCode" />
-      <short value="Australian service provision conditions" />
-    </element>
-    <element id="HealthcareService.serviceProvisionCode:auServiceProvisionCode.coding">
-      <path value="HealthcareService.serviceProvisionCode.coding" />
-      <min value="1" />
       <binding>
-        <strength value="required" />
-        <description value="Service provision conditions" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/service-provision-conditions" />
-        </valueSetReference>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ServiceProvisionConditions" />
+        </extension>
+        <strength value="preferred" />
       </binding>
     </element>
     <element id="HealthcareService.eligibility">
