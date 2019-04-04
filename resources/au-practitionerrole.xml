@@ -221,27 +221,12 @@
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Practitioner specialties" />
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty">
-      <path value="PractitionerRole.specialty" />
-      <sliceName value="snomedctSpecialty" />
-      <short value="SNOMED-CT Practitioner Role" />
-      <definition value=" &#xD;&#xA;Specialties for which this practitioner has capability to deliver in this role coded as SNOMED CT." />
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty.coding">
-      <path value="PractitionerRole.specialty.coding" />
-      <min value="1" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerSpecialty" />
+        </extension>
+        <strength value="preferred" />
         <valueSetReference>
           <reference value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
         </valueSetReference>
