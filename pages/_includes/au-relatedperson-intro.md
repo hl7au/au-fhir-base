@@ -16,6 +16,11 @@ Extensions used in this profile:
 * RelatedPerson.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
 * RelatedPerson.identifier(IHI): IHI Record Status [<sup>[1]</sup>](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)
 
+#### Usage Notes
+Medicare Number is defined as a 10 or 11 digit number. Whilst 10 digits is not sufficient to uniquely identify an individual it is an supported entry where systems do not support 11 digit content. If required profiles can constrain this slice further to restrict usage to 11 digits only as desired.
+Medicare Numbers are not used for uniquely identifying patients - they are identifying information that can be used in conjunction with other elements such as name and date of birth appropriately to confirm identity.
+
+
 **Examples**
 
 [Benedicte du Marche as a next of kin](RelatedPerson-example0.html)
