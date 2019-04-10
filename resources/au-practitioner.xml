@@ -24,9 +24,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Practitioner">
-	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use"/> 
-      </extension> 
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+      </extension>
       <path value="Practitioner" />
       <short value="A practitioner in an Australian healthcare context" />
     </element>
@@ -37,7 +37,7 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-		<discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -50,7 +50,7 @@
       <short value="Healthcare Provider Identifier – Individual (HPI-I)" />
       <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
       <max value="1" />
-	   <constraint>
+      <constraint>
         <key value="inv-hpii-value-0" />
         <requirements value="The value shall be a 16 digit number." />
         <severity value="error" />
@@ -74,7 +74,7 @@
     <element id="Practitioner.identifier:hpii.type">
       <path value="Practitioner.identifier.type" />
       <short value="Coded identifier type for HPI-I" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="NPI" />
@@ -127,7 +127,7 @@
     <element id="Practitioner.identifier:medicarePrescriberNumber.type">
       <path value="Practitioner.identifier.type" />
       <short value="Coded identifier type for prescriber number" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org.au/fhir/v2/0203" />
           <code value="PRES" />
@@ -174,7 +174,7 @@
       <sliceName value="careAgencyEmployeeIdentifier" />
       <short value="Care Agency Employee (CAE) Identifier" />
       <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers." />
-     <constraint>
+      <constraint>
         <key value="inv-caei-value-0" />
         <requirements value="The value shall be a 16 digit number." />
         <severity value="error" />
@@ -193,11 +193,11 @@
         <human value="CAE identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
-	</element>
+    </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type">
       <path value="Practitioner.identifier.type" />
       <short value="Identifier type for CAE identifier" />
-	  <binding>
+      <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
         </extension>
@@ -234,7 +234,7 @@
       <sliceName value="ahpraRegistration" />
       <short value="Australian Health Practitioner Regulation Agency (AHPRA) registration as identifier" />
       <definition value="Details of registration identifier of the Australian Health Practitioner Regulation Authority (AHPRA)." />
-	   <constraint>
+      <constraint>
         <key value="inv-ahpra-value-id-0" />
         <severity value="error" />
         <human value="The AHPRA identifier value shall start with 3 uppercase letters, followed by 10 digits." />
@@ -244,14 +244,14 @@
     <element id="Practitioner.identifier:ahpraRegistration.type">
       <path value="Practitioner.identifier.type" />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org.au/fhir/v2/0203" />
           <code value="AHPRA" />
         </coding>
       </patternCodeableConcept>
-	  <binding>
-       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
@@ -270,7 +270,7 @@
       </extension>
       <path value="Practitioner.identifier.type.text" />
       <min value="1" />
-      <fixedString value="AHPRA registration number" />
+      <fixedString value="AHPRA Registration Number" />
     </element>
     <element id="Practitioner.identifier:ahpraRegistration.system">
       <path value="Practitioner.identifier.system" />
@@ -303,10 +303,10 @@
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier">
       <path value="Practitioner.qualification.identifier" />
-      <short value="AHPRA registration number" />
+      <short value="AHPRA Registration Number" />
       <min value="1" />
       <max value="1" />
-	  <constraint>
+      <constraint>
         <key value="inv-ahpra-qual-value-0" />
         <severity value="error" />
         <human value="The AHPRA registration value shall start with 3 uppercase letters, followed by 10 digits." />
@@ -317,7 +317,7 @@
       <path value="Practitioner.qualification.identifier.type" />
       <short value="Coded identifier type for AHPRA registration number" />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org.au/fhir/v2/0203" />
           <code value="AHPRA" />
@@ -343,7 +343,7 @@
       </extension>
       <path value="Practitioner.qualification.identifier.type.text" />
       <min value="1" />
-      <fixedString value="AHPRA registration number" />
+      <fixedString value="AHPRA Registration Number" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.system">
       <path value="Practitioner.qualification.identifier.system" />

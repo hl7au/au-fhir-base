@@ -1,5 +1,8 @@
 <HealthcareService xmlns="http://hl7.org/fhir">
-	<id value="example3"/>			
+	<id value="example3"/>	
+	<meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+	</meta>	
 	<providedBy> 
 		<reference value="Organization/example3"/> 
 		<display value="Devonport Family Medicine Clinic"/> 
@@ -21,8 +24,8 @@
 	<specialty>
 		<coding>
 			<system value="http://snomed.info/sct"/>
-			<code value="898309901000087102"/>
-			<display value="Travel medicine clinic service"/>
+			<code value="1244901000168103"/>
+			<display value="Smoking cessation service"/>
 		</coding>		
 	</specialty>
 	<location>
@@ -36,8 +39,8 @@
 	</telecom>
 	<serviceProvisionCode>
 		<coding>
-			<code value="feesandbulkbilling"/>
 			<system value="http://hl7.org.au/fhir/CodeSystem/service-provision-conditions"/>
+			<code value="FBB"/>
 			<display value="Fees and Bulk Billing"/>
 		</coding>
 	</serviceProvisionCode>

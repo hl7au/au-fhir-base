@@ -24,9 +24,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole">
-	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use"/> 
-      </extension> 
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+      </extension>
       <path value="PractitionerRole" />
       <short value="A practitioner in a healthcare role in an Australian healthcare context" />
     </element>
@@ -37,7 +37,7 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-		<discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -56,7 +56,8 @@
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for provider number" />
       <definition value="Identifier type of provider number for this practitioner role." />
-	  <patternCodeableConcept>
+      <min value="1" />
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org.au/fhir/v2/0203" />
           <code value="UPIN" />
@@ -111,7 +112,8 @@
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for national provider identifier at organisation" />
       <definition value="Identifier type provider at organisation identifier for this practitioner role." />
-	  <patternCodeableConcept>
+      <min value="1" />
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org.au/fhir/v2/0203" />
           <code value="NPIO" />
@@ -167,7 +169,7 @@
       <path value="PractitionerRole.identifier.type" />
       <short value="Coded identifier type for employee number" />
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="EI" />
@@ -195,6 +197,10 @@
       <min value="1" />
       <fixedString value="Employee Number" />
     </element>
+    <element id="PractitionerRole.identifier:employeeNumber.system">
+      <path value="PractitionerRole.identifier.system" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.identifier:employeeNumber.value">
       <path value="PractitionerRole.identifier.value" />
       <short value="Employee number" />
@@ -216,26 +222,11 @@
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <short value="Practitioner specialties" />
-    </element>
-    <element id="PractitionerRole.specialty.coding">
-      <path value="PractitionerRole.specialty.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <short value="Specialty codings for a role" />
-    </element>
-    <element id="PractitionerRole.specialty.coding:snomedctSpecialty">
-      <path value="PractitionerRole.specialty.coding" />
-      <sliceName value="snomedctSpecialty" />
-      <short value="SNOMED CT Practitioner Specialty" />
-      <definition value="Specialties for which this practitioner has capability to deliver in this role coded as SNOMED CT." />
       <binding>
-        <strength value="required" />
-        <description value="SNOMED CT Practitioner Role" />
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerSpecialty" />
+        </extension>
+        <strength value="preferred" />
         <valueSetReference>
           <reference value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
         </valueSetReference>

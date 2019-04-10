@@ -98,7 +98,7 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-		<discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>
@@ -167,8 +167,7 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for IHI" />
       <definition value="Coded identifier type for Individual Healthcare Identifier (IHI)." />
-      <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
           <code value="NI" />
@@ -187,8 +186,8 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element> 
-	<element id="Patient.identifier:ihiNumber.type.text">
+    </element>
+    <element id="Patient.identifier:ihiNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -224,7 +223,6 @@
       <path value="Patient.identifier.type" />
       <short value="Coded identifier type for Medicare number" />
       <definition value="Medicare number assigned to a patient." />
-	  <min value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v2/0203" />
@@ -253,7 +251,7 @@
       <definition value="Medicare number descriptive text." />
       <fixedString value="Medicare Number" />
     </element>
-	<element id="Patient.identifier:medicareNumber.system">
+    <element id="Patient.identifier:medicareNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for Medicare number" />
       <min value="1" />
@@ -347,8 +345,8 @@
       </extension>
       <path value="Patient.identifier.type.text" />
       <definition value="Type of DVA card (specific colour may be provided)" />
-    </element>   
-	<element id="Patient.identifier:dvaNumber.system">
+    </element>
+    <element id="Patient.identifier:dvaNumber.system">
       <path value="Patient.identifier.system" />
       <short value="Namespace for DVA number" />
       <definition value="DVA number assigned uri." />
@@ -454,7 +452,7 @@
           <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
         </valueSetReference>
       </binding>
-    </element> 
+    </element>
     <element id="Patient.identifier:pensionerConcessionCard.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />

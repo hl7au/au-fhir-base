@@ -472,6 +472,27 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/encounter-origin-organization"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/encounter-destination-organization"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/participant-practitionerrole"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/snomed-healthcareservice-services"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1386,6 +1407,10 @@
       <name value="Medicine List example with referenced entries"/>
       <description value="Medicine List example with referenced entries"/>
       <exampleBoolean value="true"/>
+        <reference value="StructureDefinition/healthcare-service"/>
+      </reference>
+      <exampleBoolean value="false"/>
+
       <groupingId value="p1"/>
     </resource>
     <resource>
@@ -1422,6 +1447,12 @@
       <name value="Patient"/>
       <description value="Patient"/>
       <exampleBoolean value="true"/>
+
+        <reference value="StructureDefinition/au-encounter"/>
+      </reference>
+      <name value="AU Base Encounter"/>
+      <exampleBoolean value="false"/>
+
       <groupingId value="p1"/>
     </resource>
     <page>

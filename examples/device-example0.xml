@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Device xmlns="http://hl7.org/fhir">
     <id value="example0"/>    
+	<meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-device"/>
+	</meta>
     <identifier>
         <type>
             <coding>
@@ -10,7 +13,8 @@
             </coding>
             <text value="PAI-D"/>
         </type>
-        <value value="8003640003999998"/>
+		<system value="http://ns.electronichealth.net.au/id/pcehr/paid/1.0"/>
+        <value value="8003640003999995"/>
     </identifier>    
     <udi>         
         <!--     The Device Identifier (DI) here so you can look up - in this case using the GUDID database    -->

@@ -11,7 +11,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Device](StructureDefinition-au-device.html) - device with local identifiers
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
-* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with extension for description
+* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with extensions
 
 ## Medications Profiles
 * [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
