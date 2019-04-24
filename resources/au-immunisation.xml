@@ -30,9 +30,6 @@
       <path value="Immunization" />
       <short value="An immunisation statement in an Australian healthcare context" />
     </element>
-    <element id="Immunization.vaccineCode">
-      <path value="Immunization.vaccineCode" />
-    </element>
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
       <slicing>
@@ -50,7 +47,7 @@
       <short value="AMT Vaccine" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
       </binding>
     </element>
@@ -66,11 +63,8 @@
     </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
-	  <short value="Vaccine product manufacturer" />
-	  <definition value="Physical vaccine product administered manufacturer."/>
-    </element>
-    <element id="Immunization.site">
-      <path value="Immunization.site"/>
+      <short value="Vaccine product manufacturer" />
+      <definition value="Physical vaccine product administered manufacturer." />
     </element>
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding" />
@@ -79,9 +73,6 @@
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1" />
       </binding>
-    </element>
-    <element id="Immunization.route">
-      <path value="Immunization.route"/>
     </element>
     <element id="Immunization.route.coding">
       <path value="Immunization.route.coding" />
@@ -221,13 +212,6 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
     </element>
-    <!--    <element id="Immunization.vaccinationProtocol"> added so as to trigger the child element <element id="Immunization.vaccinationProtocol.doseStatus.coding"> to appear in the Differential. -->
-    <element id="Immunization.vaccinationProtocol">
-      <path value="Immunization.vaccinationProtocol"/>
-    </element>
-    <element id="Immunization.vaccinationProtocol.targetDisease">
-      <path value="Immunization.vaccinationProtocol.targetDisease"/>
-    </element>
     <element id="Immunization.vaccinationProtocol.targetDisease.coding">
       <path value="Immunization.vaccinationProtocol.targetDisease.coding" />
       <slicing>
@@ -248,29 +232,25 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1" />
       </binding>
     </element>
-    <!--    <element id="Immunization.vaccinationProtocol.doseStatus"> added so as to trigger the child element <element id="Immunization.vaccinationProtocol.doseStatus.coding"> to appear in the Differential. -->    
-    <element id="Immunization.vaccinationProtocol.doseStatus">
-      <path value="Immunization.vaccinationProtocol.doseStatus"/>
-    </element>
     <element id="Immunization.vaccinationProtocol.doseStatus.coding">
-      <path value="Immunization.vaccinationProtocol.doseStatus.coding"/>
+      <path value="Immunization.vaccinationProtocol.doseStatus.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="coding"/>
+          <type value="value" />
+          <path value="coding" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus.coding:notAvailable">
-      <path value="Immunization.vaccinationProtocol.doseStatus.coding"/>
-      <sliceName value="doseStatusNotAvailable"/>
-      <short value="Dose Status Not Available"/>
-      <max value="1"/>
+    <element id="Immunization.vaccinationProtocol.doseStatus.coding:doseStatusNotAvailable">
+      <path value="Immunization.vaccinationProtocol.doseStatus.coding" />
+      <sliceName value="doseStatusNotAvailable" />
+      <short value="Dose Status Not Available" />
+      <max value="1" />
       <fixedCoding>
-        <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-        <code value="NAVU"/>
-        <display value="Not available"/>
+        <system value="http://hl7.org/fhir/v3/NullFlavor" />
+        <code value="NAVU" />
+        <display value="Not available" />
       </fixedCoding>
     </element>
   </differential>
