@@ -31,6 +31,7 @@ This profile contains the following variations from [Medication](http://hl7.org/
    * <span style='color:green'> valueCoding </span> 
    * <span style='color:green'> coding </span> MIMS Package
 1. <span style='color:green'> manufacturer </span> Physical product manufacturer organisation
+1. <span style='color:green'> form </span>
    * <span style='color:green'> coding </span> Medication Form (SNOMED CT)
 1. <span style='color:green'> ingredient </span> 
    * <span style='color:green'> item[x] </span> Coded Ingredient Product
