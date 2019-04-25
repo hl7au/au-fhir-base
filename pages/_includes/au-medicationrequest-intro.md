@@ -1,6 +1,6 @@
 **AU Base Prescription** *[[FMM Level 1](guidance.html)]*
 
-This profile defines a medication request structure including core localisation concepts for use as a prescription in an Australian context.
+This profile defines a medication request structure including core localisation concepts for use as a medication prescription or order in an Australian context.
 
 #### Identifiers
 These definitions represent common data held in the MedicationRequest.identifier element:
