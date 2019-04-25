@@ -21,7 +21,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html) - medication administration record with common local coding and content
 * [AU Base Immunisation](StructureDefinition-au-immunisation.html) - immunisation record with common local coding 
 * [AU Base Immunisation Recommendation](StructureDefinition-au-immunisationrecommendation.html) - immunisation recommendations with core localisation concepts
-* [PBS Sponsor](StructureDefinition-au-pbs-sponsor.html) - referenced PBS sponsor organisation (manufacturer/supplier)
+* [AU PBS Sponsor](StructureDefinition-pbs-sponsor-organisation.html) - referenced PBS sponsor organisation (manufacturer/supplier)
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
 ## Orders and Observations Profiles
