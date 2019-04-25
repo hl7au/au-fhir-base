@@ -15,12 +15,12 @@ These Profiles have been defined for this implementation guide.
 
 ## Medications Profiles
 * [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
-* [AU Base Prescription](StructureDefinition-au-prescription.html) - prescribing/ordering details with common local coding and content
-* [AU Base Dispense Record](StructureDefinition-au-dispenserecord.html) - dispensing details with common local coding and content
+* [AU Base Medication Request](StructureDefinition-au-medicationrequest.html) - prescribing/ordering details with common local coding and content
+* [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html) - dispensing details with common local coding and content
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
 * [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html) - medication administration record with common local coding and content
-* [AU Base Immunisation](StructureDefinition-au-immunisation.html) - immunisation record with common local coding 
-* [AU Base Immunisation Recommendation](StructureDefinition-au-immunisationrecommendation.html) - immunisation recommendations with core localisation concepts
+* [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
+* [AU Base Immunisation Recommendation](StructureDefinition-au-immunizationrecommendation.html) - immunisation recommendations with core localisation concepts
 * [AU PBS Sponsor](StructureDefinition-pbs-sponsor-organisation.html) - referenced PBS sponsor organisation (manufacturer/supplier)
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
