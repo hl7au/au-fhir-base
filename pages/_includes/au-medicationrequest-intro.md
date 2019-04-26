@@ -18,9 +18,9 @@ These definitions represent common data held in the MedicationRequest.identifier
 Extensions used in this profile:
 * MedicationRequest: Grounds for Concurrent Supply of Medication [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply)
 * MedicationReqest: Minimum Interval Between Repeats [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/minimum-interval-between-repeats)
-* MedicationRequest.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
-* MedicationRequest: Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name)
-* MedicationRequest: Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name)
+* MedicationRequest.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type) - used to distinguish a level classification when the same coding system is used.
+* MedicationDispense: Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name) - this text only extension is supplied to support brand name content where no coding is available, use medicationReference or medicationCodeable concept if code is available.
+* MedicationDispense: Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name) - this text only extension is supplied to support generic name content where no coding is available, use medicationReference or medicationCodeable concept if code is available.
 
 **Examples**
 

@@ -25,10 +25,11 @@ Medication codings are use be used to define relevant drug/medication concepts. 
 
 #### Extensions
 Extensions used in this profile:
-* Medication: PBS Sponsor [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/pbs-manufacturer-supplier)
-* Medication.code.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
-* Medication: Medication Brand Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
-* Medication: Medication Generic Drug Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
+* Medication: PBS Sponsor [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor)
+* Medication.code.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type) - used to distinguish a level classification when the same coding system is used.
+* MedicationDispense: Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name) - this text only extension is supplied to support brand name content where no coding is available, use medicationReference or medicationCodeable concept if code is available.
+* MedicationDispense: Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name) - this text only extension is supplied to support generic name content where no coding is available, use medicationReference or medicationCodeable concept if code is available.
+
 
 
 **Examples**
