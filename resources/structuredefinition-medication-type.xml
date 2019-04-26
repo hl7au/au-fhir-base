@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="medication-type" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
@@ -15,8 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension applies to the Coding datatype and provides a value to indicate a classification of the type of medication the parent coding. This is useful
-    when there are multiple codings from the same CodingSystem at different levels/classifications." />
+  <description value="This extension applies to the Coding datatype and provides a value to indicate a classification of the type of medication the parent coding. This is useful     when there are multiple codings from the same CodingSystem at different levels/classifications." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -25,6 +24,7 @@
   <context value="MedicationRequest.medicationCodeableConcept.coding" />
   <context value="MedicationDispense.medicationCodeableConcept.coding" />
   <context value="MedicationStatement.medicationCodeableConcept.coding" />
+  <context value="MedicationAdministration.medicationCodeableConcept.coding" />
   <context value="ValueSet.expansion.contains" />
   <context value="ValueSet.expansion.contains.contains" />
   <context value="CodeSystem.concept" />
