@@ -256,6 +256,17 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1" />
       </binding>
     </element>
+    <element id="Immunization.vaccinationProtocol.targetDisease.coding:targetDiseaseNoInformation">
+      <path value="Immunization.vaccinationProtocol.targetDisease.coding" />
+      <sliceName value="targetDiseaseNoInformation" />
+      <short value="No Information for Target Disease" />
+      <max value="1" />
+      <fixedCoding>
+        <system value="http://hl7.org/fhir/v3/NullFlavor" />
+        <code value="NI" />
+        <display value="No Information" />
+      </fixedCoding>
+    </element>
     <element id="Immunization.vaccinationProtocol.doseStatus.coding">
       <path value="Immunization.vaccinationProtocol.doseStatus.coding" />
       <slicing>
