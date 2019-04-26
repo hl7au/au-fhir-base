@@ -30,6 +30,10 @@
       <path value="Immunization" />
       <short value="An immunisation statement in an Australian healthcare context" />
     </element>
+    <element id="Immunization.vaccineCode">
+      <path value="Immunization.vaccineCode" />
+      <short value="Vaccine product for administration" />
+    </element>
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
       <slicing>
@@ -61,10 +65,18 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1" />
       </binding>
     </element>
+    <element id="Immunization.patient">
+      <path value="Immunization.patient" />
+      <short value="Patient immunised" />
+    </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
       <short value="Vaccine product manufacturer" />
       <definition value="Physical vaccine product administered manufacturer." />
+    </element>
+    <element id="Immunization.site">
+      <path value="Immunization.site" />
+      <short value="Body site vaccine was administered" />
     </element>
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding" />
@@ -73,6 +85,10 @@
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1" />
       </binding>
+    </element>
+    <element id="Immunization.route">
+      <path value="Immunization.route" />
+      <short value="Route of vaccination" />
     </element>
     <element id="Immunization.route.coding">
       <path value="Immunization.route.coding" />
@@ -169,6 +185,10 @@
       <path value="Immunization.practitioner.actor" />
       <short value="Approving practitioner" />
     </element>
+    <element id="Immunization.explanation">
+      <path value="Immunization.explanation" />
+      <short value="Explanation for (non)vaccination" />
+    </element>
     <element id="Immunization.explanation.reason.coding">
       <path value="Immunization.explanation.reason.coding" />
       <slicing>
@@ -211,6 +231,10 @@
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
+    </element>
+    <element id="Immunization.vaccinationProtocol">
+      <path value="Immunization.vaccinationProtocol" />
+      <short value="Vaccination protocol" />
     </element>
     <element id="Immunization.vaccinationProtocol.targetDisease.coding">
       <path value="Immunization.vaccinationProtocol.targetDisease.coding" />
