@@ -1,6 +1,14 @@
-**AU Base Dispense Record**  *[[FMM Level 1](guidance.html)]*
+**AU Base Medication Dispense**  *[[FMM Level 1](guidance.html)]*
 
 This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context.
+
+#### Medication Reference/Coding
+Full medication definitions as a Medication resource can be referenced or codings are use be used to define relevant drug/medication concepts. This includes coding as:
+* PBS Item Code - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding.
+* GTIN - Global Trade Item Number, physical product reference.
+* AMT Code - Australian Medicines Terminology, national drug terminology.
+* MIMS Package - commonly used medicine coding.
+
 
 #### Identifiers
 These definitions represent common data held in the MedicationDispense.identifier element:

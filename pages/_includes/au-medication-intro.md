@@ -14,6 +14,15 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 * Medication.package.container
 * Medication.image
 
+
+#### Medication Coding
+Medication codings are use be used to define relevant drug/medication concepts. This includes coding as:
+* PBS Item Code - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding.
+* GTIN - Global Trade Item Number, physical product reference.
+* AMT Code - Australian Medicines Terminology, national drug terminology.
+* MIMS Package - commonly used medicine coding.
+
+
 #### Extensions
 Extensions used in this profile:
 * Medication: PBS Sponsor [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/pbs-manufacturer-supplier)
