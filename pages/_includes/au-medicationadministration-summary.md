@@ -6,26 +6,7 @@ This profile contains the following variations from [MedicationAdministration](h
    * <span style='color:green'> medication[x] </span> Coded medication
    * <span style='color:green'> coding </span> Medication PBS coding (ignore item context)
    * <span style='color:green'> coding </span> Medication Package GTIN
-   * <span style='color:green'> coding </span> AMT Trade Product Pack
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product Pack
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Containered Trade Product Pack
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Trade Product Unit of Use
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product Unit of Use
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Trade Product
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product
-      * Type of medication coding extension
-   * <span style='color:green'> valueCoding </span> 
+   * <span style='color:green'> coding </span> AMT coding
+      * Type of medication coding extension 
    * <span style='color:green'> coding </span> MIMS Package
    * <span style='color:green'> medication[x] </span> Medication Reference (Reference as: au-medication)
