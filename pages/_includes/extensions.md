@@ -54,6 +54,9 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [HL7 V2 Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
 * [Encryption Ceritficate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
 
+## General Use
+* [Additional Category](StructureDefinition-category-additional.html) - An additional category (R4 preadopt)
+
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
