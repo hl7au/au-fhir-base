@@ -17,6 +17,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation (R4 preadopt)
 * [Associated Practitioner Role](StructureDefinition-associated-practitionerrole.html) - Associated practitioner role
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
+* [Performer Party](StructureDefinition-performer-party.html) - Performing practitioner role or care team (R4 preadopt)
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
@@ -63,3 +64,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
 * [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation as per R4
 * [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation as per R4
+* [Performer Party](StructureDefinition-performer-party.html) - Performing practitioner role or care team as per R4
