@@ -1,4 +1,4 @@
-**Extension: Performing practitioner role or care team** *[[FMM Level 1](guidance.html)]*
+**Extension: Performing practitioner role or care team** *[[FMM Level 0](guidance.html)]*
 
 This extension applies to ProcedureRequest and DiagnosticReport, providing a practitioner role or care team who is responsible for the diagnostic report. 
 
