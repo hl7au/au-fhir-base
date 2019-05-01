@@ -55,7 +55,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Encryption Ceritficate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
 
 ## General Use
-* [Additional Category](StructureDefinition-category-additional.html) - An additional category (R4 preadopt)
+* [Additional Category](StructureDefinition-category-additional.html) - an additional category (R4 preadopt)
 
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
@@ -66,4 +66,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
 * [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation as per R4
 * [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation as per R4
-* [Additional Category](StructureDefinition-category-additional.html) - An additional category as per R4
+* [Additional Category](StructureDefinition-category-additional.html) - an additional category as per R4
