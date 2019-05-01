@@ -7,7 +7,7 @@
   <title value="Performer Party" />
   <status value="draft" />
   <date value="2019-05-01" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
   <contact>
     <telecom>
       <system value="url" />
@@ -29,18 +29,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Performing practitioner role or care team" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
+      <definition value="The performing party (care team or practitioner role) associated with the service, e.g the diagnostic service responsible for issuing the report or the desired performer for doing the requested service." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
