@@ -1,4 +1,4 @@
-**AU Base RelatedPerson Profile** *[[FMM Level 1](guidance.html)]*
+**AU Base RelatedPerson Profile** *[[FMM Level 2](guidance.html)]*
 
 This profile defines a related person administration details structure that includes core localisation concepts for use in an Australian context.
 

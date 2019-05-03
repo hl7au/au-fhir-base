@@ -1,4 +1,4 @@
-**Extension: Medication Type**  *[[FMM Level 1](guidance.html)]*
+**Extension: Medication Type**  *[[FMM Level 2](guidance.html)]*
 
 This extension applies to the Coding datatype and provides a value to indicate a classification of the type of medication the parent coding. This is useful
 when there are multiple codings from the same CodingSystem at different levels/classifications.

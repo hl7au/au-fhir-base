@@ -1,4 +1,4 @@
-**AU Composition**  *[[FMM Level 1](guidance.html)]*
+**AU Composition**  *[[FMM Level 2](guidance.html)]*
 
 This profile defines a composition structure that includes core localisation concepts for use in an Australian context.
 
