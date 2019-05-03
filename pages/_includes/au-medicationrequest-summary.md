@@ -12,27 +12,8 @@ This profile contains the following variations from [MedicationRequest](http://h
    * <span style='color:green'> medication[x] </span> Coded Prescribed Medication
    * <span style='color:green'> coding </span> PBS Item Code
    * <span style='color:green'> coding </span> Medication Package Global Trade Item Number (GTIN)
-   * <span style='color:green'> coding </span> AMT Trade Product Pack
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product Pack
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Containered Trade Product Pack
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Trade Product Unit of Use
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product Unit of Use
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Trade Product
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
+   * <span style='color:green'> coding </span> AMT coding
+      * Type of medication coding extension 
    * <span style='color:green'> coding </span> MIMS Package
    * <span style='color:green'> medication[x] </span> Prescribed Medication (Reference as: au-medication)
 1. <span style='color:green'> supportingInformation </span>  sliced

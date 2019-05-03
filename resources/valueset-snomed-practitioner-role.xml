@@ -1,16 +1,26 @@
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/valueset.xsd">
 	<id value="snomed-practitioner-role"/>
 	<url value="http://hl7.org.au/fhir/ValueSet/snomed-practitioner-role"/>
-	<version value="1.0.0"/>
+	<identifier> 
+	   <system value="urn:ietf:rfc:3986"/> 
+       <value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.10"/> 
+    </identifier>
+	<version value="1.0.3"/>
 	<name value="ProviderSpecialtiesSNOMED"/>
 	<title value="Provider Specialties (SNOMED)"/>
-	<status value="draft"/>
-	<date value="2018-09-24"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-05-01"/>
 	<publisher value="Health Level Seven Australia"/>
 	<contact>
-		<name value="hl7.org.au"/>
+		<telecom>
+		  <system value="url" />
+		  <value value="http://hl7.com.au" />
+		  <use value="work" />
+		</telecom>
 	</contact>
 	<description value="Provider specialties (SNOMED)"/>
+	<copyright value="®© HL7.com.au 2018+; Licensed Under Creative Commons No Rights Reserved."/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>

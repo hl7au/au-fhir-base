@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
+    <id value="0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>MEDICINE LIST</h1>
+
+            <h2>PATIENT</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            <p>David Goodpatient</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DoB</th>
+                        <td>14 September 1953</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>2 Round Court, QLD 4113</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>SOURCE OF MEDICINE LIST</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            <p>Iam Practitioner</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>HPI-I</th>
+                        <td>8003610000000000</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>054447777</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>iam.practitioner@example.com.au</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>CONSULTATION DETAILS</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Consultation date</th>
+                        <td>15 Mar 2019</td>
+                    </tr>
+                    <tr>
+                        <th>Consultation summary</th>
+                        <td>Patient presented with weakness over the last couple of days. No other
+                            symptoms. Revised patient's medications. Advised patient to
+                            see the usual GPs clinic for further consultation and review. </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>CURRENT MEDICINES</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Brand name</th>
+                        <th>Direction</th>
+                        <th>Medicine Purpose</th>
+                        <th>Medicine Status</th>
+                        <th>Result of Action</th>
+                        <th>Special Instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Multi-vitamins</td>
+                        <td/>
+                        <td>1 tablet daily</td>
+                        <td/>
+                        <td>New</td>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>Spiriva (tiotropium bromide 18mg per inhalation) inhalant</td>
+                        <td/>
+                        <td>1 inhalation per day</td>
+                        <td>Chronic Obstructive Pulmonary Disease</td>
+                        <td>Amended</td>
+                        <td>Reduced to one inhalation a day</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>paracetamol 665 mg modified release tablet</td>
+                        <td>Panadol Osteo</td>
+                        <td>Two tablets every 6-8 hours when required.</td>
+                        <td>Osteoarthritis, pain relief</td>
+                        <td>Unchanged</td>
+                        <td/>
+                        <td>No more than 6 tablets in 24hr</td>
+                    </tr>
+                    <tr>
+                        <td>cilostazol 100 mg tablet</td>
+                        <td>Pletal</td>
+                        <td>One a day at night time</td>
+                        <td>Blood thinning</td>
+                        <td>Amended</td>
+                        <td>Form change</td>
+                        <td/>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>CEASED MEDICINES</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ibuprofen</td>
+                        <td>Allergic reaction</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <contained>
+        <MedicationStatement xmlns="http://hl7.org/fhir">
+            <id value="7e6620b8-4ea9-11e9-8647-d663bd873d93"/>
+            <status value="active"/>
+            <medicationCodeableConcept>
+                <text value="Multi-vitamins"/>
+            </medicationCodeableConcept>
+            <dateAsserted value="2019-03-15"/>
+            <subject>
+                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            </subject>
+            <taken value="y"/>
+            <dosage>
+                <text value="1 tablet daily"/>
+            </dosage>
+        </MedicationStatement>
+    </contained>
+    <contained>
+        <MedicationStatement xmlns="http://hl7.org/fhir">
+            <id value="a4d66514-4ea9-11e9-8647-d663bd873d93"/>
+            <status value="active"/>
+            <medicationCodeableConcept>
+                <text value="Spiriva (tiotropium bromide 18mg per inhalation) inhalant"/>
+            </medicationCodeableConcept>
+            <dateAsserted value="2019-03-15"/>
+            <subject>
+                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            </subject>
+            <taken value="y"/>
+            <reasonCode>
+                <text value="COPD"/>
+            </reasonCode>
+            <dosage>
+                <text value="1 inhalation per day"/>
+            </dosage>
+        </MedicationStatement>
+    </contained>
+    <contained>
+        <MedicationStatement>
+            <id value="70c4f4b8-4f24-11e9-8647-d663bd873d9"/>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
+                <valueString value="Panadol Osteo"/>
+            </extension>
+            <status value="active"/>
+            <medicationCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="22075011000036103"/>
+                </coding>
+                <text value="paracetamol 665 mg modified release tablet"/>
+            </medicationCodeableConcept>
+            <subject>
+                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            </subject>
+            <taken value="y"/>
+            <reasonCode>
+                <text value="Osteoarthritis, pain releif"/>
+            </reasonCode>
+            <dosage>
+                <text value="Two tablets every 6-8 hours when required."/>
+                <patientInstruction value="No more than 6 tablets in 24hr"/>
+            </dosage>
+        </MedicationStatement>
+    </contained>
+    <contained>
+        <MedicationStatement>
+            <id value="e2ff28ac-4f27-11e9-8647-d663bd873d93"/>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
+                <valueString value="Pletal"/>
+            </extension>
+            <status value="active"/>
+            <medicationCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="82923011000036103"/>
+                </coding>
+                <text value="cilostazol 100 mg tablet"/>
+            </medicationCodeableConcept>
+            <subject>
+                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            </subject>
+            <taken value="y"/>
+            <reasonCode>
+                <text value="Blood thinning"/>
+            </reasonCode>
+            <dosage>
+                <text value="One a day at night time"/>
+            </dosage>
+        </MedicationStatement>
+    </contained>
+    <contained>
+        <MedicationStatement>
+            <id value="da074f86-4f27-11e9-8647-d663bd873d93"/>
+            <status value="stopped"/>
+            <medicationCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="38268001"/>
+                </coding>
+                <text value="Ibuprofen"/>
+            </medicationCodeableConcept>
+            <subject>
+                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            </subject>
+            <taken value="n"/>
+            <reasonNotTaken>
+                <text value="Allergic reaction"/>
+            </reasonNotTaken>
+        </MedicationStatement>
+    </contained>
+    <contained>
+        <Patient>
+            <id value="cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+                <valueCoding>
+                    <system
+                        value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+                    <code value="9"/>
+                    <display value="Not stated/inadequately described"/>
+                </valueCoding>
+            </extension>
+            <identifier>
+                <type>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v2/0203"/>
+                        <code value="NI"/>
+                        <display value="National unique individual identifier"/>
+                    </coding>
+                </type>
+                <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+                <value value="8003608666701594"/>
+            </identifier>
+            <name>
+                <text value="David Goodpatient"/>
+                <family value="Goodpatient"/>
+                <given value="David"/>
+            </name>
+            <gender value="male"/>
+            <birthDate value="1953-09-14"/>
+            <address>
+                <use value="home"/>
+                <line value="2 Round Court"/>
+                <state value="QLD"/>
+                <postalCode value="4113"/>
+                <country value="Australia"/>
+            </address>
+            <generalPractitioner>
+                <reference value="#36294aee-4eab-11e9-8647-d663bd873d93"/>
+            </generalPractitioner>
+            <managingOrganization>
+                <reference value="#b6fab368-623b-45a6-a133-2d77b69663a0"/>
+            </managingOrganization>
+        </Patient>
+    </contained>
+    <contained>
+        <Practitioner>
+            <id value="36294aee-4eab-11e9-8647-d663bd873d93"/>
+            <name>
+                <family value="Grey"/>
+                <prefix value="Dr"/>
+            </name>
+        </Practitioner>
+    </contained>
+    <contained>
+        <Practitioner>
+            <id value="bd00bd7a-4ffc-11e9-8647-d663bd873d93"/>
+            <identifier>
+                <type>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v2/0203"/>
+                        <code value="NPI"/>
+                        <display value="National provider identifier"/>
+                    </coding>
+                    <text value="HPI-I"/>
+                </type>
+                <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+                <value value="8003610000000000"/>
+            </identifier>
+            <name>
+                <use value="official"/>
+                <family value="Practitioner"/>
+                <given value="Iam"/>
+                <suffix value="M.D."/>
+            </name>
+            <telecom>
+                <system value="phone"/>
+                <value value="054447777"/>
+                <use value="work"/>
+            </telecom>
+            <telecom>
+                <system value="email"/>
+                <value value="iam.practitioner@example.com.au"/>
+                <use value="work"/>
+            </telecom>
+            <qualification>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org.au/fhir/v2/0203"/>
+                            <code value="AHPRA"/>
+                            <display
+                                value="Australian Health Practitioner Regulation Agency Registration Number"
+                            />
+                        </coding>
+                        <text value="AHPRA registration number"/>
+                    </type>
+                    <system value="http://hl7.org.au/id/ahpra-registration-number"/>
+                    <value value="MED0000932850"/>
+                </identifier>
+                <code>
+                    <coding>
+                        <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+                        <code value="253111"/>
+                        <display value="General Medical Practitioner"/>
+                    </coding>
+                    <text value="AHPRA qualification for General Practitioner"/>
+                </code>
+                <issuer>
+                    <display value="AHPRA"/>
+                </issuer>
+            </qualification>
+        </Practitioner>
+    </contained>
+    <contained>
+        <Organization>
+            <id value="b6fab368-623b-45a6-a133-2d77b69663a0"/>
+            <name value="Grey Medical Practice"/>
+        </Organization>
+    </contained>
+    <contained>
+        <Encounter>
+            <id value="28060b9a-4ffb-11e9-8647-d663bd873d93"/>
+            <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
+                <valueString
+                    value="Patient presented with weakness over the last couple of days. No other symptoms. Revised patient's medications. Advised patient to see the usual GPs clinic for further consultation and review."
+                />
+            </extension>
+            <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122"/>
+                <value value="5c48d068-4ffb-11e9-8647-d663bd873d93"/>
+            </identifier>
+            <status value="finished"/>
+            <class>
+                <system value="http://hl7.org/fhir/v3/ActCode"/>
+                <code value="AMB"/>
+                <display value="ambulatory"/>
+            </class>
+            <type>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="34764-1"/>
+                </coding>
+            </type>
+            <priority>
+                <coding>
+                    <system value="http://hl7.org/fhir/v3/ActPriority"/>
+                    <code value="R"/>
+                </coding>
+            </priority>
+            <subject>
+                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            </subject>
+            <participant>
+                <type>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+                        <code value="PPRF"/>
+                    </coding>
+                </type>
+                <individual>
+                    <reference value="#bd00bd7a-4ffc-11e9-8647-d663bd873d93"/>
+                </individual>
+            </participant>
+            <period>
+                <start value="2019-03-15"/>
+                <end value="2019-03-15"/>
+            </period>
+        </Encounter>
+    </contained>
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122"/>
+        <value value="7f8fb180-4ea8-11e9-8647-d663bd873d93"/>
+    </identifier>
+    <status value="current"/>
+    <mode value="snapshot"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="10160-0"/>
+        </coding>
+        <text value="Medicine List"/>
+    </code>
+    <subject>
+        <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+    </subject>
+    <encounter>
+        <reference value="#28060b9a-4ffb-11e9-8647-d663bd873d93"/>
+    </encounter>
+    <date value="2019-03-15"/>
+    <source>
+        <reference value="#bd00bd7a-4ffc-11e9-8647-d663bd873d93"/>
+    </source>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="new"/>
+                <display value="New"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="#7e6620b8-4ea9-11e9-8647-d663bd873d93"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Reduced to one inhalation a day"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="amended"/>
+                <display value="Amended"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="#a4d66514-4ea9-11e9-8647-d663bd873d93"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+                <display value="Unchanged"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="#70c4f4b8-4f24-11e9-8647-d663bd873d9"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Form change"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="amended"/>
+                <display value="Amended"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="#e2ff28ac-4f27-11e9-8647-d663bd873d93"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="ceased"/>
+                <display value="Ceased"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="#da074f86-4f27-11e9-8647-d663bd873d93"/>
+        </item>
+    </entry>
+</List>

@@ -87,6 +87,48 @@
       <path value="Medication.code" />
       <short value="Coding for the medicine" />
       <definition value="Australian coding slices are typical medicine/product concept codes.&#xD;&#xA;&#xD;&#xA;A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems." />
+      <constraint>
+        <key value="inv-amt-tpuu" />
+        <severity value="error" />
+        <human value="AMT TPUU valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-tpp" />
+        <severity value="error" />
+        <human value="AMT TPU valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-tp" />
+        <severity value="error" />
+        <human value="AMT TP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amp-mpuu" />
+        <severity value="error" />
+        <human value="AMT MPUU valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-mpp" />
+        <severity value="error" />
+        <human value="AMT MPP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-mp" />
+        <severity value="error" />
+        <human value="AMT MP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-ctpp" />
+        <severity value="error" />
+        <human value="AMT CTPP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" />
+      </constraint>
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
@@ -148,7 +190,6 @@
     <element id="Medication.code.coding:amt.extension:medicationClass">
       <path value="Medication.code.coding.extension" />
       <sliceName value="medicationClass" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
