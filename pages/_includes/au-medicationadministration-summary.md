@@ -6,7 +6,7 @@ This profile contains the following variations from [MedicationAdministration](h
    * <span style='color:green'> medication[x] </span> Coded medication
    * <span style='color:green'> coding </span> Medication PBS coding (ignore item context)
    * <span style='color:green'> coding </span> Medication Package GTIN
-   * <span style='color:green'> coding </span> AMT coding
-      * Type of medication coding extension 
+   * <span style='color:green'> coding </span> 	AMT Medicines
+      * Type of Medication Coding extension
    * <span style='color:green'> coding </span> MIMS Package
    * <span style='color:green'> medication[x] </span> Medication Reference (Reference as: au-medication)

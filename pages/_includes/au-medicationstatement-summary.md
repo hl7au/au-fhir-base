@@ -8,8 +8,8 @@ This profile contains the following variations from [MedicationStatement](http:/
    * <span style='color:green'> medication[x] </span> Coded Medication
    * <span style='color:green'> coding </span> PBS Item Code
    * <span style='color:green'> coding </span> Medication Package Global Trade Item Number (GTIN)
-   * <span style='color:green'> coding </span> AMT coding
-      * Type of medication coding extension 
+   * <span style='color:green'> coding </span> 	AMT Medicines
+      * Type of Medication Coding extension
    * <span style='color:green'> coding </span> MIMS Package
    * <span style='color:green'> medication[x] </span> Medication Reference (Reference as: au-medication)
 1. <span style='color:green'> reasonNotTaken </span> 
