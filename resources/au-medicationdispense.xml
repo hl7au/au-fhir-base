@@ -52,6 +52,7 @@
       <path value="MedicationDispense.extension" />
       <sliceName value="dispenseNumber" />
       <short value="Number of this Dispense" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
@@ -182,7 +183,7 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-	  <constraint>
+      <constraint>
         <key value="inv-amt-tpuu" />
         <severity value="error" />
         <human value="AMT TPUU valueset membership required" />
@@ -335,60 +336,6 @@
         <code value="Dosage" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
       </type>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.additionalInstruction">
-      <path value="MedicationDispense.dosageInstruction.additionalInstruction" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded[x]">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded[x]:asNeededCoding">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x]" />
-      <sliceName value="asNeededCoding" />
-    </element>
-    <element id="MedicationDispense.dosageInstruction.asNeeded[x]:asNeededCoding.coding">
-      <path value="MedicationDispense.dosageInstruction.asNeeded[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.route.coding">
-      <path value="MedicationDispense.dosageInstruction.route.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MedicationDispense.dosageInstruction.method.coding">
-      <path value="MedicationDispense.dosageInstruction.method.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
   </differential>
 </StructureDefinition>
