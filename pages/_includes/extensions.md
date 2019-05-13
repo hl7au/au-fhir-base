@@ -11,12 +11,6 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
-* [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
-* [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
-* [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation (R4 preadopt)
-* [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation (R4 preadopt)
-* [Associated Practitioner Role](StructureDefinition-associated-practitionerrole.html) - Associated practitioner role
-* [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
@@ -29,14 +23,9 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
 * [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) - minimum allowed dispensing interval
 * [PBS Sponsor Organisation](StructureDefinition-pbs-sponsor.html) - sponsor organisation that is responsible for the supply of the medicine
-* [Administration Witness](StructureDefinition-medication-administration-witness.html) - witness to administration of a medication
-* [Strength Text](StructureDefinition-medication-strength-text.html) - text representation of medication strength
-* [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
-* [List Source Role](StructureDefinition-list-source-role.html) - list practitioner role (R4 preadopt) 
 
 ## Clinical
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
-* [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
@@ -57,9 +46,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
-* [List Source Role](StructureDefinition-list-source-role.html) - PractitonerRole support as per R4
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
-* [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
-* [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
-* [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation as per R4
-* [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation as per R4
