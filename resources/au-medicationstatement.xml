@@ -89,6 +89,48 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+	  <constraint>
+        <key value="inv-amt-tpuu" />
+        <severity value="error" />
+        <human value="AMT TPUU valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-tpp" />
+        <severity value="error" />
+        <human value="AMT TPU valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-tp" />
+        <severity value="error" />
+        <human value="AMT TP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amp-mpuu" />
+        <severity value="error" />
+        <human value="AMT MPUU valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-mpp" />
+        <severity value="error" />
+        <human value="AMT MPP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-mp" />
+        <severity value="error" />
+        <human value="AMT MP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'" />
+      </constraint>
+      <constraint>
+        <key value="inv-amt-ctpp" />
+        <severity value="error" />
+        <human value="AMT CTPP valueset membership required" />
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" />
+      </constraint>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCoded.coding">
       <path value="MedicationStatement.medication[x].coding" />

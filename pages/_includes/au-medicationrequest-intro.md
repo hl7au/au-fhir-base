@@ -1,4 +1,4 @@
-**AU Base Medication Request** *[[FMM Level 1](guidance.html)]*
+**AU Base Medication Request** *[[FMM Level 2](guidance.html)]*
 
 This profile defines a medication request structure including core localisation concepts for use as a medication prescription or order in an Australian context.
 

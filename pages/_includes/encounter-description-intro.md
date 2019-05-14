@@ -1,4 +1,4 @@
-**Extension: Encounter Description** *[[FMM Level 0](guidance.html)]*
+**Extension: Encounter Description** *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the Encounter resource and provides narrative about the healthcare event or encounter.
 

@@ -29,12 +29,6 @@
       </extension> 
       <path value="List" />
       <short value="A list of medications in an Australian healthcare context" />
-      <constraint>
-        <key value="inv-lst-0" />
-        <severity value="error" />
-        <human value="Source role and source shall not coexist" />
-        <expression value="(extension('http://hl7.org.au/fhir/StructureDefinition/list-source-role').exists() and source.exists()).not()" />
-      </constraint>
     </element>
     <element id="List.extension">
       <path value="List.extension" />

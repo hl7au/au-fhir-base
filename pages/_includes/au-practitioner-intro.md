@@ -1,4 +1,4 @@
-**AU Base Practitioner Profile** *[[FMM Level 2](guidance.html)]*
+**AU Base Practitioner Profile** *[[FMM Level 3](guidance.html)]*
 
 This profile defines a practitioner administration details structure that includes core localisation concepts for use in an Australian context.
 

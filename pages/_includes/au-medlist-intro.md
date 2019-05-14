@@ -1,4 +1,4 @@
-**AU Medicine List**  *[[FMM Level 0](guidance.html)]*
+**AU Medicine List**  *[[FMM Level 1](guidance.html)]*
 
 This profile defines a list structure including core localisation concepts for use as a medicines list in an Australian context. This profile is intended to offer a common structure and expectations to record, exchange, and fetch a list of medications associated with a patient in an Australian healthcare context. 
 

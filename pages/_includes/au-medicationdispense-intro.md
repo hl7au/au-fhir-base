@@ -1,4 +1,4 @@
-**AU Base Medication Dispense**  *[[FMM Level 1](guidance.html)]*
+**AU Base Medication Dispense**  *[[FMM Level 2](guidance.html)]*
 
 This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context.
 

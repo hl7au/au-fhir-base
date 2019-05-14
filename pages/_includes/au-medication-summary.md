@@ -8,27 +8,8 @@ This profile contains the following variations from [Medication](http://hl7.org/
 1. <span style='color:green'> code </span> Coding for the medicine
    * <span style='color:green'> coding </span> PBS Item Code
    * <span style='color:green'> coding </span> Medication Package Global Trade Item Number (GTIN)
-   * <span style='color:green'> coding </span> AMT Trade Product Pack
+   * <span style='color:green'> coding </span> 	AMT Medicines
       * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product Pack
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Containered Trade Product Pack
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Trade Product Unit of Use
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product Unit of Use
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Trade Product
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
-   * <span style='color:green'> coding </span> AMT Medicinal Product
-      * Type of Medication Coding extension
-   * <span style='color:green'> valueCoding </span> 
    * <span style='color:green'> coding </span> MIMS Package
 1. <span style='color:green'> manufacturer </span> Physical product manufacturer organisation
 1. <span style='color:green'> form </span>

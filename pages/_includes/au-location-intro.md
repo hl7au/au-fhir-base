@@ -1,4 +1,4 @@
-**AU Base Location Profile** *[[FMM Level 2](guidance.html)]*
+**AU Base Location Profile** *[[FMM Level 3](guidance.html)]*
 
 This profile defines a location administration details structure that includes core localisation concepts for use in an Australian context.
 
