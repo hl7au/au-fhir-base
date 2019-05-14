@@ -472,5 +472,28 @@
       <path value="MedicationRequest.substitution.allowed" />
       <short value="Brand substitution flag" />
     </element>
+	<element id="MedicationRequest.substitution.reason">
+      <path value="MedicationRequest.substitution.reason" />
+    </element>
+    <element id="MedicationRequest.substitution.reason.coding">
+      <path value="MedicationRequest.substitution.reason.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationRequest.substitution.reason.coding:snomedSubstitutionReason">
+      <path value="MedicationRequest.substitution.reason.coding" />
+      <sliceName value="snomedSubstitutionReason" />
+      <short value="Substitution Reason (SNOMED CT)" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
