@@ -1,342 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-medicationdispense" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense" />
-  <version value="1.0.1" />
-  <name value="AUBaseMedicationDispense" />
-  <title value="AU Base Medication Dispense" />
-  <status value="draft" />
-  <date value="2019-04-26T09:07:00.6519188+10:00" />
-  <publisher value="Health Level Seven Australia (Medications WG)" />
+  <id value="au-medicationdispense"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"/>
+  <version value="1.0.1"/>
+  <name value="AUBaseMedicationDispense"/>
+  <title value="AU Base Medication Dispense"/>
+  <status value="draft"/>
+  <date value="2019-04-26T09:07:00.6519188+10:00"/>
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.org.au/fhir" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="http://hl7.org.au/fhir"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context." />
-  <fhirVersion value="3.0.1" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="MedicationDispense" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
-  <derivation value="constraint" />
+  <description value="This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MedicationDispense"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationDispense"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="MedicationDispense">
-      <path value="MedicationDispense" />
-      <short value="A dispense record for a medication for a patient in an Australian healthcare context" />
-      <definition value="Dispensing of a medication to patient in an Australian healthcare contex" />
+      <path value="MedicationDispense"/>
+      <short value="A dispense record for a medication for a patient in an Australian healthcare context"/>
+      <definition value="Dispensing of a medication to patient in an Australian healthcare contex"/>
     </element>
     <element id="MedicationDispense.extension">
-      <path value="MedicationDispense.extension" />
+      <path value="MedicationDispense.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.extension:groundsForConcurrentSupply">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="groundsForConcurrentSupply" />
-      <short value="Grounds for Concurrent Supply of Medication" />
-      <max value="1" />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="groundsForConcurrentSupply"/>
+      <short value="Grounds for Concurrent Supply of Medication"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply"/>
       </type>
     </element>
     <element id="MedicationDispense.extension:dispenseNumber">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="dispenseNumber" />
-      <short value="Number of this Dispense" />
-	  <max value="1" />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="dispenseNumber"/>
+      <short value="Number of this Dispense"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/dispense-number"/>
       </type>
     </element>
     <element id="MedicationDispense.extension:brandName">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="brandName" />
-      <short value="Medication Brand Name" />
-	  <max value="1" />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="brandName"/>
+      <short value="Medication Brand Name"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name"/>
       </type>
     </element>
     <element id="MedicationDispense.extension:genericName">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="genericName" />
-      <short value="Medication Generic Drug Name" />
-	  <max value="1" />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="genericName"/>
+      <short value="Medication Generic Drug Name"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name"/>
       </type>
     </element>
     <element id="MedicationDispense.identifier">
-      <path value="MedicationDispense.identifier" />
+      <path value="MedicationDispense.identifier"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="value"/>
+          <path value="system"/>
         </discriminator>
         <discriminator>
-          <type value="value" />
-          <path value="type" />
+          <type value="value"/>
+          <path value="type"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier">
-      <path value="MedicationDispense.identifier" />
-      <sliceName value="localDispenseIdentifier" />
-      <short value="Local Dispense Identifier" />
-      <definition value="Identifier assigned by the dispensing system this allows linking of this dispensing record to a local system identfier." />
+      <path value="MedicationDispense.identifier"/>
+      <sliceName value="localDispenseIdentifier"/>
+      <short value="Local Dispense Identifier"/>
+      <definition value="Identifier assigned by the dispensing system this allows linking of this dispensing record to a local system identfier."/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type">
-      <path value="MedicationDispense.identifier.type" />
-      <short value="Coded identifier type for local dispense identifier" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.type"/>
+      <short value="Coded identifier type for local dispense identifier"/>
+      <min value="1"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
+          <valueString value="IdentifierType"/>
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
+          <valueBoolean value="true"/>
         </extension>
-        <strength value="required" />
-        <description value="Local identifier type" />
+        <strength value="required"/>
+        <description value="Local identifier type"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type.coding">
-      <path value="MedicationDispense.identifier.type.coding" />
-      <min value="1" />
-      <max value="1" />
+      <path value="MedicationDispense.identifier.type.coding"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type.coding.system">
-      <path value="MedicationDispense.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+      <path value="MedicationDispense.identifier.type.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org.au/fhir/v2/0203"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type.coding.code">
-      <path value="MedicationDispense.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="LDI" />
+      <path value="MedicationDispense.identifier.type.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="LDI"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.identifier.type.text" />
-      <min value="1" />
-      <fixedString value="Local Dispense Identifier" />
+      <path value="MedicationDispense.identifier.type.text"/>
+      <min value="1"/>
+      <fixedString value="Local Dispense Identifier"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.system">
-      <path value="MedicationDispense.identifier.system" />
-      <short value="Namespace for local dispense record identifier" />
-      <definition value="URL assigned by the local dispensing system." />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.system"/>
+      <short value="Namespace for local dispense record identifier"/>
+      <definition value="URL assigned by the local dispensing system."/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.value">
-      <path value="MedicationDispense.identifier.value" />
-      <short value="Dispense record identifier" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.value"/>
+      <short value="Dispense record identifier"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.assigner">
-      <path value="MedicationDispense.identifier.assigner" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.assigner"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.identifier.assigner.display" />
-      <min value="1" />
+      <path value="MedicationDispense.identifier.assigner.display"/>
+      <min value="1"/>
     </element>
     <element id="MedicationDispense.medication[x]">
-      <path value="MedicationDispense.medication[x]" />
+      <path value="MedicationDispense.medication[x]"/>
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="type"/>
+          <path value="$this"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
       </type>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded">
-      <path value="MedicationDispense.medication[x]" />
-      <sliceName value="medicationCoded" />
-      <short value="Coded Dispensed Medication" />
+      <path value="MedicationDispense.medication[x]"/>
+      <sliceName value="medicationCoded"/>
+      <short value="Coded Dispensed Medication"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
-	  <constraint>
-        <key value="inv-amt-tpuu" />
-        <severity value="error" />
-        <human value="AMT TPUU valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'" />
+      <constraint>
+        <key value="inv-amt-tpuu"/>
+        <severity value="error"/>
+        <human value="AMT TPUU valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'"/>
       </constraint>
       <constraint>
-        <key value="inv-amt-tpp" />
-        <severity value="error" />
-        <human value="AMT TPU valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'" />
+        <key value="inv-amt-tpp"/>
+        <severity value="error"/>
+        <human value="AMT TPU valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'"/>
       </constraint>
       <constraint>
-        <key value="inv-amt-tp" />
-        <severity value="error" />
-        <human value="AMT TP valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" />
+        <key value="inv-amt-tp"/>
+        <severity value="error"/>
+        <human value="AMT TP valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'"/>
       </constraint>
       <constraint>
-        <key value="inv-amp-mpuu" />
-        <severity value="error" />
-        <human value="AMT MPUU valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" />
+        <key value="inv-amp-mpuu"/>
+        <severity value="error"/>
+        <human value="AMT MPUU valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'"/>
       </constraint>
       <constraint>
-        <key value="inv-amt-mpp" />
-        <severity value="error" />
-        <human value="AMT MPP valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'" />
+        <key value="inv-amt-mpp"/>
+        <severity value="error"/>
+        <human value="AMT MPP valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'"/>
       </constraint>
       <constraint>
-        <key value="inv-amt-mp" />
-        <severity value="error" />
-        <human value="AMT MP valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'" />
+        <key value="inv-amt-mp"/>
+        <severity value="error"/>
+        <human value="AMT MP valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'"/>
       </constraint>
       <constraint>
-        <key value="inv-amt-ctpp" />
-        <severity value="error" />
-        <human value="AMT CTPP valueset membership required" />
-        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" />
+        <key value="inv-amt-ctpp"/>
+        <severity value="error"/>
+        <human value="AMT CTPP valueset membership required"/>
+        <expression value="coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'"/>
       </constraint>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding">
-      <path value="MedicationDispense.medication[x].coding" />
+      <path value="MedicationDispense.medication[x].coding"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="value"/>
+          <path value="system"/>
         </discriminator>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="value"/>
+          <path value="code"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:pbs">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="pbs" />
-      <short value="PBS Item Code" />
-      <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="pbs"/>
+      <short value="PBS Item Code"/>
+      <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/pbs-item"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:gtin">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="gtin" />
-      <short value="Medication Package Global Trade Item Number (GTIN)" />
-      <definition value="GTIN value from http://www.gs1.org/gtin." />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="gtin"/>
+      <short value="Medication Package Global Trade Item Number (GTIN)"/>
+      <definition value="GTIN value from http://www.gs1.org/gtin."/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/gtin" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/gtin"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amt">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="amt" />
-      <short value="AMT Medicines" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="amt"/>
+      <short value="AMT Medicines"/>
       <binding>
-        <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
+        <strength value="required"/>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1"/>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amt.extension">
-      <path value="MedicationDispense.medication[x].coding.extension" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="value"/>
+          <path value="url"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:amt.extension:medicationClass">
-      <path value="MedicationDispense.medication[x].coding.extension" />
-      <sliceName value="medicationClass" />
-      <short value="Class of Medication Coding" />
-      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding.extension"/>
+      <sliceName value="medicationClass"/>
+      <short value="Class of Medication Coding"/>
+      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.coding:mimsPackage">
-      <path value="MedicationDispense.medication[x].coding" />
-      <sliceName value="mimsPackage" />
-      <short value="MIMS Package" />
-      <max value="1" />
+      <path value="MedicationDispense.medication[x].coding"/>
+      <sliceName value="mimsPackage"/>
+      <short value="MIMS Package"/>
+      <max value="1"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/mims" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/mims"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCoded.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
+        <valueBoolean value="true"/>
       </extension>
-      <path value="MedicationDispense.medication[x].text" />
-      <short value="Medication primary text" />
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry." />
+      <path value="MedicationDispense.medication[x].text"/>
+      <short value="Medication primary text"/>
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."/>
     </element>
     <element id="MedicationDispense.medication[x]:medicationReference">
-      <path value="MedicationDispense.medication[x]" />
-      <sliceName value="medicationReference" />
-      <short value="Dispensed Medication" />
+      <path value="MedicationDispense.medication[x]"/>
+      <sliceName value="medicationReference"/>
+      <short value="Dispensed Medication"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
       </type>
     </element>
     <element id="MedicationDispense.authorizingPrescription">
-      <path value="MedicationDispense.authorizingPrescription" />
+      <path value="MedicationDispense.authorizingPrescription"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-prescription" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-prescription"/>
       </type>
     </element>
     <element id="MedicationDispense.dosageInstruction">
-      <path value="MedicationDispense.dosageInstruction" />
+      <path value="MedicationDispense.dosageInstruction"/>
       <type>
-        <code value="Dosage" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
+        <code value="Dosage"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage"/>
       </type>
     </element>
     <element id="MedicationDispense.substitution">
@@ -363,8 +363,8 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <valueSetUri
-          value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1"/>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1"/>
       </binding>
     </element>
+  </differential>
 </StructureDefinition>
