@@ -148,6 +148,20 @@
       </example>
       <maxLength value="16" />
     </element>
+    <element id="HealthcareService.type">
+      <path value="HealthcareService.type" />
+      <short value="Healthcare service types" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="service-type" />
+        </extension>
+        <strength value="preferred" />
+        <description value="A type of service that a healthcare service may provide." />
+        <valueSetReference>
+          <reference value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-services" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="HealthcareService.specialty">
       <path value="HealthcareService.specialty" />
       <short value="Healthcare service provided specialties" />
@@ -156,8 +170,9 @@
           <valueString value="service-specialty" />
         </extension>
         <strength value="preferred" />
+        <description value="A specialty role that a healthcare service may provide." />
         <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-services" />
+          <reference value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-roles" />
         </valueSetReference>
       </binding>
     </element>
@@ -169,7 +184,7 @@
           <valueString value="ServiceProvisionConditions" />
         </extension>
         <strength value="preferred" />
-		<valueSetReference>
+        <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/service-provision-conditions" />
         </valueSetReference>
       </binding>
