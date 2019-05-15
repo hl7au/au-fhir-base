@@ -1,13 +1,8 @@
 **AU Base Medication** *[[FMM Level 2](guidance.html)]*
 
 This profile defines a medication structure including core localisation concepts for use in an Australian context. 
-Wherever possible, the structure for medication information profiled here, has been aligned to the proposed R4 [Medication](http://hl7.org/fhir/2018May/medication.html). In support of alignment it is expected that value of Medication.package.content.item is the same as Medication.code; and the following elements have been profiled to allow a maximum cardinality of 1:
 
-* Medication.package
-* Medication.package.content
-* Medication.package.batch
-
-The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/medication.html)  have been removed from the standard structure of R4 [Medication](http://hl7.org/fhir/2018May/medication.html) and replaced with standard extensions, for this reason the direct use of these elements is not encouraged:
+The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/medication.html)  have been removed from the standard structure of R4 [Medication](http://hl7.org/fhir/R4/medication.html). If required in R4 use prior version extensions[<sup>1</sup>](http://hl7.org/fhir/R4/medication-version-maps.html#11.5.9.1), for this reason the direct use of these elements is not encouraged:
 
 * Medication.isBrand
 * Medication.isOverCounter
