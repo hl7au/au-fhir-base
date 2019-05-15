@@ -11,10 +11,11 @@ Full medication definitions as a Medication resource can be referenced or coding
 
 #### Extensions
 Extensions used in this profile:
-* MedicationStatement: Long Term [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-long-term)
+* Long Term [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-long-term)
 * MedicationStatement.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type)
-* MedicationStatement: Medication Brand Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
-* MedicationStatement: Medication Generic Drug Name [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
+* Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name) - Not to be used if medicationReference is used. This text-only extension is supplied to support a brand name where no brand concept coding is available. Use medicationCodeableConcept if a brand concept coding is available. 
+* Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name) - Not to be used if medicationReference is used. This text-only extension is supplied to support a generic name where no generic concept coding is available. Use medicationCodeableConcept if a generic concept coding is available.
+* NOTE: if extensions Medication Brand Name or Medication Generic Drug Name are used then medicationCodeableConcept must also be used. 
 
 
 **Examples**
