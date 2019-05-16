@@ -72,17 +72,6 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name" />
       </type>
     </element>
-    <element id="Medication.extension:strengthText">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft" />
-      </extension>
-      <path value="Medication.extension" />
-      <sliceName value="strengthText" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-strength-text" />
-      </type>
-    </element>
     <element id="Medication.code">
       <path value="Medication.code" />
       <short value="Coding for the medicine" />
@@ -291,34 +280,6 @@
     <element id="Medication.ingredient.amount">
       <path value="Medication.ingredient.amount" />
       <short value="Strength of ingredient" />
-    </element>
-    <element id="Medication.package.content">
-      <path value="Medication.package.content" />
-      <max value="1" />
-    </element>
-    <element id="Medication.package.batch">
-      <path value="Medication.package.batch" />
-      <max value="1" />
-    </element>
-    <element id="Medication.package.batch.extension">
-      <path value="Medication.package.batch.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Medication.package.batch.extension:MedicationBatchSerialNumber">
-      <path value="Medication.package.batch.extension" />
-      <sliceName value="MedicationBatchSerialNumber" />
-      <short value="Medication Batch Serial Number" />
-      <definition value="Identifier assigned to a drug at the time of manufacture." />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-batch-serialnumber" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
