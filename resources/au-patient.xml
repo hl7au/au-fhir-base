@@ -62,6 +62,8 @@
       <path value="Patient.extension" />
       <sliceName value="indigenousStatus" />
       <short value="Patient Indigenous Status" />
+	  <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
@@ -70,10 +72,10 @@
     <element id="Patient.extension:closingTheGapRegistration">
       <path value="Patient.extension" />
       <sliceName value="closingTheGapRegistration" />
-      <min value="0" />
-      <max value="1" />
       <short value="Patient Closing the Gap Program Eligibility Indication" />
       <definition value="Indication for eligibility for the Closing the Gap program." />
+	  <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration" />
