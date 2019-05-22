@@ -128,10 +128,11 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="ProcedureRequest.code.coding:snomedImagingProcedures">
+    <element id="ProcedureRequest.code.coding:snomedImagingProcedure">
       <path value="ProcedureRequest.code.coding" />
-      <sliceName value="snomedImagingProcedures" />
+      <sliceName value="snomedImagingProcedure" />
       <short value="Imaging Procedure (SNOMED CT)" />
+      <max value="1"/>
       <binding>
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
