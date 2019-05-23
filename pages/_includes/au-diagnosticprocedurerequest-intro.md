@@ -2,7 +2,7 @@
 
 This profile defines a procedure request structure that includes core localisation concepts for use as a diagnostic procedure request in an Australian context.
 
-Note: The targetBodyStructure extension should only be used if not implicit in the code found in ProcedureRequest.code. If the use case requires BodySite to be handled as a separate resource instead of an inline coded element (e.g. to identify and track separately) then use the standard extension [procedurerequest-targetBodySite](http://hl7.org/fhir/STU3/extension-procedurerequest-targetbodysite.html). 
+Note: The targetBodySite extension should only be used if not implicit in the code found in ProcedureRequest.code. If the use case requires BodySite to be handled as a separate resource instead of an inline coded element (e.g. to identify and track separately) then use the standard extension [procedurerequest-targetBodySite](http://hl7.org/fhir/STU3/extension-procedurerequest-targetbodysite.html). 
 
 Forthcoming work around this profile is expected to result in a value set representing the Standard for Pathology Informatics in Australia - Requesting codes bound as a slice on the code element in addition to the existing slice for diagnostic imaging requests in SNOMED CT<sup>TM</sup>.
 
