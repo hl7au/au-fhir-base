@@ -14,7 +14,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines a procedure request structure that includes core localisation concepts for use in an Australian context." />
+  <description value="This profile defines a procedure request structure that includes core localisation concepts for use in diagnostic procedure request in an Australian context." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -24,7 +24,7 @@
   <differential>
     <element id="ProcedureRequest">
       <path value="ProcedureRequest" />
-      <short value="A procedure request in an Australian healthcare context" />
+      <short value="A diagnostic procedure request in an Australian healthcare context" />
     </element>
     <element id="ProcedureRequest.extension:performerParty">
       <path value="ProcedureRequest.extension" />
@@ -62,10 +62,6 @@
         <discriminator>
           <type value="pattern" />
           <path value="type" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
