@@ -73,7 +73,7 @@
         <expression value="coding.exists(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" />
       </constraint>
       <constraint>
-        <key value="inv-amp-mpuu" />
+        <key value="inv-amt-mpuu" />
         <severity value="error" />
         <human value="AMT MPUU valueset membership required" />
         <expression value="coding.exists(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" />
