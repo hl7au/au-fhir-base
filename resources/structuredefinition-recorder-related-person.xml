@@ -14,20 +14,20 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This pre-adopts (from STU4) a recorder who is a related person for the AllergyIntolerance resource intending to extend the set of referenceable resources to include a RelatedPerson for the recorder element. " />
+  <description value="This pre-adopts (from STU4) a recorder who is a related person." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="AllergyIntolerance" />
+  <context value="Resource" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Recorder as a related person" />
-      <definition value="Reference to related person that recorded the record and takes responsibility for its content." />
+      <short value="Related person that authored the resource" />
+      <definition value="Reference to related person that authored the resource and takes responsibility for its content." />
       <max value="1" />
     </element>
     <element id="Extension.url">
