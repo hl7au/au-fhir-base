@@ -20,7 +20,6 @@ Medication codings are use be used to define relevant drug/medication concepts. 
 
 #### Extensions
 Extensions used in this profile:
-* PBS Sponsor [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor)
 * Medication.code.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type) - used to distinguish a level classification when the same coding system is used.
 * Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name) -  This text-only extension is supplied to support a brand name where no brand concept coding is available. Use code if a brand concept coding is available. 
 * Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name) - This text-only extension is supplied to support a generic name where no generic concept coding is available. Use code if a generic concept coding is available.
