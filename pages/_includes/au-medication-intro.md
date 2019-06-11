@@ -11,7 +11,7 @@ The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/m
 
 
 #### Medication Coding
-Medication codings are use be used to define relevant drug/medication concepts. This includes coding as:
+Medication codings are used to define relevant drug/medication concepts. This includes coding as:
 * PBS Item Code - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding.
 * GTIN - Global Trade Item Number, physical product reference.
 * AMT Code - Australian Medicines Terminology, national drug terminology.
