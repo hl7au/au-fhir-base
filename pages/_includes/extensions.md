@@ -36,7 +36,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [List Source Role](StructureDefinition-list-source-role.html) - list practitioner role (R4 preadopt) 
 
 ## Clinical
-* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
+* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 
 ## Composition
@@ -62,7 +62,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
 * [List Source Role](StructureDefinition-list-source-role.html) - PractitonerRole support as per R4
-* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
+* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
 * [Encounter Origin Organisation](StructureDefinition-encounter-origin-organisation.html) - Encounter hospitalization origin as an organisation as per R4

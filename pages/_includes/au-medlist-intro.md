@@ -13,7 +13,7 @@ Forthcoming work around this profile is expected to result in guidance and addit
 #### Extensions
 Extensions used in this profile:
 * List: List Source Role [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/list-source-role)
-* List: Recorder as a Related Person [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/recorder-related-person)
+* List: Author as a Related Person [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/author-related-person)
 * List.entry: Change Description [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/change-description)
 
 **Examples**

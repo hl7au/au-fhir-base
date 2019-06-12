@@ -6,7 +6,7 @@ Note: The value set [Indicator of Hypersensitivity or Intolerance to Substance](
 
 #### Extensions
 Extensions used in this profile:
-* AllergyInterolerance.recorder: Recorder as a Related Person [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/recorder-related-person)
+* AllergyInterolerance: Author as a Related Person [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/author-related-person)
 
 **Examples**
 
