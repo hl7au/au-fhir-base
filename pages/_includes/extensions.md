@@ -35,7 +35,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
 
 ## Clinical
-* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
+* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 
 ## Composition
@@ -60,6 +60,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
+* [List Source Role](StructureDefinition-list-source-role.html) - PractitonerRole support as per R4
+* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person support as per R4
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4

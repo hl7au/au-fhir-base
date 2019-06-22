@@ -24,9 +24,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="List">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/> 
-      </extension> 
       <path value="List" />
       <short value="A list of medications in an Australian healthcare context" />
     </element>
@@ -41,13 +38,28 @@
       </slicing>
     </element>
     <element id="List.extension:sourceRole">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft" />
+      </extension>
       <path value="List.extension" />
       <sliceName value="sourceRole" />
       <short value="Practitioner role that defined the list contents (aka Author)" />
-      <max value="1"/>
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/author-role" />
+      </type>
+    </element>
+    <element id="List.extension:sourceRelatedPerson">
+      <path value="List.extension" />
+      <sliceName value="sourceRelatedPerson" />
+      <short value="Related person that defined the list contents (aka Author)" />
+      <definition value="The entity (related person) responsible for deciding what the contents of the list were. Where the list was created by a human, this is the same as the author of the list." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/author-related-person" />
       </type>
     </element>
     <element id="List.entry">
@@ -66,6 +78,9 @@
       </slicing>
     </element>
     <element id="List.entry.extension:changeDescription">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft" />
+      </extension>
       <path value="List.entry.extension" />
       <sliceName value="changeDescription" />
       <short value="Description of the change to the item" />
@@ -79,9 +94,6 @@
       <path value="List.entry.flag" />
       <short value="Medicine item change" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ListItemFlag" />
-        </extension>
         <strength value="preferred" />
         <valueSetReference>
           <reference value="http://hl7.org.au/fhir/ValueSet/medicine-item-change" />
