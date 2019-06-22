@@ -33,7 +33,6 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Administration Witness](StructureDefinition-medication-administration-witness.html) - witness to administration of a medication
 * [Strength Text](StructureDefinition-medication-strength-text.html) - text representation of medication strength
 * [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
-* [List Source Role](StructureDefinition-list-source-role.html) - list practitioner role (R4 preadopt) 
 
 ## Clinical
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
@@ -61,7 +60,6 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## FHIR R4 Preadoption
 * [Metadata Source](StructureDefinition-meta-source.html) - simple provenance metadata as per R4 Meta.source
 * [Composition Author Role](StructureDefinition-composition-author-role.html) - PractitonerRole support as per R4
-* [List Source Role](StructureDefinition-list-source-role.html) - PractitonerRole support as per R4
 * [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person support as per R4
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
 * [Authoring Practitioner Role](StructureDefinition-author-role.html) - PractitonerRole support as per R4
