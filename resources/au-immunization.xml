@@ -76,6 +76,31 @@
       <path value="Immunization.patient" />
       <short value="Patient immunised" />
     </element>
+    <element id="Immunization.primarySource">
+      <path value="Immunization.primarySource" />
+      <short value="Optional information source" />
+    </element>
+    <element id="Immunization.primarySource.extension">
+      <path value="Immunization.primarySource.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.primarySource.extension:nullFlavor">
+      <path value="Immunization.primarySource.extension" />
+      <sliceName value="nullFlavor" />
+      <short value="Null flavor" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor" />
+      </type>
+    </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
       <short value="Vaccine product manufacturer" />
@@ -200,9 +225,6 @@
       <path value="Immunization.explanation.reason" />
       <short value="Reason vaccine was given" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ImmunizationReason" />
-        </extension>
         <strength value="preferred" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1" />
       </binding>
@@ -211,9 +233,6 @@
       <path value="Immunization.explanation.reasonNotGiven" />
       <short value="Reason vaccine not given" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="NoImmunizationReason" />
-        </extension>
         <strength value="preferred" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
