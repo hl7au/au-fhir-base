@@ -24,6 +24,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Immunization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+      </extension>
       <path value="Immunization" />
       <short value="An immunisation statement in an Australian healthcare context" />
     </element>
@@ -48,14 +51,9 @@
       <short value="AMT Vaccine" />
       <max value="1" />
       <binding>
-        <strength value="preferred" />
+        <strength value="extensible" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
       </binding>
-    </element>
-    <element id="Immunization.vaccineCode.coding:amtVaccineCode.system">
-      <path value="Immunization.vaccineCode.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Immunization.vaccineCode.coding:airVaccineCode">
       <path value="Immunization.vaccineCode.coding" />
@@ -66,11 +64,6 @@
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1" />
       </binding>
-    </element>
-    <element id="Immunization.vaccineCode.coding:airVaccineCode.system">
-      <path value="Immunization.vaccineCode.coding.system" />
-      <min value="1" />
-      <fixedUri value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats" />
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
