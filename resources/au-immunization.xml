@@ -198,23 +198,48 @@
     </element>
     <element id="Immunization.explanation.reason">
       <path value="Immunization.explanation.reason" />
-      <short value="Reason vaccine was given" />
+      <short value="Reason vaccine administered" />
+    </element>
+    <element id="Immunization.explanation.reason.coding">
+      <path value="Immunization.explanation.reason.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.explanation.reason.coding:snomedReason">
+      <path value="Immunization.explanation.reason.coding" />
+      <sliceName value="snomedReason" />
+      <short value="Reason Vaccine Administered (SNOMED CT)" />
+      <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ImmunizationReason" />
-        </extension>
-        <strength value="preferred" />
+        <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1" />
       </binding>
     </element>
     <element id="Immunization.explanation.reasonNotGiven">
       <path value="Immunization.explanation.reasonNotGiven" />
-      <short value="Reason vaccine not given" />
+      <short value="Reason immunisation did not occur" />
+    </element>
+    <element id="Immunization.explanation.reasonNotGiven.coding">
+      <path value="Immunization.explanation.reasonNotGiven.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.explanation.reasonNotGiven.coding:snomedReasonCode">
+      <path value="Immunization.explanation.reasonNotGiven.coding" />
+      <sliceName value="snomedReasonCode" />
+      <short value="Coded Reason (SNOMED CT)" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="NoImmunizationReason" />
-        </extension>
-        <strength value="preferred" />
+        <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
     </element>
