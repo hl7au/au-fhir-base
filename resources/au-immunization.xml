@@ -224,6 +224,18 @@
         <display value="Witness" />
       </fixedCoding>
     </element>
+    <element id="Immunization.practitioner:witnessedBy.role.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Immunization.practitioner.role.text" />
+      <min value="1" />
+      <fixedString value="Witness" />
+    </element>
+    <element id="Immunization.practitioner:witnessedBy.actor">
+      <path value="Immunization.practitioner.actor" />
+      <short value="Witnessing practitioner" />
+    </element>
     <element id="Immunization.explanation">
       <path value="Immunization.explanation" />
       <short value="Explanation for (non)vaccination" />
