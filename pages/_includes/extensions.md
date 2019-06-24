@@ -19,13 +19,13 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
 * [Performer Party](StructureDefinition-performer-party.html) - Performing practitioner role or care team (R4 preadopt)
 
+
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
 * [Dispense Number](StructureDefinition-dispense-number.html) - number of this dispense
 * [Grounds For Concurrent Supply Of Medication](StructureDefinition-grounds-for-concurrent-supply.html) - dispensing request/suppy record 
 * [Long Term](StructureDefinition-medication-long-term.html) - Medication long-term indicator
-* [Medication Batch Serial Number](StructureDefinition-medication-batch-serialnumber.html) - Identifier assigned to a drug at the time of manufacture
 * [Medication Brand Name](StructureDefinition-medication-brand-name.html) - text brand name that can be added to profiles
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
 * [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) - minimum allowed dispensing interval
@@ -37,6 +37,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## Clinical
 * [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
 * [Condition Recorder](StructureDefinition-recorder.html) - support as per R4
+* [Recorder as a RelatedPerson](StructureDefinition-recorder-related-person.html) - recorder as a related person (R4 preadopt)
+
 
 ## Composition
 * [Related Person Attester Party](StructureDefinition-attester-related-party.html) - composition attesting party as a related person
@@ -69,3 +71,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Encounter Destination Organisation](StructureDefinition-encounter-destination-organisation.html) - Encounter hospitalization destination as an organisation as per R4
 * [Additional Category](StructureDefinition-category-additional.html) - an additional category as per R4
 * [Performer Party](StructureDefinition-performer-party.html) - Performing practitioner role or care team as per R4
+

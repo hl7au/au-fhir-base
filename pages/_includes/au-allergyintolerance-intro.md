@@ -8,6 +8,9 @@ Note: The value set [Indicator of Hypersensitivity or Intolerance to Substance](
 Extensions used in this profile:
 * AllergyInterolerance: Author as a Related Person [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/author-related-person)
 
+* AllergyIntolerance.encounter: (R4 pre-adopt) Consider use of encounter reference using version conversion extensions  [<sup>[1]</sup>](http://hl7.org/fhir/allergyintolerance-definitions.html#AllergyIntolerance.encounter) [<sup>[2]</sup>](https://www.hl7.org/fhir/versions.html#extensions)
+
+
 **Examples**
 
 [Ibuprofen allergy, with a manifestation of urticaria](AllergyIntolerance-allergyintolerance-example0.html)

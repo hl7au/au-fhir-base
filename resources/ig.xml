@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/implementationguide.xsd">
   <id value="au-base"/>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
-  <version value="1.0.2"/>
+  <version value="1.1.2"/>
   <name value="Implementation Guide Template"/>
   <status value="active"/>
   <experimental value="true"/>
@@ -85,12 +85,6 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/minimum-interval-between-repeats"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-administration-witness"/>
       </sourceReference>
     </resource>
     <resource>
@@ -180,12 +174,6 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/author-role"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/healthcareservice-eligibility-detail"/>
       </sourceReference>
     </resource>
@@ -216,19 +204,13 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/medication-strength-text"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-batch-serialnumber"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/author-related-person"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/recorder-related-person"/>
       </sourceReference>
     </resource>
     <resource>
@@ -241,12 +223,6 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/au-observation-age"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-norelevantfinding"/>
       </sourceReference>
     </resource>
     <resource>
@@ -288,19 +264,7 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/au-specimen"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
         <reference value="StructureDefinition/au-immunization"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-immunizationrecommendation"/>
       </sourceReference>
     </resource>
     <resource>
@@ -390,6 +354,7 @@
     <resource>
       <example value="false"/>
       <sourceReference>
+<<<<<<< HEAD
         <reference value="StructureDefinition/au-medicationadministration"/>
       </sourceReference>
     </resource>
@@ -415,6 +380,9 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/associated-practitionerrole"/>
+=======
+        <reference value="ValueSet/snomed-healthcareservice-services"/>
+>>>>>>> afb77cb40a1c1dc909640c4a4b9131559fb7d270
       </sourceReference>
     </resource>
     <resource>
@@ -432,12 +400,13 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/snomed-healthcareservice-services"/>
+        <reference value="ValueSet/au-hl7v2-0203"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
+<<<<<<< HEAD
         <reference value="ValueSet/snomed-healthcareservice-roles"/>
       </sourceReference>
     </resource>
@@ -445,6 +414,9 @@
       <example value="false"/>
       <sourceReference>
         <reference value="ValueSet/au-hl7v2-0203"/>
+=======
+        <reference value="ValueSet/au-hl7v2-0443"/>
+>>>>>>> afb77cb40a1c1dc909640c4a4b9131559fb7d270
       </sourceReference>
     </resource>
     <resource>
@@ -582,7 +554,7 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/grounds-for-concurrent-supply"/>
+        <reference value="CodeSystem/au-hl7v2-0443"/>
       </sourceReference>
     </resource>
     <resource>
@@ -602,6 +574,12 @@
       <sourceReference>
         <reference value="StructureDefinition/au-medlist"/>
       </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+	     <reference value="ValueSet/grounds-for-concurrent-supply"/>
+	   </sourceReference>
     </resource>
     <resource>
       <example value="true"/>
