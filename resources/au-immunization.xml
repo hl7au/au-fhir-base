@@ -226,6 +226,9 @@
       <path value="Immunization.explanation.reason" />
       <short value="Reason vaccine was given" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ImmunizationReason" />
+        </extension>
         <strength value="preferred" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1" />
       </binding>
@@ -234,6 +237,9 @@
       <path value="Immunization.explanation.reasonNotGiven" />
       <short value="Reason vaccine not given" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NoImmunizationReason" />
+        </extension>
         <strength value="preferred" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
