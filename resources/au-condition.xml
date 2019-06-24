@@ -51,32 +51,14 @@
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
-    </element>
-    <element id="Condition.code.coding">
-      <path value="Condition.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Condition.code.coding:snomedCondition">
-      <path value="Condition.code.coding" />
-      <sliceName value="snomedCondition" />
-      <short value="Clinical Condition (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConditionKind" />
+        </extension>
+        <strength value="preferred" />
+        <description value="Preferred SNOMED-CT Identification of the condition or diagnosis." />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1" />
       </binding>
-    </element>
-    <element id="Condition.code.coding:snomedCondition.system">
-      <path value="Condition.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Condition.bodySite.coding">
       <path value="Condition.bodySite.coding" />
@@ -93,26 +75,12 @@
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code" />
       <short value="Evidence manifestation/symptom" />
-    </element>
-    <element id="Condition.evidence.code.coding">
-      <path value="Condition.evidence.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-      <short value="Evidence code defined by a terminology system" />
-    </element>
-    <element id="Condition.evidence.code.coding:snomedFinding">
-      <path value="Condition.evidence.code.coding" />
-      <sliceName value="snomedFinding" />
-      <short value="Clinical Finding (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ManifestationOrSymptom" />
+        </extension>
+        <strength value="preferred" />
+        <description value="Preferred SNOMED-CT Codes that describe the manifestation or symptoms of a condition." />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
       </binding>
     </element>
