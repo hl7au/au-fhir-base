@@ -5,3 +5,7 @@ This profile defines a condition structure including core localisation concepts 
 #### Extensions
 Extensions used in this profile:
 * Condition: Recorder [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/recorder)
+
+**Examples**
+
+[Condition with evidence and onset date-time](Condition-example0.html)
