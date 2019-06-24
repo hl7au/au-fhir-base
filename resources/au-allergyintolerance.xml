@@ -1,132 +1,89 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-allergyintolerance"/>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
-  <version value="1.0.2"/>
-  <name value="AUBaseAllergyIntolerance"/>
-  <title value="AU Base Allergy Intolerance"/>
-  <status value="draft"/>
-  <date value="2018-08-20"/>
-  <publisher value="Health Level Seven Australia"/>
+  <id value="au-allergyintolerance" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance" />
+  <version value="1.0.2" />
+  <name value="AUBaseAllergyIntolerance" />
+  <title value="AU Base Allergy Intolerance" />
+  <status value="draft" />
+  <date value="2018-08-20" />
+  <publisher value="Health Level Seven Australia" />
   <contact>
     <telecom>
-      <system value="url"/>
-      <value value="http://hl7.org.au"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="http://hl7.org.au" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines an allergy intolerance structure including core localisation concepts for use in an Australian context."/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="AllergyIntolerance"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
-  <derivation value="constraint"/>
+  <description value="This profile defines an allergy intolerance structure including core localisation concepts for use in an Australian context." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+  <derivation value="constraint" />
   <differential>
     <element id="AllergyIntolerance">
-      <path value="AllergyIntolerance"/>
-      <short value="An allergy or intolerance statement in an Australian healthcare context"/>
+      <path value="AllergyIntolerance" />
+      <short value="An allergy or intolerance statement in an Australian healthcare context" />
       <constraint>
-        <key value="inv-ait-0"/>
-        <severity value="error"/>
-        <human value="Recorder and author related party shall not coexist"/>
-        <expression value="(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and recorder.exists()).not()"/>
+        <key value="inv-ait-0" />
+        <severity value="error" />
+        <human value="Recorder and author related party shall not coexist" />
+        <expression value="(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and recorder.exists()).not()" />
       </constraint>
     </element>
     <element id="AllergyIntolerance.extension">
-      <path value="AllergyIntolerance.extension"/>
+      <path value="AllergyIntolerance.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="AllergyIntolerance.extension:recorderRelatedPerson">
-      <path value="AllergyIntolerance.extension"/>
-      <sliceName value="recorderRelatedPerson"/>
-      <short value="Related person that recorded the sensitivity"/>
-      <definition value="Reference to related person that recorded the record and takes responsibility for its content."/>
-      <min value="0"/>
-      <max value="1"/>
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="recorderRelatedPerson" />
+      <short value="Related person that recorded the sensitivity" />
+      <definition value="Reference to related person that recorded the record and takes responsibility for its content." />
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/author-related-person"/>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/author-related-person" />
       </type>
     </element>
     <element id="AllergyIntolerance.code">
-      <path value="AllergyIntolerance.code"/>
-    </element>
-    <element id="AllergyIntolerance.code.coding">
-      <path value="AllergyIntolerance.code.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="AllergyIntolerance.code.coding:snomedAllergyCode">
-      <path value="AllergyIntolerance.code.coding"/>
-      <sliceName value="snomedAllergyCode"/>
-      <short value="Allergy or Intolerance to Substance (SNOMED CT)"/>
-      <max value="1"/>
+      <path value="AllergyIntolerance.code" />
       <binding>
-        <strength value="required"/>
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AllergyIntoleranceCode" />
+        </extension>
+        <strength value="preferred" />
+        <description value="Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies." />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1" />
       </binding>
     </element>
-    <element id="AllergyIntolerance.reaction">
-      <path value="AllergyIntolerance.reaction"/>
-    </element>
     <element id="AllergyIntolerance.reaction.substance">
-      <path value="AllergyIntolerance.reaction.substance"/>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.coding">
-      <path value="AllergyIntolerance.reaction.substance.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.coding:snomedSubstance">
-      <path value="AllergyIntolerance.reaction.substance.coding"/>
-      <sliceName value="snomedSubstance"/>
-      <short value="Substance or Agent (SNOMED CT)"/>
-      <max value="1"/>
+      <path value="AllergyIntolerance.reaction.substance" />
       <binding>
-        <strength value="required"/>
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="SubstanceCode" />
+        </extension>
+        <strength value="preferred" />
+        <description value="Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products)." />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1" />
       </binding>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
-      <path value="AllergyIntolerance.reaction.manifestation"/>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.coding">
-      <path value="AllergyIntolerance.reaction.manifestation.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.coding:snomedManifestation">
-      <path value="AllergyIntolerance.reaction.manifestation.coding"/>
-      <sliceName value="snomedManifestation"/>
-      <short value="Clinical Finding (SNOMED CT)"/>
+      <path value="AllergyIntolerance.reaction.manifestation" />
       <binding>
-        <strength value="required"/>
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Manifestation" />
+        </extension>
+        <strength value="preferred" />
+        <description value="Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event." />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
       </binding>
     </element>
   </differential>
