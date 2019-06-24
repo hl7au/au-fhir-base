@@ -11,6 +11,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Device](StructureDefinition-au-device.html) - device with local identifiers
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
+* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with extensions
 
 ## Medications Profiles
 * [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
@@ -19,7 +20,9 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
 * [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html) - medication administration record with common local coding and content
 * [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
+* [AU Base Immunisation Recommendation](StructureDefinition-au-immunizationrecommendation.html) - immunisation recommendations with core localisation concepts
 * [AU PBS Sponsor](StructureDefinition-pbs-sponsor-organisation.html) - referenced PBS sponsor organisation (manufacturer/supplier)
+* [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
 ## Orders and Observations Profiles
 * [AU Base Observation Age](StructureDefinition-au-observation-age.html) - record of age at a point in time
