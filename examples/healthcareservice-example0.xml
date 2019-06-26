@@ -3,18 +3,6 @@
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
 	</meta>
-	<extension url="http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail">
-		<extension url="eligibilityCoding">
-			<valueCoding>
-				<system value="http://tempuri.org/eligibility"/>
-				<code value="dva"/>
-				<display value="DVA Required"/>
-			</valueCoding>
-		</extension>
-		<extension url="eligibilityNote">
-			<valueString value="Returned veterans by referral only"/>
-		</extension>
-	</extension>
 	<identifier>
 		<type>
 			<coding>
@@ -40,4 +28,14 @@
 		<value value="025553333"/>
 		<use value="work"/>
 	</telecom>
+	<eligibility>
+		<code>
+			<coding>
+				<system value="http://tempuri.org/eligibility"/>
+				<code value="dva"/>
+				<display value="DVA Required"/>
+			</coding>
+		</code>
+		<comment value="Returned veterans by referral only"/>
+	</eligibility>
 </HealthcareService>

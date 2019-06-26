@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description value="This profile defines an organisation administration details structure that includes core localisation concepts for use in an Australian context." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
@@ -85,9 +85,7 @@
         </extension>
         <strength value="required" />
         <description value="Local identifier type" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-        </valueSetReference>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Organization.identifier:hpio.type.text">
@@ -202,7 +200,7 @@
       <path value="Organization.identifier.type" />
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/identifier-type" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type" />
       </binding>
     </element>
     <element id="Organization.identifier:arbn.type.text">

@@ -16,11 +16,13 @@
     </telecom>
   </contact>
   <description value="This IHI status extension describes the status of the associated IHI identifier and also indicates whether the status of the identifier is active or otherwise." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="datatype" />
-  <context value="Identifier" />
+  <context>
+    <type value="element"/>
+    <expression value="Identifier"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -47,9 +49,7 @@
       <binding>
         <strength value="required" />
         <description value="IHI Number Status" />
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1" />
-        </valueSetReference>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1" />
       </binding>
     </element>
   </differential>

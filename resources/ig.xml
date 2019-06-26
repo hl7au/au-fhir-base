@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ImplementationGuide xmlns="http://hl7.org/fhir"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/implementationguide.xsd">
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="au-base"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\examples"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\pages"/>
+  </extension>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
-  <version value="1.1.2"/>
+  <version value="1.2.0"/>
   <name value="Implementation Guide Template"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2019-05-24"/>
+  <date value="2019-05-06T00:00:00+10:00"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -48,1277 +56,487 @@
       <code value="AU"/>
     </coding>
   </jurisdiction>
-  <fhirVersion value="3.0.1"/>
-  <package>
-    <name value="base"/>
+  <packageId value="hl7.fhir.au.base"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <grouping id="p1">
+      <name value="base"/>
+    </grouping>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-receivingapplication"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-receivingfacility"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-assigningauthority"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/meta-source"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/encryption-certificate-pem-x509"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/minimum-interval-between-repeats"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/pbs-sponsor"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/healthcareservice-communication"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/no-fixed-address"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-administration-witness"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-type"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-brand-name"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-generic-name"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/indigenous-status"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/closing-the-gap-registration"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/grounds-for-concurrent-supply"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/ihi-status"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/ihi-record-status"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/date-accuracy-indicator"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/dispense-number"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/composition-author-role"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/author-role"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/healthcareservice-eligibility-detail"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/attester-related-party"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/section-author"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/information-recipient"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/medication-long-term"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/author-related-person"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-norelevantfinding"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-patient"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-observation-age"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-relatedperson"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-composition"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-practitioner"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-practitionerrole"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-organisation"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-location"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-immunization"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-address"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-device"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="StructureDefinition/au-healthcareservice"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-condition"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-bodyheight"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-bodyweight"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-headcircum"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/pbs-sponsor-organisation"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-allergyintolerance"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-dosage"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medication"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medicationrequest"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medicationdispense"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medicationstatement"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medicationadministration"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/encounter-description"/>
-      </sourceReference>
-    </resource>
-	<resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/encounter-origin-organisation"/>
-      </sourceReference>
-    </resource>
-	  <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/encounter-destination-organisation"/>
-      </sourceReference>
-    </resource>
-	 <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/associated-practitionerrole"/>
-      </sourceReference>
-    </resource>
-	 <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="ValueSet/snomed-healthcareservice-services"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>    
-        <reference value="StructureDefinition/category-additional"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/performer-party"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="ValueSet/au-hl7v2-0203"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/snomed-healthcareservice-roles"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/au-hl7v2-0443"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/mims"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/icpc2plus"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-tpp-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-ctpp-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-mp-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-tp-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/pbs-item"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/mims"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/medicine-item-change"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/medicine-item-change"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/icpc2plus"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-mpuu-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-tpuu-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/amt-mpp-codes"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/gtin"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/gtin"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="ValueSet/service-provision-conditions"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="CodeSystem/service-provision-conditions"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/pbs-item"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/medication-type"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/medication-type"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
+      <reference>
         <reference value="CodeSystem/au-hl7v2-0203"/>
-      </sourceReference>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/au-hl7v2-0443"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/change-description"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/list-source-role"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-medlist"/>
-      </sourceReference>
-    </resource>
-	<resource>
-      <example value="false"/>
-      <sourceReference>
-	     <reference value="ValueSet/grounds-for-concurrent-supply"/>
-	   </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example Generic Pack"/>
-      <sourceReference>
-        <reference value="Medication/GenericPack0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example Brand Pack"/>
-      <sourceReference>
-        <reference value="Medication/BrandedPack0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example Brand Pack With Single Active Ingredient"/>
-      <sourceReference>
-        <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example with two active ingredients product"/>
-      <sourceReference>
-        <reference value="Medication/TwoActiveIngredientsProduct0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example with four or more active ingredients"/>
-      <sourceReference>
-        <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Example Brand Pack with Batch Details"/>
-      <sourceReference>
-        <reference value="Medication/BrandProductwithBatchDetails0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 12 to 18 months"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-12-18months"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 12 months"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-12months"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 4 years"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-4years"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 6 months and over"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-6monthsandover"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation Age Value Range - 6 months to 5 years"/>
-      <description value="Shows an example Age Range of Patient"/>
-      <sourceReference>
-        <reference value="Observation/observation-age-example-6monthsto5years"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation of no relevant finding of procedure"/>
-      <description value="Shows an example of no history of procedure"/>
-      <sourceReference>
-        <reference value="Observation/norelevantfinding-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation of no relevant finding of immunisations"/>
-      <description value="Shows an example of no history of immunisation"/>
-      <sourceReference>
-        <reference value="Observation/norelevantfinding-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation of no relevant finding of known history of conditions"/>
-      <description value="Shows an example of no known history of conditions"/>
-      <sourceReference>
-        <reference value="Observation/norelevantfinding-example2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Observation of no relevant finding of patient taking any medications"/>
-      <description value="Shows an example of patient not taking any medications"/>
-      <sourceReference>
-        <reference value="Observation/norelevantfinding-example3"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-bodysite"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Immunization - non-administration"/>
-      <sourceReference>
-        <reference value="Immunization/immunization-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Immunization administered example simple AIR Compliant"/>
-      <sourceReference>
-        <reference value="Immunization/immunization-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Immunization administered example"/>
-      <sourceReference>
-        <reference value="Immunization/immunization-example2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="AU Prescription example"/>
-      <sourceReference>
-        <reference value="MedicationRequest/medicationrequest-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="AU Prescription example"/>
-      <sourceReference>
-        <reference value="MedicationRequest/medicationrequest-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Practitioner/example1"/>
+      </reference>
       <name value="Practitioner as a Radiologist"/>
       <description value="Shows a typical Practitioner as a Radiologist"/>
-      <sourceReference>
-        <reference value="Practitioner/example1"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="AllergyIntolerance example - ibuprofen allergy"/>
-      <sourceReference>
+      <reference>
         <reference value="AllergyIntolerance/allergyintolerance-example0"/>
-      </sourceReference>
+      </reference>
+      <name value="AllergyIntolerance example - ibuprofen allergy"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Location/example1"/>
+      </reference>
       <name value="Location of a Practitioner as a Radiologist"/>
       <description value="Shows a typical location at which this practitioner provides care"/>
-      <sourceReference>
-        <reference value="Location/example1"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Organization/example1"/>
+      </reference>
       <name value="Organisation of a Radiologist"/>
       <description value="Shows a typical Organisation the Radiologist belongs to"/>
-      <sourceReference>
-        <reference value="Organization/example1"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="PractitionerRole/example1"/>
+      </reference>
       <name value="Practitioner Role as a Radiologist"/>
       <description value="Shows a typical Practitioner Role as a Radiologist"/>
-      <sourceReference>
-        <reference value="PractitionerRole/example1"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="HealthcareService/example1"/>
+      </reference>
       <name value="Healthcare Service of a Radiologist"/>
       <description value="Shows a typical Healthcare Service the Radiologist belongs to"/>
-      <sourceReference>
-        <reference value="HealthcareService/example1"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Practitioner/example3"/>
+      </reference>
       <name value="Practitioner as a General Practitioner"/>
       <description value="Shows a typical Practitioner as a General Practitioner"/>
-      <sourceReference>
-        <reference value="Practitioner/example3"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Location/example3"/>
+      </reference>
       <name value="Location of a Practitioner as a General Practitioner"/>
       <description value="Shows a typical location at which this General Practitioner provides care"/>
-      <sourceReference>
-        <reference value="Location/example3"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Organization/example3"/>
+      </reference>
       <name value="Organisation of a General Practitioner"/>
       <description value="Shows a typical Organisation the General Practitioner belongs to"/>
-      <sourceReference>
-        <reference value="Organization/example3"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="PractitionerRole/example3"/>
+      </reference>
       <name value="Practitioner Role as a General Practitioner"/>
       <description value="Shows a typical Practitioner Role as a General Practitioner"/>
-      <sourceReference>
-        <reference value="PractitionerRole/example3"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="HealthcareService/example3"/>
+      </reference>
       <name value="Healthcare Service of a General Practitioner"/>
       <description value="Shows a typical Healthcare Service the General Practitioner belongs to"/>
-      <sourceReference>
-        <reference value="HealthcareService/example3"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="HealthcareService/example4"/>
+      </reference>
       <name value="Healthcare Service of a General Practitioner"/>
       <description value="Shows a typical Healthcare Service describing communication languages"/>
-      <sourceReference>
-        <reference value="HealthcareService/example4"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="AllergyIntolerance example - egg allergy"/>
-      <sourceReference>
-        <reference value="AllergyIntolerance/allergyintolerance-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Patient with IHI and Medicare Number"/>
-      <description
-        value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/example0"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient with IHI and Medicare Number"/>
+      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Patient with IHI and DVA Number"/>
-      <description
-        value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/example1"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient with IHI and DVA Number"/>
+      <description value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Patient with no birth date, and is eligible for Closing the Gap registration"/>
-      <description
-        value="Shows a patient with the extension for indigenous Status and the extension for Closing the Gap registration, with no birth date."/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/example2"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient with no birth date, and is eligible for Closing the Gap registration"/>
+      <description value="Shows a patient with the extension for indigenous Status and the extension for Closing the Gap registration, with no birth date."/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Patient/example3"/>
+      </reference>
       <name value="Patient Birth time of day of birth"/>
       <description value="Shows a typical patient with birth date and birth time"/>
-      <sourceReference>
-        <reference value="Patient/example3"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Patient/example4"/>
+      </reference>
       <name value="Patient as a child born in 2008"/>
       <description value="Shows a typical child patient born in 2008"/>
-      <sourceReference>
-        <reference value="Patient/example4"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Patient/example5"/>
+      </reference>
       <name value="Patient as a mother for the patient in example 4"/>
       <description value="Shows a typical Patient as a mother for the patient in example 4"/>
-      <sourceReference>
-        <reference value="Patient/example5"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Practitioner with HPI-I and Prescriber Number"/>
-      <description
-        value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
-      <sourceReference>
+      <reference>
         <reference value="Practitioner/example0"/>
-      </sourceReference>
+      </reference>
+      <name value="Practitioner with HPI-I and Prescriber Number"/>
+      <description value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Practitioner Role with Provider Number and ANZSCO coded role"/>
-      <description
-        value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
-      <sourceReference>
+      <reference>
         <reference value="PractitionerRole/example0"/>
-      </sourceReference>
+      </reference>
+      <name value="Practitioner Role with Provider Number and ANZSCO coded role"/>
+      <description value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Organization/example0"/>
+      </reference>
       <name value="Organisation with HPI-O"/>
       <description value="Shows a typical organisation using the identifer profile for HPI-O"/>
-      <sourceReference>
-        <reference value="Organization/example0"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="HealthcareService with HPI-O and eligibility"/>
-      <description
-        value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
-      <sourceReference>
+      <reference>
         <reference value="HealthcareService/example0"/>
-      </sourceReference>
+      </reference>
+      <name value="HealthcareService with HPI-O and eligibility"/>
+      <description value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Location example"/>
-      <sourceReference>
+      <reference>
         <reference value="Location/example0"/>
-      </sourceReference>
+      </reference>
+      <name value="Location example"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Device with PAI-D"/>
-      <description value="Shows a typical device using the identifer profile for PAI-D"/>
-      <sourceReference>
-        <reference value="Device/example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Patient Birth Date Accuracy Indicator with AAA"/>
-      <description
-        value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/DateAccuracyIndicatorAAAexample0"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient Birth Date Accuracy Indicator with AAA"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Patient Birth Date Accuracy Indicator with AAU"/>
-      <description
-        value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/DateAccuracyIndicatorAAUexample1"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient Birth Date Accuracy Indicator with AAU"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Patient Birth Date Accuracy Indicator with UAA"/>
-      <description
-        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/DateAccuracyIndicatorUAAexample2"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient Birth Date Accuracy Indicator with UAA"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Patient Birth Date Accuracy Indicator with UEA"/>
-      <description
-        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/DateAccuracyIndicatorUEAexample3"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient Birth Date Accuracy Indicator with UEA"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Patient Birth Date Accuracy Indicator with UUU"/>
-      <description
-        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
-      <sourceReference>
+      <reference>
         <reference value="Patient/DateAccuracyIndicatorUUUexample4"/>
-      </sourceReference>
+      </reference>
+      <name value="Patient Birth Date Accuracy Indicator with UUU"/>
+      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Structured Australian Address"/>
-      <description value="Shows a typical Address with structured Australian address"/>
-      <sourceReference>
-        <reference value="Patient/address-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Unstructured Australian Address"/>
-      <description value="Shows a typical Address with unstructured Australian address"/>
-      <sourceReference>
-        <reference value="Patient/address-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Australian No Fixed Address"/>
-      <description value="Shows a typical Address with Australian no fixed address"/>
-      <sourceReference>
-        <reference value="Patient/address-example2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Composition with attester party"/>
-      <description value="Shows a typical composition with a related party as attester"/>
-      <sourceReference>
-        <reference value="Composition/example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Related person as attester party"/>
-      <description value="Shows a typical related person example"/>
-      <sourceReference>
-        <reference value="RelatedPerson/example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Related person as a carer for an older patient"/>
-      <description value="Shows an example of a carer as a related person for an older patient"/>
-      <sourceReference>
-        <reference value="RelatedPerson/example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Related person as a mother for the patient in example 4"/>
-      <description
-        value="Shows an example of a Related person as a mother for the patient in example 4"/>
-      <sourceReference>
-        <reference value="RelatedPerson/example2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Related person as father"/>
-      <description value="Shows a typical related person example as the father of a patient"/>
-      <sourceReference>
-        <reference value="RelatedPerson/example3"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Dose Based"/>
-      <description value="Shows a typical Dose based medication"/>
-      <sourceReference>
-        <reference value="Medication/MedicationDoseBased"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Combination Package"/>
-      <description value="Combination packaged medicine"/>
-      <sourceReference>
-        <reference value="Medication/CombinationPackage0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Unbranded Product"/>
-      <description value="Unbranded product"/>
-      <sourceReference>
-        <reference value="Medication/UnbrandedProduct0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Unbranded Product"/>
-      <description value="Unbranded product"/>
-      <sourceReference>
-        <reference value="Medication/UnbrandedProduct1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Unbranded Product"/>
-      <description value="Unbranded product"/>
-      <sourceReference>
-        <reference value="Medication/UnbrandedProduct2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Statement"/>
-      <description
-        value="Shows a typical informative example of a record of a patient's use of medication"/>
-      <sourceReference>
-        <reference value="MedicationStatement/MedicationStatementexample0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Statement"/>
-      <description
-        value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
-      <sourceReference>
-        <reference value="MedicationStatement/MedicationStatementexample1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medication Statement"/>
-      <description
-        value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
-      <sourceReference>
-        <reference value="MedicationStatement/MedicationStatementexample2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="composition-multiple-information-recipients-and-author-role"/>
-      <description
-        value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
-      <sourceReference>
-        <reference value="Composition/multiple-information-recipients-and-author-role"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="composition-different-authors"/>
-      <description value="Shows a typical composition with different authors"/>
-      <sourceReference>
-        <reference value="Composition/composition-different-authors"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Location/example2"/>
+      </reference>
       <name value="Location of a Practitioner as a Pathologist"/>
       <description value="Shows a typical location at which this practitioner provides care"/>
-      <sourceReference>
-        <reference value="Location/example2"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="PractitionerRole/example2"/>
+      </reference>
       <name value="Practitioner Role as a Pathologist"/>
       <description value="Shows a typical Practitioner Role as a Pathologist"/>
-      <sourceReference>
-        <reference value="PractitionerRole/example2"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="HealthcareService/example2"/>
+      </reference>
       <name value="Healthcare Service of a Pathologist"/>
       <description value="Shows a typical Healthcare Service the Pathologist belongs to"/>
-      <sourceReference>
-        <reference value="HealthcareService/example2"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Practitioner/example2"/>
+      </reference>
       <name value="Practitioner as a Pathologist"/>
       <description value="Shows a typical Practitioner as a Pathologist"/>
-      <sourceReference>
-        <reference value="Practitioner/example2"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Endpoint/example0"/>
+      </reference>
       <name value="Endpoint with secure messaging content"/>
       <description value="Endpoint with secure messaging content"/>
-      <sourceReference>
-        <reference value="Endpoint/example0"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="PractitionerRole/example4"/>
+      </reference>
       <name value="PractitionerRole with assigning authority"/>
       <description value="PractitionerRole with identifier including assigning authority"/>
-      <sourceReference>
-        <reference value="PractitionerRole/example4"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Medication with brand and generic name extensions"/>
-      <description value="Medication with brand and generic name extensions"/>
-      <sourceReference>
-        <reference value="Medication/BrandedPack1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Prescription with brand and generic name extensions"/>
-      <description value="Prescription with brand and generic name extensions"/>
-      <sourceReference>
-        <reference value="MedicationRequest/medicationrequest-example2"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Organization/example4"/>
+      </reference>
       <name value="Organisation with source"/>
       <description value="Shows a typical organisation with a source reference"/>
-      <sourceReference>
-        <reference value="Organization/example4"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
-      <example value="true"/>
-      <name value="Encounter with description"/>
-      <description value="Encounter with encounter description"/>
-      <sourceReference>
-        <reference value="Encounter/encounter-example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Encounter with narative description"/>
-      <description value="Encounter with narrative description"/>
-      <sourceReference>
-        <reference value="Encounter/encounter-example1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <name value="Recorder"/>
-      <description
-        value="Reference to an individual who recorded the record and takes responsibility for its content."/>
-      <sourceReference>
-        <reference value="StructureDefinition/recorder"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medicine List example with referenced entries"/>
-      <description value="Medicine List example with referenced entries"/>
-      <sourceReference>
-        <reference value="List/e0a6c4a6-4e97-11e9-8647-d663bd873d93"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medicine List example - no known current medicine"/>
-      <description value="Medicine List example - no known current medicine"/>
-      <sourceReference>
-        <reference value="List/bdaf4fda-4e98-11e9-8647-d663bd873d93"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medicine List in a bundle"/>
-      <description value="Medicine List in a bundle"/>
-      <sourceReference>
-        <reference value="Bundle/9309d080-4e97-11e9-8647-d663bd873d93"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
-      <name value="Medicine List with changes"/>
-      <description value="Medicine List with changes"/>
-      <sourceReference>
-        <reference value="List/0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="true"/>
+      <reference>
+        <reference value="Patient/f12d073e-4e99-11e9-8647-d663bd873d93"/>
+      </reference>
       <name value="Patient"/>
       <description value="Patient"/>
-      <sourceReference>
-        <reference value="Patient/f12d073e-4e99-11e9-8647-d663bd873d93"/>
-      </sourceReference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
-     <resource>
-      <example value="true"/>
-      <name value="Condition"/>
-      <description value="Condition"/>
-      <sourceReference>
-        <reference value="Condition/example0"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/associated-healthcareservice"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <name value="AU Base Encounter"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-encounter"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <name value="AU Base Diagnostic Procedure Request"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-diagnosticprocedurerequest"/>
-       </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <name value="AU Base Diagnostic Observation"/>
-      <sourceReference>
-        <reference value="StructureDefinition/au-diagnosticobservation"/>
-      </sourceReference>
-    </resource>
-  </package>
-  <page>
-    <source value="index.html"/>
-    <title value="Australian Base Profiles Implementation Guide"/>
-    <kind value="page"/>
-  </page>
+    <page>
+      <nameUrl value="index.html"/>
+      <title value="Australian Base Profiles Implementation Guide"/>
+      <generation value="html"/>
+    </page>
+    <parameter>
+      <code value="generate"/>
+      <value value="xml"/>
+    </parameter>
+    <parameter>
+      <code value="generate"/>
+      <value value="JSON"/>
+    </parameter>
+  </definition>
 </ImplementationGuide>

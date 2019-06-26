@@ -16,12 +16,17 @@
     </telecom>
   </contact>
   <description value="This extension applies to the Date or DateTime datatypes and indicates the asserted accuracy of the associated date via a coding." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />
-  <contextType value="datatype" />
-  <context value="date" />
-  <context value="dateTime" />
+  <context>
+    <type value="element"/>
+    <expression value="date"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="dateTime"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -49,7 +54,7 @@
       <binding>
         <strength value="required" />
         <description value="Date accuracy coding" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1" />
       </binding>
     </element>
   </differential>

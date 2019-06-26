@@ -16,11 +16,13 @@
     </telecom>
   </contact>
   <description value="This pre-adopts (from STU4) the Meta.source element which: Identifies where the resource comes from." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="datatype" />
-  <context value="Meta" />
+  <context>
+    <type value="element"/>
+    <expression value="Meta"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />

@@ -16,11 +16,13 @@
     </telecom>
   </contact>
   <description value="This IHI record status extension describes whether verification of the individual identifier has occurred and is based on the evidence available for a person’s identity." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="datatype" />
-  <context value="Identifier" />
+  <context>
+    <type value="element"/>
+    <expression value="Identifier"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -47,9 +49,7 @@
       <binding>
         <strength value="required" />
         <description value="IHI Record Status" />
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1" />
-        </valueSetReference>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1" />
       </binding>
     </element>
   </differential>

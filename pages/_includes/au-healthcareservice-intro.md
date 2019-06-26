@@ -8,10 +8,9 @@ These definitions represent common data held in the HealthcareService.identifier
 HPI-O is used as an identifier in this healthcare service profile to support the case where network HPI-Os are issued for sub-organisations, departments or other logical divisions acting as specific healthcare services.  This is useful in the abscence of any specific national identifier for healthcare service entities.
 
 
-#### Extensions
-Extensions used in this profile:
-* Healthcare Service: Healthcare Service Eligibility Detail [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/healthcareservice-eligibility-detail){:target="_blank"}
-* Healthcare Service: Healthcare Service Communication [<sup>[2]</sup>](http://hl7.org.au/fhir/StructureDefinition/healthcareservice-communication){:target="_blank"}
+#### Conversion
+
+NOTE: AU Base on STU3 included two extensions Healthcare Service Eligibility Detail, and Healthcare Service Communication which are now no longer required as direct R4 support is available.
 
 **Examples**
 

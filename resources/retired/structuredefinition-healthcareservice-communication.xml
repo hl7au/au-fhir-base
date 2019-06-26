@@ -8,11 +8,13 @@
   <status value="draft" />
   <date value="2018-10-03" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="HealthcareService" />
+  <context>
+    <type value="element"/>
+    <expression value="HealthcareService"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -40,9 +42,7 @@
       <binding>
         <strength value="extensible" />
         <description value="Common languages" />
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2" />
-        </valueSetReference>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2" />
       </binding>
     </element>
   </differential>

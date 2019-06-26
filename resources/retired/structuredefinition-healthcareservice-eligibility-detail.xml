@@ -16,11 +16,13 @@
     </telecom>
   </contact>
   <description value="This extension applies to the HealthcareService resource and allows enhanced eligibility status value for a healthcare service to be recorded."/>
-  <fhirVersion value="3.0.1"/>
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type"/>
   <abstract value="false"/>
-  <contextType value="resource"/>
-  <context value="HealthcareService"/>
+  <context>
+    <type value="element"/>
+    <expression value="HealthcareService"/>
+  </context>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
