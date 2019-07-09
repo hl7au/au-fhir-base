@@ -9,5 +9,10 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Organisation](StructureDefinition-au-organisation.html) - responsible legal organisation
 * [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - service delivery entity provided by an organisation
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
+* [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
+
+
+## Clinical Profiles
+* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
 
 
