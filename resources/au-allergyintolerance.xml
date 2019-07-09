@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description value="This profile defines an allergy intolerance structure including core localisation concepts for use in an Australian context." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="AllergyIntolerance" />
@@ -61,7 +61,7 @@
         </extension>
         <strength value="preferred" />
         <description value="Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies." />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1" />
       </binding>
     </element>
     <element id="AllergyIntolerance.reaction">
@@ -76,7 +76,7 @@
         </extension>
         <strength value="preferred" />
         <description value="Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products)." />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1" />
       </binding>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
@@ -87,7 +87,7 @@
         </extension>
         <strength value="preferred" />
         <description value="Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event." />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
       </binding>
     </element>
   </differential>
