@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="iso21090-nullFlavor"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
@@ -9,6 +8,7 @@
     <valueInteger value="1"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor"/>
+  <version value="4.0.0"/>
   <name value="nullFlavor"/>
   <status value="draft"/>
   <date value="2012-06-24"/>
@@ -20,7 +20,7 @@
     </telecom>
   </contact>
   <description value="If the value is not a proper value, indicates the reason."/>
-  <fhirVersion value="3.0.1"/>
+  <fhirVersion value="4.0.0"/>
   <mapping>
     <identity value="v2"/>
     <uri value="http://hl7.org/v2"/>
@@ -33,13 +33,21 @@
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
-  <contextType value="datatype"/>
-  <context value="Any"/>
+  <context>
+    <type value="element"/>
+    <expression value="Resource"/>
+  </context>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
   <snapshot>
     <element id="Extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0"/>
+      </extension>
       <path value="Extension"/>
       <short value="NI | OTH | NINF | PINF | UNK | ASKU | NAV | NASK | TRC | MSK | NA | QS"/>
       <definition value="If the value is not a proper value, indicates the reason."/>
@@ -56,7 +64,7 @@
         <key value="ele-1"/>
         <severity value="error"/>
         <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="Element"/>
       </constraint>
@@ -68,6 +76,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
         <source value="Extension"/>
       </constraint>
+      <isModifier value="false"/>
       <mapping>
         <identity value="v2"/>
         <map value="n/a"/>
@@ -80,8 +89,8 @@
     <element id="Extension.id">
       <path value="Extension.id"/>
       <representation value="xmlAttr"/>
-      <short value="xml:id (or equivalent in JSON)"/>
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -92,6 +101,8 @@
       <type>
         <code value="string"/>
       </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
@@ -107,13 +118,10 @@
         <description value="Extensions are always sliced by (at least) url"/>
         <rules value="open"/>
       </slicing>
-      <short value="Additional Content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
+      <short value="Extension"/>
+      <definition value="An Extension"/>
       <min value="0"/>
-      <max value="*"/>
+      <max value="0"/>
       <base>
         <path value="Element.extension"/>
         <min value="0"/>
@@ -122,10 +130,8 @@
       <type>
         <code value="Extension"/>
       </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
@@ -144,6 +150,8 @@
         <code value="uri"/>
       </type>
       <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
@@ -152,7 +160,7 @@
     <element id="Extension.valueCode">
       <path value="Extension.valueCode"/>
       <short value="Value of extension"/>
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)."/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -163,15 +171,15 @@
       <type>
         <code value="code"/>
       </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="NullFlavor"/>
         </extension>
         <strength value="required"/>
-        <description value="A collection of codes specifying why a valid value is not present"/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/v3-NullFlavor"/>
-        </valueSetReference>
+        <description value="A collection of codes specifying why a valid value is not present."/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.0.0"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -217,10 +225,8 @@
           <valueString value="NullFlavor"/>
         </extension>
         <strength value="required"/>
-        <description value="A collection of codes specifying why a valid value is not present"/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/v3-NullFlavor"/>
-        </valueSetReference>
+        <description value="A collection of codes specifying why a valid value is not present."/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.0.0"/>
       </binding>
     </element>
   </differential>
