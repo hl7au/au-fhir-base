@@ -20,3 +20,6 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
 
 
+## Profiles on Data Types
+* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
+
