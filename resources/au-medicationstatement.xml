@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description value="This profile defines a medication statement structure including core localisation concepts for use in an Australian context." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="MedicationStatement" />
@@ -156,9 +156,7 @@
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
         <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
-        </valueSetReference>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCoded.coding:gtin">
@@ -168,9 +166,7 @@
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
         <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/gtin" />
-        </valueSetReference>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/gtin" />
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCoded.coding:amt">
@@ -179,7 +175,7 @@
       <short value="AMT Medicines" />
       <binding>
         <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCoded.coding:amt.extension">
@@ -219,9 +215,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/mims" />
-        </valueSetReference>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/mims" />
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationReference">
@@ -250,9 +244,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-not-taken-1" />
-        </valueSetReference>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-not-taken-1" />
       </binding>
     </element>
     <element id="MedicationStatement.reasonCode.coding">
@@ -272,7 +264,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1" />
       </binding>
     </element>
     <element id="MedicationStatement.dosage">

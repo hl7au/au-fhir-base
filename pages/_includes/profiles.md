@@ -11,6 +11,10 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
 
+## Medications Profiles
+* [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
+* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
+
 
 ## Clinical Profiles
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
