@@ -16,14 +16,25 @@
     </telecom>
   </contact>  
   <description value="This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and provides generic name of a medication." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="Medication" />
-  <context value="MedicationRequest" />
-  <context value="MedicationDispense" />
-  <context value="MedicationStatement" />
+  <context>
+    <type value="element"/>
+    <expression value="Medication" />
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationRequest" />
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationDispense" />
+   </context>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationStatement"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />

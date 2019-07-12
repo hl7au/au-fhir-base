@@ -16,19 +16,45 @@
     </telecom>
   </contact>
   <description value="This extension applies to the Coding datatype and provides a value to indicate a classification of the type of medication the parent coding. This is useful     when there are multiple codings from the same CodingSystem at different levels/classifications." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="Medication.code.coding" />
-  <context value="MedicationRequest.medicationCodeableConcept.coding" />
-  <context value="MedicationDispense.medicationCodeableConcept.coding" />
-  <context value="MedicationStatement.medicationCodeableConcept.coding" />
-  <context value="MedicationAdministration.medicationCodeableConcept.coding" />
-  <context value="ValueSet.expansion.contains" />
-  <context value="ValueSet.expansion.contains.contains" />
-  <context value="CodeSystem.concept" />
-  <context value="CodeSystem.concept.concept" />
+  <context>
+    <type value="element" />
+    <expression value="Medication.code.coding" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationRequest.medicationCodeableConcept.coding" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationDispense.medicationCodeableConcept.coding" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationStatement.medicationCodeableConcept.coding" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationAdministration.medicationCodeableConcept.coding" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="ValueSet.expansion.contains" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="ValueSet.expansion.contains.contains" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="CodeSystem.concept" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="CodeSystem.concept.concept" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -37,10 +63,6 @@
       <path value="Extension" />
       <short value="Medication Type" />
       <definition value="A classifying type code to assist identifying a coding usage" />
-    </element>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
     </element>
     <element id="Extension.value[x]:valueCoding">
       <path value="Extension.valueCoding" />
@@ -52,9 +74,6 @@
       <binding>
         <strength value="required" />
         <description value="Medication Type" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/medication-type" />
-        </valueSetReference>
       </binding>
     </element>
   </differential>

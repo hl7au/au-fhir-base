@@ -16,11 +16,13 @@
     </telecom>
   </contact>
   <description value="This extension applies to the MedicationStatement resource and provides an indicator of long term medication use." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="MedicationStatement" />
+  <context>
+    <type value="element"/>
+    <expression value="MedicationStatement"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
