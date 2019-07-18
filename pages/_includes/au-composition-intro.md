@@ -8,12 +8,11 @@ Where practicable it is preferred that the assertion of clinical judgement that 
 
 #### Extensions 
 Extensions used in this profile:   
-* Composition: Composition Author Role[<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/composition-author-role)
 * Composition: Information Recipient[<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/information-recipient)
-* Composition: Related Person Attester Party[<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/attester-related-party)
-* Composition: Section Author[<sup>[1]</sup>](http://hl7.org/fhir/composition-definitions.html#Composition.section.author) (R4 pre-adopt) Consider use of reference using version conversion extensions [<sup>[2]</sup>](https://www.hl7.org/fhir/versions.html#extensions)
 
+#### Conversion
 
+NOTE: AU Base on STU3 included three extensions Composition Author Role, Related Person Attester Party, andRelated Person Attester Party which are now no longer required as direct R4 support is available.
 
 **Examples**
 
