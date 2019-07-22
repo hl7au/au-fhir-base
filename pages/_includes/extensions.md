@@ -14,6 +14,10 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
 
 
+## Composition
+* [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
+
+
 ## HL7 V2 Identity
 * [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
 * [HL7 V2 Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
