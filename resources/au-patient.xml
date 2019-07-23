@@ -34,7 +34,7 @@
         <key value="inv-pat-0" />
         <severity value="error" />
         <human value="If there is a birth time its date shall be the birth date" />
-        <expression value="birthDate.extension.where(url='http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
+        <expression value="birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
       </constraint>
     </element>
     <element id="Patient.extension">
