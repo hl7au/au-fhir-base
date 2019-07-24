@@ -1,112 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-assigningauthority" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority" />
-  <version value="2.0.0" />
-  <name value="HL7V2AssigningAuthority" />
-  <title value="HL7 V2 Assigning Authority" />
-  <status value="active" />
-  <date value="2019-07-24" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <id value="au-assigningauthority"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <url value="http://hl7.org/fhir/StructureDefinition/au-assigningauthority"/>
+  <name value="Body Site Instance"/>
+  <status value="draft"/>
+  <date value="2013-12-05"/>
+  <publisher value="Health Level Seven International (FHIR Infrastructure)"/>
   <contact>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.org.au" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/fiwg"/>
     </telecom>
   </contact>
-  <description value="This extension defines a HL7v2 assigning authority value for HL7v2 identification for routing." />
-  <fhirVersion value="4.0.0" />
-  <kind value="complex-type" />
-  <abstract value="false" />
-  <context>
-    <type value="element" />
-    <expression value="Identifier" />
-  </context>
-  <type value="Extension" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint" />
+  <description value="Record details about the anatomical location of a specimen or body part. This resource may be used when a coded concept does not provide the necessary detail needed for the use case."/>
+  <fhirVersion value="3.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <contextType value="resource"/>
+  <context value="*"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="HL7 V2 Assigning Authority"/>
-      <definition value="Values for routing HLV2 messages, useful for PRD-7 provider identifier."/>
-      <min value="0"/> 
-      <max value="*"/> 
-    </element>
-    <element id="Extension.extension:namespace-id">
-      <path value="Extension.extension"/>
-      <sliceName value="namespace-id"/>
-      <short value="Application Identifier"/>
+      <short value="Target anatomic location or structure"/>
+      <definition value="Record details about the anatomical location of a specimen or body part. This resource may be used when a coded concept does not provide the necessary detail needed for the use case."/>
+      <min value="0"/>
       <max value="1"/>
-      <type> 
-        <code value="Extension"/> 
-      </type> 
     </element>
-    <element id="Extension.extension:namespace-id.url">
-      <path value="Extension.extension.url"/>
-      <fixedUri value="namespace-id"/>
-    </element>
-    <element id="Extension.extension:namespace-id.valueString:valueString">
-      <path value="Extension.extension.valueString"/>
-      <sliceName value="valueString"/>
-      <type>
-        <code value="string"/>
-      </type>
-    </element>
-    <element id="Extension.extension:universal-id">
+    <element id="Extension.extension">
       <path value="Extension.extension"/>
-      <sliceName value="universal-id"/>
-      <short value="Universal Identifier Value"/>
-      <definition value="Identifier values follwing the universal-id-type defined scheme."/>
-      <max value="1"/>
-      <type> 
-        <code value="Extension"/> 
-      </type> 
-    </element>
-    <element id="Extension.extension:universal-id.url">
-      <path value="Extension.extension.url"/>
-      <fixedUri value="universal-id"/>
-    </element>
-    <element id="Extension.extension:universal-id.valueString:valueString">
-      <path value="Extension.extension.valueString"/>
-      <sliceName value="valueString"/>
-      <type>
-        <code value="string"/>
-      </type>
-    </element>
-    <element id="Extension.extension:universal-id-type">
-      <path value="Extension.extension"/>
-      <sliceName value="universal-id-type"/>
-      <short value="Type Scheme of universal-id"/>
-      <definition value="Provides scheme to use to interpret the universal-id value .e.g. GUID, ISO etc. see HL7 V2 Table 0301 - Universal ID type."/>
-      <max value="1"/>
-      <type> 
-        <code value="Extension"/> 
-      </type> 
-    </element>
-    <element id="Extension.extension:universal-id-type.url">
-      <path value="Extension.extension.url"/>
-      <fixedUri value="universal-id-type"/>
-    </element>
-    <element id="Extension.extension:universal-id-type.valueString:valueString">
-      <path value="Extension.extension.valueString"/>
-      <sliceName value="valueString"/>
-      <type>
-        <code value="string"/>
-      </type>
+      <max value="0"/>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
-      <type> 
-        <code value="uri"/> 
-      </type> 
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority"/>
+      <type>s
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/au-assigningauthority"/>
     </element>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]"/>
-      <min value="0"/> 
-      <max value="0"/> 
+    <element id="Extension.valueReference">
+      <path value="Extension.valueReference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite"/>
+      </type>
     </element>
   </differential>
 </StructureDefinition>
