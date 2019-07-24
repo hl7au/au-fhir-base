@@ -13,7 +13,7 @@
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Endpoint" />
+    <expression value="Identifier" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -21,22 +21,11 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
+      <short value="Assigning Authority" />
       <definition value="Optional Extension Element - found in all resources." />
       <base>
         <path value="Extension" />
       </base>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
