@@ -1,25 +1,32 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-assigningauthority"/>
+  <id value="identifier-validDate"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fhir"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/au-assigningauthority"/>
-  <name value="Body Site Instance"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority"/>
+  <version value="4.1.0"/>
+  <name value="validDate"/>
   <status value="draft"/>
-  <date value="2013-12-05"/>
-  <publisher value="Health Level Seven International (FHIR Infrastructure)"/>
+  <date value="2015-02-28"/>
+  <publisher value="Health Level Seven, Inc. - FHIR Core WG"/>
   <contact>
     <telecom>
       <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/fiwg"/>
+      <value value="http://hl7.org/special/committees/FHIR"/>
     </telecom>
   </contact>
-  <description value="Record details about the anatomical location of a specimen or body part. This resource may be used when a coded concept does not provide the necessary detail needed for the use case."/>
-  <fhirVersion value="3.0.1"/>
+  <description value="Indicates a date on which this identifier value was deemed to apply to this instance."/>
+  <fhirVersion value="4.0.0"/>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 v2 Mapping"/>
+  </mapping>
   <mapping>
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
@@ -27,18 +34,30 @@
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
-  <contextType value="resource"/>
-  <context value="*"/>
+  <context>
+    <type value="element"/>
+    <expression value="Identifier"/>
+  </context>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
+  
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Target anatomic location or structure"/>
-      <definition value="Record details about the anatomical location of a specimen or body part. This resource may be used when a coded concept does not provide the necessary detail needed for the use case."/>
+      <short value="External Identifier associated with this element"/>
+      <definition value="Indicates a date on which this identifier value was deemed to apply to this instance."/>
+      <comment value="When referencing business objects where an identifier might not be globally unique but is instead re-used, allows determination of which object applies (on the presumption that the identifiers on the referenced object have an identifier.period or other metadata that indicates when that identifier was valid for the business object)."/>
       <min value="0"/>
-      <max value="1"/>
+      <max value="*"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -46,16 +65,15 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
-      <type>s
+      <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://hl7.org/fhir/StructureDefinition/au-assigningauthority"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority"/>
     </element>
-    <element id="Extension.valueReference">
-      <path value="Extension.valueReference"/>
+    <element id="Extension.valueDateTime">
+      <path value="Extension.valueDateTime"/>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BodySite"/>
+        <code value="dateTime"/>
       </type>
     </element>
   </differential>
