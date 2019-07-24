@@ -42,6 +42,25 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Extension.extension:namespace-id">
+      <path value="Extension.extension" />
+      <sliceName value="namespace-id" />
+      <short value="Application Identifier" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:namespace-id.url">
+      <path value="Extension.extension.url"/> 
+      <type> 
+        <code value="uri"/> 
+      </type> 
+      <fixedUri value="namespace-id"/> 
+    </element> 
+    <element id="Extension.extension:namespace-id.value[x]">
+      <path value="Extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
     <element id="Extension.url">
       <path value="Extension.url"/> 
       <type> 
