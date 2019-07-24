@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-assigningauthority2" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority2" />
+  <version value="2.0.0" />
+  <name value="AssigningAuthority" />
+  <title value="Assigning Authority" />
+  <status value="draft" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <description value="This extension defines a HL7v2 assigning authority value for HL7v2 identification for routing." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Endpoint" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <base>
+        <path value="Extension" />
+      </base>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:namespace-id">
+      <path value="Extension.extension" />
+      <sliceName value="namespace-id" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:namespace-id.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:universal-id">
+      <path value="Extension.extension" />
+      <sliceName value="universal-id" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:universal-id.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:universal-id-type">
+      <path value="Extension.extension" />
+      <sliceName value="universal-id-type" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:universal-id-type.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
