@@ -15,6 +15,9 @@ These definitions represent common data held in the Practitioner.qualification e
 
 * Australian Health Practitioner Regulation Agency (AHPRA) Registration Number [<sup>[1]</sup>](https://www.ahpra.gov.au){:target="_blank"} [<sup>[2]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"}
 
+#### Usage Notes
+Where a sending system includes a practitioner's qualification using their AHPRA Registration Number, this should be done using Practitioner.qualification(ahpraRegistration). 
+A practitioner's AHPRA Registration Number may also be included as an identifier, using Practitioner.identifier(ahpraRegistration).
 
 **Examples**
 
