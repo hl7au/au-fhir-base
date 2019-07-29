@@ -51,20 +51,20 @@
       <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
       <max value="1" />
       <constraint>
-        <key value="inv-hpii-value-0" />
+        <key value="inv-hpii-0" />
         <requirements value="The value shall be 16 digits." />
         <severity value="error" />
         <human value="HPI-I shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-hpii-value-1" />
+        <key value="inv-hpii-1" />
         <severity value="error" />
         <human value="HPI-I prefix shall be 800361"/>
         <expression value="value.startsWith('800361')" />
       </constraint>
       <constraint>
-        <key value="inv-hpii-value-2" />
+        <key value="inv-hpii-2" />
         <requirements value="HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="HPI-I shall pass the Luhn algorithm check"/>
@@ -171,20 +171,20 @@
       <short value="Care Agency Employee (CAE) Identifier" />
       <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers." />
       <constraint>
-        <key value="inv-caei-value-0" />
+        <key value="inv-caei-0" />
         <requirements value="The value shall be 16 digits." />
         <severity value="error" />
         <human value="CAE identifier shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-caei-value-1" />
+        <key value="inv-caei-1" />
         <severity value="error" />
         <human value="CAE identifier prefix shall be 900360"/>
         <expression value="value.startsWith('900360')" />
       </constraint>
       <constraint>
-        <key value="inv-caei-value-2" />
+        <key value="inv-caei-2" />
         <severity value="error" />
         <human value="CAE identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
@@ -229,7 +229,7 @@
       <short value="Australian Health Practitioner Regulation Agency (AHPRA) registration as identifier" />
       <definition value="Details of registration identifier of the Australian Health Practitioner Regulation Authority (AHPRA)." />
       <constraint>
-        <key value="inv-ahpra-value-id-0" />
+        <key value="inv-ahpra-0" />
         <severity value="error" />
         <human value="AHPRA identifier shall be 3 uppercase letters, followed by 10 digits"/>
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
@@ -299,7 +299,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="inv-ahpra-qual-value-0" />
+        <key value="inv-ahpra-1" />
         <severity value="error" />
         <human value="AHPRA registration value shall be 3 uppercase letters, followed by 10 digits"/>
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
