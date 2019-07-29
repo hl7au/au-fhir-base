@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-organisation" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+  <id value="au-organization" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
   <version value="2.0.0"/>
   <name value="AUBaseOrganisation" />
   <title value="AU Base Organisation" />
@@ -47,19 +47,19 @@
       <short value="Healthcare Provider Identifier – Organisation (HPI-O)" />
       <definition value="National identifier Health Provider Identifier for Organisations (HPI-O)." />
 	  <constraint>
-        <key value="inv-hpio-value-0" />
+        <key value="inv-hpio-0" />
         <severity value="error" />
         <human value="HPI-O shall be an exactly 16 digit number" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-hpio-value-1" />
+        <key value="inv-hpio-1" />
         <severity value="error" />
         <human value="HPI-O prefix is 800362" />
         <expression value="value.startsWith('800362')" />
       </constraint>
       <constraint>
-        <key value="inv-hpio-value-2" />
+        <key value="inv-hpio-2" />
         <requirements value="HPI-O shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm check" />
@@ -120,7 +120,7 @@
       <short value="Australian Business Number (ABN)" />
       <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity. ABN (Australian Business Number)." />
       <constraint>
-        <key value="inv-asic-abn-length" />
+        <key value="inv-abn-0" />
         <severity value="error" />
         <human value="ABN shall be exactly 11 digits" />
         <expression value="value.length()=11" />
@@ -155,7 +155,7 @@
       <short value="Australian Company Number (ACN)" />
       <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity. ACN (Australian Company Number)." />
       <constraint>
-        <key value="inv-asic-acn-length" />
+        <key value="inv-acn-0" />
         <severity value="error" />
         <human value="ACN shall be exactly 9 digits" />
         <expression value="value.length()=9" />
@@ -190,7 +190,7 @@
       <short value="Australian Registered Body Number (ARBN)" />
       <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity. ARBN (Australian Registered Body Number)." />
       <constraint>
-        <key value="inv-asic-arbn-length" />
+        <key value="inv-arbn-0" />
         <severity value="error" />
         <human value="ARBN shall be exactly 9 digits" />
         <expression value="value.length()=9" />
@@ -228,19 +228,19 @@
       <short value="My Health Record Assigned Identity for Organisations (PAI-O)" />
       <definition value="My Health Record Assigned Identity for Organisations (PAI-O)." />
 	   <constraint>
-        <key value="inv-paio-value-0" />
+        <key value="inv-paio-0" />
         <severity value="error" />
         <human value="PAI-O shall be an exactly 16 digit number" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-paio-value-1" />
+        <key value="inv-paio-1" />
         <severity value="error" />
         <human value="PAI-O prefix is 800364" />
         <expression value="value.startsWith('800364')" />
       </constraint>
        <constraint>
-        <key value="inv-paio-value-2" />
+        <key value="inv-paio-2" />
         <requirements value="PAI-O shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm check" />
