@@ -71,27 +71,6 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="Encounter.hospitalization.extension:originOrganisation">
-      <path value="Encounter.hospitalization.extension"/>
-      <sliceName value="originOrganisation"/>
-      <short value="The organisation from which the patient came before admission"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/encounter-origin-organisation"/>
-      </type>
-    </element>
-    <element id="Encounter.hospitalization.extension:destinationOrganisation">
-      <path value="Encounter.hospitalization.extension"/>
-      <sliceName value="destinationOrganisation"/>
-      <short value="Organisation to which the patient is discharged"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile
-          value="http://hl7.org.au/fhir/StructureDefinition/encounter-destination-organisation"/>
-      </type>
-    </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
       <path value="Encounter.hospitalization.dischargeDisposition"/>
     </element>

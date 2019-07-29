@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="author-related-person" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/author-related-person" />
-  <version value="1.0.0" />
+  <version value="2.0.0" />
   <name value="AuthorRelatedPerson" />
   <title value="Author as a RelatedPerson" />
   <status value="draft" />
@@ -15,11 +15,13 @@
     </telecom>
   </contact>
   <description value="This pre-adopts (from R4) an author who is a related person." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="Resource" />
+  <context>
+    <type value="element" />
+    <expression value="Resource" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />

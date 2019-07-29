@@ -8,11 +8,16 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) - accuracy description for dates
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
+* [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
+* [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
 
 
 ## Medication
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
+* [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
 
+## Clinical
+* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
 
 ## Composition
 * [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
