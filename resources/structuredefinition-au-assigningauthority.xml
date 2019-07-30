@@ -34,6 +34,16 @@
       <min value="0"/> 
       <max value="*"/> 
     </element>
+      <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Extension.extension:namespace-id">
       <path value="Extension.extension"/>
       <sliceName value="namespace-id"/>
@@ -43,10 +53,6 @@
         <code value="Extension"/> 
       </type> 
     </element>
-    <element id="Extension.extension:namespace-id.extension">
-      <path value="Extension.extension.extension"/> 
-      <max value="0"/> 
-    </element> 
     <element id="Extension.extension:namespace-id.url">
       <path value="Extension.extension.url"/>
       <type> 
@@ -70,10 +76,6 @@
         <code value="Extension"/> 
       </type> 
     </element>
-    <element id="Extension.extension:universal-id.extension">
-      <path value="Extension.extension.extension"/> 
-      <max value="0"/> 
-    </element> 
     <element id="Extension.extension:universal-id.url">
       <path value="Extension.extension.url"/>
       <type> 
@@ -97,10 +99,6 @@
         <code value="Extension"/> 
       </type> 
     </element>
-    <element id="Extension.extension:universal-id-type.extension">
-      <path value="Extension.extension.extension"/> 
-      <max value="0"/> 
-    </element> 
     <element id="Extension.extension:universal-id-type.url">
       <path value="Extension.extension.url"/>
       <type> 
@@ -113,18 +111,6 @@
       <type>
         <code value="string"/>
       </type>
-    </element>
-    <element id="Extension.url">
-      <path value="Extension.url"/>
-      <type> 
-        <code value="uri"/> 
-      </type> 
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority"/>
-    </element>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]"/>
-      <min value="0"/> 
-      <max value="0"/> 
     </element>
   </differential>
 </StructureDefinition>
