@@ -10,5 +10,5 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
 
 ## Profiles on Data Types
-* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
+* [AU Base Address](StructureDefinition-au-address.html) - Australian address representation
 
