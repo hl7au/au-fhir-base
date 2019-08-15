@@ -213,6 +213,17 @@
       <short value="Employing organisation name" />
       <min value="1" />
     </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <short value="Practitioner Roles" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerRoles" />
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
+      </binding>
+    </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <short value="Practitioner specialties" />
@@ -221,7 +232,7 @@
           <valueString value="PractitionerSpecialty" />
         </extension>
         <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/snomed-practitioner-specialties" />
       </binding>
     </element>
   </differential>
