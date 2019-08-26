@@ -49,20 +49,20 @@
 	  <constraint>
         <key value="inv-hpio-0" />
         <severity value="error" />
-        <human value="HPI-O shall be an exactly 16 digit number" />
+        <human value="HPI-O shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
         <key value="inv-hpio-1" />
         <severity value="error" />
-        <human value="HPI-O prefix is 800362" />
+        <human value="HPI-O prefix shall be 800362" />
         <expression value="value.startsWith('800362')" />
       </constraint>
       <constraint>
         <key value="inv-hpio-2" />
-        <requirements value="HPI-O shall pass the Luhn algorithm check" />
+        <requirements value="HPI-O shall pass the Luhn algorithm" />
         <severity value="error" />
-        <human value="The identifier shall pass the Luhn algorithm check" />
+        <human value="The identifier shall pass the Luhn algorithm" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
@@ -122,7 +122,7 @@
       <constraint>
         <key value="inv-abn-0" />
         <severity value="error" />
-        <human value="ABN shall be exactly 11 digits" />
+        <human value="ABN shall be 11 digits" />
         <expression value="value.length()=11" />
       </constraint>
     </element>
@@ -137,7 +137,7 @@
       <path value="Organization.identifier.type.text" />
       <fixedString value="ABN" />
     </element>
-	<element id="Organization.identifier:abn.system">
+	  <element id="Organization.identifier:abn.system">
       <path value="Organization.identifier.system" />
 	  <short value="Namespace for ABN"/>
       <min value="1" />
@@ -157,7 +157,7 @@
       <constraint>
         <key value="inv-acn-0" />
         <severity value="error" />
-        <human value="ACN shall be exactly 9 digits" />
+        <human value="ACN shall be 9 digits" />
         <expression value="value.length()=9" />
       </constraint>
     </element>
@@ -192,7 +192,7 @@
       <constraint>
         <key value="inv-arbn-0" />
         <severity value="error" />
-        <human value="ARBN shall be exactly 9 digits" />
+        <human value="ARBN shall be 9 digits" />
         <expression value="value.length()=9" />
       </constraint>
     </element>
@@ -230,20 +230,20 @@
 	   <constraint>
         <key value="inv-paio-0" />
         <severity value="error" />
-        <human value="PAI-O shall be an exactly 16 digit number" />
+        <human value="PAI-O shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
         <key value="inv-paio-1" />
         <severity value="error" />
-        <human value="PAI-O prefix is 800364" />
+        <human value="PAI-O prefix shall be 800364" />
         <expression value="value.startsWith('800364')" />
       </constraint>
        <constraint>
         <key value="inv-paio-2" />
-        <requirements value="PAI-O shall pass the Luhn algorithm check" />
+        <requirements value="PAI-O shall pass the Luhn algorithm" />
         <severity value="error" />
-        <human value="The identifier shall pass the Luhn algorithm check" />
+        <human value="The identifier shall pass the Luhn algorithm" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
@@ -285,13 +285,13 @@
       <constraint>
         <key value="inv-csp-0" />
         <severity value="error" />
-        <human value="CSP number is exactly 16 characters" />
+        <human value="CSP number shall be 16 characters" />
         <expression value="value.length() = 16" />
       </constraint>
       <constraint>
         <key value="inv-csp-1" />
         <severity value="error" />
-        <human value="CSP number prefix is 800363" />
+        <human value="CSP number prefix shall be 800363" />
         <expression value="value.startsWith('800363')" />
       </constraint>
     </element>
