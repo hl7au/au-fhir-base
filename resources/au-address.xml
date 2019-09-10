@@ -31,19 +31,25 @@
         <key value="inv-add-0" />
         <severity value="error" />
         <human value="The address shall at least have text or a line" />
-        <expression value="address.text.exists() or address.line.exists()" />
+        <expression value="text.exists() or line.exists()" />
       </constraint>
       <constraint>
         <key value="inv-add-1" />
         <severity value="error" />
         <human value="If asserting no fixed address, the type shall be 'physical'" />
-        <expression value="address.extension.where(url='http://hl7.org.au/fhir/StructureDefinition/no-fixed-address' and value=true).exists() implies address.type='physical'" />
+        <expression value="extension.where(url='http://hl7.org.au/fhir/StructureDefinition/no-fixed-address' and value=true).exists() implies type='physical'" />
       </constraint>
       <constraint>
         <key value="inv-add-2" />
         <severity value="error" />
         <human value="If asserting no fixed address, the address text shall begin with 'NO FIXED ADDRESS'" />
-        <expression value="address.extension.where(url='http://hl7.org.au/fhir/StructureDefinition/no-fixed-address').exists() implies address.text.startsWith('NO FIXED ADDRESS')" />
+        <expression value="extension.where(url='http://hl7.org.au/fhir/StructureDefinition/no-fixed-address').exists() implies text.startsWith('NO FIXED ADDRESS')" />
+      </constraint>
+      <constraint>
+        <key value="inv-add-3" />
+        <severity value="error" />
+        <human value="Postal code shall be 4 digits" />
+        <expression value="postalCode.exists() implies postalCode.matches('^[0-9]{4}$')" />
       </constraint>
     </element>
     <element id="Address.extension">
@@ -78,16 +84,7 @@
         <strength value="required" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2" />
       </binding>
-    </element>
-    <element id="Address.postalCode">
-      <path value="Address.postalCode" />
-      <constraint>
-        <key value="inv-add-3" />
-        <severity value="error" />
-        <human value="Postal code shall be 4 digits" />
-        <expression value="(country='AU' and postalCode.exists()) implies postalCode.matches('^\\d{4}$')" />
-      </constraint>
-    </element>
+    </element>    
     <element id="Address.country">
       <path value="Address.country" />
       <short value="Australia as a 2 digit ISO 3166 code" />
