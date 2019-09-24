@@ -287,6 +287,49 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Practitioner.qualification.code">
+      <path value="Practitioner.qualification.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.qualification.code.coding">
+      <path value="Practitioner.qualification.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.qualification.code.coding:AustralianQualification">
+      <path value="Practitioner.qualification.code.coding" />
+      <sliceName value="AustralianQualification" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/qualifications-1" />
+      </binding>
+    </element>
+    <element id="Practitioner.qualification.code.coding:AustralianQualification.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Practitioner.qualification.code.coding:HL7Qualification">
+      <path value="Practitioner.qualification.code.coding" />
+      <sliceName value="HL7Qualification" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://terminology.hl7.org/ValueSet/v2-2.7-0360" />
+      </binding>
+    </element>
+    <element id="Practitioner.qualification.code.coding:HL7Qualification.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0360|2.7" />
+    </element>
+    
     <element id="Practitioner.qualification:ahpraRegistration">
       <path value="Practitioner.qualification" />
       <sliceName value="ahpraRegistration" />
