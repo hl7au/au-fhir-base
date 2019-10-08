@@ -17,6 +17,8 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
+## Orders and Observations Profiles
+* [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
 
 ## Clinical Profiles
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
