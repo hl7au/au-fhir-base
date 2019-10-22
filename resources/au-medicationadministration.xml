@@ -47,9 +47,9 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication" />
       </type>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept">
       <path value="MedicationAdministration.medication[x]" />
-      <sliceName value="medicationCoded" />
+      <sliceName value="medicationCodeableConcept" />
       <short value="Coded Medication" />
       <type>
         <code value="CodeableConcept" />
@@ -97,7 +97,7 @@
         <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" />
       </constraint>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding">
       <path value="MedicationAdministration.medication[x].coding" />
       <slicing>
         <discriminator>
@@ -112,7 +112,7 @@
       </slicing>
       <short value="Medication Codes" />
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:pbs">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:pbs">
       <path value="MedicationAdministration.medication[x].coding" />
       <sliceName value="pbs" />
       <short value="PBS Item Code" />
@@ -122,7 +122,7 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
       </binding>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:gtin">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:gtin">
       <path value="MedicationAdministration.medication[x].coding" />
       <sliceName value="gtin" />
       <short value="Medication Package Global Trade Item Number (GTIN)" />
@@ -132,7 +132,7 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/gtin" />
       </binding>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:amt">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:amt">
       <path value="MedicationAdministration.medication[x].coding" />
       <sliceName value="amt" />
       <short value="AMT Medicines" />
@@ -141,7 +141,7 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
       </binding>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:amt.extension">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:amt.extension">
       <path value="MedicationAdministration.medication[x].coding.extension" />
       <slicing>
         <discriminator>
@@ -151,7 +151,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:amt.extension:medicationClass">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
       <path value="MedicationAdministration.medication[x].coding.extension" />
       <sliceName value="medicationClass" />
       <short value="Class of Medication Coding" />
@@ -162,7 +162,7 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:amt.extension:medicationClass.valueCoding:valueCoding">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass.valueCoding:valueCoding">
       <path value="MedicationAdministration.medication[x].coding.extension.valueCoding" />
       <sliceName value="valueCoding" />
       <fixedCoding>
@@ -171,7 +171,7 @@
         <display value="Branded package with no container" />
       </fixedCoding>
     </element>
-    <element id="MedicationAdministration.medication[x]:medicationCoded.coding:mimsPackage">
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept.coding:mimsPackage">
       <path value="MedicationAdministration.medication[x].coding" />
       <sliceName value="mimsPackage" />
       <short value="MIMS Package" />
@@ -198,7 +198,7 @@
       <path value="MedicationAdministration.performer.extension" />
       <slicing>
         <discriminator>
-          <type value="value" />
+          <type value="value" />s
           <path value="url" />
         </discriminator>
         <rules value="open" />

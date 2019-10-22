@@ -170,9 +170,9 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept">
       <path value="MedicationDispense.medication[x]"/>
-      <sliceName value="medicationCoded"/>
+      <sliceName value="medicationCodeableConcept"/>
       <short value="Coded Dispensed Medication"/>
       <type>
         <code value="CodeableConcept"/>
@@ -220,7 +220,7 @@
         <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'"/>
       </constraint>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding">
       <path value="MedicationDispense.medication[x].coding"/>
       <slicing>
         <discriminator>
@@ -234,7 +234,7 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:pbs">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:pbs">
       <path value="MedicationDispense.medication[x].coding"/>
       <sliceName value="pbs"/>
       <short value="PBS Item Code"/>
@@ -244,7 +244,7 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/pbs-item"/>
       </binding>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:gtin">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:gtin">
       <path value="MedicationDispense.medication[x].coding"/>
       <sliceName value="gtin"/>
       <short value="Medication Package Global Trade Item Number (GTIN)"/>
@@ -254,7 +254,7 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/gtin"/>
       </binding>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amt">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:amt">
       <path value="MedicationDispense.medication[x].coding"/>
       <sliceName value="amt"/>
       <short value="AMT Medicines"/>
@@ -263,7 +263,7 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1"/>
       </binding>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amt.extension">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:amt.extension">
       <path value="MedicationDispense.medication[x].coding.extension"/>
       <slicing>
         <discriminator>
@@ -273,7 +273,7 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:amt.extension:medicationClass">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
       <path value="MedicationDispense.medication[x].coding.extension"/>
       <sliceName value="medicationClass"/>
       <short value="Class of Medication Coding"/>
@@ -284,7 +284,7 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.coding:mimsPackage">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:mimsPackage">
       <path value="MedicationDispense.medication[x].coding"/>
       <sliceName value="mimsPackage"/>
       <short value="MIMS Package"/>
@@ -294,7 +294,7 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/mims"/>
       </binding>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCoded.text">
+    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true"/>
       </extension>
