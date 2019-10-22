@@ -27,6 +27,13 @@
       <path value="Immunization" />
       <short value="An immunisation statement in an Australian healthcare context" />
     </element>
+    <element id="Immunization.statusReason">
+      <path value="Immunization.statusReason" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
+      </binding>
+    </element>
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode" />
       <short value="Vaccine product for administration" />
@@ -126,11 +133,10 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="function.coding" />
+          <path value="function" />
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Immunisation performer(s)" />
     </element>
     <element id="Immunization.performer.function">
       <path value="Immunization.performer.function" />
@@ -160,9 +166,6 @@
       </fixedCoding>
     </element>
     <element id="Immunization.performer:administeredBy.function.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Immunization.performer.function.text" />
       <min value="1" />
       <fixedString value="Administering Provider" />
@@ -192,9 +195,6 @@
       </fixedCoding>
     </element>
     <element id="Immunization.performer:approvedBy.function.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Immunization.performer.function.text" />
       <min value="1" />
       <fixedString value="Ordering Provider" />
@@ -203,67 +203,23 @@
       <path value="Immunization.performer.actor" />
       <short value="Approving practitioner" />
     </element>
-    <element id="Immunization.practitioner:witnessedBy">
-      <path value="Immunization.practitioner" />
-      <sliceName value="witnessedBy" />
-      <short value="Immunisation Witnessed By" />
-    </element>
-    <element id="Immunization.performer:witnessedBy.function">
-      <path value="Immunization.performer.function" />
-      <short value="Witnessing Role" />
-      <min value="1" />
-    </element>
-    <element id="Immunization.performer:witnessedBy.function.coding">
-      <path value="Immunization.performer.function.coding" />
-      <min value="1" />
-      <fixedCoding>
-        <system value="http://hl7.org.au/fhir/v2/0443" />
-        <code value="WIT" />
-        <display value="Witness" />
-      </fixedCoding>
-    </element>
-    <element id="Immunization.performer:witnessedBy.function.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Immunization.performer.function.text" />
-      <min value="1" />
-      <fixedString value="Witness" />
-    </element>
-    <element id="Immunization.performer:witnessedBy.actor">
-      <path value="Immunization.performer.actor" />
-      <short value="Witnessing practitioner" />
-    </element>
-    <element id="Immunization.explanation">
-      <path value="Immunization.explanation" />
-      <short value="Explanation for (non)vaccination" />
-    </element>
-    <element id="Immunization.explanation.reason">
-      <path value="Immunization.explanation.reason" />
-      <short value="Reason vaccine was given" />
+    <element id="Immunization.reasonCode">
+      <path value="Immunization.reasonCode" />
       <binding>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1" />
       </binding>
     </element>
-    <element id="Immunization.explanation.reasonNotGiven">
-      <path value="Immunization.explanation.reasonNotGiven" />
-      <short value="Reason vaccine not given" />
-      <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
-      </binding>
-    </element>
-    <element id="Immunization.vaccinationProtocol">
-      <path value="Immunization.vaccinationProtocol" />
+    <element id="Immunization.protocolApplied">
+      <path value="Immunization.protocolApplied" />
       <short value="Vaccination protocol" />
     </element>
-    <element id="Immunization.vaccinationProtocol.targetDisease">
-      <path value="Immunization.vaccinationProtocol.targetDisease" />
+       <element id="Immunization.protocolApplied.targetDisease">
+      <path value="Immunization.protocolApplied.targetDisease" />
       <short value="Vaccine disease target" />
     </element>
-    <element id="Immunization.vaccinationProtocol.targetDisease.coding">
-      <path value="Immunization.vaccinationProtocol.targetDisease.coding" />
+    <element id="Immunization.protocolApplied.targetDisease.coding">
+      <path value="Immunization.protocolApplied.targetDisease.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -272,8 +228,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Immunization.vaccinationProtocol.targetDisease.coding:snomedTargetDisease">
-      <path value="Immunization.vaccinationProtocol.targetDisease.coding" />
+    <element id="Immunization.protocolApplied.targetDisease.coding:snomedTargetDisease">
+      <path value="Immunization.protocolApplied.targetDisease.coding" />
       <sliceName value="snomedTargetDisease" />
       <short value="Vaccination Target Disease (SNOMED CT)" />
       <max value="1" />
@@ -282,8 +238,8 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1" />
       </binding>
     </element>
-    <element id="Immunization.vaccinationProtocol.targetDisease.coding:targetDiseaseNoInformation">
-      <path value="Immunization.vaccinationProtocol.targetDisease.coding" />
+    <element id="Immunization.protocolApplied.targetDisease.coding:targetDiseaseNoInformation">
+      <path value="Immunization.protocolApplied.targetDisease.coding" />
       <sliceName value="targetDiseaseNoInformation" />
       <short value="No Information for Target Disease" />
       <max value="1" />
@@ -291,31 +247,6 @@
         <system value="http://hl7.org/fhir/v3/NullFlavor" />
         <code value="NI" />
         <display value="NoInformation" />
-      </fixedCoding>
-    </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus">
-      <path value="Immunization.vaccinationProtocol.doseStatus" />
-      <short value="Vaccine relation to protocol" />
-    </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus.coding">
-      <path value="Immunization.vaccinationProtocol.doseStatus.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Immunization.vaccinationProtocol.doseStatus.coding:doseStatusNotAvailable">
-      <path value="Immunization.vaccinationProtocol.doseStatus.coding" />
-      <sliceName value="doseStatusNotAvailable" />
-      <short value="Dose Status Not Available" />
-      <max value="1" />
-      <fixedCoding>
-        <system value="http://hl7.org/fhir/v3/NullFlavor" />
-        <code value="NAVU" />
-        <display value="Not available" />
       </fixedCoding>
     </element>
   </differential>
