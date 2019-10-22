@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="grounds-for-concurrent-supply" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/grounds-for-concurrent-supply" />
-  <version value="1.0.2"/>
+  <version value="2.0.0"/>
   <name value="GroundsForConcurrentSupplyOfMedication" />
   <title value="Grounds for Concurrent Supply of Medication" />
   <status value="draft" />
-  <date value="2018-10-03" />
+  <date value="2019-10-22" />
   <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
@@ -17,12 +17,17 @@
   </contact>
   <description value="This extension applies to MedicationRequest or MedicationDispense resources and the value indicates the reason a pharmacist
     may or has supplied multiple repeats of a medication prescription at one time." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="MedicationRequest" />
-  <context value="MedicationDispense" />
+  <context>
+    <type value="resource"/>
+    <expression value="MedicationRequest"/>
+  </context>  
+  <context>
+    <type value="resource"/>
+    <expression value="MedicationDispense"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -46,9 +51,7 @@
       <binding>
         <strength value="required" />
         <description value="grounds for concurrent supply types" />
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/grounds-for-concurrent-supply" />
-        </valueSetReference>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/grounds-for-concurrent-supply" />
       </binding>
     </element>
   </differential>

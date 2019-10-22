@@ -16,11 +16,13 @@
     </telecom>
   </contact>  
   <description value="This extension applies to MedicationRequest resource and allows the definition of a duration indicating the minimum allowed time period between dispensing repeats." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="resource" />
-  <context value="MedicationRequest" />
+  <context>
+    <type value="resource"/>
+    <expression value="MedicationRequest"/>
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
