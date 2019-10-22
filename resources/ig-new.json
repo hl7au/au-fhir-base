@@ -31,7 +31,7 @@
   "title" : "AU Base Implementation Guide",
   "status" : "active",
   "experimental" : true,
-  "date" : "2019-08-10T00:00:00+10:00",
+  "date" : "2019-10-09T00:00:00+11:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia Patient Administration Working Group",
@@ -81,6 +81,13 @@
       "name" : "base"
     }],
     "resource" : [{
+      "reference" : {
+        "reference" : "StructureDefinition/au-norelevantfinding"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
       "reference" : {
         "reference" : "StructureDefinition/au-receivingapplication"
       },
@@ -285,7 +292,35 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/au-immunization"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/au-medicationstatement"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medicationadministration"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medicationdispense"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medicationrequest"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -321,6 +356,20 @@
     {
       "reference" : {
         "reference" : "ValueSet/snomed-healthcareservice-services"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/snomed-healthcareservice-specialties"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/snomed-practitioner-specialties"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"

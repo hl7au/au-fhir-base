@@ -14,7 +14,11 @@ These Profiles have been defined for this implementation guide.
 
 ## Medications Profiles
 * [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
+* [AU Base Medication Request](StructureDefinition-au-medicationrequest.html) - prescribing/ordering details with common local coding and content
+* [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html) - dispensing details with common local coding and content
 * [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
+* [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html) - medication administration record with common local coding and content
+* [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
 ## Orders and Observations Profiles

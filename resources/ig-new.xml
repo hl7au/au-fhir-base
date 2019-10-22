@@ -26,7 +26,7 @@
   <title value="AU Base Implementation Guide"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2019-08-10T00:00:00+10:00"/>
+  <date value="2019-10-09T00:00:00+11:00"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -74,6 +74,13 @@
     <grouping id="p1">
       <name value="base"/>
     </grouping>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-norelevantfinding"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-receivingapplication"/>
@@ -279,7 +286,35 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/au-immunization"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/au-medicationstatement"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-medicationadministration"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-medicationdispense"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-medicationrequest"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -315,6 +350,20 @@
     <resource>
       <reference>
         <reference value="ValueSet/snomed-healthcareservice-services"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/snomed-healthcareservice-specialties"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/snomed-practitioner-specialties"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
