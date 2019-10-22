@@ -443,30 +443,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.asNeeded[x]">
-      <path value="MedicationRequest.dosageInstruction.asNeeded[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-    </element>
-    <element id="MedicationRequest.dosageInstruction.asNeeded[x]:asNeededCoding">
-      <path value="MedicationRequest.dosageInstruction.asNeeded[x]" />
-      <sliceName value="asNeededCoding" />
-    </element>
-    <element id="MedicationRequest.dosageInstruction.asNeeded[x]:asNeededCoding.coding">
-      <path value="MedicationRequest.dosageInstruction.asNeeded[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="MedicationRequest.dosageInstruction.route.coding">
       <path value="MedicationRequest.dosageInstruction.route.coding" />
       <slicing>
