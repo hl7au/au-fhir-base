@@ -107,6 +107,11 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
       </binding>
     </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs.system">
+      <path value="MedicationStatement.medication[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://pbs.gov.au/code/item"/>
+    </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:gtin">
       <path value="MedicationStatement.medicationCodeableConcept.coding" />
       <sliceName value="gtin" />
@@ -116,6 +121,11 @@
         <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/gtin" />
       </binding>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:gtin.system">
+      <path value="MedicationStatement.medication[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://www.gs1.org/gtin"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt">
       <path value="MedicationStatement.medicationCodeableConcept.coding" />
@@ -147,6 +157,11 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.system">
+      <path value="MedicationStatement.medication[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
+    </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage">
       <path value="MedicationStatement.medicationCodeableConcept.coding" />
       <sliceName value="mimsPackage" />
@@ -156,6 +171,11 @@
         <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/mims" />
       </binding>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage.system">
+      <path value="MedicationStatement.medication[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://www.mims.com.au/codes"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationReference">
       <path value="MedicationStatement.medicationReference" />
