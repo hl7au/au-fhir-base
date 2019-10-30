@@ -78,7 +78,7 @@
       <short value="Medication Detail" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
-      <path value="MedicationStatement.medicationCodeableConcept" />
+      <path value="MedicationStatement.medication[x]" />
       <sliceName value="medicationCodeableConcept" />
       <short value="Coded Medication" />
       <min value="0"/>
@@ -87,7 +87,7 @@
       </type>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding">
-      <path value="MedicationStatement.medicationCodeableConcept.coding" />
+      <path value="MedicationStatement.medication[x].coding" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -98,7 +98,7 @@
       <short value="Medication Codes" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs">
-      <path value="MedicationStatement.medicationCodeableConcept.coding" />
+      <path value="MedicationStatement.medication[x].coding" />
       <sliceName value="pbs" />
       <short value="PBS Item Code" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
@@ -113,7 +113,7 @@
       <fixedUri value="http://pbs.gov.au/code/item"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:gtin">
-      <path value="MedicationStatement.medicationCodeableConcept.coding" />
+      <path value="MedicationStatement.medication[x].coding" />
       <sliceName value="gtin" />
       <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
@@ -128,7 +128,7 @@
       <fixedUri value="http://www.gs1.org/gtin"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt">
-      <path value="MedicationStatement.medicationCodeableConcept.coding" />
+      <path value="MedicationStatement.medication[x].coding" />
       <sliceName value="amt" />
       <short value="AMT Medicines" />
       <binding>
@@ -137,7 +137,7 @@
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension">
-      <path value="MedicationStatement.medicationCodeableConcept.coding.extension" />
+      <path value="MedicationStatement.medication[x].coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -147,7 +147,7 @@
       </slicing>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
-      <path value="MedicationStatement.medicationCodeableConcept.coding.extension" />
+      <path value="MedicationStatement.medication[x].coding.extension" />
       <sliceName value="medicationClass" />
       <short value="Class of Medication Coding" />
       <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem" />
@@ -163,7 +163,7 @@
       <fixedUri value="http://snomed.info/sct"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage">
-      <path value="MedicationStatement.medicationCodeableConcept.coding" />
+      <path value="MedicationStatement.medication[x].coding" />
       <sliceName value="mimsPackage" />
       <short value="MIMS Package" />
       <max value="1" />
