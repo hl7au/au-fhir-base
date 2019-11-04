@@ -58,11 +58,18 @@
   </jurisdiction>
   <packageId value="hl7.fhir.au.base"/>
   <license value="CC0-1.0"/>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
   <definition>
     <grouping id="p1">
       <name value="base"/>
     </grouping>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-condition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-norelevantfinding"/>
