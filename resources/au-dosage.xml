@@ -54,79 +54,40 @@
         <rules value="closed" />
       </slicing>
     </element>
-    <element id="Dosage.asNeeded[x]:asNeededCodeableConcept">
+    <element id="Dosage.asNeeded[x]:snomedFinding">
       <path value="Dosage.asNeeded[x]" />
-      <sliceName value="asNeededCodeableConcept" />
-      <short value="Coded Reason For Take &quot;as needed&quot;" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-    </element>
-    <element id="Dosage.asNeeded[x]:asNeededCodeableConcept.coding">
-      <path value="Dosage.asNeeded[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Dosage.asNeeded[x]:asNeededCodeableConcept.coding:snomedFinding">
-      <path value="Dosage.asNeeded[x].coding" />
       <sliceName value="snomedFinding" />
       <short value="Clinical Finding (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
       </binding>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
     </element>
-    <element id="Dosage.site.coding">
-      <path value="Dosage.site.coding" />
-      <max value="1" />
+    <element id="Dosage.site">
+      <path value="Dosage.site" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
       </binding>
     </element>
-    <element id="Dosage.route.coding">
-      <path value="Dosage.route.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Dosage.route.coding:snomedRoute">
-      <path value="Dosage.route.coding" />
+    <element id="Dosage.route">
+      <path value="Dosage.route" />
       <sliceName value="snomedRoute" />
       <short value="Route of Administration (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1" />
       </binding>
     </element>
-    <element id="Dosage.method.coding">
-      <path value="Dosage.method.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Dosage.method.coding:snomedMethod">
-      <path value="Dosage.method.coding" />
+    <element id="Dosage.method">
+      <path value="Dosage.method" />
       <sliceName value="snomedMethod" />
       <short value="SNOMED CT Administration Method" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administration-method-codes" />
       </binding>
     </element>
