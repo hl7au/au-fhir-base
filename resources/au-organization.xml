@@ -123,7 +123,7 @@
         <key value="inv-abn-0" />
         <severity value="error" />
         <human value="ABN shall be 11 digits" />
-        <expression value="value.length()=11" />
+        <expression value="value.matches('^([0-9]{11})$')" />
       </constraint>
     </element>
     <element id="Organization.identifier:abn.type">
@@ -158,7 +158,7 @@
         <key value="inv-acn-0" />
         <severity value="error" />
         <human value="ACN shall be 9 digits" />
-        <expression value="value.length()=9" />
+        <expression value="value.matches('^([0-9]{9})$')" />
       </constraint>
     </element>
     <element id="Organization.identifier:acn.type">
@@ -193,7 +193,7 @@
         <key value="inv-arbn-0" />
         <severity value="error" />
         <human value="ARBN shall be 9 digits" />
-        <expression value="value.length()=9" />
+        <expression value="value.matches('^([0-9]{9})$')" />
       </constraint>
     </element>
     <element id="Organization.identifier:arbn.type">
@@ -285,8 +285,8 @@
       <constraint>
         <key value="inv-csp-0" />
         <severity value="error" />
-        <human value="CSP number shall be 16 characters" />
-        <expression value="value.length() = 16" />
+        <human value="CSP number shall be 16 digits" />
+        <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
         <key value="inv-csp-1" />
