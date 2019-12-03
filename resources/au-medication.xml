@@ -19,7 +19,7 @@
     </telecom>
   </contact>
   <description value="This profile defines a medication structure including core localisation concepts for use in an Australian context." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Medication" />
@@ -27,9 +27,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Medication">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use" />
-      </extension>
       <path value="Medication" />
       <short value="A medication in an Australian healthcare context" />
       <definition value="Medication content use in an Australian context.  Includes concepts that are specific to Australian usage." />
@@ -48,7 +45,6 @@
       <path value="Medication.extension" />
       <sliceName value="brandName" />
       <short value="Medication Brand Name" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name" />
@@ -58,7 +54,6 @@
       <path value="Medication.extension" />
       <sliceName value="genericName" />
       <short value="Medication Generic Drug Name" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name" />
@@ -68,48 +63,6 @@
       <path value="Medication.code" />
       <short value="Coding for the medicine" />
       <definition value="Australian coding slices are typical medicine/product concept codes.&#xD;&#xA;&#xD;&#xA;A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems." />
-      <constraint>
-        <key value="inv-amt-tpuu" />
-        <severity value="error" />
-        <human value="AMT TPUU valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'" />
-      </constraint>
-      <constraint>
-        <key value="inv-amt-tpp" />
-        <severity value="error" />
-        <human value="AMT TPU valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'" />
-      </constraint>
-      <constraint>
-        <key value="inv-amt-tp" />
-        <severity value="error" />
-        <human value="AMT TP valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" />
-      </constraint>
-      <constraint>
-        <key value="inv-amt-mpuu" />
-        <severity value="error" />
-        <human value="AMT MPUU valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" />
-      </constraint>
-      <constraint>
-        <key value="inv-amt-mpp" />
-        <severity value="error" />
-        <human value="AMT MPP valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'" />
-      </constraint>
-      <constraint>
-        <key value="inv-amt-mp" />
-        <severity value="error" />
-        <human value="AMT MP valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'" />
-      </constraint>
-      <constraint>
-        <key value="inv-amt-ctpp" />
-        <severity value="error" />
-        <human value="AMT CTPP valueset membership required" />
-        <expression value="coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" />
-      </constraint>
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
@@ -117,10 +70,6 @@
         <discriminator>
           <type value="value" />
           <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -131,9 +80,14 @@
       <short value="PBS Item Code" />
       <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/pbs-item" />
       </binding>
+    </element>
+    <element id="Medication.code.coding:pbs.system">
+      <path value="Medication.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://pbs.gov.au/code/item"/>
     </element>
     <element id="Medication.code.coding:gtin">
       <path value="Medication.code.coding" />
@@ -141,16 +95,21 @@
       <short value="Medication Package Global Trade Item Number (GTIN)" />
       <definition value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/gtin" />
       </binding>
+    </element>
+    <element id="Medication.code.coding:gtin.system">
+      <path value="Medication.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://www.gs1.org/gtin"/>
     </element>
     <element id="Medication.code.coding:amt">
       <path value="Medication.code.coding" />
       <sliceName value="amt" />
       <short value="AMT Medicines" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
       </binding>
     </element>
@@ -173,20 +132,27 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
+    <element id="Medication.code.coding:amt.system">
+      <path value="Medication.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
+    </element>
     <element id="Medication.code.coding:mimsPackage">
       <path value="Medication.code.coding" />
       <sliceName value="mimsPackage" />
       <short value="MIMS Package" />
       <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/mims" />
       </binding>
     </element>
+    <element id="Medication.code.coding:mimsPackage.system">
+      <path value="Medication.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://www.mims.com.au/codes"/>
+    </element>
     <element id="Medication.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Medication.code.text" />
       <short value="Medication primary text" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry." />
@@ -198,29 +164,13 @@
     </element>
     <element id="Medication.form">
       <path value="Medication.form" />
-      <short value="powder | tablets | capsule +" />
-    </element>
-    <element id="Medication.form.coding">
-      <path value="Medication.form.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <max value="1" />
-    </element>
-    <element id="Medication.form.coding:snomedForm">
-      <path value="Medication.form.coding" />
-      <sliceName value="snomedForm" />
-      <short value="Medication Form (SNOMED CT)" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
+         <binding>
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1" />
       </binding>
     </element>
+
     <element id="Medication.ingredient">
       <path value="Medication.ingredient" />
       <definition value="Identifies a particular constituent of interest in the product. Can be coded with AMT." />
@@ -232,7 +182,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <short value="Medication ingredient" />
     </element>
@@ -241,33 +191,18 @@
       <sliceName value="itemCodeableConcept" />
       <short value="Coded Ingredient Product" />
       <definition value="Coding for a substance or medicinal product  that is an ingredient of the medication." />
+      <min value="0"/>
       <type>
         <code value="CodeableConcept" />
       </type>
-    </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
-      <path value="Medication.ingredient.item[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:amtMP">
-      <path value="Medication.ingredient.item[x].coding" />
-      <sliceName value="amtMP" />
-      <short value="AMT Medicinal Product Ingredient" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/amt-mp-codes" />
       </binding>
     </element>
-    <element id="Medication.ingredient.amount">
-      <path value="Medication.ingredient.amount" />
-      <short value="Strength of ingredient" />
+    <element id="Medication.ingredient.strength">
+      <path value="Medication.ingredient.strength" />
+      <short value="Quantity/strength of ingredient present" />
     </element>
   </differential>
 </StructureDefinition>

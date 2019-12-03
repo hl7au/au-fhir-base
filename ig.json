@@ -1,6 +1,8 @@
 {
     "sct-edition": "http://snomed.info/sct/32506021000036107",
-    "version": "4.0.0",
+    "version": "4.0.1",
+    "fixed-business-version" : "2.0.0",
+    "title" : "AU Base Implementation Guide",
     "source": "ig.xml",
     "dependencyList": [],
     "spreadsheets": [],
@@ -10,7 +12,9 @@
         "http://www.mims.com.au/codes",
         "http://www.gs1.org/gtin",
         "http://pbs.gov.au/code/item",
-        "http://hl7.org.au/fhir/v2/0203",
+        "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "http://terminology.hl7.org.au/CodeSystem/v2-0443",
+        "http://terminology.hl7.org/CodeSystem/v2-0131",
         "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
         "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0",
         "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
@@ -108,6 +112,7 @@
     "canonicalBase": "http://hl7.org.au/fhir",
     "paths": {
         "temp": "temp",
+        "history" : "http://hl7.org.au/fhir/history.html",
         "resources": [
             "resources",
             "examples"
@@ -268,9 +273,9 @@
             "base": "StructureDefinition-au-practitioner.html",
             "defns": "StructureDefinition-au-practitioner-definitions.html"
         },
-        "StructureDefinition/au-organisation": {
-            "base": "StructureDefinition-au-organisation.html",
-            "defns": "StructureDefinition-au-organisation-definitions.html"
+        "StructureDefinition/au-organization": {
+            "base": "StructureDefinition-au-organization.html",
+            "defns": "StructureDefinition-au-organization-definitions.html"
         },
         "StructureDefinition/au-bodysite": {
             "base": "StructureDefinition-au-bodysite.html",
@@ -516,9 +521,14 @@
             "base": "ValueSet-snomed-healthcareservice-services.html",
             "defns": "ValueSet-snomed-healthcareservice-services-definitions.html"
         },
-        "ValueSet/snomed-healthcareservice-roles": {
-            "base": "ValueSet-snomed-healthcareservice-roles.html",
-            "defns": "ValueSet-snomed-healthcareservice-roles-definitions.html"
+        "ValueSet/snomed-healthcareservice-specialties": {
+            "base": "ValueSet-snomed-healthcareservice-specialties.html",
+            "defns": "ValueSet-snomed-healthcareservice-specialties-definitions.html"
+        }
+        ,
+        "ValueSet/snomed-practitioner-specialties": {
+            "base": "ValueSet-snomed-practitioner-specialties.html",
+            "defns": "ValueSet-snomed-practitioner-specialties-definitions.html"
         }
     }
 }

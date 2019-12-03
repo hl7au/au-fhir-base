@@ -209,11 +209,6 @@
             </table>
           </div>
         </text>
-        <extension url="http://hl7.org.au/fhir/StructureDefinition/author-role">
-          <valueReference>
-            <reference value="urn:uuid:9024d4a6-4ea0-11e9-8647-d663bd873d93"/>
-          </valueReference>
-        </extension>
         <status value="current"/>
         <mode value="snapshot"/>
         <code>
@@ -229,12 +224,12 @@
         <date value="2019-03-19"/>
         <entry>
           <item>
-            <reference value="urn::uuid:e36cef42-4ea3-11e9-8647-d663bd873d93"/>
+            <reference value="urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93"/>
           </item>
         </entry>
         <entry>
           <item>
-            <reference value="urn::uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93"/>
+            <reference value="urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93"/>
           </item>
         </entry>
         <entry>
@@ -316,7 +311,7 @@
           </extension>
           <type>
             <coding>
-              <system value="http://hl7.org/fhir/v2/0203"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
               <code value="NI"/>
               <display value="National unique individual identifier"/>
             </coding>
@@ -384,7 +379,7 @@
         <identifier>
           <type>
             <coding>
-              <system value="http://hl7.org.au/fhir/v2/0203"/>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
               <code value="UPIN"/>
             </coding>
             <text value="Medicare Provider Number"/>
@@ -397,7 +392,7 @@
           <reference value="urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93"/>
         </practitioner>
         <organization>
-          <reference value="urn:uuid:b377c682-4ea2-11e9-8647-d663bd873d93"/>
+          <reference value="urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d9"/>
         </organization>
         <specialty>
           <coding>
@@ -459,7 +454,7 @@
         <identifier>
           <type>
             <coding>
-              <system value="http://hl7.org/fhir/v2/0203"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
               <code value="NPI"/>
               <display value="National provider identifier"/>
             </coding>
@@ -471,7 +466,7 @@
         <identifier>
           <type>
             <coding>
-              <system value="http://hl7.org.au/fhir/v2/0203"/>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
               <code value="PRES"/>
               <display value="Prescriber Number"/>
             </coding>
@@ -503,7 +498,7 @@
           <identifier>
             <type>
               <coding>
-                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
                 <code value="AHPRA"/>
                 <display
                   value="Australian Health Practitioner Regulation Agency Registration Number"/>
@@ -529,10 +524,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93"/>
+    <fullUrl value="urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d9"/>
     <resource>
       <Organization xmlns="http://hl7.org/fhir">
-        <id value="b377c682-4ea2-11e9-8647-d663bd873d93"/>
+        <id value="b377cc18-4ea2-11e9-8647-d663bd873d9"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -549,7 +544,7 @@
         <identifier>
           <type>
             <coding>
-              <system value="http://hl7.org.au/fhir/v2/0203"/>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
               <code value="NOI"/>
               <display value="National Organisation Identifier"/>
             </coding>
@@ -690,7 +685,6 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
         <reasonCode>
           <text value="Depression."/>
         </reasonCode>
@@ -704,12 +698,14 @@
               <when value="MORN"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="0.5"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="0.5"/>
+              <unit value="TAB"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+          </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -818,7 +814,6 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
         <reasonCode>
           <text value="To thin the blood to prevent heart attack or stroke."/>
         </reasonCode>
@@ -833,12 +828,14 @@
               <when value="MORN"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="1"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="TAB"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+          </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -943,7 +940,6 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
         <reasonCode>
           <text value="For angina or to keep the blood thin."/>
         </reasonCode>
@@ -960,12 +956,14 @@
               <when value="HS"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="1"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="TAB"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+            </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -1069,8 +1067,7 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
-        <dosage>
+       <dosage>
           <text value="Take ONE capsule at NIGHT."/>
           <timing>
             <repeat>
@@ -1080,12 +1077,14 @@
               <when value="HS"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="1"/>
-            <unit value="CAP"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="CAP"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="CAP"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="CAP"/>
+            </doseQuantity>
+          </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -1229,7 +1228,6 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
         <dosage>
           <text value="Swallow whole ONE tablet at NIGHT."/>
           <patientInstruction
@@ -1242,12 +1240,14 @@
               <when value="HS"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="1"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="TAB"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+          </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -1330,7 +1330,7 @@
             </table>
           </div>
         </text>
-        <status value="active"/>
+        <status value="not-taken"/>
         <medicationCodeableConcept>
           <coding>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
@@ -1361,7 +1361,6 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="n"/>
         <reasonCode>
           <text value="To relieve chest pain associated with angina."/>
         </reasonCode>
@@ -1521,8 +1520,7 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
-        <reasonCode>
+       <reasonCode>
           <text value="To relieve chest pain associated with angina."/>
         </reasonCode>
         <dosage>
@@ -1537,12 +1535,14 @@
               <when value="HS"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="1"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="TAB"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+          </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -1658,7 +1658,6 @@
         <subject>
           <reference value="urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"/>
         </subject>
-        <taken value="y"/>
         <reasonCode>
           <text value="For reducing blood pressure, angina or disturbances of heart rhythm."/>
         </reasonCode>
@@ -1673,12 +1672,14 @@
               <when value="HS"/>
             </repeat>
           </timing>
-          <doseQuantity>
-            <value value="1"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-          </doseQuantity>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="TAB"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+              <code value="TAB"/>
+            </doseQuantity>
+            </doseAndRate>
         </dosage>
       </MedicationStatement>
     </resource>

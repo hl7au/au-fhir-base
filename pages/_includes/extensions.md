@@ -8,10 +8,26 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) - accuracy description for dates
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
+* [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
+* [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
 
 
 ## Medication
+* [Medication Type](StructureDefinition-medication-type.html) - drug code classification
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
+* [Dispense Number](StructureDefinition-dispense-number.html) - number of this dispense
+* [Grounds For Concurrent Supply Of Medication](StructureDefinition-grounds-for-concurrent-supply.html) - dispensing request/suppy record 
+* [Long Term](StructureDefinition-medication-long-term.html) - Medication long-term indicator
+* [Medication Brand Name](StructureDefinition-medication-brand-name.html) - text brand name that can be added to profiles
+* [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
+* [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) - minimum allowed dispensing interval
+* [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
+
+## Clinical
+* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
+
+## Composition
+* [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
 
 
 ## HL7 V2 Identity

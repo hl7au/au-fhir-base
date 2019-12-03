@@ -2,21 +2,21 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
-  <version value="1.0.0" />
+  <version value="2.0.0" />
   <name value="AUBasePractitioner" />
   <title value="AU Base Practitioner" />
   <status value="draft" />
-  <date value="2017-03-11T06:30:54+00:00" />
+  <date value="2019-07-26"/>
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au" />
+      <value value="http://hl7.org.au/fhir" />
       <use value="work" />
     </telecom>
   </contact>
   <description value="This profile defines a practitioner administration details structure that includes core localisation concepts for use in an Australian context." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Practitioner" />
@@ -51,23 +51,23 @@
       <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
       <max value="1" />
       <constraint>
-        <key value="inv-hpii-value-0" />
-        <requirements value="The value shall be a 16 digit number." />
+        <key value="inv-hpii-0" />
+        <requirements value="The value shall be 16 digits." />
         <severity value="error" />
-        <human value="HPI-I shall be an exactly 16 digit number" />
+        <human value="HPI-I shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-hpii-value-1" />
+        <key value="inv-hpii-1" />
         <severity value="error" />
-        <human value="HPI-I prefix is 800361" />
+        <human value="HPI-I prefix shall be 800361"/>
         <expression value="value.startsWith('800361')" />
       </constraint>
       <constraint>
-        <key value="inv-hpii-value-2" />
+        <key value="inv-hpii-2" />
         <requirements value="HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
-        <human value="The identifier shall pass the Luhn algorithm check" />
+        <human value="HPI-I shall pass the Luhn algorithm check"/>
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
       </constraint>
     </element>
@@ -76,7 +76,7 @@
       <short value="Coded identifier type for HPI-I" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="NPI" />
         </coding>
       </patternCodeableConcept>
@@ -102,7 +102,7 @@
     <element id="Practitioner.identifier:hpii.system">
       <path value="Practitioner.identifier.system" />
       <short value="Namespace for HPI-I" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Providier Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000" />
+      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
     </element>
@@ -127,7 +127,7 @@
       <short value="Coded identifier type for prescriber number" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org.au/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
           <code value="PRES" />
         </coding>
       </patternCodeableConcept>
@@ -171,20 +171,20 @@
       <short value="Care Agency Employee (CAE) Identifier" />
       <definition value="An identifier that applies to this person in this role. This identifier is used for qualified identifiers to represent a My Health Record Care Agency Employees Identifier (CAE-I) numbers." />
       <constraint>
-        <key value="inv-caei-value-0" />
-        <requirements value="The value shall be a 16 digit number." />
+        <key value="inv-caei-0" />
+        <requirements value="The value shall be 16 digits." />
         <severity value="error" />
-        <human value="CAE identifier shall be an exactly 16 digit number" />
+        <human value="CAE identifier shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
       </constraint>
       <constraint>
-        <key value="inv-caei-value-1" />
+        <key value="inv-caei-1" />
         <severity value="error" />
-        <human value="CAE identifier shall contain a prefix of 900360" />
+        <human value="CAE identifier prefix shall be 900360"/>
         <expression value="value.startsWith('900360')" />
       </constraint>
       <constraint>
-        <key value="inv-caei-value-2" />
+        <key value="inv-caei-2" />
         <severity value="error" />
         <human value="CAE identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
@@ -229,9 +229,9 @@
       <short value="Australian Health Practitioner Regulation Agency (AHPRA) registration as identifier" />
       <definition value="Details of registration identifier of the Australian Health Practitioner Regulation Authority (AHPRA)." />
       <constraint>
-        <key value="inv-ahpra-value-id-0" />
+        <key value="inv-ahpra-0" />
         <severity value="error" />
-        <human value="The AHPRA identifier value shall start with 3 uppercase letters, followed by 10 digits." />
+        <human value="AHPRA identifier shall be 3 uppercase letters, followed by 10 digits"/>
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
       </constraint>
     </element>
@@ -240,7 +240,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org.au/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
           <code value="AHPRA" />
         </coding>
       </patternCodeableConcept>
@@ -299,9 +299,9 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="inv-ahpra-qual-value-0" />
+        <key value="inv-ahpra-1" />
         <severity value="error" />
-        <human value="The AHPRA registration value shall start with 3 uppercase letters, followed by 10 digits." />
+        <human value="AHPRA registration value shall be 3 uppercase letters, followed by 10 digits"/>
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
       </constraint>
     </element>
@@ -311,7 +311,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org.au/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
           <code value="AHPRA" />
         </coding>
       </patternCodeableConcept>

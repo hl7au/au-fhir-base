@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-relatedperson" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="pa" />
-  </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
-  <version value="1.0.0" />
+  <version value="2.0.0" />
   <name value="AUBaseRelatedPerson" />
   <title value="AU Base Related Person" />
   <status value="active" />
-  <date value="2018-05-01" />
+  <date value="2019-07-21" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -19,7 +16,7 @@
     </telecom>
   </contact>
   <description value="This profile defines a related person administration details structure that includes core localisation concepts for use in an Australian context." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="RelatedPerson" />
@@ -103,7 +100,7 @@
       <short value="Coded identifier type for IHI" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="NI" />
         </coding>
       </patternCodeableConcept>
@@ -157,7 +154,7 @@
       <definition value="Medicare number assigned  to a person." />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="MC" />
         </coding>
       </patternCodeableConcept>
@@ -306,7 +303,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="HC" />
         </coding>
       </patternCodeableConcept>
@@ -361,7 +358,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="PEN" />
         </coding>
       </patternCodeableConcept>
@@ -416,7 +413,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org.au/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
           <code value="SEN" />
         </coding>
       </patternCodeableConcept>
@@ -470,7 +467,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="MR" />
         </coding>
       </patternCodeableConcept>
@@ -520,7 +517,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/v2/0203" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
           <code value="MB" />
         </coding>
       </patternCodeableConcept>
@@ -568,6 +565,16 @@
         </extension>
         <strength value="extensible" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.communication">
+      <path value="RelatedPerson.communication" />
+    </element>
+    <element id="RelatedPerson.communication.language">
+      <path value="RelatedPerson.communication.language" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2" />
       </binding>
     </element>
   </differential>

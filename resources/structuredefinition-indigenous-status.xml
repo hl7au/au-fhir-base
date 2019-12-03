@@ -17,7 +17,7 @@
   </contact>
   <description value="This extension applies to the Patient resource and provides a coding for Australian indigenous status of the patient." />
   <purpose value="Recording an indigenous status for an Australian patient." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -34,10 +34,14 @@
       <definition value="National Health Data Dictionary (NHDD) based indigenous status for a patient." />
       <max value="1" />
     </element>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
-    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/> 
+      <max value="0"/> 
+    </element> 
+		<element id="Extension.url">
+			<path value="Extension.url" />
+			<fixedUri value="http://hl7.org.au/fhir/StructureDefinition/indigenous-status" />
+		</element>
     <element id="Extension.valueCoding:valueCoding">
       <path value="Extension.valueCoding" />
       <sliceName value="valueCoding" />
