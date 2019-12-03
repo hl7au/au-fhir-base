@@ -12,13 +12,13 @@
     <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\pages"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\resources"/>
+    <valueString value="C:\work\git\au-fhir-base-r4\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\examples"/>
+    <valueString value="C:\work\git\au-fhir-base-r4\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\pages"/>
+    <valueString value="C:\work\git\au-fhir-base-r4\pages"/>
   </extension>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
   <version value="2.0.0"/>
@@ -26,7 +26,7 @@
   <title value="AU Base Implementation Guide"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2019-10-09T00:00:00+11:00"/>
+  <date value="2019-10-09T00:00:00+10:00"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -68,12 +68,19 @@
   </jurisdiction>
   <packageId value="hl7.fhir.au.base"/>
   <license value="CC0-1.0"/>
-  <fhirVersion value="4.0.0"/>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="4.0.1"/>
   <definition>
     <grouping id="p1">
       <name value="base"/>
     </grouping>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-condition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-norelevantfinding"/>
@@ -118,6 +125,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/dispense-number"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/medication-long-term"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -154,6 +168,20 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/associated-healthcareservice"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/grounds-for-concurrent-supply"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/minimum-interval-between-repeats"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -349,6 +377,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/grounds-for-concurrent-supply"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/snomed-healthcareservice-services"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -371,6 +406,13 @@
     <resource>
       <reference>
         <reference value="ValueSet/au-hl7v2-0203"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/au-hl7v2-0443"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -450,6 +492,21 @@
         <reference value="CodeSystem/au-hl7v2-0203"/>
       </reference>
       <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/au-hl7v2-0443"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/example0"/>
+      </reference>
+      <name value="Condition with evidence and onset date-time"/>
+      <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
@@ -651,6 +708,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Organization/f799e349-0385-4fbc-a2aa-b5b50af957ea"/>
+      </reference>
+      <name value="Organisation (Pathology) with NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
+      <description value="Shows a pathology organisation using the identifer profile for NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="HealthcareService/example0"/>
       </reference>
       <name value="HealthcareService with HPI-O and eligibility"/>
@@ -806,6 +872,41 @@
       </reference>
       <name value="Patient"/>
       <description value="Patient"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/norelevantfinding-example0"/>
+      </reference>
+      <name value="Observation of no relevant finding of procedure"/>
+      <description value="Shows an example of no history of procedure"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/norelevantfinding-example1"/>
+      </reference>
+      <name value="Observation of no relevant finding of immunisations"/>
+      <description value="Shows an example of no history of immunisation"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/norelevantfinding-example2"/>
+      </reference>
+      <name value="Observation of no relevant finding of known history of conditions"/>
+      <description value="Shows an example of no known history of conditions"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/norelevantfinding-example3"/>
+      </reference>
+      <name value="Observation of no relevant finding of patient taking any medications"/>
+      <description value="Shows an example of patient not taking any medications"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -815,6 +916,8 @@
       </reference>
       <name value="Structured Australian Address"/>
       <description value="Shows a typical Address with structured Australian address"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -822,6 +925,8 @@
       </reference>
       <name value="Unstructured Australian Address"/>
       <description value="Shows a typical Address with unstructured Australian address"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -829,6 +934,8 @@
       </reference>
       <name value="Australian No Fixed Address"/>
       <description value="Shows a typical Address with Australian no fixed address"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -836,6 +943,8 @@
       </reference>
       <name value="Medication Dose Based"/>
       <description value="Shows a typical Dose based medication"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -843,6 +952,8 @@
       </reference>
       <name value="Medication Combination Package"/>
       <description value="Combination packaged medicine"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -850,6 +961,8 @@
       </reference>
       <name value="Unbranded Product"/>
       <description value="Unbranded product"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -857,6 +970,8 @@
       </reference>
       <name value="Unbranded Product"/>
       <description value="Unbranded product"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -864,6 +979,8 @@
       </reference>
       <name value="Unbranded Product"/>
       <description value="Unbranded product"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -871,42 +988,56 @@
       </reference>
       <name value="Medication with brand and generic name extensions"/>
       <description value="Medication with brand and generic name extensions"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Medication/GenericPack0"/>
       </reference>
       <name value="Medication Example Generic Pack"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Medication/BrandedPack0"/>
       </reference>
       <name value="Medication Example Brand Pack"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
       </reference>
       <name value="Medication Example Brand Pack With Single Active Ingredient"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Medication/TwoActiveIngredientsProduct0"/>
       </reference>
       <name value="Medication Example with two active ingredients product"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
       </reference>
       <name value="Medication Example with four or more active ingredients"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Medication/BrandProductwithBatchDetails0"/>
       </reference>
       <name value="Medication Example Brand Pack with Batch Details"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
