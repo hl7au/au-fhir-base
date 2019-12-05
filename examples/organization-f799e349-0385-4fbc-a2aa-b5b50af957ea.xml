@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="f799e349-0385-4fbc-a2aa-b5b50af957ea"/>
+    <meta>
+        <versionId value="11.007"/>
+        <lastUpdated value="2019-11-15T13:28:17.239+10:00"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+    </meta>
+    <language value="en-AU"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <p><b>Name</b>: ACME Pathology</p>
+            <p><b>Phone</b>: (03) 5550 1234 (work)</p>
+            <p><b>email</b>: enquiries@acmepathology.example.com (work)</p>
+            <p><b>Website</b>: https://acmepathology.example.com</p>
+            <p><b>Address</b>: 7002 Little Collins Street, Melbourne Vic 3000</p>
+            <p><b>NATA number</b>: 20001</p>
+            <p><b>ARBN</b>: 123456789</p>
+            <p><b>ABN</b>: 12345678901</p>
+            <p><b>ACN</b>: 518247535</p>
+            <p><b>HPI-O</b>: 8003626566699734</p>
+            <p><b>PAI-O</b>: 8003640011000059</p>
+            <p><b>CSP</b>: 8003635500000327</p>
+        </div>
+    </text> 
+    <identifier>
+        <type>			
+            <text value="NATA Accreditation Number"/>
+        </type>
+        <system value="http://hl7.org.au/id/nata-accreditation"/>
+        <value value="20001"/>
+    </identifier>
+    <identifier>
+        <type>			
+            <text value="ARBN"/>
+        </type>
+        <system value="http://hl7.org.au/id/arbn"/>
+        <!-- Note: 123456789 is an invalid ARBN ie does not pass the ARBN/ACN check digit algotithm -->
+        <value value="123456789"/>
+    </identifier>
+    <identifier>
+        <type>			
+            <text value="ABN"/>
+        </type>
+        <system value="http://hl7.org.au/id/abn"/>
+        <!-- Note: 12345678910 is an invalid ABN ie does not pass the ABN/ACN check digit algotithm -->
+        <value value="12345678901"/>
+    </identifier>
+    <identifier>
+        <type>			
+            <text value="ACN"/>
+        </type>
+        <system value="http://hl7.org.au/id/acn"/>
+        <!-- Note: 518247535 is an invalid ACN ie does not pass the ACN check digit algotithm -->
+        <value value="518247535"/>
+    </identifier>
+    
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+                <code value="NOI"/>
+                <display value="National Organisation Identifier"/>
+            </coding>
+            <text value="HPI-O"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+        <value value="8003626566699734"/>
+    </identifier>
+    <identifier>
+        <type>
+            <text value="PAI-O"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/pcehr/paio/1.0"/>
+        <value value="8003640011000059"/>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://ns.electronichealth.net.au/id/hi/csp/1.0"/>
+                <code value="CSP"/>
+                <display value="Contracted Service Provider (CSP) Number"/>
+            </coding>
+            <text value="CSP"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/csp/1.0"/>
+        <value value="8003635500000327"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
+            <code value="8631"/>
+            <display value="Pathology Services"/>
+        </coding>
+    </type>
+    <name value="ACME Pathology"/>
+    <alias value="Tests R Us Pathology"/>
+    <telecom>
+        <system value="email"/>
+        <value value="enquiries@acmepathology.example.com"/>
+        <use value="work"/>
+    </telecom>	
+    <telecom>
+        <system value="url"/>
+        <value value="https://acmepathology.example.com"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="phone"/>
+        <value value="(03) 5550 1234"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <type value="both"/>
+        <line value="7002 Little Collins Street"/>
+        <city value="Melbourne"/>
+        <state value="Vic"/>
+        <postalCode value="3000"/>
+        <country value="AU"/>
+    </address>
+    <partOf>
+        <reference value="Organization/5-8631-1"/>
+    </partOf>
+</Organization>
