@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-organization" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
-  <version value="2.0.0"/>
+  <version value="2.0.0" />
   <name value="AUBaseOrganisation" />
   <title value="AU Base Organisation" />
   <status value="draft" />
@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description value="This profile defines an organisation administration details structure that includes core localisation concepts for use in an Australian context." />
-  <fhirVersion value="4.0.1" />
+  <fhirVersion value="4.0.1"/>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
@@ -24,9 +24,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
-	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use"/> 
-      </extension> 
       <path value="Organization" />
       <short value="An organisation in an Australian healthcare context" />
     </element>
@@ -45,18 +42,20 @@
       <path value="Organization.identifier" />
       <sliceName value="hpio" />
       <short value="Healthcare Provider Identifier – Organisation (HPI-O)" />
-      <definition value="National identifier Health Provider Identifier for Organisations (HPI-O)." />
-	  <constraint>
+      <definition value="The Healthcare provider identifier—organisation (HPI-O) is the numerical identifier that uniquely identifies organisations in Australia where healthcare is provided." />
+      <constraint>
         <key value="inv-hpio-0" />
         <severity value="error" />
         <human value="HPI-O shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
       <constraint>
         <key value="inv-hpio-1" />
         <severity value="error" />
         <human value="HPI-O prefix shall be 800362" />
         <expression value="value.startsWith('800362')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
       <constraint>
         <key value="inv-hpio-2" />
@@ -64,42 +63,30 @@
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
     </element>
     <element id="Organization.identifier:hpio.type">
       <path value="Organization.identifier.type" />
       <short value="Identifier type for HPI-O" />
       <definition value="Healthcare Provider Identifier – Organisation (HPI-O) identifier type." />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
           <code value="NOI" />
         </coding>
+        <text value="HPI-O" />
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local identifier type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
-    <element id="Organization.identifier:hpio.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Organization.identifier.type.text" />
-	  <definition value="hpi-o" />
-      <fixedString value="HPI-O" />
-    </element>
     <element id="Organization.identifier:hpio.system">
       <path value="Organization.identifier.system" />
       <short value="Namespace for HPI-O" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000" />
+      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0" />
     </element>
@@ -118,101 +105,88 @@
       <path value="Organization.identifier" />
       <sliceName value="abn" />
       <short value="Australian Business Number (ABN)" />
-      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity. ABN (Australian Business Number)." />
+      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity - ABN (Australian Business Number)." />
       <constraint>
         <key value="inv-abn-0" />
         <severity value="error" />
         <human value="ABN shall be 11 digits" />
-        <expression value="value.length()=11" />
+        <expression value="value.matches('^([0-9]{11})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
     </element>
     <element id="Organization.identifier:abn.type">
       <path value="Organization.identifier.type" />
-	  <short value="Coded identifier type for ABN"/>
+      <short value="Coded identifier type for ABN" />
     </element>
     <element id="Organization.identifier:abn.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.identifier.type.text" />
       <fixedString value="ABN" />
     </element>
-	  <element id="Organization.identifier:abn.system">
+    <element id="Organization.identifier:abn.system">
       <path value="Organization.identifier.system" />
-	  <short value="Namespace for ABN"/>
+      <short value="Namespace for ABN" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/abn" />
     </element>
     <element id="Organization.identifier:abn.value">
       <path value="Organization.identifier.value" />
       <short value="ABN" />
-      <definition value="Australian Business Number (ABN) identifier ." />
+      <definition value="Australian Business Number (ABN) identifier." />
       <min value="1" />
     </element>
     <element id="Organization.identifier:acn">
       <path value="Organization.identifier" />
       <sliceName value="acn" />
       <short value="Australian Company Number (ACN)" />
-      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity. ACN (Australian Company Number)." />
+      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity - ACN (Australian Company Number)." />
       <constraint>
         <key value="inv-acn-0" />
         <severity value="error" />
         <human value="ACN shall be 9 digits" />
-        <expression value="value.length()=9" />
+        <expression value="value.matches('^([0-9]{9})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
     </element>
     <element id="Organization.identifier:acn.type">
       <path value="Organization.identifier.type" />
-	  <short value="Coded identifier type for ACN"/>
+      <short value="Coded identifier type for ACN" />
     </element>
     <element id="Organization.identifier:acn.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.identifier.type.text" />
       <fixedString value="ACN" />
     </element>
     <element id="Organization.identifier:acn.system">
       <path value="Organization.identifier.system" />
-	  <short value="Namespace for ACN"/>
+      <short value="Namespace for ACN" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/acn" />
     </element>
     <element id="Organization.identifier:acn.value">
       <path value="Organization.identifier.value" />
       <short value="ACN" />
-      <definition value="Australian Company Number (ACN) identifier" />
+      <definition value="Australian Company Number (ACN) identifier." />
       <min value="1" />
     </element>
     <element id="Organization.identifier:arbn">
       <path value="Organization.identifier" />
       <sliceName value="arbn" />
       <short value="Australian Registered Body Number (ARBN)" />
-      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity. ARBN (Australian Registered Body Number)." />
+      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity - ARBN (Australian Registered Body Number)." />
       <constraint>
         <key value="inv-arbn-0" />
         <severity value="error" />
         <human value="ARBN shall be 9 digits" />
-        <expression value="value.length()=9" />
+        <expression value="value.matches('^([0-9]{9})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
     </element>
-    <element id="Organization.identifier:arbn.type">
-      <path value="Organization.identifier.type" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type" />
-      </binding>
-    </element>
     <element id="Organization.identifier:arbn.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.identifier.type.text" />
       <fixedString value="ARBN" />
     </element>
     <element id="Organization.identifier:arbn.system">
       <path value="Organization.identifier.system" />
-	  <short value="Namespace for ARBN" />
+      <short value="Namespace for ARBN" />
       <min value="1" />
       <fixedUri value="http://hl7.org.au/id/arbn" />
     </element>
@@ -227,35 +201,35 @@
       <sliceName value="paio" />
       <short value="My Health Record Assigned Identity for Organisations (PAI-O)" />
       <definition value="My Health Record Assigned Identity for Organisations (PAI-O)." />
-	   <constraint>
+      <constraint>
         <key value="inv-paio-0" />
         <severity value="error" />
         <human value="PAI-O shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
       <constraint>
         <key value="inv-paio-1" />
         <severity value="error" />
         <human value="PAI-O prefix shall be 800364" />
         <expression value="value.startsWith('800364')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
-       <constraint>
+      <constraint>
         <key value="inv-paio-2" />
         <requirements value="PAI-O shall pass the Luhn algorithm" />
         <severity value="error" />
         <human value="The identifier shall pass the Luhn algorithm" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
     </element>
     <element id="Organization.identifier:paio.type">
       <path value="Organization.identifier.type" />
       <short value="Identifier type for PAI-O" />
-      <definition value="Element describing the type of identifier" />
+      <definition value="Element describing the type of identifier." />
     </element>
     <element id="Organization.identifier:paio.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.identifier.type.text" />
       <fixedString value="PAI-O" />
     </element>
@@ -268,12 +242,12 @@
     </element>
     <element id="Organization.identifier:paio.value">
       <path value="Organization.identifier.value" />
-	  <short value="PAI-O number" />
-      <definition value="PAI-O number" />	
+      <short value="PAI-O number" />
+      <definition value="PAI-O number." />
       <min value="1" />
       <example>
         <label value="PAI-O number" />
-        <valueString value="8003647500000328" />
+        <valueString value="8003640011000059" />
       </example>
       <maxLength value="16" />
     </element>
@@ -281,42 +255,41 @@
       <path value="Organization.identifier" />
       <sliceName value="csp" />
       <short value="Contracted Service Provider (CSP) Number" />
-      <definition value="Contracted Service Provider (CSP) number identifier for organisations " />
+      <definition value="Contracted Service Provider (CSP) number identifier for organisations." />
       <constraint>
         <key value="inv-csp-0" />
         <severity value="error" />
-        <human value="CSP number shall be 16 characters" />
-        <expression value="value.length() = 16" />
+        <human value="CSP number shall be 16 digits" />
+        <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
       <constraint>
         <key value="inv-csp-1" />
         <severity value="error" />
         <human value="CSP number prefix shall be 800363" />
         <expression value="value.startsWith('800363')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-organization" />
       </constraint>
     </element>
     <element id="Organization.identifier:csp.type">
       <path value="Organization.identifier.type" />
       <short value="Identifier type for CSP number" />
-      <definition value="Element describing the type of identifier" />
+      <definition value="Element describing the type of identifier." />
     </element>
     <element id="Organization.identifier:csp.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.identifier.type.text" />
       <fixedString value="CSP" />
     </element>
     <element id="Organization.identifier:csp.system">
       <path value="Organization.identifier.system" />
       <short value="Namespace for CSP number" />
-      <definition value="This namespace is used for qualified identifiers to represent Contracted Service Provider (CSP) numbers. An example of the syntax of a CSP number represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/csp/1.0/8003630000000000" />
+      <definition value="This namespace is used for qualified identifiers to represent Contracted Service Provider (CSP) numbers. An example of the syntax of a CSP number represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/csp/1.0/8003630000000000." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/csp/1.0" />
     </element>
     <element id="Organization.identifier:csp.value">
       <path value="Organization.identifier.value" />
-	  <short value="CSP number" />
+      <short value="CSP number" />
       <definition value="This is an organisational identifier for organisations that are contracted service providers." />
       <min value="1" />
       <example>
@@ -329,16 +302,13 @@
       <path value="Organization.identifier" />
       <sliceName value="nataAccreditation" />
       <short value="National Association of Testing Authorities (NATA) Accreditation Number" />
-      <definition value="Identifier of an organization accredited by the National Association of Testing Authorities (NATA)" />
+      <definition value="Identifier of an organization accredited by the National Association of Testing Authorities (NATA)." />
     </element>
     <element id="Organization.identifier:nataAccreditation.type">
       <path value="Organization.identifier.type" />
-	  <short value="Identifier type for NATA accreditation number" />
+      <short value="Identifier type for NATA accreditation number" />
     </element>
     <element id="Organization.identifier:nataAccreditation.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.identifier.type.text" />
       <fixedString value="NATA Accreditation Number" />
     </element>
@@ -350,7 +320,7 @@
     </element>
     <element id="Organization.identifier:nataAccreditation.value">
       <path value="Organization.identifier.value" />
-	  <short value="NATA accreditation number" />
+      <short value="NATA accreditation number" />
       <min value="1" />
       <example>
         <label value="NATA accreditation number" />
