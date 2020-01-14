@@ -93,6 +93,13 @@
       <sliceName value="nationalProviderAtOrganisation" />
       <short value="National Provider at Organisation Identifier" />
       <definition value="Combined Healthcare Provider Identifier – Individual (HPI-I) and Healthcare Provider Identifier – Organisation (HPI-O) identifier to use as unique organisation based identifier for a practitioner." />
+      <constraint>
+        <key value="inv-npio-0" />
+        <severity value="error" />
+        <human value="NPIO length is exactly 33 characters" />
+        <expression value="value.length() = 33" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
+      </constraint>
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type">
       <path value="PractitionerRole.identifier.type" />
@@ -127,13 +134,6 @@
       <path value="PractitionerRole.identifier.value" />
       <short value="National provider identifier at organisation in the form HPI-I@HPI-O" />
       <min value="1" />
-      <constraint>
-        <key value="inv-npio-0" />
-        <severity value="error" />
-        <human value="NPIO length is exactly 33 characters" />
-        <expression value="value.length() = 33" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
-      </constraint>
     </element>
     <element id="PractitionerRole.identifier:employeeNumber">
       <path value="PractitionerRole.identifier" />
