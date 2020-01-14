@@ -6,17 +6,14 @@
 	<identifier>
 		<type>
 			<coding>
-				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-				<code value="EI"/>
-				<display value="Employee number"/>				
-			</coding>	
-			<text value="Employee Number"/>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+				<code value="NPIO"/>
+				<display value="National Provider at Organisation Identifier"/>
+			</coding>
+			<text value="NPIO"/>
 		</type>
-		<system value="http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/84425496912"/>
-		<value value="stevesmith33"/>
-		<assigner>
-			<display value="Australian Digital Health Agency"/>
-		</assigner>
+		<system value="http://hl7.org.au/id/npio"/>
+		<value value="8003619900015717@8003621566684455"/>
 	</identifier>	
 	<practitioner>
 		<reference value="Practitioner/example1"/>
@@ -39,30 +36,8 @@
 	</healthcareService> 
 	<telecom>
 		<system value="email"/>
-		<value value="steve.smith@amail.com.au"/>
+		<value value="helen.mayo@downunderhospital.com.au"/>
 		<use value="work"/>
 	</telecom>
-	<availableTime> 
-		<daysOfWeek value="mon"/> 
-		<daysOfWeek value="tue"/>
-		<daysOfWeek value="wed"/>
-		<daysOfWeek value="thu"/> 
-		<daysOfWeek value="fri"/> 
-		<availableStartTime value="08:30:00"/> 
-		<availableEndTime value="17:30:00"/> 
-	</availableTime> 
-	<notAvailable> 
-		<description value="New Years Day"/> 
-		<during> 
-			<start value="2019-01-01T00:01:00+10:00"/> 
-			<end value="2019-01-01T23:59:00+10:00"/> 
-		</during> 
-	</notAvailable> 
-	<notAvailable> 
-		<description value="Show Day"/> 
-		<during> 
-			<start value="2019-08-16T00:01:00+10:00"/> 
-			<end value="2019-08-16T23:59:00+10:00"/> 
-		</during>  
-	</notAvailable> 
+	<availabilityExceptions value="Availability on public holidays may vary, please contact the hospital directly to confirm."/>
 </PractitionerRole>
