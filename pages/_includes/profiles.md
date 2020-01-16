@@ -33,4 +33,4 @@ These Profiles have been defined for this implementation guide.
 
 ## Profiles on Data Types
 * [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
-
+* [AU Base Address](StructureDefinition-au-address.html) - address information with common local coding
