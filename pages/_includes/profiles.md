@@ -32,5 +32,6 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
 
 ## Profiles on Data Types
+* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
 * [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
-* [AU Base Address](StructureDefinition-au-address.html) - address information with common local coding
+
