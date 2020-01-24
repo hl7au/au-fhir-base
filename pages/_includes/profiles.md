@@ -23,6 +23,10 @@ These Profiles have been defined for this implementation guide.
 
 ## Orders and Observations Profiles
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
+* [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
+* [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with localisation concepts
+* [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
+* [AU Diagnostic Observation](StructureDefinition-au-diagnostic-observation.html) - observation for diagnostic reporting
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
