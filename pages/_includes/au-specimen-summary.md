@@ -1,4 +1,4 @@
-This profile contains the following variations from [Specimen](http://hl7.org/fhir/STU3/Specimen):
+This profile contains the following variations from [Specimen](http://hl7.org/fhir/R4/Specimen):
 
 1. <span style='color:green'> type </span> 
    * <span style='color:green'> coding </span> Specimen Type (SNOMED CT)
