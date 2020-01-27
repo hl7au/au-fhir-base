@@ -7,10 +7,10 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Australian Indigenous Status](StructureDefinition-indigenous-status.html) - patient status
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) - accuracy description for dates
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
-* [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status
+* [IHI Record Status](StructureDefinition-ihi-record-status.html) - identifier record status 
+* [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
 * [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
-
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
