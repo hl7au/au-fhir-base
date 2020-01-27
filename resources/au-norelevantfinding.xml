@@ -6,7 +6,7 @@
   <name value="AUAssertionNoRelevantFinding" />
   <title value="AU Assertion of No Relevant Finding" />
   <status value="draft" />
-  <date value="2019-07-29"/>
+  <date value="2019-07-29" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
   <contact>
     <telecom>
@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description value="This profile provides an observation information structure for asserting a clinical judgement that there are no items of specific interest, e.g. allergies, no medications, for a patient." />
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -25,21 +25,18 @@
   <derivation value="constraint" />
   <differential>
     <element id="Observation">
-	  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/> 
-      </extension> 
       <path value="Observation" />
       <short value="Statement of clinical judgement that there are no items of specific interest" />
-      <definition value="Statement of clinical judgement that there are no items of specific interest after a reasonable investigation."/>
+      <definition value="Statement of clinical judgement that there are no items of specific interest after a reasonable investigation." />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/v3/ActCode" />
           <code value="ASSERTION" />
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -48,14 +45,23 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-      </type>  
+      </type>
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
       <short value="Asserter of the statement" />
     </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+      </slicing>
+    </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.valueCodeableConcept" />
+      <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <short value="Coded value of the observation" />
       <min value="1" />
