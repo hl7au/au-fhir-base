@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-healthcareservice" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
-  <version value="1.0.0" />
+  <version value="2.1.0"/>
   <name value="AUBaseHealthcareService" />
   <title value="AU Base Healthcare Service" />
   <status value="active" />
@@ -11,12 +11,13 @@
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au/fhir" />
+      <value value="http://hl7.com.au" />
       <use value="work" />
     </telecom>
   </contact>
   <description value="This profile defines a healthcare service administration details structure that includes core localisation concepts for use in an Australian context." />
-  <fhirVersion value="4.0.1" />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="HealthcareService" />
@@ -24,22 +25,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="HealthcareService">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use" />
-      </extension>
       <path value="HealthcareService" />
       <short value="A healthcare service in an Australian healthcare context" />
       <definition value="The details of a healthcare service." />
-    </element>
-    <element id="HealthcareService.extension">
-      <path value="HealthcareService.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="HealthcareService.identifier">
       <path value="HealthcareService.identifier" />
@@ -66,18 +54,21 @@
         <severity value="error" />
         <human value="HPI-O shall be an exactly 16 digit number" />
         <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
       </constraint>
       <constraint>
         <key value="inv-hpio-1" />
         <severity value="error" />
         <human value="HPI-O prefix is 800362" />
         <expression value="value.startsWith('800362')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
       </constraint>
       <constraint>
         <key value="inv-hpio-2" />
         <severity value="error" />
         <human value="HPI-O shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger())) mod 10 = 0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
       </constraint>
     </element>
     <element id="HealthcareService.identifier:hpio.type">
@@ -91,21 +82,12 @@
         </coding>
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local identifier type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="HealthcareService.identifier:hpio.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="HealthcareService.identifier.type.text" />
       <definition value="hpi-o" />
       <fixedString value="HPI-O" />
@@ -132,9 +114,6 @@
       <path value="HealthcareService.type" />
       <short value="Healthcare service types" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="service-type" />
-        </extension>
         <strength value="preferred" />
         <description value="A type of service that a healthcare service may provide." />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-services" />
@@ -144,9 +123,6 @@
       <path value="HealthcareService.specialty" />
       <short value="Healthcare service provided specialties" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="service-specialty" />
-        </extension>
         <strength value="preferred" />
         <description value="A specialty role that a healthcare service may provide." />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/snomed-healthcareservice-specialties" />
@@ -156,9 +132,6 @@
       <path value="HealthcareService.serviceProvisionCode" />
       <short value="Healthcare service provision conditions" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ServiceProvisionConditions" />
-        </extension>
         <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/service-provision-conditions" />
       </binding>
