@@ -11,16 +11,16 @@ other uses such as unstructured addresses.
 * Is provided as the best practice guidance on Australian address representation.
 
 
-Standard extensions for address are available from the STU3 specification at http://hl7.org/fhir/STU3/datatypes-extras.html#address
+Standard extensions for address are available [here](http://hl7.org/fhir/R4/datatypes-extras.html#address)
 
 For example can consider the following for address parts support:
-* Unit http://hl7.org/fhir/STU3/extension-iso21090-adxp-unitid.html
-* House Number http://hl7.org/fhir/STU3/extension-iso21090-adxp-housenumber.html
-* Street Name http://hl7.org/fhir/STU3/extension-iso21090-adxp-streetname.html
-* Street Name Type http://hl7.org/fhir/STU3/extension-iso21090-adxp-streetnametype.html
-* Street Name Base http://hl7.org/fhir/STU3/extension-iso21090-adxp-streetnamebase.html
+* [Unit](http://hl7.org/fhir/R4/extension-iso21090-adxp-unitid.html)
+* [House Number](http://hl7.org/fhir/R4/extension-iso21090-adxp-housenumber.html)
+* [Street Name](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetname.html)
+* [Street Name Type](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnametype.html)
+* [Street Name Base](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnamebase.html)
 
-See more info at : http://hl7.org/fhir/STU3/iso-21090.html
+See more info at : [ISO 21090 Data Type Extensions](http://hl7.org/fhir/R4/iso-21090.html)
 
 
 **Examples**

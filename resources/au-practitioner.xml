@@ -2,21 +2,22 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-practitioner" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
-  <version value="2.0.0" />
+  <version value="2.1.0"/>
   <name value="AUBasePractitioner" />
   <title value="AU Base Practitioner" />
   <status value="draft" />
-  <date value="2019-07-26"/>
+  <date value="2019-07-26" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au/fhir" />
+      <value value="http://hl7.com.au" />
       <use value="work" />
     </telecom>
   </contact>
   <description value="This profile defines a practitioner administration details structure that includes core localisation concepts for use in an Australian context." />
-  <fhirVersion value="4.0.1" />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Practitioner" />
@@ -24,9 +25,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Practitioner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="trial-use" />
-      </extension>
       <path value="Practitioner" />
       <short value="A practitioner in an Australian healthcare context" />
     </element>
@@ -56,19 +54,22 @@
         <severity value="error" />
         <human value="HPI-I shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
         <key value="inv-hpii-1" />
         <severity value="error" />
-        <human value="HPI-I prefix shall be 800361"/>
+        <human value="HPI-I prefix shall be 800361" />
         <expression value="value.startsWith('800361')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
         <key value="inv-hpii-2" />
         <requirements value="HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
-        <human value="HPI-I shall pass the Luhn algorithm check"/>
+        <human value="HPI-I shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier:hpii.type">
@@ -81,28 +82,19 @@
         </coding>
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local Identifier Type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Practitioner.identifier:hpii.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.identifier.type.text" />
       <fixedString value="HPI-I" />
     </element>
     <element id="Practitioner.identifier:hpii.system">
       <path value="Practitioner.identifier.system" />
       <short value="Namespace for HPI-I" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000" />
+      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
     </element>
@@ -132,21 +124,12 @@
         </coding>
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local identifier type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Practitioner.identifier:medicarePrescriberNumber.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.identifier.type.text" />
       <fixedString value="Prescriber Number" />
     </element>
@@ -176,39 +159,33 @@
         <severity value="error" />
         <human value="CAE identifier shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
         <key value="inv-caei-1" />
         <severity value="error" />
-        <human value="CAE identifier prefix shall be 900360"/>
+        <human value="CAE identifier prefix shall be 900360" />
         <expression value="value.startsWith('900360')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
         <key value="inv-caei-2" />
         <severity value="error" />
         <human value="CAE identifier shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type">
       <path value="Practitioner.identifier.type" />
       <short value="Identifier type for CAE identifier" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local identifier type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Practitioner.identifier:careAgencyEmployeeIdentifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.identifier.type.text" />
       <fixedString value="Care Agency Employee Identifier" />
     </element>
@@ -222,6 +199,10 @@
       <path value="Practitioner.identifier.value" />
       <short value="CAE identifier number" />
       <min value="1" />
+      <example>
+        <label value="CAE identifier" />
+        <valueString value="9003600003999997" />
+      </example>
     </element>
     <element id="Practitioner.identifier:ahpraRegistration">
       <path value="Practitioner.identifier" />
@@ -231,8 +212,9 @@
       <constraint>
         <key value="inv-ahpra-0" />
         <severity value="error" />
-        <human value="AHPRA identifier shall be 3 uppercase letters, followed by 10 digits"/>
+        <human value="AHPRA identifier shall be 3 uppercase letters, followed by 10 digits" />
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier:ahpraRegistration.type">
@@ -245,21 +227,12 @@
         </coding>
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local identifier type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Practitioner.identifier:ahpraRegistration.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.identifier.type.text" />
       <min value="1" />
       <fixedString value="AHPRA Registration Number" />
@@ -274,7 +247,7 @@
       <min value="1" />
       <example>
         <label value="AHPRA registration number" />
-        <valueString value="ANZ1234567890" />
+        <valueString value="MED0000932846" />
       </example>
     </element>
     <element id="Practitioner.qualification">
@@ -301,8 +274,9 @@
       <constraint>
         <key value="inv-ahpra-1" />
         <severity value="error" />
-        <human value="AHPRA registration value shall be 3 uppercase letters, followed by 10 digits"/>
+        <human value="AHPRA registration value shall be 3 uppercase letters, followed by 10 digits" />
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type">
@@ -316,21 +290,12 @@
         </coding>
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local Identifier Type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.qualification.identifier.type.text" />
       <min value="1" />
       <fixedString value="AHPRA Registration Number" />
@@ -347,7 +312,7 @@
       <min value="1" />
       <example>
         <label value="AHPRA registration number" />
-        <valueString value="ANZ1234567890" />
+        <valueString value="MED0000932846" />
       </example>
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code">
@@ -356,9 +321,6 @@
       <definition value="AHPRA registration type, sub-type, profession, division and specialty." />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.qualification.code.text" />
       <short value="AHPRA Registration Role" />
       <min value="1" />
@@ -368,9 +330,6 @@
       <min value="1" />
     </element>
     <element id="Practitioner.qualification:ahpraRegistration.issuer.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Practitioner.qualification.issuer.display" />
       <min value="1" />
       <fixedString value="AHPRA" />
