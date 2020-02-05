@@ -97,6 +97,16 @@
       <short value="Filler identifier" />
       <min value="1" />
     </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+      </binding>
+    </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code" />
+    </element>
     <element id="DiagnosticReport.code.coding">
       <path value="DiagnosticReport.code.coding" />
       <slicing>
@@ -131,6 +141,9 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
       </type>
+    </element>
+    <element id="DiagnosticReport.conclusionCode">
+      <path value="DiagnosticReport.conclusionCode" />
     </element>
     <element id="DiagnosticReport.conclusionCode.coding">
       <path value="DiagnosticReport.conclusionCode.coding" />
