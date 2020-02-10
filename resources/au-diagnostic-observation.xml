@@ -67,18 +67,10 @@
     <element id="Observation.extension:bodyStructureReference">
       <path value="Observation.extension" />
       <sliceName value="bodyStructureReference" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
       </type>
-    </element>
-    <element id="Observation.extension:bodyStructureReference.value[x]">
-      <path value="Observation.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -104,7 +96,6 @@
       <path value="Observation.specimen" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
       </type>
     </element>
