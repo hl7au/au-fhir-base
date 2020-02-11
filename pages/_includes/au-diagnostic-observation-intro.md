@@ -8,4 +8,4 @@ The body-structure-reference extension may be used when a coded concept does not
 
 #### Extensions
 Extensions used in this profile:
-* Observation: bodyStructureReference [<sup>[1]</sup>](http://https://www.hl7.org/fhir/extension-bodysite.html)
+* Observation: bodyStructureReference [<sup>[1]</sup>](https://www.hl7.org/fhir/extension-bodysite.html)
