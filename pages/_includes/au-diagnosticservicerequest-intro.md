@@ -1,4 +1,4 @@
-**AU Base Diagnostic Service Request** *[[FMM Level 0](guidance.html)]*
+**AU Diagnostic Service Request** *[[FMM Level 0](guidance.html)]*
 
 This profile defines a service request structure that includes core localisation concepts for use as a diagnostic service request in an Australian context.
 
