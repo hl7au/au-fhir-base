@@ -1,4 +1,4 @@
-**AU Base Diagnostic Observation**  *[[FMM Level 0](guidance.html)]*
+**AU Diagnostic Observation**  *[[FMM Level 0](guidance.html)]*
 
 This profile defines an observation structure that includes core localisation concepts for use as a diagnostic result observation in an Australian context.
 
