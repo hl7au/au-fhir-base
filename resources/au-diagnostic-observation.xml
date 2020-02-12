@@ -54,6 +54,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="An observation for diagnostic reporting in an Australian healthcare context" />
+    </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
       <slicing>
@@ -64,9 +68,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:bodyStructureReference">
+    <element id="Observation.extension:bodySite">
       <path value="Observation.extension" />
-      <sliceName value="bodyStructureReference" />
+      <sliceName value="bodySite" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />

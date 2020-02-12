@@ -4,8 +4,8 @@ This profile defines an observation structure that includes core localisation co
 
 Forthcoming work around this profile is expected to result in a value set representing the Standard for Pathology Informatics in Australia - Reporting codes bound as a slice on the code element.
 
-The body-structure-reference extension may be used when a coded concept does not provide the necessary detail needed for the use case.
+The bodySite extension may be used when a coded concept does not provide the necessary detail needed for the use case.
 
 #### Extensions
 Extensions used in this profile:
-* Observation: bodyStructureReference [<sup>[1]</sup>](https://www.hl7.org/fhir/extension-bodysite.html)
+* Observation: bodySite [<sup>[1]</sup>](https://www.hl7.org/fhir/extension-bodysite.html)
