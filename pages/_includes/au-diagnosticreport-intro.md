@@ -9,7 +9,7 @@ These definitions represent common data held in the DiagnosticReport.identifier 
 * Filler identifier [<sup>[1]</sup>](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.3ORC-3Fillerordernumber(EI)00217) [<sup>[2]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/accessionnumber/1.0/index.html) [<sup>[3]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0/index.html)
 
 #### Extensions
-Extensions used in this profile:
-* DiagnosticReport: performer-party [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-performer-party.html)
-* DiagnosticReport: category-additional [<sup>[1]</sup>](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-category-additional.html)
-<!-- * DiagnosticReport: resultsInterpreter [<sup>[1]</sup>](http://hl7.org/fhir/4.0/StructureDefinition/extension-DiagnosticReport.resultsInterpreter)  -->
+No extensions are used in this profile.
+
+#### Usage Notes
+None.
