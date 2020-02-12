@@ -8,4 +8,4 @@ The bodySite extension may be used when a coded concept does not provide the nec
 
 #### Extensions
 Extensions used in this profile:
-* Observation: bodySite [<sup>[1]</sup>](https://www.hl7.org/fhir/extension-bodysite.html)
+* Observation: bodySite (Core Extension) [<sup>[1]</sup>](https://www.hl7.org/fhir/r4/extension-bodysite.html)
