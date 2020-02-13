@@ -12,4 +12,4 @@ These definitions represent common data held in the ServiceRequest.identifier el
 
 #### Extensions
 Extensions used in this profile:
-* ServiceRequest: procedure-targetBodyStructure [<sup>[1]</sup>](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html)
+* ServiceRequest: procedure-targetBodyStructure (core extension) [<sup>[1]</sup>](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html)
