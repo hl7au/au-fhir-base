@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="au-base"/>
-  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\resources"/>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\examples"/>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\pages"/>
-  </extension>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
   <version value="2.1.0"/>
   <name value="AUBaseImplementationGuide"/>
@@ -90,7 +81,7 @@
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource> 
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-assigningauthority"/>
@@ -112,7 +103,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
-   <resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/dispense-number"/>
       </reference>
@@ -195,7 +186,7 @@
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource>    
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/no-fixed-address"/>
@@ -244,7 +235,7 @@
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource> 
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-practitionerrole"/>
@@ -518,7 +509,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
-     <resource>
+    <resource>
       <reference>
         <reference value="Condition/example0"/>
       </reference>
@@ -870,7 +861,7 @@
       <reference>
         <reference value="RelatedPerson/example1"/>
       </reference>
-       <name value="Related person as a carer for an older patient"/>
+      <name value="Related person as a carer for an older patient"/>
       <description value="Shows an example of a carer as a related person for an older patient"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -897,10 +888,9 @@
         <reference value="Patient/f12d073e-4e99-11e9-8647-d663bd873d93"/>
       </reference>
       <name value="Patient"/>
-      <description value="Patient"/>  
+      <description value="Patient"/>
       <groupingId value="p1"/>
     </resource>
-
     <resource>
       <reference>
         <reference value="Observation/norelevantfinding-example0"/>
@@ -937,13 +927,13 @@
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
-     <resource>
+    <resource>
       <reference>
         <reference value="Patient/address-example0"/>
       </reference>
       <name value="Structured Australian Address"/>
       <description value="Shows a typical Address with structured Australian address"/>
-          <exampleBoolean value="true"/>
+      <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
@@ -964,7 +954,7 @@
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
-     <resource>
+    <resource>
       <reference>
         <reference value="Medication/MedicationDoseBased"/>
       </reference>
@@ -1074,105 +1064,87 @@
       <description value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
     </resource>
     <resource>
-      <name value="Medication Statement"/>
-      <description
-        value="Shows a typical informative example of a record of a patient's use of medication"/>
       <reference>
         <reference value="MedicationStatement/MedicationStatementexample0"/>
       </reference>
+      <name value="Medication Statement"/>
+      <description value="Shows a typical informative example of a record of a patient's use of medication"/>
     </resource>
     <resource>
-      <name value="Medication Statement"/>
-      <description
-        value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
       <reference>
         <reference value="MedicationStatement/MedicationStatementexample1"/>
       </reference>
+      <name value="Medication Statement"/>
+      <description value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
     </resource>
     <resource>
-      
-      <name value="Medication Statement"/>
-      <description
-        value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
       <reference>
         <reference value="MedicationStatement/MedicationStatementexample2"/>
       </reference>
+      <name value="Medication Statement"/>
+      <description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
     </resource>
-    
-    
-    
-      <resource>
-      <name value="AU Prescription example"/>
+    <resource>
       <reference>
         <reference value="MedicationRequest/medicationrequest-example0"/>
       </reference>
+      <name value="AU Prescription example"/>
     </resource>
     <resource>
-      
-      <name value="AU Prescription example"/>
       <reference>
         <reference value="MedicationRequest/medicationrequest-example1"/>
       </reference>
+      <name value="AU Prescription example"/>
     </resource>
-     <resource>
-      
-      <name value="Prescription with brand and generic name extensions"/>
-      <description value="Prescription with brand and generic name extensions"/>
+    <resource>
       <reference>
         <reference value="MedicationRequest/medicationrequest-example2"/>
       </reference>
+      <name value="Prescription with brand and generic name extensions"/>
+      <description value="Prescription with brand and generic name extensions"/>
     </resource>
-
     <resource>
-  
-      <name value="Encounter with description"/>
-      <description value="Encounter with encounter description"/>
       <reference>
         <reference value="Encounter/encounter-example0"/>
       </reference>
+      <name value="Encounter with description"/>
+      <description value="Encounter with encounter description"/>
     </resource>
     <resource>
- 
-      <name value="Encounter with narative description"/>
-      <description value="Encounter with narrative description"/>
       <reference>
         <reference value="Encounter/encounter-example1"/>
       </reference>
+      <name value="Encounter with narative description"/>
+      <description value="Encounter with narrative description"/>
     </resource>
-
-     <resource>
-
-      <name value="Medicine List example with referenced entries"/>
-      <description value="Medicine List example with referenced entries"/>
+    <resource>
       <reference>
         <reference value="List/e0a6c4a6-4e97-11e9-8647-d663bd873d93"/>
       </reference>
+      <name value="Medicine List example with referenced entries"/>
+      <description value="Medicine List example with referenced entries"/>
     </resource>
     <resource>
-   
-      <name value="Medicine List example - no known current medicine"/>
-      <description value="Medicine List example - no known current medicine"/>
       <reference>
         <reference value="List/bdaf4fda-4e98-11e9-8647-d663bd873d93"/>
       </reference>
+      <name value="Medicine List example - no known current medicine"/>
+      <description value="Medicine List example - no known current medicine"/>
     </resource>
     <resource>
-
-      <name value="Medicine List in a bundle"/>
-      <description value="Medicine List in a bundle"/>
       <reference>
         <reference value="Bundle/9309d080-4e97-11e9-8647-d663bd873d93"/>
       </reference>
+      <name value="Medicine List in a bundle"/>
+      <description value="Medicine List in a bundle"/>
     </resource>
     <resource>
-
-      <name value="Medicine List with changes"/>
-      <description value="Medicine List with changes"/>
       <reference>
         <reference value="List/0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
       </reference>
+      <name value="Medicine List with changes"/>
+      <description value="Medicine List with changes"/>
     </resource>
-
     <resource>
       <reference>
         <reference value="StructureDefinition/dose-administration-aid-medicines-present"/>
@@ -1188,7 +1160,6 @@
         <reference value="CodeSystem/presence-of-dose-administration-aid-medicines-1"/>
       </reference>
     </resource>
-
     <resource>
       <reference>
         <reference value="StructureDefinition/au-diagnostic-servicerequest"/>
@@ -1196,7 +1167,6 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>   
-
     <page>
       <nameUrl value="index.html"/>
       <title value="Australian Base Profiles Implementation Guide"/>
