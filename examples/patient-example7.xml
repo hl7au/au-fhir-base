@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="example7"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired">
+        <valueBoolean value="true"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+        <valueAddress>
+			<text value="Mexico"/>
+			<country value="MX"/>
+		</valueAddress>
+    </extension>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MC"/>
+            </coding>
+            <text value="Medicare Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+        <value value="1122334455"/>
+        <period>
+            <end value="2022-03"/>
+        </period>
+    </identifier>
+    <name>
+        <family value="GONZALES"/>
+        <given value="Speedy"/>
+    </name>
+    <gender value="male"/>
+    <birthDate value="1953-05-05"/>
+    <address>
+        <line value="20 Sombrero Pl"/>
+        <city value="SYDNEY"/>
+        <state value="NSW"/>
+        <postalCode value="2000"/>
+		<country value="AU"/>
+    </address>
+</Patient>

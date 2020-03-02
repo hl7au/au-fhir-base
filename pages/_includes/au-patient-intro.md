@@ -42,3 +42,7 @@ Medicare Numbers are not used for uniquely identifying patients, they are identi
 
 [Patient Sarah Simmons linked to related person Sarah Simmons](Patient-example5.html)
 
+[Culturally and linguistically diverse (CALD) patient 1](Patient-example6.html)
+
+[Culturally and linguistically diverse (CALD) patient 2](Patient-example7.html)
+
