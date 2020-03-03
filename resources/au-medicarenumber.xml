@@ -42,13 +42,15 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="An identifier for an Australian Medicare Number" />
-      <definition value="An identifier for a Medicare Number used in the Australian context." />
+      <definition value="Medicare number assigned to a patient.  This includes temporary and full Medicare card numbers." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for Medicare number" />
+      <definition value="Medicare number assigned to a patient." />
       <binding>
         <strength value="required" />
+        <description value="Local Identifier Type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
@@ -59,7 +61,7 @@
     <element id="Identifier.type.coding.system">
       <path value="Identifier.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://hl7.org.au/fhir/v2/0203" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
     </element>
     <element id="Identifier.type.coding.code">
       <path value="Identifier.type.coding.code" />
@@ -68,6 +70,7 @@
     </element>
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
+      <definition value="Medicare number descriptive text." />
       <fixedString value="Medicare Number" />
     </element>
     <element id="Identifier.system">
@@ -79,6 +82,7 @@
     <element id="Identifier.value">
       <path value="Identifier.value" />
       <short value="Medicare number including optional individual reference number" />
+      <definition value="10 digit Medicare number with optional 11th digit individual reference number (IRN)." />
       <min value="1" />
       <example>
         <label value="Medicare number" />
@@ -93,6 +97,7 @@
     <element id="Identifier.period.end">
       <path value="Identifier.period.end" />
       <short value="Medicare number expiry date" />
+      <definition value="Expiry date for Medicare number. This is typically month and year only, but may include day date part when this is a temporary Medicare number." />
     </element>
   </differential>
 </StructureDefinition>
