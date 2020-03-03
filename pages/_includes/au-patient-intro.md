@@ -17,6 +17,7 @@ Extensions used in this profile:
 * Patient: Closing the Gap registration [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration) [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
 * Patient: Birth Place (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/birthPlace)
 * Patient: Mother's Maiden Name (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName)
+* Patient: interpreterRequired (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired)
 * Patient.birthDate: Birth Time (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/STU3/extension-patient-birthtime.html)
 * Patient.birthDate, Patient.deceasedDateTime: Date Accuracy Indicator [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator)
 * Patient.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
@@ -27,6 +28,8 @@ Mutiple Individual Healthcare Identifiers are supported particularly to support 
 
 Medicare Number is defined as a 10 or 11 digit number. Whilst 10 digits is not sufficient to uniquely identify an individual it is a supported entry where systems do not support 11 digit content. If required profiles can constrain this slice further to restrict usage to 11 digits only as desired.
 Medicare Numbers are not used for uniquely identifying patients, they are identifying information that can be used in conjunction with other elements such as name and date of birth appropriately to confirm identity.
+
+When a a communication language is included with the preferred flag along with the interpreter required extension then this should be understood as the language for which an interpreter should be provided.
 
 **Examples**
 
