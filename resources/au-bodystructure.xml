@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-bodystructure" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-bodystructure" />
+  <version value="1.0.0" />
+  <name value="AUBaseBodyStructure" />
+  <title value="AU Base Body Structure" />
+  <status value="draft" />
+  <date value="2020-02-13" />
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Australian realm Base BodyStructure profile." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="openehr" />
+    <uri value="http://openehr.org" />
+    <name value="Open EHR Archetype Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="BodyStructure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/BodyStructure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="BodyStructure">
+      <path value="BodyStructure" />
+      <short value="Australian context BodyStructure information" />
+      <constraint>
+        <key value="inv-bodstr-0" />
+        <severity value="error" />
+        <human value="The body structure shall at least have a location or a description or an image" />
+        <expression value="location.exists() or description.exists() or image.exists()" />
+      </constraint>
+    </element>
+    <element id="BodyStructure.location">
+      <path value="BodyStructure.location" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
