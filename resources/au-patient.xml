@@ -33,7 +33,7 @@
         <severity value="error" />
         <human value="If there is a birth time its date shall be the birth date" />
         <expression value="birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
     </element>
     <element id="Patient.extension">
@@ -115,21 +115,21 @@
         <severity value="error" />
         <human value="IHI shall be an exactly 16 digit number" />
         <expression value="value.matches('^([0-9]{16})$')" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-ihi-value-1" />
         <severity value="error" />
         <human value="IHI prefix is 800360" />
         <expression value="value.startsWith('800360')" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-ihi-value-2" />
         <severity value="error" />
         <human value="IHI shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
     </element>
     <element id="Patient.identifier:ihiNumber.extension">
@@ -265,42 +265,42 @@
         <severity value="error" />
         <human value="DVA number identifier type text must be 'DVA Number' when colour is not specified" />
         <expression value="type.coding.empty() implies type.text = 'DVA Number'" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-gold" />
         <severity value="error" />
         <human value="DVA number identifier type text must be 'DVA Number (Gold)' when colour coding is DVG." />
         <expression value="type.coding.code='DVG' implies type.text = 'DVA Number (Gold)'" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-white" />
         <severity value="error" />
         <human value="DVA number identifier type text must be 'DVA Number (White)' when colour coding is DVW." />
         <expression value="type.coding.code='DVW' implies type.text = 'DVA Number (White)'" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-orange" />
         <severity value="error" />
         <human value="DVA number identifier type text must be 'DVA Number (Orange)' when colour coding is DVO." />
         <expression value="type.coding.code='DVO' implies type.text = 'DVA Number (Orange)'" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-lilac" />
         <severity value="error" />
         <human value="DVA number identifier type text must be 'DVA Number (Lilac)' when colour coding is DVL." />
         <expression value="type.coding.code='DVL' implies type.text = 'DVA Number (Lilac)'" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
       <constraint>
         <key value="inv-dva-number-text" />
         <severity value="error" />
         <human value="DVA number identifier type text must be one of 'DVA Number', 'DVA Number (Gold)',  'DVA Number (White), 'DVA Number (Orange), 'DVA Number (Lilac)'" />
         <expression value="type.text = 'DVA Number' or type.text = 'DVA Number (Gold)' or type.text = 'DVA Number (White)' or type.text = 'DVA Number (Orange)' or type.text = 'DVA Number (Lilac)'" />
-        <source value="Patient" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
     </element>
     <element id="Patient.identifier:dvaNumber.type">
