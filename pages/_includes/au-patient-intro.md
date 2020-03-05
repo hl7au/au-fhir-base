@@ -45,7 +45,7 @@ To indicate an interpreter service is required, extension interpreter required=t
 
 [Patient Sarah Simmons linked to related person Sarah Simmons](Patient-example5.html)
 
-[Culturally and linguistically diverse (CALD) patient 1](Patient-example6.html)
+[Patient with interpreter required in particular language](Patient-example6.html)
 
-[Culturally and linguistically diverse (CALD) patient 2](Patient-example7.html)
+[Patient with interpreter required and language unknown](Patient-example7.html)
 
