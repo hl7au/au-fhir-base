@@ -3,15 +3,6 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="au-base"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\resources"/>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\examples"/>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\Administrator\Documents\GitHub\au-fhir-base\pages"/>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="C:\work\git\au-fhir-base-r4\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
@@ -377,6 +368,34 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/au-bodystructure"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-diagnostic-observation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-diagnosticreport"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-specimen"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/grounds-for-concurrent-supply"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -676,6 +695,24 @@
       </reference>
       <name value="Patient as a mother for the patient in example 4"/>
       <description value="Shows a typical Patient as a mother for the patient in example 4"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/example6"/>
+      </reference>
+      <name value="Culturally and linguistically diverse (CALD) patient 1"/>
+      <description value="Shows a patient who requires an interpreter and their preferred communication language"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/example7"/>
+      </reference>
+      <name value="Culturally and linguistically diverse (CALD) patient 2"/>
+      <description value="Shows a patient who requires an interpreter and their country of birth"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1136,6 +1173,28 @@
       </reference>
       <name value="Medicine List with changes"/>
       <description value="Medicine List with changes"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/dose-administration-aid-medicines-present"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/presence-of-dose-administration-aid-medicines-1"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/presence-of-dose-administration-aid-medicines-1"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-diagnostic-servicerequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
     </resource>
     <page>
       <nameUrl value="index.html"/>
