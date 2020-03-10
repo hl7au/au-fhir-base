@@ -26,7 +26,7 @@
     "valueString" : "C:\\work\\git\\au-fhir-base-r4\\pages"
   }],
   "url" : "http://hl7.org.au/fhir/ImplementationGuide/au-base",
-  "version" : "2.0.0",
+  "version" : "2.1.0",
   "name" : "AUBaseImplementationGuide",
   "title" : "AU Base Implementation Guide",
   "status" : "active",
@@ -300,6 +300,13 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/au-address"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medicarenumber"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -1142,6 +1149,21 @@
       },
       "name" : "Medicine List with changes",
       "description" : "Medicine List with changes"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/dose-administration-aid-medicines-present"
+      }
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/presence-of-dose-administration-aid-medicines-1"
+      }
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/presence-of-dose-administration-aid-medicines-1"
+      }
     }],
     "page" : {
       "nameUrl" : "index.html",
