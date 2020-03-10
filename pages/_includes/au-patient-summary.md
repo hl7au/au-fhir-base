@@ -5,6 +5,7 @@ This profile contains the following variations from [Patient](http://hl7.org/fhi
    * Patient Indigenous Status extension
    * Patient Closing the Gap Registration extension
    * Patient Mother's Maiden Name extension
+   * Patient interpreterRequired extension
 1. <span style='color:green'> identifier </span>  sliced
    * <span style='color:green'> identifier </span> National Individual Healthcare Identifier (IHI)
       * Individual Healthcare Identifier (IHI) Number Status extension
