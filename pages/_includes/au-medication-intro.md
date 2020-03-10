@@ -2,13 +2,6 @@
 
 This profile defines a medication structure including core localisation concepts for use in an Australian context. 
 
-The following elements available in STU3 [Medication](http://hl7.org/fhir/STU3/medication.html)  have been removed from the standard structure of R4 [Medication](http://hl7.org/fhir/R4/medication.html). If required in R4 use prior version extensions[<sup>1</sup>](http://hl7.org/fhir/R4/medication-version-maps.html#11.5.9.1), for this reason the direct use of these elements is not encouraged:
-
-* Medication.isBrand
-* Medication.isOverCounter
-* Medication.package.container
-* Medication.image
-
 
 #### Medication Coding
 Medication codings are used to define relevant drug/medication concepts. This includes coding as:
