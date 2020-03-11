@@ -42,4 +42,4 @@ These Profiles have been defined for this implementation guide.
 
 ### Profiles on Identifier Data Type
 * [AU Medicare Number](StructureDefinition-au-medicarenumber.html) - identifier profile for an Australian Medicare Number
-* [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for an Australian Department of Veterans' Affairs Number
+* [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for an Australian Department of Veterans' Affairs (DVA) Number
