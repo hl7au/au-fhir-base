@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ihinumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-ihinumber" />
+  <version value="1.0.0" />
+  <name value="AUIHINumber" />
+  <title value="AU IHI Number" />
+  <status value="draft" />
+  <date value="2020-03-02" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines Individual Healthcare Identifier - IHI in an Australian context." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Individual Healthcare Identifier - IHI Number" />
+      <definition value="Individual Healthcare Identifier assigned to a patient.  This includes temporary and full Medicare card numbers." />
+      <constraint>
+        <key value="inv-ihi-value-0" />
+        <severity value="error" />
+        <human value="IHI shall be an exactly 16 digit number" />
+        <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </constraint>
+      <constraint>
+        <key value="inv-ihi-value-1" />
+        <severity value="error" />
+        <human value="IHI prefix is 800360" />
+        <expression value="value.startsWith('800360')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </constraint>
+      <constraint>
+        <key value="inv-ihi-value-2" />
+        <severity value="error" />
+        <human value="IHI shall pass the Luhn algorithm check" />
+        <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </constraint>
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <short value="Coded identifier type for Individual Healthcare Identifier number" />
+      <definition value="Individual Healthcare Identifier assigned to a patient." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="IHI" />
+        </coding>
+      </patternCodeableConcept>
+      <binding>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+      </binding>
+    </element>
+    <element id="Identifier.type.text">
+      <path value="Identifier.type.text" />
+      <definition value="Individual Healthcare Identifier descriptive text." />
+      <fixedString value="Individual Healthcare Identifier" />
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <short value="Namespace for Individual Healthcare Identifier" />
+      <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/ihi-number" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="Individual Healthcare Identifier including optional individual reference number" />
+      <definition value="16 digit Individual Healthcare Identifier with a prefix of 800360." />
+      <min value="1" />
+      <example>
+        <label value="Individual Healthcare Identifier" />
+        <valueString value="8003608166690503" />
+      </example>
+      <maxLength value="16" />
+    </element>
+    <element id="Identifier.period">
+      <path value="Identifier.period" />
+      <short value="Individual Healthcare Identifier validity period" />
+    </element>
+    <element id="Identifier.period.end">
+      <path value="Identifier.period.end" />
+      <short value="Individual Healthcare Identifier expiry date" />
+      <definition value="Expiry date for Individual Healthcare Identifier. This is typically month and year only, but may include day date part when this is a temporary Individual Healthcare Identifier." />
+    </element>
+  </differential>
+</StructureDefinition>
