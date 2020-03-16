@@ -42,7 +42,7 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Individual Healthcare Identifier - IHI Number" />
-      <definition value="Individual Healthcare Identifier assigned to a patient.  This includes temporary and full Medicare card numbers." />
+      <definition value="Individual Healthcare Identifier assigned to a patient." />
       <constraint>
         <key value="inv-ihi-value-0" />
         <severity value="error" />
@@ -102,15 +102,6 @@
         <valueString value="8003608166690503" />
       </example>
       <maxLength value="16" />
-    </element>
-    <element id="Identifier.period">
-      <path value="Identifier.period" />
-      <short value="Individual Healthcare Identifier validity period" />
-    </element>
-    <element id="Identifier.period.end">
-      <path value="Identifier.period.end" />
-      <short value="Individual Healthcare Identifier expiry date" />
-      <definition value="Expiry date for Individual Healthcare Identifier. This is typically month and year only, but may include day date part when this is a temporary Individual Healthcare Identifier." />
     </element>
   </differential>
 </StructureDefinition>
