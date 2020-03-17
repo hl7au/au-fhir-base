@@ -65,6 +65,35 @@
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
     </element>
+    <element id="Identifier:ihiNumber.extension">
+      <path value="Identifier.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Identifier:ihiNumber.extension:ihiStatus">
+      <path value="Identifier.extension" />
+      <sliceName value="ihiStatus" />
+      <short value="Individual Healthcare Identifier (IHI) Number Status" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
+      </type>
+    </element>
+    <element id="Identifier:ihiNumber.extension:ihiRecordStatus">
+      <path value="Identifier.extension" />
+      <sliceName value="ihiRecordStatus" />
+      <short value="Individual Healthcare Identifier (IHI) Number Record Status" />
+      <definition value="Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
+      </type>
+    </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for Individual Healthcare Identifier number" />
