@@ -16,4 +16,8 @@ Individual Healthcare Identifier is defined as a 16 digit number.
 
 [Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
 
+[Patient with IHI and DVA Number](Patient-example1.html)
 
+[Benedicte du Marche as a next of kin](RelatedPerson-example0.html)
+
+[Mary Smith as a carer](RelatedPerson-example1.html)
