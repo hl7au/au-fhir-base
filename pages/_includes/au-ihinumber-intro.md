@@ -4,8 +4,8 @@ This identifier profile defines an Individual Healthcare Identifier - IHI [<sup>
 
 #### Extensions
 Extensions used in this profile:
-* Patient.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
-* Patient.identifier(IHI): IHI Record Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-record-status)
+* Identifier: IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
+* Identifier: IHI Record Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-record-status)
 
 #### Usage Notes
 
