@@ -43,4 +43,6 @@ These Profiles have been defined for this implementation guide.
 ### Profiles on Identifier Data Type
 * [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Individual Healthcare Identifier
 * [AU Medicare Number](StructureDefinition-au-medicarenumber.html) - identifier profile for an Australian Medicare Number
+* [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for an Australian medical record number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for an Australian Department of Veterans' Affairs (DVA) Number
+
