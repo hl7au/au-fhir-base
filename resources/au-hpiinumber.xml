@@ -40,23 +40,11 @@
   <derivation value="constraint" />
   <differential>
     <element id="Identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier" />
       <short value="Healthcare Provider Identifier – Individual (HPI-I)" />
       <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
     </element>
     <element id="Identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.type" />
       <short value="Coded identifier type for HPI-I" />
       <patternCodeableConcept>
@@ -66,37 +54,16 @@
         </coding>
       </patternCodeableConcept>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Local Identifier Type" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
       </binding>
     </element>
     <element id="Identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Identifier.type.text" />
       <fixedString value="HPI-I" />
     </element>
     <element id="Identifier.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.system" />
       <short value="Namespace for HPI-I" />
       <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000." />
@@ -104,12 +71,6 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
     </element>
     <element id="Identifier.value">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.value" />
       <short value="HPI-I number" />
       <min value="1" />
