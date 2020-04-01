@@ -49,14 +49,14 @@
         <severity value="error" />
         <human value="HPI-I shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
       </constraint>
       <constraint>
         <key value="inv-hpii-1" />
         <severity value="error" />
         <human value="HPI-I prefix shall be 800361" />
         <expression value="value.startsWith('800361')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
       </constraint>
       <constraint>
         <key value="inv-hpii-2" />
@@ -64,7 +64,7 @@
         <severity value="error" />
         <human value="HPI-I shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
       </constraint>
     </element>
     <element id="Identifier.type">
