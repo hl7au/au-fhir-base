@@ -1,6 +1,6 @@
-**AU Healthcare Provider Identifier – Organisation**  *[[FMM Level 0](guidance.html)]*
+**AU HPI-O Number**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines an Healthcare Provider Identifier - Organisation - HPI-O[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"} in an Australian context.
+This identifier profile defines an Healthcare Provider Identifier - Organisation (HPI-O)[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"} in an Australian context.
 
 **Examples**
 
