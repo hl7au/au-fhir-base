@@ -42,7 +42,7 @@ These Profiles have been defined for this implementation guide.
 
 ### Profiles on Identifier Data Type
 * [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Australian Individual Healthcare Identifier
-* [AU Medicare card number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for an Australian Medicare card number
+* [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for an Australian Medicare card number
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for an Australian medical record number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for an Australian Department of Veterans' Affairs (DVA) Number
 * [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for an Australian Healthcare Provider Identifier – Organisation
