@@ -1,0 +1,104 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="intro"> </a>
+  <h3>Introduction</h3>
+  <p>
+    Implementation guides are the mechanism that FHIR uses to explain how to use the FHIR specification to achieve interoperability in a particular space.
+    They use a variety of FHIR resource to express that guidance computably  and then allow those artifacts to be converted into a rendered form 
+    (typically as a web site) for easy understanding by software developers and others.
+  </p>
+  <p>
+    Implementation guides can be written by anyone and a wide variety of tooling can be used to both define and publish such guides.  This implementation 
+    guide is an 'example' that shows how to use HL7-defined tools and templates to author and then render implementation guide content.  It also provides 
+    recommended practices for IG authoring, including suggestions around the organization of the implementation guide, how artifacts should be named and how 
+    content should be presented to maximize the usefulness of the guide for its target community.
+  </p>
+  <p>
+    The documentation in this implementation guide is a work in progress.  The tooling used to support implementation guide creation and publication 
+    continues to change.  As well, the community continues to learn more about what constitutes "best practice" around implementation guide design and the 
+    documentation here will evolve to reflect any changes in guidance.
+  </p>
+  <a name="technical"> </a>
+  <h3>Technical details</h3>
+  <p>
+    This implementation guide specifically documents the HL7 IGPublisher tool, the most recent version of which can be found here.  It applies to all 
+    IGs that make use of HL7's IG base template.  This currently includes the following:
+  </p>
+  
+  <a name="templates"> </a>
+  <table>
+    <thead>
+      <tr>
+        <th>Template id</th>
+        <th>Github repository</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>fhir.base.template</td>
+        <td>
+          <a href="https://github.com/HL7/ig-template-base">https://github.com/HL7/ig-template-base</a>
+        </td>
+        <td>This template includes all of the scripts, layouts, etc. to produce an HL7-style implementation guide.  However, it does not include the HL7 or 
+        FHIR logos.  It is intended to serve as a base for most non-HL7 IG publication</td>
+      </tr>
+      <tr>
+        <td>hl7.base.template</td>
+        <td>
+          <a href="https://github.com/HL7/ig-template-hl7">https://github.com/HL7/ig-template-hl7</a>
+        </td>
+        <td>This template inherits from the fhir.base.template and adds in the HL7 logo, a generic HL7 color scheme and some HL7-specific rules.</td>
+      </tr>
+      <tr>
+        <td>hl7.fhir.template</td>
+        <td>
+          <a href="https://github.com/HL7/ig-template-fhir">https://github.com/HL7/ig-template-fhir</a>
+        </td>
+        <td>This template inherits from the hl7.base.template and adds in the FHIR product family logo and color scheme.</td>
+      </tr>
+      <tr>
+        <td>hl7.davinci.template</td>
+        <td>
+          <a href="https://github.com/HL7/ig-template-davinci">https://github.com/HL7/ig-template-davinci</a>
+        </td>
+        <td>This template inherits from the hl7.fhir.template and adds in the Da Vinci logo and some boiler-plate Da Vinci-specific text</td>
+      </tr>
+      <tr>
+        <td>hl7.cda.template</td>
+        <td>
+          <a href="https://github.com/HL7/ig-template-cda">https://github.com/HL7/ig-template-cda</a>
+        </td>
+        <td>This template inherits from the hl7.base.template and adds in the CDA product family logo and color scheme.</td>
+      </tr>
+    </tbody>
+  </table>
+  <a name="overview"> </a>
+  <p>
+    This implementation guide includes the following sections:
+  </p>
+  <ul>
+    <li>
+      <a href="background.html">Background:</a> Pointers to various training material about FHIR, profiling and implementation guide development 
+      that should be understood as a pre-requisite to developing implementation guides using this template
+    </li>
+    <li>
+      <a href="tooling.html">IG Tooling:</a> An exploration of the different tools available for authoring the different resource types used in FHIR
+    </li>
+    <li>
+      <a href="using-templates.html">Using IG Templates:</a> Instructions describing the files and file structures to be used when creating 
+      implementation guides using this template
+    </li>
+    <li>
+      <a href="best-practice.html">IG best practices:</a> Recommendations for creating implementation guides that are easy to understand and use.
+    </li>
+    <li>
+      <a href="template.html">Extending the HL7 IG Templates:</a> Guidance on defining project-specific templates that leverage the capabilities defined in 
+      this template
+    </li>
+    <li>
+      <a href="downloads.html">Downloads &amp; Support:</a> Allows download of this IG and provides links to other related/support materials for
+      IG creation
+    </li>
+  </ul>
+</div>

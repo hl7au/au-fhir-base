@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-diagnosticreport" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport" />
+  <version value="2.0.0" />
+  <name value="AUBaseDiagnosticReport" />
+  <title value="AU Base Diagnostic Report" />
+  <status value="draft" />
+  <date value="2020-02-13" />
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile defines a diagnostic report structure that includes core localisation concepts for use in an Australian context." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport" />
+      <short value="A diagnostic report in an Australian healthcare context" />
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier">
+      <path value="DiagnosticReport.identifier" />
+      <sliceName value="fillerIdentifier" />
+      <short value="Filler report identifier" />
+      <definition value="A Report Identifier is a unique identifier for each report. It must uniquely identify the report from all other reports in a particular source system (e.g. diagnostic Imaging system, clinical laboratory system). This uniqueness must persist over time. This Report Identifier is the same concept as the Filler Order Number in the HL7 V2 specifications. In some laboratory systems, the Report Identifier may be a concatenation of a Lab Number and Report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same Lab Number. In diagnostic imaging and some pathology systems, the report identifier may be called an accession number as long as there is only a single accession number per report." />
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier.type">
+      <path value="DiagnosticReport.identifier.type" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+      </binding>
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier.type.coding">
+      <path value="DiagnosticReport.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier.type.coding.system">
+      <path value="DiagnosticReport.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier.type.coding.code">
+      <path value="DiagnosticReport.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="FILL" />
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier.system">
+      <path value="DiagnosticReport.identifier.system" />
+      <short value="Filler identifier system namespace" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier:fillerIdentifier.value">
+      <path value="DiagnosticReport.identifier.value" />
+      <short value="Filler identifier" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+      </binding>
+    </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code" />
+    </element>
+    <element id="DiagnosticReport.code.coding">
+      <path value="DiagnosticReport.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.code.coding:snomedImagingProcedures">
+      <path value="DiagnosticReport.code.coding" />
+      <sliceName value="snomedImagingProcedures" />
+      <short value="Diagnostic Imaging Procedures (SNOMED CT)" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
+      </binding>
+    </element>
+    <element id="DiagnosticReport.performer">
+      <path value="DiagnosticReport.performer" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.conclusionCode">
+      <path value="DiagnosticReport.conclusionCode" />
+    </element>
+    <element id="DiagnosticReport.conclusionCode.coding">
+      <path value="DiagnosticReport.conclusionCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.conclusionCode.coding:snomedFinding">
+      <path value="DiagnosticReport.conclusionCode.coding" />
+      <sliceName value="snomedFinding" />
+      <short value="Clinical Finding (SNOMED CT)" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Clinical Finding (SNOMED CT)" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
