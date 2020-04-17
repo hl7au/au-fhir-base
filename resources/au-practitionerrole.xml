@@ -101,6 +101,13 @@
         <expression value="value.length() = 33" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
       </constraint>
+      <constraint>
+        <key value="inv-npio-1" />
+        <severity value="error" />
+        <human value="NPIO value shall start with '800361', then 10 digits, then '@', then '800362' and ends with 10 digits" />
+        <expression value="value.matches('^(800361)([0-9]{10})(@)(800362)([0-9]{10})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
+      </constraint>
     </element>
     <element id="PractitionerRole.identifier:nationalProviderAtOrganisation.type">
       <path value="PractitionerRole.identifier.type" />
