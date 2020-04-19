@@ -1,4 +1,3 @@
-# {{ page.title }}
 
 ## Intent of this Implementation Guide
 This implementation guide does not attempt to constrain for specific use cases. 

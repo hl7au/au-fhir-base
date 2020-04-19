@@ -1,10 +1,9 @@
-# {{ page.title }}
 
-**Validator Pack and Definitions:**
+**Package and Definitions:**
 
 The following file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this Implementation Guides.:
 
-- [Validator Pack](validator.pack)
+- [Validator Pack](package.tgz)
 
 In addition there are format specific definitions files.
 - [XML](definitions.xml.zip)
