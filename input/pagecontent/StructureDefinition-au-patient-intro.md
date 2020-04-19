@@ -2,7 +2,7 @@
 
 This profile defines a patient administration details structure that includes core localisation concepts for use in an Australian context.
 
-#### Identifiers
+### Identifiers
 These definitions represent common data held in the Patient.identifier element:
 * Individual Healthcare Identifier - IHI [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/ihi/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495){:target="_blank"}
 * Medicare Number [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/medicare-number/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/270101){:target="_blank"}
@@ -11,7 +11,7 @@ These definitions represent common data held in the Patient.identifier element:
 * Medical Record Number - ABN scoped[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/index.html){:target="_blank"}, HPI-O scoped[<sup>[2]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/index.html){:target="_blank"}
 * Private Health Insurance Member Number
 
-#### Extensions
+### Extensions
 Extensions used in this profile:
 * Patient: Indigenous Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/indigenous-status) [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
 * Patient: Closing the Gap registration [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration) [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
@@ -23,7 +23,7 @@ Extensions used in this profile:
 * Patient.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
 * Patient.identifier(IHI): IHI Record Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-record-status)
 
-#### Usage Notes
+### Usage Notes
 Mutiple Individual Healthcare Identifiers are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
 
 Medicare Number is defined as a 10 or 11 digit number. Whilst 10 digits is not sufficient to uniquely identify an individual it is a supported entry where systems do not support 11 digit content. If required profiles can constrain this slice further to restrict usage to 11 digits only as desired.
