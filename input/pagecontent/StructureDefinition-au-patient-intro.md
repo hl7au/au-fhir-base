@@ -31,21 +31,4 @@ Medicare Numbers are not used for uniquely identifying patients, they are identi
 
 To indicate an interpreter service is required, extension interpreter required=true should be set. If the language for interpreter service is known then it should be included in communication.language with communication.preferred=true. If communication.preferred=true is not set when interpreter required=true then it may be understood that an interpreter is required but the language for the interpreter service is not known.
 
-**Examples**
-
-[Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
-
-[Patient with IHI and DVA Number](Patient-example1.html)
-
-[Patient with no birth date, and eligible for Closing the Gap registration](Patient-example2.html)
-
-[Patient with BirthTime](Patient-example3.html)
-
-[Patient born in 2008](Patient-example4.html)
-
-[Patient Sarah Simmons linked to related person Sarah Simmons](Patient-example5.html)
-
-[Patient with interpreter required in particular language](Patient-example6.html)
-
-[Patient with interpreter required and language unknown](Patient-example7.html)
 
