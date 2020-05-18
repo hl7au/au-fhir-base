@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="year-of-arrival" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/year-of-arrival" />
+  <version value="1.0.0" />
+  <name value="YearOfArrivalAustralia" />
+  <title value="Year of Arrival in Australia" />
+  <status value="draft" />
+  <date value="2020-04-27" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This extension applies to the Patient, RelatedPerson, and Practitioner resources for the year of arrival in an Australian context. The year of arrival is the year a person (born outside of Australia) first arrived in Australia, from another country, with the intention of living in Australia for one year or more. This date is recorded once for a person and is not subsequently updated with subsequent arrival years." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="RelatedPerson" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Practitioner" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="The year a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more" />
+      <definition value="The year of arrival in Australia from the Australian Bureau of Statics (ABS) and the Australian Institute of Health and Wealfare (AIHW). The year a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more." />
+      <comment value="See [Australian Bureau of Statics (ABS) 1200.0.55.007 - Year of Arrival Standard, 2014, Version 1.5](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument)  and the [Australian Institute of Health and Wealfare (AIHW) Person—year of first arrival in Australia](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447) for further materials." />
+      <max value="1" />
+      <constraint>
+        <key value="inv-yoa-value-0" />
+        <severity value="error" />
+        <human value="Year shall only be a year" />
+        <expression value="valueDate.matches('^[0-9]{4}$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/year-of-arrival" />
+      </constraint>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/year-of-arrival" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="Year of first arrival in Australia" />
+      <min value="1" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

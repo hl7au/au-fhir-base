@@ -18,6 +18,7 @@ Extensions used in this profile:
 * Patient: Birth Place (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/birthPlace)
 * Patient: Mother's Maiden Name (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName)
 * Patient: interpreterRequired (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired)
+* Patient: Year of Arrival in Australia [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/year-of-arrival) [<sup>[2]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[3]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
 * Patient.birthDate: Birth Time (Core Extension) [<sup>[1]</sup>](http://hl7.org/fhir/STU3/extension-patient-birthtime.html)
 * Patient.birthDate, Patient.deceasedDateTime: Date Accuracy Indicator [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator)
 * Patient.identifier(IHI): IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)

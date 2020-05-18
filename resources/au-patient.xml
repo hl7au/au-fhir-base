@@ -17,7 +17,7 @@
   </contact>
   <description value="This profile defines a patient administration details structure that includes core localisation concepts for use in an Australian context." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
@@ -88,6 +88,14 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired" />
+      </type>
+    </element>
+    <element id="Patient.extension:yearOfArrival">
+      <path value="Patient.extension" />
+      <sliceName value="yearOfArrival" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/year-of-arrival" />
       </type>
     </element>
     <element id="Patient.identifier">
