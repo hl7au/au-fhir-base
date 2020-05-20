@@ -11,7 +11,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) - address flag
 * [Encounter Description](StructureDefinition-encounter-description.html) - description of an encounter
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
-* [Year of Arrival in Australia](StructureDefinition-year-of-arrival.html) - the year a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more
+* [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) - the date a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
