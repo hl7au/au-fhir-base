@@ -54,6 +54,13 @@
         <expression value="location.exists() or description.exists() or image.exists()" />
       </constraint>
     </element>
+    <element id="BodyStructure.morphology">
+      <path value="BodyStructure.morphology" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/bodystructure-code"/>
+      </binding>
+    </element>
     <element id="BodyStructure.location">
       <path value="BodyStructure.location" />
       <binding>
