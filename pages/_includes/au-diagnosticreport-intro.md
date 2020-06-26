@@ -2,7 +2,11 @@
 
 This profile is intended to support all diagnostic reports including, pathology, diagnostic imaging and other diagnostic reports such as electrocardiograms, electroencephalograms, pulmonary function tests, colonoscopies, etc.
 
-Forthcoming work around this profile is expected to result in a value set representing the Standard for Pathology Informatics in Australia (SPIA) - Reporting codes bound as a slice on the code element.
+For diagnostic imaging the preferred value set for the code element is [https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1) in SNOMED CT<sup>TM</sup>.
+
+For pathology it is expected the preferred value set for the code element will be the Standard for Pathology Informatics in Australia - Requesting. This SNOMED CT<sup>TM</sup> value set is being developed.
+
+Additional value sets for other non-pathology and non-diagnostic imaging diagnostic content e.g. cardiology, sleep studies, etc will be included as guidance for the code element when the content becomes available. These value sets will likely be in SNOMED CT<sup>TM</sup>.
 
 #### Identifiers
 These definitions represent common data held in the DiagnosticReport.identifier element:

@@ -76,29 +76,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
       </type>
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-    </element>
-      <element id="Observation.code.coding">
-      <path value="Observation.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.code.coding:snomedImagingProcedure">
-      <path value="Observation.code.coding" />
-      <sliceName value="snomedImagingProcedure" />
-      <short value="Imaging Procedure (SNOMED CT)" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
-      </binding>
-    </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen" />
       <type>
