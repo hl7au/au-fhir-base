@@ -6,9 +6,10 @@ Note: The procedure-targetBodyStructure extension should only used if not implic
 
 For diagnostic imaging the preferred value set for the code element is [https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1) in SNOMED CT<sup>TM</sup>.
 
-For pathology it is expected the value set representing the Standard for Pathology Informatics in Australia - Requesting will be preferred for the code element. This SNOMED CT<sup>TM</sup> value set is being developed.
+For pathology it is expected the preferred value set for the code element will be the Standard for Pathology Informatics in Australia - Requesting. This SNOMED CT<sup>TM</sup> value set is being developed.
 
-Additional value sets for other non-pathology and non-diagnostic imaging diagnostic content e.g. cardiology, sleep studies, etc will be included when the content becomes available. These value sets will likely be in SNOMED CT<sup>TM</sup>.
+Additional value sets for other non-pathology and non-diagnostic imaging diagnostic content e.g. cardiology, sleep studies, etc will be included as guidance for the code element when the content becomes available. These value sets will likely be in SNOMED CT<sup>TM</sup>.
+
 #### Identifiers
 These definitions represent common data held in the ServiceRequest.identifier element:
 * Placer order number [<sup>[1]</sup>](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.2ORC-2Placerordernumber(EI)00216)
