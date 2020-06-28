@@ -5,9 +5,9 @@ This profile is intended to support all diagnostic reports including, pathology,
 
 There are three preferred value sets when coding DiagnosticReport.code:
 
-*	an imaging diagnostic report code is preferred to be a member of https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1
+*	an imaging diagnostic report code is preferred to be a member of [https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1)
 *	a pathology diagnostic report code is preferred to be a member of set of codes published as the [Standard for Pathology Informatics in Australia - Reporting codes](https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/APUTS-Downloads) (a value set representation is forthcoming)
-*	a specialist or other diagnostic diagnostic report code is preferred to be a member of SNOMED CT-AU (a reference set and value set representation will be published this year)
+*	a specialist or other diagnostic report code is preferred to be a member of SNOMED CT-AU (a reference set and value set representation will be published this year)
 
 #### Identifiers
 These definitions represent common data held in the DiagnosticReport.identifier element:
