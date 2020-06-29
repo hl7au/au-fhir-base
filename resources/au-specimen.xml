@@ -45,25 +45,8 @@
     </element>
     <element id="Specimen.type">
       <path value="Specimen.type"/>
-    </element>
-    <element id="Specimen.type.coding">
-      <path value="Specimen.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Specimen.type.coding:snomedSpecimenType">
-      <path value="Specimen.type.coding" />
-      <sliceName value="snomedSpecimenType" />
-      <short value="Specimen Type (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-type-1" />
       </binding>
     </element>
@@ -79,78 +62,24 @@
     </element>
     <element id="Specimen.collection.method">
       <path value="Specimen.collection.method"/>
-    </element>
-    <element id="Specimen.collection.method.coding">
-      <path value="Specimen.collection.method.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Specimen.collection.method.coding:snomedSpecimenCollectionProcedure">
-      <path value="Specimen.collection.method.coding" />
-      <sliceName value="snomedSpecimenCollectionProcedure" />
-      <short value="Specimen Collection Procedure (SNOMED CT)" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="SNOMED CT Specimen Collection Procedure" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1" />
-      </binding>
+    <binding>
+      <strength value="preferred" />
+      <description value="SNOMED CT Specimen Collection Procedure" />
+      <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1" />
+    </binding>
     </element>
     <element id="Specimen.collection.bodySite">
       <path value="Specimen.collection.bodySite"/>
-    </element>
-    <element id="Specimen.collection.bodySite.coding">
-      <path value="Specimen.collection.bodySite.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Specimen.collection.bodySite.coding:snomedBodySite">
-      <path value="Specimen.collection.bodySite.coding" />
-      <sliceName value="snomedBodySite" />
-      <short value="Body Site (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <description value="SNOMED CT Body Site" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
       </binding>
     </element>
     <element id="Specimen.container">
       <path value="Specimen.container"/>
-    </element>
-    <element id="Specimen.container.type">
-      <path value="Specimen.container.type"/>
-    </element>
-    <element id="Specimen.container.type.coding">
-      <path value="Specimen.container.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Specimen.container.type.coding:snomedSpecimenContainerType">
-      <path value="Specimen.container.type.coding" />
-      <sliceName value="snomedSpecimenContainerType" />
-      <short value="Specimen Container Type (SNOMED CT)" />
-      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <description value="SNOMED CT Specimen Container Type" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-container-type-1" />
       </binding>
