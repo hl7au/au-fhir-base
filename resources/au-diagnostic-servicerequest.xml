@@ -114,36 +114,6 @@
       <short value="Placer identifier" />
       <min value="1" />
     </element>
-    <element id="ServiceRequest.code">
-      <path value="ServiceRequest.code"></path>
-    </element>
-    <element id="ServiceRequest.code.coding">
-      <path value="ServiceRequest.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="ServiceRequest.code.coding:snomedImagingProcedure">
-      <path value="ServiceRequest.code.coding" />
-      <sliceName value="snomedImagingProcedure" />
-      <short value="Imaging Procedure (SNOMED CT)" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
-      </binding>
-    </element>
-    <element id="ServiceRequest.performerType">
-      <path value="ServiceRequest.performerType"></path>
-    </element>
     <element id="ServiceRequest.performerType.coding">
       <path value="ServiceRequest.performerType.coding" />
       <slicing>
@@ -164,6 +134,11 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1" />
       </binding>
     </element>
+    <element id="ServiceRequest.performerType.coding:anzscoPerformerType.system">
+      <path value="ServiceRequest.performerType.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" />
+    </element>
     <element id="ServiceRequest.performerType.coding:snomedPerformerType">
       <path value="ServiceRequest.performerType.coding" />
       <sliceName value="snomedPerformerType" />
@@ -173,6 +148,11 @@
         <strength value="required" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
       </binding>
+    </element>
+    <element id="ServiceRequest.performerType.coding:snomedPerformerType.system">
+      <path value="ServiceRequest.performerType.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="ServiceRequest.specimen">
       <path value="ServiceRequest.specimen" />
