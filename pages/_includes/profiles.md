@@ -48,4 +48,4 @@ These Profiles have been defined for this implementation guide.
 * [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for an Australian Healthcare Provider Identifier – Organisation
 * [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual - HPI-I
 * [AU ABN Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number - ABN
-* [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for an Australian Nata Site Number
+* [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
