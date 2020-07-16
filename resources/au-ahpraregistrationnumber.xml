@@ -41,8 +41,8 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Australian Health Practitioner Regulation Agency (AHPRA) registration as identifier" />
-      <definition value="Details of registration identifier of the Australian Health Practitioner Regulation Authority (AHPRA)." />
+      <short value="Australian Health Practitioner Regulation Agency (AHPRA) Registration Number" />
+      <definition value="Australian Health Practitioner Regulation Authority (AHPRA) registration number assigned to a practitioner." />
       <constraint>
         <key value="inv-ahpra-0" />
         <severity value="error" />
@@ -53,6 +53,7 @@
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
+      <short value="Coded identifier type for AHPRA registration number" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
