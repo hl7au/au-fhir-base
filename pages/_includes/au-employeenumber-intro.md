@@ -4,6 +4,4 @@ This identifier profile defines an Employee Number [<sup>[1]</sup>](http://ns.el
 
 **Examples**
 
-[Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
-
 [Pathologist with ABN-scoped employee number](PractitionerRole-example2.html)
