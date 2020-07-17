@@ -1,6 +1,6 @@
-**AU Australian NATA Site Number**  *[[FMM Level 0](guidance.html)]*
+**AU NATA Site Number**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines an National Association of Testing Authorities Site Number. [<sup>[1]</sup>](https://www.nata.com.au/){:target="_blank"}
+This identifier profile defines a National Association of Testing Authorities (NATA)[<sup>[1]</sup>](https://www.nata.com.au/){:target="_blank"} site number in an Australian context.
 
 **Examples**
 
