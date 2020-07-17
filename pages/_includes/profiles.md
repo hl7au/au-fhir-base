@@ -49,4 +49,4 @@ These Profiles have been defined for this implementation guide.
 * [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual - HPI-I
 * [AU ABN Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number - ABN
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number
-
+* [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
