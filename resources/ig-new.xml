@@ -17,7 +17,7 @@
   <title value="AU Base Implementation Guide"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2019-10-09T00:00:00+10:00"/>
+  <date value="2019-10-09"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -291,7 +291,42 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/au-medicarenumber"/>
+        <reference value="StructureDefinition/au-ihinumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-medicarecardnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-medicalrecordnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-hpiinumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-dvanumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-hpionumber"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -655,8 +690,8 @@
       <reference>
         <reference value="Patient/example0"/>
       </reference>
-      <name value="Patient with IHI and Medicare Number"/>
-      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
+      <name value="Patient with IHI and Medicare Card Number"/>
+      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1199,6 +1234,13 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/au-diagnostic-servicerequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/date-of-arrival"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
