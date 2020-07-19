@@ -39,14 +39,14 @@
         <key value="inv-add-1" />
         <severity value="error" />
         <human value="If asserting no fixed address, the type shall be 'physical'" />
-        <expression value="extension.where(url='http://hl7.org.au/fhir/StructureDefinition/no-fixed-address' and value=true).exists() implies type='physical'" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/no-fixed-address' and value=true).exists() implies type=physical" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </constraint>
       <constraint>
         <key value="inv-add-2" />
         <severity value="error" />
         <human value="If asserting no fixed address, the address text shall begin with 'NO FIXED ADDRESS'" />
-        <expression value="extension.where(url='http://hl7.org.au/fhir/StructureDefinition/no-fixed-address').exists() implies text.startsWith('NO FIXED ADDRESS')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/no-fixed-address').exists() implies text.startsWith('NO FIXED ADDRESS')" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </constraint>
       <constraint>
