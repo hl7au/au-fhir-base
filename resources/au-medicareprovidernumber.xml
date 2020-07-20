@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Medicare Provider Number in an Australian context." />
+  <description value="This identifier profile defines a Medicare provider number assigned by Services Australia to practitioners who provide services covered by the Medicare Benefits Schedule (MBS) at a specific location." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -41,13 +41,12 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Australian Medicare Provider Number" />
-      <definition value="Identifier type of provider number for this practitioner role." />
+      <short value="Medicare Provider Number" />
+      <definition value="Medicare provider number assigned by Services Australia to practitioners who provide services covered by Medicare Benefits Schedule (MBS) at a specific location." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for Medicare provider number" />
-      <definition value="Identifier type of provider number for this practitioner role." />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -63,21 +62,17 @@
     </element>
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
-      <definition value="Provider number identifier type descriptive text." />
-      <min value="0" />
-      <fixedString value="Medicare Provider Number" /> 
+       <fixedString value="Medicare Provider Number" /> 
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
       <short value="Namespace for Medicare provider number" />
-      <definition value="Namespace of provider number for this practitioner role." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-provider-number" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
       <short value="Medicare provider number" />
-      <definition value="Provider number for this practitioner role." />
       <min value="1" />
       <example>
         <label value="Medicare provider number"/>
