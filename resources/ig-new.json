@@ -19,7 +19,7 @@
   "title" : "AU Base Implementation Guide",
   "status" : "active",
   "experimental" : true,
-  "date" : "2019-10-09T00:00:00+10:00",
+  "date" : "2019-10-09",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia Patient Administration Working Group",
@@ -294,7 +294,42 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/au-medicarenumber"
+        "reference" : "StructureDefinition/au-ihinumber"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medicarecardnumber"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-medicalrecordnumber"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-hpiinumber"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-dvanumber"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/au-hpionumber"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -658,8 +693,8 @@
       "reference" : {
         "reference" : "Patient/example0"
       },
-      "name" : "Patient with IHI and Medicare Number",
-      "description" : "Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status",
+      "name" : "Patient with IHI and Medicare Card Number",
+      "description" : "Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status",
       "exampleBoolean" : true,
       "groupingId" : "p1"
     },
@@ -1202,6 +1237,13 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/au-diagnostic-servicerequest"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/date-of-arrival"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
