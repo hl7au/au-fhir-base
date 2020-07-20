@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines Medicare Provider Number in an Australian context." />
+  <description value="This identifier profile defines a Medicare Provider Number in an Australian context." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -47,6 +47,7 @@
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for Medicare provider number" />
+      <definition value="Identifier type of provider number for this practitioner role." />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -62,9 +63,9 @@
     </element>
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
-      <min value="0" />
-      <fixedString value="Medicare Provider Number" />
       <definition value="Provider number identifier type descriptive text." />
+      <min value="0" />
+      <fixedString value="Medicare Provider Number" /> 
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
@@ -76,6 +77,7 @@
     <element id="Identifier.value">
       <path value="Identifier.value" />
       <short value="Medicare provider number" />
+      <definition value="Provider number for this practitioner role." />
       <min value="1" />
       <example>
         <label value="Medicare provider number"/>
