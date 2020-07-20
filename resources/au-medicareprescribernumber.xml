@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Medicare Presciber Number in an Australian context." />
+  <description value="This identifier profile defines a Medicare prescriber number, otherwise referred to as PBS prescriber number, assigned by Services Australia to a practitioner who is approved to prescribe PBS medicines." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -42,7 +42,7 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Medicare Prescriber Number" />
-      <definition value="Medicare Australia allocated prescriber number." />
+      <definition value="Medicare prescriber number, otherwise referred to as PBS prescriber number, assigned by Services Australia to a practitioner who is approved to prescribe PBS medicines." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
@@ -65,13 +65,13 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for prescriber number" />
+      <short value="Namespace for Medicare prescriber number" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-prescriber-number" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Medicare Prescriber number" />
+      <short value="Medicare prescriber number" />
       <definition value="Medicare Australia allocated prescriber number." />
       <min value="1" />
       <example>
