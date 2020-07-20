@@ -53,3 +53,4 @@ These Profiles have been defined for this implementation guide.
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
+* [AU CAE Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) - identifier profile for a Care Agency Employee (CAE)
