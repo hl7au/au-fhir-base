@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-cwlthseniorshealthcardnumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-cwlthseniorshealthcardnumber" />
+  <version value="1.0.0" />
+  <name value="AUCwlthSeniorsHealthCardNumber" />
+  <title value="AU Commonwealth Seniors Health Card Number" />
+  <status value="draft" />
+  <date value="2020-07-20" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a Commonwealth Seniors Health Card Number in an Australian context." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Commonwealth Seniors Health Card Number" />
+      <definition value="Commonwealth Seniors Health Card number assigned to a person by Centrelink." />
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <short value="Coded identifier type for Commonwealth Seniors Health Card number" />
+      <definition value="Commonwealth Seniors Health Card number assigned to a person by Centrelink." />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
+          <code value="SEN" />
+        </coding>
+      </patternCodeableConcept>
+      <binding>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+      </binding>
+    </element>
+    <element id="Identifier.type.text">
+      <path value="Identifier.type.text" />
+      <fixedString value="Commonwealth Seniors Health Card" />
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
+      <definition value="Namespace for Customer Reference Number (CRN) values." />
+      <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="Centrelink CRN" />
+      <definition value="10 character identifier NNNNNNNNNA" />
+      <comment value="A personal identifier assigned by Centrelink for the purposes of identifying people eligible for specific services." />
+      <min value="1" />
+      <example>
+        <label value="DHS CRN" />
+        <valueString value="307111942H" />
+      </example>
+      <maxLength value="10" />
+    </element>
+  </differential>
+</StructureDefinition>
