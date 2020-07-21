@@ -51,6 +51,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU ABN Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number - ABN
+* [AU ARBN Number](StructureDefinition-au-australianregistredbodynumber.html) - identifier profile for an Australian Registered Body Number (ARBN)
 * [AU ACN Number](StructureDefinition-au-australiancompanynumber.html) - identifier profile for an Australian Company Number (ACN)
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
