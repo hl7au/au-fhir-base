@@ -44,14 +44,20 @@ These Profiles have been defined for this implementation guide.
 * [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Australian Individual Healthcare Identifier
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for an Australian Medicare card number
 * [AU Medicare Provider Number](StructureDefinition-au-medicareprovidernumber.html) - identifier profile for a Medicare provider number
+* [AU Medicare Prescriber Number](StructureDefinition-au-medicareprescribernumber.html) - identifier profile for a Medicare prescriber number
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for an Australian medical record number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for an Australian Department of Veterans' Affairs (DVA) Number
 * [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for an Australian Healthcare Provider Identifier – Organisation
 * [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual - HPI-I
+* [AU Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU ABN Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number - ABN
+* [AU ARBN Number](StructureDefinition-au-australianregistredbodynumber.html) - identifier profile for an Australian Registered Body Number (ARBN)
 * [AU ACN Number](StructureDefinition-au-australiancompanynumber.html) - identifier profile for an Australian Company Number (ACN)
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number
+* [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a health care card number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
+* [AU Australian Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) - identifier profile for an Australian Commonwealth Seniors Health Card Number
+* [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Australian Pensioner Concession Card Number
