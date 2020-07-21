@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-employeenumber" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-employeenumber" />
+  <id value="au-medicareprescribernumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicareprescribernumber" />
   <version value="1.0.0" />
-  <name value="AUEmployeeNumber" />
-  <title value="AU Employee Number" />
+  <name value="AUMedicarePrescriberNumber" />
+  <title value="AU Medicare Prescriber Number" />
   <status value="draft" />
-  <date value="2020-07-15" />
+  <date value="2020-07-17" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines an employee number for an individual staff member or service provider as issued by an employing organisation in an Australian context." />
+  <description value="This identifier profile defines a Medicare prescriber number, otherwise referred to as PBS prescriber number, assigned by Services Australia to a practitioner who is approved to prescribe PBS medicines." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -41,17 +41,16 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Employee Number" />
-      <definition value="Employee number for an individual staff member or service provider as issued by an employing organisation." />
+      <short value="Medicare Prescriber Number" />
+      <definition value="Medicare prescriber number, otherwise referred to as PBS prescriber number, assigned by Services Australia to a practitioner who is approved to prescribe PBS medicines." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Coded identifier type for employee number" />
-      <min value="1" />
+      <short value="Coded identifier type for prescriber number" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-          <code value="EI" />
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
+          <code value="PRES" />
         </coding>
       </patternCodeableConcept>
       <binding>
@@ -62,27 +61,22 @@
     </element>
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
-      <min value="1" />
-      <fixedString value="Employee Number" />
+      <fixedString value="Prescriber Number" />
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
+      <short value="Namespace for Medicare prescriber number" />
       <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-prescriber-number" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Employee number" />
+      <short value="Medicare prescriber number" />
       <min value="1" />
-    </element>
-    <element id="Identifier.assigner">
-      <path value="Identifier.assigner" />
-      <short value="Employing organisation" />
-      <min value="1" />
-    </element>
-    <element id="Identifier.assigner.display">
-      <path value="Identifier.assigner.display" />
-      <short value="Employing organisation name" />
-      <min value="1" />
+      <example>
+        <label value="Medicare prescriber number" />
+        <valueString value="453221" />
+      </example>
     </element>
   </differential>
 </StructureDefinition>
