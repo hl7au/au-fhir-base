@@ -41,10 +41,10 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
 
 ### Profiles on Identifier Data Type
-* [AU ABN Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number (ABN)
-* [AU ACN Number](StructureDefinition-au-australiancompanynumber.html) - identifier profile for an Australian Company Number (ACN)
+* [AU Australian Business Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number (ABN)
+* [AU Australian Company Number](StructureDefinition-au-australiancompanynumber.html) - identifier profile for an Australian Company Number (ACN)
+* [AU Australian Registered Body Number](StructureDefinition-au-australianregistredbodynumber.html) - identifier profile for an Australian Registered Body Number (ARBN)
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number
-* [AU ARBN Number](StructureDefinition-au-australianregistredbodynumber.html) - identifier profile for an Australian Registered Body Number (ARBN)
 * [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) - identifier profile for a Care Agency Employee (CAE) identifier
 * [AU Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) - identifier profile for a Commonwealth Seniors Health Card Number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for an Australian Department of Veterans' Affairs (DVA) Number
