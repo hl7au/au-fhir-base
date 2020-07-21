@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-australianregistredbodynumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber" />
+  <version value="1.0.0" />
+  <name value="AUAustralianRegisteredBodyNumber" />
+  <title value="AU Australian Registered Body Number" />
+  <status value="draft" />
+  <date value="2020-07-20" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines an Australian Registered Body Number (ARBN) in an Australian context." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Australian Registered Body Number (ARBN)" />
+      <definition value="Australian Registered Body Number (ARBN) assigned by the Australian Securities and Investment Commission (ASIC) to registrable Australian bodies and foreign companies." />
+      <constraint>
+        <key value="inv-arbn-0" />
+        <severity value="error" />
+        <human value="ARBN shall be 9 digits" />
+        <expression value="value.matches('^([0-9]{9})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber" />
+      </constraint>
+    </element>
+    <element id="Identifier.type.text">
+      <path value="Identifier.type.text" />
+      <fixedString value="ARBN" />
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <short value="Namespace for ARBN" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org.au/id/arbn" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="ARBN" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
