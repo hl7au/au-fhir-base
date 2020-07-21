@@ -59,7 +59,9 @@ These Profiles have been defined for this implementation guide.
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a health care card number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
+* [AU National Provider Identifier At Organisation](StructureDefinition-au-nationalprovideridentifieratorganisation.html) - identifier profile for a National Provider Identifier at Organisation (NPIO)
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
 * [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) - identifier profile for a Care Agency Employee (CAE) identifier
 * [AU Australian Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) - identifier profile for an Australian Commonwealth Seniors Health Card Number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Australian Pensioner Concession Card Number
+
