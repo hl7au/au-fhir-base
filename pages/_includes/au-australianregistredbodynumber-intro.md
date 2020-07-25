@@ -1,6 +1,6 @@
 **AU Australian Registered Body Number**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines an Australian Registered Body Number (ARBN) [<sup>[1]</sup>](http://hl7.org.au/id/arbn ){:target="_blank"} [<sup>[2]</sup>](https://www.ppsr.gov.au/arbn-australian-registered-body-number){:target="_blank"} in an Australian context.
+This identifier profile defines an Australian Registered Body Number (ARBN) [<sup>[1]</sup>](https://www.ppsr.gov.au/arbn-australian-registered-body-number){:target="_blank"} in an Australian context.
 
 **Examples**
 

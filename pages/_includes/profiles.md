@@ -41,7 +41,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
 
 ### Profiles on Identifier Data Type
-* [AU Australian Business Number](StructureDefinition-au-abnnumber.html) - identifier profile for an Australian Business Number (ABN)
+* [AU Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) - identifier profile for an Australian Business Number (ABN)
 * [AU Australian Company Number](StructureDefinition-au-australiancompanynumber.html) - identifier profile for an Australian Company Number (ACN)
 * [AU Australian Registered Body Number](StructureDefinition-au-australianregistredbodynumber.html) - identifier profile for an Australian Registered Body Number (ARBN)
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) registration number
@@ -59,8 +59,8 @@ These Profiles have been defined for this implementation guide.
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for a Medicare card number
 * [AU Medicare Prescriber Number](StructureDefinition-au-medicareprescribernumber.html) - identifier profile for a Medicare prescriber number
 * [AU Medicare Provider Number](StructureDefinition-au-medicareprovidernumber.html) - identifier profile for a Medicare provider number
-* [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
-* [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU National Provider Identifier At Organisation](StructureDefinition-au-nationalprovideridentifieratorganisation.html) - identifier profile for a National Provider Identifier at Organisation (NPIO)
+* [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
+* [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
