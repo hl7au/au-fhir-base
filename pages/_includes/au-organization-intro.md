@@ -4,7 +4,7 @@ This profile provides core localisations to Organization for an Australian conte
 It includes preferred terminology bindings, extensions and patterns of use for identifiers.
 
 #### Identifiers
-These definitions represent common data held in the Organization.identifier element:
+These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
 * [Healthcare Provider Identifier – Organisation (HPI-O)](StructureDefinition-au-hpionumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"}
 * [My Health Record Assigned Identity - Organisation (PAI-O)](StructureDefinition-au-paioidentifier.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/pcehr/paio/1.0/index.html){:target="_blank"}
 * [Contracted Service Provider (CSP) Registration Number](StructureDefinition-au-cspregistrationnumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/csp/1.0/index.html){:target="_blank"}

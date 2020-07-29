@@ -3,7 +3,7 @@
 This profile defines a practitioner administration details structure that includes core localisation concepts for use in an Australian context.
 
 #### Identifiers
-These definitions represent common data held in the Practitioner.identifier element:
+These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Practitioner.identifier element:
 * [Healthcare Provider Identifier - Individual (HPI-I)](StructureDefinition-au-hpiinumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpii/1.0/index.html){:target="_blank"} 
 * [Medicare Prescriber Number](StructureDefinition-au-medicareprescribernumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/medicare-prescriber-number/index.html){:target="_blank"}
 * [Care Agency Employee (CAE) Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/pcehr/caei/1.0/index.html){:target="_blank"}
