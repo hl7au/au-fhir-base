@@ -37,84 +37,13 @@
     </element>
     <element id="HealthcareService.identifier">
       <path value="HealthcareService.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="type" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <short value="Healthcare service identifiers" />
-    </element>
-    <element id="HealthcareService.identifier:hpio">
-      <path value="HealthcareService.identifier" />
-      <sliceName value="hpio" />
-      <short value="Healthcare Provider Identifier – Organisation (HPI-O)" />
-      <definition value="National identifier Health Provider Identifier for Organisations (HPI-O)." />
-      <constraint>
-        <key value="inv-hpio-0" />
-        <severity value="error" />
-        <human value="HPI-O shall be an exactly 16 digit number" />
-        <expression value="value.matches('^([0-9]{16})$')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
-      </constraint>
-      <constraint>
-        <key value="inv-hpio-1" />
-        <severity value="error" />
-        <human value="HPI-O prefix is 800362" />
-        <expression value="value.startsWith('800362')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
-      </constraint>
-      <constraint>
-        <key value="inv-hpio-2" />
-        <severity value="error" />
-        <human value="HPI-O shall pass the Luhn algorithm check" />
-        <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger())) mod 10 = 0)" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice" />
-      </constraint>
-    </element>
-    <element id="HealthcareService.identifier:hpio.type">
-      <path value="HealthcareService.identifier.type" />
-      <short value="Identifier type for HPI-O" />
-      <definition value="Healthcare Provider Identifier – Organisation (HPI-O) identifier type." />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
-          <code value="NOI" />
-        </coding>
-      </patternCodeableConcept>
-      <binding>
-        <strength value="required" />
-        <description value="Local identifier type" />
-        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
-      </binding>
-    </element>
-    <element id="HealthcareService.identifier:hpio.type.text">
-      <path value="HealthcareService.identifier.type.text" />
-      <definition value="hpi-o" />
-      <fixedString value="HPI-O" />
-    </element>
-    <element id="HealthcareService.identifier:hpio.system">
-      <path value="HealthcareService.identifier.system" />
-      <short value="Namespace for HPI-O" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Organisations (HPI-O) numbers. An example of the syntax of a HPI-O represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpio/1.0/8003620000000000" />
-      <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpio/1.0" />
-    </element>
-    <element id="HealthcareService.identifier:hpio.value">
-      <path value="HealthcareService.identifier.value" />
-      <short value="HPI-O number" />
-      <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
-      <min value="1" />
-      <example>
-        <label value="HPI-O number" />
-        <valueString value="8003621566684455" />
-      </example>
-      <maxLength value="16" />
+      <short value="External identifiers for this item" />
+      <definition value="External identifiers for this item." />
+      <type>
+        <code value="Identifier"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-hpionumber"/>
+      </type>
     </element>
     <element id="HealthcareService.type">
       <path value="HealthcareService.type" />
