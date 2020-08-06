@@ -1,7 +1,6 @@
 **AU Base Organization** *[[FMM Level 3](guidance.html)]*
 
-This profile provides core localisations to Organization for an Australian context.
-It includes preferred terminology bindings, extensions and patterns of use for identifiers.
+This profile defines an organisation administration details structure that includes core localisation concepts for use in an Australian context.
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
