@@ -51,11 +51,12 @@
     </element>
     <element id="Organization.type">
       <path value="Organization.type" />
-      <binding>
-        <strength value="preferred" />
-        <description value="A type of healthcare related organisation." />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1" />
-      </binding>
+      <type>
+        <code value="CodeableConcept" />
+        <!--<profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />-->
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-anzscocode" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-anzsiccode" />
+      </type>
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
