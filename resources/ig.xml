@@ -287,6 +287,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/au-nationalprovideridentifieratorganisation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/au-medicarecardnumber"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -294,8 +301,22 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/au-medicareprovidernumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-medicareprescribernumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/au-medicalrecordnumber"/>
-       </reference>
+      </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
@@ -305,7 +326,7 @@
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource>  
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-dvanumber"/>
@@ -329,14 +350,28 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/au-abnnumber"/>
+        <reference value="StructureDefinition/au-australianbusinessnumber"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource>    
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-australianregistredbodynumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-paioidentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-careagencyemployeeidentifier"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -362,7 +397,49 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
-	  <resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-cspregistrationnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-healthcarecardnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-australiancompanynumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-cwlthseniorshealthcardnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-pensionerconcessioncardnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-insurernumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/au-medlist"/>
       </reference>
@@ -704,16 +781,7 @@
         <reference value="HealthcareService/example3"/>
       </reference>
       <name value="Healthcare Service of a General Practitioner"/>
-      <description value="Shows a typical Healthcare Service the General Practitioner belongs to"/>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="HealthcareService/example4"/>
-      </reference>
-      <name value="Healthcare Service of a General Practitioner"/>
-      <description value="Shows a typical Healthcare Service describing communication languages"/>
+      <description value="Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -722,7 +790,8 @@
         <reference value="Patient/example0"/>
       </reference>
       <name value="Patient with IHI and Medicare Card Number"/>
-      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status"/>
+      <description
+        value="Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -731,7 +800,8 @@
         <reference value="Patient/example1"/>
       </reference>
       <name value="Patient with IHI and DVA Number"/>
-      <description value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
+      <description
+        value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -740,7 +810,8 @@
         <reference value="Patient/example2"/>
       </reference>
       <name value="Patient with no birth date, and is eligible for Closing the Gap registration"/>
-      <description value="Shows a patient with the extension for indigenous Status and the extension for Closing the Gap registration, with no birth date."/>
+      <description
+        value="Shows a patient with the extension for indigenous Status and the extension for Closing the Gap registration, with no birth date."/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -776,7 +847,8 @@
         <reference value="Patient/example6"/>
       </reference>
       <name value="Culturally and linguistically diverse (CALD) patient 1"/>
-      <description value="Shows a patient who requires an interpreter and their preferred communication language"/>
+      <description
+        value="Shows a patient who requires an interpreter and their preferred communication language"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -795,7 +867,8 @@
         <reference value="Practitioner/example0"/>
       </reference>
       <name value="Practitioner with HPI-I and Prescriber Number"/>
-      <description value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
+      <description
+        value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -804,7 +877,8 @@
         <reference value="PractitionerRole/example0"/>
       </reference>
       <name value="Practitioner Role with Provider Number and ANZSCO coded role"/>
-      <description value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
+      <description
+        value="Shows a typical practitioner role using the identifer profile for Provider Number at a specfic location, with role using ANZSCO"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -822,7 +896,8 @@
         <reference value="Organization/f799e349-0385-4fbc-a2aa-b5b50af957ea"/>
       </reference>
       <name value="Organisation (Pathology) with NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
-      <description value="Shows a pathology organisation using the identifer profile for NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
+      <description
+        value="Shows a pathology organisation using the identifer profile for NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -831,7 +906,8 @@
         <reference value="Organization/5-8631-1"/>
       </reference>
       <name value="Organisation (Pathology) with HPI-O and is a parent organization"/>
-      <description value="Shows a parent pathology organisation using the identifer profile for HPI-O"/>
+      <description
+        value="Shows a parent pathology organisation using the identifer profile for HPI-O"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -840,7 +916,8 @@
         <reference value="HealthcareService/example0"/>
       </reference>
       <name value="HealthcareService with HPI-O and eligibility"/>
-      <description value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
+      <description
+        value="Shows a typical healthcare service using the identifer profile for HPI-O, and eligibility information"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -857,7 +934,8 @@
         <reference value="Patient/DateAccuracyIndicatorAAAexample0"/>
       </reference>
       <name value="Patient Birth Date Accuracy Indicator with AAA"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -866,7 +944,8 @@
         <reference value="Patient/DateAccuracyIndicatorAAUexample1"/>
       </reference>
       <name value="Patient Birth Date Accuracy Indicator with AAU"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -875,7 +954,8 @@
         <reference value="Patient/DateAccuracyIndicatorUAAexample2"/>
       </reference>
       <name value="Patient Birth Date Accuracy Indicator with UAA"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -884,7 +964,8 @@
         <reference value="Patient/DateAccuracyIndicatorUEAexample3"/>
       </reference>
       <name value="Patient Birth Date Accuracy Indicator with UEA"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -893,7 +974,8 @@
         <reference value="Patient/DateAccuracyIndicatorUUUexample4"/>
       </reference>
       <name value="Patient Birth Date Accuracy Indicator with UUU"/>
-      <description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
+      <description
+        value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1164,28 +1246,35 @@
         <reference value="Composition/multiple-information-recipients-and-author-role"/>
       </reference>
       <name value="composition-multiple-information-recipients-and-author-role"/>
-      <description value="Shows a typical example of a composition author role and multiple information recipients of different resource type"/>
+      <description
+        value="Shows a typical example of a composition author role and multiple information recipients of different resource type"
+      />
     </resource>
     <resource>
       <reference>
         <reference value="MedicationStatement/MedicationStatementexample0"/>
       </reference>
       <name value="Medication Statement"/>
-      <description value="Shows a typical informative example of a record of a patient's use of medication"/>
+      <description
+        value="Shows a typical informative example of a record of a patient's use of medication"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationStatement/MedicationStatementexample1"/>
       </reference>
       <name value="Medication Statement"/>
-      <description value="Shows a typical informative example of a record of a patient's long-term use of medication"/>
+      <description
+        value="Shows a typical informative example of a record of a patient's long-term use of medication"
+      />
     </resource>
     <resource>
       <reference>
         <reference value="MedicationStatement/MedicationStatementexample2"/>
       </reference>
       <name value="Medication Statement"/>
-      <description value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
+      <description
+        value="Practitioner reports patient has taken Diflucan in the past but is not taking it any more"
+      />
     </resource>
     <resource>
       <reference>
@@ -1250,26 +1339,11 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/dose-administration-aid-medicines-present"/>
-      </reference>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/presence-of-dose-administration-aid-medicines-1"/>
-      </reference>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/presence-of-dose-administration-aid-medicines-1"/>
-      </reference>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/au-diagnostic-servicerequest"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource>   
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/date-of-arrival"/>

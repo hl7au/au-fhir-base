@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-abnnumber" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-abnnumber" />
-  <version value="1.0.0" />
-  <name value="AUABNNumber" />
-  <title value="AU ABN Number" />
+  <id value="au-australianbusinessnumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber" />
+  <version value="2.1.0" />
+  <name value="AUAustralianBusinessNumber" />
+  <title value="AU Australian Business Number" />
   <status value="draft" />
-  <date value="2020-07-08" />
+  <date value="2020-07-25" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,13 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines Australian Business Number - ABN in an Australian context." />
+  <description value="This identifier profile defines an Australian Business Number (ABN) in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <code value="AU"/>
+      <system value="urn:iso:std:iso:3166"/>
+    </coding>
+  </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -42,20 +48,20 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Australian Business Number (ABN)" />
-      <definition value="Australian Securities and Investment Commission (ASIC) assigned identifier for business/entity - ABN (Australian Business Number)." />
+      <definition value="Australian Business Number (ABN) assigned by the Australian Securities and Investment Commission (ASIC) to an entity registered in the Australian Business Register (ABR)." />
       <constraint>
         <key value="inv-abn-0" />
         <severity value="error" />
         <human value="ABN shall be 11 digits" />
         <expression value="value.matches('^([0-9]{11})$')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-abnnumber" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber" />
       </constraint>
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for ABN" />
     </element>
-    <element id="Identifier:abn.type.text">
+    <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
       <fixedString value="ABN" />
     </element>
