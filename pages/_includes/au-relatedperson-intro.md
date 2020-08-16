@@ -1,6 +1,11 @@
-**AU Base RelatedPerson Profile** *[[FMM Level 2](guidance.html)]*
+**AU Base RelatedPerson** *[[FMM Level 2](guidance.html)]*
 
-This profile defines a related person administration details structure that includes core localisation concepts for use in an Australian context.
+This profile defines a related person structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
+
+The purpose of this profile is to provide national level agreement on core localised concepts. 
+
+This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
+
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the RelatedPerson.identifier element:

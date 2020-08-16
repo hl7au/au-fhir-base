@@ -15,7 +15,13 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines a patient administration details structure that includes core localisation concepts for use in an Australian context." />
+  <description value="This profile defines a patient structure that localises core concepts, including identifiers and terminology, for use in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <code value="AU"/>
+      <system value="urn:iso:std:iso:3166"/>
+    </coding>
+  </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -204,6 +210,7 @@
       <type>
         <code value="Address" />
         <profile value="http://hl7.org/fhir/StructureDefinition/Address" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </type>
     </element>
     <element id="Patient.contact.address">
@@ -211,6 +218,7 @@
       <type>
         <code value="Address" />
         <profile value="http://hl7.org/fhir/StructureDefinition/Address" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </type>
     </element>
     <element id="Patient.communication">
