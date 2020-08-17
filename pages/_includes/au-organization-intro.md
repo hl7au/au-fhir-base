@@ -1,4 +1,4 @@
-**AU Base Organization Profile** *[[FMM Level 3](guidance.html)]*
+**AU Base Organization ** *[[FMM Level 3](guidance.html)]*
 
 This profile defines an organisation structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 
@@ -9,7 +9,7 @@ This profile does not force conformance to core localised concepts. It enables i
 There are two preferred value sets when coding Organization.type:
 
 *	a type of organisation that delivers healthcare services is preferred to be a member of [Healthcare Organisation Role Type](https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1)
-*	a type of organisation that delivers other services may be a member of  a pathology diagnostic report code is preferred to be a member of set of codes published as [1292.0 - Australian and New Zealand Standard Industrial Classification (ANZSIC)](https://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0) (a value set representation is forthcoming)
+*	[1292.0 - Australian and New Zealand Standard Industrial Classification (ANZSIC)](https://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0) (a value set representation is forthcoming)
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
