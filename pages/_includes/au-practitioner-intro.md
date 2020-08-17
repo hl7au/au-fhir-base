@@ -26,7 +26,7 @@ A practitioner's AHPRA Registration Number may also be included as an identifier
 
 **Examples**
 
-[Practitioner with HPI-I, Prescriber Number and AHPRA Registration Number](Practitioner-example0.html)
+[Practitioner with HPI-I, Prescriber Number, AHPRA Registration Number, and CAE Identifier](Practitioner-example0.html)
 
 [Qualified Radiologist](Practitioner-example1.html)
 
