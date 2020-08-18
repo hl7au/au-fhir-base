@@ -1,7 +1,10 @@
-**AU Base Practitioner Profile** *[[FMM Level 3](guidance.html)]*
+**AU Base Practitioner** *[[FMM Level 3](guidance.html)]*
 
-This profile defines a practitioner administration details structure that includes core localisation concepts for use in an Australian context.
+This profile defines a practitioner structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 
+The purpose of this profile is to provide national level agreement on core localised concepts. 
+
+This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Practitioner.identifier element:
 * [Healthcare Provider Identifier - Individual (HPI-I)](StructureDefinition-au-hpiinumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpii/1.0/index.html){:target="_blank"} 
@@ -23,7 +26,7 @@ A practitioner's AHPRA Registration Number may also be included as an identifier
 
 **Examples**
 
-[Practitioner with HPI-I, Prescriber Number and AHPRA Registration Number](Practitioner-example0.html)
+[Practitioner with HPI-I, Prescriber Number, AHPRA Registration Number, and CAE Identifier](Practitioner-example0.html)
 
 [Qualified Radiologist](Practitioner-example1.html)
 
