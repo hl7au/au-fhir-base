@@ -6,18 +6,25 @@
   <name value="AUBaseMedicationDispense"/>
   <title value="AU Base Medication Dispense"/>
   <status value="draft"/>
-  <date value="2019-10-22" />
+  <date value="2020-01-22"/>
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org.au/fhir"/>
+      <value value="http://hl7.com.au"/>
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context."/>
+  <description
+    value="This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="MedicationDispense"/>
@@ -26,7 +33,8 @@
   <differential>
     <element id="MedicationDispense">
       <path value="MedicationDispense"/>
-      <short value="A dispense record for a medication for a patient in an Australian healthcare context"/>
+      <short
+        value="A dispense record for a medication for a patient in an Australian healthcare context"/>
       <definition value="Dispensing of a medication to patient in an Australian healthcare contex"/>
     </element>
     <element id="MedicationDispense.extension">
@@ -60,20 +68,22 @@
       </type>
     </element>
     <element id="MedicationDispense.extension:brandName">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="brandName" />
-      <short value="Medication Brand Name" />
-      <definition value="The brand medication text name for an associated medication, this may be supplied if a coded brand name is not available for medicationCodeableConcept but the brand name is needed." />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="brandName"/>
+      <short value="Medication Brand Name"/>
+      <definition
+        value="The brand medication text name for an associated medication, this may be supplied if a coded brand name is not available for medicationCodeableConcept but the brand name is needed."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name"/>
       </type>
     </element>
     <element id="MedicationDispense.extension:genericName">
-      <path value="MedicationDispense.extension" />
-      <sliceName value="genericName" />
-      <short value="Medication Generic Drug Name" />
-      <definition value="The generic medication text name for an associated medication, this may not be the same as the medicationCodeableConcept medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept. " />
+      <path value="MedicationDispense.extension"/>
+      <sliceName value="genericName"/>
+      <short value="Medication Generic Drug Name"/>
+      <definition
+        value="The generic medication text name for an associated medication, this may not be the same as the medicationCodeableConcept medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept. "/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name"/>
@@ -97,15 +107,17 @@
       <path value="MedicationDispense.identifier"/>
       <sliceName value="localDispenseIdentifier"/>
       <short value="Local Dispense Identifier"/>
-      <definition value="Identifier assigned by the dispensing system this allows linking of this dispensing record to a local system identfier."/>
+      <definition
+        value="Identifier assigned by the dispensing system this allows linking of this dispensing record to a local system identfier."
+      />
     </element>
     <element id="MedicationDispense.identifier:localDispenseIdentifier.type">
       <path value="MedicationDispense.identifier.type"/>
       <short value="Coded identifier type for local dispense identifier"/>
       <min value="1"/>
       <binding>
-        <strength value="required" />
-        <description value="Local identifier type" />
+        <strength value="required"/>
+        <description value="Local identifier type"/>
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
       </binding>
     </element>
@@ -168,7 +180,7 @@
       <path value="MedicationDispense.medication[x]"/>
       <sliceName value="medicationCodeableConcept"/>
       <short value="Coded Dispensed Medication"/>
-      <min value="0" />
+      <min value="0"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
@@ -187,7 +199,8 @@
       <path value="MedicationDispense.medication[x].coding"/>
       <sliceName value="pbs"/>
       <short value="PBS Item Code"/>
-      <definition value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)"/>
+      <definition
+        value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)"/>
       <binding>
         <strength value="preferred"/>
         <valueSet value="http://hl7.org.au/fhir/ValueSet/pbs-item"/>
@@ -232,11 +245,13 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
+    <element
+      id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
       <path value="MedicationDispense.medication[x].coding.extension"/>
       <sliceName value="medicationClass"/>
       <short value="Class of Medication Coding"/>
-      <definition value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem"/>
+      <definition
+        value="General category of coding to allow usage of codes to be distinguished from the same CodeSystem"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
@@ -258,7 +273,8 @@
         <valueSet value="http://hl7.org.au/fhir/ValueSet/mims"/>
       </binding>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:mimsPackage.system">
+    <element
+      id="MedicationDispense.medication[x]:medicationCodeableConcept.coding:mimsPackage.system">
       <path value="MedicationDispense.medication[x].coding.system"/>
       <min value="1"/>
       <fixedUri value="http://www.mims.com.au/codes"/>
@@ -269,13 +285,15 @@
       </extension>
       <path value="MedicationDispense.medication[x].text"/>
       <short value="Medication primary text"/>
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."/>
+      <definition
+        value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."
+      />
     </element>
     <element id="MedicationDispense.medication[x]:medicationReference">
       <path value="MedicationDispense.medication[x]"/>
       <sliceName value="medicationReference"/>
       <short value="Dispensed Medication"/>
-      <min value="0" />
+      <min value="0"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
@@ -301,9 +319,10 @@
     <element id="MedicationDispense.substitution.reason">
       <path value="MedicationDispense.substitution.reason"/>
       <max value="1"/>
-       <binding>
+      <binding>
         <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1"/>
+        <valueSet
+          value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1"/>
       </binding>
     </element>
 
