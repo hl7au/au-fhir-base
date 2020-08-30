@@ -1,101 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-dosage" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
+  <id value="au-dosage"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-dosage"/>
   <version value="2.1.0"/>
-  <name value="AUBaseDosage" />
-  <title value="AU Base Dosage" />
-  <status value="draft" />
-  <publisher value="Health Level Seven Australia (Medications WG)" />
+  <name value="AUBaseDosage"/>
+  <title value="AU Base Dosage"/>
+  <status value="draft"/>
+  <date value="2020-01-22"/>
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au" />
+      <value value="http://hl7.com.au" />
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines a dosage structure including core localisation concepts for use in an Australian context." />
+  <description
+    value="This profile defines a dosage structure including core localisation concepts for use in an Australian context."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.0" />
-  <kind value="complex-type" />
-  <abstract value="false" />
-  <type value="Dosage" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Dosage" />
-  <derivation value="constraint" />
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <type value="Dosage"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Dosage"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Dosage">
-      <path value="Dosage" />
-      <short value="Dosage information in an Australian healthcare context" />
+      <path value="Dosage"/>
+      <short value="Dosage information in an Australian healthcare context"/>
     </element>
     <element id="Dosage.additionalInstruction">
-      <path value="Dosage.additionalInstruction" />
+      <path value="Dosage.additionalInstruction"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
+          <type value="value"/>
+          <path value="coding.system"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Dosage.additionalInstruction:snomedAdditionalInstruction">
-      <path value="Dosage.additionalInstruction" />
-      <sliceName value="snomedAdditionalInstruction" />
-      <short value="SNOMED CT Additional Instruction" />
+      <path value="Dosage.additionalInstruction"/>
+      <sliceName value="snomedAdditionalInstruction"/>
+      <short value="SNOMED CT Additional Instruction"/>
       <binding>
-        <strength value="preferred" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/additional-instruction-codes" />
+        <strength value="preferred"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/additional-instruction-codes"/>
       </binding>
     </element>
     <element id="Dosage.asNeeded[x]">
-      <path value="Dosage.asNeeded[x]" />
+      <path value="Dosage.asNeeded[x]"/>
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="type"/>
+          <path value="$this"/>
         </discriminator>
-        <rules value="closed" />
+        <rules value="closed"/>
       </slicing>
     </element>
     <element id="Dosage.asNeeded[x]:asNeededCodeableConcept">
-      <path value="Dosage.asNeeded[x]" />
-      <sliceName value="asNeededCodeableConcept" />
-      <short value="Clinical Finding (SNOMED CT)" />
+      <path value="Dosage.asNeeded[x]"/>
+      <sliceName value="asNeededCodeableConcept"/>
+      <short value="Clinical Finding (SNOMED CT)"/>
       <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
       </binding>
       <type>
         <code value="CodeableConcept"/>
       </type>
     </element>
     <element id="Dosage.asNeeded[x]:asNeededBoolean">
-      <path value="Dosage.asNeeded[x]" />
-      <sliceName value="asNeededBoolean" />
+      <path value="Dosage.asNeeded[x]"/>
+      <sliceName value="asNeededBoolean"/>
       <type>
         <code value="boolean"/>
       </type>
     </element>
     <element id="Dosage.site">
-      <path value="Dosage.site" />
+      <path value="Dosage.site"/>
       <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"/>
       </binding>
     </element>
     <element id="Dosage.route">
-      <path value="Dosage.route" />
-      <short value="Route of Administration (SNOMED CT)" />
+      <path value="Dosage.route"/>
+      <short value="Route of Administration (SNOMED CT)"/>
       <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1" />
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1"
+        />
       </binding>
     </element>
     <element id="Dosage.method">
-      <path value="Dosage.method" />
-      <short value="SNOMED CT Administration Method" />
+      <path value="Dosage.method"/>
+      <short value="SNOMED CT Administration Method"/>
       <binding>
-        <strength value="preferred" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/administration-method-codes" />
+        <strength value="preferred"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/administration-method-codes"/>
       </binding>
     </element>
   </differential>
