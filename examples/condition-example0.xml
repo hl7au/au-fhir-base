@@ -1,7 +1,17 @@
 <Condition xmlns="http://hl7.org/fhir">
   <id value="example0"/>
-  <clinicalStatus value="active"/> 
-  <verificationStatus value="confirmed"/> 
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>

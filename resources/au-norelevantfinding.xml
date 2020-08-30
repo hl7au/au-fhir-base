@@ -1,82 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-norelevantfinding" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding" />
+  <id value="au-norelevantfinding"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
   <version value="2.1.0"/>
-  <name value="AUAssertionNoRelevantFinding" />
-  <title value="AU Assertion of No Relevant Finding" />
-  <status value="draft" />
-  <date value="2019-07-29" />
-  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
+  <name value="AUAssertionNoRelevantFinding"/>
+  <title value="AU Assertion of No Relevant Finding"/>
+  <status value="draft"/>
+  <date value="2020-07-29"/>
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)"/>
   <contact>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.org.au" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="This profile provides an observation information structure for asserting a clinical judgement that there are no items of specific interest, e.g. allergies, no medications, for a patient." />
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
-  <fhirVersion value="4.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
-  <derivation value="constraint" />
+  <description
+    value="This profile provides an observation information structure for asserting a clinical judgement that there are no items of specific interest, e.g. allergies, no medications, for a patient."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Observation">
-      <path value="Observation" />
-      <short value="Statement of clinical judgement that there are no items of specific interest" />
-      <definition value="Statement of clinical judgement that there are no items of specific interest after a reasonable investigation." />
+      <path value="Observation"/>
+      <short value="Statement of clinical judgement that there are no items of specific interest"/>
+      <definition
+        value="Statement of clinical judgement that there are no items of specific interest after a reasonable investigation."
+      />
     </element>
     <element id="Observation.code">
-      <path value="Observation.code" />
+      <path value="Observation.code"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
-          <code value="ASSERTION" />
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="ASSERTION"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <min value="1" />
+      <path value="Observation.subject"/>
+      <min value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
     </element>
     <element id="Observation.performer">
-      <path value="Observation.performer" />
-      <short value="Asserter of the statement" />
+      <path value="Observation.performer"/>
+      <short value="Asserter of the statement"/>
     </element>
     <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
+      <path value="Observation.value[x]"/>
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="type"/>
+          <path value="$this"/>
         </discriminator>
         <rules value="open"/>
       </slicing>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
-      <short value="Coded value of the observation" />
-      <min value="1" />
+      <path value="Observation.value[x]"/>
+      <sliceName value="valueCodeableConcept"/>
+      <short value="Coded value of the observation"/>
+      <min value="1"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <binding>
-        <strength value="extensible" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1" />
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1"/>
       </binding>
     </element>
     <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <max value="0" />
+      <path value="Observation.dataAbsentReason"/>
+      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>
