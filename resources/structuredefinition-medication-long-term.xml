@@ -1,50 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="medication-long-term" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term" />
+  <id value="medication-long-term"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term"/>
   <version value="2.1.0"/>
-  <name value="MedicationLongTerm" />
-  <title value="Long Term" />
-  <status value="active" />
-  <date value="2018-10-03" />
-  <publisher value="Health Level Seven Australia (Medications WG)" />
+  <name value="MedicationLongTerm"/>
+  <title value="Long Term"/>
+  <status value="active"/>
+  <date value="2020-01-03"/>
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="This extension applies to the MedicationStatement resource and provides an indicator of long term medication use." />
+  <description
+    value="This extension applies to the MedicationStatement resource and provides an indicator of long term medication use."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.0" />
-  <kind value="complex-type" />
-  <abstract value="false" />
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
   <context>
     <type value="element"/>
     <expression value="MedicationStatement"/>
   </context>
-  <type value="Extension" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint" />
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Extension">
-      <path value="Extension" />
-      <short value="Medication long term" />
-      <definition value="Medication long-term indicator" />
-      <min value="0" />
-      <max value="1" />
+      <path value="Extension"/>
+      <short value="Medication long term"/>
+      <definition value="Medication long-term indicator"/>
+      <min value="0"/>
+      <max value="1"/>
     </element>
     <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term" />
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term"/>
     </element>
     <element id="Extension.value[x]:valueBoolean">
-      <path value="Extension.valueBoolean" />
-      <sliceName value="valueBoolean" />
-      <min value="1" />
+      <path value="Extension.valueBoolean"/>
+      <sliceName value="valueBoolean"/>
+      <min value="1"/>
       <type>
-        <code value="boolean" />
+        <code value="boolean"/>
       </type>
     </element>
   </differential>
