@@ -1,0 +1,38 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="contact-purpose"/>
+	<url value="http://hl7.org.au/fhir/ValueSet/contact-purpose"/>
+	<identifier> 
+		<system value="urn:ietf:rfc:3986"/> 
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.19"/> 
+	</identifier> 
+	<version value="1.0.0"/>
+	<name value="ContactPurposeExtended"/>
+	<title value="Contact Purpose Extended"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2020-09-01"/>
+	<publisher value="Health Level Seven Australia"/>
+	<contact>
+		<telecom>
+		  <system value="url" />
+		  <value value="http://hl7.com.au" />
+		  <use value="work" />
+		</telecom>
+	</contact>
+	<description value="Purpose for associated contact information extending core coding contact entity type with Australian contact purpose."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+	<compose>
+		<include>
+			<system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+		</include>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+		</include>
+	</compose>
+</ValueSet>
