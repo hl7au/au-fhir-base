@@ -1,6 +1,6 @@
 **AU HPI-I Number**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines a Healthcare Provider Identifier - Individual - HPI-I[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpii/1.0/index.html){:target="_blank"} in an Australian context.
+This identifier profile defines a Healthcare Provider Identifier - Individual (HPI-I) in an Australian context.
 
 **Examples**
 

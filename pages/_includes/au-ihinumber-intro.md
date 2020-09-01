@@ -1,6 +1,6 @@
 **AU Individual Healthcare Identifier**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines an Individual Healthcare Identifier - IHI [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/ihi/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495){:target="_blank"} in an Australian context.
+This identifier profile defines an Individual Healthcare Identifier (IHI)[<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495){:target="_blank"} in an Australian context.
 
 #### Extensions
 Extensions used in this profile:
