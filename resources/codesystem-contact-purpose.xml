@@ -1,0 +1,71 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="contact-purpose"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h2>Contact Purpose</h2>
+			<p>Purpose of contact</p>
+		</div>
+	</text>
+	<url value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+	<identifier> 
+		<system value="urn:ietf:rfc:3986"/> 
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.1.2.19"/> 
+	</identifier> 
+	<version value="1.0.0"/>
+	<name value="ContactPurpose"/>
+	<title value="Contact Purpose"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<date value="2020-08-31"/>
+	<publisher value="Health Level Seven Australia (Patient Administration)"/>
+	<contact>
+		<telecom>
+			<system value="url" />
+			<value value="http://hl7.com.au" />
+			<use value="work" />
+		</telecom>
+	</contact>
+	<description value="Purpose for associated contact information."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+	<caseSensitive value="true"/>
+	<compositional value="false"/>
+	<versionNeeded value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="after-hours"/>
+		<display value="After Hours"/>
+		<definition value="Contact to be used during an after hours period as determined by the contact entity. An after hours period is a period of time outside of normal operating periods of the entity or service."/>
+	</concept>
+	<concept>
+		<code value="medical-record"/>
+		<display value="Medical Record"/>
+		<definition value="Contact for medical/clinical records including provision of results to a practitioner or the correction of a clinical record."/>
+	</concept>
+	<concept>
+		<code value="general-emergency"/>
+		<display value="General Emergency"/>
+		<definition value="Contact to be used in a general emergency."/>
+	</concept>
+	<concept>
+		<code value="clinical-emergency"/>
+		<display value="Clinical Emergency"/>
+		<definition value="Contact to be used in a clinical emergency."/>
+	</concept>
+	<concept>
+		<code value="legal"/>
+		<display value="Legal"/>
+		<definition value="Contact for legal concerns or enquiries."/>
+	</concept>
+	<concept>
+		<code value="privacy"/>
+		<display value="Privacy"/>
+		<definition value="Contact for concerns or enquiries relating to privacy of information."/>
+	</concept>
+</CodeSystem>
