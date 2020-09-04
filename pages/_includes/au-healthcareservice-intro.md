@@ -13,6 +13,8 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 #### Usage Notes
 HPI-O is used as an identifier in this profile to support the case where network HPI-Os are issued for sub-organisations, departments, or other logical divisions acting as specific healthcare services. This is useful in the absence of any specific national identifier for healthcare service entities.
 
+HealthcareService.telecom does not allow for a purpose or a reason for which a contact can be reach. To indicate the purpose, a profile of [ContactPoint](http://hl7.org/fhir/R4/datatypes.html#ContactPoint.html) that references [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html) extension should be created, and applied to HealthcareService.telecom.
+
 #### Extensions
 No extensions are used in this profile.
 

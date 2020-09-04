@@ -12,6 +12,9 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 * [National Provider Identifier at Organisation (NPIO)](StructureDefinition-au-nationalprovideridentifieratorganisation.html) [<sup>[1]</sup>](http://hl7.org.au/id/npio/index.html){:target="_blank"}
 * [Employee Number](StructureDefinition-au-employeenumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/index.html){:target="_blank"}
 
+#### Usage Notes
+PractitionerRole.telecom does not allow for a purpose or a reason for which a contact can be reach. To indicate the purpose, a profile of [ContactPoint](http://hl7.org/fhir/R4/datatypes.html#ContactPoint.html) that references [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html) extension should be created, and applied to HealthcareService.telecom.
+
 #### Extensions
 No extensions are used in this profile.
 
