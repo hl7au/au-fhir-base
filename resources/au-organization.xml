@@ -58,5 +58,15 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </type>
     </element>
+    <element id="Organization.contact">
+      <path value="Organization.contact" />
+    </element>
+    <element id="Organization.contact.purpose">
+      <path value="Organization.contact.purpose" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/contact-purpose" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
