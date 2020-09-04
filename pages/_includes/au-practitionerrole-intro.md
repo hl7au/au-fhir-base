@@ -17,7 +17,7 @@ No extensions are used in this profile.
 
 **Examples**
 
-[Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
+[Practitioner Role with Provider Number and after hours contact and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
 [Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
 

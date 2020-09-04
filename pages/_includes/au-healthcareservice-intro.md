@@ -22,11 +22,11 @@ NOTE: AU Base on STU3 included two extensions Healthcare Service Eligibility Det
 
 **Examples**
 
-[HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
+[HealthcareService with HPI-O and clinical-record contact and SNOMED-CT coded specialty](HealthcareService-example0.html)
 
 [Albion Hospital Radiology Service](HealthcareService-example1.html)
 
 [Albion Hospital Pathology Service](HealthcareService-example2.html)
 
-[Strahan General Practitioner Services](HealthcareService-example3.html)
+[Strahan General Practitioner Services with legal contact](HealthcareService-example3.html)
 

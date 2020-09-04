@@ -28,6 +28,6 @@ No extensions are used in this profile.
 
 [Albion Hospital with Australian Business Number](Organization-example1.html)
 
-[Devonport Family Medicine Clinic with Australian Business Number](Organization-example3.html)
+[Devonport Family Medicine Clinic with Australian Business Number and administrative contact](Organization-example3.html)
 
 [ACME Pathology with NATA Number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP](Organization-f799e349-0385-4fbc-a2aa-b5b50af957ea.html)
