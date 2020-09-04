@@ -24,7 +24,7 @@ NOTE: AU Base on STU3 included two extensions Healthcare Service Eligibility Det
 
 **Examples**
 
-[HealthcareService with HPI-O and clinical-record contact and SNOMED-CT coded specialty](HealthcareService-example0.html)
+[HealthcareService with HPI-O and medical record contact and SNOMED-CT coded specialty](HealthcareService-example0.html)
 
 [Albion Hospital Radiology Service](HealthcareService-example1.html)
 
