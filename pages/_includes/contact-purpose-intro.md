@@ -5,10 +5,10 @@ This extension applies to the ContactPoint datatype and is used to represent the
 
 **Examples**
 
-[HealthcareService with HPI-O and medical record contact and SNOMED-CT coded specialty](HealthcareService-example0.html)
+[HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
 
-[Devonport Family Medicine Clinic with Australian Business Number and administrative contact](Organization-example3.html)
+[Devonport Family Medicine Clinic with Australian Business Number](Organization-example3.html)
 
-[Practitioner Role with Provider Number and after hours contact and SNOMED-CT coded specialty](PractitionerRole-example0.html)
+[Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
 
