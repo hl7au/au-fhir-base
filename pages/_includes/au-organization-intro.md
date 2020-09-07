@@ -19,11 +19,14 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 * ASIC Identifiers - [Australian Business Number (ABN)](StructureDefinition-au-australianbusinessnumber.html) [<sup>[1]</sup>](http://hl7.org.au/id/abn ){:target="_blank"} [<sup>[2]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"}, [Australian Company Number (ACN)](StructureDefinition-au-australiancompanynumber.html) [<sup>[3]</sup>](http://hl7.org.au/id/acn){:target="_blank"} [<sup>[4]</sup>](http://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/australian-company-numbers/australian-company-number-digit-check){:target="_blank"} and [Australian Registered Body Number (ARBN)](StructureDefinition-au-australianregistredbodynumber.html) [<sup>[5]</sup>](http://hl7.org.au/id/arbn){:target="_blank"}
 * [National Association of Testing Authorities (NATA) Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) [<sup>[1]</sup>](http://hl7.org.au/id/nata-accreditation/index.html){:target="_blank"}
 
-#### Usage Notes
-To specify the contact purpose other than what is included in core [Value Set](http://hl7.org/fhir/R4/valueset-contactentity-type.html) use the [Contact Purpose Extended](http://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-contact-purpose.html) value set to notify the contact purpose such as After Hours and Emergency contacts etc.
-
 #### Extensions
 No extensions are used in this profile.
+
+Other potentially useful extensions:
+* Organization.telecom: [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html)
+
+#### Usage Notes
+When it is necessary to indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
 
 #### Examples
 
@@ -31,6 +34,6 @@ No extensions are used in this profile.
 
 [Albion Hospital with Australian Business Number](Organization-example1.html)
 
-[Devonport Family Medicine Clinic with Australian Business Number and administrative contact](Organization-example3.html)
+[Devonport Family Medicine Clinic with Australian Business Number](Organization-example3.html)
 
 [ACME Pathology with NATA Number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP](Organization-f799e349-0385-4fbc-a2aa-b5b50af957ea.html)

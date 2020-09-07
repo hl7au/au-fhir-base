@@ -27,6 +27,9 @@ Extensions used in this profile:
 * Patient.birthDate: [Birth Time](http://hl7.org/fhir/STU3/extension-patient-birthtime.html) (Core Extension)
 * Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator)
 
+Other potentially useful extensions:
+* Patient.telecom: [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html)
+
 #### Usage Notes
 Mutiple Individual Healthcare Identifiers are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
 
@@ -34,6 +37,8 @@ Medicare Number is defined as a 10 or 11 digit number. Whilst 10 digits is not s
 Medicare Numbers are not used for uniquely identifying patients, they are identifying information that can be used in conjunction with other elements such as name and date of birth appropriately to confirm identity.
 
 To indicate an interpreter service is required, extension interpreter required=true should be set. If the language for interpreter service is known then it should be included in communication.language with communication.preferred=true. If communication.preferred=true is not set when interpreter required=true then it may be understood that an interpreter is required but the language for the interpreter service is not known.
+
+When it is necessary to indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
 
 **Examples**
 

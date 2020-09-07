@@ -20,9 +20,14 @@ These definitions represent common data held in the Practitioner.qualification e
 #### Extensions
 No extensions are used in this profile.
 
+Other potentially useful extensions:
+* Practitioner.telecom: [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html)
+
 #### Usage Notes
 Where a sending system includes a practitioner's qualification using their AHPRA Registration Number, this should be done using Practitioner.qualification(ahpraRegistration). 
 A practitioner's AHPRA Registration Number may also be included as an identifier, using Practitioner.identifier(ahpraRegistration).
+
+When it is necessary to indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
 
 **Examples**
 
