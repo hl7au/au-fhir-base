@@ -20,13 +20,11 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 * [National Association of Testing Authorities (NATA) Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) [<sup>[1]</sup>](http://hl7.org.au/id/nata-accreditation/index.html){:target="_blank"}
 
 #### Extensions
-No extensions are used in this profile.
-
-Other potentially useful extensions:
+Potentially useful extensions:
 * Organization.telecom: [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html)
 
 #### Usage Notes
-When it is necessary to indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
+Contact details and associated contact purpose are encouraged to be sent in Organization.contact over making use of the Contact Purpose extension.
 
 #### Examples
 
