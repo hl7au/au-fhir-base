@@ -7,6 +7,8 @@ This extension applies to the ContactPoint datatype and is used to represent the
 
 [HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
 
+[Strahan General Practitioner Services](HealthcareService-example3.html)
+
 [Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
 
