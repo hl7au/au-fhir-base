@@ -6,10 +6,18 @@
 	</meta>
 	<identifier>
 		<type>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+				<code value="NATAS"/>
+				<display value="NATA Site Number"/>
+			</coding>
 			<text value="NATA Site Number"/>
 		</type>
 		<system value="http://hl7.org.au/id/nata-site"/>
-		<value value="16289"/>
+		<!--In Australia NATA numbers are an
+        incremental number that have been incremented to 5 digits, this example uses a fictional
+        NATA number from 100,000 + to ensure no conflict with real world values--> 
+		<value value="162899"/>
 	</identifier> 	
 	<status value="active"/>	
 	<address>

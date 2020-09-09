@@ -3,6 +3,44 @@
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
 	</meta>	
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>
+				<b>Narrative</b>
+			</p>
+			<p><b>id</b>: example3</p>
+			<p><b>meta</b>: </p>
+			<p><b>providedBy</b>: <a href="Organization-example3.html">Devonport Family Medicine Clinic. Generated Summary: id: example3; ABN: 51824754455; <span
+				title="Codes: {http://snomed.info/sct 288565001}">Medical centre</span>; name: Devonport Family Medicine Clinic; reception@dfmc.example.com(WORK), fax: (03) 5550 5557(WORK),
+				ph: (03) 5550 5556(WORK)</a></p>
+			<p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/service-category 17}">General Practice</span></p>
+			<p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 408443003}">General medical practice</span>, <span title="Codes: {http://snomed.info/sct 23961000087102}">Opioid dependency
+				management specialty</span></p>
+			<p><b>location</b>: <a href="Location-example3.html">Generated Summary: id: example3; status: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode FMC}">Family
+				medicine clinic</span>; <span title="Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type bu}">Building</span></a></p>
+			<p><b>name</b>: General Practitioner services</p>
+			<p><b>telecom</b>: ph: (03) 8543 5555(WORK), ph: (03) 8543 5558(Legal)</p>
+			<p><b>serviceProvisionCode</b>: <span title="Codes: {http://hl7.org.au/fhir/CodeSystem/service-provision-conditions FBB}">Fees and Bulk Billing</span></p>
+			<p><b>communication</b>: <span title="Codes: {urn:ietf:bcp:47 de}">German</span>, <span title="Codes: {urn:ietf:bcp:47 en}">English</span></p>
+			<blockquote>
+				<p>
+					<b>availableTime</b>
+				</p>
+				<p><b>daysOfWeek</b>: mon, tue, wed, thu, fri</p>
+				<p><b>availableStartTime</b>: </p>
+				<p><b>availableEndTime</b>: </p>
+			</blockquote>
+			<blockquote>
+				<p>
+					<b>availableTime</b>
+				</p>
+				<p><b>daysOfWeek</b>: sat, sun</p>
+				<p><b>availableStartTime</b>: </p>
+				<p><b>availableEndTime</b>: </p>
+			</blockquote>
+		</div>
+	</text>
 	<providedBy> 
 		<reference value="Organization/example3"/> 
 		<display value="Devonport Family Medicine Clinic"/> 
@@ -36,6 +74,19 @@
 		<system value="phone"/>
 		<value value="(03) 8543 5555"/>
 		<use value="work"/>
+	</telecom>
+	<telecom>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/contact-purpose">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+					<code value="legal"/>
+					<display value="Legal"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<system value="phone"/>
+		<value value="(03) 8543 5558"/>
 	</telecom>
 	<serviceProvisionCode>
 		<coding>

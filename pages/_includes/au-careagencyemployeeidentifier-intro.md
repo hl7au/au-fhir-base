@@ -4,4 +4,4 @@ This identifier profile defines a My Health Record assigned Care Agency Employee
 
 **Examples**
 
-[Qualified Radiologist](Practitioner-example1.html)
+[Practitioner with HPI-I, Prescriber Number, AHPRA Registration Number, and CAE Identifier](Practitioner-example0.html)
