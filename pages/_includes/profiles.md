@@ -62,5 +62,6 @@ These Profiles have been defined for this implementation guide.
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU National Provider Identifier At Organisation](StructureDefinition-au-nationalprovideridentifieratorganisation.html) - identifier profile for a National Provider Identifier at Organisation (NPIO)
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
+* [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) - identifier profile for a Pharmacy Approval Number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
