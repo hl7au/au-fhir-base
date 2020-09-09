@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-medicareprescribernumber" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicareprescribernumber" />
-  <version value="2.1.0" />
-  <name value="AUMedicarePrescriberNumber" />
-  <title value="AU Medicare Prescriber Number" />
+  <id value="au-pbsprescribernumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pbsprescribernumber" />
+  <version value="1.0.0" />
+  <name value="AUPBSPrescriberNumber" />
+  <title value="AU PBS Prescriber Number" />
   <status value="draft" />
-  <date value="2020-07-17" />
+  <date value="2020-09-10" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Medicare prescriber number, otherwise referred to as PBS prescriber number, assigned by Services Australia to a practitioner who is approved to prescribe PBS medicines." />
+  <description value="This identifier profile defines a PBS prescriber number, previously referred to as Medicare prescriber number, assigned under the Pharmaceutical Benefits Scheme to a practitioner who is approved to prescribe PBS medicines." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,12 +47,12 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Medicare Prescriber Number" />
-      <definition value="Medicare prescriber number, otherwise referred to as PBS prescriber number, assigned by Services Australia to a practitioner who is approved to prescribe PBS medicines." />
+      <short value="PBS Prescriber Number" />
+      <definition value="PBS prescriber number, previously referred to as Medicare prescriber number, assigned under the Pharmaceutical Benefits Scheme (to a practitioner who is approved to prescribe PBS medicines." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Coded identifier type for prescriber number" />
+      <short value="Coded identifier type for PBS prescriber number" />
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
@@ -71,16 +71,15 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for Medicare prescriber number" />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/medicare-prescriber-number" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/PBS-prescriber-number" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Medicare prescriber number" />
+      <short value="PBS prescriber number" />
       <min value="1" />
       <example>
-        <label value="Medicare prescriber number" />
+        <label value="PBS prescriber number" />
         <valueString value="453221" />
       </example>
     </element>

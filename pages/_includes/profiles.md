@@ -56,11 +56,11 @@ These Profiles have been defined for this implementation guide.
 * [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Individual Healthcare Identifier (IHI)
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for a Medical Record Number (MRN)
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for a Medicare card number
-* [AU Medicare Prescriber Number](StructureDefinition-au-medicareprescribernumber.html) - identifier profile for a Medicare prescriber number
 * [AU Medicare Provider Number](StructureDefinition-au-medicareprovidernumber.html) - identifier profile for a Medicare provider number
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU National Provider Identifier At Organisation](StructureDefinition-au-nationalprovideridentifieratorganisation.html) - identifier profile for a National Provider Identifier at Organisation (NPIO)
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
+* [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
