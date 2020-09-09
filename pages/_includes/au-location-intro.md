@@ -17,6 +17,8 @@ No extensions are used in this profile.
 
 **Examples**
 
+[Downunder Hospital Blacktown, NSW](Location-example0.html)
+
 [Site at 33 Slobodian Street, Albion, QLD](Location-example1.html)
 
 [Level 1, Green Building, Albion Hospital, QLD](Location-example2.html)
