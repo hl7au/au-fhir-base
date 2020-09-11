@@ -9,6 +9,7 @@ This profile does not force conformance to core localised concepts. It enables i
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Location.identifier element:
+* [Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/location-specific-practice-number/index.html){:target="_blank"}
 * [National Association of Testing Authorities (NATA) Site Number](StructureDefinition-au-natasitenumber.html) [<sup>[1]</sup>](http://hl7.org.au/id/nata-site/index.html){:target="_blank"}
 
 #### Extensions
