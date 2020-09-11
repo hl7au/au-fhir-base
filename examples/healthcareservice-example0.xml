@@ -3,6 +3,39 @@
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
 	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>
+				<b>Narrative</b>
+			</p>
+			<p><b>id</b>: example0</p>
+			<p><b>meta</b>: </p>
+			<p><b>identifier</b>: HPI-O: 8003621566684455</p>
+			<p><b>active</b>: true</p>
+			<p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 394603008}">Cardiothoracic surgery</span></p>
+			<p><b>telecom</b>: ph: 025553333(WORK), ph: 025554444(Medical Record)</p>
+			<h3>Eligibilities</h3>
+			<table class="grid">
+				<tr>
+					<td>-</td>
+					<td>
+						<b>Code</b>
+					</td>
+					<td>
+						<b>Comment</b>
+					</td>
+				</tr>
+				<tr>
+					<td>*</td>
+					<td>
+						<span title="Codes: {http://tempuri.org/eligibility dva}">DVA Required</span>
+					</td>
+					<td>Returned veterans by referral only</td>
+				</tr>
+			</table>
+		</div>
+	</text>
 	<identifier>
 		<type>
 			<coding>
@@ -27,6 +60,19 @@
 		<system value="phone"/>
 		<value value="025553333"/>
 		<use value="work"/>
+	</telecom>
+	<telecom>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/contact-purpose">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+					<code value="medical-record"/>
+					<display value="Medical Record"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<system value="phone"/>
+		<value value="025554444"/>
 	</telecom>
 	<eligibility>
 		<code>
