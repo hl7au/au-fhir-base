@@ -1,8 +1,8 @@
 **AU Medicare Card Number**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines a Medicare card[<sup>[1]</sup>](https://www.servicesaustralia.gov.au/individuals/services/medicare/medicare-card){:target="_blank"} number in an Australian context. This definition supports sending either the 10 digit Medicare card number or the 11 digit number[<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/270101){:target="_blank"} (including the Individual Reference Number (IRN)).
+This identifier profile defines a Medicare card[<sup>[1]</sup>](https://www.servicesaustralia.gov.au/individuals/services/medicare/medicare-card){:target="_blank"} number in an Australian context. This definition supports sending either the 10 digit Medicare card number or the 11 digit number[<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/270101){:target="_blank"} (includes the Individual Reference Number (IRN)).
 
-A Medicare card is provided to individuals who are enrolled in Medicare by Services Australia under the Medicare program.
+A Medicare card is provided to individuals who are enrolled in Medicare[<sup>[1]</sup>](https://www.servicesaustralia.gov.au/individuals/medicare){:target="_blank"}.
 
 #### Usage Notes
 
