@@ -49,6 +49,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="Smoking Status" />
+      <definition value="Smoking status statement at a specified time." />
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <min value="1" />
@@ -62,9 +67,6 @@
       <min value="1" />
       <type>
         <code value="dateTime" />
-      </type>
-      <type>
-        <code value="Period" />
       </type>
     </element>
     <element id="Observation.value[x]">
