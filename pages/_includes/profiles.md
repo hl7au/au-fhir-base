@@ -32,7 +32,7 @@ These Profiles have been defined for this implementation guide.
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
-* [AU Smoking Status](StructureDefinition-au-smoking-status.html) - smoking status lifestyle factor
+* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
