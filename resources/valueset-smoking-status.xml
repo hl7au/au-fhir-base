@@ -1,0 +1,87 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="smoking-status"/>
+	<url value="http://terminology.hl7.org.au/ValueSet/smoking-status"/>
+	<version value="1.0.0"/>
+	<name value="SmokingStatus"/>
+	<title value="Smoking Status"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<date value="2020-09-12"/>
+	<publisher value="Health Level Seven Australia (Patient Administration)"/>
+	<contact>
+		<telecom>
+		  <system value="url" />
+		  <value value="http://hl7.com.au" />
+		  <use value="work" />
+		</telecom>
+	</contact>
+	<description value="Smoking staus codes aligned with International Patient Summary"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2020+; Licensed Under Creative Commons No Rights Reserved. This artifact includes content from LOINC&#xAE;. LOINC codes are copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee. Terms &amp; Conditions in https://loinc.org/license/"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="1"/>
+        </extension>
+        <code value="LA18976-3"/>
+        <display value="Current every day smoker"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="2"/>
+        </extension>
+        <code value="LA18977-1"/>
+        <display value="Current some day smoker"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="3"/>
+        </extension>
+        <code value="LA15920-4"/>
+        <display value="Former smoker"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="4"/>
+        </extension>
+        <code value="LA18978-9"/>
+        <display value="Never smoker"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="5"/>
+        </extension>
+        <code value="LA18979-7"/>
+        <display value="Smoker, current status unknown"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="6"/>
+        </extension>
+        <code value="LA18980-5"/>
+        <display value="Unknown if ever smoked"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="7"/>
+        </extension>
+        <code value="LA18981-3"/>
+        <display value="Heavy tobacco smoker"/>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+          <valueDecimal value="8"/>
+        </extension>
+        <code value="LA18982-1"/>
+        <display value="Light tobacco smoker"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

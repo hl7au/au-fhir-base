@@ -1,0 +1,55 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="au-v3-ActCode"/>	
+	<url value="http://terminology.hl7.org.au/CodeSystem/v3-ActCode"/>
+	<version value="1.0.0"/>
+	<name value="v3ActCode"/>
+	<title value="v3 Act Code"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<date value="2020-09-12"/>
+	<publisher value="Health Level Seven Australia (Patient Administration)"/>
+	<contact>
+		<telecom>
+			<system value="url" />
+			<value value="http://hl7.com.au" />
+			<use value="work" />
+		</telecom>
+	</contact>
+	<description value="Extended concept codes for encounter act coding for use in Australian context."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2020+; Licensed Under Creative Commons No Rights Reserved."/>
+	<caseSensitive value="true"/>
+	<compositional value="false"/>
+	<versionNeeded value="false"/>
+	<content value="complete"/>
+	<concept>
+		<code value="PHONE"/>
+		<display value="Telephone Consultation"/>
+		<definition value="Encounter by telephone communication."/>
+	</concept>
+	<concept>
+		<code value="VIDEO"/>
+		<display value="Video Conferencing"/>
+		<definition value="Encounter by video conferencing."/>
+	</concept>
+	<concept>
+		<code value="RACF"/>
+		<display value="Residential Aged Care Facility"/>
+		<definition value="Encounter in a residential aged care facility setting."/>
+	</concept>
+	<concept>
+		<code value="EMAIL"/>
+		<display value="E-mail Correspondence"/>
+		<definition value="Encounter by e-mail correspondence."/>
+	</concept>
+	<concept>
+		<code value="SMS"/>
+		<display value="SMS"/>
+		<definition value="Encounter by SMS (short message service)."/>
+	</concept>
+</CodeSystem>
