@@ -1,12 +1,5 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="au-hl7v2-0203"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<h2>HL7 V2 Table 0203 - Identifier Type (AU Extended)</h2>
-			<p>HL7 V2 table 0203 extensions for Australian use</p>
-		</div>
-	</text>
 	<url value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
 	<identifier> 
 		<system value="urn:ietf:rfc:3986"/> 
@@ -17,7 +10,7 @@
 	<title value="HL7 V2 Table 0203 - Identifier Type (AU Extended)"/>
 	<status value="draft"/>
 	<experimental value="true"/>
-	<date value="2019-02-13"/>
+	<date value="2020-09-17"/>
 	<publisher value="Health Level Seven Australia (Patient Administration)"/>
 	<contact>
 		<telecom>
@@ -26,7 +19,7 @@
 			<use value="work" />
 		</telecom>
 	</contact>
-	<description value="Extended concept codes for identifier type for use in Australian context."/>
+	<description value="Extended concept codes for identifier type in an Australian context."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -41,7 +34,7 @@
 	<concept>
 		<code value="AHPRA"/>
 		<display value="Australian Health Practitioner Regulation Agency Registration Number"/>
-		<definition value="Australian Health Practitioner Regulation Agency allocated registration number"/>
+		<definition value="An Australian Health Practitioner Regulation Authority (AHPRA) registration number assigned to a practitioner for each profession in which they are registered. Practitioners registered in more than one profession have one registration number for each profession."/>
 	</concept>
 	<concept>
 		<code value="CAEI"/>
@@ -61,37 +54,37 @@
 	<concept>
 		<code value="DVG"/>
 		<display value="DVA Number (Gold Card)"/>
-		<definition value="Department of Veterans' Affairs Number (Gold Card)"/>
+		<definition value="An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran Gold Card (the new name for a DVA Gold card). A Veteran Gold Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card."/>
 	</concept>
 	<concept>
 		<code value="DVL"/>
 		<display value="DVA Number (Lilac Card)"/>
-		<definition value="Department of Veterans' Affairs Number (Lilac Card)"/>
+		<definition value="An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a DVA Lilac card). DVA Lilac Cards are no longer in use and were issued by Department of Veterans’ Affairs (DVA) to eligible individuals 1987-1996."/>
 	</concept>
 	<concept>
 		<code value="DVO"/>
 		<display value="DVA Number (Orange Card)"/>
-		<definition value="Department of Veterans' Affairs Number (Orange Card)"/>
+		<definition value="An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran Orange Card (the new name for a DVA Orange card). A Veteran Orange Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card."/>
 	</concept>
 	<concept>
 		<code value="DVW"/>
 		<display value="DVA Number (White Card)"/>
-		<definition value="Department of Veterans' Affairs Number (White Card)"/>
+		<definition value="An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran White Card (the new name for a DVA White card). A Veteran White Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card."/>
 	</concept>
 	<concept>
 		<code value="ETP"/>
 		<display value="Electronic Transfer of Prescription Identifier"/>
-		<definition value="Identifier allocated by an ETP supplier, sometimes related to a barcorde."/>
+		<definition value="An identifier allocated by an Electronic Transfer of Prescription (ETP) supplier, sometimes related to a barcode."/>
 	</concept>
 	<concept>
 		<code value="LDI"/>
 		<display value="Local Dispense Identifier"/>
-		<definition value="Local dispensing identifier"/>
+		<definition value="An identifier unique to a dispense within the local system set of dispense records."/>
 	</concept>
     <concept>
 		<code value="LPN"/>
 		<display value="Local Prescription Number"/>
-		<definition value="Local requester system identifier for prescriptions"/>
+		<definition value="An identifier unique to a prescription within the local system set of prescriptions."/>
 	</concept>	
 	<concept>
 		<code value="LSPN"/>
@@ -111,22 +104,22 @@
 	<concept>
 		<code value="NDI"/>
 		<display value="National Device Identifier"/>
-		<definition value="Nationally assigned device identifier, that is commonly a PAI-D"/>
+		<definition value="An identifier unique to a device assigned by an identifier scheme managed at a national level, this is commonly a My Health Record Assigned Identity - Device (PAI-D) identifier."/>
 	</concept>
 	<concept>
 		<code value="NOI"/>
 		<display value="National Organisation Identifier"/>
-		<definition value="Nationally assigned organisation identifier, that is commonly a HPI-O"/>
+		<definition value="An identifier unique to a repository assigned by an identifier scheme managed at a national level, this is commonly a Healthcare Provider Identifier - Organisation (HPI-O) but may be a My Health Record Assigned Identity - Organisation (PAI-O) identifier."/>
 	</concept>
 	<concept>
 		<code value="NPIO"/>
         <display value="National provider at organisation identifier" />
-		<definition value="National provider at organisation identifier; combined identifier [HPI-I]@[HPI-O]"/>
+		<definition value="A National Provider Identifier at Organisation (NPIO) uniquely identifies an individual practitioner at an organisation using the practitioner’s HPI-I and organisation’s HPI-O to form the NPIO."/>
 	</concept>
 	<concept>
 		<code value="NRI"/>
 		<display value="National Repository Identifier"/>
-		<definition value="Nationally assigned repository identifier, that is commonly a PAI-R"/>
+		<definition value="An identifier unique to a repository assigned by an identifier scheme managed at a national level, this is commonly a My Health Record Assigned Identity - Repository (PAI-R) identifier."/>
 	</concept>
 	<concept>
 		<code value="PRES"/>
@@ -136,16 +129,16 @@
 	<concept>
 		<code value="SEN"/>
 		<display value="Commonwealth Seniors Health Card"/>
-		<definition value="Seniors healthcare card number assigned by Department of Health and Human Services"/>
+		<definition value="An identifier unique to an individual, used to confirm concessions by most government agencies and utility providers, as displayed on a Commonwealth Seniors Healthcare Card. A Commonwealth Seniors Healthcare Card may be issued by Services Australia or Department of Veterans’ Affairs (DVA) to an eligible individual to provide access to certain benefits."/>
 	</concept>
 	<concept>
 		<code value="UPIN"/>
 		<display value="Medicare Provider Number"/>
-		<definition value="Location specific Medicare Provider Number"/>
+		<definition value="A Medicare provider number, assigned by Services Australia under the Medicare program, to practitioners who provide services that are eligible for a Medicare benefit. This is a location-specific identifier, a practitioner may hold more than one."/>
 	</concept>
 	<concept>
 		<code value="VDI"/>
 		<display value="Vendor Directory Identifier"/>
-		<definition value="A unique vendor identifier allocated to a provider directory entry (PractitionerRole or HealthcareService), typically used for routing secure messages"/>
+		<definition value="A unique vendor identifier allocated to a provider directory entry (PractitionerRole or HealthcareService), typically used for routing secure messages."/>
 	</concept>
 </CodeSystem>
