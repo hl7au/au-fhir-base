@@ -39,5 +39,23 @@
         <code value="8665-2" />
       </fixedCoding>
     </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
   </differential>
 </StructureDefinition>
