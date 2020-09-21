@@ -235,38 +235,11 @@
     <element id="Immunization.protocolApplied.targetDisease">
       <path value="Immunization.protocolApplied.targetDisease"/>
       <short value="Vaccine disease target"/>
-    </element>
-    <element id="Immunization.protocolApplied.targetDisease.coding">
-      <path value="Immunization.protocolApplied.targetDisease.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Immunization.protocolApplied.targetDisease.coding:snomedTargetDisease">
-      <path value="Immunization.protocolApplied.targetDisease.coding"/>
-      <sliceName value="snomedTargetDisease"/>
-      <short value="Vaccination Target Disease (SNOMED CT)"/>
-      <max value="1"/>
       <binding>
-        <strength value="required"/>
+        <strength value="preferred"/>
         <valueSet
           value="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1"/>
       </binding>
-    </element>
-    <element id="Immunization.protocolApplied.targetDisease.coding:targetDiseaseNoInformation">
-      <path value="Immunization.protocolApplied.targetDisease.coding"/>
-      <sliceName value="targetDiseaseNoInformation"/>
-      <short value="No Information for Target Disease"/>
-      <max value="1"/>
-      <fixedCoding>
-        <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-        <code value="NI"/>
-        <display value="NoInformation"/>
-      </fixedCoding>
     </element>
   </differential>
 </StructureDefinition>

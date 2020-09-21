@@ -28,24 +28,28 @@
   <kind value="complex-type"/>
   <abstract value="false"/>
   <context>
-    <type value="element"/>
-    <expression value="Medication.code.coding"/>
+    <type value="fhirpath"/>
+    <expression value="Medication.code.ofType(CodeableConcept).coding"/>
   </context>
   <context>
-    <type value="element"/>
-    <expression value="MedicationRequest.medicationCodeableConcept.coding"/>
+    <type value="fhirpath"/>
+    <expression value="Medication.ingredient.item.ofType(CodeableConcept).coding"/>
   </context>
   <context>
-    <type value="element"/>
-    <expression value="MedicationDispense.medicationCodeableConcept.coding"/>
+    <type value="fhirpath"/>
+    <expression value="MedicationRequest.medication.ofType(CodeableConcept).coding"/>
   </context>
   <context>
-    <type value="element"/>
-    <expression value="MedicationStatement.medicationCodeableConcept.coding"/>
+    <type value="fhirpath"/>
+    <expression value="MedicationDispense.medication.ofType(CodeableConcept).coding"/>
   </context>
   <context>
-    <type value="element"/>
-    <expression value="MedicationAdministration.medicationCodeableConcept.coding"/>
+    <type value="fhirpath"/>
+    <expression value="MedicationStatement.medication.ofType(CodeableConcept).coding"/>
+  </context>
+  <context>
+    <type value="fhirpath"/>
+    <expression value="MedicationAdministration.medication.ofType(CodeableConcept).coding"/>
   </context>
   <context>
     <type value="element"/>
