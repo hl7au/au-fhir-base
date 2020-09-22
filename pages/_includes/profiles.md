@@ -31,15 +31,20 @@ These Profiles have been defined for this implementation guide.
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
-* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
-* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor
+* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
+
+## Lifestyle Factor Profiles
+* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor record
+
+## Pregnancy Related Profiles
+* [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) - last menstrual period record
+* [AU Gravidity](StructureDefinition-au-gravidity.html) - gravidity at a point in time record
+* [AU Parity](StructureDefinition-au-parity.html) - parity at a point in time record
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
 
 ## Profiles on Data Types 
-* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
-* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
 
 ### Profiles on Identifier Data Type
 * [AU Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) - identifier profile for an Australian Business Number (ABN)
@@ -66,3 +71,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
 * [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
+
+### Profiles on Other Data Types
+* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
+* [AU Base Dosage](StructureDefinition-au-dosage.html) -  dosage information with common local coding
