@@ -11,15 +11,16 @@
 			</p>
 			<p><b>id</b>: example0</p>
 			<p><b>meta</b>: </p>
-			<p><b>identifier</b>: Medicare Provider Number: 2426621B</p>
+			<p><b>identifier</b>: Medicare Provider Number: 1234561A</p>
 			<p><b>active</b>: true</p>
 			<p><b>practitioner</b>: <a href="Practitioner-example0.html">Generated Summary: id: example0; HPI-I: 8003619900015717, Prescriber Number: 453221, AHPRA Registration Number: MED0000932945,
-					Care Agency Employee Identifier: 9003600003999997; active; Helen Mayo ; helen.mayo@downunderhospital.com.au(WORK); <span title="Codes: {urn:ietf:bcp:47 asf}">Auslan</span></a></p>
+					Care Agency Employee Identifier: 9003600003999997; active; Helen Mayo ; helen.mayo@downunderhospital.example.com(WORK); <span title="Codes: {urn:ietf:bcp:47 asf}">Auslan</span></a></p>
 			<p><b>organization</b>: <a href="Organization-example0.html">Generated Summary: id: example0; HPI-O: 8003621566684455; active; name: Downunder Hospital;
 					helen.mayo@downunderhospital.example.com(WORK)</a></p>
-			<p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 17561000}">Cardiologist</span></p>
-			<p><b>location</b>: <a href="Location-example0.html">Generated Summary: id: example0; status: active; name: Downunder Hospital Blacktown; ph: 025553555(WORK)</a></p>
-			<p><b>telecom</b>: ph: 025557777(WORK), ph: 025558888(After Hours)</p>
+			<p><b>code</b>: <span title="Codes: {http://snomed.info/sct 17561000}">Cardiologist</span></p>
+			<p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 394579002}">Cardiology</span></p>
+			<p><b>location</b>: <a href="Location-example0.html">Generated Summary: id: example0; status: active; name: Downunder Hospital Blacktown; ph: 0255503555(WORK)</a></p>
+			<p><b>telecom</b>: ph: 0255507777(WORK), ph: 0255508888(After Hours)</p>
 		</div>
 	</text>
 	<identifier>
@@ -31,7 +32,7 @@
 			<text value="Medicare Provider Number"/>
 		</type>
 		<system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
-		<value value="2426621B"/>
+		<value value="1234561A"/>
 	</identifier>
 	<active value="true"/>
 	<practitioner>
@@ -40,11 +41,18 @@
 	<organization>
 		<reference value="Organization/example0"/>
 	</organization>
-	<specialty>
+	<code>
 		<coding>
 			<system value="http://snomed.info/sct"/>
 			<code value="17561000"/>
 			<display value="Cardiologist"/>
+		</coding>
+	</code>
+	<specialty>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="394579002"/>
+			<display value="Cardiology"/>
 		</coding>
 	</specialty>
 	<location>
@@ -52,7 +60,7 @@
 	</location>
 	<telecom>
 		<system value="phone"/>
-		<value value="025557777"/>
+		<value value="0255507777"/>
 		<use value="work"/>
 	</telecom>
 	<telecom>
@@ -66,6 +74,6 @@
 			</valueCodeableConcept>
 		</extension>
 		<system value="phone"/>
-		<value value="025558888"/>
+		<value value="0255508888"/>
 	</telecom>
 </PractitionerRole>
