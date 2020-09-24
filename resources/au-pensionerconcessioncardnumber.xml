@@ -6,7 +6,7 @@
   <name value="AUPensionerConcessionCardNumber" />
   <title value="AU Pensioner Concession Card Number" />
   <status value="draft" />
-  <date value="2020-07-17" />
+  <date value="2020-07-20" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a pensioner concession card number, assigned by Services Australia to pensioners and selected benefit to allow them to access specific goods and services at a concessional rate."/>
+  <description value="This identifier profile defines a Pensioner Concession Card number in an Australian context. This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as Unique Identifier Number (UIN) in the Centrelink Concession electronic System (CCeS)) as displayed on the individual's Pensioner Concession Card. An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -48,12 +48,11 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Pensioner Concession Card Number" />
-      <definition value="Pensioner concession card number, assigned by Services Australia to pensioners and selected benefit to allow them to access specific goods and services at a concessional rate."/>
+      <definition value="Pensioner Concession Card number as the Centrelink Customer Reference Number (CRN) (also referred to as Unique Identifier Number (UIN) in the Centrelink Concession electronic System (CCeS)) displayed on the individual's Pensioner Concession Card."/>
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for Pensioner Concession Card number" />
-      <definition value="Pensioner Concession Card number assigned to a person by Centrelink." />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -73,19 +72,16 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for Centrelink Customer Reference Number (CRN)" />
-      <definition value="Namespace for Centrelink Customer Reference Number (CRN) values." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Centrelink CRN" />
-      <definition value="10 character identifier NNNNNNNNNA." />
-      <comment value="A personal identifier assigned by Centrelink for the purposes of identifying people eligible for specific services." />
+      <short value="Centrelink CRN as displayed on the Pensioner Concession Card" />
+      <comment value="A Centrelink CRN is a 10 character identifier in the format of 9 digits ending with a letter." />
       <min value="1" />
       <example>
-        <label value="DHS CRN" />
+        <label value="Centrelink CRN" />
         <valueString value="307111942H" />
       </example>
       <maxLength value="10" />
