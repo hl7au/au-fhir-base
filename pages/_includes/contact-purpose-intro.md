@@ -9,6 +9,6 @@ This extension applies to the ContactPoint datatype and is used to represent the
 
 [Strahan General Practitioner Services](HealthcareService-example3.html)
 
-[Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
+[Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
 
