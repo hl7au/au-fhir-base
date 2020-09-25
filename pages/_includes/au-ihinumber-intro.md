@@ -1,6 +1,6 @@
 **AU Individual Healthcare Identifier**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines an Individual Healthcare Identifier - IHI [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/ihi/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/432495){:target="_blank"} in an Australian context.
+This identifier profile defines an Individual Healthcare Identifier (IHI)[<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/699117){:target="_blank"}[<sup>[2]</sup>](https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010){:target="_blank"} in an Australian context.
 
 #### Extensions
 Extensions used in this profile:
@@ -14,7 +14,7 @@ Individual Healthcare Identifier is defined as a 16 digit number.
 
 **Examples**
 
-[Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
+[Patient with IHI, Medicare card, and health care card](Patient-example0.html)
 
 [Patient with IHI and DVA Number](Patient-example1.html)
 
