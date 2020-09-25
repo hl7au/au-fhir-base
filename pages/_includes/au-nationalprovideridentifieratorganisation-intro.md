@@ -6,4 +6,4 @@ An NPIO identifies an individual practitioner at an organisation using the pract
 
 **Examples**
 
-[Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
+[Radiologist with national provider identifier at organisation](PractitionerRole-example1.html)

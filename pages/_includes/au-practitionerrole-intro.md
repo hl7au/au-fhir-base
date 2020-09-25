@@ -25,10 +25,10 @@ When coding PractitionerRole.code, a code from the value set [Australian and New
 
 [Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
-[Radiologist with HPI-I @ HPI-O identifier](PractitionerRole-example1.html)
+[Radiologist with national provider identifier at organisation](PractitionerRole-example1.html)
 
 [Pathologist with ABN-scoped employee number and SNOMED-CT coded specialty](PractitionerRole-example2.html)
 
 [General Practitioner with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example3.html)
 
-[Practitioner role with identifier including assigning authority](PractitionerRole-example4.html)
+[Practitioner role with Medicare provider number and vendor directory identifier, including assigning authorities](PractitionerRole-example4.html)
