@@ -4,4 +4,4 @@ This identifier profile defines a Health Care Card number[<sup>[1]</sup>](http:/
 
 **Examples**
 
-[Patient with IHI, Medicare Number, and Health Care Card](Patient-example0.html)
+[Patient with IHI, Medicare card, and health care card](Patient-example0.html)
