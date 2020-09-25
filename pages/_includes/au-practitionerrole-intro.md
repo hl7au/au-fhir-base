@@ -21,10 +21,12 @@ When it is necessary to indicate the purpose of a contact point (e.g. telecom), 
 
 **Examples**
 
-[Practitioner Role with Provider Number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
+[Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
-[Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
+[Radiologist with HPI-I @ HPI-O identifier](PractitionerRole-example1.html)
 
-[Pathologist with ABN-scoped employee number](PractitionerRole-example2.html)
+[Pathologist with ABN-scoped employee number and SNOMED-CT coded specialty](PractitionerRole-example2.html)
 
-[General Practitioner with Medicare Provider Number](PractitionerRole-example3.html)
+[General Practitioner with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example3.html)
+
+[Practitioner role with identifier including assigning authority](PractitionerRole-example4.html)
