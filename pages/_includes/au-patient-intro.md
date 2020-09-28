@@ -37,7 +37,7 @@ To indicate an interpreter service is required, extension interpreter required=t
 
 **Examples**
 
-[Patient with IHI, medicare card, and health care card](Patient-example0.html)
+[Patient with IHI, medicare card, and Health Care Card](Patient-example0.html)
 
 [Patient with IHI and DVA Number](Patient-example1.html)
 

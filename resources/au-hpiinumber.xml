@@ -6,7 +6,7 @@
   <name value="AUHPIINumber" />
   <title value="AU HPI-I Number" />
   <status value="draft" />
-  <date value="2020-03-31" />
+  <date value="2020-09-28" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Healthcare Provider Identifier - Individual - HPI-I in an Australian context." />
+  <description value="This identifier profile defines a Healthcare Provider Identifier - Individual (HPI-I) in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -48,10 +48,9 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Healthcare Provider Identifier – Individual (HPI-I)" />
-      <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
+      <definition value="Healthcare Provider Identifier for Individuals (HPI-I) assigned under the HI Service to healthcare providers involved in providing patient care." />
       <constraint>
         <key value="inv-hpii-0" />
-        <requirements value="The value shall be 16 digits." />
         <severity value="error" />
         <human value="HPI-I shall be 16 digits" />
         <expression value="value.matches('^([0-9]{16})$')" />
@@ -66,7 +65,6 @@
       </constraint>
       <constraint>
         <key value="inv-hpii-2" />
-        <requirements value="HPI-I shall pass the Luhn algorithm check" />
         <severity value="error" />
         <human value="HPI-I shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
@@ -94,17 +92,15 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for HPI-I" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="HPI-I number" />
+      <short value="HPI-I" />
       <min value="1" />
       <example>
-        <label value="HPI-I number" />
+        <label value="HPI-I" />
         <valueString value="8003619900015717" />
       </example>
       <maxLength value="16" />

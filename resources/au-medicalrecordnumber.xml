@@ -6,7 +6,7 @@
   <name value="AUMedicalRecordNumber" />
   <title value="AU Medical Record Number" />
   <status value="draft" />
-  <date value="2020-03-16" />
+  <date value="2020-09-29" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a medical record number in an Australian context." />
+  <description value="This identifier profile defines a Medical Record Number (MRN) (sometimes referred to as Unit Record Number (URN) or (UR)) in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -48,7 +48,7 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Medical Record Number (MRN)" />
-      <definition value="An assigned medical record number." />
+      <definition value="Medical Record Number (MRN) (sometimes referred to as Unit Record Number (URN) or (UR)) assigned by an institution to a patient’s record at that institution." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
@@ -72,18 +72,17 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Medical record number system namespace" />
-      <definition value="For a medical record number can use ABN scoped (http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/index.html), HPI-O scoped (http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/index.html)or another system URN defining scope of MRN allocation." />
+      <short value="System identifier namespace for the institution that assigned the MRN" />
       <min value="1" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Medical record number" />
+      <short value="MRN" />
       <min value="1" />
     </element>
     <element id="Identifier.assigner">
       <path value="Identifier.assigner" />
-      <short value="Medical record number assigning entity" />
+      <short value="Institution that assigned the MRN" />
       <min value="1" />
     </element>
   </differential>
