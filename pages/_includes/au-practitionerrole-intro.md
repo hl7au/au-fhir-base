@@ -19,12 +19,16 @@ Potentially useful extensions:
 #### Usage Notes
 When it is necessary to indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
 
+When coding PractitionerRole.code, a code from the value set [Australian and New Zealand Standard Classification of Occupations](https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1) may be used where a system is unable to provide a code from the preferred value set [Practitioner Role](https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1).
+
 **Examples**
 
 [Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
-[Radiologist with ABN-scoped employee number](PractitionerRole-example1.html)
+[Radiologist with National Provider Identifier at Organisation](PractitionerRole-example1.html)
 
-[Pathologist with ABN-scoped employee number](PractitionerRole-example2.html)
+[Pathologist with ABN-scoped employee number and SNOMED-CT coded specialty](PractitionerRole-example2.html)
 
 [General Practitioner with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example3.html)
+
+[Cardiologist with Medicare provider number and vendor directory identifier, with HL7 V2 Assigning Authority](PractitionerRole-example4.html)

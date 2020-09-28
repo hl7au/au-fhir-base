@@ -8,5 +8,6 @@ A practitioner may have more than one Medicare provider number if they deliver h
 
 [Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
 
-[General Practitioner with Medicare provider number](PractitionerRole-example3.html)
+[General Practitioner with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example3.html)
 
+[Cardiologist with Medicare provider number and vendor directory identifier, with HL7 V2 Assigning Authority](PractitionerRole-example4.html)

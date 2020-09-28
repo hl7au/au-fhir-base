@@ -9,4 +9,4 @@ See the Australian Digital Health Agency's [R4 FAQ](https://github.com/AuDigital
 
 **Examples**
 
-[Pathologist with ABN-scoped employee number](PractitionerRole-example2.html)
+[Pathologist with ABN-scoped employee number and SNOMED-CT coded specialty](PractitionerRole-example2.html)
