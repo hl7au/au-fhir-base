@@ -15,7 +15,7 @@
 		  <use value="work" />
 		</telecom>
 	</contact>
-	<description value="Smoking staus codes aligned with International Patient Summary"/>
+	<description value="Smoking staus codes"/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -25,62 +25,38 @@
 	<copyright value="HL7 Australia© 2020+; Licensed Under Creative Commons No Rights Reserved. This artifact includes content from LOINC&#xAE;. LOINC codes are copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee. Terms &amp; Conditions in https://loinc.org/license/"/>
   <compose>
     <include>
-      <system value="http://loinc.org"/>
-      <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="1"/>
-        </extension>
-        <code value="LA18976-3"/>
+      <system value="http://snomed.info/sct"/>
+         <concept>
+        <code value="449868002"/>
         <display value="Current every day smoker"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="2"/>
-        </extension>
-        <code value="LA18977-1"/>
+        <code value="428041000124106"/>
         <display value="Current some day smoker"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="3"/>
-        </extension>
-        <code value="LA15920-4"/>
+        <code value="8517006"/>
         <display value="Former smoker"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="4"/>
-        </extension>
-        <code value="LA18978-9"/>
+        <code value="266919005"/>
         <display value="Never smoker"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="5"/>
-        </extension>
-        <code value="LA18979-7"/>
+        <code value="77176002"/>
         <display value="Smoker, current status unknown"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="6"/>
-        </extension>
-        <code value="LA18980-5"/>
+        <code value="266927001"/>
         <display value="Unknown if ever smoked"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="7"/>
-        </extension>
-        <code value="LA18981-3"/>
-        <display value="Heavy tobacco smoker"/>
+        <code value="428071000124103"/>
+        <display value="Current Heavy tobacco smoker"/>
       </concept>
       <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-          <valueDecimal value="8"/>
-        </extension>
-        <code value="LA18982-1"/>
-        <display value="Light tobacco smoker"/>
+        <code value="428061000124105"/>
+        <display value="Current Light tobacco smoker"/>
       </concept>
     </include>
   </compose>

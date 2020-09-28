@@ -32,16 +32,18 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="248993009" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:lmpLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="lmpLOINCCode" />
-      <min value="1" />
-      <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://loinc.org" />
         <code value="8665-2" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />

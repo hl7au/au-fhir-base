@@ -35,16 +35,18 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="161732006" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:gravidityLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="gravidityLOINCCode" />
-      <min value="1" />
-      <max value="1" />
-      <fixedCoding>
+      <patternCoding>
         <system value="http://loinc.org" />
         <code value="11996-6" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -75,6 +77,7 @@
         <severity value="error" />
         <human value="gravidity must be a whole number" />
         <expression value="value.toString().contains('.').not()" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-gravidity" />
       </constraint>
     </element>
     <element id="Observation.value[x].system">

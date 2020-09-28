@@ -14,7 +14,7 @@
 			<p><b>identifier</b>: HPI-O: 8003621566684455</p>
 			<p><b>active</b>: true</p>
 			<p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 394603008}">Cardiothoracic surgery</span></p>
-			<p><b>telecom</b>: ph: 025553333(WORK), ph: 025554444(Medical Record)</p>
+			<p><b>telecom</b>: ph: 0255503333(WORK), ph: 0255504444(Medical Record), ph: 0255505555(After Hours)</p>
 			<h3>Eligibilities</h3>
 			<table class="grid">
 				<tr>
@@ -58,7 +58,7 @@
 	</specialty>
 	<telecom>
 		<system value="phone"/>
-		<value value="025553333"/>
+		<value value="0255503333"/>
 		<use value="work"/>
 	</telecom>
 	<telecom>
@@ -72,7 +72,20 @@
 			</valueCodeableConcept>
 		</extension>
 		<system value="phone"/>
-		<value value="025554444"/>
+		<value value="0255504444"/>
+	</telecom>
+	<telecom>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/contact-purpose">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+					<code value="after-hours"/>
+					<display value="After Hours"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<system value="phone"/>
+		<value value="0255505555"/>
 	</telecom>
 	<eligibility>
 		<code>

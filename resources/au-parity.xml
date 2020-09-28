@@ -35,16 +35,18 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364325004" />
+      </patternCoding>
     </element>
-    <element id="Observation.code.coding:ParityCode">
+    <element id="Observation.code.coding:parityLOINCCode">
       <path value="Observation.code.coding" />
-      <sliceName value="ParityCode" />
-      <min value="1" />
-      <max value="1" />
-      <fixedCoding>
+      <sliceName value="parityLOINCCode" />
+      <patternCoding>
         <system value="http://loinc.org" />
         <code value="11977-6" />
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -75,6 +77,7 @@
         <severity value="error" />
         <human value="Parity must be a whole number" />
         <expression value="value.toString().contains('.').not()" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-parity" />
       </constraint>
     </element>
     <element id="Observation.value[x].system">
