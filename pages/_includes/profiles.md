@@ -40,6 +40,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) - last menstrual period record
 * [AU Gravidity](StructureDefinition-au-gravidity.html) - gravidity at a point in time record
 * [AU Parity](StructureDefinition-au-parity.html) - parity at a point in time record
+* [AU Estimated Date of Delivery](StructureDefinition-au-estimateddateofdelivery.html) - estimated date of delivery; may be my scan or last menstrual period
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
