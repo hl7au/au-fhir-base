@@ -6,7 +6,7 @@
   <name value="AUIHINumber" />
   <title value="AU IHI Number" />
   <status value="draft" />
-  <date value="2020-03-16" />
+  <date value="2020-09-28" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines Individual Healthcare Identifier - IHI in an Australian context." />
+  <description value="This identifier profile defines an Individual Healthcare Identifier (IHI) in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,8 +47,8 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="National Individual Healthcare Identifier (IHI)" />
-      <definition value="Individual Healthcare Identifier assigned to a patient." />
+      <short value="Individual Healthcare Identifier (IHI)" />
+      <definition value="Individual Healthcare Identifier (IHI) assigned under the HI Service to a patient." />
       <constraint>
         <key value="inv-ihi-value-0" />
         <severity value="error" />
@@ -84,7 +84,6 @@
     <element id="Identifier:ihiNumber.extension:ihiStatus">
       <path value="Identifier.extension" />
       <sliceName value="ihiStatus" />
-      <short value="Individual Healthcare Identifier (IHI) Number Status" />
       <max value="1"/>
       <type>
         <code value="Extension" />
@@ -94,8 +93,6 @@
     <element id="Identifier:ihiNumber.extension:ihiRecordStatus">
       <path value="Identifier.extension" />
       <sliceName value="ihiRecordStatus" />
-      <short value="Individual Healthcare Identifier (IHI) Number Record Status" />
-      <definition value="Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier." />
       <max value="1"/>
       <type>
         <code value="Extension" />
@@ -105,7 +102,6 @@
     <element id="Identifier.type">
       <path value="Identifier.type" />
       <short value="Coded identifier type for IHI" />
-      <definition value="Individual Healthcare Identifier assigned to a patient." />
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
@@ -120,22 +116,19 @@
     </element>
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
-      <definition value="Individual Healthcare Identifier descriptive text." />
       <fixedString value="IHI" />
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for IHI" />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="IHI number" />
-      <definition value="16 digit Individual Healthcare Identifier with a prefix of 800360." />
+      <short value="IHI" />
       <min value="1" />
       <example>
-        <label value="IHI Number" />
+        <label value="IHI" />
         <valueString value="8003608833357361" />
       </example>
       <maxLength value="16" />

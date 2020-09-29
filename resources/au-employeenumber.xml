@@ -6,7 +6,7 @@
   <name value="AUEmployeeNumber" />
   <title value="AU Employee Number" />
   <status value="draft" />
-  <date value="2020-07-15" />
+  <date value="2020-09-29" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines an employee number for an individual staff member or service provider as issued by an employing organisation in an Australian context." />
+  <description value="This identifier profile defines an employee number (sometimes referred to as an Employee Identifier (EI)) in an Australian context. An employee number is an organisation’s identifier for an individual employed by that organisation." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -73,6 +73,7 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
+      <short value="System identifier namespace for the employing organisation" />
       <min value="1" />
     </element>
     <element id="Identifier.value">
@@ -87,7 +88,7 @@
     </element>
     <element id="Identifier.assigner.display">
       <path value="Identifier.assigner.display" />
-      <short value="Employing organisation name" />
+      <short value="Employing organisation's name" />
       <min value="1" />
     </element>
   </differential>

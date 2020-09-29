@@ -1,6 +1,6 @@
 **AU Australian Business Number**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines an Australian Business Number - ABN [<sup>[1]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"} in an Australian healthcare context.
+This identifier profile defines an Australian Business Number (ABN)[<sup>[1]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"} in an Australian context.
 
 **Examples**
 
