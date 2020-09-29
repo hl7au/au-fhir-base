@@ -65,16 +65,15 @@
       </constraint>
       <constraint>
         <key value="inv-hpio-2" />
-        <requirements value="HPI-O shall pass the Luhn algorithm" />
         <severity value="error" />
-        <human value="The identifier shall pass the Luhn algorithm" />
+        <human value="HPI-O shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpionumber" />
       </constraint>
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Identifier type for HPI-O" />
+      <short value="Coded identifier type for HPI-O" />
       <definition value="Healthcare Provider Identifier – Organisation (HPI-O) identifier type." />
       <patternCodeableConcept>
         <coding>
