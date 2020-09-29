@@ -59,6 +59,10 @@
       <slicing>
         <discriminator>
           <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
           <path value="system" />
         </discriminator>
         <rules value="open" />
@@ -72,6 +76,7 @@
     <element id="Observation.code.coding:smokingLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="smokingLOINCCode" />
+      <max value="1" />
       <patternCoding>
         <system value="http://loinc.org" />
         <code value="72166-2" />

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-estimated-date-of-delivery" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-estimated-date-of-delivery" />
+  <name value="AUEstimatedDateOfDelivery" />
+  <title value="AU Estimated Date of Delivery" />
+  <status value="draft" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="1376551000168107" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="EDD Calculation" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:eddScanSNOMEDCode">
+      <path value="Observation.code.coding" />
+      <sliceName value="eddScanSNOMEDCode" />
+      <short value="EDD by Scan (SNOMED)" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="738070007" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddLMPSNOMEDCode">
+      <path value="Observation.code.coding" />
+      <sliceName value="eddLMPSNOMEDCode" />
+      <short value="EDD by Last Menstrual Period (SNOMED)" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="289206005" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddLOINCCode">
+      <path value="Observation.code.coding" />
+      <sliceName value="eddLOINCCode" />
+      <short value="EDD (LOINC)" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="11778-8" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddScanLOINCCode">
+      <path value="Observation.code.coding" />
+      <sliceName value="eddScanLOINCCode" />
+      <short value="EDD by Scan (LOINC)" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="11781-2" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddLMPLOINCode">
+      <path value="Observation.code.coding" />
+      <sliceName value="eddLMPLOINCode" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="11779-6" />
+      </patternCoding>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="instant" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
