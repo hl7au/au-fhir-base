@@ -58,9 +58,9 @@ These Profiles have been defined for this implementation guide.
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
-* [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
-* [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
-* [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Individual Healthcare Identifier (IHI)
+* [AU HPI-I](StructureDefinition-au-hpii.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
+* [AU HPI-O](StructureDefinition-au-hpio.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
+* [AU IHI](StructureDefinition-au-ihi.html) - identifier profile for an Individual Healthcare Identifier (IHI)
 * [AU Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) - identifier profile for a Location Specific Practice Number (LSPN)
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for a Medical Record Number (MRN)
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for a Medicare card number
