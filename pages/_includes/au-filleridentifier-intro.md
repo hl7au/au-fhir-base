@@ -1,0 +1,6 @@
+**AU Filler Identifier**  *[[FMM Level 0](guidance.html)]*
+
+This identifier profile defines a Filler identifier[<sup>[1]</sup>](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.3ORC-3Fillerordernumber(EI)00217){:target="_blank"} [<sup>[2]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/accessionnumber/1.0/index.html){:target="_blank"} [<sup>[3]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0/index.html){:target="_blank"}  in an Australian context.
+A Filler Identifier is a unique identifier for each report and must uniquely identify the report from all other reports in a particular source system (e.g. diagnostic Imaging system, clinical laboratory system).
+
+This Report Identifier is the same concept as the Filler Order Number in the HL7 V2 specifications. In some laboratory systems, the Report Identifier may be a concatenation of a Lab Number and Report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same Lab Number. In diagnostic imaging and some pathology systems, the report identifier may be called an accession number as long as there is only a single accession number per report. Usually assigned by the Information System of the diagnostic service provider (filler id).

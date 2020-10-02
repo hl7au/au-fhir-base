@@ -57,6 +57,7 @@ These Profiles have been defined for this implementation guide.
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
+* [AU Filler Identifier](StructureDefinition-au-filleridentifier.html) - identifier profile for a Filler Identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
 * [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
 * [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
@@ -71,6 +72,7 @@ These Profiles have been defined for this implementation guide.
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
 * [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
+* [AU Placer Identifier](StructureDefinition-au-placeridentifier.html) - identifier profile for a Placer Identifier
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 
 ### Profiles on Other Data Types
