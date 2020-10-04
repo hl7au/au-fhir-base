@@ -4,6 +4,6 @@ This extension applies to the Patient resource and provides a coding for Austral
 
 **Examples**
 
-[Patient with IHI, Medicare card, and health care card](Patient-example0.html)
+[Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 
 [Patient with IHI and DVA Number](Patient-example1.html)

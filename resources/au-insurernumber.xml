@@ -6,7 +6,7 @@
   <name value="AUInsurerNumber" />
   <title value="AU Insurer Number" />
   <status value="draft" />
-  <date value="2020-07-16" />
+  <date value="2020-09-29" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Private Health Insurance Member Number in an Australian context." />
+  <description value="This identifier profile defines a private health insurance member number in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -67,9 +67,6 @@
       </binding>
     </element>
     <element id="Identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Identifier.type.text" />
       <fixedString value="Private Health Insurance Member Number" />
     </element>
@@ -84,10 +81,8 @@
       <min value="1" />
     </element>
     <element id="Identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Identifier.assigner.display" />
+      <short value="Name of private health insurer" />
       <min value="1" />
     </element>
   </differential>
