@@ -6,7 +6,7 @@
   <name value="AUPAIOIdentifier" />
   <title value="AU PAI-O Identifier" />
   <status value="draft" />
-  <date value="2020-07-17" />
+  <date value="2020-09-28" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a My Health Record Assigned Identity - Organisation (PAI-O) identifier in an Australian context." />
+  <description value="This identifier profile defines a My Health Record Assigned Identity - Organisation (PAI-O) in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -65,7 +65,6 @@
       </constraint>
       <constraint>
         <key value="inv-paio-2" />
-        <requirements value="PAI-O shall pass the Luhn algorithm" />
         <severity value="error" />
         <human value="PAI-O shall pass the Luhn algorithm" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
@@ -74,8 +73,7 @@
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Identifier type for PAI-O" />
-      <definition value="Element describing the type of identifier." />
+      <short value="Coded identifier type for PAI-O" />
     </element>    
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
@@ -83,18 +81,15 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for PAI-O" />
-      <definition value="This namespace is used for qualified identifiers to represent My Health Record (PCEHR) Assigned Identity for Organisations (PAI-O) numbers. This is an organisational identifier for organisations who are not eligible for an Healthcare Provider Identifier – Organisation (HPI-O). When represented as an OID, the prefix would be 1.2.36.1.2001.1007.1 An example of the syntax of a PAI-O represented as a qualified identifier using this namespace is: http://ns.electronichealth.net.au/id/pcehr/paio/1.0/800364wwwwxxxxxz where: wwww is '0001' is the resource management partition; xxxxx is issued by the system operator; z is the check digit derived using ISO/IEC 7812 across the 15-digit number." />
       <min value="1" />
       <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/paio/1.0" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="PAI-O number" />
-      <definition value="PAI-O number." />
+      <short value="PAI-O" />
       <min value="1" />
       <example>
-        <label value="PAI-O number" />
+        <label value="PAI-O" />
         <valueString value="8003640011000059" />
       </example>
       <maxLength value="16" />

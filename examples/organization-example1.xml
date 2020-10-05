@@ -19,9 +19,48 @@
 		</coding>		
 	</type>
 	<name value="Albion Hospital"/>
-	<telecom>
-		<system value="email"/>
-		<value value="enquiries@albionhospital.example.com"/>
-		<use value="work"/>
-	</telecom>	
+	<contact>
+		<purpose>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+				<code value="medical-record"/>
+				<display value="Medical Record"/>
+			</coding>
+		</purpose>
+		<telecom>
+			<system value="phone"/>
+			<value value="(07) 5550 5556"/>
+		</telecom>
+	</contact>
+	<contact>
+		<purpose>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+				<code value="PRESS"/>
+				<display value="Press"/>
+			</coding>
+			<text value="Media enquiries"/>
+		</purpose>
+		<telecom>
+			<system value="email"/>
+			<value value="press@albionhospital.example.com"/>
+		</telecom>
+		<telecom>
+			<system value="phone"/>
+			<value value="(07) 5550 5557"/>
+		</telecom>
+	</contact>
+	<contact>
+		<purpose>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+				<code value="HR"/>
+			</coding>			
+			<text value="Human Resources"/>
+		</purpose>
+		<telecom>
+			<system value="email"/>
+			<value value="hr@albionhospital.example.com"/>
+		</telecom>
+	</contact>
 </Organization>

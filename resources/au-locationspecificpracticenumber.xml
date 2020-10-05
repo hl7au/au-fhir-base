@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-locationspecificpracticenumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-locationspecificpracticenumber" />
+  <version value="2.1.0" />
+  <name value="AULocationSpecificPracticeNumber" />
+  <title value="AU Location Specific Practice Number" />
+  <status value="draft" />
+  <date value="2020-09-29" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a Location Specific Practice Number (LSPN) in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Location Specific Practice Number (LSPN)" />
+      <definition value="Location Specific Practice Number (LSPN) assigned to a specific location by Services Australia. An LSPN identifies an accredited practice site that provides diagnostic imaging and radiation oncology services." />
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
+          <code value="LSPN" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/location-specific-practice-number" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="LSPN" />
+      <min value="1" />
+      <example>
+        <label value="LSPN" />
+        <valueString value="100302" />
+      </example>
+    </element>
+  </differential>
+</StructureDefinition>
+
+

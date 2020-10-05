@@ -31,14 +31,21 @@ These Profiles have been defined for this implementation guide.
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
-* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding
+* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
+
+## Lifestyle Factor Profiles
+* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor record
+
+## Pregnancy Related Profiles
+* [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) - last menstrual period record
+* [AU Gravidity](StructureDefinition-au-gravidity.html) - gravidity at a point in time record
+* [AU Parity](StructureDefinition-au-parity.html) - parity at a point in time record
+* [AU Estimated Date of Delivery](StructureDefinition-au-estimateddateofdelivery.html) - estimated date of delivery; may be my scan or last menstrual period
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
 
 ## Profiles on Data Types 
-* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
-* [AU Base Dosage](StructureDefinition-au-dosage.html) - dosage information with common local coding
 
 ### Profiles on Identifier Data Type
 * [AU Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) - identifier profile for an Australian Business Number (ABN)
@@ -50,13 +57,16 @@ These Profiles have been defined for this implementation guide.
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
+* [AU ETP Vendor Identifier](StructureDefinition-au-etpvendoridentifier.html) - identifier profile for an Electronic Prescription Transfer (ETP) vendor identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
-* [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
-* [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
-* [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Individual Healthcare Identifier (IHI)
+* [AU HPI-I](StructureDefinition-au-hpii.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
+* [AU HPI-O](StructureDefinition-au-hpio.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
+* [AU IHI](StructureDefinition-au-ihi.html) - identifier profile for an Individual Healthcare Identifier (IHI)
+* [AU Local Dispense Identifier](StructureDefinition-au-localdispenseidentifier.html) - identifier profile for a local dispense identifier
+* [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html) - identifier profile for a local prescription identifier
+* [AU Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) - identifier profile for a Location Specific Practice Number (LSPN)
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for a Medical Record Number (MRN)
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for a Medicare card number
-* [AU Medicare Prescriber Number](StructureDefinition-au-medicareprescribernumber.html) - identifier profile for a Medicare prescriber number
 * [AU Medicare Provider Number](StructureDefinition-au-medicareprovidernumber.html) - identifier profile for a Medicare provider number
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) - identifier profile for a National Association of Testing Authorities (NATA) site number
@@ -64,4 +74,9 @@ These Profiles have been defined for this implementation guide.
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) - identifier profile for a Pharmacy Approval Number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
+* [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
+
+### Profiles on Other Data Types
+* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
+* [AU Base Dosage](StructureDefinition-au-dosage.html) -  dosage information with common local coding

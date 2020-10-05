@@ -13,7 +13,7 @@ There are two preferred value sets when coding Organization.type:
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
-* [Healthcare Provider Identifier – Organisation (HPI-O)](StructureDefinition-au-hpionumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"}
+* [Healthcare Provider Identifier – Organisation (HPI-O)](StructureDefinition-au-hpio.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"}
 * [My Health Record Assigned Identity - Organisation (PAI-O)](StructureDefinition-au-paioidentifier.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/pcehr/paio/1.0/index.html){:target="_blank"}
 * [Contracted Service Provider (CSP) Registration Number](StructureDefinition-au-cspregistrationnumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/csp/1.0/index.html){:target="_blank"}
 * ASIC Identifiers - [Australian Business Number (ABN)](StructureDefinition-au-australianbusinessnumber.html) [<sup>[1]</sup>](http://hl7.org.au/id/abn ){:target="_blank"} [<sup>[2]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"}, [Australian Company Number (ACN)](StructureDefinition-au-australiancompanynumber.html) [<sup>[3]</sup>](http://hl7.org.au/id/acn){:target="_blank"} [<sup>[4]</sup>](http://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/australian-company-numbers/australian-company-number-digit-check){:target="_blank"} and [Australian Registered Body Number (ARBN)](StructureDefinition-au-australianregistredbodynumber.html) [<sup>[5]</sup>](http://hl7.org.au/id/arbn){:target="_blank"}
@@ -23,11 +23,16 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 #### Extensions
 No extensions are used in this profile.
 
+#### Usage Notes
+Contact details and associated contact purpose are encouraged to be sent in Organization.contact over making use of the [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html) extension.
+
 #### Examples
 
 [Organisation with HPI-O](Organization-example0.html)
 
 [Albion Hospital with Australian Business Number](Organization-example1.html)
+
+[Holistic Medical Pty Ltd with ABN and HPI-O](Organization-example2.html)
 
 [Devonport Family Medicine Clinic with Australian Business Number](Organization-example3.html)
 

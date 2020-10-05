@@ -1,105 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-encounter"/>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
-  <version value="2.1.0"/>
-  <name value="AUBaseEncounter"/>
-  <title value="AU Base Encounter"/>
-  <status value="draft"/>
-  <date value="2020-03-18"/>
-  <publisher value="Health Level Seven Australia (Patient Administration WG)"/>
+  <id value="au-encounter" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-encounter" />
+  <version value="2.1.0" />
+  <name value="AUBaseEncounter" />
+  <title value="AU Base Encounter" />
+  <status value="draft" />
+  <date value="2020-03-18" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
-      <system value="url"/>
-      <value value="http://hl7.com.au"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description
-    value="This profile defines an encounter structure including core localisation concepts for use in an Australian context."/>
+  <description value="This profile defines an encounter structure including core localisation concepts for use in an Australian context." />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="AU"/>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
     </coding>
   </jurisdiction>
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Encounter"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
-  <derivation value="constraint"/>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
   <differential>
     <element id="Encounter">
-      <path value="Encounter"/>
-      <short value="An encounter in an Australian healthcare context"/>
+      <path value="Encounter" />
+      <short value="An encounter in an Australian healthcare context" />
     </element>
     <element id="Encounter.extension">
-      <path value="Encounter.extension"/>
+      <path value="Encounter.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Encounter.extension:encounterDescription">
-      <path value="Encounter.extension"/>
-      <sliceName value="encounterDescription"/>
-      <short value="Encounter description"/>
-      <max value="1"/>
+      <path value="Encounter.extension" />
+      <sliceName value="encounterDescription" />
+      <short value="Encounter description" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/encounter-description"/>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/encounter-description" />
       </type>
     </element>
     <element id="Encounter.extension:associatedHealthcareService">
-      <path value="Encounter.extension"/>
-      <sliceName value="associatedHealthcareService"/>
-      <min value="0"/>
-      <max value="*"/>
+      <path value="Encounter.extension" />
+      <sliceName value="associatedHealthcareService" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice"/>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice" />
       </type>
     </element>
-    <element id="Encounter.hospitalization">
-      <path value="Encounter.hospitalization"/>
-    </element>
-    <element id="Encounter.hospitalization.extension">
-      <path value="Encounter.hospitalization.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition">
-      <path value="Encounter.hospitalization.dischargeDisposition"/>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Classification of the encounter." />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/v3-ActEncounterCode" />
+      </binding>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding"/>
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding:separationMode">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding"/>
-      <sliceName value="separationMode"/>
-      <short value="Separation Mode"/>
-      <definition value="Category or kind of location after discharge."/>
-      <max value="1"/>
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+      <sliceName value="separationMode" />
+      <short value="Separation Mode" />
+      <definition value="Category or kind of location after discharge." />
+      <max value="1" />
       <binding>
-        <strength value="required"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1"/>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1" />
       </binding>
     </element>
   </differential>

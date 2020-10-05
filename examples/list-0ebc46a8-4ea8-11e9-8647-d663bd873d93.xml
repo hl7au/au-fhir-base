@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <List xmlns="http://hl7.org/fhir">
     <id value="0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+    </meta>
     <text>
         <status value="extensions"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -64,8 +67,8 @@
                     <tr>
                         <th>Consultation summary</th>
                         <td>Patient presented with weakness over the last couple of days. No other
-                            symptoms. Revised patient's medications. Advised patient to
-                            see the usual GPs clinic for further consultation and review. </td>
+                            symptoms. Revised patient's medications. Advised patient to see the
+                            usual GPs clinic for further consultation and review. </td>
                     </tr>
                 </tbody>
             </table>
@@ -147,10 +150,10 @@
             <medicationCodeableConcept>
                 <text value="Multi-vitamins"/>
             </medicationCodeableConcept>
-            <dateAsserted value="2019-03-15"/>
             <subject>
                 <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
             </subject>
+            <dateAsserted value="2019-03-15"/>
             <dosage>
                 <text value="1 tablet daily"/>
             </dosage>
@@ -163,10 +166,10 @@
             <medicationCodeableConcept>
                 <text value="Spiriva (tiotropium bromide 18mg per inhalation) inhalant"/>
             </medicationCodeableConcept>
-            <dateAsserted value="2019-03-15"/>
             <subject>
                 <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
             </subject>
+            <dateAsserted value="2019-03-15"/>
             <reasonCode>
                 <text value="COPD"/>
             </reasonCode>
@@ -390,7 +393,7 @@
             </type>
             <priority>
                 <coding>
-                    <system value="http://hl7.org/fhir/v3/ActPriority"/>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActPriority"/>
                     <code value="R"/>
                 </coding>
             </priority>
