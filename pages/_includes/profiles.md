@@ -57,10 +57,13 @@ These Profiles have been defined for this implementation guide.
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
+* [AU ETP Vendor Identifier](StructureDefinition-au-etpvendoridentifier.html) - identifier profile for an Electronic Prescription Transfer (ETP) vendor identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
-* [AU HPI-I Number](StructureDefinition-au-hpiinumber.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
-* [AU HPI-O Number](StructureDefinition-au-hpionumber.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
-* [AU IHI Number](StructureDefinition-au-ihinumber.html) - identifier profile for an Individual Healthcare Identifier (IHI)
+* [AU HPI-I](StructureDefinition-au-hpii.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
+* [AU HPI-O](StructureDefinition-au-hpio.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
+* [AU IHI](StructureDefinition-au-ihi.html) - identifier profile for an Individual Healthcare Identifier (IHI)
+* [AU Local Dispense Identifier](StructureDefinition-au-localdispenseidentifier.html) - identifier profile for a local dispense identifier
+* [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html) - identifier profile for a local prescription identifier
 * [AU Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) - identifier profile for a Location Specific Practice Number (LSPN)
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) - identifier profile for a Medical Record Number (MRN)
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) - identifier profile for a Medicare card number

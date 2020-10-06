@@ -19,15 +19,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="1376551000168107" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <slicing>
@@ -43,6 +34,10 @@
       </slicing>
       <short value="EDD Calculation" />
       <min value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="161714006" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:eddScanSNOMEDCode">
       <path value="Observation.code.coding" />
