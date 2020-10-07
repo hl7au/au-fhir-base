@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-etpvendoridentifier" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-etpvendoridentifier" />
+  <id value="au-etpprescriptionidentifier" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-etpprescriptionidentifier" />
   <version value="1.1.0" />
-  <name value="AUETPVendorIdentifier" />
-  <title value="AU ETP Vendor Identifier" />
+  <name value="AUETPPrescriptionIdentifier" />
+  <title value="AU ETP Prescription Identifier" />
   <status value="draft" />
   <date value="2020-10-01" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines an Electronic Prescription Transfer (ETP) vendor identifier in an Australian context." />
+  <description value="This identifier profile defines an Electronic Prescription Transfer (ETP) prescription identifier in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,11 +47,12 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier"/>
-      <short value="Electronic Transfer of Prescription (ETP) Vendor Identifier"/>
-      <definition value="Electronic Transfer of Prescription (ETP) vendor identifier assigned by an ETP vendor, e.g. ERx or Medisecure, to a prescription. This identifier is the assigned numeric value of the barcode on a prescription instance."/>
+      <short value="Electronic Transfer of Prescription (ETP) Prescription Identifier"/>
+      <definition value="Electronic Transfer of Prescription (ETP) prescription identifier assigned by an ETP vendor, e.g. ERx or Medisecure, to a prescription. This identifier is the assigned numeric value of the barcode on a prescription instance."/>
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type"/>
+      <short value="Coded identifier type for ETP prescription identifier" />
       <min value="1"/>
       <binding>
         <strength value="required"/>
@@ -81,20 +82,20 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system"/>
-      <short value="ETP vendor identifier system URL"/>
+      <short value="Namespace for ETP prescription identifier"/>
       <definition value="URL assigned by the ETP (electronic transfer of prescription) vendor allocating the identifier."/>
       <min value="1"/>
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value"/>
-      <short value="ETP vendor identifier"/>
+      <short value="ETP prescription identifier"/>
       <definition value="ETP Vendor allocated identifier for the request this dispense record is fulfilling."/>
       <min value="1"/>
     </element>
     <element id="Identifier.assigner">
       <path value="Identifier.assigner"/>
       <short value="ETP vendor"/>
-      <definition value="ETP Vendor assigning this identifier"/>
+      <definition value="ETP vendor assigning this identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.assigner.display">
