@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Filler Identifier in an Australian context." />
+  <description value="This identifier profile defines a filler identifier in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -48,12 +48,12 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Filler Identifier" />
-      <definition value="A Report Identifier is a unique identifier for each report. It must uniquely identify the report from all other reports in a particular source system (e.g. diagnostic Imaging system, clinical laboratory system). This uniqueness must persist over time. This Report Identifier is the same concept as the Filler Order Number in the HL7 V2 specifications. In some laboratory systems, the Report Identifier may be a concatenation of a Lab Number and Report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same Lab Number. In diagnostic imaging and some pathology systems, the report identifier may be called an accession number as long as there is only a single accession number per report." />
-      <comment value="Usually assigned by the Information System of the diagnostic service provider (filler id)." />
+      <definition value="A report identifier is a unique identifier for each report. It must uniquely identify the report from all other reports in a particular source system (e.g. diagnostic imaging system, clinical laboratory system). This uniqueness must persist over time. This report identifier is the same concept as the Filler Order Number in the HL7 V2 specifications. In some laboratory systems, the report identifier may be a concatenation of a lab number and report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same lab number. In diagnostic imaging and some pathology systems, the report identifier may be called an accession number as long as there is only a single accession number per report." />
+      <comment value="Usually assigned by the information system of the diagnostic service provider (filler id)." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Coded identifier type for Filler Identifier" />
+      <short value="Coded identifier type for filler identifier" />
       <min value="1" />
       <binding>
         <strength value="required" />
@@ -77,7 +77,7 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Filler identifier system namespace" />
+      <short value="Namespace for filler identifier" />
       <min value="1" />
     </element>
     <element id="Identifier.value">
