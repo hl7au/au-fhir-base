@@ -2,6 +2,9 @@
 
 This identifier profile defines an Australian Business Number (ABN)[<sup>[1]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"} in an Australian context.
 
+#### Usage Notes
+When coding Identifier.type, the preferred coding from the required [V2 Identifier Type - AU Extended](ValueSet-au-hl7v2-0203.html) value set is 'XX' (Organization identifier) sent with a text value 'ABN'.
+
 **Examples**
 
 [Albion Hospital with Australian Business Number](Organization-example1.html)
