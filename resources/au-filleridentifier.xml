@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-filleridentifier" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-filleridentifier" />
+  <version value="2.1.0" />
+  <name value="AUFillerIdentifier" />
+  <title value="AU Filler Identifier" />
+  <status value="draft" />
+  <date value="2020-10-02" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a filler identifier in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Filler Identifier" />
+      <definition value="A report identifier is a unique identifier for each report. It must uniquely identify the report from all other reports in a particular source system (e.g. diagnostic imaging system, clinical laboratory system). This uniqueness must persist over time. This report identifier is the same concept as the Filler Order Number in the HL7 V2 specifications. In some laboratory systems, the report identifier may be a concatenation of a lab number and report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same lab number. In diagnostic imaging and some pathology systems, the report identifier may be called an accession number as long as there is only a single accession number per report." />
+      <comment value="Usually assigned by the information system of the diagnostic service provider (filler id)." />
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <short value="Coded identifier type for filler identifier" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203" />
+      </binding>
+    </element>
+    <element id="Identifier.type.coding">
+      <path value="Identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Identifier.type.coding.system">
+      <path value="Identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+    </element>
+    <element id="Identifier.type.coding.code">
+      <path value="Identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="FILL" />
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <short value="Namespace for filler identifier" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="Filler identifier" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
