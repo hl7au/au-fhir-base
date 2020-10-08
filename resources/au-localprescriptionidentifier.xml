@@ -6,8 +6,8 @@
   <name value="AULocalPrescriptionIdentifier" />
   <title value="AU Local Prescription Identifier" />
   <status value="draft" />
-  <date value="2020-09-30" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <date value="2020-10-09" />
+  <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
       <system value="url" />
@@ -82,21 +82,22 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for local prescription identifier"/>
-      <definition value="URL namespace assigned by the local prescription system."/>
+      <short value="System identifier namespace for the organisation that assigned the prescription identifier"/>
       <min value="1" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Prescription number"/>
+      <short value="Prescription identifier"/>
       <min value="1" />
     </element>
     <element id="Identifier.assigner">
       <path value="Identifier.assigner"/>
+      <short value="Organisation that assigned the prescription identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.assigner.display">
       <path value="Identifier.assigner.display"/>
+      <short value="Name of the assigning organisation"/>
       <min value="1"/>
     </element>
   </differential>

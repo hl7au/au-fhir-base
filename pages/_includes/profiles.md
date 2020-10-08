@@ -57,7 +57,7 @@ These Profiles have been defined for this implementation guide.
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
-* [AU ETP Vendor Identifier](StructureDefinition-au-etpvendoridentifier.html) - identifier profile for an Electronic Prescription Transfer (ETP) vendor identifier
+* [AU ETP Prescription Identifier](StructureDefinition-au-etpprescriptionidentifier.html) - identifier profile for an Electronic Prescription Transfer (ETP) prescription identifier
 * [AU Filler Identifier](StructureDefinition-au-filleridentifier.html) - identifier profile for a filler identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
 * [AU HPI-I](StructureDefinition-au-hpii.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
