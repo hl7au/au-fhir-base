@@ -1,0 +1,50 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="dva-entitlement"/>
+	<url value="http://terminology.hl7.org.au/ValueSet/dva-entitlement"/>
+	<identifier> 
+		<system value="urn:ietf:rfc:3986"/> 
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.TBD"/> 
+	</identifier> 
+	<version value="1.0.0"/>
+	<name value="DVAEntitlement"/>
+	<title value="DVA Entitlement"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<date value="2020-09-15"/>
+	<publisher value="Health Level Seven Australia (Patient Administration WG)"/>
+	<contact>
+		<telecom>
+		  <system value="url" />
+		  <value value="http://hl7.com.au" />
+		  <use value="work" />
+		</telecom>
+	</contact>
+	<description value="Entitlement types that may be associated with an individual's Department of Veterans’ Affairs (DVA) File Number on a DVA issued health card in an Australian context."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+	<compose>
+		<include> 
+			<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/> 
+			<concept> 
+				<code value="DVAU"/> 
+			</concept> 
+			<concept> 
+				<code value="DVG"/> 
+			</concept> 
+			<concept> 
+				<code value="DVL"/> 
+			</concept> 
+			<concept> 
+				<code value="DVO"/> 
+			</concept> 
+			<concept> 
+				<code value="DVW"/> 
+			</concept> 
+		</include> 
+	</compose> 
+</ValueSet>
