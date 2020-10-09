@@ -6,8 +6,8 @@
   <name value="AULocalDispenseIdentifier" />
   <title value="AU Local Dispense Identifier" />
   <status value="draft" />
-  <date value="2020-09-30" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <date value="2020-10-09" />
+  <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
       <system value="url" />
@@ -77,21 +77,22 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system"/>
-      <short value="Namespace for local dispense record identifier"/>
-      <definition value="URL assigned by the local dispensing system."/>
+      <short value="System identifier namespace for the organisation that assigned the dispense identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value"/>
-      <short value="Dispense record identifier"/>
+      <short value="Dispense identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.assigner">
       <path value="Identifier.assigner"/>
+      <short value="Organisation that assigned the dispense identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.assigner.display">
       <path value="Identifier.assigner.display"/>
+      <short value="Name of the assigning organisation"/>
       <min value="1"/>
     </element>
   </differential>
