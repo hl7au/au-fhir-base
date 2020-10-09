@@ -15,7 +15,8 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="Pharmacy Approval Number assigned by the Department of Health to pharmacies that are approved to supply pharmaceutical benefits at particular premises under the the National Health Act 1953. 
+  <description
+    value="Pharmacy approval number assigned by the Department of Health to pharmacies that are approved to supply pharmaceutical benefits at particular premises under the the National Health Act 1953. 
     "/>
   <jurisdiction>
     <coding>
@@ -49,11 +50,13 @@
     <element id="Identifier">
       <path value="Identifier"/>
       <short value="Pharmacy Approval Number"/>
-      <definition value="Pharmacy Approval Number assigned by the Department of Health to a pharmacy that is approved to supply pharmaceutical benefits at particular premise."/>
+      <definition
+        value="Pharmacy approval number assigned by the Department of Health to a pharmacy that is approved to supply pharmaceutical benefits at particular premise."
+      />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type"/>
-      <short value="Coded identifier type for Pharmacy Approval Number"/>
+      <short value="Coded identifier type for pharmacy approval number"/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -61,6 +64,11 @@
           <code value="PAN"/>
         </coding>
       </patternCodeableConcept>
+      <binding>
+        <strength value="required"/>
+        <description value="Local Identifier Type"/>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
+      </binding>
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system"/>

@@ -75,7 +75,7 @@ These Profiles have been defined for this implementation guide.
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) - identifier profile for an Pensioner Concession Card number
-* [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) - identifier profile for a Pharmacy Approval Number
+* [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) - identifier profile for a pharmacy approval number
 * [AU Placer Identifier](StructureDefinition-au-placeridentifier.html) - identifier profile for a placer identifier
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 
