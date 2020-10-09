@@ -1,0 +1,3 @@
+**AU Local Order Identifier**  *[[FMM Level 0](guidance.html)]*
+
+This identifier profile defines a local order identifier[<sup>[1]</sup>](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.2ORC-2Localordernumber(EI)00216){:target="_blank"} in an Australian context. A local order identifier is the placing entity's (organisation, service, individual) identifier for an order in that organisation’s local system set of orders.

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-placerorderidentifier"/>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-placerorderidentifier"/>
+  <id value="au-localorderidentifier"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier"/>
   <version value="1.0.0"/>
-  <name value="AUPlacerOrderIdentifier"/>
-  <title value="AU Placer Order Identifier"/>
+  <name value="AULocalOrderIdentifier"/>
+  <title value="AU Local Order Identifier"/>
   <status value="draft"/>
   <date value="2020-10-09"/>
   <publisher value="Health Level Seven Australia (Orders and Observations WG)"/>
@@ -15,7 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="This identifier profile defines a placer order identifier in an Australian context. This identifier is associated with the person or service that requests or places an order."/>
+  <description value="This identifier profile defines a local order identifier in an Australian context. This identifier is associated with the person or service that requests or places an order."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,13 +47,13 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier"/>
-      <short value="Placer Order Identifier"/>
+      <short value="Local Order Identifier"/>
       <definition value="The identifier associated with the person or service that requests or places an order."
       />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type"/>
-      <short value="Coded identifier type for placer order identifier"/>
+      <short value="Coded identifier type for local order identifier"/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -64,12 +64,12 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system"/>
-      <short value="Namespace for placer identifier"/>
+      <short value="Namespace for local identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value"/>
-      <short value="Placer identifier"/>
+      <short value="Local identifier"/>
       <min value="1"/>
     </element>
     <element id="Identifier.assigner">

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-fillerorderidentifier" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-fillerorderidentifier" />
+  <id value="au-localreportidentifier" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-localreportidentifier" />
   <version value="1.0.0" />
-  <name value="AUFillerOrderIdentifier" />
-  <title value="AU Filler Order Identifier" />
+  <name value="AULocalReportIdentifier" />
+  <title value="AU Local Report Identifier" />
   <status value="draft" />
   <date value="2020-10-09" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a filler order identifier in an Australian context." />
+  <description value="This identifier profile defines a local report identifier in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -53,7 +53,7 @@
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Coded identifier type for filler order identifier" />
+      <short value="Coded identifier type for local report identifier" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -64,7 +64,7 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for filler identifier" />
+      <short value="Namespace for local report identifier" />
       <min value="1" />
     </element>
     <element id="Identifier.value">
