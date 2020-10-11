@@ -14,7 +14,7 @@ Medicare card numbers are not used for uniquely identifying patients, they are i
 
 **Examples**
 
-[Patient with IHI, Medicare card, and health care card](Patient-example0.html)
+[Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 
 [Patient with no birth date, and eligible for Closing the Gap registration](Patient-example2.html)
 

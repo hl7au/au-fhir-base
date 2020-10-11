@@ -59,6 +59,10 @@
       <slicing>
         <discriminator>
           <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
           <path value="system" />
         </discriminator>
         <rules value="open" />
@@ -66,12 +70,13 @@
       <min value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
-        <code value="229819007" />
+        <code value="266918002" />
       </patternCoding>
     </element>
     <element id="Observation.code.coding:smokingLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="smokingLOINCCode" />
+      <max value="1" />
       <patternCoding>
         <system value="http://loinc.org" />
         <code value="72166-2" />

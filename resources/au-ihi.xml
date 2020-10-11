@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-hpiinumber" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
+  <id value="au-ihi" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-ihi" />
   <version value="2.1.0" />
-  <name value="AUHPIINumber" />
-  <title value="AU HPI-I Number" />
+  <name value="AUIHI" />
+  <title value="AU IHI" />
   <status value="draft" />
-  <date value="2020-03-31" />
+  <date value="2020-10-09" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Healthcare Provider Identifier - Individual - HPI-I in an Australian context." />
+  <description value="This identifier profile defines an Individual Healthcare Identifier (IHI) in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,39 +47,65 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Healthcare Provider Identifier – Individual (HPI-I)" />
-      <definition value="National identifier Healthcare Provider Identifier for Individuals (HPI-I)." />
+      <short value="Individual Healthcare Identifier (IHI)" />
+      <definition value="Individual Healthcare Identifier (IHI) assigned under the HI Service to a patient." />
       <constraint>
-        <key value="inv-hpii-0" />
-        <requirements value="The value shall be 16 digits." />
+        <key value="inv-ihi-value-0" />
         <severity value="error" />
-        <human value="HPI-I shall be 16 digits" />
+        <human value="IHI shall be an exactly 16 digit number" />
         <expression value="value.matches('^([0-9]{16})$')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-ihi" />
       </constraint>
       <constraint>
-        <key value="inv-hpii-1" />
+        <key value="inv-ihi-value-1" />
         <severity value="error" />
-        <human value="HPI-I prefix shall be 800361" />
-        <expression value="value.startsWith('800361')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
+        <human value="IHI prefix is 800360" />
+        <expression value="value.startsWith('800360')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-ihi" />
       </constraint>
       <constraint>
-        <key value="inv-hpii-2" />
-        <requirements value="HPI-I shall pass the Luhn algorithm check" />
+        <key value="inv-ihi-value-2" />
         <severity value="error" />
-        <human value="HPI-I shall pass the Luhn algorithm check" />
+        <human value="IHI shall pass the Luhn algorithm check" />
         <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hpiinumber" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-ihi" />
       </constraint>
+    </element>
+    <element id="Identifier.extension">
+      <path value="Identifier.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Identifier.extension:ihiStatus">
+      <path value="Identifier.extension" />
+      <sliceName value="ihiStatus" />
+      <max value="1"/>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
+      </type>
+    </element>
+    <element id="Identifier.extension:ihiRecordStatus">
+      <path value="Identifier.extension" />
+      <sliceName value="ihiRecordStatus" />
+      <max value="1"/>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" />
+      </type>
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
-      <short value="Coded identifier type for HPI-I" />
+      <short value="Coded identifier type for IHI" />
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-          <code value="NPI" />
+          <code value="NI" />
         </coding>
       </patternCodeableConcept>
       <binding>
@@ -90,22 +116,20 @@
     </element>
     <element id="Identifier.type.text">
       <path value="Identifier.type.text" />
-      <fixedString value="HPI-I" />
+      <fixedString value="IHI" />
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system" />
-      <short value="Namespace for HPI-I" />
-      <definition value="This namespace is used for qualified identifiers to represent Healthcare Provider Identifier for Individuals (HPI-I) numbers. An example of the syntax of a HPI-I represented as a qualified identifer using this namespace is: http://ns.electronichealth.net.au/id/hi/hpii/1.0/8003610000000000." />
       <min value="1" />
-      <fixedUri value="http://ns.electronichealth.net.au/id/hi/hpii/1.0" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0" />
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="HPI-I number" />
+      <short value="IHI" />
       <min value="1" />
       <example>
-        <label value="HPI-I number" />
-        <valueString value="8003619900015717" />
+        <label value="IHI" />
+        <valueString value="8003608833357361" />
       </example>
       <maxLength value="16" />
     </element>

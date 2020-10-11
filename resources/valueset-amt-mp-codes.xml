@@ -5,12 +5,12 @@
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.16"/>
 	</identifier>
-	<version value="2.1.0"/>
-	<name value="AMTMedicinalProduct"/>
-	<title value="AMT Medicinal Product"/>
+	<version value="2.2.0"/>
+	<name value="AMTMedicinalProductAndSubstances"/>
+	<title value="AMT Medicinal Product ad Substances"/>
 	<status value="active"/>
 	<experimental value="false"/>
-	<date value="2020-05-01"/>
+	<date value="2020-10-11"/>
 	<publisher value="Health Level Seven Australia"/>
 	<contact>
 		<telecom>
@@ -19,7 +19,7 @@
 			<use value="work"/>
 		</telecom>
 	</contact>
-	<description value="Medicines set for AMT Medicinal Product (MP) refset"/>
+	<description value="Medicines set for AMT Medicinal Product (MP) refset; and substances"/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -36,6 +36,9 @@
 				<op value="in"/>
 				<value value="929360061000036106"/>
 			</filter>
+		</include>
+		<include>
+			<valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/substance-1"/>
 		</include>
 	</compose>
 </ValueSet>

@@ -27,6 +27,10 @@
       <slicing>
         <discriminator>
           <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
           <path value="system" />
         </discriminator>
         <rules value="open" />
@@ -40,6 +44,7 @@
     <element id="Observation.code.coding:lmpLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="lmpLOINCCode" />
+      <max value="1" />
       <patternCoding>
         <system value="http://loinc.org" />
         <code value="8665-2" />
@@ -65,7 +70,6 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
