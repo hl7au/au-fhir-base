@@ -1,6 +1,8 @@
 **AU Local Report Order Identifier**  *[[FMM Level 0](guidance.html)]*
 
-This identifier profile defines a local report order identifier in an Australian context. A local report identifier is a unique identifier for each report and must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems).
+This identifier profile defines a local report order identifier in an Australian context. A local report identifier is an organisation's identifier for a report in that organisation's local system set of reports.
+
+A report identifier must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems).
 
 In some laboratory systems, the report identifier may be a concatenation of a lab number and report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same lab number. 
 
