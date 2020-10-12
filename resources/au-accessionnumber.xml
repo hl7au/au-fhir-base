@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-placeridentifier"/>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-placeridentifier"/>
-  <version value="2.1.0"/>
-  <name value="AUPlacerIdentifier"/>
-  <title value="AU Placer Identifier"/>
+  <id value="au-accessionnumber"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber"/>
+  <version value="1.0.0"/>
+  <name value="AUAccessionNumber"/>
+  <title value="AU Accession Number"/>
   <status value="draft"/>
-  <date value="2020-10-02"/>
-  <publisher value="Health Level Seven Australia (Patient Administration WG)"/>
+  <date value="2020-10-09"/>
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)"/>
   <contact>
     <telecom>
       <system value="url"/>
@@ -15,8 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description
-    value="This identifier profile defines a placer identifier in an Australian context. This identifier is associated with the person or service that requests or places an order."/>
+  <description value="This identifier profile defines an accession number in an Australian context."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -48,38 +47,38 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier"/>
-      <short value="Placer Identifier"/>
-      <definition
-        value="The identifier associated with the person or service that requests or places an order."
-      />
+      <short value="Accession Number"/>
+      <definition value="Accession number typically assigned by a diagnostic imaging system or clinical laboratory system and depending on the domain an accession number may for example identify a specimen, imaging examination, or biological polymer sequence." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type"/>
-      <short value="Coded identifier type for placer identifier"/>
+      <short value="Coded identifier type for accession number"/>
       <min value="1"/>
       <binding>
-        <strength value="required"/>
-        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/accession-number-type" />
       </binding>
-    </element>
-    <element id="Identifier.type.coding">
-      <path value="Identifier.type.coding"/>
-      <min value="1"/>
-      <max value="1"/>
-      <patternCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="PLAC"/>
-      </patternCoding>
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system"/>
-      <short value="Namespace for placer identifier"/>
+      <short value="System identifier namespace for the organisation that assigned the accession number"/>
       <min value="1"/>
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value"/>
-      <short value="Placer identifier"/>
+      <short value="Accession number"/>
       <min value="1"/>
+    </element>
+    <element id="Identifier.assigner">
+      <path value="Identifier.assigner" />
+      <short value="Organisation that assigned the accession number" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.assigner.display">
+      <path value="Identifier.assigner.display" />
+      <short value="Name of the assigning organisation" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

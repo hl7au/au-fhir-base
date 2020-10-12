@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-localorderidentifier"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier"/>
+  <version value="1.0.0"/>
+  <name value="AULocalOrderIdentifier"/>
+  <title value="AU Local Order Identifier"/>
+  <status value="draft"/>
+  <date value="2020-10-09"/>
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a local order identifier in an Australian context. A local order identifier is an organisation's identifier for an order in that organisation's local system set of orders."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 v2 Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="servd"/>
+    <uri value="http://www.omg.org/spec/ServD/1.0/"/>
+    <name value="ServD"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <type value="Identifier"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier"/>
+      <short value="Local Order Identifier"/>
+      <definition value="Local order identifier assigned by an entity (service or organisation) to an order in that entity's set of orders. Typically a local order identifier will be either a placer identifier assigned by the requester or a filler identifier (sometimes known as filler order number) assigned by the fulfiller of the request."
+      />
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type"/>
+      <short value="Coded identifier type for local order identifier"/>
+      <min value="1"/>
+      <binding>
+        <strength value="required" />
+        <description value="Local Identifier Type" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/order-identifier-type" />
+      </binding>
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system"/>
+      <short value="System identifier namespace for the organisation that assigned the order identifier"/>
+      <min value="1"/>
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value"/>
+      <short value="Order identifier"/>
+      <min value="1"/>
+    </element>
+    <element id="Identifier.assigner">
+      <path value="Identifier.assigner" />
+      <short value="Organisation that assigned the order identifier" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.assigner.display">
+      <path value="Identifier.assigner.display" />
+      <short value="Name of the assigning organisation" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

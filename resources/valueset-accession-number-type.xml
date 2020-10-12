@@ -1,0 +1,41 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="accession-number-type"/>
+	<url value="http://terminology.hl7.org.au/ValueSet/accession-number-type"/>
+	<identifier> 
+		<system value="urn:ietf:rfc:3986"/> 
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.TBD"/> 
+	</identifier> 
+	<version value="1.0.0"/>
+	<name value="AccessionNumberType"/>
+	<title value="Accession Number Type"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<date value="2020-10-12"/>
+	<publisher value="Health Level Seven Australia (Orders and Observations WG)"/>
+	<contact>
+		<telecom>
+		  <system value="url" />
+		  <value value="http://hl7.com.au" />
+		  <use value="work" />
+		</telecom>
+	</contact>
+	<description value="Identifier types that may be associated with an accession number in an Australian context."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+	<compose>
+		<include> 
+			<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/> 
+			<concept> 
+				<code value="ACSN"/> 
+			</concept> 
+			<concept> 
+				<code value="LACSN"/> 
+			</concept> 
+		</include> 
+	</compose> 
+</ValueSet>
