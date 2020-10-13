@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ahpraregistration-details" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details" />
+  <version value="2.1.0" />
+  <name value="AHPRARegistrationDetails" />
+  <title value="AHPRA Registration Details" />
+  <status value="draft" />
+  <date value="2020-10-07" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Practitioner.qualification" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="AHPRA Registration Details" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:ahpraProfessionStartdate">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraProfessionStartdate" />
+    </element>
+    <element id="Extension.extension:ahpraProfessionStartdate.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraProfessionStartdate" />
+    </element>
+    <element id="Extension.extension:ahpraProfessionStartdate.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Extension.extension:aphraDivision">
+      <path value="Extension.extension" />
+      <sliceName value="aphraDivision" />
+    </element>
+    <element id="Extension.extension:aphraDivision.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="aphraDivision" />
+    </element>
+    <element id="Extension.extension:aphraDivision.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraRegistrationType">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraRegistrationType" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraRegistrationType" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationType.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraRegistrationSubtype">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraRegistrationSubtype" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationSubtype.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraRegistrationSubtype" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationSubtype.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraRegistrationStatus">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraRegistrationStatus" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationStatus.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraRegistrationStatus" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationStatus.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraSpecialty">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraSpecialty" />
+    </element>
+    <element id="Extension.extension:ahpraSpecialty.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraSpecialty" />
+    </element>
+    <element id="Extension.extension:ahpraSpecialty.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraFieldofSpecialtyPractice">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraFieldofSpecialtyPractice" />
+    </element>
+    <element id="Extension.extension:ahpraFieldofSpecialtyPractice.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraFieldofSpecialtyPractice" />
+    </element>
+    <element id="Extension.extension:ahpraFieldofSpecialtyPractice.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraCountryQualificationObtained">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraCountryQualificationObtained" />
+    </element>
+    <element id="Extension.extension:ahpraCountryQualificationObtained.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraCountryQualificationObtained" />
+    </element>
+    <element id="Extension.extension:ahpraCountryQualificationObtained.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraRegistrationRecordNumber">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraRegistrationRecordNumber" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationRecordNumber.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraRegistrationRecordNumber" />
+    </element>
+    <element id="Extension.extension:ahpraRegistrationRecordNumber.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
