@@ -24,6 +24,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
 * [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) - minimum allowed dispensing interval
 * [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
+* [Medication Strength](StructureDefinition-medication-strength.html) - text only medication strength
 
 ## Clinical
 * [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
