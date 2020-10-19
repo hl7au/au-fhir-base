@@ -1,152 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Practitioner xmlns="http://hl7.org/fhir">
-		<id value="example4"/>
-		<meta>
-			<profile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
-		</meta>
-		<identifier>
-			<type>
-				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-					<code value="NPI"/>
-					<display value="National provider identifier"/>
-				</coding>
-				<text value="HPI-I"/>
-			</type>
-			<system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-			<value value="8003619900015717"/>
-		</identifier>
+	<id value="example4"/>
+	<meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="NPI"/>
+				<display value="National provider identifier"/>
+			</coding>
+			<text value="HPI-I"/>
+		</type>
+		<system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+		<value value="8003619900015717"/>
+	</identifier>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+				<code value="AHPRA"/>
+				<display
+					value="Australian Health Practitioner Regulation Agency Registration Number"/>
+			</coding>
+			<text value="AHPRA Registration Number"/>
+		</type>
+		<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+		<value value="MED0001355609"/>
+	</identifier>
+	<name>
+		<family value="Badr"/>
+		<given value="Charbel"/>
+		<prefix value="Mr"/>
+	</name>
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
+			<!-- AHPRA Profession Start Date -->
+			<extension url="ahpraProfessionStartdate" >
+				<valueDateTime value="2009-03-14" />
+			</extension>
+			<!-- AHPRA Registration Division -->
+			<extension url="ahpraDivision" >
+				<valueCodeableConcept>
+					<text value= "Example: AHPRA Registration Division"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Type -->
+			<extension url="ahpraRegistrationType" >
+				<valueCodeableConcept>
+					<text value= "Example: AHPRA Registration Type"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Subtype -->
+			<extension url="ahpraRegistrationSubtype" >
+				<valueCodeableConcept>
+					<text value= "Example: AHPRA Registration Subtype"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Specialty -->
+			<extension url="ahpraSpecialty" >
+				<valueCodeableConcept>
+					<coding>
+						<system
+							value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+						<code value="after-hours"/>
+						<display value="After Hours"/>
+					</coding>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Specialty Practice -->
+			<extension url="ahpraFieldofSpecialtyPractice" >
+				<valueCodeableConcept>
+					<text value= "Example: AHPRA Registration Specialty Practice"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Status -->
+			<extension url="ahpraRegistrationStatus" >
+				<valueCodeableConcept>
+					<text value= "Example: AHPRA Registration Status"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Record Number -->
+			<extension url="ahpraRegistrationRecordNumber" >
+				<valueString value="1" />
+			</extension>
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession" >
+				<valueCodeableConcept>
+					<coding>
+						<system
+							value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+						<code value="after-hours"/>
+						<display value="After Hours"/>
+					</coding>
+				</valueCodeableConcept>
+			</extension>
+		</extension>
 		<identifier>
 			<type>
 				<coding>
 					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
 					<code value="AHPRA"/>
 					<display
-						value="Australian Health Practitioner Regulation Agency Registration Number"/>
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
 				</coding>
 				<text value="AHPRA Registration Number"/>
 			</type>
 			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
 			<value value="MED0001355609"/>
 		</identifier>
-		<name>
-			<family value="Badr"/>
-			<given value="Charbel"/>
-			<prefix value="Mr"/>
-		</name>
-		<qualification>
-			<extension url="http://hl7.org/fhir/StructureDefinition/ahpra-registration">
-				<!-- AHPRA Profession Start Date -->
-				<extension url="qualification-ahpraProfessionStartDate" >
-					<valueDateTime value="2009-03-14" />
-				</extension>
-				<!-- AHPRA Registration Division -->
-				<extension url="qualification-ahpraDivision" >
-					<valueString value="???" />
-				</extension>
-				<!-- AHPRA Registration Type -->
-				<extension url="qualification-ahpraRegistrationType" >
-					<valueString value="General" />
-				</extension>
-				<!-- AHPRA Registration Status -->
-				<extension url="qualification-ahpraRegistrationStatus" >
-					<valueString value="Registered" />
-				</extension>
-				<!-- AHPRA Registration Record Number -->
-				<extension url="qualification-ahpraRegistrationRecordNumber" >
-					<valueString value="1" />
-				</extension>
-			</extension>
-			<identifier>
-				<type>
-					<coding>
-						<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
-						<code value="AHPRA"/>
-						<display
-							value="Australian Health Practitioner Regulation Agency Registration Number"
-						/>
-					</coding>
-					<text value="AHPRA Registration Number"/>
-				</type>
-				<system value="http://hl7.org.au/id/ahpra-registration-number"/>
-				<value value="MED0001355609"/>
-			</identifier>
-			<code>
-				<coding>
-					<system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
-					<code value="253111"/>
-					<display value="General Medical Practitioner"/>
-				</coding>
-				<text value="AHPRA qualification for General Practitioner"/>
-			</code>
-			<!-- AHPRA Registration Expiry -->
-			<period>
-				<start value="22-08-2006"/>
-				<end value="2021-09-30"/>
-			</period>
-			<issuer>
-				<display value="AHPRA"/>
-			</issuer>
-		</qualification>
-		<qualification>
-			<extension url="http://hl7.org/fhir/StructureDefinition/ahpra-registration">
-				<!-- AHPRA Profession Start Date -->
-				<extension url="qualification-ahpraProfessionStartDate" >
-					<valueDateTime value="2006-22-08" />
-				</extension>
-				<!-- AHPRA Registration Division -->
-				<extension url="qualification-ahpraDivision" >
-					<valueString value="???" />
-				</extension>
-				<!-- AHPRA Registration Type -->
-				<extension url="qualification-ahpraRegistrationType" >
-					<text value="Specialist" />
-				</extension>
-				<!-- AHPRA Registration Status -->
-				<extension url="qualification-ahpraRegistrationStatus" >
-					<valueString value="Registered" />
-				</extension>
-				<!-- AHPRA Speciality Name -->
-				<extension url="qualification-ahpraSpecialty" >
-					<valueString value="General practice" />
-				</extension>
-				<!-- AHPRA Field of Specialty Practice -->
-				<extension url="qualification-ahpraFieldOfSpecialtyPractice" >
-					<valueString value="Physiotherapy" />
-				</extension>
-				<!-- AHPRA Registration Record Number -->
-				<extension url="qualification-ahpraRegistrationRecordNumber" >
-					<valueString value="2" />
-				</extension>
-			</extension>
-			<identifier>
-				<type>
-					<coding>
-						<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
-						<code value="AHPRA"/>
-						<display
-							value="Australian Health Practitioner Regulation Agency Registration Number"
-						/>
-					</coding>
-					<text value="AHPRA Registration Number"/>
-				</type>
-				<system value="http://hl7.org.au/id/ahpra-registration-number"/>
-				<value value="MED0001355609"/>
-			</identifier>
-			<code>
-				<coding>
-					<system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
-					<code value="253111"/>
-					<display value="General Medical Practitioner"/>
-				</coding>
-				<text value="AHPRA qualification for General Practitioner"/>
-			</code>
-			<!-- AHPRA Registration Expiry -->
-			<period>
-				<start value="22-08-2006"/>
-				<end value="2021-09-30"/>
-			</period>
-			<issuer>
-				<display value="AHPRA"/>
-			</issuer>
-		</qualification>
-	</Practitioner>
+		<code>
+			<coding>
+				<system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+				<code value="253111"/>
+				<display value="General Medical Practitioner"/>
+			</coding>
+			<text value="AHPRA qualification for General Practitioner"/>
+		</code>
+		<!-- AHPRA Registration Expiry -->
+		<period>
+			<start value="2016-08-20"/>
+			<end value="2021-09-20"/>
+		</period>
+		<issuer>
+			<display value="AHPRA"/>
+		</issuer>
+	</qualification>
+</Practitioner>
