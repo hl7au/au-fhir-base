@@ -14,6 +14,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) - the date a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more
 * [Contact Purpose](StructureDefinition-contact-purpose.html) - the purpose for which a contact can be reached
 * [Gender Identity](StructureDefinition-gender-identity.html) - patient demographic gender identity 
+* [Ethnicity](StructureDefinition-ethnicity.html) - patient demographic cultural and ethnic identity  
 
 
 ## Medication
