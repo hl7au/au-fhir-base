@@ -21,8 +21,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
-## Orders and Observations Profiles
-* [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
+## Diagnostics Profiles
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
 * [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with localisation concepts
 * [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
@@ -32,6 +31,8 @@ These Profiles have been defined for this implementation guide.
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
+* [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
+* [AU Base Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor record

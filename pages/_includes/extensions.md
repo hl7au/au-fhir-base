@@ -13,6 +13,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) - Healthcare service associated with a resource
 * [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) - the date a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more
 * [Contact Purpose](StructureDefinition-contact-purpose.html) - the purpose for which a contact can be reached
+* [Gender Identity](StructureDefinition-gender-identity.html) - patient demographic gender identity 
+
 
 ## Medication
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
@@ -26,8 +28,10 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Change Description](StructureDefinition-change-description.html) - description of the change including reason for change
 * [Medication Strength](StructureDefinition-medication-strength.html) - text only medication strength
 
+
 ## Clinical
 * [Author as a RelatedPerson](StructureDefinition-author-related-person.html) - author as a related person (R4 preadopt)
+
 
 ## Composition
 * [Information Recipient](StructureDefinition-information-recipient.html) - record of intended composition recipient
