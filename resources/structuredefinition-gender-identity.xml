@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="ethnicity" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/ethnicity" />
+  <id value="gender-identity" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/gender-identity" />
   <version value="2.1.0" />
-  <name value="Ethnicity" />
-  <title value="Ethnicity" />
+  <name value="GenderIdentity" />
+  <title value="Gender Identity" />
   <status value="active" />
-  <date value="2020-10-16" />
+  <date value="2020-10-24" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -36,12 +36,12 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Ethnicity" />
-      <definition value="Coded ethnicity" />
+      <short value="Gender Identity" />
+      <definition value="Coded gender Identity" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ethnicity" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/gender-identity" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -55,7 +55,7 @@
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <short value="Coded ethnicity" />
+      <short value="Coded gender identity" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
