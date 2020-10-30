@@ -3,6 +3,19 @@
 This profile is provided for use in an Australian context where some constraint on content is desirable to guarantee the quality of an Australian address whilst still supporting
 other uses such as unstructured addresses. 
 
+#### Identifiers
+These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common identifiers that may be sent using:
+* [Address Identifier](StructureDefinition-address-identifier.html)
+* [Delivery Point Identifier](StructureDefinition-au-deliverypointidentifier.html)
+* [G-NAF Identifier](StructureDefinition-au-gnafidentifier.html)
+
+
+#### Extensions
+Extensions used in this profile:
+* Address: [Address Identifier](StructureDefinition-address-identifier.html)
+* Address: [No Fixed Address](StructureDefinition-no-fixed-address.html)
+
+
 #### Usage Notes
 * Is for use when representing an Australian (location) address so country is fixed to AU.
 * Is not bound to any elements in this implementation guide directly.
