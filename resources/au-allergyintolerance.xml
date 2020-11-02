@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-allergyintolerance" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance" />
-  <version value="2.1.0"/>
+  <version value="2.1.0" />
   <name value="AUBaseAllergyIntolerance" />
   <title value="AU Base Allergy Intolerance" />
   <status value="draft" />
@@ -18,11 +18,11 @@
   <description value="This profile defines an allergy intolerance structure including core localisation concepts for use in an Australian context." />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="AU"/>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
     </coding>
   </jurisdiction>
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -33,19 +33,10 @@
     <element id="AllergyIntolerance">
       <path value="AllergyIntolerance" />
       <short value="An allergy or intolerance statement in an Australian healthcare context" />
-      <constraint>
-        <key value="inv-ait-0" />
-        <severity value="error" />
-        <human value="Recorder and author related party shall not coexist" />
-        <expression value="(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and recorder.exists()).not()" />
-      </constraint>
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="AllergyIntoleranceCode" />
-        </extension>
         <strength value="preferred" />
         <description value="Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies." />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1" />
@@ -58,9 +49,6 @@
     <element id="AllergyIntolerance.reaction.substance">
       <path value="AllergyIntolerance.reaction.substance" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="SubstanceCode" />
-        </extension>
         <strength value="preferred" />
         <description value="Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products)." />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1" />
@@ -69,9 +57,6 @@
     <element id="AllergyIntolerance.reaction.manifestation">
       <path value="AllergyIntolerance.reaction.manifestation" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="Manifestation" />
-        </extension>
         <strength value="preferred" />
         <description value="Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event." />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
