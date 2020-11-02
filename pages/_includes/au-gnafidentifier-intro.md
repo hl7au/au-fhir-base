@@ -6,4 +6,4 @@ The PSMA G-NAF[<sup>[2]</sup>](https://data.gov.au/data/dataset/geocoded-nationa
 
 **Examples**
 
-[Postal address (with DPID and G-NAF Identifier) and work address in Darwin, NT](address-example3.html)
+[Postal address (with DPID and G-NAF Identifier) and work address in Darwin, NT](Patient-address-example3.html)

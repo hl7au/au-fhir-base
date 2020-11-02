@@ -6,4 +6,4 @@ A DPID is a randomly generated, unique 8-digit number, allocated by Australia Po
 
 **Examples**
 
-[Postal address (with DPID) and work address in Darwin, NT](Patient-address-example0.html)
+[Postal address (with DPID and G-NAF Identifier) and work address in Darwin, NT](Patient-address-example3.html)
