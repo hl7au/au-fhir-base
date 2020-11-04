@@ -84,5 +84,5 @@ These Profiles have been defined for this implementation guide.
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 
 ### Profiles on Other Data Types
-* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
+* [Australian Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
 * [AU Base Dosage](StructureDefinition-au-dosage.html) -  dosage information with common local coding
