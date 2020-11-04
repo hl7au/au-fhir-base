@@ -12,8 +12,17 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 
 #### Extensions
 Extensions used in this profile:
+
 * Address: [Address Identifier](StructureDefinition-address-identifier.html)
 * Address: [No Fixed Address](StructureDefinition-no-fixed-address.html)
+
+Potentially useful extensions:
+
+* Address.line: [Unit](http://hl7.org/fhir/R4/extension-iso21090-adxp-unitid.html)
+* Address.line: [House Number](http://hl7.org/fhir/R4/extension-iso21090-adxp-housenumber.html)
+* Address.line: [Street Name](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetname.html)
+* Address.line: [Street Name Type](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnametype.html)
+* Address.line: [Street Name Base](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnamebase.html)
 
 
 #### Usage Notes
@@ -22,18 +31,6 @@ Extensions used in this profile:
 * Overseas addresses can be represented using the core Address data type.
 * May be used as needed in implementation guide by use cases.
 * Is provided as the best practice guidance on Australian address representation.
-
-
-Standard extensions for address are available [here](http://hl7.org/fhir/R4/datatypes-extras.html#address)
-
-For example can consider the following for address parts support:
-* [Unit](http://hl7.org/fhir/R4/extension-iso21090-adxp-unitid.html)
-* [House Number](http://hl7.org/fhir/R4/extension-iso21090-adxp-housenumber.html)
-* [Street Name](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetname.html)
-* [Street Name Type](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnametype.html)
-* [Street Name Base](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnamebase.html)
-
-See more info at : [ISO 21090 Data Type Extensions](http://hl7.org/fhir/R4/iso-21090.html)
 
 
 **Examples**
