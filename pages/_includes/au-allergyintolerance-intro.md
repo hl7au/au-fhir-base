@@ -11,3 +11,4 @@ Note: The value set [Indicator of Hypersensitivity or Intolerance to Substance](
 
 [Self-reported allergy to eggs](AllergyIntolerance-allergyintolerance-example1.html)
 
+[Confirmed intolerance to lactose](AllergyIntolerance-allergyintolerance-example2.html)
