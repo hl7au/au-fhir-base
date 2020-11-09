@@ -9,3 +9,7 @@ This element is a part of Cultural and Linguistic Diversity (CALD) data set. It 
 This is based on:
 * [ABS Year of Arrival Standard, 2014, Version 1.5](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} 
 * [AIHW Person—year of first arrival in Australia concept](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"} 
+
+**Examples**
+
+[Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)

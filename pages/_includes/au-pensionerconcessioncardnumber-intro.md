@@ -9,4 +9,4 @@ Although a DVA-issued card will also include an individual's state-based DVA Fil
 
 **Examples**
 
-[Patient with interpreter required and language unknown](Patient-example7.html)
+[Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)
