@@ -5,9 +5,21 @@
     <profile value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
   </meta>
 
-  <clinicalStatus value="active"/>
-
-  <verificationStatus value="unconfirmed"/>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="unconfirmed"/>
+      <display value="Unconfirmed"/>
+    </coding>
+  </verificationStatus>
 
   <type value="allergy"/>
 
@@ -33,7 +45,7 @@
     <code value="a"/>
   </onsetAge>
 
-  <assertedDate value="2018-03-07"/>
+  <recordedDate value="2018-03-07"/>
 
   <asserter>
     <reference value="Patient/example2"/>

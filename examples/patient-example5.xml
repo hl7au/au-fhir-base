@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns="http://hl7.org/fhir"> 
+<Patient xmlns="http://hl7.org/fhir">
   <id value="example5"/>
   <meta>
-	<profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
   </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName">
+    <valueString value="McKinnon"/>
+  </extension>
   <identifier>
     <type>
       <coding>
@@ -19,33 +22,33 @@
       <end value="2022-12"/>
     </period>
   </identifier>
- <name>
-   <family value="Simmons"/>
-   <given value="Sarah"/>
-  </name>  
+  <name>
+    <family value="Simmons"/>
+    <given value="Sarah"/>
+  </name>
   <telecom>
     <system value="phone"/>
-    <value value="(03) 4455 6677"/>
-  </telecom>  
+    <value value="(03) 5550 6677"/>
+  </telecom>
   <gender value="female"/>
-  <birthDate value="1977-09-07"/> 
+  <birthDate value="1977-09-07"/>
   <address>
-		<line value="55 Sarah Street"/>
+    <line value="55 Sarah Street"/>
     <city value="Strahan"/>
     <state value="TAS"/>
     <postalCode value="7468"/>
-		<country value="AU"/>
-	</address>
+    <country value="AU"/>
+  </address>
   <generalPractitioner>
-    <reference value="Practitioner/example3"/> 
+    <reference value="Practitioner/example3"/>
   </generalPractitioner>
-  <managingOrganization> 
-    <reference value="Organization/example3"/> 
+  <managingOrganization>
+    <reference value="Organization/example3"/>
   </managingOrganization>
   <link>
     <other>
       <reference value="RelatedPerson/example2"/>
     </other>
-    <type value="seealso"/>      
+    <type value="seealso"/>
   </link>
 </Patient>

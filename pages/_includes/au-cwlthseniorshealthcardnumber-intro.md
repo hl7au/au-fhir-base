@@ -6,3 +6,7 @@ A Commonwealth Seniors Health Card may be issued by Services Australia or Depart
 
 #### Usage Notes
 Although a DVA-issued card will also include an individual's state-based DVA File number only the CRN should be sent as the Commonwealth Seniors Health Card number.
+
+**Examples**
+
+[Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)

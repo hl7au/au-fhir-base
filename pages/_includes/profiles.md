@@ -21,8 +21,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
 
-## Orders and Observations Profiles
-* [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
+## Diagnostics Profiles
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
 * [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with localisation concepts
 * [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
@@ -32,6 +31,8 @@ These Profiles have been defined for this implementation guide.
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
+* [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
+* [AU Base Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor record
@@ -56,9 +57,11 @@ These Profiles have been defined for this implementation guide.
 * [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) - identifier profile for a Care Agency Employee (CAE) identifier
 * [AU Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) - identifier profile for a Commonwealth Seniors Health Card number
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
+* [AU Delivery Point Identifier](StructureDefinition-au-deliverypointidentifier.html) - identifier profile for an Australia Post Delivery Point Identifier (DPID)
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
 * [AU ETP Prescription Identifier](StructureDefinition-au-etpprescriptionidentifier.html) - identifier profile for an Electronic Prescription Transfer (ETP) prescription identifier
+* [AU G-NAF Identifier](StructureDefinition-au-gnafidentifier.html) - identifier profile for a Geocoded National Address File (G-NAF) Identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
 * [AU HPI-I](StructureDefinition-au-hpii.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
 * [AU HPI-O](StructureDefinition-au-hpio.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
@@ -81,5 +84,5 @@ These Profiles have been defined for this implementation guide.
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 
 ### Profiles on Other Data Types
-* [AU Base Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
+* [Australian Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
 * [AU Base Dosage](StructureDefinition-au-dosage.html) -  dosage information with common local coding

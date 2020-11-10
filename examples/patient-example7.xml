@@ -7,6 +7,9 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired">
         <valueBoolean value="true"/>
     </extension>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/date-of-arrival">
+        <valueDate value="2001-10-14"/>
+    </extension>
     <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
         <valueAddress>
 			<text value="Mexico"/>
@@ -20,10 +23,11 @@
                <code value="MR"/>
           </coding>
      </type>
-        <system value="http://downunderhospital.example.com/identifiers/patient"/>
+     <system value="http://downunderhospital.example.com/identifiers/patient"/>
      <value value="765567765FRD"/>
      <assigner>
-               <reference value="Organization/example0"/>
+           <reference value="Organization/example0"/>
+           <display value="Downunder Hospital"/>
      </assigner>
     </identifier>
     <identifier>
@@ -37,6 +41,46 @@
         <value value="765567765FRD"/>
         <assigner>
             <reference value="Organization/example0"/>
+            <display value="Downunder Hospital"/>
+        </assigner>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PEN"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
+        <value value="307111942H"/>
+        <assigner>            
+            <display value="Services Australia"/>
+        </assigner>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+                <code value="SEN"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
+        <value value="307111942H"/>
+        <assigner>            
+            <display value="Services Australia"/>
+        </assigner>
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MB"/>
+            </coding>
+        </type>
+        <system value="http://myhealthprivatehealthinsurance.com/member/memberid"/>
+        <value value="8279115"/>
+        <assigner>            
+            <display value="MyHealth Private Healthinsurance Company"/>
         </assigner>
     </identifier>
     <name>
