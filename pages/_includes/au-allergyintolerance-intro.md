@@ -8,3 +8,6 @@ This profile defines an allergy intolerance structure including core localisatio
 
 [Self-reported allergy to eggs](AllergyIntolerance-allergyintolerance-example1.html)
 
+[Confirmed intolerance to lactose](AllergyIntolerance-allergyintolerance-example2.html)
+
+[Confirmed no known allergy](AllergyIntolerance-allergyintolerance-example3.html)

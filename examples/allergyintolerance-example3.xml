@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="allergyintolerance-example3"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+  </meta>
+
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+  </verificationStatus>
+
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="716186003"/>
+      <display value="No known allergy"/>
+    </coding>
+  </code>
+
+  <patient>
+    <reference value="Patient/example3"/>
+    <display value="John Smith"/>
+  </patient>
+
+  <recordedDate value="2010-06-11"/>
+
+  <asserter>
+    <reference value="Practitioner/example0"/>
+    <display value="Helen Mayo"/>
+  </asserter>
+
+</AllergyIntolerance>
