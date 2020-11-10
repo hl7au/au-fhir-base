@@ -57,9 +57,11 @@ These Profiles have been defined for this implementation guide.
 * [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) - identifier profile for a Care Agency Employee (CAE) identifier
 * [AU Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) - identifier profile for a Commonwealth Seniors Health Card number
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) - identifier profile for a Contracted Service Provider (CSP) registration number
+* [AU Delivery Point Identifier](StructureDefinition-au-deliverypointidentifier.html) - identifier profile for an Australia Post Delivery Point Identifier (DPID)
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) - identifier profile for an employee number
 * [AU ETP Prescription Identifier](StructureDefinition-au-etpprescriptionidentifier.html) - identifier profile for an Electronic Prescription Transfer (ETP) prescription identifier
+* [AU G-NAF Identifier](StructureDefinition-au-gnafidentifier.html) - identifier profile for a Geocoded National Address File (G-NAF) Identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) - identifier profile for a Health Care Card number
 * [AU HPI-I](StructureDefinition-au-hpii.html) - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
 * [AU HPI-O](StructureDefinition-au-hpio.html) - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
