@@ -43,8 +43,6 @@
         <rules value="open"/>
       </slicing>
     </element>
-
-    <!-- Profession Number -->
     <element id="Extension.extension:ahpraProfessionNumber">
       <path value="Extension.extension"/>
       <sliceName value="ahpraProfessionNumber"/>
@@ -59,9 +57,6 @@
         <code value="string"/>
       </type>
     </element>
-    <!-- /Profession Number -->
-
-    <!-- Profession -->
     <element id="Extension.extension:ahpraProfession">
       <path value="Extension.extension"/>
       <sliceName value="ahpraProfession"/>
@@ -76,9 +71,6 @@
         <code value="CodeableConcept"/>
       </type>
     </element>
-    <!-- /Profession -->
-
-    <!-- Profession Start Date-->
     <element id="Extension.extension:ahpraProfessionStartDate">
       <path value="Extension.extension"/>
       <sliceName value="ahpraProfessionStartDate"/>
@@ -93,9 +85,6 @@
         <code value="dateTime"/>
       </type>
     </element>
-    <!-- /Profession Start Date-->
-
-    <!-- Condition -->
     <element id="Extension.extension:ahpraCondition">
       <path value="Extension.extension"/>
       <sliceName value="ahpraCondition"/>
@@ -129,6 +118,7 @@
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionType">
       <path value="Extension.extension.extension"/>
       <sliceName value="ahpraConditionType"/>
+      <max value="1" />
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionType.url">
       <path value="Extension.extension.extension.url"/>
@@ -164,9 +154,6 @@
       <path value="Extension.extension.value[x]"/>
       <max value="0"/>
     </element>
-    <!-- /Condition -->
-
-    <!-- Undertaking -->
     <element id="Extension.extension:ahpraUndertaking">
       <path value="Extension.extension"/>
       <sliceName value="ahpraUndertaking"/>
@@ -200,6 +187,7 @@
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingType">
       <path value="Extension.extension.extension"/>
       <sliceName value="ahpraUndertakingType"/>
+      <max value="1" />
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingType.url">
       <path value="Extension.extension.extension.url"/>
@@ -235,9 +223,6 @@
       <path value="Extension.extension.value[x]"/>
       <max value="0"/>
     </element>
-    <!-- /Undertaking -->
-
-    <!-- Reprimand -->
     <element id="Extension.extension:ahpraReprimand">
       <path value="Extension.extension"/>
       <sliceName value="ahpraReprimand"/>
@@ -271,6 +256,7 @@
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandType">
       <path value="Extension.extension.extension"/>
       <sliceName value="ahpraReprimandType"/>
+      <max value="1" />
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandType.url">
       <path value="Extension.extension.extension.url"/>
@@ -306,9 +292,6 @@
       <path value="Extension.extension.value[x]"/>
       <max value="0"/>
     </element>
-    <!-- /Reprimand -->
-
-    <!-- Caution -->
     <element id="Extension.extension:ahpraCaution">
       <path value="Extension.extension"/>
       <sliceName value="ahpraCaution"/>
@@ -342,6 +325,7 @@
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionType">
       <path value="Extension.extension.extension"/>
       <sliceName value="ahpraCautionType"/>
+      <max value="1" />
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionType.url">
       <path value="Extension.extension.extension.url"/>
@@ -377,9 +361,6 @@
       <path value="Extension.extension.value[x]"/>
       <max value="0"/>
     </element>
-    <!-- /Caution -->
-
-    <!-- Registration -->
     <element id="Extension.extension:ahpraRegistration">
       <path value="Extension.extension"/>
       <sliceName value="ahpraRegistration"/>
@@ -396,13 +377,11 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>
       <max value="0"/>
     </element>
-    <!-- /Registration -->
-
   </differential>
 </StructureDefinition>
