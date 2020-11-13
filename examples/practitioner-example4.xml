@@ -110,10 +110,90 @@
 	<!-- AHPRAProfession - Physiotherapist -->
 	<qualification>
 		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
-			<!-- AHPRA Profession Start Date -->
-			<extension url="ahpraProfessionStartDate">
-				<valueDateTime value="1996-02-08"/>
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession">
+				<valueCodeableConcept>
+					<text value="Physiotherapist"/>
+				</valueCodeableConcept>
 			</extension>
+		</extension>
+		<!--identifier:AUAHPRARegistrationNumber-->
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+					<code value="AHPRA"/>
+					<display
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="PHY0001234567"/>
+		</identifier>
+		<code>
+			<text value="AHPRA Profession"/>
+		</code>
+		<!-- AHPRA Registration Expiry -->
+		<period>
+			<start value="1996-02-08"/>
+		</period>
+	</qualification>
+	<!-- AHPRAProfession - Medical Practitioner -->
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession">
+				<valueCodeableConcept>
+					<text value="Medical Practitioner"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA ahpraCondition -->
+			<extension url="ahpraCondition">
+				<extension url="ahpraConditionEditDate">
+					<valueDate value="2011-11-08"/>
+				</extension>
+				<extension url="ahpraConditionType">
+					<valueCodeableConcept>
+						<text value="Health"/>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="ahpraConditionDetail">
+					<valueCodeableConcept>
+						<text value="The Medical Council of New South Wales has considered it appropriate to impose the following conditions on Dr Robert Smith’s registration under section 150(1)(b) of the Health Practitioner Regulation National Law (NSW)…etc"/>
+					</valueCodeableConcept>
+				</extension>
+			</extension>
+		</extension>
+		<!--identifier:AUAHPRARegistrationNumber-->
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+					<code value="AUAHPRAProfession"/>
+					<display
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="MED0000123456"/>
+		</identifier>
+		<code>
+			<text value="AHPRA Profession"/>
+		</code>
+		<period>
+			<start value="2007-06-03"/>
+		</period>
+		<issuer>
+			<display value="AHPRA"/>
+		</issuer>
+	</qualification>
+	<!-- AHPRAProfession - Physiotherapist -->
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
 			<!-- AHPRA Registration Type -->
 			<extension url="ahpraRegistrationType">
 				<valueCodeableConcept>
@@ -167,10 +247,6 @@
 	<!-- AHPRAProfession - Medical Practitioner -->
 	<qualification>
 		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
-			<!-- AHPRA Profession Start Date -->
-			<extension url="ahpraProfessionStartDate">
-				<valueDateTime value="2007-03-06"/>
-			</extension>
 			<!-- AHPRA Registration Type -->
 			<extension url="ahpraRegistrationType">
 				<valueCodeableConcept>
@@ -198,6 +274,22 @@
 				<valueCodeableConcept>
 					<text value="Medical Practitioner"/>
 				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA ahpraNotation -->
+			<extension url="ahpraNotation">
+				<extension url="ahpraNotationEditDate">
+					<valueDate value="2012-05-02"/>
+				</extension>
+				<extension url="ahpraNotationType">
+					<valueCodeableConcept>
+						<text value="Registration Requirement"/>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="ahpraNotationDetail">
+					<valueCodeableConcept>
+						<text value="Limited registration for supervised practice is granted under section 66 of the Health Practitioner Regulation National Law Act…etc"/>
+					</valueCodeableConcept>
+				</extension>
 			</extension>
 		</extension>
 		<!--identifier:AUAHPRARegistrationNumber-->

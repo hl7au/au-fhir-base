@@ -43,20 +43,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:ahpraProfessionStartDate">
-      <path value="Extension.extension" />
-      <sliceName value="ahpraProfessionStartDate" />
-    </element>
-    <element id="Extension.extension:ahpraProfessionStartDate.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="ahpraProfessionStartDate" />
-    </element>
-    <element id="Extension.extension:ahpraProfessionStartDate.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
     <element id="Extension.extension:ahpraDivision">
       <path value="Extension.extension" />
       <sliceName value="ahpraDivision" />
@@ -168,6 +154,144 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+    </element>
+    <element id="Extension.extension:ahpraEndorsement">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraEndorsement" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementEditDate">
+      <path value="Extension.extension.extension" />
+      <sliceName value="ahpraEndorsementEditDate" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementEditDate.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="ahpraEndorsementEditDate" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementEditDate.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementType">
+      <path value="Extension.extension.extension" />
+      <sliceName value="ahpraEndorsementType" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementType.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="ahpraEndorsementType" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementType.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementDetail">
+      <path value="Extension.extension.extension" />
+      <sliceName value="ahpraEndorsementDetail" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementDetail.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="ahpraEndorsementDetail" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementDetail.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraEndorsement" />
+    </element>
+    <element id="Extension.extension:ahpraEndorsement.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:ahpraNotation">
+      <path value="Extension.extension" />
+      <sliceName value="ahpraNotation" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationEditDate">
+      <path value="Extension.extension.extension" />
+      <sliceName value="ahpraNotationEditDate" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationEditDate.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="ahpraNotationEditDate" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationEditDate.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationType">
+      <path value="Extension.extension.extension" />
+      <sliceName value="ahpraNotationType" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationType.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="ahpraNotationType" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationType.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationDetail">
+      <path value="Extension.extension.extension" />
+      <sliceName value="ahpraNotationDetail" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationDetail.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="ahpraNotationDetail" />
+    </element>
+    <element id="Extension.extension:ahpraNotation.extension:ahpraNotationDetail.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:ahpraNotationDetail.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ahpraEndorsement" />
+    </element>
+    <element id="Extension.extension:ahpraNotationDetail.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
