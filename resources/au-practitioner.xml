@@ -53,6 +53,23 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </type>
     </element>
+    <element id="Practitioner.qualification">
+      <path value="Practitioner.qualification" />
+      <constraint>
+        <key value="inv-sra-1" />
+        <severity value="error" />
+        <human value="The qualification shall only have AHPRA Profession details, if qualification is an AHPRA Profession" />
+        <expression value="qualification.coding.where(code = 'AUAHPRAProfession').exists() implies (qualification.extension('http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details').exists() and qualification.extension('http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details').exists().not())" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </constraint>
+      <constraint>
+        <key value="inv-sra-2" />
+        <severity value="error" />
+        <human value="The qualification shall only have AHPRA Registration details, if qualification is an AHPRA Registration" />
+        <expression value="qualification.coding.where(code = 'AUAHPRARegistration').exists() implies (qualification.extension('http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details').exists() and qualification.extension('http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details').exists().not())" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </constraint>
+    </element>
     <element id="Practitioner.qualification.extension">
       <path value="Practitioner.qualification.extension" />
       <slicing>
@@ -75,7 +92,6 @@
     <element id="Practitioner.qualification.extension:ahpraProfession-details">
       <path value="Practitioner.qualification.extension" />
       <sliceName value="ahpraProfession-details" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
