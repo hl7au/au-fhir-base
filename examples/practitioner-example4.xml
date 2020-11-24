@@ -109,7 +109,7 @@
 	</qualification>
 	<!-- AHPRAProfession - Physiotherapist -->
 	<qualification>
-		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details">
 			<!-- AHPRA Profession -->
 			<extension url="ahpraProfession">
 				<valueCodeableConcept>
@@ -133,7 +133,10 @@
 			<value value="PHY0001234567"/>
 		</identifier>
 		<code>
-			<text value="AHPRA Profession"/>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRAProfession"/>
+			</coding>
 		</code>
 		<!-- AHPRA Registration Expiry -->
 		<period>
@@ -180,7 +183,10 @@
 			<value value="MED0000123456"/>
 		</identifier>
 		<code>
-			<text value="AHPRA Profession"/>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRAProfession"/>
+			</coding>
 		</code>
 		<period>
 			<start value="2007-06-03"/>
@@ -228,7 +234,10 @@
 			<value value="PHY0001234567"/>
 		</identifier>
 		<code>
-			<text value="AHPRA Registration"/>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRARegistration"/>
+			</coding>
 		</code>
 		<!-- AHPRA Registration Expiry -->
 		<period>
@@ -301,7 +310,10 @@
 			<value value="MED0000123456"/>
 		</identifier>
 		<code>
-			<text value="AHPRA Registration"/>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRARegistration"/>
+			</coding>
 		</code>
 		<period>
 			<start value="2020-02-03"/>
