@@ -7,7 +7,7 @@ There are three preferred value sets when coding DiagnosticReport.code:
 
 *	an imaging diagnostic report code is preferred to be a member of [https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1)
 *	a pathology diagnostic report code is preferred to be a member of set of codes published as the [Standard for Pathology Informatics in Australia - Reporting codes](https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/APUTS-Downloads) (a value set representation is forthcoming)
-*	a specialist or other diagnostic report code is preferred to be a member of [https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1) 
+*	a specialist or other diagnostic report code is preferred to be a member of [Evaluation Procedure](https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1) 
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
