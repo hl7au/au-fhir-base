@@ -2,6 +2,9 @@
 
 This profile defines an allergy intolerance structure including core localisation concepts for use in an Australian context.
 
+#### Extensions
+No extensions are used in this profile.
+
 **Examples**
 
 [Ibuprofen allergy, with a manifestation of urticaria](AllergyIntolerance-allergyintolerance-example0.html)
