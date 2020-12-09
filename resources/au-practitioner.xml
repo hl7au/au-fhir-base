@@ -80,15 +80,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Practitioner.qualification.extension:ahpraRegistration-details">
-      <path value="Practitioner.qualification.extension" />
-      <sliceName value="ahpraRegistration-details" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details" />
-      </type>
-    </element>
     <element id="Practitioner.qualification.extension:ahpraProfession-details">
       <path value="Practitioner.qualification.extension" />
       <sliceName value="ahpraProfession-details" />
@@ -96,6 +87,15 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details" />
+      </type>
+    </element>
+    <element id="Practitioner.qualification.extension:ahpraRegistration-details">
+      <path value="Practitioner.qualification.extension" />
+      <sliceName value="ahpraRegistration-details" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details" />
       </type>
     </element>
     <element id="Practitioner.qualification.identifier">
@@ -109,7 +109,7 @@
     <element id="Practitioner.qualification.code">
       <path value="Practitioner.qualification.code" />
       <binding>
-        <strength value="example" />
+        <strength value="preferred" />
         <valueSet value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0360" />
       </binding>
     </element>
