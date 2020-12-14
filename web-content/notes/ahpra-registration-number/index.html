@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AHPRA Registration Number</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org.au/fhir" />
+
+    <link href="../assets/css/fhir.css" rel="stylesheet"/>
+    <link href="../assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="../assets/css/project.css" rel="stylesheet"/>
+    <link href="../assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="../assets/css/jquery-ui.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+      href="../assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+      href="../assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+      href="../assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed"
+      href="../assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="../assets/ico/favicon.png" />
+
+  </head>
+  <body>
+    <div id="segment-header" class="segment">
+      <!-- segment-header -->
+      <div class="container">
+        <!-- container -->
+        <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir"
+            src="../assets/images/fhir-logo-www.png" />
+        </a>
+        <div id="hl7-status">
+          <b>HL7 Australia Implementation Guides</b>
+        </div>
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+            <img height="50" alt="visit the hl7 website" width="42"
+              src="../assets/images/hl7-logo.png" />
+          </a>
+        </div>
+        <div id="hl7-nav"></div>
+      </div>
+      <div class="container">
+        <!-- container -->
+      </div>
+    </div>
+    <!-- /segment-header -->
+    <div id="segment-content" class="segment">
+      <!-- segment-content -->
+      <div class="container">
+        <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+            <!-- CONTENT CONTENT -->
+
+            <div class="col-9">
+
+              <h1>AHPRA Registrarion Number Mapping Guidance</h1>
+              <h2>Introduction</h2>
+              <p>This page provides mapping guidance to the attributes of each AHPRA registration from a Practitioner information exchange (PIE) interoperability specification to elements in a profiled Practitioner resource. The table below demonstrates the logical decomposition of each data item to the lowest possible element in a Practitioner profile.</p>
+
+              <h2>Mapping from PIE Find registration interoperability specification</h2>
+              <p>This page provides mapping from the data items in interoperability specification of Australian Health Practitioner Regulation Agency (AHPRA)<a href="https://www.ahpra.gov.au" target="_blank"><sup>[1]</sup></a> <a href="https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number" target="_blank"><sup>[2]</sup></a>.
+                The table below matches the data items to the corresponding supported element in the <a href="../../../output/StructureDefinition-au-practitioner.html">Practitioner</a> profile, or complex extensions <a href="../../../output/StructureDefinition-ahpraprofession-details.html"> AHPRA Profession Details</a> and <a href="../../../output/StructureDefinition-ahpraprofession-details.html">AHPRA Registration Details</a>.</p>
+              <table border="1" cellpadding="1" valign="middle" width="100%">
+                <caption>
+                  <h3>AHPRA person data</h3>
+                </caption>
+                <col style="width:28%"/>
+                <col style="width:82%"/>
+                <tbody>
+                  <tr bgcolor="#DCDCDC">
+                    <th>Data Item</th>
+                    <th>Element name</th>
+                  </tr>
+                  <tr>
+                    <td>Name Edit Date</td>
+                    <td>name.period.start</td>
+                  </tr>
+                  <tr>
+                    <td>Name Title</td>
+                    <td>name.prefix</td>
+                  </tr>
+                  <tr>
+                    <td>Family Name</td>
+                    <td>name.family</td>
+                  </tr>
+                  <tr>
+                    <td>Given Name</td>
+                    <td>name.given[1]</td>
+                  </tr>
+                  <tr>
+                    <td>Middle Name</td>
+                    <td>name.given[2]</td>
+                  </tr>
+                  <tr>
+                    <td>Profession Number</td>
+                    <td>identifier:AUAHPRARegistrationNumber</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <br/>   
+              
+              <table border="1" cellpadding="1" valign="middle" width="100%">
+                <caption>
+                  <h3>AHPRA qualification data</h3>
+                </caption>
+                <col style="width:28%"/>
+                <col style="width:82%"/>
+                <tbody>
+                  <tr bgcolor="#DCDCDC">
+                    <th>Data Item</th>
+                    <th>Element name</th>
+                  </tr>
+                  <tr>
+                    <td>Qualification Title</td>
+                    <td>qualification.code.text</td>
+                  </tr>
+                  <tr>
+                    <td>Awarding Institution</td>
+                    <td>qualification.issuer.resolve().name</td>
+                  </tr>
+                  <tr>
+                    <td>Country Qualification Obtained</td>
+                    <td>qualification.issuer.resolve().address.country</td>
+                  </tr>
+                  <tr>
+                    <td>Year of Qualification</td>
+                    <td>qualification.period.start</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <br/>   
+              
+              <table border="" cellpadding="1" valign="middle" width="100%">
+                <caption>
+                  <h3>AHPRA profession data - qualification[AUAHPRAProfession]</h3>
+                </caption>
+                <col style="width:28%"/>
+                <col style="width:82%"/>
+                <tbody>
+                  <tr bgcolor="#DCDCDC">
+                    <th>Data Item</th>
+                    <th>Element name</th>
+                  </tr>
+                  <tr>
+                    <td>Profession Number</td>
+                    <td>qualification.identifier:AUAHPRARegistrationNumber</td>
+                  </tr>
+                  <tr>
+                    <td>Profession</td>
+                    <td>qualification.extension:ahpraProfession.text</td>
+                  </tr>
+                  <tr>
+                    <td>Profession Start Date</td>
+                    <td>qualification.period.start</td>
+                  </tr>
+                  <tr>
+                    <td>Conditions</td>
+                    <td>qualification.extension:ahpraCondition</td>
+                  </tr>
+                  <tr>
+                    <td>Undertakings</td>
+                    <td>qualification.extension:ahpraUndertaking</td>
+                  </tr>
+                  <tr>
+                    <td>Reprimands</td>
+                    <td>qualification.extension:ahpraUndertaking</td>
+                  </tr>
+                  <tr>
+                    <td>Cautions</td>
+                    <td>qualification.extension:ahpraCaution</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br/>   
+              
+              <table border="1" cellpadding="1" valign="middle" width="100%" >
+                <caption>
+                  <h3>AHPRA registration data - qualification[AUAHPRARegistration]</h3>
+                </caption>
+                <col style="width:28%"/>
+                <col style="width:82%"/>
+                <tbody>
+                  <tr bgcolor="#DCDCDC">
+                    <th>Data Item</th>
+                    <th>Element name</th>
+                  </tr>
+                  <tr>
+                    <td>Profession Number</td>
+                    <td>qualification.identifier:AUAHPRARegistrationNumber</td>
+                  </tr>
+                  <tr>
+                    <td>Profession</td>
+                    <td>qualification.extension:ahpraProfession.text</td>
+                  </tr>
+                  <tr>
+                    <td>Registration Record Number</td>
+                    <td>qualification.extension:ahpraRegistrationRecordNumber</td>
+                  </tr>
+                  <tr>
+                    <td>Division</td>
+                    <td>qualification.extension:ahpradivision.text</td>
+                  </tr>
+                  <tr>
+                    <td>Registration Type</td>
+                    <td>qualification.extension:ahpraregistrationtype.text</td>
+                  </tr>
+                  <tr>
+                    <td>Registration Sub-Type</td>
+                    <td>qualification.extension:ahpraregistrationsubtype.text</td>
+                  </tr>
+                  <tr>
+                    <td>Registration Status</td>
+                    <td>qualification.extension:ahpraregistrationstatus.text</td>
+                  </tr>
+                  <tr>
+                    <td>Registration Expiry</td>
+                    <td>qualification.period.end</td>
+                  </tr>
+                  <tr>
+                    <td>Specialty</td>
+                    <td>qualification.extension:ahpraspecialty.text</td>
+                  </tr>
+                  <tr>
+                    <td>Field of Specialty Practice</td>
+                    <td>qualification.extension:ahprafieldofspecialtypractice.text</td>
+                  </tr>
+                  <tr>
+                    <td>Initial Registration Date</td>
+                    <td>qualification.period.start</td>
+                  </tr>
+                  <tr>
+                    <td>Endorsements</td>
+                    <td>qualification.extension:ahpraEndorsement</td>
+                  </tr>
+                  <tr>
+                    <td>Notations</td>
+                    <td>qualification.extension:ahpraNotation</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <br/>   
+              
+            </div>
+
+          </div>
+          <!-- /inner-wrapper -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+
+    </div>
+    <!-- /segment-content -->
+    <div id="segment-footer" class="segment">
+      <!-- segment-footer -->
+      <div class="container">
+        <!-- container -->
+        <div class="inner-wrapper">
+          <p> Australian FHIR Implementation Guides </p>
+        </div>
+        <!-- /inner-wrapper -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /segment-footer -->
+    <!-- disqus thread -->
+    <!-- disqus -->
+    <!-- end disqus -->
+    <div id="segment-post-footer" class="segment hidden">
+      <!-- segment-post-footer -->
+      <div class="container">
+        <!-- container -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /segment-post-footer -->
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+    <script src="../dist/js/bootstrap.min.js"> </script>
+    <script src="../assets/js/respond.min.js"> </script>
+    <script src="../assets/js/fhir.js"> </script>
+    <!-- Analytics Below
+================================================== -->
+  </body>
+</html>

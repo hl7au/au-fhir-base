@@ -21,8 +21,9 @@ These definitions represent common data held in the Practitioner.qualification e
 No extensions are used in this profile.
 
 #### Usage Notes
-Where a sending system includes a practitioner's qualification using their AHPRA Registration Number, this should be done using Practitioner.qualification(ahpraRegistration). 
-A practitioner's AHPRA Registration Number may also be included as an identifier, using Practitioner.identifier(ahpraRegistration).
+Where a sending system includes a practitioner's qualification using their AHPRA Registration Number, this should be done using Practitioner.qualification([ahpraProfession-details](StructureDefinition-ahpraprofession-details.html)) and Practitioner.qualification([ahpraRegistration-details](StructureDefinition-ahpraprofession-details.html)) 
+A practitioner's AHPRA Registration Number may also be included as an identifier, using Practitioner.identifier([AUAHPRARegistrationNumber](StructureDefinition-au-ahpraregistrationnumber.html)).
+For guidance the attributes of each AHPRA registration from a Practitioner information exchange (PIE) interoperability specification are mapped to elements in a profiled Pracitioner resource [here](../web-content/notes/ahpra-registration-number/index.html){:target="_blank"}.
 
 **Examples**
 
@@ -34,3 +35,4 @@ A practitioner's AHPRA Registration Number may also be included as an identifier
 
 [AHPRA qualified General Practitioner](Practitioner-example3.html)
 
+[AHPRA qualified Practitioner](Practitioner-example4.html)
