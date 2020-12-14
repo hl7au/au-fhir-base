@@ -7,6 +7,6 @@ This extension applies to Practitioner resource and defines Australian Health Pr
 [AHPRA qualified Practitioner](Practitioner-example4.html)
 
 #### Usage Notes
-Where a sending system includes a practitioner's qualification using their AHPRA Registration details, this should be done using Practitioner.qualification(ahpraRegistration-details). 
+Where a sending system includes a practitioner's qualification using their AHPRA Registration details, this should be done using this extension at Practitioner.qualification element. 
 A practitioner's AHPRA Registration Number may be included as an identifier, using Practitioner.identifier([AUAHPRARegistrationNumber](StructureDefinition-au-ahpraregistrationnumber.html)).
-For guidance the attributes of each AHPRA registration from a Practitioner information exchange (PIE) interoperability specification are mapped to elements in a profiled Pracitioner resource [here](../web-content/notes/ahpra-registration-number/index.html){:target="_blank"}.
+For guidance, the attributes of each AHPRA registration from a Practitioner information exchange (PIE) interoperability specification are mapped to elements in a profiled Practitioner resource [here](../web-content/notes/ahpra-registration-number/index.html){:target="_blank"}.
