@@ -4,7 +4,7 @@ This extension applies to Practitioner resource and defines Australian Health Pr
 
 **Examples**
 
-[AHPRA qualified Practitioner](Practitioner-example4.html)
+[AHPRA Registered Practitioner with extended AHPRA data](Practitioner-example4.html)
 
 #### Usage Notes
 **AHPRA data**
