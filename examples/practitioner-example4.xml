@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <Practitioner xmlns="http://hl7.org/fhir">
+	<id value="example4"/>
+	<meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+	</meta>
+	<contained>
+		<Organization>
+			<id value="9df89ebf-b9ab-4ed5-b865-90892c1bbb1a"/>
+			<meta>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+			</meta>
+			<name value="University of Sydney"/>
+			<address>
+				<country value="AU"/>
+			</address>
+		</Organization>
+	</contained>
+	<contained>
+		<Organization>
+			<id value="1509ea06-0856-43ed-8842-cc7e6f48c460"/>
+			<meta>
+				<profile value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+			</meta>
+			<name value="The Royal Australian College of General Practitioners"/>
+			<address>
+				<country value="AU"/>
+			</address>
+		</Organization>
+	</contained>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="NPI"/>
+				<display value="National provider identifier"/>
+			</coding>
+			<text value="HPI-I"/>
+		</type>
+		<system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+		<value value="8003619900015717"/>
+	</identifier>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+				<code value="AHPRA"/>
+				<display
+					value="Australian Health Practitioner Regulation Agency Registration Number"/>
+			</coding>
+			<text value="AHPRA Registration Number"/>
+		</type>
+		<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+		<value value="MED0000123456"/>
+	</identifier>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+				<code value="AHPRA"/>
+				<display
+					value="Australian Health Practitioner Regulation Agency Registration Number"/>
+			</coding>
+			<text value="AHPRA Registration Number"/>
+		</type>
+		<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+		<value value="PHY0001234567"/>
+	</identifier>
+	<name>
+		<family value="Smith"/>
+		<given value="Robert"/>
+		<prefix value="Dr"/>
+	</name>
+	<!-- Qualification - Bachelor of Medicine / Bachelor of Surgery -->
+	<qualification>
+		<code>
+			<text value="Bachelor of Medicine/Bachelor of Surgery"/>
+		</code>
+		<period>
+			<start value="2003"/>
+		</period>
+		<issuer>
+			<reference value="#9df89ebf-b9ab-4ed5-b865-90892c1bbb1a"/>
+		</issuer>
+	</qualification>
+	<!-- Qualification - Bachelor of Applied Science (Physiotherapy) -->
+	<qualification>
+		<code>
+			<text value="Bachelor of Applied Science (Physiotherapy)"/>
+		</code>
+		<period>
+			<start value="1995"/>
+		</period>
+		<issuer>
+			<reference value="#9df89ebf-b9ab-4ed5-b865-90892c1bbb1a"/>
+		</issuer>
+	</qualification>
+	<!-- Qualification - General Practitioner -->
+	<qualification>
+		<code>
+			<text value="Fellowship of the Royal Australian College of General Practitioners"/>
+		</code>
+		<period>
+			<start value="2006"/>
+		</period>
+		<issuer>
+			<reference value="#1509ea06-0856-43ed-8842-cc7e6f48c460"/>
+		</issuer>
+	</qualification>
+	<!-- AHPRAProfession - Physiotherapist -->
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details">
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession">
+				<valueCodeableConcept>
+					<text value="Physiotherapist"/>
+				</valueCodeableConcept>
+			</extension>
+		</extension>
+		<!--identifier:AUAHPRARegistrationNumber-->
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+					<code value="AHPRA"/>
+					<display
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="PHY0001234567"/>
+		</identifier>
+		<code>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRAProfession"/>
+			</coding>
+		</code>
+		<!-- AHPRA Registration Expiry -->
+		<period>
+			<start value="1996-02-08"/>
+		</period>
+	</qualification>
+	<!-- AHPRAProfession - Medical Practitioner -->
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details">
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession">
+				<valueCodeableConcept>
+					<text value="Medical Practitioner"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA ahpraCondition -->
+			<extension url="ahpraCondition">
+				<extension url="ahpraConditionEditDate">
+					<valueDate value="2011-11-08"/>
+				</extension>
+				<extension url="ahpraConditionType">
+					<valueCodeableConcept>
+						<text value="Health"/>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="ahpraConditionDetail">
+					<valueString value="The Medical Council of New South Wales has considered it appropriate to impose the following conditions on Dr Robert Smith’s registration under section 150(1)(b) of the Health Practitioner Regulation National Law (NSW)…etc"/>
+				</extension>
+			</extension>
+		</extension>
+		<!--identifier:AUAHPRARegistrationNumber-->
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+					<code value="AHPRA"/>
+					<display
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="MED0000123456"/>
+		</identifier>
+		<code>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRAProfession"/>
+			</coding>
+		</code>
+		<period>
+			<start value="2007-06-03"/>
+		</period>
+	</qualification>
+	<!-- AHPRAProfession - Physiotherapist -->
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
+			<!-- AHPRA Registration Type -->
+			<extension url="ahpraRegistrationType">
+				<valueCodeableConcept>
+					<text value="Non-practicing"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Status -->
+			<extension url="ahpraRegistrationStatus">
+				<valueCodeableConcept>
+					<text value="Registered"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Record Number -->
+			<extension url="ahpraRegistrationRecordNumber">
+				<valueString value="001"/>
+			</extension>
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession">
+				<valueCodeableConcept>
+					<text value="Physiotherapist"/>
+				</valueCodeableConcept>
+			</extension>
+		</extension>
+		<!--identifier:AUAHPRARegistrationNumber-->
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+					<code value="AHPRA"/>
+					<display
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="PHY0001234567"/>
+		</identifier>
+		<code>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRARegistration"/>
+			</coding>
+		</code>
+		<!-- AHPRA Registration Expiry -->
+		<period>
+			<start value="2020-03-02"/>
+			<end value="2021-03-02"/>
+		</period>
+		<issuer>
+			<display value="AHPRA"/>
+		</issuer>
+	</qualification>
+	<!-- AHPRAProfession - Medical Practitioner -->
+	<qualification>
+		<extension url="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details">
+			<!-- AHPRA Registration Type -->
+			<extension url="ahpraRegistrationType">
+				<valueCodeableConcept>
+					<text value="Specialist"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Specialty -->
+			<extension url="ahpraSpecialty">
+				<valueCodeableConcept>
+					<text value="General Practice"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Status -->
+			<extension url="ahpraRegistrationStatus">
+				<valueCodeableConcept>
+					<text value="Registered"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA Registration Record Number -->
+			<extension url="ahpraRegistrationRecordNumber">
+				<valueString value="001"/>
+			</extension>
+			<!-- AHPRA Profession -->
+			<extension url="ahpraProfession">
+				<valueCodeableConcept>
+					<text value="Medical Practitioner"/>
+				</valueCodeableConcept>
+			</extension>
+			<!-- AHPRA ahpraNotation -->
+			<extension url="ahpraNotation">
+				<extension url="ahpraNotationEditDate">
+					<valueDate value="2012-05-02"/>
+				</extension>
+				<extension url="ahpraNotationType">
+					<valueCodeableConcept>
+						<text value="Registration Requirement"/>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="ahpraNotationDetail">
+					<valueString value="Limited registration for supervised practice is granted under section 66 of the Health Practitioner Regulation National Law Act…etc"/>
+				</extension>
+			</extension>
+		</extension>
+		<!--identifier:AUAHPRARegistrationNumber-->
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+					<code value="AHPRA"/>
+					<display
+						value="Australian Health Practitioner Regulation Agency Registration Number"
+					/>
+				</coding>
+				<text value="AHPRA Registration Number"/>
+			</type>
+			<system value="http://hl7.org.au/id/ahpra-registration-number"/>
+			<value value="MED0000123456"/>
+		</identifier>
+		<code>
+			<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+				<code value="AUAHPRARegistration"/>
+			</coding>
+		</code>
+		<period>
+			<start value="2020-02-03"/>
+			<end value="2021-02-03"/>
+		</period>
+		<issuer>
+			<display value="AHPRA"/>
+		</issuer>
+	</qualification>
+	<communication>
+		<text value="Arabic"/>
+	</communication>
+</Practitioner>

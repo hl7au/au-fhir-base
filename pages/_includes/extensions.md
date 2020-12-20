@@ -5,6 +5,8 @@ These extensions have been defined for this implementation guide.
 ## Administration
 Related to administration records such as patient, practitioner, practitioner role, health care service etc.
 * [Address Identifier](StructureDefinition-address-identifier.html) - address identifier
+* [AHPRA Profession Details](StructureDefinition-ahpraprofession-details.html) - practitioner qualification
+* [AHPRA Registration Details](StructureDefinition-ahpraregistration-details.html) - practitioner qualification
 * [Australian Indigenous Status](StructureDefinition-indigenous-status.html) - patient status
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) - accuracy description for dates
 * [IHI Status](StructureDefinition-ihi-status.html) - identifier status 
