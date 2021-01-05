@@ -29,7 +29,7 @@ The [ahpraprofession-details](StructureDefinition-ahpraprofession-details.html) 
 
 The [ahpraregistration-details](StructureDefinition-ahpraregistration-details.html) extension supports the inclusion of the AHPRA profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s AHPRA registration.
 
-More detailed guidance on the representation of AHPRA data in a practitioner resource can be found [here](../web-content/notes/ahpra-registration-number/index.html){:target="_blank"}.
+More detailed guidance on the representation of AHPRA data in a practitioner resource can be found [here](http://hl7.org.au/notes/ahpra-registration-number/index.html){:target="_blank"}.
 
 **Examples**
 
