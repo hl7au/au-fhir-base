@@ -36,7 +36,7 @@ Locations for mobile services should have type='MOBL'. Additional types of 'AMB'
 
 [Location for services delivered by phone, video or online](Location-example4.html)
 
-[Location for mobile services that can be delivered in a persons house, apartment, or unit](Location-example5.html)
+[Location for mobile services that can be delivered in a person's house, apartment, or unit](Location-example5.html)
 
 [Location for mobile services that can be delivered in schools](Location-example6.html)
 
