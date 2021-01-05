@@ -34,10 +34,10 @@ Locations for mobile services should have type='MOBL'. Additional types of 'AMB'
 
 [Family medicine clinic at Sandy Bay Road, Strahan, TAS](Location-example3.html)
 
-[Telehealth](Location-example4.html)
+[Location for services delivered by phone, video or online](Location-example4.html)
 
-[Mobile, home-based](Location-example5.html)
+[Location for mobile services that can be delivered in a persons house, apartment, or unit](Location-example5.html)
 
-[Mobile, school-based](Location-example6.html)
+[Location for mobile services that can be delivered in schools](Location-example6.html)
 
-[Mobile, residential-care-based](Location-example7.html)
+[Location for mobile services that can be delivered in residential care facilities](Location-example7.html)
