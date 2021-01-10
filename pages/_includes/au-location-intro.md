@@ -12,8 +12,17 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 * [Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/location-specific-practice-number/index.html){:target="_blank"}
 * [National Association of Testing Authorities (NATA) Site Number](StructureDefinition-au-natasitenumber.html) [<sup>[1]</sup>](http://hl7.org.au/id/nata-site/index.html){:target="_blank"}
 
+
 #### Extensions
 No extensions are used in this profile.
+
+
+#### Usage Notes
+Locations for mobile services and services delivered remotely by phone or internet should have mode='kind' to indicate that the location is not specific.
+
+Locations for services delivered remotely by phone or internet should have physicalType='vi'.
+
+Locations for mobile services should have type='MOBL'. Additional types of 'AMB', 'COMM', 'PTRES', 'SCHOOL', or 'WORK' may also be included (in addition to 'MOBL') to indicate that services are tailored for delivery in these kinds of locations.
 
 **Examples**
 
@@ -25,3 +34,10 @@ No extensions are used in this profile.
 
 [Family medicine clinic at Sandy Bay Road, Strahan, TAS](Location-example3.html)
 
+[Location for services delivered by phone, video or online](Location-example4.html)
+
+[Location for mobile services that can be delivered in a person's house, apartment, or unit](Location-example5.html)
+
+[Location for mobile services that can be delivered in schools](Location-example6.html)
+
+[Location for mobile services that can be delivered in residential care facilities](Location-example7.html)
