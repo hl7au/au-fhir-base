@@ -1,10 +1,7 @@
-**AU Base Sex Assigned At Birth Profile** *[[FMM Level 0](guidance.html)]*
+**AU Sex Assigned At Birth** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of sex assigned at birth.
+This profile is provided as a common representation of the sex assigned to a person at birth, usually based on physical properties that are visually apparent at birth.
 
-#### Usage Notes
-* Is used to record sex assigned at birth at a point in time.
+This profile is not appropriate for recording patient's gender (administrativeGender).
 
-**Examples**
 
-TODO
