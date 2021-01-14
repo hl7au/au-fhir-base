@@ -39,7 +39,16 @@
 		<daysOfWeek value="wed"/>
 		<daysOfWeek value="thu"/> 
 		<daysOfWeek value="fri"/> 
-		<availableStartTime value="08:30:00"/> 
+		<availableStartTime value="08:30:00">
+			<extension url="http://hl7.org.au/fhir/StructureDefinition/au-timezone">
+				<valueCodeableConcept>
+					<coding>
+						<system value="https://www.iana.org/time-zones"/>
+						<code value="Australia/Brisbane"/>
+					</coding>
+				</valueCodeableConcept>
+			</extension>
+		</availableStartTime> 
 		<availableEndTime value="17:30:00"/> 
 	</availableTime> 	
 </HealthcareService>

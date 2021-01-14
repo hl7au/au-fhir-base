@@ -53,3 +53,6 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Encryption Ceritficate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
 
 
+## Data types
+* [Australian Time Zone](StructureDefinition-au-timezone.html) - Australian time zone
+
