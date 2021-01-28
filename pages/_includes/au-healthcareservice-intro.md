@@ -11,8 +11,12 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 * [Healthcare Provider Identifier – Organisation (HPI-O)](StructureDefinition-au-hpio.html) [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hi/hpio/1.0/index.html){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/426830){:target="_blank"}
 
 #### Extensions
+Extensions used in this profile:
+* HealthcareService.availableTime.availableStartTime: [Australian Time Zone](StructureDefinition-au-timezone.html)
+* HealthcareService.availableTime.availableEndTime: [Australian Time Zone](StructureDefinition-au-timezone.html)
+
 Potentially useful extensions:
-* HealthcareService.telecom: [Contact Purpose](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-contact-purpose.html)
+* HealthcareService.telecom: [Contact Purpose](StructureDefinition-contact-purpose.html)
 
 #### Usage Notes
 HPI-O is used as an identifier in this profile to support the case where network HPI-Os are issued for sub-organisations, departments, or other logical divisions acting as specific healthcare services. This is useful in the absence of any specific national identifier for healthcare service entities.

@@ -3,6 +3,10 @@
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
 	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Narrative</b></p><p><b>identifier</b>: Employee Number: peterwinslow44</p><p><b>practitioner</b>: <a href="Practitioner-example2.html">Generated Summary: Peter Winslow </a></p><p><b>organization</b>: <a href="Organization-example1.html">Generated Summary: ABN: 51824753556; <span title="Codes: {http://snomed.info/sct 309895006}">Private hospital</span>; name: Albion Hospital</a></p><p><b>code</b>: <span title="Codes: {http://snomed.info/sct 85733003}">General pathologist</span></p><p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 394915009}">General pathology (specialty)</span></p><p><b>location</b>: <a href="Location-example2.html">Generated Summary: NATA Site Number: 162899, LSPN: 123333; status: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type lvl}">Level</span></a></p><p><b>healthcareService</b>: <a href="HealthcareService-example2.html">Generated Summary: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/service-category 26}">Specialist Clinical Pathology</span>; <span title="Codes: {http://snomed.info/sct 394915009}">General pathology (specialty)</span>; name: Albion Hospital Pathology Service</a></p><p><b>telecom</b>: <a href="mailto:peter.winslow@amail.example.com">peter.winslow@amail.example.com</a></p><h3>AvailableTimes</h3><table class="grid"><tr><td>-</td><td><b>DaysOfWeek</b></td><td><b>AvailableStartTime</b></td><td><b>AvailableEndTime</b></td></tr><tr><td>*</td><td>mon, tue, wed, thu, fri</td><td>08:30:00 (Brisbane)</td><td>17:30:00 (Brisbane)</td></tr></table></div>
+	</text>
 	<identifier>
 		<type>
 			<coding>
@@ -55,7 +59,26 @@
 		<daysOfWeek value="wed"/>
 		<daysOfWeek value="thu"/> 
 		<daysOfWeek value="fri"/> 
-		<availableStartTime value="08:30:00"/> 
-		<availableEndTime value="17:30:00"/> 
+		<availableStartTime value="08:30:00">
+			<extension url="http://hl7.org.au/fhir/StructureDefinition/au-timezone">
+				<valueCodeableConcept>
+					<coding>
+						<system value="https://www.iana.org/time-zones" />
+						<code value="Australia/Brisbane" />
+					</coding>
+				</valueCodeableConcept>
+			</extension>
+			
+		</availableStartTime> 
+		<availableEndTime value="17:30:00">
+			<extension url="http://hl7.org.au/fhir/StructureDefinition/au-timezone">
+				<valueCodeableConcept>
+					<coding>
+						<system value="https://www.iana.org/time-zones" />
+						<code value="Australia/Brisbane" />
+					</coding>
+				</valueCodeableConcept>
+			</extension>
+		</availableEndTime> 
 	</availableTime> 
 </PractitionerRole>
