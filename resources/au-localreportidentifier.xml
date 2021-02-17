@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-localreportidentifier" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-localreportidentifier" />
+  <version value="1.0.0" />
+  <name value="AULocalReportIdentifier" />
+  <title value="AU Local Report Identifier" />
+  <status value="draft" />
+  <date value="2020-10-09" />
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a local report identifier in an Australian context. A local report identifier is an organisation’s identifier for a report in that organisation’s local system set of reports." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Local Report Identifier" />
+      <definition value="Local report identifier assigned by an organisation to a report in that organisation's set of reports. A local report identifier is a unique identifier for each report and must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems)." />
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <short value="Coded identifier type for local report identifier" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
+          <code value="LRI" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <short value="System identifier namespace for the organisation that assigned the report identifier" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="Report identifier" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.assigner">
+      <path value="Identifier.assigner" />
+      <short value="Organisation that assigned the report identifier" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.assigner.display">
+      <path value="Identifier.assigner.display" />
+      <short value="Name of the assigning organisation" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

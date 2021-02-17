@@ -126,6 +126,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/medication-strength"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/medication-brand-name"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -134,6 +141,20 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/medication-generic-name"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ethnicity"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-sexassignedatbirth"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -565,13 +586,13 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
-        <resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/au-lastmenstrualperiod"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
-    </resource>   
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/au-gravidity"/>
@@ -623,7 +644,42 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/au-deliverypointidentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-gnafidentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/address-identifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/au-pharmacyapprovalnumber"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ahpraregistration-details"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ahpraprofession-details"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -663,7 +719,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
-     <resource>
+    <resource>
       <reference>
         <reference value="ValueSet/au-v3-ActEncounterCode"/>
       </reference>
@@ -673,6 +729,13 @@
     <resource>
       <reference>
         <reference value="ValueSet/au-hl7v2-0203"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/au-hl7v2-0360"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -756,6 +819,20 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/accession-number-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/order-identifier-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CodeSystem/medication-type"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -791,7 +868,56 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/au-hl7v2-0360"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CodeSystem/au-hl7v2-0443"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/au-location-physical-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/au-location-physical-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/au-location-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/au-location-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/au-timezone"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-timezone"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -818,6 +944,30 @@
         <reference value="AllergyIntolerance/allergyintolerance-example0"/>
       </reference>
       <name value="AllergyIntolerance example - ibuprofen allergy"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="AllergyIntolerance/allergyintolerance-example1"/>
+      </reference>
+      <name value="AllergyIntolerance example - self-reported allergy to eggs"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="AllergyIntolerance/allergyintolerance-example2"/>
+      </reference>
+      <name value="AllergyIntolerance example - self-reported intolerance to lactose"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="AllergyIntolerance/allergyintolerance-example3"/>
+      </reference>
+      <name value="AllergyIntolerance example - no known allergy"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -877,6 +1027,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Practitioner/example4"/>
+      </reference>
+      <name value="Practitioner as a AHPRA registered professional"/>
+      <description value="Shows a typical AHPRA registered professional"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Endpoint/example0"/>
       </reference>
       <name value="Endpoint example"/>
@@ -916,7 +1075,8 @@
         <reference value="HealthcareService/example3"/>
       </reference>
       <name value="Healthcare Service of a General Practitioner"/>
-      <description value="Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages"/>
+      <description
+        value="Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1125,6 +1285,38 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Location/example4"/>
+      </reference>
+      <name value="Location for services delivered by phone, video or online"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/example5"/>
+      </reference>
+      <name value="Location for mobile services that can be delivered in a person's house, apartment, or unit"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/example6"/>
+      </reference>
+      <name value="Location for mobile services that can be delivered in schools"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/example7"/>
+      </reference>
+      <name value="Location for mobile services that can be delivered in residential care facilities"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="PractitionerRole/example2"/>
       </reference>
       <name value="Practitioner Role as a Pathologist"/>
@@ -1271,6 +1463,15 @@
       </reference>
       <name value="Australian No Fixed Address"/>
       <description value="Shows a typical Address with Australian no fixed address"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/address-example3"/>
+      </reference>
+      <name value="Australian address with identifiers"/>
+      <description value="Shows a typical Address with identifiers"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1488,14 +1689,21 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/au-placeridentifier"/>
+        <reference value="StructureDefinition/au-localorderidentifier"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/au-filleridentifier"/>
+        <reference value="StructureDefinition/au-localreportidentifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-accessionnumber"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>

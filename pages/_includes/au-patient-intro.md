@@ -18,13 +18,15 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 
 #### Extensions
 Extensions used in this profile:
+* Patient: [Birth Place](http://hl7.org/fhir/StructureDefinition/birthPlace) (Core Extension)
 * Patient: [Indigenous Status](http://hl7.org.au/fhir/StructureDefinition/indigenous-status) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
 * Patient: [Closing the Gap registration](http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
-* Patient: [Birth Place](http://hl7.org/fhir/StructureDefinition/birthPlace) (Core Extension)
 * Patient: [Mother's Maiden Name](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName) (Core Extension)
-* Patient: [interpreterRequired](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired) (Core Extension)
+* Patient: [Interpreter Required](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired) (Core Extension)
 * Patient: [Date of Arrival in Australia](http://hl7.org.au/fhir/StructureDefinition/date-of-arrival) [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[3]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
-* Patient.birthDate: [Birth Time](http://hl7.org/fhir/STU3/extension-patient-birthtime.html) (Core Extension)
+* Patient: [Ethnicity](http://hl7.org.au/fhir/StructureDefinition/ethnicity)
+* Patient: [Gender Identity](http://hl7.org/fhir/StructureDefinition/patient-genderIdentity) (Core Extension)
+* Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core Extension)
 * Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator)
 
 #### Usage Notes
@@ -45,11 +47,11 @@ To indicate an interpreter service is required, extension interpreter required=t
 
 [Patient with BirthTime](Patient-example3.html)
 
-[Patient born in 2008](Patient-example4.html)
+[Patient born in 2008, with gender identity and ethnicity](Patient-example4.html)
 
-[Patient Sarah Simmons linked to related person Sarah Simmons](Patient-example5.html)
+[Patient Sarah Simmons linked to related person Sarah Simmons, with mother's maiden name](Patient-example5.html)
 
 [Patient with interpreter required in particular language](Patient-example6.html)
 
-[Patient with interpreter required and language unknown](Patient-example7.html)
+[Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)
 

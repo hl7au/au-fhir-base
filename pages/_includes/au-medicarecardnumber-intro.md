@@ -18,7 +18,7 @@ Medicare card numbers are not used for uniquely identifying patients, they are i
 
 [Patient with no birth date, and eligible for Closing the Gap registration](Patient-example2.html)
 
-[Patient Sarah Simmons linked to related person Sarah Simmons](Patient-example5.html)
+[Patient Sarah Simmons linked to related person Sarah Simmons, with mother's maiden name](Patient-example5.html)
 
 [Sarah Simmons as the mother of Suzanne Simmons](RelatedPerson-example2.html)
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="allergyintolerance-example2"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+  </meta>
+
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+  </verificationStatus>
+
+  <type value="intolerance"/>
+
+  <category value="food"/>
+
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="782415009"/>
+      <display value="Intolerance to lactose"/>
+    </coding>
+  </code>
+
+  <patient>
+    <reference value="Patient/example4"/>
+    <display value="Suzanne Simmons"/>
+  </patient>
+
+  <onsetAge>
+    <value value="1"/>
+    <unit value="year"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="a"/>
+  </onsetAge>
+
+  <recordedDate value="2009-10-09"/>
+
+  <asserter>
+    <reference value="Practitioner/example3"/>
+    <display value="Francis Fernando"/>
+  </asserter>
+
+  <reaction>
+    <substance>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47703008"/>
+        <display value="lactose"/>
+      </coding>
+    </substance>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="21522001"/>
+        <display value="Abdominal pain"/>
+      </coding>
+    </manifestation>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="116289008"/>
+        <display value="Abdominal bloating"/>
+      </coding>
+    </manifestation>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="62315008"/>
+        <display value="Diarrhoea"/>
+      </coding>
+    </manifestation>
+  </reaction>
+
+</AllergyIntolerance>
