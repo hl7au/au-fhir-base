@@ -29,3 +29,6 @@ Extensions used in this profile:
 
 [Prescription for paracetamol + codeine](MedicationRequest-medicationrequest-example0.html)
 
+[Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
+
+

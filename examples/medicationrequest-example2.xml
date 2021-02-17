@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationRequest xmlns="http://hl7.org/fhir">
     <id value="medicationrequest-example2"/>
-    <meta>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"/>
-    </meta>
     <extension url="http://hl7.org.au/fhir/StructureDefinition/minimum-interval-between-repeats">
         <valueDuration>
             <value value="1"/>
@@ -13,11 +10,13 @@
         </valueDuration>
     </extension>
     <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
-    <valueString value="Reaptan 10mg/10mg (perindopril arginine/amlodipine) (amlodipine 10 mg + perindopril arginine 10 mg) uncoated tablet, 10 tablets (trade product pack)"/>
-	</extension>
-	<extension url="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name">
-	<valueString value="amlodipine 10 mg + perindopril arginine 10 mg tablet, 10 tablets (medicinal product pack)"/>
-	</extension>
+        <valueString value="Reaptan 10mg/10mg (perindopril arginine/amlodipine) tablet, 10"/>
+    </extension>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name">
+        <valueString
+            value="amlodipine 10 mg + perindopril arginine 10 mg tablet, 10 tablets (medicinal product pack)"
+        />
+    </extension>
     <identifier>
         <type>
             <coding>
@@ -26,7 +25,8 @@
             </coding>
             <text value="Local Prescription Number"/>
         </type>
-        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003627500000328"/>
+        <system
+            value="http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003627500000328"/>
         <value value="53720010"/>
         <assigner>
             <reference value="Organization/example0"/>
@@ -39,7 +39,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="926213011000036100"/>
-            <display value="Reaptan 10mg/10mg (perindopril arginine/amlodipine) (amlodipine 10 mg + perindopril arginine 10 mg) uncoated tablet, 10 tablets (trade product pack)"/>
+            <display value="Reaptan 10mg/10mg (perindopril arginine/amlodipine) tablet, 10"/>
         </coding>
     </medicationCodeableConcept>
     <subject>
@@ -48,13 +48,7 @@
     </subject>
     <authoredOn value="2018-07-15"/>
     <requester>
-        <agent>
-            <reference value="Practitioner/example0"/>
-            <display value="Doctor Mayo"/>
-        </agent>
-        <onBehalfOf>
-            <reference value="Organization/example0"/>
-        </onBehalfOf>
+        <reference value="PractitionerRole/example0"/>
     </requester>
     <reasonCode>
         <text value="Pain management"/>
@@ -73,7 +67,7 @@
                 <periodUnit value="h"/>
             </repeat>
         </timing>
-       <asNeededBoolean value="true"/>	
+        <asNeededBoolean value="true"/>
         <route>
             <coding>
                 <system value="http://snomed.info/sct"/>
@@ -81,12 +75,14 @@
                 <display value="Oral route"/>
             </coding>
         </route>
-        <doseQuantity>
-            <value value="1"/>
-            <unit value="TAB"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="TAB"/>
-        </doseQuantity>
+        <doseAndRate>
+            <doseQuantity>
+                <value value="1"/>
+                <unit value="TAB"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </doseQuantity>
+        </doseAndRate>
     </dosageInstruction>
     <dispenseRequest>
         <validityPeriod>
@@ -97,8 +93,8 @@
         <quantity>
             <value value="20"/>
             <unit value="Tab"/>
-            <system value="http://hl7.org/fhir/v3/orderableDrugForm"/>
-            <code value="Tab"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+            <code value="TAB"/>
         </quantity>
         <expectedSupplyDuration>
             <value value="10"/>
@@ -108,6 +104,6 @@
         </expectedSupplyDuration>
     </dispenseRequest>
     <substitution>
-        <allowed value="true"/>
+        <allowedBoolean value="true"/>
     </substitution>
 </MedicationRequest>
