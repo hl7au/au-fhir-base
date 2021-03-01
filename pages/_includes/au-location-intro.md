@@ -20,7 +20,7 @@ No extensions are used in this profile.
 #### Usage Notes
 Locations for mobile services and services delivered remotely by phone or internet should have mode='kind' to indicate that the location is not specific.
 
-Locations for services delivered remotely by phone or internet should have physicalType='vi'.
+Locations for services delivered remotely by phone or internet should have type='VI' and physicalType='vi'.
 
 Locations for mobile services should have type='MOBL'. Additional types of 'AMB', 'COMM', 'PTRES', 'SCHOOL', or 'WORK' may also be included (in addition to 'MOBL') to indicate that services are tailored for delivery in these kinds of locations.
 
