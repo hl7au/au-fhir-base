@@ -17,3 +17,7 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 #### Extensions
 Extensions used in this profile:
 * ServiceRequest: procedure-targetBodyStructure (core extension) [<sup>[1]</sup>](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html)
+
+**Examples**
+
+[Hepatitis B surface antibody measurement](ServiceRequest-servicerequest-hepatitis-b-antibody.html)

@@ -1,0 +1,54 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="observation-specimen-hepatitus-b-serology"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnostic-observation"/>
+    </meta>
+    
+    <basedOn>
+        <reference value="ServiceRequest/servicerequest-hepatitis-b-antibody"/>
+        <display value="Service Request for Hepatitis B surface antibody measurement"/>
+    </basedOn>
+
+    <status value="final"/>
+    
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="65911000"/>
+            <display value="Hepatitis B surface antibody measurement"/>
+        </coding>
+    </code>
+
+    <subject>
+        <reference value="Patient/example0"/>
+        <display value="Stella Franklin"/>
+    </subject>
+
+    <performer>
+        <reference value="Organization/f799e349-0385-4fbc-a2aa-b5b50af957ea"/>
+        <display value="ACME Pathology"/>
+    </performer>
+
+    <valueQuantity>
+        <value value="10"/>
+        <comparator value="&gt;"/>
+        <unit value="IU/L"/>
+    </valueQuantity>
+
+    <note>
+        <text value ="HBsAb result indicates sufficient Hepatitis B immunity"/>
+    </note>
+
+    <specimen>
+        <reference value="Specimen/specimen-serum"/>
+        <display value="Serum"/>
+    </specimen>
+
+    <referenceRange>
+        <low>
+            <value value="10"/>
+            <unit value="IU/L"/>
+        </low>
+    </referenceRange>
+
+</Observation>

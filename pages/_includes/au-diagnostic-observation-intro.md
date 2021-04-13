@@ -13,3 +13,7 @@ The bodySite extension may be used when a coded concept does not provide the nec
 #### Extensions
 Extensions used in this profile:
 * Observation: bodySite (core extension) [<sup>[1]</sup>](https://www.hl7.org/fhir/r4/extension-bodysite.html)
+
+**Examples**
+
+[Measurement of Hepatitis B surface antibody](Observation-observation-specimen-hepatitus-b-serology.html)

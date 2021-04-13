@@ -1,0 +1,26 @@
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="servicerequest-hepatitis-b-antibody"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnostic-servicerequest"/>
+    </meta>
+    <status value="active"/>
+    <intent value="order"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="65911000"/>
+            <display value="Hepatitis B surface antibody measurement"/>
+        </coding>
+        <text value="Hepatitis B surface antibody"/>
+    </code>
+    <subject>
+        <reference value="Patient/example0"/>
+        <display value="Stella Franklin"/>
+    </subject>
+    <authoredOn value="2019-09-23"/>
+    <requester>
+        <reference value="PractitionerRole/example3"/>
+        <display value="General practitioner"/>
+    </requester>
+
+</ServiceRequest>
