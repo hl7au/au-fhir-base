@@ -33,6 +33,7 @@ More detailed guidance on the representation of AHPRA data in a practitioner res
 
 
 **Qualifications**
+
 The above section describes how to include AHPRA professions and registrations in the qualifications backbone element.
 
 Tertiary qualifications can be included in the qualification backbone element with a code taken from the international value set [HL7 V2 0360 Table](http://hl7.org/fhir/R4/v2/0360/2.7/index.html). There are no plans to add codes for Australian tertiary qualifications. If no suitable code exists in the international valueset, a text representation of the qualification can be included without a coding.
