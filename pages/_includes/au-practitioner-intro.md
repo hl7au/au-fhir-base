@@ -31,6 +31,16 @@ The [ahpraregistration-details](StructureDefinition-ahpraregistration-details.ht
 
 More detailed guidance on the representation of AHPRA data in a practitioner resource can be found [here](http://hl7.org.au/notes/ahpra-registration-number/index.html){:target="_blank"}.
 
+
+**Qualifications**
+
+The above section describes how to include AHPRA professions and registrations in the qualifications backbone element.
+
+Tertiary qualifications can be included in the qualification backbone element with a code taken from the international value set [HL7 V2 0360 Table](http://hl7.org/fhir/R4/v2/0360/2.7/index.html). There are no plans to add codes for Australian tertiary qualifications. If no suitable code exists in the international valueset, a text representation of the qualification can be included without a coding.
+
+Professional memberships (of colleges etc) can be included in the qualification backbone element using a text representation of the qualification without a coding. Codes for Australian college memberships may be added to the Australian valueset in the future [HL7 V2 0360 Table (Australia)](ValueSet-au-hl7v2-0360.html).
+
+
 **Examples**
 
 [Practitioner with HPI-I, Prescriber Number, AHPRA Registration Number, and CAE Identifier](Practitioner-example0.html)
