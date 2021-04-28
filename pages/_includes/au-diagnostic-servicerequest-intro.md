@@ -6,9 +6,9 @@ Note: The procedure-targetBodyStructure extension should only be used if not imp
 
 There are three preferred value sets when coding ServiceRequest.code:
 
-*	an imaging order code is preferred to be a member of [https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1)
-*	a pathology order code is preferred to be a member of set of codes published as the [Standard for Pathology Informatics in Australia - Requesting codes](https://www.rcpa.edu.au/getattachment/2489328b-10f1-41d8-a6e1-1476b77fb386/SPIA-Requesting-Pathology-Terminology-and-Codes.aspx) (a value set representation is forthcoming)
-*	a specialist or other diagnostic order code is preferred to be a member of [Evaluation Procedure](https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1)
+* an imaging order code is preferred to be a member of [https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1)
+* a pathology order code is preferred to be a member of set of codes published as the [Standard for Pathology Informatics in Australia - Requesting codes](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-requesting-refset-3)
+* a specialist or other diagnostic order code is preferred to be a member of [Evaluation Procedure](https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1)
 
 #### Identifiers
 These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
