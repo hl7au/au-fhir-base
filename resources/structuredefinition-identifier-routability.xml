@@ -44,6 +44,7 @@
         <severity value="error" />
         <human value="preference is required when flag is true" />
         <expression value="extension('routability-flag').valueBoolean implies extension('routability-preference').exists()" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/identifier-routability" />
       </constraint>
     </element>
     <element id="Extension.extension">
@@ -69,6 +70,7 @@
     </element>
     <element id="Extension.extension:routability-flag.value[x]">
       <path value="Extension.extension.value[x]" />
+      <min value="1" />
       <type>
         <code value="boolean" />
       </type>
@@ -86,9 +88,7 @@
     </element>
     <element id="Extension.extension:routability-preference.value[x]">
       <path value="Extension.extension.value[x]" />
-      <type>
-        <code value="integer" />
-      </type>
+      <min value="1" />
       <type>
         <code value="unsignedInt" />
       </type>
@@ -96,9 +96,8 @@
     <element id="Extension.extension:routability-asserter">
       <path value="Extension.extension" />
       <sliceName value="routability-asserter" />
-      <short value="Identifies the asserter" />
+      <short value="Identifies asserter" />
       <min value="1" />
-      <max value="1" />
     </element>
     <element id="Extension.extension:routability-asserter.url">
       <path value="Extension.extension.url" />
@@ -106,6 +105,7 @@
     </element>
     <element id="Extension.extension:routability-asserter.value[x]">
       <path value="Extension.extension.value[x]" />
+      <min value="1" />
       <type>
         <code value="uri" />
       </type>
