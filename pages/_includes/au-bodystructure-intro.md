@@ -4,4 +4,4 @@ This BodyStucture profile is provided for use in an Australian context.
 
 **Examples**
 
-[Injury with multiple observations](BodyStructure-example0.html)
+[Sports injury](BodyStructure-example0.html)
