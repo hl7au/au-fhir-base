@@ -1,0 +1,48 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="sex-at-birth-intersex"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-sexassignedatbirth"/>
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p><b>IHI:</b> 8003608833357361 </p>
+            <p><b>Status</b>: Preliminary</p>
+            <p><b>Biological sex at birth</b>: Intersex</p>
+        </div>
+    </text>
+    <status value="preliminary"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1515311000168102"/>
+            <display value="Biological sex at birth"/>
+        </coding>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="76689-9"/>
+            <display value="Sex assigned at birth"/>
+        </coding>
+    </code>
+    <subject>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="NI"/>
+                    <display value="National unique individual identifier"/>
+                </coding>
+                <text value="IHI"/>
+            </type>
+            <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+            <value value="8003608833357361"/>
+        </identifier>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="32570691000036108"/>
+            <display value="Intersex"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
