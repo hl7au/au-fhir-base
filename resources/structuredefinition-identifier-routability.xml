@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="identifier-routability" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/identifier-routability" />
+  <version value="2.1.0" />
+  <name value="IdentifierRoutabilityExtension" />
+  <title value="Identifier Routability Extension" />
+  <status value="active" />
+  <date value="2021-04-30" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Indicates whether associated identifier is intended for message routing." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Identifier" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Identifier routability" />
+      <definition value="Asserted routing preferences for the associated identifier." />
+      <max value="1" />
+      <constraint>
+        <key value="inv-routability-preference" />
+        <severity value="error" />
+        <human value="preference is required when flag is true" />
+        <expression value="extension('routability-flag').valueBoolean implies extension('routability-preference').exists()" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/identifier-routability" />
+      </constraint>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:routability-flag">
+      <path value="Extension.extension" />
+      <sliceName value="routability-flag" />
+      <short value="Indicates asserter can route associated identifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:routability-flag.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="routability-flag" />
+    </element>
+    <element id="Extension.extension:routability-flag.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:routability-preference">
+      <path value="Extension.extension" />
+      <sliceName value="routability-preference" />
+      <short value="Indicates the asserter's preference for selection of this identifier for routing" />
+      <definition value="Lower value is higher preference.  0 is highest priority." />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:routability-preference.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="routability-preference" />
+    </element>
+    <element id="Extension.extension:routability-preference.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="unsignedInt" />
+      </type>
+    </element>
+    <element id="Extension.extension:routability-asserter">
+      <path value="Extension.extension" />
+      <sliceName value="routability-asserter" />
+      <short value="Identifies asserter" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:routability-asserter.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="routability-asserter" />
+    </element>
+    <element id="Extension.extension:routability-asserter.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/identifier-routability" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

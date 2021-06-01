@@ -55,4 +55,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 ## Data types
 * [Australian Time Zone](StructureDefinition-au-timezone.html) - Australian time zone
-
+* [Identifier Routability](StructureDefinition-identifier-routability.html) - Supports identifier selection for routing
