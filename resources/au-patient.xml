@@ -6,7 +6,7 @@
   <name value="AUBasePatient" />
   <title value="AU Base Patient" />
   <status value="active" />
-  <date value="2020-03-06" />
+  <date value="2020-06-04" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -37,7 +37,7 @@
       <constraint>
         <key value="inv-pat-0" />
         <severity value="error" />
-        <human value="If there is a birth time its date shall be the birth date" />
+        <human value="If present, birth time's date shall be the birth date" />
         <expression value="birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
