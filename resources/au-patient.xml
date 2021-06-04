@@ -35,7 +35,7 @@
       <short value="A patient in an Australian healthcare context" />
       <definition value="Demographics and other administrative information about an individual receiving care or other health-related services." />
       <constraint>
-        <key value="inv-pat-0" />
+        <key value="aubpat-1" />
         <severity value="error" />
         <human value="If present, birth time's date shall be the birth date" />
         <expression value="birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />

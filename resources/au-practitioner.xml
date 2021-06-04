@@ -56,14 +56,14 @@
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification" />
       <constraint>
-        <key value="inv-sra-1" />
+        <key value="aubpra-1" />
         <severity value="error" />
         <human value="The qualification shall only have AHPRA Profession details, if qualification is an AHPRA Profession" />
         <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAHPRAProfession').exists()" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
-        <key value="inv-sra-2" />
+        <key value="aubpra-2" />
         <severity value="error" />
         <human value="The qualification shall only have AHPRA Registration details, if qualification is an AHPRA Registration" />
         <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAHPRARegistration').exists()" />
