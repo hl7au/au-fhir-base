@@ -18,16 +18,16 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 
 #### Extensions
 Extensions used in this profile:
-* Patient: [Birth Place](http://hl7.org/fhir/StructureDefinition/birthPlace) (Core Extension)
-* Patient: [Indigenous Status](http://hl7.org.au/fhir/StructureDefinition/indigenous-status) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
-* Patient: [Closing the Gap registration](http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
+* Patient: [Birth Place](http://hl7.org/fhir/StructureDefinition/patient-birthPlace) (Core Extension)
+* Patient: [Indigenous Status](StructureDefinition-indigenous-status.html) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
+* Patient: [Closing the Gap registration](StructureDefinition-closing-the-gap-registration.html) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603679){:target="_blank"}
 * Patient: [Mother's Maiden Name](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName) (Core Extension)
 * Patient: [Interpreter Required](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired) (Core Extension)
-* Patient: [Date of Arrival in Australia](http://hl7.org.au/fhir/StructureDefinition/date-of-arrival) [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[3]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
-* Patient: [Ethnicity](http://hl7.org.au/fhir/StructureDefinition/ethnicity)
+* Patient: [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[3]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
+* Patient: [Ethnicity](StructureDefinition-ethnicity.html)
 * Patient: [Gender Identity](http://hl7.org/fhir/StructureDefinition/patient-genderIdentity) (Core Extension)
 * Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core Extension)
-* Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator)
+* Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html)
 
 #### Usage Notes
 Mutiple Individual Healthcare Identifiers are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
