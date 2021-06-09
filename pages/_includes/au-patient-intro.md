@@ -29,6 +29,12 @@ Extensions used in this profile:
 * Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core Extension)
 * Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html)
 
+#### Boundaries and Relationships
+Other attributes, ostensibly considered to be demographic in nature, are better represented in other resources rather than directly part of the Patient. These attributes include:
+* a patient’s biological sex - this is a testable observation about a biological property of a patient, and as such should be represented using an [AU Sex Assigned At Birth](StructureDefinition-au-sexassignedatbirth.html) profile.
+* a patient’s pregnancy status - this is a transient clinical statement better represented using the [Condition](http://hl7.org/fhir/R4/condition.html) resource
+* various social determinants of health (such as housing status, employment status or socio-economic background) - these patient attributes are better tracked using a combination of other resources such as [Observation](http://hl7.org/fhir/R4/observation.html), [Condition](http://hl7.org/fhir/R4/condition.html) or [Flag](http://hl7.org/fhir/R4/flag.html)
+
 #### Usage Notes
 Mutiple Individual Healthcare Identifiers are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
 
