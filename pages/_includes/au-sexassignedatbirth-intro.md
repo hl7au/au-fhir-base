@@ -18,10 +18,9 @@ This profile is not intended for capturing other related attributes such as:
   
 **Usage notes**
   
-Sex at birth and other biological sex concepts are clinical observations and form part of the clinical decision such as reference range information. The Australian Government Guidelines on the Recognition of Sex and Gender state that that this information should only be captured where there is a legitimate need for that information (i.e. as necessary as part of the clinical content) and it is consistent with Australian Privacy Principle 3.
+Sex refers to a person's biological characteristics. Sex is usually categorised as female, male or intersex. The term intersex refers to people who are born with genetic, hormonal or physical sex characteristics that are not typically female or male. 
 
-To record a sex at birth of a person born with genetic, hormonal or physical sex characteristics that are not typically female or male, value should be 32570691000036108 \| Intersex \|. 
-When the biological sex at birth cannot be cannot be determined, value should be 32570681000036106  \| Indeterminate sex\|.
+Sex at birth and other biological sex concepts are clinical observations and form part of the clinical decision such as reference range information. The Australian Government Guidelines on the Recognition of Sex and Gender state that that this information should only be captured where there is a legitimate need for that information (i.e. as necessary as part of the clinical content) and it is consistent with Australian Privacy Principle 3.
 
 **Examples**
 
