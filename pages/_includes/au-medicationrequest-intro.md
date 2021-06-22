@@ -10,9 +10,9 @@ Full medication definitions as a Medication resource can be referenced or coding
 * MIMS Package - commonly used medicine coding.
 
 #### Identifiers
-These definitions represent common data held in the MedicationRequest.identifier element:
-* Electronic Transfer of Prescription Supplier Identifier - ETP vendor system identifier 
-* Local Prescription Number - prescription system identifier for this record [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/index.html){:target="_blank"}
+These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the MedicationRequest.identifier element:
+* [AU ETP Vendor Identifier](StructureDefinition-au-etpprescriptionidentifier.html)
+* [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html)[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/index.html){:target="_blank"}
 
 #### Extensions
 Extensions used in this profile:
