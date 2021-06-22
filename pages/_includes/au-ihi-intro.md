@@ -9,7 +9,7 @@ Extensions used in this profile:
 
 #### Usage Notes
 
-Mutiple IHIs are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
+Multiple IHIs are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
 
 **Examples**
 
