@@ -43,6 +43,8 @@ Medicare Numbers are not used for uniquely identifying patients, they are identi
 
 To indicate an interpreter service is required, extension interpreter required=true should be set. If the language for interpreter service is known then it should be included in communication.language with communication.preferred=true. If communication.preferred=true is not set when interpreter required=true then it may be understood that an interpreter is required but the language for the interpreter service is not known.
 
+Gender is supported as administrative gender for identifying patient records and other administrative requirements. The core extension [Gender Identity](http://hl7.org/fhir/R4/extension-patient-genderidentity.html) is available to represent a patient's personal gender and social identity, but this not yet supported in AU Base Patient (as the terminology is considered inappropriate for use in Australia). 
+
 **Examples**
 
 [Patient with IHI, medicare card, and Health Care Card](Patient-example0.html)
