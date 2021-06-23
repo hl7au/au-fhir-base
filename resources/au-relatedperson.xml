@@ -53,6 +53,8 @@
     </element>
     <element id="RelatedPerson.relationship">
       <path value="RelatedPerson.relationship" />
+      <short value="The nature of the relationship to the patient"/>
+      <definition value="The nature of the relationship that the related person has with the patient. e.g. The RelatedPerson is the mother of the Patient."/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PatientRelationshipType" />
@@ -63,6 +65,7 @@
     </element>
     <element id="RelatedPerson.address">
       <path value="RelatedPerson.address" />
+      <comment value="The address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates. Postal addresses are often used as proxies for physical locations (also see the Location resource)."/>
       <type>
         <code value="Address" />
         <profile value="http://hl7.org/fhir/StructureDefinition/Address" />
@@ -74,6 +77,7 @@
     </element>
     <element id="RelatedPerson.communication.language">
       <path value="RelatedPerson.communication.language" />
+      <definition value="A language which can be used to communicate with about the patient's health. The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English." />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2" />

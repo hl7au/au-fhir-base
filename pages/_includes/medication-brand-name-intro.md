@@ -8,4 +8,4 @@ This brand name can be included as an additional name representation of the bran
 
 [Medication with brand name text](Medication-BrandedPack1.html)
 
-[Prescription with brand name text](MedicationRequest-example2.html)
+[Prescription with brand name text](MedicationRequest-medicationrequest-example2.html)

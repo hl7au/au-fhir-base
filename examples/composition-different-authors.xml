@@ -27,12 +27,6 @@
     <title value="Discharge Summary"/>
 
     <section>
-        <extension url="http://hl7.org.au/fhir/StructureDefinition/section-author">
-            <valueReference>
-                <reference value="Practitioner/example0"/>
-                <display value="Doctor Mayo"/>
-            </valueReference>
-        </extension>
         <title value="Reason for admission"/>
         <code>
             <coding>
@@ -41,6 +35,10 @@
                 <display value="Reason for visit Narrative"/>
             </coding>
         </code>
+        <author>
+            <reference value="Practitioner/example0"/>
+            <display value="Doctor Mayo"/> 
+        </author>
         <text>
             <status value="extensions"/>
             <div xmlns="http://www.w3.org/1999/xhtml">
@@ -53,12 +51,6 @@
     </section>
 
     <section>
-        <extension url="http://hl7.org.au/fhir/StructureDefinition/section-author">
-            <valueReference>
-                <reference value="PractitionerRole/example0"/>
-                <display value="Cardiologist"/>
-            </valueReference>
-        </extension>
         <title value="Medications on Discharge"/> 
         <code> 
             <coding> 
@@ -67,6 +59,10 @@
                 <display value="Hospital discharge medications Narrative"/> 
             </coding> 
         </code> 
+        <author>
+            <reference value="PractitionerRole/example0"/>
+            <display value="Cardiologist"/>
+        </author>
         <text>
             <status value="extensions"/>
             <div xmlns="http://www.w3.org/1999/xhtml">
