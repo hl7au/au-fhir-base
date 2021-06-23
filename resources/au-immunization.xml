@@ -149,8 +149,8 @@
       <path value="Immunization.performer"/>
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="function"/>
+          <type value="pattern"/>
+          <path value="function.coding"/>
         </discriminator>
         <rules value="open"/>
       </slicing>
@@ -176,15 +176,14 @@
     <element id="Immunization.performer:administeredBy.function.coding">
       <path value="Immunization.performer.function.coding"/>
       <min value="1"/>
-      <fixedCoding>
+      <patternCoding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
         <code value="AP"/>
         <display value="Administering Provider"/>
-      </fixedCoding>
+      </patternCoding>
     </element>
     <element id="Immunization.performer:administeredBy.function.text">
       <path value="Immunization.performer.function.text"/>
-      <min value="1"/>
       <fixedString value="Administering Provider"/>
     </element>
     <element id="Immunization.performer:administeredBy.actor">
