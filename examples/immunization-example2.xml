@@ -4,7 +4,6 @@
     <profile value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
   </meta>
   <status value="completed"/>
-  <notGiven value="false"/>
   <vaccineCode>
     <coding>
       <system value="urn:oid:1.2.36.1.2001.1005.17"/>
@@ -16,24 +15,23 @@
     <reference value="Patient/example2"/>
     <display value="Sally GRANT"/>
   </patient> 
-  <date value="2017-05-21"/>
+  <occurrenceDateTime value="2017-05-21"/>
   <primarySource value="true"/>
-  <practitioner>
-    <role>
+  <performer>
+    <function>
       <coding>
-        <system value="http://hl7.org/fhir/v2/0443"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
         <code value="AP"/>
         <display value="Administering Provider"/>
       </coding>
       <text value="Administering Provider"/>
-    </role>
+    </function>
     <actor>
       <reference value="Practitioner/example0"/> 
       <display value="Dr Helen Mayo"/>
     </actor>
-  </practitioner>
-  <vaccinationProtocol>
-    <doseSequence value="1"/>
+  </performer>
+  <protocolApplied>
     <targetDisease>
       <coding>
         <system value="http://snomed.info/sct"/>
@@ -56,12 +54,6 @@
         <code value="398102009"/>
       </coding>
     </targetDisease>
-    <doseStatus>
-      <coding>
-        <system value="http://hl7.org/fhir/v3/NullFlavor"/>
-        <code value="NAVU"/>
-        <display value="Not available"/>
-      </coding>
-    </doseStatus>
-  </vaccinationProtocol>
+    <doseNumberPositiveInt value="1"/>
+  </protocolApplied>
 </Immunization>
