@@ -2,7 +2,11 @@
 
 This profile provides an observation information structure for a patient’s biological sex[<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/635233){:target="_blank"}[<sup>[2]</sup>](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release){:target="_blank"} assigned at birth. Biological sex assigned at birth refers to what was determined by sex characteristics observed at birth or infancy, including genital and chromosome composition. Sex assigned at birth is captured once for a patient and is not expected to change within their lifetime. 
 
-**Boundaries and Relationships**
+NOTE: Observation.code.coding:loincSexAtBirth is being considered for removal. LOINC 76689-9 - Sex assigned at birth is defined as "The sex that was assigned and recorded on the birth certificate at the time of an individual's birth”. Whereas this LOINC code is suitable to represent the birth certificate sex observation, we are seeking clarification from LOINC on the use of this code in a biological sex assigned at birth observation.
+
+The ongoing HL7 International [Gender Harmony Project](https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project) project has the aim of representing sex and gender identity in clinical models. When the outcomes of the project are available they will need to be considered in the context of this and other biological sex models.
+
+#### Boundaries and Relationships
 
 Biological sex assigned at birth should not be used for:
 * the concept of a person's gender such as gender identity (part of a person’s personal and social identity) or administrative gender (record keeping purposes)
