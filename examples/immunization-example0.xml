@@ -3,8 +3,14 @@
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
 	</meta>
-	<status value="completed"/>
-	<notGiven value="true"/>
+	<status value="not-done"/>
+	<statusReason>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+			<code value="PATOBJ"/>
+			<display value="patient objection"/>
+		</coding>
+	</statusReason>
 	<vaccineCode>
 		<coding>
 			<system value="http://snomed.info/sct"/>
@@ -16,32 +22,23 @@
 		<reference value="Patient/example1"/>
 		<display value="Harry DAN"/>
 	</patient>
-	<date value="2017-08-15"/>
+	<occurrenceDateTime value="2017-08-15"/>
 	<primarySource value="true"/>
-	<practitioner>
-		<role>
+	<performer>
+		<function>
 			<coding>
-				<system value="http://hl7.org/fhir/v2/0443"/>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
 				<code value="AP"/>
 				<display value="Administering Provider"/>
 			</coding>
 			<text value="Administering Provider"/>
-		</role>
+		</function>
 		<actor>
 			<reference value="Practitioner/example0"/> 
 			<display value="Dr Helen Mayo"/>
 		</actor>
-	</practitioner>
+	</performer>
 	<note>
 		<text value="Patient refused administration of Zostavax"/>
 	</note>
-	<explanation>
-		<reasonNotGiven>
-			<coding>
-				<system value="http://hl7.org/fhir/v3/ActReason"/>
-				<code value="PATOBJ"/>
-				<display value="patient objection"/>
-			</coding>
-		</reasonNotGiven>
-	</explanation>
 </Immunization>
