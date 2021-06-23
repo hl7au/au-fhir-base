@@ -1,9 +1,8 @@
 {
     "sct-edition": "http://snomed.info/sct/32506021000036107",
     "version": "4.0.1",
-    "fixed-business-version" : "2.1.0",
-    "title" : "AU Base Implementation Guide",
-
+    "fixed-business-version": "2.1.0",
+    "title": "AU Base Implementation Guide",
     "source": "ig.xml",
     "dependencyList": [],
     "spreadsheets": [],
@@ -14,6 +13,7 @@
         "http://www.gs1.org/gtin",
         "http://pbs.gov.au/code/item",
         "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "http://terminology.hl7.org.au/CodeSystem/v2-0360",
         "http://terminology.hl7.org.au/CodeSystem/v2-0443",
         "http://terminology.hl7.org/CodeSystem/v2-0131",
         "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
@@ -115,15 +115,13 @@
             "template-base": "ex.html",
             "template-format": "ex-format.html"
         }
-
-		
     },
     "tool": "jekyll",
     "license": "CC0-1.0",
     "canonicalBase": "http://hl7.org.au/fhir",
     "paths": {
         "temp": "temp",
-        "history" : "http://hl7.org.au/fhir/history.html",
+        "history": "http://hl7.org.au/fhir/history.html",
         "resources": [
             "resources",
             "examples"
@@ -176,23 +174,23 @@
             "base": "StructureDefinition-au-medicarecardnumber.html",
             "defns": "StructureDefinition-au-medicarecardnumber-definitions.html"
         },
-         "StructureDefinition/au-medicareprovidernumber": {
+        "StructureDefinition/au-medicareprovidernumber": {
             "base": "StructureDefinition-au-medicareprovidernumber.html",
             "defns": "StructureDefinition-au-medicareprovidernumber-definitions.html"
-         },
+        },
         "StructureDefinition/au-pbsprescribernumber": {
             "base": "StructureDefinition-au-pbsprescribernumber.html",
             "defns": "StructureDefinition-au-pbsprescribernumber-definitions.html"
         },
-       "StructureDefinition/au-medicalrecordnumber": {
+        "StructureDefinition/au-medicalrecordnumber": {
             "base": "StructureDefinition-au-medicalrecordnumber.html",
             "defns": "StructureDefinition-au-medicalrecordnumber-definitions.html"
-       },
-       "StructureDefinition/au-hpii": {
+        },
+        "StructureDefinition/au-hpii": {
             "base": "StructureDefinition-au-hpii.html",
             "defns": "StructureDefinition-au-hpii-definitions.html"
-       },
-         "StructureDefinition/au-ihi": {
+        },
+        "StructureDefinition/au-ihi": {
             "base": "StructureDefinition-au-ihi.html",
             "defns": "StructureDefinition-au-ihi-definitions.html"
         },
@@ -211,7 +209,7 @@
         "StructureDefinition/au-australianbusinessnumber": {
             "base": "StructureDefinition-au-australianbusinessnumber.html",
             "defns": "StructureDefinition-au-australianbusinessnumber-definitions.html"
-        },		
+        },
         "StructureDefinition/au-cspregistrationnumber": {
             "base": "StructureDefinition-au-cspregistrationnumber.html",
             "defns": "StructureDefinition-au-cspregistrationnumber-definitions.html"
@@ -220,7 +218,7 @@
             "base": "StructureDefinition-au-australianregistredbodynumber.html",
             "defns": "StructureDefinition-au-australianregistredbodynumber-definitions.html"
         },
-       "StructureDefinition/au-insurernumber": {
+        "StructureDefinition/au-insurernumber": {
             "base": "StructureDefinition-au-insurernumber.html",
             "defns": "StructureDefinition-au-insurernumber-definitions.html"
         },
@@ -263,7 +261,7 @@
         "StructureDefinition/au-localdispenseidentifier": {
             "base": "StructureDefinition-au-localdispenseidentifier.html",
             "defns": "StructureDefinition-au-localdispenseidentifier-definitions.html"
-        },    
+        },
         "StructureDefinition/au-healthcarecardnumber": {
             "base": "StructureDefinition-au-healthcarecardnumber.html",
             "defns": "StructureDefinition-au-healthcarecardnumber-definitions.html"
@@ -271,7 +269,7 @@
         "StructureDefinition/au-localprescriptionidentifier": {
             "base": "StructureDefinition-au-localprescriptionidentifier.html",
             "defns": "StructureDefinition-au-localprescriptionidentifier-definitions.html"
-        },    
+        },
         "StructureDefinition/au-cwlthseniorshealthcardnumber": {
             "base": "StructureDefinition-au-cwlthseniorshealthcardnumber.html",
             "defns": "StructureDefinition-au-cwlthseniorshealthcardnumber-definitions.html"
@@ -387,7 +385,7 @@
         "StructureDefinition/au-lastmenstrualperiod": {
             "base": "StructureDefinition-au-lastmenstrualperiod.html",
             "defns": "StructureDefinition-au-lastmenstrualperiod-definitions.html"
-        }, 
+        },
         "StructureDefinition/au-gravidity": {
             "base": "StructureDefinition-au-gravidity.html",
             "defns": "StructureDefinition-au-gravidity-definitions.html"
@@ -508,6 +506,10 @@
             "base": "StructureDefinition-change-description.html",
             "defns": "StructureDefinition-change-description-definitions.html"
         },
+        "StructureDefinition/identifer-routability": {
+            "base": "StructureDefinition-identifier-routability.html",
+            "defns": "StructureDefinition-identifier-routability.html"
+        },
         "StructureDefinition/list-source-role": {
             "base": "StructureDefinition-list-source-role.html",
             "defns": "StructureDefinition-list-source-role-definitions.html"
@@ -563,22 +565,54 @@
         "StructureDefinition/date-of-arrival": {
             "base": "StructureDefinition-date-of-arrival.html",
             "defns": "StructureDefinition-date-of-arrival-definitions.html"
-        },    
+        },
         "StructureDefinition/contact-purpose": {
             "base": "StructureDefinition-contact-purpose.html",
             "defns": "StructureDefinition-contact-purpose-definitions.html"
+        },
+        "StructureDefinition/ethnicity": {
+            "base": "StructureDefinition-ethnicity.html",
+            "defns": "StructureDefinition-ethnicity-definitions.html"
         },
         "StructureDefinition/au-pharmacyapprovalnumber": {
             "base": "StructureDefinition-au-pharmacyapprovalnumber.html",
             "defns": "StructureDefinition-au-pharmacyapprovalnumber-definitions.html"
         },
-        "StructureDefinition/au-filleridentifier": {
-            "base": "StructureDefinition-au-filleridentifier.html",
-            "defns": "StructureDefinition-au-filleridentifier-definitions.html"
+        "StructureDefinition/au-sexassignedatbirth": {
+            "base": "StructureDefinition-au-sexassignedatbirth.html",
+            "defns": "StructureDefinition-au-sexassignedatbirth-definitions.html"
         },
-        "StructureDefinition/au-placeridentifier": {
-            "base": "StructureDefinition-au-placeridentifier.html",
-            "defns": "StructureDefinition-au-placeridentifier-definitions.html"
+        "StructureDefinition/au-localreportidentifier": {
+            "base": "StructureDefinition-au-localreportidentifier.html",
+            "defns": "StructureDefinition-au-localreportidentifier-definitions.html"
+        },
+        "StructureDefinition/au-localorderidentifier": {
+            "base": "StructureDefinition-au-localorderidentifier.html",
+            "defns": "StructureDefinition-au-localorderidentifier-definitions.html"
+        },
+        "StructureDefinition/au-accessionnumber": {
+            "base": "StructureDefinition-au-accessionnumber.html",
+            "defns": "StructureDefinition-au-accessionnumber-definitions.html"
+        },
+        "StructureDefinition/ahpraprofession-details": {
+            "base": "StructureDefinition-ahpraprofession-details.html",
+            "defns": "StructureDefinition-ahpraprofession-details-definitions.html"
+        },
+        "StructureDefinition/ahpraregistration-details": {
+            "base": "StructureDefinition-ahpraregistration-details.html",
+            "defns": "StructureDefinition-ahpraregistration-details-definitions.html"
+        },
+        "StructureDefinition/au-deliverypointidentifier": {
+            "base": "StructureDefinition-au-deliverypointidentifier.html",
+            "defns": "StructureDefinition-au-deliverypointidentifier-definitions.html"
+        },
+        "StructureDefinition/au-gnafidentifier": {
+            "base": "StructureDefinition-au-gnafidentifier.html",
+            "defns": "StructureDefinition-au-gnafidentifier-definitions.html"
+        },
+        "StructureDefinition/address-identifier": {
+            "base": "StructureDefinition-address-identifier.html",
+            "defns": "StructureDefinition-address-identifier-definitions.html"
         },
         "CodeSystem/medication-type": {
             "base": "CodeSystem-medication-type.html",
@@ -628,9 +662,25 @@
             "base": "ValueSet-au-hl7v2-0203.html",
             "defns": "ValueSet-au-hl7v2-0203-definitions.html"
         },
+        "CodeSystem/au-hl7v2-0360": {
+            "base": "CodeSystem-au-hl7v2-0360.html",
+            "defns": "CodeSystem-au-hl7v2-0360-definitions.html"
+        },
+        "ValueSet/au-hl7v2-0360": {
+            "base": "ValueSet-au-hl7v2-0360.html",
+            "defns": "ValueSet-au-hl7v2-0360-definitions.html"
+        },
         "ValueSet/dva-entitlement": {
             "base": "ValueSet-dva-entitlement.html",
             "defns": "ValueSet-dva-entitlement-definitions.html"
+        },
+        "ValueSet/accession-number-type": {
+            "base": "ValueSet-accession-number-type.html",
+            "defns": "ValueSet-accession-number-type-definitions.html"
+        },
+        "ValueSet/order-identifier-type": {
+            "base": "ValueSet-order-identifier-type.html",
+            "defns": "ValueSet-order-identifier-type-definitions.html"
         },
         "CodeSystem/au-hl7v2-0443": {
             "base": "CodeSystem-au-hl7v2-0443.html",
@@ -723,11 +773,32 @@
         "ValueSet/snomed-healthcareservice-specialties": {
             "base": "ValueSet-snomed-healthcareservice-specialties.html",
             "defns": "ValueSet-snomed-healthcareservice-specialties-definitions.html"
-        }
-        ,
+        },
         "ValueSet/snomed-practitioner-specialties": {
             "base": "ValueSet-snomed-practitioner-specialties.html",
             "defns": "ValueSet-snomed-practitioner-specialties-definitions.html"
+        },
+        "CodeSystem/au-location-physical-type": {
+            "base": "CodeSystem-au-location-physical-type.html",
+            "defns": "CodeSystem-au-location-physical-type.html"
+        },
+        "ValueSet/au-location-physical-type": {
+            "base": "ValueSet-au-location-physical-type.html",
+            "defns": "ValueSet-au-location-physical-type-definitions.html"
+        },
+        "CodeSystem/au-location-type": {
+            "base": "CodeSystem-au-location-type.html"
+        },
+        "ValueSet/au-location-type": {
+            "base": "ValueSet-au-location-type.html"
+        },
+        "ValueSet/au-timezone": {
+            "base": "ValueSet-au-timezone.html",
+            "defns": "ValueSet-au-timezone-definitions.html"
+        },
+        "StructureDefinition/au-timezone": {
+            "base": "StructureDefinition-au-timezone.html",
+            "defns": "StructureDefinition-au-timezone-definitions.html"
         }
     }
 }

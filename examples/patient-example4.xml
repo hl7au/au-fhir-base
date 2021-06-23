@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
-  <id value="example4"/> 
+  <id value="example4"/>
   <meta>
-	<profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
-  </meta>  
- <name>
-   <family value="Simmons"/>
-   <given value="Suzanne"/>
-  </name>  
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+  </meta>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/ethnicity">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0"/>
+        <code value="2102"/>
+        <display value="Scottish"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/gender-identity"/>
+        <code value="female"/>
+        <display value="female"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <name>
+    <family value="Simmons"/>
+    <given value="Suzanne"/>
+  </name>
   <telecom>
     <system value="phone"/>
-    <value value="(03) 4455 6677"/>
-  </telecom>  
+    <value value="(03) 5550 6677"/>
+  </telecom>
   <gender value="female"/>
-  <birthDate value="2008-08-08"/> 
+  <birthDate value="2008-08-08"/>
   <address>
-		<line value="55 Sarah Street"/>
+    <line value="55 Sarah Street"/>
     <city value="Strahan"/>
     <state value="TAS"/>
     <postalCode value="7468"/>
-		<country value="AU"/>
-	</address>
+    <country value="AU"/>
+  </address>
   <contact>
     <relationship>
       <coding>
@@ -30,19 +48,19 @@
       </coding>
     </relationship>
     <name>
-      <family value="Simmons"/> 
-      <given value="Sarah"/> 
+      <family value="Simmons"/>
+      <given value="Sarah"/>
     </name>
     <telecom>
-      <system value="phone"/> 
-      <value value="0490389999"/> 
+      <system value="phone"/>
+      <value value="0491570158"/>
       <use value="mobile"/>
     </telecom>
   </contact>
   <generalPractitioner>
-    <reference value="Practitioner/example3"/> 
+    <reference value="Practitioner/example3"/>
   </generalPractitioner>
-  <managingOrganization> 
-    <reference value="Organization/example3"/> 
-  </managingOrganization> 
+  <managingOrganization>
+    <reference value="Organization/example3"/>
+  </managingOrganization>
 </Patient>

@@ -21,8 +21,25 @@ These definitions represent common data held in the Practitioner.qualification e
 No extensions are used in this profile.
 
 #### Usage Notes
-Where a sending system includes a practitioner's qualification using their AHPRA Registration Number, this should be done using Practitioner.qualification(ahpraRegistration). 
-A practitioner's AHPRA Registration Number may also be included as an identifier, using Practitioner.identifier(ahpraRegistration).
+**AHPRA data**
+
+Where a system includes information from AHPRA about a practitioner, this can be represented in the qualification backbone element.  Some AHPRA information relates to a practitioner’s AHPRA-regulated profession (possibly more than one), and some relates to a specific registration within that profession.  Information related to the profession, can be represented in an instance of qualification with a code of [‘AUAPHRAProfession’](ValueSet-au-hl7v2-0360.html){:target="_blank"}.  Information related to a specific registration can be represented in an instance of qualification with a code of ['AUAHPRARegistration'](ValueSet-au-hl7v2-0360.html){:target="_blank"}.
+
+The [ahpraprofession-details](StructureDefinition-ahpraprofession-details.html) extension supports the inclusion of the AHPRA profession code and information about conditions, undertakings, reprimands and cautions in a qualification element instance representing a practitioner’s AHPRA profession.
+
+The [ahpraregistration-details](StructureDefinition-ahpraregistration-details.html) extension supports the inclusion of the AHPRA profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s AHPRA registration.
+
+More detailed guidance on the representation of AHPRA data in a practitioner resource can be found [here](http://hl7.org.au/notes/ahpra-registration-number/index.html){:target="_blank"}.
+
+
+**Qualifications**
+
+The above section describes how to include AHPRA professions and registrations in the qualifications backbone element.
+
+Tertiary qualifications can be included in the qualification backbone element with a code taken from the international value set [HL7 V2 0360 Table](http://hl7.org/fhir/R4/v2/0360/2.7/index.html). There are no plans to add codes for Australian tertiary qualifications. If no suitable code exists in the international valueset, a text representation of the qualification can be included without a coding.
+
+Professional memberships (of colleges etc) can be included in the qualification backbone element using a text representation of the qualification without a coding. Codes for Australian college memberships may be added to the Australian valueset in the future [HL7 V2 0360 Table (Australia)](ValueSet-au-hl7v2-0360.html).
+
 
 **Examples**
 
@@ -32,5 +49,6 @@ A practitioner's AHPRA Registration Number may also be included as an identifier
 
 [Qualified Pathologist](Practitioner-example2.html)
 
-[AHPRA qualified General Practitioner](Practitioner-example3.html)
+[AHPRA Registered General Practitioner](Practitioner-example3.html)
 
+[AHPRA Registered Practitioner with extended AHPRA data](Practitioner-example4.html)

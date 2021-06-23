@@ -49,6 +49,13 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-natasitenumber"/>
       </type>
     </element>
+    <element id="Location.type">
+      <path value="Location.type"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/location-type"/>
+      </binding>
+    </element>
     <element id="Location.address">
       <path value="Location.address" />
       <type>
@@ -56,6 +63,13 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/Address" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
       </type>
+    </element>
+    <element id="Location.physicalType">
+      <path value="Location.physicalType"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/location-physical-type"/>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
