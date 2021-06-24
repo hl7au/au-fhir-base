@@ -11,8 +11,8 @@ Full medication definitions as a Medication resource can be referenced or coding
 
 
 #### Identifiers
-These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the MedicationDispense.identifier element:
-* [Local Dispense Identifier](StructureDefinition-au-localdispenseidentifier.html)[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/dispense/1.0/index.html){:target="_blank"}
+These definitions represent common data held in the MedicationDispense.identifier element:
+* Local Dispense Identifier - dispenser system identifier for this record [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/dispense/1.0/index.html){:target="_blank"}
 
 
 #### Extensions
