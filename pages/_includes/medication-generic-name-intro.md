@@ -11,6 +11,6 @@ This generic name can be included as an additional name representation of the ge
 
 [Medication with generic name text](Medication-BrandedPack1.html)
 
-[Prescription with generic name text](MedicationRequest-example2.html)
+[Prescription with generic name text](MedicationRequest-medicationrequest-example2.html)
 
 
