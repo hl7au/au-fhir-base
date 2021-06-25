@@ -27,7 +27,7 @@ Extensions used in this profile:
 * Patient: [Ethnicity](StructureDefinition-ethnicity.html)
 * Patient: [Gender Identity](http://hl7.org/fhir/StructureDefinition/patient-genderIdentity) (Core Extension)
 * Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core Extension)
-* Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html)
+* Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) [<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418){:target="_blank"}
 
 #### Usage Notes
 Multiple Individual Healthcare Identifiers are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
