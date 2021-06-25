@@ -25,7 +25,6 @@ Extensions used in this profile:
 * Patient: [Interpreter Required](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired) (Core Extension)
 * Patient: [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
 * Patient: [Ethnicity](StructureDefinition-ethnicity.html)
-* Patient: [Gender Identity](http://hl7.org/fhir/StructureDefinition/patient-genderIdentity) (Core Extension)
 * Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core Extension)
 * Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) [<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418){:target="_blank"}
 
@@ -37,7 +36,7 @@ Medicare Numbers are not used for uniquely identifying patients, they are identi
 
 To indicate an interpreter service is required, extension interpreter required=true should be set. If the language for interpreter service is known then it should be included in communication.language with communication.preferred=true. If communication.preferred=true is not set when interpreter required=true then it may be understood that an interpreter is required but the language for the interpreter service is not known.
 
-Gender is supported as administrative gender for identifying patient records and other administrative requirements. The core extension [Gender Identity](http://hl7.org/fhir/R4/extension-patient-genderidentity.html) is available to represent a patient's personal gender and social identity, but this not yet supported in AU Base Patient (as the terminology is considered inappropriate for use in Australia). 
+Gender is supported as administrative gender for identifying patient records and other administrative requirements. The core extension [Gender Identity](http://hl7.org/fhir/R4/extension-patient-genderidentity.html) is not yet supported in AU Base Patient as the terminology is considered inappropriate for use in Australia. 
 
 **Examples**
 
@@ -49,7 +48,7 @@ Gender is supported as administrative gender for identifying patient records and
 
 [Patient with BirthTime](Patient-example3.html)
 
-[Patient born in 2008, with gender identity and ethnicity](Patient-example4.html)
+[Patient born in 2008, with ethnicity](Patient-example4.html)
 
 [Patient Sarah Simmons linked to related person Sarah Simmons, with mother's maiden name](Patient-example5.html)
 

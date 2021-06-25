@@ -9,7 +9,7 @@ See the Australian Digital Health Agency's [R4 FAQ](https://github.com/AuDigital
 
 **Examples**
 
-[Patient born in 2008, with gender identity and ethnicity](Patient-example4.html)
+[Patient born in 2008, with ethnicity](Patient-example4.html)
 
 [Patient with interpreter required in particular language](Patient-example6.html)
 
