@@ -2,7 +2,7 @@
 
 This profile provides an observation information structure for a patient’s biological sex[<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/635233){:target="_blank"}[<sup>[2]</sup>](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release){:target="_blank"} assigned at birth. Biological sex assigned at birth refers to what was determined by sex characteristics observed at birth or infancy, including genital and chromosome composition. Sex assigned at birth is captured once for a patient and is not expected to change within their lifetime. 
 
-NOTE: LOINC 76689-9 - Sex assigned at birth is being considered for removal from this profile. The concept not equivalent to biological sex assigned at birth as it specifically states sex assigned and recorded on a birth certificate. We are seeking clarification from LOINC Regenstrief Institute  on the use of this code in a biological sex assigned at birth observation.
+NOTE: LOINC 76689-9 - Sex assigned at birth is being considered for removal from this profile. The concept is not equivalent to biological sex assigned at birth as it specifically states sex assigned and recorded on a birth certificate. We are seeking clarification from LOINC Regenstrief Institute  on the use of this code in a biological sex assigned at birth observation.
 
 The HL7 International [Gender Harmony Project](https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project) project is ongoing; when outcomes of the project are available they will be considered for applicability to this and other biological sex observations.
 
