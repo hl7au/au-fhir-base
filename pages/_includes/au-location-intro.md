@@ -18,9 +18,7 @@ No extensions are used in this profile.
 
 
 #### Usage Notes
-An instantiation of Location may form part of defining a mobile or remotely delivered service.
-
-As part of defining a mobile service, Location should have:
+An instantiation of Location may form part of defining a mobile or remotely delivered service. As part of defining a mobile service, Location should have:
 * mode='kind'
 * type='MOBL'
 
