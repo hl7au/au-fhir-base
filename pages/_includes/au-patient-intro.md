@@ -18,14 +18,14 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 
 #### Extensions
 Extensions used in this profile:
-* Patient: [Birth Place](http://hl7.org/fhir/StructureDefinition/patient-birthPlace) (Core Extension)
+* Patient: [Birth Place](http://hl7.org/fhir/StructureDefinition/patient-birthPlace) (Core extension)
 * Patient: [Indigenous Status](StructureDefinition-indigenous-status.html) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
 * Patient: [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/603671){:target="_blank"}
-* Patient: [Mother's Maiden Name](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName) (Core Extension)
-* Patient: [Interpreter Required](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired) (Core Extension)
+* Patient: [Mother's Maiden Name](http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName) (Core extension)
+* Patient: [Interpreter Required](http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired) (Core extension)
 * Patient: [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
 * Patient: [Ethnicity](StructureDefinition-ethnicity.html)
-* Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core Extension)
+* Patient.birthDate: [Birth Time](http://hl7.org/fhir/StructureDefinition/patient-birthTime) (Core extension)
 * Patient.birthDate, Patient.deceasedDateTime: [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) [<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418){:target="_blank"}
 
 #### Usage Notes
