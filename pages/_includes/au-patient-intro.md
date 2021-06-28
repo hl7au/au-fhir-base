@@ -38,7 +38,7 @@ To indicate an interpreter service is required, extension interpreter required=t
 
 Gender is supported as administrative gender for identifying patient records and other administrative requirements. The core extension [Gender Identity](http://hl7.org/fhir/R4/extension-patient-genderidentity.html) is not yet supported in AU Base Patient as the terminology is considered inappropriate for use in Australia. 
 
-**Examples**
+#### Examples
 
 [Patient with IHI, medicare card, and Health Care Card](Patient-example0.html)
 

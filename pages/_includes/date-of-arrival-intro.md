@@ -6,6 +6,6 @@ The date of arrival is when a person (born outside of Australia) first arrived i
 
 This element is a part of Cultural and Linguistic Diversity (CALD) data set. It is an important indicator of cultural identity, and provides further information about a person's cultural values and practices which can be significant in determining service type, support required, and possible needs.
 
-**Examples**
+#### Examples
 
 [Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)
