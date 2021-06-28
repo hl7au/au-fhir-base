@@ -4,7 +4,7 @@ This extension applies to the Encounter resource and provides narrative about th
 
 The description may include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event. The description may capture text about the encounter that is not captured in other fields.
 
-**Examples**
+#### Examples
 
 [Admitted for elective bronchoscopy](Encounter-encounter-example0.html)
 

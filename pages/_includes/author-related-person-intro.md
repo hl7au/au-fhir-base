@@ -1,3 +1,8 @@
 **Extension: Author as a RelatedPerson**  *[[FMM Level 1](guidance.html)]*
 
-This extension allows recording an author who is a related person.
+This extension applies to any resource allows recording an author who is a related person.
+
+
+#### Examples
+
+No examples are available for this extension.
