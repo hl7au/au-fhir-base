@@ -1,4 +1,4 @@
-**Assigning Authority Extension**  *[[FMM Level 2](guidance.html)]*
+**Extension: Assigning Authority**  *[[FMM Level 2](guidance.html)]*
 
 This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) datatype and defines a HL7v2 assigning authority value for HL7v2 identification for routing.
 
