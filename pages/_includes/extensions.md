@@ -41,17 +41,17 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 
 ## HL7 V2 Identity
-* [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
-* [HL7 V2 Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
-* [HL7 V2 Assigning Authority](StructureDefinition-au-assigningauthority.html) - v2 namespace for an identifier
+* [Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
+* [Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
+* [Assigning Authority](StructureDefinition-au-assigningauthority.html) - v2 namespace for an identifier
 
 
 ## Endpoint Attributes
-* [HL7 V2 Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
-* [HL7 V2 Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
+* [Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
+* [Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
 * [Encryption Ceritficate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
 
 
 ## Data types
 * [Australian Time Zone](StructureDefinition-au-timezone.html) - Australian time zone
-* [Identifier Routability](StructureDefinition-identifier-routability.html) - Supports identifier selection for routing
+* [Identifier Routability](StructureDefinition-identifier-routability.html) - supports identifier selection for routing
