@@ -34,12 +34,12 @@ When selecting a PractitionerRole code, if a system is unable to provide a code 
 
 #### Examples
 
-[Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
+[Practitioner Role with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example0.html)
 
 [Radiologist with National Provider Identifier at Organisation](PractitionerRole-example1.html)
 
-[Pathologist with ABN-scoped employee number and SNOMED-CT coded specialty](PractitionerRole-example2.html)
+[Pathologist with ABN-scoped employee number and SNOMED CT coded specialty](PractitionerRole-example2.html)
 
-[General Practitioner with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example3.html)
+[General Practitioner with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example3.html)
 
 [Cardiologist with Medicare provider number and vendor directory identifier, with HL7 V2 Assigning Authority](PractitionerRole-example4.html)
