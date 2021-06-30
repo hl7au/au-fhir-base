@@ -6,7 +6,7 @@
   <name value="AUBaseBodyStructure" />
   <title value="AU Base Body Structure" />
   <status value="draft" />
-  <date value="2020-02-13" />
+  <date value="2021-06-25" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Australian realm Base BodyStructure profile." />
+  <description value="This profile defines a body structure including core localisation concepts for use in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -52,11 +52,11 @@
   <differential>
     <element id="BodyStructure">
       <path value="BodyStructure" />
-      <short value="Australian context BodyStructure information" />
+      <short value="An identified anatomical structure in an Australian healthcare context" />
       <constraint>
         <key value="inv-bodstr-0" />
         <severity value="error" />
-        <human value="The body structure shall at least have a location or a description or an image" />
+        <human value="The body structure shall at least have location or description or an image" />
         <expression value="location.exists() or description.exists() or image.exists()" />
       </constraint>
     </element>
@@ -72,6 +72,13 @@
       <binding>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
+      </binding>
+    </element>
+    <element id="BodyStructure.locationQualifier">
+      <path value="BodyStructure.locationQualifier" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1" />
       </binding>
     </element>
   </differential>

@@ -26,3 +26,4 @@ Extensions used in this profile:
 Medication Brand Name and Medication Generic Drug Name extensions should not be used when medicationReference is used. 
 These text-only extensions are supplied to support a brand and/or generic name where no concept coding is available. When a brand and/or generic concept coding is available medicationCodeableConcept should be used. 
 If extensions Medication Brand Name or Medication Generic Drug Name are used then medicationCodeableConcept must also be used.
+

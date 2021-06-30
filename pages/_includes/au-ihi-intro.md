@@ -4,12 +4,12 @@ This identifier profile defines an Individual Healthcare Identifier (IHI)[<sup>[
 
 #### Extensions
 Extensions used in this profile:
-* Identifier: IHI Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-status)
-* Identifier: IHI Record Status [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/ihi-record-status)
+* Identifier: [IHI Status](StructureDefinition-ihi-status.html)
+* Identifier: [IHI Record Status](StructureDefinition-ihi-record-status.html)
 
 #### Usage Notes
 
-Mutiple IHIs are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
+Multiple IHIs are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
 
 **Examples**
 

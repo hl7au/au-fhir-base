@@ -10,9 +10,9 @@
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
     </telecom>
   </contact>
   <description
@@ -37,18 +37,6 @@
     </element>
     <element id="Dosage.additionalInstruction">
       <path value="Dosage.additionalInstruction"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="coding.system"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Dosage.additionalInstruction:snomedAdditionalInstruction">
-      <path value="Dosage.additionalInstruction"/>
-      <sliceName value="snomedAdditionalInstruction"/>
-      <short value="SNOMED CT Additional Instruction"/>
       <binding>
         <strength value="preferred"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/additional-instruction-codes"/>
@@ -56,32 +44,10 @@
     </element>
     <element id="Dosage.asNeeded[x]">
       <path value="Dosage.asNeeded[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="closed"/>
-      </slicing>
-    </element>
-    <element id="Dosage.asNeeded[x]:asNeededCodeableConcept">
-      <path value="Dosage.asNeeded[x]"/>
-      <sliceName value="asNeededCodeableConcept"/>
-      <short value="Clinical Finding (SNOMED CT)"/>
       <binding>
         <strength value="preferred"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
       </binding>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-    </element>
-    <element id="Dosage.asNeeded[x]:asNeededBoolean">
-      <path value="Dosage.asNeeded[x]"/>
-      <sliceName value="asNeededBoolean"/>
-      <type>
-        <code value="boolean"/>
-      </type>
     </element>
     <element id="Dosage.site">
       <path value="Dosage.site"/>
