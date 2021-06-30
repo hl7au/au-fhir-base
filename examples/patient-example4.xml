@@ -13,15 +13,21 @@
       </coding>
     </valueCodeableConcept>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
-    <valueCodeableConcept>
+  <identifier>
+    <type>
       <coding>
-        <system value="http://hl7.org/fhir/gender-identity"/>
-        <code value="female"/>
-        <display value="female"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
       </coding>
-    </valueCodeableConcept>
-  </extension>
+    </type>
+    <system
+      value="http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455"/>
+    <value value="22446688"/>
+    <assigner>
+      <reference value="Organization/example3"/>
+      <display value="Devonport Family Medicine Clinic"/>
+    </assigner>
+  </identifier>
   <name>
     <family value="Simmons"/>
     <given value="Suzanne"/>

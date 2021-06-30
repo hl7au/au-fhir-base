@@ -3,6 +3,7 @@
 These Profiles have been defined for this implementation guide.
 
 ## Administration Profiles
+
 * [AU Base Patient](StructureDefinition-au-patient.html) - patient demographic with local identifiers and attributes 
 * [AU Base Practitioner](StructureDefinition-au-practitioner.html) - individual practitioner with local identifiers and attributes
 * [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html) - practitioner role with local identifiers and content
@@ -32,7 +33,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
-* [AU Base Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
+* [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor record
