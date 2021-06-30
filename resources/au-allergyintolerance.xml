@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-allergyintolerance" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance" />
-  <version value="2.1.0" />
+  <version value="2.2.0" />
   <name value="AUBaseAllergyIntolerance" />
   <title value="AU Base Allergy Intolerance" />
   <status value="draft" />
-  <date value="2020-08-20" />
+  <date value="2021-06-28" />
   <publisher value="Health Level Seven Australia" />
   <contact>
     <telecom>
@@ -38,7 +38,6 @@
       <path value="AllergyIntolerance.code" />
       <binding>
         <strength value="preferred" />
-        <description value="Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies." />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2" />
       </binding>
     </element>
@@ -49,7 +48,6 @@
       <path value="AllergyIntolerance.reaction.substance" />
       <binding>
         <strength value="preferred" />
-        <description value="Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products)." />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1" />
       </binding>
     </element>
@@ -57,8 +55,14 @@
       <path value="AllergyIntolerance.reaction.manifestation" />
       <binding>
         <strength value="preferred" />
-        <description value="Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event." />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1" />
+      </binding>
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute">
+      <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1" />
       </binding>
     </element>
   </differential>

@@ -215,7 +215,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
-     <resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/identifier-routability"/>
       </reference>
@@ -1031,7 +1031,16 @@
         <reference value="BodyStructure/example0"/>
       </reference>
       <name value="Details about location of a body part"/>
-      <description value="Shows location on body at which sports injury has occured"/>
+      <description value="Bone tissue of left shoulder"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="BodyStructure/example1"/>
+      </reference>
+      <name value="Details about location of a body part"/>
+      <description value="Blister of right foot"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1359,7 +1368,8 @@
       <reference>
         <reference value="Location/example5"/>
       </reference>
-      <name value="Location for mobile services that can be delivered in a person's house, apartment, or unit"/>
+      <name
+        value="Location for mobile services that can be delivered in a person's house, apartment, or unit"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1375,7 +1385,8 @@
       <reference>
         <reference value="Location/example7"/>
       </reference>
-      <name value="Location for mobile services that can be delivered in residential care facilities"/>
+      <name
+        value="Location for mobile services that can be delivered in residential care facilities"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
@@ -1643,9 +1654,9 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Composition/multiple-information-recipients-and-author-role"/>
+        <reference value="Composition/multiple-information-recipients"/>
       </reference>
-      <name value="composition-multiple-information-recipients-and-author-role"/>
+      <name value="composition-multiple-information-recipients"/>
       <description
         value="Shows a typical example of a composition author role and multiple information recipients of different resource type"
       />
@@ -1785,6 +1796,30 @@
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
+
+    <!--    AU Sex Assigned at Birth examples-->
+    <resource>
+      <reference>
+        <reference value="Observation/sex-at-birth-intersex"/>
+      </reference>
+      <name value="Sex Assigned at Birth observation - intersex"/>
+      <description value="Sex Assigned at Birth observation - intersex"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/06d63c90-0316-426d-97fa-d34ee65a0abd"/>
+      </reference>
+      <name value="Sex Assigned at Birth observation - male"/>
+      <description value="Sex Assigned at Birth observation - male"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/sex-at-birth-female"/>
+      </reference>
+      <name value="Sex Assigned at Birth observation - female"/>
+      <description value="Sex Assigned at Birth observation - female"/>
+    </resource>
+    
     <page>
       <nameUrl value="index.html"/>
       <title value="Australian Base Profiles Implementation Guide"/>

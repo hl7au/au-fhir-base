@@ -10,20 +10,26 @@ Full medication definitions as a Medication resource can be referenced or coding
 * MIMS Package - commonly used medicine coding.
 
 #### Identifiers
-These definitions represent common data held in the MedicationRequest.identifier element:
-* Electronic Transfer of Prescription Supplier Identifier - ETP vendor system identifier 
-* Local Prescription Number - prescription system identifier for this record [<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/index.html){:target="_blank"}
+These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the MedicationRequest.identifier element:
+* [AU ETP Vendor Identifier](StructureDefinition-au-etpprescriptionidentifier.html)
+* [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html)[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/index.html){:target="_blank"}
+
 
 #### Extensions
 Extensions used in this profile:
-* Subsidised Concurrent Supply of Medication [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/subsidised-concurrent-supply)
-* Minimum Interval Between Repeats [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/minimum-interval-between-repeats)
-* MedicationRequest.medication.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type) - used to distinguish a level classification when the same coding system is used.
-* Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name) - Not to be used if medicationReference is used. This text-only extension is supplied to support a brand name where no brand concept coding is available. Use medicationCodeableConcept if a brand concept coding is available. 
-* Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name) - Not to be used if medicationReference is used. This text-only extension is supplied to support a generic name where no generic concept coding is available. Use medicationCodeableConcept if a generic concept coding is available.
-* NOTE: if extensions Medication Brand Name or Medication Generic Drug Name are used then medicationCodeableConcept must also be used. 
+* MedicationRequest:[Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html)
+* MedicationRequest:[Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html)
+* MedicationRequest:[Medication Brand Name](StructureDefinition-medication-brand-name.html) 
+* MedicationRequest:[Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
+* MedicationRequest.medication.coding:[Medication Type](StructureDefinition-medication-type.html)
 
-**Examples**
+
+#### Usage Notes
+Medication Brand Name and Medication Generic Drug Name extensions should not be used when medicationReference is used. 
+These text-only extensions are supplied to support a brand and/or generic name where no concept coding is available. When a brand and/or generic concept coding is available medicationCodeableConcept should be used. 
+If extensions Medication Brand Name or Medication Generic Drug Name are used then medicationCodeableConcept must also be used. 
+
+#### Examples
 
 [Prescription for Stribild  with concurrent supply](MedicationRequest-medicationrequest-example1.html)
 
