@@ -2,6 +2,6 @@
 
 This extension applies to the Composition resource and allows recording of intended recipients of the composition.
 
-**Examples**
+#### Examples
 
-[Composition with multiple information recipients and one author role](Composition-multiple-information-recipients-and-author-role.html)
+[Composition with multiple information recipients](Composition-multiple-information-recipients.html)
