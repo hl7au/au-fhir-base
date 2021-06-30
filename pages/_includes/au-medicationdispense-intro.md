@@ -28,13 +28,13 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [AMT Medicines](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
-When supplying a medicationReference the extensions Medication Brand Name and Medication Generic Drug Name are not be used. These extensions available on the referenced Medication resource and should be instantiated there is this information is included.
+When supplying a medicationReference, the extensions Medication Brand Name and Medication Generic Drug Name are not be used. These extensions are available on the referenced Medication resource and should be instantiated there if this information is included.
 
-Where a system cannot include a coded value (only Medication.code.text can be supplied) it is expected that:
-* where a system has both brand name and generic name, brand name will form part of the Medication.code.text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
-* where a system only has brand name, the brand name form part of Medication.code.text and optionally be supplied in the brand name extension
-* where a system only has generic name, the generic name form part of Medication.code.text and optionally be supplied in the generic name extension
-* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied Medication.code.text
+Where a system cannot include a coded value (only MedicationDispense.code.text can be supplied) it is expected that:
+* where a system has both brand name and generic name, brand name will form part of the MedicationDispense.code.text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
+* where a system only has brand name, the brand name form part of MedicationDispense.code.text and optionally be supplied in the brand name extension
+* where a system only has generic name, the generic name form part of MedicationDispense.code.text and optionally be supplied in the generic name extension
+* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied MedicationDispense.code.text
 
 
 #### Examples
