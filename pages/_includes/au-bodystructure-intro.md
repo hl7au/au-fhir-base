@@ -1,7 +1,12 @@
 **AU Base BodyStucture Profile**  *[[FMM Level 0](guidance.html)]*
 
-This BodyStucture profile is provided for use in an Australian context.
+This profile defines a body structure including core localisation concepts for use in an Australian context.
 
-**Examples**
+#### Extensions
+No extensions are used in this profile.
 
-[Sports injury](BodyStructure-example0.html)
+#### Examples
+
+[Bone tissue of left shoulder](BodyStructure-example0.html)
+
+[Blister of right foot](BodyStructure-example1.html)
