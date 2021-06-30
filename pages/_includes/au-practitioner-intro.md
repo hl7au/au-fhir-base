@@ -28,7 +28,7 @@ The [ahpraprofession-details](StructureDefinition-ahpraprofession-details.html) 
 
 The [ahpraregistration-details](StructureDefinition-ahpraregistration-details.html) extension supports inclusion of an AHPRA profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s AHPRA registration.
 
-Tertiary qualifications and professional memberships should be represented by instantiating an instance of Practitioner.qualification for each qualification to be included. Where a suitable code is not yet available, textual representation may be provided in Practitioner.qualification.code.text. Work around terminology for Australian college memberships is being considered; if completed the concepts are expected to be available in the preferred value set [V2 Degree/License/Certificate - AU Extended](ValueSet-au-v2-0360.html).
+Tertiary qualifications and professional memberships should be represented by instantiating an instance of Practitioner.qualification for each qualification to be included. Where a suitable code is not yet available, textual representation may be provided in Practitioner.qualification.code.text. Work around terminology for Australian college memberships is being considered; if completed the concepts are expected to be available in the preferred value set [hl7VS-degreeLicenseCertificate - AU Extended](ValueSet-au-v2-0360-extended.html).
 
 
 #### Examples
