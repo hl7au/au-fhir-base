@@ -7,7 +7,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Patient](StructureDefinition-au-patient.html) - patient demographic with local identifiers and attributes 
 * [AU Base Practitioner](StructureDefinition-au-practitioner.html) - individual practitioner with local identifiers and attributes
 * [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html) - practitioner role with local identifiers and content
-* [AU Base Organization](StructureDefinition-au-organization.html) - responsible legal organisation
+* [AU Base Organization](StructureDefinition-au-organization.html) - organisation with local identifiers and terminology
 * [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - service delivery entity provided by an organisation
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
