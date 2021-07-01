@@ -3,16 +3,25 @@
   <id value="au-sexassignedatbirth" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-sexassignedatbirth" />
   <version value="1.0.0" />
-  <name value="AUSexAssignedAtBirth" />
-  <title value="AU Sex Assigned At Birth" />
+  <name value="AUBiologicalSexAssignedAtBirth" />
+  <title value="AU Biological Sex Assigned at Birth" />
   <status value="draft" />
-  <description value="This profile is provided as a common representation of the sex assigned to a person at birth, usually based on physical properties that are visually apparent at birth." />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile provides an observation information structure for a patient’s biological sex assigned at birth. Biological sex assigned at birth refers to what was determined by sex characteristics observed at birth or infancy, including genital and chromosome composition. Sex assigned at birth is captured once for a patient and is not expected to change within their lifetime." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
       <code value="AU" />
     </coding>
   </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved. This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. All copies of this resource must include this copyright statement and all information contained in this statement. This resource contains content from LOINC™ (http://loinc.org). The LOINC Table, LOINC Table Core, LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Hierarchies, LOINC Linguistic Variants File, LOINC/RSNA Radiology Playbook, and LOINC/IEEE Medical Device Code Mapping Table are copyright © 1995-2017, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -22,8 +31,12 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="Sex assigned at birth" />
-      <definition value="The sex assigned to a person at birth, usually based on physical properties that are visually apparent at birth." />
+      <short value="Biological sex assigned at birth" />
+      <definition value="Sex assigned at birth refers to what was determined by biological sex characteristics including genital and chromosome composition observed at birth or infancy. Sex assigned at birth is captured once for a person and is not expected to change within their lifetime." />
+      <comment value="A person's sex can change over the course of their lifetime. The biological sex assigned at birth may not match a person’s gender or the sex recorded on their birth certificate. Biological sex assigned at birth should not be used for observations that occurred later in life including later clinical findings that are the result of a specific measurement e.g. gonadal, ductal or phenotypic. See [AIHW Person – sex concept (ID 635233)](https://meteor.aihw.gov.au/content/index.phtml/itemId/635233) and [ABS Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release)." />
+      <alias value="Birth sex" />
+      <alias value="Biological sex" />
+      <alias value="Sex recorded at birth" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -39,6 +52,7 @@
     <element id="Observation.code.coding:snomedSexAtBirth">
       <path value="Observation.code.coding" />
       <sliceName value="snomedSexAtBirth" />
+      <short value="SNOMED Sex Assigned at Birth" />
       <min value="1" />
       <max value="1" />
       <patternCoding>
@@ -49,6 +63,7 @@
     <element id="Observation.code.coding:loincSexAtBirth">
       <path value="Observation.code.coding" />
       <sliceName value="loincSexAtBirth" />
+      <short value="LOINC Sex Assigned at Birth" />
       <max value="1" />
       <patternCoding>
         <system value="http://loinc.org" />
@@ -65,12 +80,27 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <short value="Date, and optionally time, the observation was performed" />
+      <definition value="Date, and optionally time, the observation was performed." />
       <type>
         <code value="dateTime" />
       </type>
     </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
+      <short value="Sex assigned at birth" />
+      <definition value="The biological sex assigned at birth (male, female, intersex) or an assertion that the observation of biological sex is indeterminate." />
       <type>
         <code value="CodeableConcept" />
       </type>

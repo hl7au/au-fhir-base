@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BodyStructure xmlns="http://hl7.org/fhir">
-    <id value="example0"/> 
+    <id value="example1"/> 
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"/>
     </meta>    
-    <active value="true"/>
+    <morphology> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="339008"/> 
+            <display value="Blister"/> 
+        </coding> 
+    </morphology>
     <location> 
         <coding> 
             <system value="http://snomed.info/sct"/> 
-            <code value="426328003"/> 
-            <display value="Bone tissue of shoulder region"/> 
+            <code value="7769000"/> 
+            <display value="Right foot"/> 
         </coding> 
     </location>
-    <locationQualifier> 
-        <coding> 
-            <system value="http://snomed.info/sct"/> 
-            <code value="7771000"/> 
-            <display value="Left"/> 
-        </coding> 
-        <text value="Left"/>
-    </locationQualifier>
     <patient> 
         <reference value="Patient/example0"/>
     </patient> 
