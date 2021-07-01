@@ -185,6 +185,16 @@
       <min value="1"/>
       <fixedUri value="http://www.mims.com.au/codes"/>
     </element>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="MedicationStatement.medication[x].text"/>
+      <short value="Medication primary text"/>
+      <definition
+        value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."
+      />
+    </element>
     <element id="MedicationStatement.medication[x]:medicationReference">
       <path value="MedicationStatement.medicationReference"/>
       <sliceName value="medicationReference"/>

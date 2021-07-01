@@ -6,12 +6,6 @@ The purpose of this profile is to provide national level agreement on core local
 
 This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
 
-#### Medication Reference/Coding
-Full medication definitions as a Medication resource can be referenced or codings are use be used to define relevant drug/medication concepts. This includes coding as:
-* PBS Item Code - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding.
-* GTIN - Global Trade Item Number, physical product reference.
-* AMT Code - Australian Medicines Terminology, national drug terminology.
-* MIMS Package - commonly used medicine coding.
 
 #### Extensions
 Extensions used in this profile:
