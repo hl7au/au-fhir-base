@@ -11,7 +11,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - service delivery entity provided by an organisation
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
-* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with extensions
+* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with local terminology
 
 ## Medications Profiles
 * [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
