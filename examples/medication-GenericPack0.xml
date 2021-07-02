@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Medication xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/medication.xsd">
+<Medication xmlns="http://hl7.org/fhir">
 	<id value="GenericPack0"/>
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
@@ -13,14 +13,9 @@
 					<display value="Unbranded package with no container"/>
 				</valueCoding>
 			</extension>
-			<system value="http://acme.com.au/generic-packages"/>
+			<system value="http://example.acme.com.au/generic-packages"/>
 			<code value="5636-24556"/>
 			<display value="Paracetamol 500mg (100)"/>
-		</coding>
-		<coding>
-			<system value="http://www.whocc.no/atc"/>
-			<code value="N02BE"/>
-			<display value="Paracetamol"/>
 		</coding>
 		<coding>
 			<extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">

@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-specimen" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
-  <version value="2.1.0" />
+  <version value="2.1.1" />
   <name value="AUBaseSpecimen" />
   <title value="AU Base Specimen" />
   <status value="draft" />
-  <date value="2020-02-13" />
+  <date value="2021-07-01" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
   <contact>
     <telecom>
@@ -47,7 +47,7 @@
   <differential>
     <element id="Specimen">
       <path value="Specimen" />
-      <short value="Australian context specimen information" />
+      <short value="A specimen in an Australian healthcare context" />
     </element>
     <element id="Specimen.type">
       <path value="Specimen.type"/>
@@ -70,7 +70,6 @@
       <path value="Specimen.collection.method"/>
     <binding>
       <strength value="preferred" />
-      <description value="SNOMED CT Specimen Collection Procedure" />
       <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1" />
     </binding>
     </element>
@@ -78,7 +77,6 @@
       <path value="Specimen.collection.bodySite"/>
       <binding>
         <strength value="preferred" />
-        <description value="SNOMED CT Body Site" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
       </binding>
     </element>
@@ -86,7 +84,6 @@
       <path value="Specimen.container"/>
       <binding>
         <strength value="preferred" />
-        <description value="SNOMED CT Specimen Container Type" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/specimen-container-type-1" />
       </binding>
     </element>

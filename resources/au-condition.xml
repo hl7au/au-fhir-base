@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-condition"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-condition"/>
-  <version value="2.1.0"/>
+  <version value="2.1.1"/>
   <name value="AUBaseCondition"/>
   <title value="AU Base Condition"/>
   <status value="draft"/>
-  <date value="2020-08-05"/>
+  <date value="2021-07-02"/>
   <publisher value="Health Level Seven Australia"/>
   <contact>
     <telecom>
@@ -53,7 +53,6 @@
           <valueString value="ConditionKind"/>
         </extension>
         <strength value="preferred"/>
-        <description value="Preferred SNOMED-CT Identification of the condition or diagnosis."/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1"/>
       </binding>
     </element>
@@ -66,18 +65,14 @@
     </element>
     <element id="Condition.evidence">
       <path value="Condition.evidence"/>
-      <short value="Supporting evidence for condition"/>
     </element>
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code"/>
-      <short value="Evidence manifestation/symptom"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ManifestationOrSymptom"/>
         </extension>
         <strength value="preferred"/>
-        <description
-          value="Preferred SNOMED-CT Codes that describe the manifestation or symptoms of a condition."/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
       </binding>
     </element>

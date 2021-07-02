@@ -2,32 +2,38 @@
 
 This profile defines a medication structure including core localisation concepts for use in an Australian context. 
 
+The purpose of this profile is to provide national level agreement on core localised concepts. 
 
-#### Medication Coding
-Medication codings are used to define relevant drug/medication concepts. This includes coding as:
-* PBS Item Code - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding.
-* GTIN - Global Trade Item Number, physical product reference.
-* AMT Code - Australian Medicines Terminology, national drug terminology.
-* MIMS Package - commonly used medicine coding.
+This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
 
 
 #### Extensions
 Extensions used in this profile:
-* Medication.code.coding: Medication Type [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-type) - used to distinguish a level classification when the same coding system is used.
-* Medication Brand Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-brand-name) -  This text-only extension is supplied to support a brand name where no brand concept coding is available. Use code if a brand concept coding is available. 
-* Medication Generic Drug Name [<sup>[1]</sup>](http://hl7.org.au/fhir/StructureDefinition/medication-generic-name) - This text-only extension is supplied to support a generic name where no generic concept coding is available. Use code if a generic concept coding is available.
-* NOTE: if extensions Medication Brand Name or Medication Generic Drug Name are used then code must also be used. 
+* Medication: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
+* Medication: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
+* Medication.code.coding: [Medication Type](StructureDefinition-medication-type.html)
 
 
-**Examples**
+#### Usage Notes
+Medication codings are used to define relevant drug/medication concepts. This includes coding as:
+* [PBS Item Code](https://www.pbs.gov.au/pbs/home) - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding
+* [Medication Package Global Trade Item Number](https://www.gs1.org/standards/id-keys/gtin) - Global Trade Item Number (GTIN) physical product reference
+* [AMT Medicines](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
+* [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
+Where a system cannot include a coded value (only Medication.code.text can be supplied) it is expected that:
+* where a system has both brand name and generic name, brand name will form part of the Medication.code.text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
+* where a system only has brand name, the brand name form part of Medication.code.text and optionally be supplied in the brand name extension
+* where a system only has generic name, the generic name form part of Medication.code.text and optionally be supplied in the generic name extension
+* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied Medication.code.text
+
+
+#### Examples
 [Fluconazole Dose Based Medication](Medication-MedicationDoseBased.html)
 
 [Paracetamol Generic Pack](Medication-GenericPack0.html)
 
 [Nexium Hp7 Brand Pack](Medication-BrandedPack0.html)
-
-[Nexium Hp7 Combination Package with Product Parts](Medication-CombinationPackage0.html)
 
 [Clarithromycin 500mg Tablet Unbranded Product](Medication-UnbrandedProduct0.html)
 
