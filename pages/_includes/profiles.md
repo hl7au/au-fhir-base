@@ -30,7 +30,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Diagnostic Service Request](StructureDefinition-au-diagnostic-servicerequest.html) - diagnostic service request with localisation concepts
 
 ## Clinical Profiles
-* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding for clinical condition, body site and clinical finding.
+* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
