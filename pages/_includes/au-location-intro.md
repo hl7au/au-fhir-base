@@ -18,13 +18,19 @@ No extensions are used in this profile.
 
 
 #### Usage Notes
-Locations for mobile services and services delivered remotely by phone or internet should have mode='kind' to indicate that the location is not specific.
+An instantiation of Location may form part of defining a mobile or remotely delivered service. As part of defining a mobile service, Location should have:
+* mode='kind'
+* type='MOBL'
 
-Locations for services delivered remotely by phone or internet should have type='VI' and physicalType='vi'.
+Additionally a Location for a mobile service should instantiate additional instances of type to indicate the service is tailored for delivery in these kinds of locations (e.g. 'AMB', 'COMM', 'PTRES', 'SCHOOL', or 'WORK').
 
-Locations for mobile services should have type='MOBL'. Additional types of 'AMB', 'COMM', 'PTRES', 'SCHOOL', or 'WORK' may also be included (in addition to 'MOBL') to indicate that services are tailored for delivery in these kinds of locations.
+As part of defining a remotely delivered service, Location should have:
+* mobile='kind'
+* type='VI'
+* physicalType='vi'
 
-**Examples**
+
+#### Examples
 
 [Downunder Hospital Blacktown, NSW](Location-example0.html)
 
