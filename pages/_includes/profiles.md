@@ -5,12 +5,12 @@ These Profiles have been defined for this implementation guide.
 ## Administration Profiles
 
 * [AU Base Patient](StructureDefinition-au-patient.html) - patient demographic with local identifiers and attributes 
-* [AU Base Practitioner](StructureDefinition-au-practitioner.html) - practitioner with local identifiers and content
-* [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html) - practitioner role with local identifiers and content
+* [AU Base Practitioner](StructureDefinition-au-practitioner.html) - individual practitioner with local identifiers and attributes
+* [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html) - practitioner role with local identifiers and terminology
 * [AU Base Organization](StructureDefinition-au-organization.html) - responsible legal organisation
-* [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - service delivery entity provided by an organisation
+* [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - healthcare service with local identifiers and terminology
 * [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers
-* [AU Base Related Person](StructureDefinition-au-relatedperson.html) - a related person with local identifiers
+* [AU Base Related Person](StructureDefinition-au-relatedperson.html) - related person with local identifiers and terminology
 * [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with extensions
 
 ## Medications Profiles
