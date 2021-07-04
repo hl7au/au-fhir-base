@@ -4,9 +4,17 @@ This identifier profile defines a Pensioner Concession Card[<sup>[1]</sup>](http
 
 A Pensioner Concession Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to pensioners and selected benefit recipients to assist them with certain living costs, by allowing access to specific goods and services at a concessional rate.
 
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
 #### Usage Notes
+
 Although a DVA-issued card will also include an individual's state-based DVA File number only the CRN should be sent as the Pensioner Concession Card number.
 
-**Examples**
+
+#### Examples
 
 [Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)

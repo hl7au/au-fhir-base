@@ -4,9 +4,17 @@ This identifier profile defines a Commonwealth Seniors Health Card[<sup>[1]</sup
 
 A Commonwealth Seniors Health Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to retirees of age pension qualification age to assist with certain living costs by allowing access to specific goods and services at a concessional rate.
 
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
 #### Usage Notes
+
 Although a DVA-issued card will also include an individual's state-based DVA File number only the CRN should be sent as the Commonwealth Seniors Health Card number.
 
-**Examples**
+
+#### Examples
 
 [Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)
