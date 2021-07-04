@@ -4,6 +4,7 @@ This identifier profile defines a Geocoded National Address File (G-NAF) Identif
 
 The PSMA G-NAF[<sup>[2]</sup>](https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf){:target="_blank"} is Australia’s authoritative, geocoded address file. A G-NAF Identifier (sometimes referred to as G-NAF ID, or G-NAF PID, or GNAF ID, or address_detail_pid) identifies an address in the PSMA G-NAF. 
 
+
 #### Extensions
 
 No extensions are used in this profile.

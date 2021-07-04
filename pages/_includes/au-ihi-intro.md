@@ -8,9 +8,11 @@ Extensions used in this profile:
 * Identifier: [IHI Status](StructureDefinition-ihi-status.html)
 * Identifier: [IHI Record Status](StructureDefinition-ihi-record-status.html)
 
+
 #### Usage Notes
 
 Multiple IHIs are supported particularly to support the recording of IHI values where the status and/or record status varies (e.g. deceased, provisional).
+
 
 #### Examples
 
