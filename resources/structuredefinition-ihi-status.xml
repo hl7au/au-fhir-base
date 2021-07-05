@@ -15,7 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="This IHI status extension describes the status of the associated IHI identifier and also indicates whether the status of the identifier is active or otherwise." />
+  <description value="This Individual Healthcare Identifier(IHI) status extension applies to the Identifier data type and describes the status of the associated IHI identifier and also indicates whether the status of the identifier is active or otherwise." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -45,9 +45,9 @@
       <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ihi-status" />
     </element>
     <element id="Extension.value[x]:valueCoding">
-      <path value="Extension.valueCoding" />
+      <path value="Extension.valueCoding" />      
       <sliceName value="valueCoding" />
-      <short value="IHI Number Status Code" />
+      <short value="IHI number status code" />
       <definition value="IHI number status associated with an IHI identifier." />
       <min value="1" />
       <type>
@@ -55,7 +55,6 @@
       </type>
       <binding>
         <strength value="required" />
-        <description value="IHI Number Status" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1" />
       </binding>
     </element>

@@ -15,7 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="This IHI record status extension describes whether verification of the individual identifier has occurred and is based on the evidence available for a person’s identity." />
+  <description value="This Individual Healthcare Identifier (IHI) record status extension applies to the Identifier data type and describes whether verification of the individual identifier has occurred and is based on the evidence available for a person’s identity." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,15 +47,14 @@
     <element id="Extension.value[x]:valueCoding">
       <path value="Extension.valueCoding" />
       <sliceName value="valueCoding" />
-      <short value="IHI Record Status Code" />
-      <definition value="Coded IHI Record Status." />
+      <short value="IHI record status code" />
+      <definition value="Coded IHI record status." />
       <min value="1" />
       <type>
         <code value="Coding" />
       </type>
       <binding>
         <strength value="required" />
-        <description value="IHI Record Status" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1" />
       </binding>
     </element>
