@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="dispense-number"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/dispense-number"/>
-  <version value="2.1.0"/>
+  <version value="2.1.1"/>
   <name value="DispenseNumber"/>
-  <title value="Number of this Dispense"/>
+  <title value="Dispense Number"/>
   <status value="draft"/>
-  <date value="2020-01-22"/>
+  <date value="2021-07-05"/>
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
@@ -39,7 +39,7 @@
       <path value="Extension"/>
       <short value="Number of this dispense"/>
       <definition
-        value="This extension applies to the MedicationDispense resource and the value indicates the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats. "/>
+        value="Dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats. "/>
       <comment
         value="It has the value 1 when there are no repeats. The value increments by one each time a dispense act is successfully completed. "/>
       <max value="1"/>
@@ -51,7 +51,7 @@
     <element id="Extension.value[x]:valueInteger">
       <path value="Extension.valueInteger"/>
       <sliceName value="valueInteger"/>
-      <short value="Dispense Number"/>
+      <short value="Dispense number"/>
       <min value="1"/>
       <type>
         <code value="integer"/>
