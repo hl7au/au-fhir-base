@@ -1,8 +1,5 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="gtin"/>
-	<meta>
-		<profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
-	</meta>
 	<text>
 		<status value="generated"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">
@@ -11,29 +8,30 @@
 		</div>
 	</text>
 	<url value="http://www.gs1.org/gtin"/>
-	<identifier> 
-		<system value="urn:ietf:rfc:3986"/> 
-		<value value="urn:oid:1.3.160"/> 
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:1.3.160"/>
 	</identifier>
-	<version value="2.1.1"/>
-	<name value="GTIN"/>
-	<title value="Global Trade Item Number (GTIN)"/>
+	<version value="2.1.2"/>
+	<name value="GTINExternal"/>
+	<title value="Global Trade Item Number (GTIN) (External)"/>
 	<status value="draft"/>
 	<experimental value="true"/>
-	<date value="2021-07-05"/>
+	<date value="2021-07-06"/>
 	<publisher value="Health Level Seven Australia (Medications WG)"/>
 	<contact>
 		<telecom>
-			<system value="url" />
-			<value value="http://hl7.com.au" />
-			<use value="work" />
+			<system value="url"/>
+			<value value="http://hl7.com.au"/>
+			<use value="work"/>
 		</telecom>
 	</contact>
-	<description value="The GS1 Global Trade Item Number (GTIN) is a globally unique identifier of trade items. A trade item is any item (product or service) upon which there is a need to retrieve pre-defined information and that may be priced, or ordered, or invoiced at any point in any supply chain."/>
+	<description
+		value="HL7 AU representation of the Global Trade Item Number (GTIN) code system developed by GS1. This is not the canonical publication nor it is intended to be publication on behalf of the GS1.”"/>
 	<jurisdiction>
 		<coding>
-		<system value="urn:iso:std:iso:3166" />
-		<code value="AU" />
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
 		</coding>
 	</jurisdiction>
 	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
