@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="subsidised-concurrent-supply"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/subsidised-concurrent-supply"/>
-  <version value="2.1.0"/>
+  <version value="2.1.2"/>
   <name value="GroundsForConcurrentSupplyOfMedication"/>
-  <title value="Grounds for Concurrent Supply of Medication"/>
+  <title value="Subsidised Concurrent Supply"/>
   <status value="draft"/>
-  <date value="2020-01-22"/>
+  <date value="2021-07-06"/>
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description
-    value="This extension applies to MedicationRequest or MedicationDispense resources and the value indicates the reason a pharmacist may or has supplied multiple repeats of a medication prescription at one time."/>
+    value="This extension applies to the MedicationRequest or MedicationDispense resources and is used to represent the grounds that authorise a PBS or RPBS subsidy for the concurrent supply of an item specified in a prescription and all of its repeats."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -42,7 +42,9 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="Grounds for concurrent supply of medication"/>
-      <definition value="Coded Grounds for Concurrent Supply of Medication"/>
+      <definition
+        value="The grounds which authorise a PBS or RPBS subsidy for the concurrent supply of a medication item specified in a prescription and all of its repeats."
+      />
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
@@ -57,8 +59,7 @@
       </type>
       <binding>
         <strength value="required"/>
-        <description value="grounds for concurrent supply types"/>
-        <valueSet value="http://hl7.org.au/fhir/ValueSet/grounds-for-concurrent-supply"/>
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/grounds-for-concurrent-supply"/>
       </binding>
     </element>
   </differential>

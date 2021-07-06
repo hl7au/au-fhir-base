@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="medication-long-term"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term"/>
-  <version value="2.1.0"/>
+  <version value="2.1.2"/>
   <name value="MedicationLongTerm"/>
   <title value="Long Term"/>
   <status value="active"/>
-  <date value="2020-01-03"/>
+  <date value="2021-07-06"/>
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description
-    value="This extension applies to the MedicationStatement resource and provides an indicator of long term medication use."/>
+    value="This extension applies to the MedicationStatement resource and is used to indicate long term use of a medication."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -37,8 +37,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Medication long term"/>
-      <definition value="Medication long-term indicator"/>
+      <short value="Medication long term use indicator"/>
+      <definition value="Indicator of long term use of a medication."/>
       <min value="0"/>
       <max value="1"/>
     </element>

@@ -1,11 +1,13 @@
 **Extension: Medication Brand Name** *[[FMM Level 1](guidance.html)]*
 
-This extension applies to the Medication, MedicationRequest, MedicationDispense amd MedicationStatement resources and provides text brand name of a medication.
+This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and is used to represent the brand name of a medication.
 
-It is recommended to include multiple codings where brand and generic medication concepts are to be represented where available rather than text name only.
 
-This brand name can be included as an additional name representation of the brand medication and may used in the case where no brand coded concept is available.
+#### Usage Notes
+This extension is not to be the sole representation of the medication concept; it should be used in conjunction with the medication code e.g. Medication.code or MedicationStatement.medicationCodeableConcept.
 
+
+#### Examples
 [Medication with brand name text](Medication-BrandedPack1.html)
 
 [Prescription with brand name text](MedicationRequest-medicationrequest-example2.html)
