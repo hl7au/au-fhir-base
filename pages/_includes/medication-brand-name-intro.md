@@ -4,7 +4,7 @@ This extension applies to the Medication, MedicationRequest, MedicationDispense 
 
 
 #### Usage Notes
-This extension is not to be the sole representation of the medication concept; it should be used in conjunction with the medication code e.g. Medication.code or MedicationStatement.codeableConcept.
+This extension is not to be the sole representation of the medication concept; it should be used in conjunction with the medication code e.g. Medication.code or MedicationStatement.medicationCodeableConcept.
 
 
 #### Examples
