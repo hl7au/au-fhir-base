@@ -1,6 +1,6 @@
 **Extension: AHPRA Profession Details** *[[FMM Level 1](guidance.html)]*
 
-This extension applies to the [Practitioner.qualification](http://hl7.org/fhir/practitioner-definitions.html#Practitioner.qualification) element and is used to represent Australian Health Practitioner Regulation Agency (AHPRA) [<sup>[1]</sup>](https://www.ahpra.gov.au){:target="_blank"} [<sup>[2]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"} profession details.
+This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (AHPRA) [<sup>[1]</sup>](https://www.ahpra.gov.au){:target="_blank"} [<sup>[2]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"} profession details.
 
 This extension supports the inclusion of the AHPRA profession code and information about conditions, undertakings, reprimands and cautions in a qualification element instance representing a practitioner’s AHPRA profession.
 
