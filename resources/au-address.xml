@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-address" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
-  <version value="2.1.0"/>
+  <version value="2.1.1"/>
   <name value="AustralianAddress" />
   <title value="Australian Address" />
   <status value="active" />
-  <date value="2019-07-30" />
+  <date value="2021-07-05" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile is provided for use in an Australian context where some constraint on content is desirable to guarantee the quality of an Australian address whilst still supporting other uses such as unstructured addresses." />
+  <description value="This profile defines an address structure that localises core concepts, including identifiers and terminology, for use in an Australian context, to specifically represent an Australian (location) address." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -87,7 +87,6 @@
     <element id="Address.extension:noFixedAddress">
       <path value="Address.extension" />
       <sliceName value="noFixedAddress" />
-      <definition value="No fixed address indicator." />
       <max value="1"/>
       <type>
         <code value="Extension" />
@@ -96,12 +95,11 @@
     </element>
     <element id="Address.city">
       <path value="Address.city" />
-      <short value="Name of city, town, suburb, etc." />
-      <definition value="The name of the city, town, village, suburb, or other community or delivery center." />
+      <short value="Name of city, town or suburb" />
     </element>
     <element id="Address.state">
       <path value="Address.state" />
-      <short value="Australian state and territory" />
+      <short value="Australian state or territory" />
       <binding>
         <strength value="required" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2" />
