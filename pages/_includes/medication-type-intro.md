@@ -1,6 +1,6 @@
 **Extension: Medication Type**  *[[FMM Level 2](guidance.html)]*
 
-This extension applies to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) datatype and is used to indicate the type of information covered by the code e.g. branded product with no strength or form. This is useful when there are multiple codings from the same coding system at different levels/classifications.
+This extension applies to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) data type and is used to indicate the type of information covered by the code e.g. branded product with no strength or form. This is useful when there are multiple codings from the same coding system at different levels/classifications.
 
 #### Examples
 
