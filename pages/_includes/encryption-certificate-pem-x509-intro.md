@@ -1,8 +1,8 @@
 **Extension: Encryption Certificate PEM X509**  *[[FMM Level 3](guidance.html)]*
 
-This extension applies to the Endpoint resource and is used to represent encrypting certficate content for an endpoint.
+This extension applies to the Endpoint resource and is used to represent encrypted certficate content for an endpoint.
 
-This allows an endpoint entry to define a suitable certficate for use in communications on the associated channel.
+This extension allows an endpoint entry to define a suitable certficate for use in communications on the associated channel.
 
 #### Usage Notes
 
