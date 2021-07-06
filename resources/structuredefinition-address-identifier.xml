@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="address-identifier"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/address-identifier"/>
-  <version value="1.0.0"/>
+  <version value="1.0.1"/>
   <name value="AddressIdentifier"/>
   <title value="Address Identifier"/>
   <status value="draft"/>
-  <date value="2020-08-24"/>
+  <date value="2021-07-05"/>
   <publisher value="Health Level Seven Australia (Patient Administration WG)"/>
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="This extension applies to the Address datatype and is used to represent an identifier for an address."/>
+  <description value="This extension applies to the Address data type and is used to represent an identifier for an address."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,6 +47,7 @@
     <element id="Extension.value[x]:valueIdentifier">
       <path value="Extension.valueIdentifier"/>
       <sliceName value="valueIdentifier"/>
+      <short value="Address identifier"/>
       <min value="1"/>
       <type>
         <code value="Identifier"/>
