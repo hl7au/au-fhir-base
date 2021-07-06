@@ -1,13 +1,10 @@
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<id value="gtin"/>
-	<meta> 
-		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/> 
-	</meta>
 	<url value="http://terminology.hl7.org.au/ValueSet/gtin"/>
-	<identifier> 
-	   <system value="urn:ietf:rfc:3986"/> 
-       <value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.4"/> 
-    </identifier>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.TBD"/>
+	</identifier>
 	<version value="1.0.0"/>
 	<name value="GTINforMedicines"/>
 	<title value="GTIN for Medicines"/>
@@ -17,12 +14,13 @@
 	<publisher value="Health Level Seven Australia (Medications WG)"/>
 	<contact>
 		<telecom>
-		  <system value="url" />
-		  <value value="http://hl7.com.au" />
-		  <use value="work" />
+			<system value="url"/>
+			<value value="http://hl7.com.au"/>
+			<use value="work"/>
 		</telecom>
 	</contact>
-	<description value="Global Trade Item Number (GTIN) for Medicines value set  includes values from the external Global Trade Item Number (GTIN) code system."/>
+	<description
+		value="Global Trade Item Number (GTIN) for Medicines value set includes values from the Global Trade Item Number (GTIN) code system."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -31,8 +29,8 @@
 	</jurisdiction>
 	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
 	<compose>
-    <include> 
-      <system value="http://www.gs1.org/gtin"/> 
-    </include> 
+		<include>
+			<system value="http://www.gs1.org/gtin"/>
+		</include>
 	</compose>
 </ValueSet>
