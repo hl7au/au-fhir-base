@@ -4,6 +4,12 @@ This identifier profile defines a Medicare card[<sup>[1]</sup>](https://www.serv
 
 A Medicare card is provided to individuals who are enrolled in Medicare[<sup>[1]</sup>](https://www.servicesaustralia.gov.au/individuals/medicare){:target="_blank"}.
 
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
 #### Usage Notes
 
 The 10 digit format is supported as some systems do not support the 11 digit Medicare card number. 
@@ -12,7 +18,8 @@ The 10 digit Medicare card number is not sufficient to uniquely identify the num
 
 Medicare card numbers are not used for uniquely identifying patients, they are identifying information that can be used in conjunction with other elements such as name and date of birth appropriately to confirm identity.
 
-**Examples**
+
+#### Examples
 
 [Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 

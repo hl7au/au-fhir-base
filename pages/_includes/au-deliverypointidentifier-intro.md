@@ -4,6 +4,11 @@ This identifier profile defines an Australia Post Delivery Point Identifier (DPI
 
 A DPID is a randomly generated, unique 8-digit number, allocated by Australia Post to an address. A DPID enables each delivery point in Australia to be uniquely identified.
 
-**Examples**
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
 
 [Postal address (with DPID and G-NAF Identifier) and work address in Darwin, NT](Patient-address-example3.html)
