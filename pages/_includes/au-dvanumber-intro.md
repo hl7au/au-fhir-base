@@ -6,7 +6,13 @@ A Veteran Card may be issued by Department of Veterans’ Affairs (DVA) to eligi
 
 NOTE: From July 2020, Veteran Card is the new name for DVA issued healthcare cards.
 
-**Examples**
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
 
 [Patient with IHI and DVA Number](Patient-example1.html)
 

@@ -2,6 +2,12 @@
 
 This identifier profile defines a Private Health Insurance Member Number in an Australian context.
 
-**Examples**
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
 
 [Patient with interpreter required, language unknown and date of arrival](Patient-example7.html)
