@@ -4,7 +4,13 @@ This identifier profile defines a Medicare provider number[<sup>[1]</sup>](https
 
 A practitioner may have more than one Medicare provider number if they deliver health services in different locations or are registered in multiple health professions. 
 
-**Examples**
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
 
 [Practitioner Role with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example0.html)
 

@@ -4,6 +4,12 @@ This identifier profile defines a National Provider Identifier at Organisation (
 
 An NPIO identifies an individual practitioner at an organisation using the practitioner's HPI-I and organisation's HPI-O to form the NPIO.
 
-**Examples**
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
 
 [Radiologist with National Provider Identifier at Organisation](PractitionerRole-example1.html)
