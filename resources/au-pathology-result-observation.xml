@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-diagnostic-observation" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnostic-observation" />
-  <version value="1.2.0" />
-  <name value="AUDiagnosticObservation" />
-  <title value="AU Diagnostic Observation" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pathology-result-observation" />
+  <version value="1.0.0" />
+  <name value="AUPathologyResultObservation" />
+  <title value="AU Pathology Result Observation" />
   <status value="draft" />
   <date value="2021-07-06" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
@@ -62,9 +62,21 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="A diagnostic observation in an Australian healthcare context" />
-      <definition value="Diagnostic measurements and simple assertions made about a patient, device or other subject." />
+      <short value="A pathology result observation in an Australian healthcare context" />
+      <definition value="An observation of a pathology test for a patient. This observation may be a simple test or a panel/study." />
     </element>
+    <constraint>
+      <key value="inv-obs-0" />
+      <severity value="error" />
+      <human value="One category shall be 'laboratory' 'http://terminology.hl7.org/CodeSystem/observation-category'" />
+      <expression value="category.coding.where(system='http://terminology.hl7.org/CodeSystem/observation-category' and code='laboratory').exists()" />
+    </constraint>
+    <constraint>
+      <key value="inv-obs-1" />
+      <severity value="error" />
+      <human value="A pathology result observation shall at least have value, data absent reason or a member observation" />
+      <expression value="value.exists() or hasMember.exists() or dataAbsentReason.exists()" />
+    </constraint>
     <element id="Observation.extension">
       <path value="Observation.extension" />
       <slicing>
@@ -82,6 +94,40 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
       </type>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="Pathology test or test group" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/pathology-procedure-1" />
+      </binding>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Time of specimen collection" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen" />
