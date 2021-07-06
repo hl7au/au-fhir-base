@@ -1,6 +1,6 @@
 **Extension: Date Accuracy Indicator** *[[FMM Level 2](guidance.html)]*
 
-This extension applies to [date](http://hl7.org/fhir/R4/datatypes.html#date) or [dateTime](http://hl7.org/fhir/R4/datatypes.html#dateTime) datatypes and indicates the asserted accuracy of the associated date via a coding. [<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418){:target="_blank"}
+This extension applies to [date](http://hl7.org/fhir/R4/datatypes.html#date) and [dateTime](http://hl7.org/fhir/R4/datatypes.html#dateTime) data types and is used to represent the accuracy of the associated date via a coding. [<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418){:target="_blank"}
 
 #### Examples
 
@@ -13,4 +13,3 @@ This extension applies to [date](http://hl7.org/fhir/R4/datatypes.html#date) or 
 [Patient with date accuracy indicator of "UEA" indicating the year component is accurate, the month is an estimate and the day is unknown.](Patient-DateAccuracyIndicatorUEAexample3.html)
 
 [Patient with date accuracy indicator of "UUU" indicating that all date components are unknown.](Patient-DateAccuracyIndicatorUUUexample4.html)
-

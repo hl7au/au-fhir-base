@@ -1,10 +1,8 @@
 **Extension: IHI Status** *[[FMM Level 3](guidance.html)]*
 
-This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) 
+This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) and is used to represent the status of the associated Individual Healthcare Identifier (IHI) and also indicates whether the status of the IHI is active or otherwise.
 
-This IHI status extension describes the status of the associated IHI identifier and also indicates whether the status of the identifier is active or otherwise.
-
-**Examples**
+#### Examples
 
 [Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 
