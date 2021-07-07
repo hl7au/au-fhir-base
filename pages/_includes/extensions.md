@@ -23,7 +23,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
 * [Dispense Number](StructureDefinition-dispense-number.html) - number of this dispense
-* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) - grounds for suppluying multiple repeats of a medication prescription at one time
+* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) - grounds for supplying multiple repeats of a medication prescription at one time
 * [Long Term](StructureDefinition-medication-long-term.html) - medication long-term indicator
 * [Medication Brand Name](StructureDefinition-medication-brand-name.html) - text brand name that can be added to profiles
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
@@ -49,7 +49,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 ## Endpoint Attributes
 * [Receiving Application](StructureDefinition-au-receivingapplication.html) - identity attribute for v2 endpoints
 * [Receiving Facility](StructureDefinition-au-receivingfacility.html) - identity attribute for v2 endpoints
-* [Encryption Ceritficate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
+* [Encryption Certificate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) - encrypting public certificate attribute for an endpoint
 
 
 ## Data types
