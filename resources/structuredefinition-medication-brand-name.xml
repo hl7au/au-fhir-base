@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="medication-brand-name"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name"/>
-  <version value="2.1.0"/>
+  <version value="2.1.2"/>
   <name value="MedicationBrandName"/>
   <title value="Medication Brand Name"/>
   <status value="active"/>
-  <date value="2020-01-03"/>
+  <date value="2021-07-06"/>
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
@@ -16,7 +16,7 @@
     </telecom>
   </contact>
   <description
-    value="This extension applies to the Medication, MedicationRequest, MedicationDispense amd MedicationStatement resources and provides text brand name of a medication."/>
+    value="This extension applies to the Medication, MedicationRequest, MedicationDispense amd MedicationStatement resources and is used to represent the brand name of a medication."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -61,7 +61,7 @@
     <element id="Extension.value[x]:valueString">
       <path value="Extension.valueString"/>
       <sliceName value="valueString"/>
-      <short value="Text Brand or Product name"/>
+      <short value="Brand or product name"/>
       <min value="1"/>
       <type>
         <code value="string"/>

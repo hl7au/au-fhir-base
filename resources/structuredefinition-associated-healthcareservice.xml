@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="associated-healthcareservice"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice"/>
-  <version value="2.1.0"/>
+  <version value="2.1.1"/>
   <name value="AssociatedHealthcareService"/>
   <title value="Associated Healthcare Service"/>
   <status value="draft"/>
-  <date value="2020-08-03" />
+  <date value="2021-07-05" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension allows references to healthcare services relating to a resource, e.g. healthcare services under which the patient was managed during an encounter."/>
+  <description value="This extension applies to any resource and is used to represent a healthcare service relating to a resource, e.g. healthcare services under which the patient was managed during an encounter."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -48,6 +48,7 @@
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference"/>
       <sliceName value="valueReference"/>
+      <short value="Healthcare service"/>
       <min value="1"/>
       <type>
         <code value="Reference"/>

@@ -23,8 +23,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Type](StructureDefinition-medication-type.html) - drug code classification
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) - patient flag, CTG eligible
 * [Dispense Number](StructureDefinition-dispense-number.html) - number of this dispense
-* [Subsidised Concurrent Supply Of Medication](StructureDefinition-subsidised-concurrent-supply.html) - dispensing request/suppy record 
-* [Long Term](StructureDefinition-medication-long-term.html) - Medication long-term indicator
+* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) - grounds for suppluying multiple repeats of a medication prescription at one time
+* [Long Term](StructureDefinition-medication-long-term.html) - medication long-term indicator
 * [Medication Brand Name](StructureDefinition-medication-brand-name.html) - text brand name that can be added to profiles
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) - text generic name that can be added to profiles
 * [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) - minimum allowed dispensing interval

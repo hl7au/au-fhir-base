@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-dosage"/>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-dosage"/>
-  <version value="2.1.0"/>
+  <version value="2.1.1"/>
   <name value="AUBaseDosage"/>
   <title value="AU Base Dosage"/>
   <status value="draft"/>
-  <date value="2020-01-22"/>
+  <date value="2021-07-07"/>
   <publisher value="Health Level Seven Australia (Medications WG)"/>
   <contact>
     <telecom>
@@ -58,7 +58,6 @@
     </element>
     <element id="Dosage.route">
       <path value="Dosage.route"/>
-      <short value="Route of Administration (SNOMED CT)"/>
       <binding>
         <strength value="preferred"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1"
@@ -67,7 +66,6 @@
     </element>
     <element id="Dosage.method">
       <path value="Dosage.method"/>
-      <short value="SNOMED CT Administration Method"/>
       <binding>
         <strength value="preferred"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/administration-method-codes"/>

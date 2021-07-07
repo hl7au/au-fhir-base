@@ -2,20 +2,20 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="information-recipient" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/information-recipient" />
-  <version value="2.1.0"/>
+  <version value="2.1.1"/>
   <name value="InformationRecipient" />
   <title value="Information Recipient" />
   <status value="draft" />
-  <date value="2020-08-03" />
+  <date value="2021-07-05" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au" />
+      <value value="http://hl7.com.au" />
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension applies to the Composition resource and allows recording of intended recipients of the composition." />
+  <description value="This extension applies to the Composition resource and is used to represent an intended recipient of the composition." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -46,6 +46,7 @@
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.value[x]" />
       <sliceName value="valueReference" />
+      <short value="Information recipient"/>
       <min value="1" />
       <type>
         <code value="Reference" />

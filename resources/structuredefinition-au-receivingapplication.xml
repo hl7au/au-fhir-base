@@ -2,20 +2,20 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-receivingapplication" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-receivingapplication" />
-  <version value="2.1.1"/>
-  <name value="HL7V2ReceivingApplication" />
-  <title value="HL7 V2 Receiving Application" />
+  <version value="2.1.2"/>
+  <name value="ReceivingApplication" />
+  <title value="Receiving Application" />
   <status value="draft" />
-  <date value="2021-06-29" />
+  <date value="2021-07-05" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au" />
+      <value value="http://hl7.com.au" />
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Values for routing HLV2 message payloads associated with an endpoint. Suitable for MSH-5." />
+  <description value="This extension applies to the Endpoint resource and is used to represent routing HL7 V2 message payload details associated with an endpoint. Suitable for MSH-5." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -23,7 +23,7 @@
     </coding>
   </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -37,7 +37,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="HL7 V2 receiving application" />
-      <definition value="Values for routing HLV2 message payloads associated with an endpoint. Suitable for MSH-5." />
+      <definition value="Values for routing HL7 V2 message payloads associated with an endpoint. Suitable for MSH-5." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
@@ -91,7 +91,7 @@
     <element id="Extension.extension:universal-id-type">
       <path value="Extension.extension" />
       <sliceName value="universal-id-type" />
-      <short value="Type Scheme of universal-id" />
+      <short value="Type scheme of universal-id" />
       <definition value="Provides scheme to use to interpret the universal-id value .e.g. GUID, ISO etc. see HL7 V2 Table 0301 - Universal ID type." />
       <max value="1" />
     </element>

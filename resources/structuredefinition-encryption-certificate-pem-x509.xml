@@ -2,20 +2,20 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="encryption-certificate-pem-x509" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509" />
-  <version value="2.1.1"/>
+  <version value="2.1.2"/>
   <name value="EncryptionCertificatePEMx509" />
   <title value="Encryption Certificate PEM X509" />
   <status value="draft" />
-  <date value="2021-06-29" />
+  <date value="2021-07-05" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
       <system value="url" />
-      <value value="http://hl7.org.au" />
+      <value value="http://hl7.com.au" />
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension is defined to support encrypting certficate content for use with an endpoint." />
+  <description value="This extension applies to the Endpoint resource and is used to support encrypted certficate content for use with an endpoint." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -23,7 +23,7 @@
     </coding>
   </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -36,8 +36,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="PEM X509 Certificate" />
-      <definition value="Mechanism hold the value of an X509 certificate as a string (base64 encoded PEM certificate)" />
+      <short value="PEM X509 certificate" />
+      <definition value="Mechanism to hold the value of a X509 certificate as a string (base64 encoded PEM certificate)." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
@@ -46,8 +46,8 @@
     <element id="Extension.value[x]:valueString">
       <path value="Extension.valueString" />
       <sliceName value="valueString" />
-      <short value="Base64 Encoded String PEM Format X509 certificate" />
-      <definition value="Base64 encoded string containing PEM (RFC 7468) formatted X509 certificate" />
+      <short value="Base64 encoded string PEM format X509 certificate" />
+      <definition value="Base64 encoded string containing PEM (RFC 7468) formatted X509 certificate." />
       <min value="1" />
       <type>
         <code value="string" />

@@ -1,17 +1,14 @@
 **Extension: Medication Type**  *[[FMM Level 2](guidance.html)]*
 
-This extension applies to the Coding datatype and provides a value to indicate a classification of the type of medication the parent coding. This is useful
-when there are multiple codings from the same CodingSystem at different levels/classifications.
+This extension applies to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) data type and is used to indicate the type of information covered by the code e.g. branded product with no strength or form. This is useful when there are multiple codings from the same coding system at different levels/classifications.
 
-**Examples**
+#### Examples
 
 [Fluconazole Dose Based Medication](Medication-MedicationDoseBased.html)
 
 [Paracetamol Generic Pack](Medication-GenericPack0.html)
 
 [Nexium Hp7 Brand Pack](Medication-BrandedPack0.html)
-
-[Nexium Hp7 Combination Package with Product Parts](Medication-CombinationPackage0.html)
 
 [Clarithromycin 500mg Tablet Unbranded Product](Medication-UnbrandedProduct0.html)
 
