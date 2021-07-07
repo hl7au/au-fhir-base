@@ -14,25 +14,25 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - related person with local identifiers and terminology
 
 ## Medications Profiles
-* [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
+* [AU Base Medication](StructureDefinition-au-medication.html) - medication details with local terminology
 * [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html) - medication administration record with common local coding and content
-* [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html) - dispensing details with common local coding and content
-* [AU Base Medication Request](StructureDefinition-au-medicationrequest.html) - prescribing/ordering details with common local coding and content
-* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
+* [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html) - dispensing details with local identifiers and terminology
+* [AU Base Medication Request](StructureDefinition-au-medicationrequest.html) - prescribing/ordering details with local identifiers and terminology
+* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history with local terminology
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
-* [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
+* [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with local terminology 
 
 ## Diagnostics Profiles
-* [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
-* [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with localisation concepts
-* [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
-* [AU Diagnostic Observation](StructureDefinition-au-diagnostic-observation.html) - diagnostic observation with localisation concepts
-* [AU Diagnostic Service Request](StructureDefinition-au-diagnostic-servicerequest.html) - diagnostic service request with localisation concepts
+* [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local terminology 
+* [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with local identifiers and terminology
+* [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local terminology
+* [AU Diagnostic Observation](StructureDefinition-au-diagnostic-observation.html) - diagnostic observation with local identifiers and terminology
+* [AU Diagnostic Service Request](StructureDefinition-au-diagnostic-servicerequest.html) - diagnostic service request with local identifiers and terminology
 
 ## Clinical Profiles
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
-* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
-* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding
+* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local terminology 
+* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local terminology
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
 
 ## Lifestyle Factor Profiles
