@@ -4,23 +4,23 @@ These Profiles have been defined for this implementation guide.
 
 ## Administration Profiles
 
+* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with local terminology
+* [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - healthcare service with local identifiers and terminology
+* [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers and terminology
+* [AU Base Organization](StructureDefinition-au-organization.html) - organisation with local identifiers and terminology
 * [AU Base Patient](StructureDefinition-au-patient.html) - patient demographic with local identifiers and terminology 
 * [AU Base Practitioner](StructureDefinition-au-practitioner.html) - individual practitioner with local identifiers and terminology
 * [AU Base Practitioner Role](StructureDefinition-au-practitionerrole.html) - practitioner role with local identifiers and terminology
-* [AU Base Organization](StructureDefinition-au-organization.html) - organisation with local identifiers and terminology
-* [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html) - healthcare service with local identifiers and terminology
-* [AU Base Location](StructureDefinition-au-location.html) - location with local identifiers and terminology
 * [AU Base Related Person](StructureDefinition-au-relatedperson.html) - related person with local identifiers and terminology
-* [AU Base Encounter](StructureDefinition-au-encounter.html) - encounter with local terminology
 
 ## Medications Profiles
 * [AU Base Medication](StructureDefinition-au-medication.html) - medication details with common local coding and content
-* [AU Base Medication Request](StructureDefinition-au-medicationrequest.html) - prescribing/ordering details with common local coding and content
-* [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html) - dispensing details with common local coding and content
-* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
 * [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html) - medication administration record with common local coding and content
-* [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
+* [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html) - dispensing details with common local coding and content
+* [AU Base Medication Request](StructureDefinition-au-medicationrequest.html) - prescribing/ordering details with common local coding and content
+* [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html) - medication history common local coding and content
 * [AU Medicine List](StructureDefinition-au-medlist.html) - medicine list with core localisation concepts
+* [AU Base Immunisation](StructureDefinition-au-immunization.html) - immunisation record with common local coding 
 
 ## Diagnostics Profiles
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
@@ -30,19 +30,19 @@ These Profiles have been defined for this implementation guide.
 * [AU Diagnostic Service Request](StructureDefinition-au-diagnostic-servicerequest.html) - diagnostic service request with localisation concepts
 
 ## Clinical Profiles
-* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding
-* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) - observation with assertion of no relevant finding
+* [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) - allergy intolerance with local coding 
+* [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) - sex assigned at birth observation
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) - smoking status lifestyle factor record
 
 ## Pregnancy Related Profiles
-* [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) - last menstrual period record
-* [AU Gravidity](StructureDefinition-au-gravidity.html) - gravidity at a point in time record
-* [AU Parity](StructureDefinition-au-parity.html) - parity at a point in time record
 * [AU Estimated Date of Delivery](StructureDefinition-au-estimateddateofdelivery.html) - estimated date of delivery; may be my scan or last menstrual period
+* [AU Gravidity](StructureDefinition-au-gravidity.html) - gravidity at a point in time record
+* [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) - last menstrual period record
+* [AU Parity](StructureDefinition-au-parity.html) - parity at a point in time record
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) - composition pattern aligned with local CDA requirements
@@ -85,5 +85,5 @@ These Profiles have been defined for this implementation guide.
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) - identifier profile for a private health insurance member number
 
 ### Profiles on Other Data Types
-* [Australian Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
 * [AU Base Dosage](StructureDefinition-au-dosage.html) -  dosage information with common local coding
+* [Australian Address](StructureDefinition-au-address.html) - well defined representation of an Australian address
