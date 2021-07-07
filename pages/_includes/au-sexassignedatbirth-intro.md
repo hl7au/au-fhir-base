@@ -1,4 +1,4 @@
-**AU Biological Sex Assigned at Birth** *[[FMM Level 0](guidance.html)]*
+**AU Biological Sex Assigned at Birth** *[[FMM Level 1](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s biological sex[<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/635233){:target="_blank"}[<sup>[2]</sup>](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release){:target="_blank"} assigned at birth. Biological sex assigned at birth refers to what was determined by sex characteristics observed at birth or infancy, including genital and chromosome composition. Sex assigned at birth is captured once for a patient and is not expected to change within their lifetime. 
 

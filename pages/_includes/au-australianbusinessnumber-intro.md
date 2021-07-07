@@ -1,4 +1,4 @@
-**AU Australian Business Number**  *[[FMM Level 0](guidance.html)]*
+**AU Australian Business Number**  *[[FMM Level 1](guidance.html)]*
 
 This identifier profile defines an Australian Business Number (ABN)[<sup>[1]</sup>](https://www.abr.business.gov.au/HelpAbnFormat.aspx){:target="_blank"} in an Australian context. 
 

@@ -1,4 +1,4 @@
-**Extension: Date of Arrival in Australia**  *[[FMM Level 0](guidance.html)]*
+**Extension: Date of Arrival in Australia**  *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the Patient, RelatedPerson, and Practitioner resources and defines the date of arrival in an Australian context.  [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
 

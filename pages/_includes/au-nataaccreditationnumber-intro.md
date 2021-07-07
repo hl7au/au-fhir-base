@@ -1,4 +1,4 @@
-**AU NATA Accreditation Number**  *[[FMM Level 0](guidance.html)]*
+**AU NATA Accreditation Number**  *[[FMM Level 1](guidance.html)]*
 
 This identifier profile defines a National Association of Testing Authorities (NATA)[<sup>[1]</sup>](https://www.nata.com.au/){:target="_blank"} accreditation number in an Australian context.
 
