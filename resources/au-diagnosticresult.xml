@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-diagnostic-observation" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnostic-observation" />
-  <version value="1.2.0" />
-  <name value="AUDiagnosticObservation" />
-  <title value="AU Diagnostic Observation" />
+  <id value="au-diagnosticresult" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
+  <version value="1.3.0" />
+  <name value="AUDiagnosticResult" />
+  <title value="AU Diagnostic Result" />
   <status value="draft" />
   <date value="2021-07-06" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines an observation structure that includes core localisation concepts for use as a diagnostic observation in an Australian context." />
+  <description value="This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple investigation of it may group the set of results of a multi-modality procedure or multi-test study / panel." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -62,33 +62,16 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <short value="A diagnostic observation in an Australian healthcare context" />
+      <short value="A diagnostic result observation in an Australian healthcare context" />
       <definition value="Diagnostic measurements and simple assertions made about a patient, device or other subject." />
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:bodySite">
-      <path value="Observation.extension" />
-      <sliceName value="bodySite" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
-      </type>
-    </element>
-    <element id="Observation.specimen">
-      <path value="Observation.specimen" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
-      </type>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="Diagnostic procedure" />
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
