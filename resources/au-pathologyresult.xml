@@ -73,8 +73,8 @@
       <constraint>
         <key value="inv-obs-1" />
         <severity value="error" />
-        <human value="A pathology result observation shall at least have value, data absent reason or a member observation" />
-        <expression value="value.exists() or hasMember.exists() or dataAbsentReason.exists()" />
+        <human value="A pathology result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
+        <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
       </constraint>
     </element>
     <element id="Observation.category">

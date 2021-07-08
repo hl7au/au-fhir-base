@@ -1,16 +1,26 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="observation-specimen-hepatitus-b-serology"/>
     <meta>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnostic-observation"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"/>
     </meta>
-    
     <basedOn>
         <reference value="ServiceRequest/servicerequest-hepatitis-b-antibody"/>
         <display value="Service Request for Hepatitis B surface antibody measurement"/>
     </basedOn>
-
     <status value="final"/>
-    
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+            <code value="SR"/>
+            <display value="Serology"/>
+        </coding>
+    </category>
     <code>
         <coding>
             <system value="http://loinc.org"/>
@@ -18,33 +28,27 @@
             <display value="Hepatitis B surface Ab"/>            
         </coding>
     </code>
-
     <subject>
         <reference value="Patient/example0"/>
         <display value="Stella Franklin"/>
     </subject>
-
     <performer>
         <reference value="Organization/f799e349-0385-4fbc-a2aa-b5b50af957ea"/>
         <display value="ACME Pathology"/>
     </performer>
-
     <valueQuantity>
         <value value="10"/>
         <comparator value="&gt;"/>
         <unit value="IU/L"/>
     </valueQuantity>
-
     <specimen>
         <reference value="Specimen/specimen-serum"/>
         <display value="Serum"/>
     </specimen>
-
     <referenceRange>
         <low>
             <value value="10"/>
             <unit value="IU/L"/>
         </low>
     </referenceRange>
-
 </Observation>
