@@ -11,7 +11,7 @@ Extensions used in this profile:
 #### Boundaries and relationships
 Use the [AU Pathology Result](StructureDefinition-au-pathologyresult.html) profile to represent the result of a pathology test.
 
-Use the [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology examination a imaging intensive diagnostic investigation.
+Use the [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology examination or an imaging intensive diagnostic investigation.
 
 
 #### Usage Notes
