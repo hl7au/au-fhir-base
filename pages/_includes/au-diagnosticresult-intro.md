@@ -1,6 +1,6 @@
 **AU Diagnostic Result**  *[[FMM Level 0](guidance.html)]*
 
-This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple investigation of it may group the set of results of a multi-modality procedure or multi-test study / panel.
+This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel.
 
 This profile may be used to represent a specialist or other diagnostic (not imaging or pathology) observation including results of audiology studies, sleep studies or speech pathology.
 
@@ -11,7 +11,7 @@ Extensions used in this profile:
 #### Boundaries and relationships
 Use the [AU Pathology Result](StructureDefinition-au-pathologyresult.html) profile to represent the result of a pathology test.
 
-Use the [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology exmaination a imaging intensive diagnostic investigation.
+Use the [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology examination a imaging intensive diagnostic investigation.
 
 
 #### Usage Notes

@@ -28,7 +28,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
 * [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) - diagnostic imaging result with local terminology
 * [AU Diagnostic Result](StructureDefinition-au-diagnosticresult.html) - diagnostic result with local terminology
-* [AU Diagnostic Service Request](StructureDefinition-au-diagnostic-servicerequest.html) - diagnostic service request with localisation concepts
+* [AU Diagnostic Request](StructureDefinition-au-diagnosticrequest.html) - diagnostic request with local identifiers and terminology
 * [AU Pathology Result](StructureDefinition-au-pathologyresult.html) - pathology test result with local terminology
 
 
