@@ -16,15 +16,14 @@ No extensions are used in this profile.
 This profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example [RCPA’s structured pathology reporting of cancer](https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer)); this is not in the scope of this implementation guide at this time.
 
 #### Usage Notes
-<ul>
-<li>pPerformer is sent as one Organization (pathology laboratory) and one or more PractitionerRoles (performing pathologist)</li>
-<li>Performing pathology laboratory is sent as a reference to an Organization resource with:
+Performer is sent as one Organization (pathology laboratory) and one or more PractitionerRoles (performing pathologist)<ul>
+<li>pathology laboratory is sent as a reference to an Organization resource with:
     <ul>
         <li>Organization.identifier</li>
         <li>Organization.name</li>
         <li>Organization.address</li> 
   </ul></li>      
-<li>Performing pathologist is sent as a reference to a PractitionerRole resource with:
+<li>performing pathologist is sent as a reference to a PractitionerRole resource with:
     <ul>
         <li>PractitionerRole.practitioner as reference to a Practitioner resource with:
         <ul>
