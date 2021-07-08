@@ -1,4 +1,4 @@
-**AU AHPRA Registration Number**  *[[FMM Level 0](guidance.html)]*
+**AU AHPRA Registration Number**  *[[FMM Level 1](guidance.html)]*
 
 This identifier profile defines an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number [<sup>[1]</sup>](https://www.ahpra.gov.au){:target="_blank"} [<sup>[2]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"} in an Australian context.
 
