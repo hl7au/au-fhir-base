@@ -15,10 +15,10 @@ Extensions used in this profile:
 
 
 #### Usage Notes
-Medication codings are used to define relevant drug/medication concepts. This includes coding as:
+A full medication definition as medicationReference or medicationCodeableConcept can be included to define the drug/medication concept. Medication definition includes coding as:
 * [PBS Item Code](https://www.pbs.gov.au/pbs/home) - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding
-* [Medication Package Global Trade Item Number](https://www.gs1.org/standards/id-keys/gtin) - Global Trade Item Number (GTIN) physical product reference
-* [AMT Medicines](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
+* [Medication Package Global Trade Item Number](http://terminology.hl7.org/ValueSet/v3-GTIN) - Global Trade Item Number (GTIN) physical product reference
+* [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
 Where a system cannot include a coded value (only Medication.code.text can be supplied) it is expected that:
