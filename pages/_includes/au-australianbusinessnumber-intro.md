@@ -10,7 +10,7 @@ No extensions are used in this profile.
 
 #### Usage Notes
 
-When coding type, the preferred coding from the required [hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203.html) value set is 'XX' (Organization identifier) sent with a text value 'ABN'.
+When coding type, the preferred coding from the required [hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203-extended.html) value set is 'XX' (Organization identifier) sent with a text value 'ABN'.
 
 
 #### Examples
