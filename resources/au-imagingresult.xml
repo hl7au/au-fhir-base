@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-imagingresult" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
+  <version value="1.0.0" />
+  <name value="AUDiagnosticImagingResult" />
+  <title value="AU Diagnostic Imaging Result" />
+  <status value="draft" />
+  <date value="2021-07-06" />
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile defines an observation structure to represent a imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple examination or study series." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="A imaging examination result in an Australian healthcare context" />
+      <definition value="A diagnostic imaging examination result for a patient. This observation may be a simple examination or a study series." />
+      <constraint>
+        <key value="inv-obs-0" />
+        <severity value="error" />
+        <human value="One category shall be 'imaging' 'http://terminology.hl7.org/CodeSystem/observation-category'" />
+        <expression value="category.coding.where(system='http://terminology.hl7.org/CodeSystem/observation-category' and code='imaging').exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-obs-1" />
+        <severity value="error" />
+        <human value="An imaging result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
+        <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
+      </constraint>
+    </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.extension:bodySite">
+      <path value="Observation.extension" />
+      <sliceName value="bodySite" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
+      </type>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <short value="Relevant diagnostic imaging category: modality and anatomic region" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="Diagnostic imaging examination or study" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
+      </binding>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Time of diagnostic imaging examination" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <short value="Individual examinations in a group or study series" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
