@@ -26,8 +26,10 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
 * [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with localisation concepts
 * [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
-* [AU Diagnostic Observation](StructureDefinition-au-diagnostic-observation.html) - diagnostic observation with localisation concepts
+* [AU Diagnostic Result](StructureDefinition-au-diagnosticresult.html) - diagnostic result with local terminology
 * [AU Diagnostic Service Request](StructureDefinition-au-diagnostic-servicerequest.html) - diagnostic service request with localisation concepts
+* [AU Pathology Result](StructureDefinition-au-pathologyresult.html) - pathology test result with local terminology
+
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding
