@@ -64,6 +64,12 @@
       <path value="Observation" />
       <short value="A diagnostic result observation in an Australian healthcare context" />
       <definition value="Diagnostic measurements and simple assertions made about a patient, device or other subject." />
+      <constraint>
+        <key value="inv-obs-1" />
+        <severity value="error" />
+        <human value="A diagnostic result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
+        <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
+      </constraint>
     </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
@@ -106,6 +112,16 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <short value="Individual examinations in a group or study series" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
       </type>
     </element>
   </differential>
