@@ -1,0 +1,40 @@
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/valueset.xsd">
+	<id value="snomed-practitioner-specialties"/>
+	<url value="http://hl7.org.au/fhir/ValueSet/snomed-practitioner-specialties"/>
+	<identifier> 
+	   <system value="urn:ietf:rfc:3986"/> 
+       <value value="urn:oid:2.16.840.1.113883.2.3.4.2.2.10"/> 
+    </identifier>
+	<version value="2.1.0"/>
+	<name value="ProviderSpecialtiesSNOMED"/>
+	<title value="Provider Specialties (SNOMED)"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-08-08"/>
+	<publisher value="Health Level Seven Australia"/>
+	<contact>
+		<telecom>
+		  <system value="url" />
+		  <value value="http://hl7.com.au" />
+		  <use value="work" />
+		</telecom>
+	</contact>
+	<description value="Provider specialties (SNOMED)"/>
+	<jurisdiction>
+		<coding>
+		<system value="urn:iso:std:iso:3166" />
+		<code value="AU" />
+		</coding>
+	</jurisdiction>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<filter>
+				<property value="concept"/>
+				<op value="descendent-of"/>
+				<value value="394658006"/>
+			</filter>
+		</include>
+	</compose>
+</ValueSet>
