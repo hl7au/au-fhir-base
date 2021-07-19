@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-pathologyreport" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyreport" />
+  <id value="au-imagingreport" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-imagingreport" />
   <version value="1.0.0" />
-  <name value="AUPathologyReport" />
-  <title value="AU Pathology Report" />
+  <name value="AUDiagnostic ImagingReport" />
+  <title value="AU Diagnostic Imaging Report" />
   <status value="draft" />
   <date value="2021-07-19" />
   <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines a diagnostic report structure to represent a pathology report issued by a diagnostic service provider in an Australian context." />
+  <description value="This profile defines a diagnostic report structure to represent a diagnostic imaging report issued by a diagnostic service provider in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -52,11 +52,11 @@
   <differential>
     <element id="DiagnosticReport">
       <path value="DiagnosticReport" />
-      <short value="A pathology report in an Australian healthcare context" />
+      <short value="A diagnostic imaging report in an Australian healthcare context" />
     </element>
     <element id="DiagnosticReport.basedOn">
       <path value="DiagnosticReport.basedOn" />
-      <short value="Pathology order" />
+      <short value="Diagnostic imaging order" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
@@ -79,29 +79,18 @@
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
       <min value="1" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1"/>
-      </binding>
     </element>
     <element id="DiagnosticReport.code">
       <path value="DiagnosticReport.code" />
-      <short value="Pathology test or test group" />
+      <short value="Diagnostic imaging exmaination or study" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
       </binding>
-    </element>
-    <element id="DiagnosticReport.specimen">
-      <path value="DiagnosticReport.specimen" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
-      </type>
     </element>
     <element id="DiagnosticReport.effective[x]">
       <path value="DiagnosticReport.effective[x]" />
-      <short value="Time of specimen collection" />
+      <short value="Time of imaging examination" />
       <min value="1" />
     </element>
     <element id="DiagnosticReport.result">
@@ -109,7 +98,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
       </type>
     </element>
     <element id="DiagnosticReport.conclusionCode">

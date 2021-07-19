@@ -135,5 +135,17 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
       </type>
     </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <short value="Individual examinations in a group or study series" />
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <short value="Diagnostic imaging examination or study" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
