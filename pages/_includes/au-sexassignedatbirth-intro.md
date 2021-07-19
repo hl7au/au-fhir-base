@@ -1,10 +1,16 @@
-**AU Biological Sex Assigned at Birth** *[[FMM Level 0](guidance.html)]*
+**AU Biological Sex Assigned at Birth** *[[FMM Level 1](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s biological sex[<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/635233){:target="_blank"}[<sup>[2]</sup>](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release){:target="_blank"} assigned at birth. Biological sex assigned at birth refers to what was determined by sex characteristics observed at birth or infancy, including genital and chromosome composition. Sex assigned at birth is captured once for a patient and is not expected to change within their lifetime. 
 
 NOTE: LOINC 76689-9 - Sex assigned at birth is being considered for removal from this profile. The concept is not equivalent to biological sex assigned at birth as it specifically states sex assigned and recorded on a birth certificate. We are seeking clarification from LOINC Regenstrief Institute  on the use of this code in a biological sex assigned at birth observation.
 
 The HL7 International [Gender Harmony Project](https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project) project is ongoing; when outcomes of the project are available they will be considered for applicability to this and other biological sex observations.
+
+
+#### Extensions
+
+No extensions are used in this profile.
+
 
 #### Boundaries and Relationships
 
@@ -16,7 +22,7 @@ Biological sex assigned at birth should not be used for:
 For more information, see [AU Base Patient](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) and the [Patient Gender and Sex](http://hl7.org/fhir/R4/patient.html#gender) section in the [Patient](http://hl7.org/fhir/R4/patient.html) resource. Work on supporting other biological sex concepts is expected to result in additional profiles published in this implementation guide.
 
 
-**Examples**
+#### Examples
 
 [Sex assigned at birth: Intersex](Observation-sex-at-birth-intersex.html)
 

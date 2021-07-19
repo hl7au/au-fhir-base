@@ -1,4 +1,4 @@
-**AU Australian Company Number**  *[[FMM Level 0](guidance.html)]*
+**AU Australian Company Number**  *[[FMM Level 1](guidance.html)]*
 
 This identifier profile defines an Australian Company Number (ACN) [<sup>[1]</sup>](http://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/australian-company-numbers/australian-company-number-digit-check){:target="_blank"} in an Australian context. 
 
@@ -10,7 +10,7 @@ No extensions are used in this profile.
 
 #### Usage Notes
 
-When coding type, the preferred coding from the required [hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203.html) value set is 'XX' (Organization identifier) sent with a text value 'ACN'.
+When coding type, the preferred coding from the required [hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203-extended.html) value set is 'XX' (Organization identifier) sent with a text value 'ACN'.
 
 
 #### Examples
