@@ -24,13 +24,13 @@ These Profiles have been defined for this implementation guide.
 
 ## Diagnostics Profiles
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) - body structure with local coding 
-* [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with localisation concepts
+* [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) - diagnostic report with local identifiers and terminology
 * [AU Base Specimen](StructureDefinition-au-specimen.html) - specimen details with local coding
 * [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) - diagnostic imaging result with local terminology
 * [AU Diagnostic Result](StructureDefinition-au-diagnosticresult.html) - diagnostic result with local terminology
 * [AU Diagnostic Request](StructureDefinition-au-diagnosticrequest.html) - diagnostic request with local identifiers and terminology
+* [AU Pathology Report](StructureDefinition-au-pathologyreport.html) - pathology report with local identifiers and terminology
 * [AU Pathology Result](StructureDefinition-au-pathologyresult.html) - pathology test result with local terminology
-
 
 ## Clinical Profiles
 * [AU Base Condition](StructureDefinition-au-condition.html) - condition with local coding
