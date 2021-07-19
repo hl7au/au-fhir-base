@@ -66,6 +66,18 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber"/>
       </type>
     </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest" />
+      </type>
+    </element>
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
       <binding>
@@ -91,6 +103,7 @@
       <path value="DiagnosticReport.result" />
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
