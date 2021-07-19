@@ -1,4 +1,4 @@
-**AU Local Report Identifier**  *[[FMM Level 0](guidance.html)]*
+**AU Local Report Identifier**  *[[FMM Level 1](guidance.html)]*
 
 This identifier profile defines a local report order identifier in an Australian context. A local report identifier is an organisation's identifier for a report in that organisation's local system set of reports.
 

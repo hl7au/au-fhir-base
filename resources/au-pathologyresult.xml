@@ -105,6 +105,7 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="Time of specimen collection" />
+      <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
@@ -127,6 +128,18 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
       </type>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <short value="Individual tests in a group or panel" />
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <short value="Individual pathology test" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

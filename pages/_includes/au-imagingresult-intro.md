@@ -9,9 +9,6 @@ The observation may represent the result of a simple examination or it may group
 Extensions used in this profile:
 * Observation: bodySite (core extension) [<sup>[1]</sup>](https://www.hl7.org/fhir/r4/extension-bodysite.html)
 
-#### Boundaries and relationships
-
-TBD
 
 #### Usage Notes
 

@@ -1,6 +1,6 @@
-**Extension: Date of Arrival in Australia**  *[[FMM Level 0](guidance.html)]*
+**Extension: Date of Arrival in Australia**  *[[FMM Level 1](guidance.html)]*
 
-This extension applies to the Patient, RelatedPerson, and Practitioner resources and defines the date of arrival in an Australian context.  [<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"} [<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
+This extension applies to the Patient, RelatedPerson, and Practitioner resources and is used to represent a person's date of arrival in an Australian context.[<sup>[1]</sup>](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument){:target="_blank"}[<sup>[2]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/269447){:target="_blank"}
 
 The date of arrival is when a person (born outside of Australia) first arrived in Australia, from another country, with the intention of living in Australia for one year or more. This date is captured once for a person and is not subsequently updated with subsequent arrivals.
 
