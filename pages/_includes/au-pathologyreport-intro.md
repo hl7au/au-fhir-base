@@ -32,7 +32,7 @@ For a report of a multi-test study or panel:
 <ul>
 <li>result is sent with the Observation representing the study / panel</li>  
 <li>code is sent with the same code in that study / panel Observation</li>  
-<li>the individual component tests are referenced by that Observation (Observtion.hasMember or Observation.component) and not directly referenced by the DiagnosticReport</li>  
+<li>the individual component tests are referenced by that Observation (Observtion.hasMember) and not the DiagnosticReport</li>  
 </ul>
 
 If the pathology laboratory is a discipline specific laboratory then one of the appropriate discipline specific value sets may be more suitable for use than the entire reporting set available in the profile:
