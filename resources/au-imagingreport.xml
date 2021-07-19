@@ -89,6 +89,14 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
       </binding>
     </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
     <element id="DiagnosticReport.effective[x]">
       <path value="DiagnosticReport.effective[x]" />
       <short value="Time of imaging examination" />
