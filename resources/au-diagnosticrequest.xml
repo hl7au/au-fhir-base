@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines a service request structure that includes core localisation concepts for use as a diagnostic request in an Australian context." />
+  <description value="This profile defines a service request structure that includes core localisation concepts for use as a request for a diagnostic investigation in an Australian context. This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -90,8 +90,9 @@
     </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.code" />
+      <comment value="A pathology order is preferred to be a member of the [RCPA - SPIA Requesting Pathology Terminology Reference Set](https://www.rcpa.edu.au/fhir/ValueSet/spia-requesting-refset-3). An imaging order is preferred to be a member of the [Imaging Procedure](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1) value set."/>
       <binding>
-        <strength value="preferred" />
+        <strength value="example" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1" />
       </binding>
     </element>
@@ -114,6 +115,18 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
+      </type>
+    </element>
+    <element id="ServiceRequest.requester">
+      <path value="ServiceRequest.requester" />
+      <short value="Authorising individual, organisation or program (e.g. National Bowel Cancer Screening Program)" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
     </element>
   </differential>
