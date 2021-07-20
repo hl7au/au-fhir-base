@@ -54,16 +54,6 @@
       <path value="DiagnosticReport" />
       <short value="A pathology report in an Australian healthcare context" />
     </element>
-    <element id="DiagnosticReport.basedOn">
-      <path value="DiagnosticReport.basedOn" />
-      <short value="Pathology order" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
-      </type>
-    </element>
     <element id="DiagnosticReport.identifier">
       <path value="DiagnosticReport.identifier" />
       <short value="Business identifier for report" />
@@ -74,6 +64,16 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier"/>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-localreportidentifier"/>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber"/>
+      </type>
+    </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn" />
+      <short value="Pathology order" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
       </type>
     </element>
     <element id="DiagnosticReport.category">
