@@ -65,7 +65,7 @@
       <short value="A diagnostic result observation in an Australian healthcare context" />
       <definition value="Diagnostic measurements and simple assertions made about a patient, device or other subject." />
       <constraint>
-        <key value="inv-obs-1" />
+        <key value="inv-obs-0" />
         <severity value="error" />
         <human value="A diagnostic result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
         <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />

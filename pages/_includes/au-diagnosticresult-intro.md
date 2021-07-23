@@ -6,7 +6,7 @@ This profile may be used to represent a specialist or other diagnostic (not imag
 
 #### Extensions
 Extensions used in this profile:
-* Observation: bodySite (core extension) [<sup>[1]</sup>](https://www.hl7.org/fhir/r4/extension-bodysite.html)
+* Observation: [bodySite](https://www.hl7.org/fhir/r4/extension-bodysite.html) (core extension) 
 
 #### Boundaries and relationships
 Use the [AU Pathology Result](StructureDefinition-au-pathologyresult.html) profile to represent the result of a pathology test.

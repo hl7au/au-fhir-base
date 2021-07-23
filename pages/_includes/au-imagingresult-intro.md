@@ -1,13 +1,13 @@
 **AU Diagnostic Imaging Result**  *[[FMM Level 0](guidance.html)]*
 
-This profile defines an observation structure to represent a imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple examination or study series.
+This profile defines an observation structure to represent an imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple examination or study series.
 
 The observation may represent the result of a simple examination or it may group the set of results produced by a study series. In the latter cases, the observation carries the code of the study / panel and the overall comments in the note element, or a global interpretation by the producer of the study in the interpretation element. The observation references the individual observations that make up the study as ‘has-member’ child observations.
 
 #### Extensions
 
 Extensions used in this profile:
-* Observation: bodySite (core extension) [<sup>[1]</sup>](https://www.hl7.org/fhir/r4/extension-bodysite.html)
+* Observation: [bodySite](https://www.hl7.org/fhir/r4/extension-bodysite.html) (core extension) 
 
 
 #### Usage Notes

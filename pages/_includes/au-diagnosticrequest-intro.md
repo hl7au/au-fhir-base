@@ -4,13 +4,13 @@ This profile defines a service request structure that includes core localisation
 
 #### Identifiers
 
-These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the Organization.identifier element:
+These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/datatypes.html#Identifier), represent common data held in the ServiceRequest.identifier element:
 * [Local Order Identifier](StructureDefinition-au-localorderidentifier.html)[<sup>[1]</sup>](http://ns.electronichealth.net.au/id/hpio-scoped/order/1.0/index.html){:target="_blank"}[<sup>[2]</sup>](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.2ORC-2Placerordernumber(EI)00216){:target="_blank"}[<sup>[3]</sup>](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.3ORC-3Fillerordernumber(EI)00217){:target="_blank"}
 
 #### Extensions
 
 Extensions used in this profile:
-* ServiceRequest: procedure-targetBodyStructure (core extension) [<sup>[1]</sup>](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html)
+* ServiceRequest: [procedure-targetBodyStructure](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html) (core extension) 
 
 
 #### Usage Notes
