@@ -26,9 +26,9 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) *[[FMM Level 1](guidance.html)]* - body structure with local terminology 
 * [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) *[[FMM Level 0](guidance.html)]* - diagnostic report with local identifiers and terminology
 * [AU Base Specimen](StructureDefinition-au-specimen.html) *[[FMM Level 1](guidance.html)]* - specimen details with local terminology
-* [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) *[[FMM Level 0](guidance.html)]* - diagnostic imaging result with local terminology
 * [AU Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html) *[[FMM Level 0](guidance.html)]* - diagnostic imaging report with local identifiers and terminology
-* [AU Diagnostic Request](StructureDefinition-au-diagnosticrequest.html)*[[FMM Level 0](guidance.html)]*  - diagnostic request with local identifiers and terminology
+* [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) *[[FMM Level 0](guidance.html)]* - diagnostic imaging result with local terminology
+* [AU Diagnostic Request](StructureDefinition-au-diagnosticrequest.html) *[[FMM Level 0](guidance.html)]*  - diagnostic request with local identifiers and terminology
 * [AU Diagnostic Result](StructureDefinition-au-diagnosticresult.html) *[[FMM Level 0](guidance.html)]* - diagnostic result with local terminology
 * [AU Pathology Report](StructureDefinition-au-pathologyreport.html) *[[FMM Level 0](guidance.html)]* - pathology report with local identifiers and terminology
 * [AU Pathology Result](StructureDefinition-au-pathologyresult.html) *[[FMM Level 0](guidance.html)]* - pathology test result with local terminology
