@@ -27,3 +27,31 @@ If the pathology laboratory is a discipline specific laboratory then one of the 
 #### Examples
 
 [Measurement of Hepatitis B surface antibody](Observation-observation-specimen-hepatitus-b-serology.html)
+
+[Haemoglobin](Observation-observation-haemoglobin.html)
+
+[Red Cell Count](Observation-observation-redcellcount.html)
+
+[Haematocrit](Observation-observation-haematocrit.html)
+
+[Mean Cell Volume](Observation-observation-meancellvolume.html)
+
+[MCHC](Observation-observation-mchc.html)
+
+[Platelet Count](Observation-observation-plateletcount.html)
+
+[White Cell Count](Observation-observation-whitecellcount.html)
+
+[Neutrophils](Observation-observation-neutrophils.html)
+
+[Lymphocytes](Observation-observation-lymphocytes.html)
+
+[Monocytes](Observation-observation-monocytes.html)
+
+[Eosinophils](Observation-observation-eosinophils.html)
+
+[Basophils](Observation-observation-basophils.html)
+
+[ESR](Observation-observation-esr.html)
+
+

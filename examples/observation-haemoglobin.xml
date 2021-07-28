@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-haemoglobin"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/observation-path-atomic-1"/>
+  </meta>
+  <status value="preliminary"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="HM"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="718-7"/>
+      <display value="Hemoglobin [Mass/volume] in Blood"/>
+    </coding>
+    <text value="Haemoglobin"/>
+  </code>
+  <subject>
+    <display value="Medical Record Number: ABC1234321, name: Anne Brisbane, telecom: (03) 5550 6677, gender: Female, birthDate: 1975-04-01  "/>
+  </subject>
+  <effectiveDateTime value="2016-07-13T10:30:10+10:00"/>
+  <issued value="2016-07-13T11:45:33+10:00"/>
+  <performer>
+    <display value="Employee Number: XYZ7654321, practitioner: Joy Green, code: General pathologist, specialty: General pathology (specialty), location: Doomben Pathology Service,  telecom: joy.green@example.doombenpathologyservice.com.au  "/>
+  </performer>
+  <performer>
+    <display value="NATA Accreditation Number: 2000020, type: Pathology Service, name: Doomben Pathology Service, telecom: contact@example.doombenpathologyservice.com.au, address: 11 Equine street, Doomben Qld 4009 AU."/>
+  </performer>
+  <valueQuantity>
+    <value value="118"/>
+    <unit value="g/L"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="g/L"/>
+  </valueQuantity>
+  <referenceRange>
+    <low>
+      <value value="115"/>
+      <unit value="g/L"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="g/L"/>
+    </low>
+    <high>
+      <value value="165"/>
+      <unit value="g/L"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="g/L"/>
+    </high>
+  </referenceRange>
+</Observation>

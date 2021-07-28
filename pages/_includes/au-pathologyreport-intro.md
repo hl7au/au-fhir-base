@@ -45,4 +45,4 @@ If the pathology laboratory is a discipline specific laboratory then one of the 
 
 #### Examples
 
-There are no examples available for this profile.
+[Full blood count](DiagnosticReport-diagnosticreport-fbc.html)
