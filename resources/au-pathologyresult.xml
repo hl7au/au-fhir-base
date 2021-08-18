@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-pathologyresult" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
+  <version value="1.0.0" />
+  <name value="AUPathologyResult" />
+  <title value="AU Pathology Result" />
+  <status value="draft" />
+  <date value="2021-07-06" />
+  <publisher value="Health Level Seven Australia (Orders and Observations WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile defines an observation structure to represent a pathology test result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple test such as haemoglobin or it may group the set of results produced by a multi-test study or panel such as a full blood count, or urine specimen study." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="A pathology test result in an Australian healthcare context" />
+      <definition value="A pathology test result for a patient. This observation may be a simple test or a panel/study." />
+      <constraint>
+        <key value="inv-obs-0" />
+        <severity value="error" />
+        <human value="One category shall be 'laboratory' 'http://terminology.hl7.org/CodeSystem/observation-category'" />
+        <expression value="category.coding.where(system='http://terminology.hl7.org/CodeSystem/observation-category' and code='laboratory').exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-obs-1" />
+        <severity value="error" />
+        <human value="A pathology result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
+        <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
+      </constraint>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <short value="Pathology diagnostic service section" />
+      <min value="1" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1" />
+      </binding>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="Pathology test or test group" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
+      </binding>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Time of specimen collection" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-specimen" />
+      </type>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <short value="Individual tests in a group or panel" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
+      </type>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <short value="Individual tests in a group or panel" />
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <short value="Individual pathology test" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
