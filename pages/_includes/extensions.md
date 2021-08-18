@@ -16,6 +16,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Ethnicity](StructureDefinition-ethnicity.html) *[[FMM Level 0](guidance.html)]* - patient demographic cultural and ethnic identity  
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) *[[FMM Level 3](guidance.html)]* - identifier record status 
 * [IHI Status](StructureDefinition-ihi-status.html) *[[FMM Level 3](guidance.html)]* - identifier status 
+* [IHI Verified](StructureDefinition-ihi-verified.html) *[[FMM Level 0](guidance.html)]* - identifier verification date
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) *[[FMM Level 2](guidance.html)]* - address flag
 
 
