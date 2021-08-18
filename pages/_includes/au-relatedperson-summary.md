@@ -1,4 +1,4 @@
-This profile contains the following variations from [RelatedPerson](http://hl7.org/fhir/STU3/RelatedPerson):
+This profile contains the following variations from [RelatedPerson](http://hl7.org/fhir/R4/RelatedPerson):
 
 1. <span style='color:green'> identifier </span>  sliced
    * <span style='color:green'> identifier </span> National Individual Healthcare Identifier (IHI)

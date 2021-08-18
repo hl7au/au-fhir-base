@@ -1,4 +1,4 @@
-This profile contains the following variations from [Composition](http://hl7.org/fhir/STU3/Composition):
+This profile contains the following variations from [Composition](http://hl7.org/fhir/R4/Composition):
 
 1. <span style='color:green'> identifier </span> 
 1. <span style='color:green'> subject </span>  (Reference as: Patient)

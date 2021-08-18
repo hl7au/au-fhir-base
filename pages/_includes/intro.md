@@ -9,7 +9,7 @@ to enable feedback to improve the content of this guide.
 
 ## Scope
 
-This document presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR STU3 specification. 
+This document presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification. 
 * [Profiles](profiles.html) - are useful constraints of core FHIR resources and datatype for Australian use
 * [Extensions](extensions.html) - are FHIR extensions that are added for local use, covering needed Australian concepts
 * [Terminologies](terminology.html) - are defined or referenced code systems and value sets for Australia context

@@ -1,4 +1,4 @@
-This profile contains the following variations from [MedicationDispense](http://hl7.org/fhir/STU3/MedicationDispense):
+This profile contains the following variations from [MedicationDispense](http://hl7.org/fhir/R4/MedicationDispense):
 
 1. <span style='color:green'> extension </span>  sliced
    * Grounds for Concurrent Supply of Medication extension

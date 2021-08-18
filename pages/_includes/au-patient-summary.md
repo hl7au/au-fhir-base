@@ -1,4 +1,4 @@
-This profile contains the following variations from [Patient](http://hl7.org/fhir/STU3/Patient):
+This profile contains the following variations from [Patient](http://hl7.org/fhir/R4/Patient):
 
 1. <span style='color:green'> extension </span>  sliced
    * Patient Birth Place extension

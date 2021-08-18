@@ -1,4 +1,4 @@
-This profile contains the following variations from [Encounter](http://hl7.org/fhir/STU3/Encounter):
+This profile contains the following variations from [Encounter](http://hl7.org/fhir/R4/Encounter):
 
 1. <span style='color:green'> extension </span>  sliced
    * Encounter description extension

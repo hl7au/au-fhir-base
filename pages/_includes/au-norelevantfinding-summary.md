@@ -1,4 +1,4 @@
-This profile contains the following variations from [Observation](http://hl7.org/fhir/STU3/Observation):
+This profile contains the following variations from [Observation](http://hl7.org/fhir/R4/Observation):
 
 1. <span style='color:green'> code </span> 
 1. <span style='color:green'> subject </span>  (Reference as: Patient \| Group)

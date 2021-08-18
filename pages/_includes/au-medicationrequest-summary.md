@@ -1,4 +1,4 @@
-This profile contains the following variations from [MedicationRequest](http://hl7.org/fhir/STU3/MedicationRequest):
+This profile contains the following variations from [MedicationRequest](http://hl7.org/fhir/R4/MedicationRequest):
 
 1. <span style='color:green'> extension </span>  sliced
    * Grounds for Concurrent Supply of Medication extension

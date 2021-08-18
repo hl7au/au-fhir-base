@@ -1,4 +1,4 @@
-This profile contains the following variations from [MedicationStatement](http://hl7.org/fhir/STU3/MedicationStatement):
+This profile contains the following variations from [MedicationStatement](http://hl7.org/fhir/R4/MedicationStatement):
 
 1. <span style='color:green'> extension </span>  sliced
    * Medication Long Term Indicator extension

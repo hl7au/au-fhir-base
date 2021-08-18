@@ -1,4 +1,4 @@
-This profile contains the following variations from [MedicationAdministration](http://hl7.org/fhir/STU3/MedicationAdministration):
+This profile contains the following variations from [MedicationAdministration](http://hl7.org/fhir/R4/MedicationAdministration):
 
 1. zero or more <span style='color:green'> extension </span>  sliced
    * zero or more Medication administration witness extension

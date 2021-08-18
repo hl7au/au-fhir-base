@@ -1,4 +1,4 @@
-This profile contains the following variations from [ImmunizationRecommendation](http://hl7.org/fhir/STU3/ImmunizationRecommendation):
+This profile contains the following variations from [ImmunizationRecommendation](http://hl7.org/fhir/R4/ImmunizationRecommendation):
 
 1. <span style='color:green'> patient </span>  (Reference as: au-patient)
 1. <span style='color:green'> recommendation </span> 

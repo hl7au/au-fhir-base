@@ -1,4 +1,4 @@
-This profile contains the following variations from [AllergyIntolerance](http://hl7.org/fhir/STU3/AllergyIntolerance):
+This profile contains the following variations from [AllergyIntolerance](http://hl7.org/fhir/R4/AllergyIntolerance):
 
 1. <span style='color:green'> code </span> 
    * <span style='color:green'> coding </span> Allergy or Intolerance to Substance (SNOMED CT)

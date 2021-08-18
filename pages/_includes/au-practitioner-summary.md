@@ -1,4 +1,4 @@
-This profile contains the following variations from [Practitioner](http://hl7.org/fhir/STU3/Practitioner):
+This profile contains the following variations from [Practitioner](http://hl7.org/fhir/R4/Practitioner):
 
 1. <span style='color:green'> identifier </span>  sliced
    * <span style='color:green'> identifier </span> Healthcare Provider Identifier – Individual (HPI-I)

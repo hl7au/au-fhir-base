@@ -1,4 +1,4 @@
-This profile contains the following variations from [Composition](http://hl7.org/fhir/STU3/Composition):
+This profile contains the following variations from [Composition](http://hl7.org/fhir/R4/Composition):
 
 1. <span style='color:green'> extension </span>  sliced
    * Practitioner role that authored the composition extension
