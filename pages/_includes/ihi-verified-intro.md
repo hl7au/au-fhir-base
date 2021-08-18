@@ -1,4 +1,4 @@
-**Extension: IHI Verified** *[[FMM Level 0](guidance.html)]*
+**Extension: IHI Verified** *[[FMM Level 1](guidance.html)]*
 
 This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) and is used to represent the date/time that the Individual Healthcare Identifier (IHI) was verified with HI Services.
 
