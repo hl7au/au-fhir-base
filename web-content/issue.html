@@ -1,0 +1,162 @@
+<html>
+<head>
+  <title>Issue Entry</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    var sv = 1;
+    function send(event) {
+	var v = $('form').serialize();
+    //alert(v);
+	$("#failedmsg").hide();
+	$("#okmsg").hide();
+	
+	var p = {
+    "fields": {
+		"project":
+		   {
+			  "key": "FHIRIG"
+		   },
+		   "summary": $("#summary").val(),
+		   "description":  $("#description").val() + "\r\nReporter:" +  $("#fullname").val() + "\r\nEmail:" +  $("#email").val(),
+		   "issuetype": {
+			  "name": "Task"
+		   },
+		   "customfield_10200" : { "id" : $("#customfield_10200").val() },
+		   "priority" : { "id" : $("#priority").val() }
+		}
+	};
+	
+	
+		$.ajax({
+  url:  "https://hl7aujira.azurewebsites.net/api/issue",
+  type: "POST",
+  headers: { "Content-Type" : "application/json" },
+  data: JSON.stringify(p),
+
+  complete: function() {
+    //called when complete
+  },
+
+  success: function(data) {
+    //alert(JSON.stringify(data));
+	
+	var r = JSON.stringify(data);
+	if(r != "{}")
+	{
+	$("#sv").text( data.key );
+	sv++;
+		
+		$("#okmsg").show();
+	}
+	else
+	{
+		$("#failedmsg").show();
+	}
+ },
+
+  error: function() {
+    //called when there is an error
+  },
+});
+    return true;
+  }
+  
+  $(document).ready(function() { 
+	var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v})
+    $("#description").val(params.src);
+	});
+  
+  </script>
+</head>
+<body style="background-color: whitesmoke;"></body>
+
+<form id="issue" >
+ <div class="container" >
+  <div class="panel-group">
+
+            <div class="panel panel-primary"  style="width:800px">
+                <div class="panel-heading">
+    <span class="font-weight-bold">Please detail issues here - specific URL or section references and suggestions are appreciated.</span>
+</div>
+                    <fieldset class="hidden parameters">
+                        <input type="hidden" title="projectKey" value="FHIRIG">
+                        <input type="hidden" title="issueType" value="10002">
+                        <input type="hidden" title="customTemplate" value="true">
+                        <input type="hidden" title="customTemplate" value="true">
+                        <input type="hidden" title="customLabels" value="">
+						<input type="hidden" title="collectorId" value="99e77d19">
+
+ 
+                    </fieldset>
+                    <input type="hidden" name="atl_token" value="BMQH-9HAZ-G7UY-DBZ9|e0a232d0db3a33f40a4d8ec92dbdbefc78408590|lout">
+                    <input type="hidden" name="pid" value="10100">
+                                <div class="custom-fields-container">
+
+						<div class="field-group mb-5">
+						<label for="summary" style="vertical-align:top;margin-left:5px;width:150">Summary<sup>*</sup></label> <input class="text long-field" id="summary" name="summary" type="text" style="margin-top:5px;margin-bottom:5px" size="65" value="">
+						</div>
+						<div class="field-group mb-5">
+						<label for="description" style="vertical-align:top; width:150; margin-left:5px">Description</label>
+                        <textarea class="textarea long-field wiki-textfield long-field mb-5" id="description" name="description" id="description" rows="12" cols="70" style="margin-bottom:5px"  wrap="virtual"></textarea></div>
+						</div>
+						<div class="field-group">
+                        <label for="priority" style="vertical-align:top; width:150; margin-left:5px">Priority</label>
+						<select  id="priority" name="priority" >
+                            <option  value="1">Highest</option>
+                            <option value="2">High</option>
+                            <option  value="3">Medium</option>
+                            <option value="4">Low</option>
+                            <option value="5">Lowest </option>
+						</select>
+
+                                    </div>
+						<div class="field-group">
+                        <label for="customfield_10200" style="vertical-align:top; width:150; margin-left:5px">HL7 AU Ballot Vote</label>
+						<select  name="customfield_10200" id="customfield_10200">
+                            <option value="10200">Affirmative</option>
+                            <option value="10201">Affirmative + Suggestion</option>
+                            <option value="10202">Affirmative + Typo</option>
+                            <option value="10203">Affirmative + Query</option>
+                            <option value="10204">Affirmative + Note</option>
+                            <option value="10205">Negative</option>
+						</select>
+                                  
+                </div></div>
+
+                <fieldset class="hidden parameters">
+					<div id="attach-max-size" class="hidden">10485760</div>
+                    <input type="file" class="hidden" name="_tricky_" multiple="multiple">
+                </fieldset>
+                
+<div id="name-group" class="contact-form-fields field-group mb-5">
+    <label for="fullname">Name</label>
+    <input type="text" name="fullname" class="text"  style="margin-top:5px" size="45"  id="fullname">
+</div>
+
+<div id="email-group" class="contact-form-fields field-group mb-5">
+    <label for="email">Email</label>
+    <input type="text" name="email" class="text" size="45"  id="email">
+</div>
+
+                <input type="hidden" name="webInfo" id="webInfo" value="*Location*: https://oridashi.com.au/test.html
+*User-Agent*: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+*Screen Resolution*: 1920 x 1200
+">
+           </div>
+		           <div class="dialog-button-panel">
+            <input type="button" onclick="send(this)" class="btn btn-primary" value="Submit">
+        </div>
+		<div id="failedmsg" class="alert alert-danger" role="alert" hidden >Error occured</div>
+		</div>
+		<div id="okmsg" class="alert alert-success font-weight-bold" role="alert" hidden>Issue Submitted [<span id="sv"></span>]</div>
+		</div>
+        </div>
+
+    </form>
+ 
+</body>
+</html>

@@ -28,24 +28,7 @@
   <div class="container">  <!-- container -->
   </div>  <!-- /container -->
  </div>  <!-- /segment-post-footer -->
- <script type="text/javascript" src="assets/js/hl7-jira.js"></script>
- <script type="text/javascript">
-	window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
-
-	// ==== custom trigger function ====
-	triggerFunction : function( showCollectorDialog ) {
-		$('#feedback-button').on( 'click', function(e) {
-			e.preventDefault();
-			showCollectorDialog();
-		}); 
-	},
-	// ==== we add the code below to set the field values ====
-	fieldValues: {
-		description: 'url: ' + window.location.href + '\r\n',
-		'customfield_10200' :  [ '10205' ]
-	}	
-});
- </script>
+ <div id="hl7auissues"><a href="#" style="position:fixed;bottom:0;right:0;background-color:whitesmoke;text-decoration:none;" onclick="window.open('http://hl7.org.au/fhir/assets/issue.html?src=' + window.location.href ,'_blank')">Issues & Feedback</div>
 
   <!-- Bootstrap core JavaScript
 ================================================== -->

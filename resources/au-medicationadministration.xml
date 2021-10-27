@@ -164,5 +164,26 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
       </type>
     </element>
+    <element id="MedicationAdministration.dosage.site">
+      <path value="MedicationAdministration.dosage.site"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"/>
+      </binding>
+    </element>
+    <element id="MedicationAdministration.dosage.route">
+      <path value="MedicationAdministration.dosage.route"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1"
+        />
+      </binding>
+    </element>
+    <element id="MedicationAdministration.dosage.method">
+      <path value="MedicationAdministration.dosage.method"/>
+      <binding>
+        <strength value="preferred"/>
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
