@@ -9,6 +9,6 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Residential Aged Care Service 1](HealthcareService-example4.html)
+[Leafy Grove Home for the Aged](HealthcareService-example4.html)
 
-[Residential Aged Care Service 2](HealthcareService-example5.html)
+[Leafy Grove Home for the Not Very Aged](HealthcareService-example5.html)
