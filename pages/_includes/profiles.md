@@ -87,7 +87,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Pensioner Concession Card number
 * [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a pharmacy approval number
 * [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a private health insurance member number
-* [AU Residential Aged Care Service Identifier](StructureDefinition-au-racsid.html) *[[FMM Level 0](guidance.html)]* - identifier profile for a Residential Aged Care Service (RACS)
+* [AU Residential Aged Care Service Identifier](StructureDefinition-au-racsid.html) *[[FMM Level 0](guidance.html)]* - identifier profile for a Residential Aged Care Service (RACS) identifier
 
 ### Profiles on Other Data Types
 * [AU Base Dosage](StructureDefinition-au-dosage.html) *[[FMM Level 2](guidance.html)]* -  dosage information with common local coding
