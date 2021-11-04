@@ -10,7 +10,7 @@ No extensions are used in this profile.
 
 #### Usage Notes
 
-RACS Ids are properly used to identify a healthcare service, sometimes they are used to identify the organisation which provides residential care or the location at which care is provided.
+RACS Ids are properly used to identify a healthcare service, not an organisation or a location.
 
 #### Examples
 

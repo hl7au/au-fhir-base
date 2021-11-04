@@ -47,3 +47,7 @@ As part of defining a remotely delivered service, Location should have:
 [Location for mobile services that can be delivered in schools](Location-example6.html)
 
 [Location for mobile services that can be delivered in residential care facilities](Location-example7.html)
+
+[Leafy Grove Home for the Aged](Location-example8.html)
+
+[Honourable Mark's Home For Aged Men](Location-example9.html)

@@ -45,3 +45,6 @@ NOTE: AU Base on STU3 included two extensions Healthcare Service Eligibility Det
 
 [Strahan General Practitioner Services](HealthcareService-example3.html)
 
+[Leafy Grove Home for the Aged](HealthcareService-example4.html)
+
+[Honourable Mark's Home For Aged Men](HealthcareService-example5.html)
