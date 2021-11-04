@@ -1,6 +1,6 @@
 **AU AHPRA Registration Number**  *[[FMM Level 1](guidance.html)]*
 
-This identifier profile defines an Australian Health Practitioner Regulation Agency (AHPRA) Registration Number [<sup>[1]</sup>](https://www.ahpra.gov.au){:target="_blank"} [<sup>[2]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"} in an Australian context.
+This identifier profile defines an Australian Health Practitioner Regulation Agency (AHPRA) registration number [<sup>[1]</sup>](https://www.ahpra.gov.au){:target="_blank"} [<sup>[2]</sup>](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number){:target="_blank"} in an Australian context.
 
 
 #### Extensions
@@ -10,7 +10,7 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Practitioner with HPI-I, Prescriber Number and AHPRA Registration Number](Practitioner-example0.html)
+[Practitioner with HPI-I, Prescriber Number and AHPRA registration number](Practitioner-example0.html)
 
 [Qualified Radiologist](Practitioner-example1.html)
 
