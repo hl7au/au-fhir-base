@@ -14,5 +14,5 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Patient with IHI and DVA Number](Patient-example1.html)
+[Patient with IHI and DVA number](Patient-example1.html)
 

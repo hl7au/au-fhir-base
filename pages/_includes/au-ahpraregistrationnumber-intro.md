@@ -10,10 +10,10 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Practitioner with HPI-I, Prescriber Number and AHPRA registration number](Practitioner-example0.html)
+[Practitioner with HPI-I, prescriber number, AHPRA registration number, and CAE identifier](Practitioner-example0.html)
 
-[Qualified Radiologist](Practitioner-example1.html)
+[Qualified radiologist](Practitioner-example1.html)
 
-[Qualified Pathologist](Practitioner-example2.html)
+[Qualified pathologist](Practitioner-example2.html)
 
-[AHPRA qualified General Practitioner](Practitioner-example3.html)
+[AHPRA qualified general practitioner](Practitioner-example3.html)

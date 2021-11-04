@@ -10,4 +10,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Practitioner with HPI-I, prescriber number, AHPRA registration number, and CAE Identifier](Practitioner-example0.html)
+[Practitioner with HPI-I, prescriber number, AHPRA registration number, and CAE identifier](Practitioner-example0.html)
