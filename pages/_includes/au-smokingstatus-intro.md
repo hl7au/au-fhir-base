@@ -1,4 +1,4 @@
-**AU Base Smoking Status Profile** *[[FMM Level 0](guidance.html)]*
+**AU Base Smoking Status** *[[FMM Level 0](guidance.html)]*
 
 This profile is provided as a common representation of smoking status. It is compatible for use with the International Patient Summmry implementation guide
 
