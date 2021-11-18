@@ -19,4 +19,4 @@ See the Australian Digital Health Agency's [R4 FAQ](https://github.com/AuDigital
 
 #### Examples
 
-No examples are available for this profile.
+[Dispense for Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets](MedicationDispense-medicationdispense-example0.html)

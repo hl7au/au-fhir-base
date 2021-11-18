@@ -6,4 +6,5 @@ This extension applies to the MedicationDispense resource and is used to represe
 The value of this extension is 1 when there are no repeats. The value increments by one each time a dispense act is successfully completed.
 
 #### Examples
-No examples are available for this extension.
+
+[Dispense for Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets](MedicationDispense-medicationdispense-example0.html)

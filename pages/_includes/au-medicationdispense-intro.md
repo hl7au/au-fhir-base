@@ -38,5 +38,5 @@ Where a system cannot include a coded value (only MedicationDispense.medicationC
 
 
 #### Examples
-No examples are available for this profile.
 
+[Dispense for Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets](MedicationDispense-medicationdispense-example0.html)
