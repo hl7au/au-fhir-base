@@ -39,4 +39,4 @@ Where a system cannot include a coded value (only MedicationDispense.medicationC
 
 #### Examples
 
-[Dispense for Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets](MedicationDispense-medicationdispense-example0.html)
+[Dispense for Reaptan](MedicationDispense-medicationdispense-example0.html)
