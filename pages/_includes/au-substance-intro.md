@@ -1,6 +1,6 @@
 **AU Base Substance** *[[FMM Level 0](guidance.html)]*
 
-This profile defines a substance structure including core localisation concepts for use in an Australian context.
+This profile defines a substance structure that localises core concepts, including terminology, for use in an Australian context.
 
 The purpose of this profile is to provide national level agreement on core localised concepts. 
 
@@ -11,8 +11,8 @@ This profile does not force conformance to core localised concepts. It enables i
 No extensions are available for this profile.
 
 #### Examples
-[Body Substance: Eppiglottic mucus](Substance-example0.html)
+[Body Substance: eppiglottic mucus](Substance-example0.html)
 
-[Allergen: Peanuts](Substance-example1.html)
+[Allergen: peanuts](Substance-example1.html)
 
-[Two active ingredients substance: Atectura Breezhaler 125/62.5](Substance-example2.html)
+[Substance with two active ingredients: Atectura Breezhaler 125/62.5](Substance-example2.html)
