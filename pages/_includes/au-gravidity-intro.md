@@ -1,6 +1,6 @@
 **AU Gravidity Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of gravidity count related to pregnancies.
+This profile defines an observation structure that represents the gravidity count related to pregnancy, for use in an Australian context.
 
 #### Usage Notes
 * Used to record gravidity count at a point in time.
