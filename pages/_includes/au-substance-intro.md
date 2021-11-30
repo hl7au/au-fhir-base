@@ -11,7 +11,7 @@ This profile does not force conformance to core localised concepts. It enables i
 No extensions are available for this profile.
 
 #### Examples
-[Body Substance: eppiglottic mucus](Substance-example0.html)
+[Body substance: epiglottic mucus](Substance-example0.html)
 
 [Allergen: peanuts](Substance-example1.html)
 
