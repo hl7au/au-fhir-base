@@ -8,7 +8,7 @@ This profile does not force conformance to core localised concepts. It enables i
 
 
 #### Extensions
-No extensions are available for this profile.
+No extensions are used in this profile.
 
 #### Examples
 [Body substance: epiglottic mucus](Substance-example0.html)
