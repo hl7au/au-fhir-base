@@ -20,3 +20,5 @@ See the Australian Digital Health Agency's [R4 FAQ](https://github.com/AuDigital
 #### Examples
 
 [First dispense for Reaptan](MedicationDispense-medicationdispense-example0.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
+
+[Second dispense for Reaptan](MedicationDispense-medicationdispense-example1.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
