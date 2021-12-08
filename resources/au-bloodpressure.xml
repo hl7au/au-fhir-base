@@ -5,7 +5,7 @@
   <version value="0.1.0" />
   <name value="AUBaseBloodPressure" />
   <title value="AU Base Blood Pressure" />
-  <status value="active" />
+  <status value="draft" />
   <description value="Blood pressure observation with extended coding" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -51,6 +51,7 @@
     <element id="Observation.code.coding:BPSNOMED">
       <path value="Observation.code.coding" />
       <sliceName value="BPSNOMED" />
+      <min value="1" />
       <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
@@ -74,6 +75,7 @@
     </element>
     <element id="Observation.component:SystolicBP.code.coding:SBPSNOMED">
       <path value="Observation.component.code.coding" />
+      <min value="1" />
       <sliceName value="SBPSNOMED" />
       <max value="1" />
     </element>
@@ -94,6 +96,7 @@
     <element id="Observation.component:DiastolicBP.code.coding:DBPSNOMED">
       <path value="Observation.component.code.coding" />
       <sliceName value="DBPSNOMED" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Observation.component:DiastolicBP.code.coding:DBPSNOMED.system">
