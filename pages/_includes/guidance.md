@@ -5,7 +5,7 @@ This implementation guide does not attempt to constrain for specific use cases.
 Instead it defines representations of how commonly needed concepts, in an Australian context, can be applied generally.
 This implementation guide can then be drawn on for specific use cases and further constraints added for the needs of those cases.
 By referencing the AU Base definition in downstream implementation guides there is a basic level of alignment in representations across those guides.  
-This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration treanslation tasks.
+This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration translation tasks.
 This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information in an out of multiple domains of interest is addressed.
 This approach manifests as the following representation outcomes in this guide, as follows:
 * Cardinality:  most representations described have a cardinality as defined in the core FHIR specification (which is general in nature), this is to avoid required content for use cases that do not need or support the content.
