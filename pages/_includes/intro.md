@@ -22,7 +22,7 @@ FHIR profiles are managed under HL7 Australia working groups and projects:
 * [HL7 Australia Child Health Working Group](https://confluence.hl7australia.com/display/CHWG/Child+Health+Working+Group)
 * [HL7 Argonaut Australia Project](https://confluence.hl7australia.com/display/AFR/HL7+Australia+Standards+Development)
 
-Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liasion Officer](mailto:wglo@hl7.org.au)
+Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liaison Officer](mailto:wglo@hl7.org.au)
 
 ## Usage
 
