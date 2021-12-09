@@ -4,7 +4,7 @@ This profile is provided as a common representation of head circumference with e
 
 #### Usage Notes
 * Requires appropriate SNOMED coding
-* Compatible with core [Blood Pressure](http://hl7.org/fhir/StructureDefinition/headcircum) vital signs profile.
+* Compatible with core [Head Circumference](http://hl7.org/fhir/StructureDefinition/headcircum) vital signs profile.
 
 **Examples**
 

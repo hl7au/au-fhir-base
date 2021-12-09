@@ -3,8 +3,8 @@
 This profile is provided as a common representation of heart rate with extended coding option for SNOMED-CT usage
 
 #### Usage Notes
-* Core vital signs compatible
-* Includes appropriate SNOMED coding
+* Requires appropriate SNOMED coding
+* Compatible with core [Heart Rate](http://hl7.org/fhir/StructureDefinition/headcircum) vital signs profile.
 
 **Examples**
 

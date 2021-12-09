@@ -4,7 +4,7 @@ This profile is provided as a common representation of oxygen saturation with ex
 
 #### Usage Notes
 * Requires appropriate SNOMED coding
-* Compatible with core [Blood Pressure](http://hl7.org/fhir/StructureDefinition/oxygensat) vital signs profile.
+* Compatible with core [Oxygen Saturation](http://hl7.org/fhir/StructureDefinition/oxygensat) vital signs profile.
 
 **Examples**
 

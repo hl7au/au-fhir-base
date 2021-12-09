@@ -4,7 +4,7 @@ This profile is provided as a common representation of body mass index with exte
 
 #### Usage Notes
 * Requires appropriate SNOMED coding
-* Compatible with core [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bmi) vital signs profile.
+* Compatible with core [Body Mass Index](http://hl7.org/fhir/StructureDefinition/bmi) vital signs profile.
 
 **Examples**
 
