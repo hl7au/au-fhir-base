@@ -3,10 +3,10 @@
   <id value="au-bloodpressure" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-bloodpressure" />
   <version value="0.1.0" />
-  <name value="AUBaseBloodPressure" />
-  <title value="AU Base Blood Pressure" />
+  <name value="AUBloodPressure" />
+  <title value="AU Blood Pressure" />
   <status value="draft" />
-  <description value="Blood pressure observation with extended coding" />
+  <description value="Blood pressure observation with extended observation type coding" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />
@@ -75,8 +75,8 @@
     </element>
     <element id="Observation.component:SystolicBP.code.coding:SBPSNOMED">
       <path value="Observation.component.code.coding" />
-      <min value="1" />
       <sliceName value="SBPSNOMED" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Observation.component:SystolicBP.code.coding:SBPSNOMED.system">
