@@ -45,6 +45,10 @@ These Profiles have been defined for this implementation guide.
 * [AU Body Height](StructureDefinition-au-bodyheight.html) *[[FMM Level 0](guidance.html)]* -  body height observation
 * [AU Body Mass Index](StructureDefinition-au-bmi.html) *[[FMM Level 0](guidance.html)]* -  body mass index observation
 * [AU Oxygen Saturation](StructureDefinition-au-oxygensat.html) *[[FMM Level 0](guidance.html)]* -  oxygen saturation observation
+* [AU Head Circumference](StructureDefinition-au-headcircum.html) *[[FMM Level 0](guidance.html)]* - head circumference observation
+* [AU Heart Rate](StructureDefinition-au-heartrate.html) *[[FMM Level 0](guidance.html)]* -  heart rate observation
+* [AU Body Temperature](StructureDefinition-au-bodytemp.html) *[[FMM Level 0](guidance.html)]* -  body temperature observation
+* [AU Respiration Rate](StructureDefinition-au-resprate.html) *[[FMM Level 0](guidance.html)]* -  respiration rate observation
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[FMM Level 0](guidance.html)]* - smoking status lifestyle factor record
