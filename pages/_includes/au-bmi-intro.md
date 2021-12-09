@@ -1,6 +1,6 @@
-**AU Body Weight Profile** *[[FMM Level 0](guidance.html)]*
+**AU Body Mass Index Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of body weight with extended coding option for SNOMED-CT usage
+This profile is provided as a common representation of body mass index with extended coding option for SNOMED-CT usage
 
 #### Usage Notes
 * Core vital signs compatible
