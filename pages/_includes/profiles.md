@@ -39,7 +39,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Condition](StructureDefinition-au-condition.html) *[[FMM Level 1](guidance.html)]* - condition with local terminology
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) *[[FMM Level 1](guidance.html)]* - sex assigned at birth observation
 
-## Vital Signs
+## Vital Signs Profiles
 * [AU Blood Pressure](StructureDefinition-au-bloodpressure.html) *[[FMM Level 0](guidance.html)]* -  blood pressure observation
 * [AU Body Weight](StructureDefinition-au-bodyweight.html) *[[FMM Level 0](guidance.html)]* -  body weight observation
 * [AU Body Height](StructureDefinition-au-bodyheight.html) *[[FMM Level 0](guidance.html)]* -  body height observation

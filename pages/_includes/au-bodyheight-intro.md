@@ -5,7 +5,8 @@ This profile is provided as a common representation of body height with extended
 #### Usage Notes
 * Requires appropriate SNOMED coding
 * Compatible with core [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bodyheight) vital signs profile.
+* Coded measurement units are restricted to metric only
 
 **Examples**
 
-TODO
+[Blood Pressure Observation](Observation-bodyheight-example0.html)
