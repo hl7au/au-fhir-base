@@ -29,7 +29,7 @@ Some profiles indicate the responsible working group, or enquires can be directe
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
 Information contained in this document is aimed at providing guidance on representing Australian local concepts 
-using FHIR. This includes code systems, extensions and profiles on base FHIR types.  The content of the IG is 
+using FHIR. This includes code systems, extensions and profiles on base FHIR types.  The content of the implementation guide is 
 general in nature and seeks to provide a ‘how-to’ guide when representing concepts, it includes core base
 profiles that can be further constrained for a particular usage.
 
