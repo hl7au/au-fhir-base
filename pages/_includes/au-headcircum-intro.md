@@ -1,6 +1,11 @@
-**AU Head Circumference** *[[FMM Level 2](guidance.html)]*
+**AU Head Circumference Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile defines a head circumference information structure for use in an Australian context that tightens the HeadCircumCode slice, aligning to the proposed [R4 Observation Head Circumference](http://build.fhir.org/headcircum.html) profile.
+This profile is provided as a common representation of head circumference with extended coding option for SNOMED-CT usage
 
+#### Usage Notes
+* Requires appropriate SNOMED coding
+* Compatible with core [Head Circumference](http://hl7.org/fhir/StructureDefinition/headcircum) vital signs profile.
 
-Note: Known issues with vital signs and observation constraints should be considered when using this profile FHIR R4 has corrections that may be useful<sup>[1](http://hl7.org/fhir/R4/observation.html#invs)</sup><sup>[2](http://hl7.org/fhir/R4/vitalsigns.html#10.1.20.2.3)</sup>
+**Examples**
+
+TODO
