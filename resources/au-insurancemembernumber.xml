@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-privatehealthinsurancemembernumber" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-privatehealthinsurancemembernumber" />
+  <id value="au-insurancemembernumber" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber" />
   <version value="2.1.0" />
-  <name value="AUPrivateHealthInsuranceMemberNumber" />
-  <title value="AU Private Health Insurance Member Number" />
+  <name value="AUInsuranceMemberNumber" />
+  <title value="AU Insurance Member Number" />
   <status value="draft" />
   <date value="2021-12-08" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines a Private Health Insurance Member Number in an Australian context." />
+  <description value="This identifier profile defines an Insurance Member Number in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -47,8 +47,8 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Private Health Insurance Member Number" />
-      <definition value="A private health insurance member number assigned to a patient." />
+      <short value="Insurance Member Number" />
+      <definition value="A insurance member number assigned to a patient." />
     </element>
     <element id="Identifier.type">
       <path value="Identifier.type" />
@@ -62,22 +62,22 @@
     </element>
     <element id="Identifier.system">
       <path value="Identifier.system"/>
-      <short value="System identifier namespace for the private health insurer that assigned the private health insurance member number"/>
+      <short value="System identifier namespace for the insurer that assigned the insurance member number"/>
       <min value="1"/>
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Private health insurance member number" />
+      <short value="Insurance member number" />
       <min value="1" />
     </element>
     <element id="Identifier.assigner">
       <path value="Identifier.assigner" />
-      <short value="Private health insurer" />
+      <short value="Insurer" />
       <min value="1" />
     </element>
     <element id="Identifier.assigner.display">
       <path value="Identifier.assigner.display" />
-      <short value="Name of private health insurer" />
+      <short value="Name of insurer" />
       <min value="1" />
     </element>
   </differential>
