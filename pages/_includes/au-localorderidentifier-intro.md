@@ -19,4 +19,4 @@ See the Australian Digital Health Agency's [R4 FAQ](https://github.com/AuDigital
 
 #### Examples
 
-No examples are available for this profile.
+[Hepatitis B surface antibody measurement order](ServiceRequest-servicerequest-hepatitis-b-antibody.html)
