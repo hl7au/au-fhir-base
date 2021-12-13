@@ -37,6 +37,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) *[[FMM Level 1](guidance.html)]* - observation with assertion of no relevant finding
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) *[[FMM Level 1](guidance.html)]* - allergy intolerance with local terminology 
 * [AU Base Condition](StructureDefinition-au-condition.html) *[[FMM Level 1](guidance.html)]* - condition with local terminology
+* [AU Base Procedure](StructureDefinition-au-procedure.html) *[[FMM Level 0](guidance.html)]* - procedure with local terminology
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) *[[FMM Level 1](guidance.html)]* - sex assigned at birth observation
 * [AU Base Substance](StructureDefinition-au-substance.html) *[[FMM Level 0](guidance.html)]* - substance with local terminology
 
