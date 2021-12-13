@@ -19,7 +19,7 @@ Multiple IHIs are supported particularly to support the recording of IHI values 
 
 [Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 
-[Patient with IHI and DVA Number](Patient-example1.html)
+[Patient with IHI and DVA number](Patient-example1.html)
 
 [Benedicte du Marche as a next of kin](RelatedPerson-example0.html)
 

@@ -42,9 +42,9 @@ Gender is supported as administrative gender for identifying patient records and
 
 #### Examples
 
-[Patient with IHI, medicare card, and Health Care Card](Patient-example0.html)
+[Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 
-[Patient with IHI and DVA Number](Patient-example1.html)
+[Patient with IHI and DVA number](Patient-example1.html)
 
 [Patient with no birth date, and eligible for Closing the Gap registration](Patient-example2.html)
 
