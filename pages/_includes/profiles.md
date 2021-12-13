@@ -38,6 +38,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) *[[FMM Level 1](guidance.html)]* - allergy intolerance with local terminology 
 * [AU Base Condition](StructureDefinition-au-condition.html) *[[FMM Level 1](guidance.html)]* - condition with local terminology
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) *[[FMM Level 1](guidance.html)]* - sex assigned at birth observation
+* [AU Base Substance](StructureDefinition-au-substance.html) *[[FMM Level 0](guidance.html)]* - substance with local terminology
 
 ## Vital Signs Profiles
 * [AU Blood Pressure](StructureDefinition-au-bloodpressure.html) *[[FMM Level 0](guidance.html)]* -  blood pressure observation
