@@ -1,6 +1,6 @@
 **AU Medical Record Number**  *[[FMM Level 1](guidance.html)]*
 
-This identifier profile defines a Medical Record Number (MRN) (sometimes referred to as Unit Record Number (URN) or (UR)) in an Australian context. An MRN is an institution's identifier for a patient's record at that institution. A patient may have more than one MRN for a single institution due to organisational restructures. 
+This identifier profile defines a medical record number (MRN) (sometimes referred to as unit record number (URN) or (UR)) in an Australian context. An MRN is an institution's identifier for a patient's record at that institution. A patient may have more than one MRN for a single institution due to organisational restructures. 
 
 
 #### Extensions
