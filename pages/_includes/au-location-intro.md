@@ -47,3 +47,7 @@ As part of defining a remotely delivered service, Location should have:
 [Location for mobile services that can be delivered in schools](Location-example6.html)
 
 [Location for mobile services that can be delivered in residential care facilities](Location-example7.html)
+
+[Leafy Grove, 700 Church Road, Zillmere](Location-example8.html)
+
+[713 Church Road, Zillmere](Location-example9.html)
