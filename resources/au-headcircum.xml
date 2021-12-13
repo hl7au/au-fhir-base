@@ -12,6 +12,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/headcircum" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <fixedCode value="final" />
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <min value="2" />
@@ -41,6 +45,14 @@
       <binding>
         <strength value="required" />
         <valueSet value="http://terminology.hl7.org.au/ValueSet/ucum-bodyheight" />
+      </binding>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Body site" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
       </binding>
     </element>
   </differential>
