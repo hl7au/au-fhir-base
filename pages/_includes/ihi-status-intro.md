@@ -6,4 +6,4 @@ This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatype
 
 [Patient with IHI, Medicare card, and Health Care Card](Patient-example0.html)
 
-[Patient with IHI and DVA Number](Patient-example1.html)
+[Patient with IHI and DVA number](Patient-example1.html)

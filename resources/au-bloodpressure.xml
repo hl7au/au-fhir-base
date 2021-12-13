@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-bloodpressure" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-bloodpressure" />
+  <version value="0.1.0" />
+  <name value="AUBloodPressure" />
+  <title value="AU Blood Pressure" />
+  <status value="draft" />
+  <description value="Blood pressure observation with extended observation type coding" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/bp" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <fixedCode value="final" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <min value="2" />
+    </element>
+    <element id="Observation.code.coding:BPSNOMED">
+      <path value="Observation.code.coding" />
+      <sliceName value="BPSNOMED" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding:BPSNOMED.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:BPSNOMED.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="75367002" />
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Body site" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
+      </binding>
+    </element>
+    <element id="Observation.component:SystolicBP">
+      <path value="Observation.component" />
+      <sliceName value="SystolicBP" />
+    </element>
+    <element id="Observation.component:SystolicBP.code.coding:SBPSNOMED">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="SBPSNOMED" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:SystolicBP.code.coding:SBPSNOMED.system">
+      <path value="Observation.component.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:SystolicBP.code.coding:SBPSNOMED.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="271649006" />
+    </element>
+    <element id="Observation.component:DiastolicBP">
+      <path value="Observation.component" />
+      <sliceName value="DiastolicBP" />
+    </element>
+    <element id="Observation.component:DiastolicBP.code.coding:DBPSNOMED">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="DBPSNOMED" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:DiastolicBP.code.coding:DBPSNOMED.system">
+      <path value="Observation.component.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.component:DiastolicBP.code.coding:DBPSNOMED.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="271650006" />
+    </element>
+  </differential>
+</StructureDefinition>

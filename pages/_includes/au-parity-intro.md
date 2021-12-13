@@ -1,6 +1,6 @@
 **AU Parity Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of parity count related to pregnancies.
+This profile defines an observation structure that represents the parity count related to pregnancy, for use in an Australian context.
 
 #### Usage Notes
 * Used to record parity count at a point in time.

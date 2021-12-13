@@ -12,8 +12,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Practitioner Role with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example0.html)
+[PractitionerRole with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example0.html)
 
-[General Practitioner with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example3.html)
+[General practitioner with Medicare provider number and SNOMED CT coded specialty](PractitionerRole-example3.html)
 
 [Cardiologist with Medicare provider number and vendor directory identifier, with HL7 V2 Assigning Authority](PractitionerRole-example4.html)
