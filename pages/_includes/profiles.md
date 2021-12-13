@@ -38,6 +38,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html) *[[FMM Level 1](guidance.html)]* - allergy intolerance with local terminology 
 * [AU Base Condition](StructureDefinition-au-condition.html) *[[FMM Level 1](guidance.html)]* - condition with local terminology
 * [AU Biological Sex Assigned at Birth](StructureDefinition-au-sexassignedatbirth.html) *[[FMM Level 1](guidance.html)]* - sex assigned at birth observation
+* [AU Base Substance](StructureDefinition-au-substance.html) *[[FMM Level 0](guidance.html)]* - substance with local terminology
 
 ## Vital Signs Profiles
 * [AU Blood Pressure](StructureDefinition-au-bloodpressure.html) *[[FMM Level 0](guidance.html)]* -  blood pressure observation
@@ -70,14 +71,14 @@ These Profiles have been defined for this implementation guide.
 * [AU Australian Company Number](StructureDefinition-au-australiancompanynumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Australian Company Number (ACN)
 * [AU Australian Registered Body Number](StructureDefinition-au-australianregistredbodynumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Australian Registered Body Number (ARBN)
 * [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) registration number
-* [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Care Agency Employee (CAE) identifier
+* [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a care agency employee identifier
 * [AU Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Commonwealth Seniors Health Card number
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Contracted Service Provider (CSP) registration number
 * [AU Delivery Point Identifier](StructureDefinition-au-deliverypointidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Australia Post Delivery Point Identifier (DPID)
 * [AU DVA Number](StructureDefinition-au-dvanumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Department of Veterans' Affairs (DVA) number
 * [AU Employee Number](StructureDefinition-au-employeenumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an employee number
-* [AU ETP Prescription Identifier](StructureDefinition-au-etpprescriptionidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Electronic Prescription Transfer (ETP) prescription identifier
-* [AU G-NAF Identifier](StructureDefinition-au-gnafidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Geocoded National Address File (G-NAF) Identifier
+* [AU ETP Prescription Identifier](StructureDefinition-au-etpprescriptionidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Electronic Transfer of Prescription (ETP) prescription identifier
+* [AU G-NAF Identifier](StructureDefinition-au-gnafidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Geocoded National Address File (G-NAF) identifier
 * [AU Health Care Card Number](StructureDefinition-au-healthcarecardnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Health Care Card number
 * [AU HPI-I](StructureDefinition-au-hpii.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
 * [AU HPI-O](StructureDefinition-au-hpio.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
@@ -87,7 +88,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a local prescription identifier
 * [AU Local Report Identifier](StructureDefinition-au-localreportidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a local report identifier
 * [AU Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Location Specific Practice Number (LSPN)
-* [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Medical Record Number (MRN)
+* [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a medical record number (MRN)
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Medicare card number
 * [AU Medicare Provider Number](StructureDefinition-au-medicareprovidernumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Medicare provider number
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) accreditation number

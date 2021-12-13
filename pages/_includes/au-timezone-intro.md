@@ -4,6 +4,6 @@ This extension applies to the [time](http://hl7.org/fhir/R4/datatypes.html#time)
 
 #### Examples
 
-[Albion Hospital Radiology Service](HealthcareService-example1.html)
+[Albion Hospital radiology service](HealthcareService-example1.html)
 
 [Pathologist with ABN-scoped employee number and SNOMED-CT coded specialty](PractitionerRole-example2.html)
