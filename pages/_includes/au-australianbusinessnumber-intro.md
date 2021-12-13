@@ -21,4 +21,7 @@ When coding type, the preferred coding from the required [hl7VS-identifierType -
 
 [Devonport Family Medicine Clinic with ABN](Organization-example3.html)
 
-[ACME Pathology with NATA accreditation number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP registration number](Organization-f799e349-0385-4fbc-a2aa-b5b50af957ea.html)
+[ACME Pathology with NATA Number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP](Organization-f799e349-0385-4fbc-a2aa-b5b50af957ea.html)
+
+[The Corporation of the Council of the Ward of Nundah](Organization-example5.html)
+
