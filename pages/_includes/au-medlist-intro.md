@@ -8,8 +8,8 @@ Forthcoming work around this profile is expected to result in guidance and addit
 #### Extensions
 
 Extensions used in this profile:
-* List: Author as a Related Person [<sup>[1]</sup>](StructureDefinition-author-related-person.html)
-* List.entry: Change Description [<sup>[1]</sup>](StructureDefinition-change-description.html)
+* List: [Author as a Related Person](StructureDefinition-author-related-person.html)
+* List.entry: [Change Description](StructureDefinition-change-description.html)
 
 
 #### Usage Notes

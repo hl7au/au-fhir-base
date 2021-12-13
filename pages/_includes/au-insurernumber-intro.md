@@ -1,6 +1,6 @@
 **AU Private Health Insurance Member Number**  *[[FMM Level 1](guidance.html)]*
 
-This identifier profile defines a Private Health Insurance Member Number in an Australian context.
+This identifier profile defines a private health insurance member number in an Australian context.
 
 
 #### Extensions

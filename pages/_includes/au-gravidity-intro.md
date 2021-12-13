@@ -1,4 +1,4 @@
-**AU Gravidity Profile** *[[FMM Level 0](guidance.html)]*
+**AU Gravidity** *[[FMM Level 0](guidance.html)]*
 
 This profile is provided as a common representation of gravidity count related to pregnancies.
 

@@ -6,4 +6,4 @@ This is not the date that it was created by the HI Services, but when it was che
 
 #### Examples
 
-[Patient with Verified IHI](Patient-example1.html)
+[Patient with verified IHI](Patient-example1.html)

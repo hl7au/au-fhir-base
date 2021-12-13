@@ -1,4 +1,4 @@
-**AU Last Menstrual Period Profile** *[[FMM Level 0](guidance.html)]*
+**AU Last Menstrual Period** *[[FMM Level 0](guidance.html)]*
 
 This profile is provided as a common representation of last menstrual period.
 
