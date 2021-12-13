@@ -1,4 +1,5 @@
 **AU Base Allergy Intolerance** *[[FMM Level 1](guidance.html)]*
+
 This profile defines an allergy intolerance structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 
 The purpose of this profile is to provide national level agreement on core localised concepts. 

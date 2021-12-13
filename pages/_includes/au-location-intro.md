@@ -25,7 +25,7 @@ An instantiation of Location may form part of defining a mobile or remotely deli
 Additionally a Location for a mobile service should instantiate additional instances of type to indicate the service is tailored for delivery in these kinds of locations (e.g. 'AMB', 'COMM', 'PTRES', 'SCHOOL', or 'WORK').
 
 As part of defining a remotely delivered service, Location should have:
-* mobile='kind'
+* mode='kind'
 * type='VI'
 * physicalType='vi'
 
@@ -47,3 +47,7 @@ As part of defining a remotely delivered service, Location should have:
 [Location for mobile services that can be delivered in schools](Location-example6.html)
 
 [Location for mobile services that can be delivered in residential care facilities](Location-example7.html)
+
+[Leafy Grove, 700 Church Road, Zillmere](Location-example8.html)
+
+[713 Church Road, Zillmere](Location-example9.html)
