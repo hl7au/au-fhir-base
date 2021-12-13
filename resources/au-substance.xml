@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-substance"/>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-substance"/>
+  <version value="2.0.0"/>
+  <name value="AUBaseSubstance"/>
+  <title value="AU Base Substance"/>
+  <status value="draft"/>
+  <date value="2021-12-02"/>
+  <publisher value="Health Level Seven Australia"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description
+    value="This profile defines a substance structure that localises core concepts, including terminology, for use in an Australian context."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Substance"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Substance">
+      <path value="Substance"/>
+      <short value="A substance in an Australian healthcare context"/>
+    </element>
+    <element id="Substance.code">
+      <path value="Substance.code"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/substance-1"/>
+      </binding>
+    </element>
+    <element id="Substance.ingredient.substance[x]">
+      <path value="Substance.ingredient.substance[x]"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/substance-1"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

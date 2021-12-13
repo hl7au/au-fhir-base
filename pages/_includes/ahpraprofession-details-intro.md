@@ -9,4 +9,4 @@ Detailed guidance on representing AHPRA data using this extension in Practitione
 
 #### Examples
 
-[AHPRA Registered Practitioner with extended AHPRA data](Practitioner-example4.html)
+[AHPRA registered practitioner with extended AHPRA data](Practitioner-example4.html)

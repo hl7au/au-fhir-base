@@ -6,6 +6,6 @@ This extension applies to the [ContactPoint](http://hl7.org/fhir/datatypes.html#
 
 [HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)
 
-[Strahan General Practitioner Services](HealthcareService-example3.html)
+[Strahan general practitioner services](HealthcareService-example3.html)
 
-[Practitioner Role with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
+[PractitionerRole with Medicare provider number and SNOMED-CT coded specialty](PractitionerRole-example0.html)
