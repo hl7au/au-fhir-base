@@ -1,6 +1,8 @@
 **AU Insurance Member Number**  *[[FMM Level 1](guidance.html)]*
 
-This identifier profile defines an Insurance Member Number in an Australian context.
+This identifier profile defines an insurance member number in an Australian context.
+
+An insurance member number is assigned by an insurer, as identification of individuals rather than their specific insurance policy number.
 
 
 #### Extensions
