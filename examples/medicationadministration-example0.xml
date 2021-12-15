@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+    <id value="example0"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicationadministration"/>
+    </meta>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/medication-admin-category"/>
+            <code value="community"/>
+        </coding>
+    </category>
+    <medicationReference>
+        <reference value="Medication/BrandedPackSingleActiveIngredient0"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/example1"/>
+    </subject>
+    <effectiveDateTime value="2021-10-09T10:00:00+10:00"/>
+    <performer>
+        <function>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/med-admin-perform-function"/>
+                <code value="performer"/>
+            </coding>
+        </function>
+        <actor>
+            <reference value="RelatedPerson/example1"/>
+        </actor>
+    </performer>
+    <reasonCode>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/reason-medication-given"/>
+            <code value="b"/>
+            <display value="Given as Ordered"/>
+        </coding>
+    </reasonCode>
+    <dosage>
+        <text value="2 drops to the left eye"/>
+        <site>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="8966001"/>
+                <display value="Left eye structure"/>
+            </coding>
+        </site>
+        <dose>
+            <value value="2"/>
+            <unit value="drop"/>
+        </dose>
+    </dosage>
+</MedicationAdministration>

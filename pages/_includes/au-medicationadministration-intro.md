@@ -20,4 +20,5 @@ A full medication definition as medicationReference or medicationCodeableConcept
 
 
 #### Examples
-No examples are available for this profile.
+
+[Administration of chlorsig eye drops](MedicationAdministration-example0.html)
