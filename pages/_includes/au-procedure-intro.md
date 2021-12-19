@@ -12,7 +12,7 @@ Extensions used in this profile:
 * Procedure: [procedure-targetBodyStructure](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html) (Core extension)
 
 #### Usage Notes
-The procedure-targetBodyStructure  extension may be used when a coded concept does not provide the necessary detail for the use case.
+The procedure-targetBodyStructure extension may be used when detailed, structured information about the anatomical location requires attributes from the BodySite resource.
 
 #### Examples
 [Cryotherapy](Procedure-example0.html)
