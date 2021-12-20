@@ -8,4 +8,4 @@ This profile is provided as a common representation of head circumference with e
 
 **Examples**
 
-TODO
+[Head Circumference Observation](Observation-headcircum-example0.html)

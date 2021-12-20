@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+	<id value="bmi"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+	</meta>
+	<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: bmi</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span>(Details : {http://terminology.hl7.org/CodeSystem/observation-category code &#39;vital-signs&#39; = &#39;Vital Signs&#39;, given as &#39;Vital Signs&#39;})</span></p><p><b>code</b>: BMI <span>(Details : {LOINC code &#39;39156-5&#39; = &#39;Body mass index (BMI) [Ratio]&#39;, given as &#39;Body mass index (BMI) [Ratio]&#39;})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: 02/07/1999</p><p><b>value</b>: 16.2 kg/m2<span> (Details: UCUM code kg/m2 = &#39;kg/m2&#39;)</span></p></div></text><status value="final"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="vital-signs"/>
+			<display value="Vital Signs"/>
+		</coding>
+		<text value="Vital Signs"/>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="39156-5"/>
+			<display value="Body mass index (BMI) [Ratio]"/>
+		</coding>
+		<coding>
+			<system value= "http://snomed.info/sct"/>
+			<code value="60621009"/>		
+		</coding>
+		<text value="BMI"/>
+	</code>
+	<subject>
+		<reference value="Patient/example"/>
+	</subject>
+	<effectiveDateTime value="1999-07-02"/>
+	<valueQuantity>
+		<value value="16.2"/>
+		<unit value="kg/m2"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="kg/m2"/>
+	</valueQuantity>
+</Observation>
