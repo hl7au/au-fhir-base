@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="medicationdispense-example0"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"/>
+    </meta>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/dispense-number">
+        <valueInteger value="1"/>
+    </extension>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+                <code value="LDI"/>
+            </coding>
+            <text value="Local Dispense Identifier"/>
+        </type>
+        <system
+            value="http://ns.electronichealth.net.au/id/hpio-scoped/dispense/1.0/8003621566684455"/>
+        <value value="26597878"/>
+        <assigner>
+            <reference value="Organization/example0"/>
+        </assigner>
+    </identifier>
+    <status value="completed"/>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="926213011000036100"/>
+            <display value="Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10"/>
+        </coding>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/example0"/>
+    </subject>
+    <performer>
+        <actor>
+            <reference value="Organization/example0"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/medicationrequest-example2"/>
+    </authorizingPrescription>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="FF"/>
+            <display value="First Fill"/>
+        </coding>
+    </type>
+    <quantity>
+        <value value="20"/>
+        <unit value="TAB"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/> 
+    </quantity>
+    <daysSupply>
+        <value value="10"/>
+        <unit value="days"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+    </daysSupply>
+    <whenPrepared value="2018-07-15"/>
+    <whenHandedOver value="2018-07-15"/>
+    <note>
+        <text value="Patient refused use of administration aid."/>
+    </note>
+    <dosageInstruction>
+        <text value="1-2 tablets every 4-6 hours as needed for pain"/>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <frequencyMax value="2"/>
+                <period value="4"/>
+                <periodMax value="6"/>
+                <periodUnit value="h"/>
+            </repeat>
+        </timing>
+        <asNeededBoolean value="true"/>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral route"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <doseQuantity>
+                <value value="1"/>
+                <unit value="TAB"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </doseQuantity>
+        </doseAndRate>
+    </dosageInstruction>
+    <substitution>
+        <wasSubstituted value="false"/>
+    </substitution>
+</MedicationDispense>
