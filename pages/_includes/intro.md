@@ -12,7 +12,7 @@ to enable feedback to improve the content of this guide.
 This document presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification. 
 * [Profiles](profiles.html) - are useful constraints of core FHIR resources and datatype for Australian use
 * [Extensions](extensions.html) - are FHIR extensions that are added for local use, covering needed Australian concepts
-* [Terminologies](terminology.html) - are defined or referenced code systems and value sets for Australia context
+* [Terminologies](terminology.html) - are defined or referenced code systems and value sets for Australian context
 
 FHIR profiles are managed under HL7 Australia working groups and projects:
 
@@ -22,14 +22,14 @@ FHIR profiles are managed under HL7 Australia working groups and projects:
 * [HL7 Australia Child Health Working Group](https://confluence.hl7australia.com/display/CHWG/Child+Health+Working+Group)
 * [HL7 Argonaut Australia Project](https://confluence.hl7australia.com/display/AFR/HL7+Australia+Standards+Development)
 
-Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liasion Officer](mailto:wglo@hl7.org.au)
+Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liaison Officer](mailto:wglo@hl7.org.au)
 
 ## Usage
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
 Information contained in this document is aimed at providing guidance on representing Australian local concepts 
-using FHIR. This includes code systems, extensions and profiles on base FHIR types.  The content of the IG is 
+using FHIR. This includes code systems, extensions and profiles on base FHIR types.  The content of the implementation guide is 
 general in nature and seeks to provide a ‘how-to’ guide when representing concepts, it includes core base
 profiles that can be further constrained for a particular usage.
 
