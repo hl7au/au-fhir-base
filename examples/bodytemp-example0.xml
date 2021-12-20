@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
 	<id value="bodytemp-example0"/>
 	<meta>
-		<profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-bodytemp"/>
 	</meta>
-	<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: body-temperature</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span>(Details : {http://terminology.hl7.org/CodeSystem/observation-category code &#39;vital-signs&#39; = &#39;Vital Signs&#39;, given as &#39;Vital Signs&#39;})</span></p><p><b>code</b>: Body temperature <span>(Details : {LOINC code &#39;8310-5&#39; = &#39;Body temperature&#39;, given as &#39;Body temperature&#39;})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>effective</b>: 02/07/1999</p><p><b>value</b>: 36.5 C<span> (Details: UCUM code Cel = &#39;Cel&#39;)</span></p></div></text><status value="final"/>
 	<category>
 		<coding>
 			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
@@ -24,9 +23,9 @@
 		</coding>
 		<text value="Body temperature"/>
 	</code>
-	<subject>
-		<reference value="Patient/example"/>
-	</subject>
+  <subject>
+    <reference value="Patient/example0"/>
+  </subject>
 	<effectiveDateTime value="1999-07-02"/>
 	<valueQuantity>
 		<value value="36.5"/>
