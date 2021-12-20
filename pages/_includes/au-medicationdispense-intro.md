@@ -38,5 +38,7 @@ Where a system cannot include a coded value (only MedicationDispense.medicationC
 
 
 #### Examples
-No examples are available for this profile.
 
+[First dispense for Reaptan](MedicationDispense-medicationdispense-example0.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
+
+[Second dispense for Reaptan](MedicationDispense-medicationdispense-example1.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
