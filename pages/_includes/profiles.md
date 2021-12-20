@@ -50,6 +50,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Heart Rate](StructureDefinition-au-heartrate.html) *[[FMM Level 0](guidance.html)]* -  heart rate observation
 * [AU Body Temperature](StructureDefinition-au-bodytemp.html) *[[FMM Level 0](guidance.html)]* -  body temperature observation
 * [AU Respiration Rate](StructureDefinition-au-resprate.html) *[[FMM Level 0](guidance.html)]* -  respiration rate observation
+* [AU Vital Signs Panel](StructureDefinition-au-vitalspanel.html) *[[FMM Level 0](guidance.html)]* - vital signs panel
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[FMM Level 0](guidance.html)]* - smoking status lifestyle factor record
