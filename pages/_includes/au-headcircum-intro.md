@@ -1,6 +1,6 @@
 **AU Head Circumference Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of head circumference with extended coding option for SNOMED-CT usage
+This profile is provided as a common representation of head circumference with extended coding options for SNOMED-CT usage.
 
 #### Usage Notes
 * Requires appropriate SNOMED coding
