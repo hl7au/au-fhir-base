@@ -6,7 +6,7 @@
   <name value="AUBaseImmunisation" />
   <title value="AU Base Immunisation" />
   <status value="active" />
-  <date value="2021-12-17" />
+  <date value="2021-12-21" />
   <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines an immunisation structure including core localisation concepts for use in an Australian context." />
+  <description value="This profile defines an immunisation structure that localises core concepts, including terminology, for use in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -97,30 +97,16 @@
       <path value="Immunization.site.coding" />
       <max value="1" />
     </element>
-    <element id="Immunization.route.coding">
-      <path value="Immunization.route.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Immunization.route.coding:snomedRoute">
-      <path value="Immunization.route.coding" />
-      <sliceName value="snomedRoute" />
-      <short value="Immunisation Route of Administration (SNOMED CT)" />
-      <max value="1" />
+    <element id="Immunization.route">
+      <path value="Immunization.route" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1" />
       </binding>
     </element>
-    <element id="Immunization.route.coding:snomedRoute.system">
-      <path value="Immunization.route.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
+    <element id="Immunization.route.coding">
+      <path value="Immunization.route.coding" />
+      <max value="1" />
     </element>
     <element id="Immunization.performer">
       <path value="Immunization.performer" />
