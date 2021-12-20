@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-heartrate" />
-  <name value="AUHeartRate" />
-  <title value="AU Heart Rate" />
+  <id value="au-vitalspanel" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-vitalspanel" />
+  <name value="AUVitalsPanel" />
   <status value="draft" />
-  <description value="Heart rate observation with extended observation type coding" />
+  <description value="Vitals panel with alternate coding" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/heartrate" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/vitalspanel" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation.status">
-      <path value="Observation.status" />
-      <fixedCode value="final" />
-    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <min value="2" />
+    </element>
+    <element id="Observation.code.coding:VitalsPanelCode">
+      <path value="Observation.code.coding" />
+      <sliceName value="VitalsPanelCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.code.coding:VitalsPanelCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:VitalsPanelCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
     </element>
     <element id="Observation.code.coding:SNOMED">
       <path value="Observation.code.coding" />
@@ -34,14 +44,6 @@
     <element id="Observation.code.coding:SNOMED.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
-      <fixedCode value="364075005" />
-    </element>
-    <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>

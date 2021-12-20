@@ -51,6 +51,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Heart Rate](StructureDefinition-au-heartrate.html) *[[FMM Level 0](guidance.html)]* -  heart rate observation
 * [AU Body Temperature](StructureDefinition-au-bodytemp.html) *[[FMM Level 0](guidance.html)]* -  body temperature observation
 * [AU Respiration Rate](StructureDefinition-au-resprate.html) *[[FMM Level 0](guidance.html)]* -  respiration rate observation
+* [AU Vital Signs Panel](StructureDefinition-au-vitalspanel.html) *[[FMM Level 0](guidance.html)]* - vital signs panel
 
 ## Lifestyle Factor Profiles
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[FMM Level 0](guidance.html)]* - smoking status lifestyle factor record
@@ -84,6 +85,7 @@ These Profiles have been defined for this implementation guide.
 * [AU HPI-I](StructureDefinition-au-hpii.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Healthcare Provider Identifier - Individual (HPI-I)
 * [AU HPI-O](StructureDefinition-au-hpio.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Healthcare Provider Identifier – Organisation (HPI-O)
 * [AU IHI](StructureDefinition-au-ihi.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Individual Healthcare Identifier (IHI)
+* [AU Insurance Member Number](StructureDefinition-au-insurancemembernumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an insurance member number
 * [AU Local Dispense Identifier](StructureDefinition-au-localdispenseidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a local dispense identifier
 * [AU Local Order Identifier](StructureDefinition-au-localorderidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a local order identifier
 * [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a local prescription identifier
@@ -99,7 +101,6 @@ These Profiles have been defined for this implementation guide.
 * [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for an Pensioner Concession Card number
 * [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a pharmacy approval number
-* [AU Private Healthcare Insurer Number](StructureDefinition-au-insurernumber.html) *[[FMM Level 1](guidance.html)]* - identifier profile for a private health insurance member number
 * [AU Residential Aged Care Service Identifier](StructureDefinition-au-residentialagedcareserviceidentifier.html) *[[FMM Level 0](guidance.html)]* - identifier profile for a residential aged care service identifier
 
 ### Profiles on Other Data Types

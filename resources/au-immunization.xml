@@ -1,240 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-immunization"/>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
-  <version value="2.1.1"/>
-  <name value="AUBaseImmunisation"/>
-  <title value="AU Base Immunisation"/>
-  <status value="active"/>
-  <date value="2021-07-02"/>
-  <publisher value="Health Level Seven Australia (Medications WG)"/>
+  <id value="au-immunization" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-immunization" />
+  <version value="2.1.1" />
+  <name value="AUBaseImmunisation" />
+  <title value="AU Base Immunisation" />
+  <status value="active" />
+  <date value="2021-12-21" />
+  <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
-      <system value="url"/>
-      <value value="http://hl7.com.au"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description
-    value="This profile defines an immunisation structure including core localisation concepts for use in an Australian context."/>
+  <description value="This profile defines an immunisation structure that localises core concepts, including terminology, for use in an Australian context." />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="AU"/>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
     </coding>
   </jurisdiction>
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Immunization"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
-  <derivation value="constraint"/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Immunization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Immunization" />
+  <derivation value="constraint" />
   <differential>
     <element id="Immunization">
-      <path value="Immunization"/>
-      <short value="An immunisation statement in an Australian healthcare context"/>
+      <path value="Immunization" />
+      <short value="An immunisation statement in an Australian healthcare context" />
     </element>
     <element id="Immunization.statusReason">
-      <path value="Immunization.statusReason"/>
+      <path value="Immunization.statusReason" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet
-          value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1"
-        />
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1" />
       </binding>
     </element>
-    <element id="Immunization.vaccineCode">
-      <path value="Immunization.vaccineCode"/>
-    </element>
     <element id="Immunization.vaccineCode.coding">
-      <path value="Immunization.vaccineCode.coding"/>
+      <path value="Immunization.vaccineCode.coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
+        <ordered value="false" />
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Immunization.vaccineCode.coding:amtVaccineCode">
-      <path value="Immunization.vaccineCode.coding"/>
-      <sliceName value="amtVaccineCode"/>
-      <short value="AMT Vaccine"/>
-      <max value="1"/>
+      <path value="Immunization.vaccineCode.coding" />
+      <sliceName value="amtVaccineCode" />
+      <short value="AMT Vaccine" />
+      <max value="1" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1"/>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
       </binding>
     </element>
     <element id="Immunization.vaccineCode.coding:amtVaccineCode.system">
-      <path value="Immunization.vaccineCode.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
-    </element>
-    <element id="Immunization.vaccineCode.coding:airVaccineCode">
-      <path value="Immunization.vaccineCode.coding"/>
-      <sliceName value="airVaccineCode"/>
-      <short value="AIR Vaccine"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSet
-          value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1"
-        />
-      </binding>
-    </element>
-    <element id="Immunization.vaccineCode.coding:airVaccineCode.system">
-      <path value="Immunization.vaccineCode.coding.system"/>
-      <min value="1"/>
-      <fixedUri
-        value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"
-      />
-    </element>
-    <element id="Immunization.patient">
-      <path value="Immunization.patient"/>
-    </element>
-    <element id="Immunization.primarySource">
-      <path value="Immunization.primarySource"/>
-    </element>
-    <element id="Immunization.manufacturer">
-      <path value="Immunization.manufacturer"/>
-      <definition value="Physical vaccine product manufacturer."/>
-    </element>
-    <element id="Immunization.site">
-      <path value="Immunization.site"/>
-    </element>
-    <element id="Immunization.site.coding">
-      <path value="Immunization.site.coding"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSet
-          value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1"/>
-      </binding>
-    </element>
-    <element id="Immunization.route">
-      <path value="Immunization.route"/>
-    </element>
-    <element id="Immunization.route.coding">
-      <path value="Immunization.route.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Immunization.route.coding:snomedRoute">
-      <path value="Immunization.route.coding"/>
-      <sliceName value="snomedRoute"/>
-      <short value="Immunisation Route of Administration (SNOMED CT)"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSet
-          value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1"
-        />
-      </binding>
-    </element>
-    <element id="Immunization.route.coding:snomedRoute.system">
-      <path value="Immunization.route.coding.system" />
+      <path value="Immunization.vaccineCode.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
+    <element id="Immunization.vaccineCode.coding:airVaccineCode">
+      <path value="Immunization.vaccineCode.coding" />
+      <sliceName value="airVaccineCode" />
+      <short value="AIR Vaccine" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1" />
+      </binding>
+    </element>
+    <element id="Immunization.vaccineCode.coding:airVaccineCode.system">
+      <path value="Immunization.vaccineCode.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats" />
+    </element>
+    <element id="Immunization.manufacturer">
+      <path value="Immunization.manufacturer" />
+      <definition value="Physical vaccine product manufacturer." />
+    </element>
+    <element id="Immunization.site">
+      <path value="Immunization.site" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1" />
+      </binding>
+    </element>
+    <element id="Immunization.site.coding">
+      <path value="Immunization.site.coding" />
+      <max value="1" />
+    </element>
+    <element id="Immunization.route">
+      <path value="Immunization.route" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1" />
+      </binding>
+    </element>
+    <element id="Immunization.route.coding">
+      <path value="Immunization.route.coding" />
+      <max value="1" />
+    </element>
     <element id="Immunization.performer">
-      <path value="Immunization.performer"/>
+      <path value="Immunization.performer" />
       <slicing>
         <discriminator>
-          <type value="pattern"/>
-          <path value="function.coding"/>
+          <type value="pattern" />
+          <path value="function.coding" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Immunization.performer.function">
-      <path value="Immunization.performer.function"/>
+      <path value="Immunization.performer.function" />
       <binding>
-        <strength value="extensible"/>
-        <valueSet value="http://terminology.hl7.org.au/ValueSet/v2-0443-extended"/>
+        <strength value="extensible" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/v2-0443-extended" />
       </binding>
     </element>
     <element id="Immunization.performer:administeredBy">
-      <path value="Immunization.performer"/>
-      <sliceName value="administeredBy"/>
-      <short value="Immunisation Administered By"/>
-      <max value="1"/>
+      <path value="Immunization.performer" />
+      <sliceName value="administeredBy" />
+      <short value="Immunisation Administered By" />
+      <max value="1" />
     </element>
     <element id="Immunization.performer:administeredBy.function">
-      <path value="Immunization.performer.function"/>
-      <short value="Administering role"/>
-      <min value="1"/>
+      <path value="Immunization.performer.function" />
+      <short value="Administering role" />
+      <min value="1" />
     </element>
     <element id="Immunization.performer:administeredBy.function.coding">
-      <path value="Immunization.performer.function.coding"/>
-      <min value="1"/>
+      <path value="Immunization.performer.function.coding" />
+      <min value="1" />
       <patternCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
-        <code value="AP"/>
-        <display value="Administering Provider"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
+        <code value="AP" />
+        <display value="Administering Provider" />
       </patternCoding>
     </element>
     <element id="Immunization.performer:administeredBy.function.text">
-      <path value="Immunization.performer.function.text"/>
-      <fixedString value="Administering Provider"/>
+      <path value="Immunization.performer.function.text" />
+      <fixedString value="Administering Provider" />
     </element>
     <element id="Immunization.performer:administeredBy.actor">
-      <path value="Immunization.performer.actor"/>
-      <short value="Administering performer"/>
+      <path value="Immunization.performer.actor" />
+      <short value="Administering performer" />
     </element>
     <element id="Immunization.performer:approvedBy">
-      <path value="Immunization.performer"/>
-      <sliceName value="approvedBy"/>
-      <short value="Immunisation Approved By"/>
-      <max value="1"/>
+      <path value="Immunization.performer" />
+      <sliceName value="approvedBy" />
+      <short value="Immunisation Approved By" />
+      <max value="1" />
     </element>
     <element id="Immunization.performer:approvedBy.function">
-      <path value="Immunization.performer.function"/>
-      <short value="Approver role"/>
-      <min value="1"/>
+      <path value="Immunization.performer.function" />
+      <short value="Approver role" />
+      <min value="1" />
     </element>
     <element id="Immunization.performer:approvedBy.function.coding">
-      <path value="Immunization.performer.function.coding"/>
-      <min value="1"/>
+      <path value="Immunization.performer.function.coding" />
+      <min value="1" />
       <patternCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
-        <code value="OP"/>
-        <display value="Ordering Provider"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
+        <code value="OP" />
+        <display value="Ordering Provider" />
       </patternCoding>
     </element>
     <element id="Immunization.performer:approvedBy.function.text">
-      <path value="Immunization.performer.function.text"/>
-      <min value="1"/>
-      <fixedString value="Ordering Provider"/>
+      <path value="Immunization.performer.function.text" />
+      <min value="1" />
+      <fixedString value="Ordering Provider" />
     </element>
     <element id="Immunization.performer:approvedBy.actor">
-      <path value="Immunization.performer.actor"/>
-      <short value="Approving practitioner"/>
+      <path value="Immunization.performer.actor" />
+      <short value="Approving practitioner" />
     </element>
     <element id="Immunization.reasonCode">
-      <path value="Immunization.reasonCode"/>
+      <path value="Immunization.reasonCode" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet
-          value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1"/>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1" />
       </binding>
     </element>
-    <element id="Immunization.protocolApplied">
-      <path value="Immunization.protocolApplied"/>
-    </element>
     <element id="Immunization.protocolApplied.targetDisease">
-      <path value="Immunization.protocolApplied.targetDisease"/>
+      <path value="Immunization.protocolApplied.targetDisease" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet
-          value="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1"/>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1" />
       </binding>
     </element>
   </differential>
