@@ -8,4 +8,4 @@ This profile is provided as a common representation of body temperature with ext
 
 **Examples**
 
-TODO
+[Body Temperature Observation](Observation-bodytemp-example0.html)

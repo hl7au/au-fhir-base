@@ -8,4 +8,4 @@ This profile is provided as a common representation of body mass index with exte
 
 **Examples**
 
-TODO
+[Body Mass Index Observation](Observation-bmi-example0.html)

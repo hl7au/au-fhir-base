@@ -6,4 +6,7 @@ This extension applies to the MedicationDispense resource and is used to represe
 The value of this extension is 1 when there are no repeats. The value increments by one each time a dispense act is successfully completed.
 
 #### Examples
-No examples are available for this extension.
+
+[First dispense for Reaptan](MedicationDispense-medicationdispense-example0.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
+
+[Second dispense for Reaptan](MedicationDispense-medicationdispense-example1.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
