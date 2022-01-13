@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="example0"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-procedure"/>
+    </meta>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="26782000"/>
+            <display value="Cryotherapy"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example6"/>
+    </subject>
+    <performedPeriod>
+        <start value="2021-12-10T10:30:00+11:00"/>
+        <end value="2021-12-10T10:50:00+11:00"/>
+    </performedPeriod>
+    <performer>
+        <actor>
+            <reference value="PractitionerRole/example3"/>
+        </actor>
+    </performer>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="201101007"/>
+            <display value="Actinic keratosis"/>
+        </coding>
+    </reasonCode>
+    <bodySite>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="73897004"/>
+            <display value="Skin structure of face"/>
+        </coding>
+    </bodySite>
+</Procedure>
