@@ -8,4 +8,4 @@ This profile is provided as a common representation of respiration rate with ext
 
 **Examples**
 
-TODO
+[Respiration Rate Observation](Observation-resprate-example0.html)
