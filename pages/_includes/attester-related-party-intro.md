@@ -1,4 +1,4 @@
-**Extension: Attester as a Related Person** *[[FMM Level 2](guidance.html)]*
+**Extension: Attester as a Related Person** *[[FMM 2](guidance.html)]*
 
 This extension applies to the Composition resource and provides an extension for an attester who is a related person.
 

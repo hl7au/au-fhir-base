@@ -1,4 +1,4 @@
-**AU Diagnostic Imaging Result**  *[[FMM Level 0](guidance.html)]*
+**AU Diagnostic Imaging Result**  *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure to represent an imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple examination or study series.
 

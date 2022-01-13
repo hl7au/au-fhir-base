@@ -1,4 +1,4 @@
-**Extension: Ethnicity**  *[[FMM Level 0](guidance.html)]*
+**Extension: Ethnicity**  *[[DRAFT 0](guidance.html)]*
 
 This extension applies to the Patient resource and is used to represent ethnic identity[<sup>[1]</sup>](https://www.abs.gov.au/statistics/classifications/australian-standard-classification-cultural-and-ethnic-groups-ascceg/2019){:target="_blank"}. This extension is to support the provision of healthcare services to patients with specific cultural identities. This extension provides further information about a person’s cultural values and practices which can be significant in determining service type, support required and possible needs.
 

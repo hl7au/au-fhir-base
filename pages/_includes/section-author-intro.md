@@ -1,4 +1,4 @@
-**Extension: Section Author**  *[[FMM Level 1](guidance.html)]*
+**Extension: Section Author**  *[[FMM 1](guidance.html)]*
 
 This extension applies to the Composition resource and identifies who is responsible for the information in this section.
 

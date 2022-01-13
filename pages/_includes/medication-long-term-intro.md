@@ -1,4 +1,4 @@
-**Extension: Long Term**  *[[FMM Level 2](guidance.html)]*
+**Extension: Long Term**  *[[FMM 2](guidance.html)]*
 
 This extension applies to the MedicationStatement resource and is used to indicate long term use of a medication.
 

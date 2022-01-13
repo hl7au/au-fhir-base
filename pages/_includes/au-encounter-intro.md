@@ -1,4 +1,4 @@
-**AU Base Encounter**  *[[FMM Level 1](guidance.html)]*
+**AU Base Encounter**  *[[FMM 1](guidance.html)]*
 
 This profile defines an encounter structure including core localisation concepts for use in an Australian context. This profile is intended to be applicable for recording details of ambulatory and non-ambulatory patient encounters in an Australian healthcare context.
 

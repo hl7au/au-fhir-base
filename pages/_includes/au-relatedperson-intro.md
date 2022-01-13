@@ -1,4 +1,4 @@
-**AU Base Related Person** *[[FMM Level 2](guidance.html)]*
+**AU Base Related Person** *[[FMM 2](guidance.html)]*
 
 This profile defines a related person structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 
