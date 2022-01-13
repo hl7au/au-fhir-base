@@ -1,0 +1,48 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="vitalspanel-example0"/>
+	<meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-vitalspanel"/>
+	</meta>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="vital-signs"/>
+			<display value="Vital Signs"/>
+		</coding>
+		<text value="Vital Signs"/>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="85353-1"/>
+			<display value="Vital signs, weight, height, head circumference, oxygen saturation and BMI panel"/>
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="61746007"/>
+		</coding>
+		<text value="Vital Signs Panel"/>
+	</code>
+	<subject>
+		<reference value="Patient/patient-example0"/>
+	</subject>
+	<effectiveDateTime value="1999-07-02"/>
+	<hasMember>
+		<reference value="Observation/repsrate-example0"/>
+		<display value="Respiratory Rate"/>
+	</hasMember>
+	<hasMember>
+		<reference value="Observation/heartrate-example0"/>
+		<display value="Heart Rate"/>
+	</hasMember>
+	<hasMember>
+		<reference value="Observation/bloodpressure-example0"/>
+		<display value="Blood Pressure"/>
+	</hasMember>
+	<hasMember>
+		<reference value="Observation/bodytemp-example0"/>
+		<display value="Body Temperature"/>
+	</hasMember>
+</Observation>
