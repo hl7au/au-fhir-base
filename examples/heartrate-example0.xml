@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
 	<id value="heartrate-example0"/>
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-heartrate"/>
 	</meta>
+	<status value="final"/>
 	<category>
 		<coding>
 			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
@@ -17,11 +19,16 @@
 			<code value="8867-4"/>
 			<display value="Heart rate"/>
 		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="364075005"/>
+			<display value="Heart rate"/>
+		</coding>
 		<text value="Heart rate"/>
 	</code>
-  <subject>
-    <reference value="Patient/example0"/>
-  </subject>
+    <subject>
+      <reference value="Patient/example0"/>
+    </subject>
 	<effectiveDateTime value="1999-07-02"/>
 	<valueQuantity>
 		<value value="44"/>
