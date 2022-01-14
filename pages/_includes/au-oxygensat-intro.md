@@ -8,4 +8,4 @@ This profile is provided as a common representation of oxygen saturation with ex
 
 **Examples**
 
-TODO
+[Oxygen saturation 95%](Observation-oxygensat-example0.html)
