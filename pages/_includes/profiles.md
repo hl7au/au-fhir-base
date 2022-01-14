@@ -43,13 +43,13 @@ These Profiles have been defined for this implementation guide.
 
 ## Vital Signs Profiles
 * [AU Blood Pressure](StructureDefinition-au-bloodpressure.html) *[[FMM Level 0](guidance.html)]* -  blood pressure observation
-* [AU Body Weight](StructureDefinition-au-bodyweight.html) *[[FMM Level 0](guidance.html)]* -  body weight observation
 * [AU Body Height](StructureDefinition-au-bodyheight.html) *[[FMM Level 0](guidance.html)]* -  body height observation
 * [AU Body Mass Index](StructureDefinition-au-bmi.html) *[[FMM Level 0](guidance.html)]* -  body mass index observation
-* [AU Oxygen Saturation](StructureDefinition-au-oxygensat.html) *[[FMM Level 0](guidance.html)]* -  oxygen saturation observation
+* [AU Body Temperature](StructureDefinition-au-bodytemp.html) *[[FMM Level 0](guidance.html)]* -  body temperature observation
+* [AU Body Weight](StructureDefinition-au-bodyweight.html) *[[FMM Level 0](guidance.html)]* -  body weight observation
 * [AU Head Circumference](StructureDefinition-au-headcircum.html) *[[FMM Level 0](guidance.html)]* - head circumference observation
 * [AU Heart Rate](StructureDefinition-au-heartrate.html) *[[FMM Level 0](guidance.html)]* -  heart rate observation
-* [AU Body Temperature](StructureDefinition-au-bodytemp.html) *[[FMM Level 0](guidance.html)]* -  body temperature observation
+* [AU Oxygen Saturation](StructureDefinition-au-oxygensat.html) *[[FMM Level 0](guidance.html)]* -  oxygen saturation observation
 * [AU Respiration Rate](StructureDefinition-au-resprate.html) *[[FMM Level 0](guidance.html)]* -  respiration rate observation
 * [AU Vital Signs Panel](StructureDefinition-au-vitalspanel.html) *[[FMM Level 0](guidance.html)]* - vital signs panel
 
