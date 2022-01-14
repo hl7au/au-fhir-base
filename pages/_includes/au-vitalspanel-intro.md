@@ -8,4 +8,4 @@ This profile is provided as a common representation of a vitals panel with exten
 
 **Examples**
 
-TODO
+[Vital Signs Panel](Observation-vitalspanel-example0.html)
