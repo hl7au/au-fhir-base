@@ -23,4 +23,4 @@ A full medication definition as medicationReference or medicationCodeableConcept
 
 [Administration of chlorsig eye drops](MedicationAdministration-example0.html)
 
-[Self-administration of insulin glargine](MedicationAdministration-example2.html)
+[Self-administration of insulin glargine](MedicationAdministration-example1.html)
