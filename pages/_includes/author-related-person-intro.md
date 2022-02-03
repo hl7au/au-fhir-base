@@ -4,4 +4,4 @@ This extension applies to any resource and is used to represent an author who is
 
 #### Examples
 
-[Current medicine list, authored by related person](List-659370cf-3214-4e38-a753-040d194e5275.html)
+[Current medicine list, authored by related person](List-example3.html)
