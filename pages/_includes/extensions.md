@@ -30,7 +30,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Strength](StructureDefinition-medication-strength.html) *[[FMM Level 0](guidance.html)]* - text only medication strength
 * [Medication Type](StructureDefinition-medication-type.html) *[[FMM Level 2](guidance.html)]* - drug code classification
 * [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) *[[FMM Level 1](guidance.html)]* - minimum allowed dispensing interval
-* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) *[[FMM Level 3](guidance.html)]* - grounds for supplying multiple repeats of a medication prescription at one time
+* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) *[[FMM Level 2](guidance.html)]* - grounds for supplying multiple repeats of a medication prescription at one time
 
 
 ## Clinical
