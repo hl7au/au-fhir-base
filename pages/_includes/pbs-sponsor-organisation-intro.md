@@ -1,4 +1,4 @@
-**PBS Sponsor Organisation** *[[FMM 2](guidance.html)]*
+**PBS Sponsor Organisation** *[[FMM Level 2](guidance.html)]*
 
 This profile is suitable for representing PBS sponsor organisation administration details. A PBS sponsor is an organisation with a PBS-assigned code responsible for the supply of medication.
 

@@ -1,4 +1,4 @@
-**Extension: Healthcare Service Communication** *[[FMM 2](guidance.html)]*
+**Extension: Healthcare Service Communication** *[[FMM Level 2](guidance.html)]*
 
 Languages supported by a healthcare service.
 
