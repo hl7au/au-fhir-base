@@ -28,5 +28,5 @@ When capturing a related person as the author of the list, the extension Author 
 
 [Current and ceased medicines](List-0ebc46a8-4ea8-11e9-8647-d663bd873d93.html)
 
-[Current medicine list, authored by related person](List-example3.html)
+[Current medicine list authored by related person, with medication entry as free text](List-example3.html)
 
