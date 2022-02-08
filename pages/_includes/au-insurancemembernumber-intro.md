@@ -1,4 +1,4 @@
-**AU Insurance Member Number**  *[[FMM Level 1](guidance.html)]*
+**AU Insurance Member Number**  *[[FMM 1](guidance.html)]*
 
 This identifier profile defines an insurance member number in an Australian context. An insurance member number is the unique member number assigned to an individual by an insurer and is typically displayed on their insurance card. An individual will not have more than one member number per insurer.
 

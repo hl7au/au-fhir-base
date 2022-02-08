@@ -1,4 +1,4 @@
-**Extension: IHI Record Status**  *[[FMM Level 3](guidance.html)]*
+**Extension: IHI Record Status**  *[[FMM 3](guidance.html)]*
 
 This extension applies to the [Identifier datatype](http://hl7.org/fhir/datatypes.html#identifier) and is used to indicate whether verification of the Individual Healthcare Identifier (IHI) has occurred and is based on the evidence available for a person’s identity.
 

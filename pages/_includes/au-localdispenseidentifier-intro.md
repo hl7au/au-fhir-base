@@ -1,4 +1,4 @@
-**AU Local Dispense Identifier**  *[[FMM Level 1](guidance.html)]*
+**AU Local Dispense Identifier**  *[[FMM 1](guidance.html)]*
 
 This identifier profile defines a local dispense identifier in an Australian context. A local dispense identifier is an organisation's identifier for a prescription in that organisation's local system set of dispense records.
 

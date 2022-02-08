@@ -1,4 +1,4 @@
-**AU Local Order Identifier**  *[[FMM Level 1](guidance.html)]*
+**AU Local Order Identifier**  *[[FMM 1](guidance.html)]*
 
 This identifier profile defines a local order identifier in an Australian context. A local order identifier is an organisation's identifier for an order in that organisation's local system set of orders.
 

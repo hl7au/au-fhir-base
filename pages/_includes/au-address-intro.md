@@ -1,4 +1,4 @@
-**Australian Address** *[[FMM Level 2](guidance.html)]*
+**Australian Address** *[[FMM 2](guidance.html)]*
 
 This profile defines an address structure that localises core concepts, including identifiers and terminology, for use in an Australian context, to specifically represent an Australian (location) address.
 

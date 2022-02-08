@@ -1,4 +1,4 @@
-**Extension: Encryption Certificate PEM X509**  *[[FMM Level 3](guidance.html)]*
+**Extension: Encryption Certificate PEM X509**  *[[FMM 3](guidance.html)]*
 
 This extension applies to the Endpoint resource and is used to represent encrypted certficate content for an endpoint.
 

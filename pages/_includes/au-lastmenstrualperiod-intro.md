@@ -1,4 +1,4 @@
-**AU Last Menstrual Period** *[[FMM Level 0](guidance.html)]*
+**AU Last Menstrual Period** *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure that represents the date of the last known menstrual period, for use in an Australian context.
 

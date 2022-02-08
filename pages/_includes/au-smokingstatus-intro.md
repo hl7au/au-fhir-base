@@ -1,4 +1,4 @@
-**AU Base Smoking Status** *[[FMM Level 0](guidance.html)]*
+**AU Base Smoking Status** *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure that represents smoking status, for use in an Australian context. It is compatible for use with the International Patient Summmry implementation guide
 
