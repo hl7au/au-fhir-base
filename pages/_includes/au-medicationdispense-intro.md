@@ -16,9 +16,12 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 Extensions used in this profile:
 * MedicationDispense: [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html)
 * MedicationDispense: [Dispense Number](StructureDefinition-dispense-number.html)
+* MedicationDispense.medication.coding: [Medication Type](StructureDefinition-medication-type.html)
+
+Potentially useful extensions:
 * MedicationDispense: [Medication Brand Name](StructureDefinition-medication-brand-name.html) 
 * MedicationDispense: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
-* MedicationDispense.medication.coding: [Medication Type](StructureDefinition-medication-type.html)
+
 
 
 #### Usage Notes
