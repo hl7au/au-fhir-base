@@ -1,6 +1,10 @@
 **AU Body Mass Index Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of body mass index with extended coding option for SNOMED-CT usage
+This profile provides an observation information structure for a patient’s vital sign body mass index (BMI) measurement.
+
+It has been derived from the core R4 specification [Body Mass Index](http://hl7.org/fhir/StructureDefinition/bmi) vital signs profile. 
+Refer to that profile for an outline of its mandatory requirements.
+
 
 #### Usage Notes
 * Requires appropriate SNOMED coding

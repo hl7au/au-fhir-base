@@ -1,6 +1,10 @@
 **AU Vitals Panel Profile** *[[FMM Level 0](guidance.html)]*
 
-This profile is provided as a common representation of a vitals panel with extended coding options for SNOMED-CT usage.
+This profile provides an observation information structure for a patient’s vital sign panel.
+
+It has been derived from the core R4 specification [Vital Signs Panel](http://hl7.org/fhir/StructureDefinition/vitalspanel) vital signs profile. 
+Refer to that profile for an outline of its mandatory requirements.
+
 
 #### Usage Notes
 * Requires appropriate SNOMED coding
