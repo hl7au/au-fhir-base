@@ -1,4 +1,4 @@
-**AU Vitals Panel Profile** *[[FMM Level 0](guidance.html)]*
+**AU Vitals Panel** *[[FMM Level 0](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s vital sign panel.
 

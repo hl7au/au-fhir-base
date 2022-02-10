@@ -1,4 +1,4 @@
-**AU Oxygen Saturation Profile** *[[FMM Level 0](guidance.html)]*
+**AU Oxygen Saturation** *[[FMM Level 0](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s vital sign oxygen saturation measurement.
 

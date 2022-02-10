@@ -1,4 +1,4 @@
-**AU Body Temperature Profile** *[[FMM Level 0](guidance.html)]*
+**AU Body Temperature** *[[FMM Level 0](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s vital sign body temperature measurement.
 

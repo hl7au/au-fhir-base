@@ -1,4 +1,4 @@
-**AU Body Weight Profile** *[[FMM Level 0](guidance.html)]*
+**AU Body Weight** *[[FMM Level 0](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s vital sign weight measurement.
 
