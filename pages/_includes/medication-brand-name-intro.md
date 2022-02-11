@@ -6,6 +6,8 @@ This extension applies to the Medication, MedicationRequest, MedicationDispense 
 #### Usage Notes
 This extension is not to be the sole representation of the medication concept; it should be used in conjunction with the medication code e.g. Medication.code or MedicationStatement.medicationCodeableConcept.
 
+This extension may be used where a system cannot include a coded value for the brand name of a medication, in other words where only a text value for the brand name is available.
+
 
 #### Examples
 [Medication with brand name text](Medication-BrandedPack1.html)

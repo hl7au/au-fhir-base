@@ -24,10 +24,9 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
 Where a system cannot include a coded value (only Medication.code.text can be supplied) it is expected that:
-* where a system has both brand name and generic name, brand name will form part of the Medication.code.text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
-* where a system only has brand name, the brand name form part of Medication.code.text and optionally be supplied in the brand name extension
-* where a system only has generic name, the generic name form part of Medication.code.text and optionally be supplied in the generic name extension
-* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied Medication.code.text
+* where a system has a brand name, with or without a generic name, the brand name will form part of the Medication.medicationCodeableConcept.text
+* where a system has only a generic name, the generic name will form part of Medication.medicationCodeableConcept.text
+* where a system is unable to determine whether the text is brand name or generic name, the text will be supplied in Medication.medicationCodeableConcept.text
 
 
 #### Examples

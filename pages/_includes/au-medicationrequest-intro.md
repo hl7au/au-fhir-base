@@ -31,13 +31,12 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
-When supplying a medicationReference, the extensions Medication Brand Name and Medication Generic Drug Name are not be used. These extensions are available on the referenced Medication resource and should be instantiated there if this information is included.
+When supplying a medicationReference, extensions about the medication itself are not be used here. Such extensions may be referenced from the Medication resource.
 
 Where a system cannot include a coded value (only MedicationRequest.medicationCodeableConcept.text can be supplied) it is expected that:
-* where a system has both brand name and generic name, brand name will form part of the MedicationRequest.medicationCodeableConcept.text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
-* where a system only has brand name, the brand name form part of MedicationRequest.medicationCodeableConcept.text and optionally be supplied in the brand name extension
-* where a system only has generic name, the generic name form part of MedicationRequest.medicationCodeableConcept.text and optionally be supplied in the generic name extension
-* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied MedicationRequest.medicationCodeableConcept.text
+* where a system has a brand name, with or without a generic name, the brand name will form part of the MedicationRequest.medicationCodeableConcept.text
+* where a system has only a generic name, the generic name will form part of MedicationRequest.medicationCodeableConcept.text
+* where a system is unable to determine whether the text is brand name or generic name, the text will be supplied in MedicationRequest.medicationCodeableConcept.text
 
 
 #### Examples
