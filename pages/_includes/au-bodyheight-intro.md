@@ -18,3 +18,4 @@ Refer to that profile for an outline of its mandatory requirements.
 
 [Body height Observation - performed by related person](Observation-bodyheight-example1.html)
 
+[Body length Observation - precise](Observation-bodyheight-example2.html)
