@@ -7,9 +7,20 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
-* Compatible with core [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bp) vital signs profile.
+* Requires appropriate SNOMED CT coding
+* Both the systolic and diastolic components must be present and missing values for either can be represented with Observation.component.dataAbsentReason
 
-**Examples**
 
-[Blood Pressure Observation](Observation-bloodpressure-example0.html)
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Blood Pressure - isolated diastolic hypertension](Observation-bloodpressure-example0.html)
+
+[Blood Pressure - systemic hypertension, with interpretation, bodySite, method and referenceRange](Observation-bloodpressure-example1.html)
+
+[Blood Pressure - normal reading, simple structure](Observation-bloodpressure-example2.html)
+
