@@ -7,9 +7,19 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
+* Requires appropriate SNOMED CT coding
 * Compatible with core [Heart Rate](http://hl7.org/fhir/StructureDefinition/heartrate) vital signs profile.
 
-**Examples**
 
-TODO
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Heart Rate Observation - simple](Observation-heartrate-example0.html)
+
+[Heart Rate Observation - wearable device generated](Observation-heartrate-example1.html)
+
+[Heart Rate Observation - with interpretation](Observation-heartrate-example2.html)
