@@ -7,9 +7,19 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
+* Requires appropriate SNOMED CT coding
 * Compatible with core [Oxygen Saturation](http://hl7.org/fhir/StructureDefinition/oxygensat) vital signs profile.
 
-**Examples**
 
-[Oxygen saturation 95%](Observation-oxygensat-example0.html)
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Oxygen saturation 95%, with reference range](Observation-oxygensat-example0.html)
+
+[Oxygen saturation 89%, with interpretation](Observation-oxygensat-example1.html)
+
+[Oxygen saturation 99%, with pulse oximeter](Observation-oxygensat-example2.html)
