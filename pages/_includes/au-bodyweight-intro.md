@@ -7,10 +7,20 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
+* Requires appropriate SNOMED CT coding
 * Compatible with core [Body Weight](http://hl7.org/fhir/StructureDefinition/bodyweight) vital signs profile.
 * Coded measurement units are restricted to metric only
 
-**Examples**
 
-[Body Weight Observation](Observation-bodyweight-example0.html)
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Body Weight Observation - simple](Observation-bodyweight-example0.html)
+
+[Body Weight Observation - self measured](Observation-bodyweight-example1.html)
+
+[Body Weight Observation - with note](Observation-bodyweight-example2.html)
