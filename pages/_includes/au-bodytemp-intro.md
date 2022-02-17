@@ -7,9 +7,20 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
-* Compatible with core [Body Temperature](http://hl7.org/fhir/StructureDefinition/bodytemp) vital signs profile.
+* Requires appropriate SNOMED CT coding
+* Compatible with core [Body Temperature](http://hl7.org/fhir/StructureDefinition/bodytemp) vital signs profile
+* Coded measurement units are restricted to metric only
 
-**Examples**
 
-[Body Temperature Observation](Observation-bodytemp-example0.html)
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Body Temperature Observation - normal](Observation-bodytemp-example0.html)
+
+[Body Temperature Observation - high, with performer, interpretation, bodySite, method and referenceRange](Observation-bodytemp-example1.html)
+
+[Body Temperature Observation - low, measured in the right ear by tympanic thermometry](Observation-bodytemp-example2.html)

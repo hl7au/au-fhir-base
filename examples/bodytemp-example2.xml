@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-	<id value="bodytemp-example0"/>
+	<id value="bodytemp-example2"/>
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-bodytemp"/>
 	</meta>
@@ -26,13 +26,28 @@
 		<text value="Body temperature"/>
 	</code>
 	<subject>
-		<reference value="Patient/example0"/>
+		<reference value="Patient/example4"/>
 	</subject>
-	<effectiveDateTime value="2021-12-02"/>
+	<effectiveDateTime value="2022-02-17"/>
 	<valueQuantity>
-		<value value="36.5"/>
+		<value value="34.5"/>
 		<unit value="C"/>
 		<system value="http://unitsofmeasure.org"/>
 		<code value="Cel"/>
 	</valueQuantity>
+	<bodySite>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="25577004"/>
+			<display value="Right ear structure"/>
+		</coding>
+	</bodySite>
+	<method>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="268383003"/>
+			<display value="Thermometry"/>
+		</coding>
+		<text value="Tympanic Thermometry"/>
+	</method>
 </Observation>
