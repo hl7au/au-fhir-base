@@ -8,8 +8,13 @@ Refer to that profile for an outline of its mandatory requirements.
 
 #### Usage Notes
 * Requires appropriate SNOMED CT coding
-* Compatible with core [Body Height](http://hl7.org/fhir/StructureDefinition/bodyheight) vital signs profile.
+* Compatible with core [Body Height](http://hl7.org/fhir/StructureDefinition/bodyheight) vital signs profile
 * Coded measurement units are restricted to metric only
+
+
+#### Extensions
+
+No extensions are used in this profile.
 
 
 #### Examples
