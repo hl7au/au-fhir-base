@@ -7,9 +7,19 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
+* Requires appropriate SNOMED CT coding
 * Compatible with core [Vital Signs Panel](http://hl7.org/fhir/StructureDefinition/vitalspanel) profile.
 
-**Examples**
+
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
 
 [Vital Signs Panel](Observation-vitalspanel-example0.html)
+
+[Vital Signs Panel](Observation-vitalspanel-example1.html)
+
+[Vital Signs Panel](Observation-vitalspanel-example2.html)

@@ -30,6 +30,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/vitalspanel" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <short value="Vital signs panel"/>
+      <definition value="Vital signs panel observation using a standard LOINC code and a SNOMED CT code."/>
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
@@ -52,18 +57,20 @@
       <path value="Observation.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.code.coding:SNOMED">
+    <element id="Observation.code.coding:snomed">
       <path value="Observation.code.coding" />
-      <sliceName value="SNOMED" />
+      <sliceName value="snomed" />
+      <short value="SNOMED CT Vital Sign Panel"/>
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding:SNOMED.system">
+    <element id="Observation.code.coding:snomed.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code.coding:SNOMED.code">
+    <element id="Observation.code.coding:snomed.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
     </element>
