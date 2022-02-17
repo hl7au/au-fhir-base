@@ -7,9 +7,19 @@ Refer to that profile for an outline of its mandatory requirements.
 
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
+* Requires appropriate SNOMED CT coding
 * Compatible with core [Respiration Rate](http://hl7.org/fhir/StructureDefinition/resprate) vital signs profile.
 
-**Examples**
 
-[Respiration Rate Observation](Observation-resprate-example0.html)
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Respiration Rate Observation - tachypnoea, simple measurement](Observation-resprate-example0.html)
+
+[Respiration Rate Observation - bradypnoea](Observation-resprate-example1.html)
+
+[Respiration Rate Observation - normal reading](Observation-resprate-example2.html)
