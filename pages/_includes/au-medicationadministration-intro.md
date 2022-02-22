@@ -1,4 +1,4 @@
-**AU Base Medication Administration**  *[[FMM Level 2](guidance.html)]*
+**AU Base Medication Administration**  *[[FMM 2](guidance.html)]*
 
 This profile defines a medication administration structure including core localisation concepts for use in an Australian context. 
 

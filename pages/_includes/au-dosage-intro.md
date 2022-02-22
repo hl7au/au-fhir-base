@@ -1,4 +1,4 @@
-**AU Base Dosage**  *[[FMM Level 2](guidance.html)]*
+**AU Base Dosage**  *[[FMM 2](guidance.html)]*
 
 This profile defines a dosage structure including core localisation concepts for use in an Australian context.
 

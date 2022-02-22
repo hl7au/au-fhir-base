@@ -1,4 +1,4 @@
-**AU Base Medication Statement**  *[[FMM Level 2](guidance.html)]*
+**AU Base Medication Statement**  *[[FMM 2](guidance.html)]*
 
 This profile defines a medication statement structure including core localisation concepts for use in an Australian context. 
 

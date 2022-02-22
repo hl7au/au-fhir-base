@@ -1,4 +1,4 @@
-**AU Diagnostic Imaging Report** *[[FMM Level 0](guidance.html)]*
+**AU Diagnostic Imaging Report** *[[DRAFT 0](guidance.html)]*
 
 This profile defines a diagnostic report structure to represent a diagnostic imaging report issued by a diagnostic service provider in an Australian context.
 

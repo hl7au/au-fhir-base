@@ -1,4 +1,4 @@
-**AU Pathology Result**  *[[FMM Level 0](guidance.html)]*
+**AU Pathology Result**  *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure to represent a pathology test result issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics.
 
