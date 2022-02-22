@@ -16,7 +16,6 @@ These definitions, defined as profiles of [Identifier](http://hl7.org/fhir/R4/da
 #### Extensions
 Extensions used in this profile:
 * MedicationRequest: [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html)
-* MedicationRequest: [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html)
 * MedicationRequest: [Medication Brand Name](StructureDefinition-medication-brand-name.html) 
 * MedicationRequest: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
 * MedicationRequest.medication.coding: [Medication Type](StructureDefinition-medication-type.html)
