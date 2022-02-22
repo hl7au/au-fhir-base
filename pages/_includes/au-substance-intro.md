@@ -1,4 +1,4 @@
-**AU Base Substance** *[[FMM Level 0](guidance.html)]*
+**AU Base Substance** *[[DRAFT 0](guidance.html)]*
 
 This profile defines a substance structure that localises core concepts, including terminology, for use in an Australian context.
 

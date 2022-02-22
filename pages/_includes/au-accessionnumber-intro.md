@@ -1,4 +1,4 @@
-**AU Accession Number**  *[[FMM Level 1](guidance.html)]*
+**AU Accession Number**  *[[FMM 1](guidance.html)]*
 
 This identifier profile defines an accession number in an Australian context. Accession numbers are typically assigned by a diagnostic imaging system or clinical laboratory system and depending on the domain an accession number may for example identify a specimen, imaging examination, or biological polymer sequence.
 

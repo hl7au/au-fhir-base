@@ -2,7 +2,6 @@ This profile contains the following variations from [MedicationRequest](http://h
 
 1. <span style='color:green'> extension </span>  sliced
    * Grounds for Concurrent Supply of Medication extension
-   * Minimum Interval Between Repeats extension
    * Medication Brand Name extension
    * Medication Generic Drug Name extension
 1. <span style='color:green'> identifier </span>  sliced

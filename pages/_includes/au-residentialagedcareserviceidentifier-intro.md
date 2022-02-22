@@ -1,4 +1,4 @@
-**AU Residential Aged Care Service Identifier**  *[[FMM Level 0](guidance.html)]*
+**AU Residential Aged Care Service Identifier**  *[[DRAFT 0](guidance.html)]*
 
 This identifier profile defines a residential aged care service identifier (RACS ID) in an Australian context. A RACS ID (also referred to as a residential aged care facility service identifier (RACF ID)) is assigned by the Department of Health to a subsidised residential aged care service. 
 

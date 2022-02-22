@@ -1,4 +1,4 @@
-**AU Heart Rate** *[[FMM Level 0](guidance.html)]*
+**AU Heart Rate** *[[DRAFT 0](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s vital sign heart rate measurement.
 

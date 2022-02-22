@@ -1,4 +1,4 @@
-**AU Medicine List**  *[[FMM Level 1](guidance.html)]*
+**AU Medicine List**  *[[FMM 1](guidance.html)]*
 
 This profile defines a list structure including core localisation concepts for use as a medicines list in an Australian context. This profile is intended to offer a common structure and expectations to record, exchange, and fetch a list of medications associated with a patient in an Australian healthcare context. 
 
@@ -28,4 +28,5 @@ When capturing a related person as the author of the list, the extension Author 
 
 [Current and ceased medicines](List-0ebc46a8-4ea8-11e9-8647-d663bd873d93.html)
 
+[Current medicine list authored by related person, with medication entry as free text](List-example3.html)
 

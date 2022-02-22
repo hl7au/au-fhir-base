@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-immunization" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-immunization" />
-  <version value="2.1.1" />
+  <version value="2.1.2" />
   <name value="AUBaseImmunisation" />
   <title value="AU Base Immunisation" />
   <status value="active" />
-  <date value="2021-12-21" />
+  <date value="2022-01-14" />
   <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
@@ -142,12 +142,7 @@
       <patternCoding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
         <code value="AP" />
-        <display value="Administering Provider" />
       </patternCoding>
-    </element>
-    <element id="Immunization.performer:administeredBy.function.text">
-      <path value="Immunization.performer.function.text" />
-      <fixedString value="Administering Provider" />
     </element>
     <element id="Immunization.performer:administeredBy.actor">
       <path value="Immunization.performer.actor" />
@@ -170,13 +165,7 @@
       <patternCoding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
         <code value="OP" />
-        <display value="Ordering Provider" />
       </patternCoding>
-    </element>
-    <element id="Immunization.performer:approvedBy.function.text">
-      <path value="Immunization.performer.function.text" />
-      <min value="1" />
-      <fixedString value="Ordering Provider" />
     </element>
     <element id="Immunization.performer:approvedBy.actor">
       <path value="Immunization.performer.actor" />

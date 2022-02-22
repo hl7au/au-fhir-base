@@ -1,4 +1,4 @@
-**AU Base Healthcare Service** *[[FMM Level 3](guidance.html)]*
+**AU Base Healthcare Service** *[[FMM 3](guidance.html)]*
 
 This profile defines a healthcare service structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 

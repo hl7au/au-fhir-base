@@ -1,4 +1,4 @@
-**Extension: Change Description**  *[[FMM Level 1](guidance.html)]*
+**Extension: Change Description**  *[[FMM 1](guidance.html)]*
 
 This extension applies to the List resource and  is used to represent a narrative description of the change to an item in a list entry. The narrative description may include the reason for the change to an item. 
 

@@ -1,4 +1,4 @@
-**AU Body Mass Index** *[[FMM Level 0](guidance.html)]*
+**AU Body Mass Index** *[[DRAFT 0](guidance.html)]*
 
 This profile provides an observation information structure for a patient’s vital sign body mass index (BMI) measurement.
 

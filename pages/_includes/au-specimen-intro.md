@@ -1,4 +1,4 @@
-**AU Base Specimen** *[FMM Level [1](http://build.fhir.org/versions.html#maturity)]*
+**AU Base Specimen** *[FMM [1](http://build.fhir.org/versions.html#maturity)]*
 
 This profile defines a specimen details structure that includes core localisation concepts for use in an Australian context.
 

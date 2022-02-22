@@ -1,4 +1,4 @@
-**AU Medicare Provider Number**  *[[FMM Level 1](guidance.html)]*
+**AU Medicare Provider Number**  *[[FMM 1](guidance.html)]*
 
 This identifier profile defines a Medicare provider number[<sup>[1]</sup>](https://www.servicesaustralia.gov.au/organisations/health-professionals/services/medicare/medicare-benefits-health-professionals/apply-medicare-provider-number/about-medicare-provider-numbers){:target="_blank"} [<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/601809){:target="_blank"} in an Australian context. A Medicare provider number is assigned by Services Australia under the Medicare program to practitioners who provide services that are eligible for a Medicare benefit. 
 

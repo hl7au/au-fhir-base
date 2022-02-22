@@ -1,4 +1,4 @@
-**Extension: Dispense Number** *[[FMM Level 2](guidance.html)]*
+**Extension: Dispense Number** *[[FMM 2](guidance.html)]*
 
 This extension applies to the MedicationDispense resource and is used to represent the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats.
 

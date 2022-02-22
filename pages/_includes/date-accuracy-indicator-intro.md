@@ -1,4 +1,4 @@
-**Extension: Date Accuracy Indicator** *[[FMM Level 2](guidance.html)]*
+**Extension: Date Accuracy Indicator** *[[FMM 2](guidance.html)]*
 
 This extension applies to the [date](http://hl7.org/fhir/R4/datatypes.html#date) and [dateTime](http://hl7.org/fhir/R4/datatypes.html#dateTime) data types and is used to represent the accuracy of the associated date. [<sup>[1]</sup>](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418){:target="_blank"}
 
