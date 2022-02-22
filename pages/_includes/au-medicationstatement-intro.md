@@ -26,10 +26,6 @@ A full medication definition as medicationReference or medicationCodeableConcept
 
 When supplying a medicationReference, extensions about the medication itself are not be used here. Such extensions may be referenced from the Medication resource.
 
-Where a system cannot include a coded value (only MedicationStatement.medicationCodeableConcept.text can be supplied) it is expected that:
-* where a system has a brand name, with or without a generic name, the brand name will form part of the MedicationStatement.medicationCodeableConcept.text
-* where a system has only a generic name, the generic name will form part of MedicationStatement.medicationCodeableConcept.text
-* where a system is unable to determine whether the text is brand name or generic name, the text will be supplied in MedicationStatement.medicationCodeableConcept.text
 
 #### Examples
 [Practitioner reports patient is taking Roferon-A three times a week on Mon Wed Sat](MedicationStatement-MedicationStatementexample0.html)

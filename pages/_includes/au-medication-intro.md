@@ -23,11 +23,6 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
-Where a system cannot include a coded value (only Medication.code.text can be supplied) it is expected that:
-* where a system has a brand name, with or without a generic name, the brand name will form part of the Medication.medicationCodeableConcept.text
-* where a system has only a generic name, the generic name will form part of Medication.medicationCodeableConcept.text
-* where a system is unable to determine whether the text is brand name or generic name, the text will be supplied in Medication.medicationCodeableConcept.text
-
 
 #### Examples
 [Fluconazole Dose Based Medication](Medication-MedicationDoseBased.html)
