@@ -1,4 +1,4 @@
-**AU Base Organization** *[[FMM Level 3](guidance.html)]*
+**AU Base Organization** *[[FMM 3](guidance.html)]*
 
 This profile defines an organisation structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 

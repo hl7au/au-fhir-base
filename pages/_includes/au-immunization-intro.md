@@ -1,4 +1,4 @@
-**AU Base Immunisation** *[[FMM Level 3](guidance.html)]*
+**AU Base Immunisation** *[[FMM 3](guidance.html)]*
 
 This profile defines an immunisation structure that localises core concepts, including terminology, for use in an Australian context.. 
 

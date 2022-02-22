@@ -1,4 +1,4 @@
-**AU Vitals Panel Profile** *[[FMM Level 0](guidance.html)]*
+**AU Vitals Panel Profile** *[[DRAFT 0](guidance.html)]*
 
 This profile is provided as a common representation of a vitals panel with extended coding options for SNOMED-CT usage.
 

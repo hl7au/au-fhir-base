@@ -1,4 +1,4 @@
-**Extension: Minimum Interval Between Repeats**  *[[FMM Level 1](guidance.html)]*
+**Extension: Minimum Interval Between Repeats**  *[[FMM 1](guidance.html)]*
 
 This extension applies to the MedicationRequest resource and is used to represent the minimum allowed time period between dispensing repeats.
 

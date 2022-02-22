@@ -1,4 +1,4 @@
-**AU Diagnostic Result**  *[[FMM Level 0](guidance.html)]*
+**AU Diagnostic Result**  *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel.
 

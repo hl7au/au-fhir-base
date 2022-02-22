@@ -1,4 +1,4 @@
-**AU Assertion of No Relevant Finding** *[[FMM Level 1](guidance.html)]*
+**AU Assertion of No Relevant Finding** *[[FMM 1](guidance.html)]*
 
 This profile provides an observation information structure for asserting a clinical judgement that there are no items of specific interest, e.g. allergies, no medications, for a patient.
 
