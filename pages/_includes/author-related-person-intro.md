@@ -4,4 +4,4 @@ This extension applies to any resource and is used to represent an author who is
 
 #### Examples
 
-No examples are available for this extension.
+[Current medicine list authored by related person, with medication entry as free text](List-example3.html)
