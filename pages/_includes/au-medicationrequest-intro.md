@@ -31,8 +31,6 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
-When supplying a medicationReference, extensions about the medication itself are not be used here. Such extensions may be referenced from the Medication resource.
-
 
 #### Examples
 [Prescription for Stribild  with concurrent supply](MedicationRequest-medicationrequest-example1.html)
