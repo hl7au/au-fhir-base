@@ -13,7 +13,7 @@ Extensions used in this profile:
 
 Potentially useful extensions:
 * Medication: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
-* Medication: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
+* Medication: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
 
 
 #### Usage Notes

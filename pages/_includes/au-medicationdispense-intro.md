@@ -20,7 +20,7 @@ Extensions used in this profile:
 
 Potentially useful extensions:
 * MedicationDispense: [Medication Brand Name](StructureDefinition-medication-brand-name.html) 
-* MedicationDispense: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
+* MedicationDispense: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
 
 
 

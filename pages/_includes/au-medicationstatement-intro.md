@@ -14,7 +14,7 @@ Extensions used in this profile:
 
 Potentially useful extensions:
 * MedicationStatement: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
-* MedicationStatement: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
+* MedicationStatement: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
 
 
 #### Usage Notes
