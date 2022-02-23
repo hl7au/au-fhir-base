@@ -6,12 +6,9 @@ The generic medication text name may not be the same as the subject medication (
 
 
 #### Usage Notes
-This extension is not to be the sole representation of the medication concept; it should be used in conjunction with the medication code e.g. Medication.code or MedicationStatement.medicationCodeableConcept.
+This extension is not to be the sole representation of the medication concept; it shall not be used as a substitute for medication code (e.g. Medication.code or MedicationStatement.medicationCodeableConcept). If a system can only supply generic product information, and only in text form, that information will be supplied in the text portion of that code e.g. code.text or medicationCodeableConcept.text.
 
-Where a system cannot include a medication coded value, in other words where only a text value is available it is expected that:
-* where a system has both brand name and generic name, brand name will form part of the medication code text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
-* where a system only has generic name, the generic name form part of medication code text and optionally be supplied in the generic name extension
-* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied in medication code text
+This extension only supports name portion of a medication concept, not the generic product or product pack information. It is available for use for where a system needs to separate out the generic name string for handling or other processing. It may be used in conjunction with the [Medication Brand Name](StructureDefinition-medication-brand-name.html) extension.
 
 
 #### Examples
