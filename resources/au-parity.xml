@@ -34,6 +34,15 @@
       <path value="Observation.status" />
       <fixedCode value="final" />
     </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="364325004" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <slicing>
@@ -48,19 +57,21 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="364325004" />
-      </patternCoding>
     </element>
     <element id="Observation.code.coding:parityLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="parityLOINCCode" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11977-6" />
-      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:parityLOINCCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding:parityLOINCCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="11977-6" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -72,6 +83,8 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <short value="Date, and optionally time, the observation was performed"/>
+      <definition value="Date, and optionally time, the observation was performed." />
       <min value="1" />
       <type>
         <code value="dateTime" />

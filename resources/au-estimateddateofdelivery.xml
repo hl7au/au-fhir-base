@@ -30,6 +30,15 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="161714006" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <slicing>
@@ -43,61 +52,95 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1"/>
       <short value="EDD Calculation" />
-      <min value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="161714006" />
-      </patternCoding>
     </element>
     <element id="Observation.code.coding:eddScanSNOMEDCode">
       <path value="Observation.code.coding" />
       <sliceName value="eddScanSNOMEDCode" />
       <short value="EDD by Scan (SNOMED)" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="738070007" />
-      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddScanSNOMEDCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:eddScanSNOMEDCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="738070007" />
     </element>
     <element id="Observation.code.coding:eddLMPSNOMEDCode">
       <path value="Observation.code.coding" />
       <sliceName value="eddLMPSNOMEDCode" />
       <short value="EDD by Last Menstrual Period (SNOMED)" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="289206005" />
-      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddLMPSNOMEDCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Observation.code.coding:eddLMPSNOMEDCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="289206005" />
     </element>
     <element id="Observation.code.coding:eddLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="eddLOINCCode" />
       <short value="EDD (LOINC)" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11778-8" />
-      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddLOINCCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding:eddLOINCCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="11778-8" />
     </element>
     <element id="Observation.code.coding:eddScanLOINCCode">
       <path value="Observation.code.coding" />
       <sliceName value="eddScanLOINCCode" />
       <short value="EDD by Scan (LOINC)" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11781-2" />
-      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddScanLOINCCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding:eddScanLOINCCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="11781-2" />
     </element>
     <element id="Observation.code.coding:eddLMPLOINCode">
       <path value="Observation.code.coding" />
       <sliceName value="eddLMPLOINCode" />
       <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11779-6" />
-      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:eddLMPLOINCode.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding:eddLMPLOINCode.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="11779-6" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
