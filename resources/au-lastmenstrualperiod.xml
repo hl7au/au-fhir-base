@@ -55,20 +55,20 @@
           <path value="system" />
         </discriminator>
         <rules value="open" />
-      </slicing> 
-      <min value="1"/>
+      </slicing>
     </element>
-    <element id="Observation.code.coding:lmpLOINCCode">
+    <element id="Observation.code.coding:loincLastMenstrualPeriod">
       <path value="Observation.code.coding" />
-      <sliceName value="lmpLOINCCode" />
+      <sliceName value="loincLastMenstrualPeriod" />
+      <short value="LOINC Last Menstrual Period"/>
       <max value="1" />     
     </element> 
-      <element id="Observation.code.coding:lmpLOINCCode.system">
+    <element id="Observation.code.coding:loincLastMenstrualPeriod.system">
         <path value="Observation.code.coding.system" />
         <min value="1" />
         <fixedUri value="http://loinc.org" />
       </element>
-      <element id="Observation.code.coding:lmpLOINCCode.code">
+    <element id="Observation.code.coding:loincLastMenstrualPeriod.code">
         <path value="Observation.code.coding.code" />
         <min value="1" />
         <fixedCode value="8665-2" />

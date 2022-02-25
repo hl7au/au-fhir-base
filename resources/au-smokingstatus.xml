@@ -87,19 +87,19 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1"/>
     </element>
-    <element id="Observation.code.coding:smokingLOINCCode">
+    <element id="Observation.code.coding:loincSmokingStatus">
       <path value="Observation.code.coding" />
-      <sliceName value="smokingLOINCCode" />
+      <sliceName value="loincSmokingStatus" />    
+      <short value="LOINC Smoking Status"/>
       <max value="1" />
     </element>
-    <element id="Observation.code.coding:smokingLOINCCode.system">
+    <element id="Observation.code.coding:loincSmokingStatus.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Observation.code.coding:smokingLOINCCode.code">
+    <element id="Observation.code.coding:loincSmokingStatus.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="72166-2" />

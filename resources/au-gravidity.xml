@@ -56,19 +56,19 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1"/>
     </element>
-    <element id="Observation.code.coding:gravidityLOINCCode">
+    <element id="Observation.code.coding:loincGravidity">
       <path value="Observation.code.coding" />
-      <sliceName value="gravidityLOINCCode" />
+      <sliceName value="loincGravidity" />      
+      <short value="LOINC Gravidity"/>
       <max value="1" />
     </element>      
-      <element id="Observation.code.coding:gravidityLOINCCode.system">
+    <element id="Observation.code.coding:loincGravidity.system">
         <path value="Observation.code.coding.system" />
         <min value="1" />
         <fixedUri value="http://loinc.org" />
       </element>
-      <element id="Observation.code.coding:gravidityLOINCCode.code">
+    <element id="Observation.code.coding:loincGravidity.code">
         <path value="Observation.code.coding.code" />
         <min value="1" />
         <fixedCode value="11996-6" />

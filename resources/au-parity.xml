@@ -56,19 +56,19 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
-    <element id="Observation.code.coding:parityLOINCCode">
+    <element id="Observation.code.coding:loincParity">
       <path value="Observation.code.coding" />
-      <sliceName value="parityLOINCCode" />
+      <sliceName value="loincParity" />
+      <short value="LOINC Parity"/>
       <max value="1" />
     </element>
-    <element id="Observation.code.coding:parityLOINCCode.system">
+    <element id="Observation.code.coding:loincParity.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Observation.code.coding:parityLOINCCode.code">
+    <element id="Observation.code.coding:loincParity.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="11977-6" />
