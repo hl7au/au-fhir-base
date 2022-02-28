@@ -9,6 +9,7 @@ This includes specific observations of EDD by scan, or EDD by last menstrual per
 * Observation definition includes coding as:
     * [SNOMED Estimated Date of Delivery](https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-1)
     * [LOINC Estimated Date of Delivery](https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-LOINC-1)
+* Subject is the pregnant individual.
 
 **Examples**
 
