@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-lastmenstrualperiod" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-lastmenstrualperiod" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="AULastMenstrualPeriod" />
   <title value="AU Last Menstrual Period" />
   <status value="draft" />
-  <date value="2021-11-15" />
+  <date value="2022-02-28" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -34,6 +34,15 @@
       <path value="Observation.status" />
       <fixedCode value="final" />
     </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="21840007" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <slicing>
@@ -47,21 +56,23 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="248993009" />
-      </patternCoding>
     </element>
-    <element id="Observation.code.coding:lmpLOINCCode">
+    <element id="Observation.code.coding:loincLastMenstrualPeriod">
       <path value="Observation.code.coding" />
-      <sliceName value="lmpLOINCCode" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="8665-2" />
-      </patternCoding>
-    </element>
+      <sliceName value="loincLastMenstrualPeriod" />
+      <short value="LOINC Last Menstrual Period"/>
+      <max value="1" />     
+    </element> 
+    <element id="Observation.code.coding:loincLastMenstrualPeriod.system">
+        <path value="Observation.code.coding.system" />
+        <min value="1" />
+        <fixedUri value="http://loinc.org" />
+      </element>
+    <element id="Observation.code.coding:loincLastMenstrualPeriod.code">
+        <path value="Observation.code.coding.code" />
+        <min value="1" />
+        <fixedCode value="8665-2" />
+      </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
@@ -72,6 +83,8 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <short value="Date, and optionally time, the observation was performed"/>
+      <definition value="Date, and optionally time, the observation was performed." />
       <min value="1" />
       <type>
         <code value="dateTime" />
