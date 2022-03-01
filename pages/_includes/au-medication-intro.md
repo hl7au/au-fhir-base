@@ -9,9 +9,11 @@ This profile does not force conformance to core localised concepts. It enables i
 
 #### Extensions
 Extensions used in this profile:
-* Medication: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
-* Medication: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
 * Medication.code.coding: [Medication Type](StructureDefinition-medication-type.html)
+
+Potentially useful extensions:
+* Medication: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
+* Medication: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
 
 
 #### Usage Notes
@@ -20,12 +22,6 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [Medication Package Global Trade Item Number](http://terminology.hl7.org/ValueSet/v3-GTIN) - Global Trade Item Number (GTIN) physical product reference
 * [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
-
-Where a system cannot include a coded value (only Medication.code.text can be supplied) it is expected that:
-* where a system has both brand name and generic name, brand name will form part of the Medication.code.text and optionally be supplied in brand name extension, and generic name is supplied in the generic name extension
-* where a system only has brand name, the brand name form part of Medication.code.text and optionally be supplied in the brand name extension
-* where a system only has generic name, the generic name form part of Medication.code.text and optionally be supplied in the generic name extension
-* where a system is unable to determine if the text is brand name or generic name, the text will only be supplied Medication.code.text
 
 
 #### Examples

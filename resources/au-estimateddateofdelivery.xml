@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-estimateddateofdelivery" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-estimateddateofdelivery" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="AUEstimatedDateOfDelivery" />
   <title value="AU Estimated Date of Delivery" />
   <status value="draft" />
-  <date value="2021-11-15" />
+  <date value="2022-02-28" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -30,13 +30,18 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="161714006" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
         <discriminator>
           <type value="value" />
           <path value="system" />
@@ -44,60 +49,44 @@
         <rules value="open" />
       </slicing>
       <short value="EDD Calculation" />
+    </element>
+    <element id="Observation.code.coding:snomedEDD">
+      <path value="Observation.code.coding"/>
+      <sliceName value="snomedEDD"/>
+      <short value="SNOMED Estimated Date of Delivery"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-1"/>
+      </binding>
+    </element>
+    <element id="Observation.code.coding:snomedEDD.system">
+      <path value="Observation.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
+    </element>
+    <element id="Observation.code.coding:loincEDD">
+      <path value="Observation.code.coding"/>
+      <sliceName value="loincEDD"/>
+      <short value="LOINC Estimated Date of Delivery"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/estimated-date-of-delivery-LOINC-1"/>
+      </binding>
+    </element>
+    <element id="Observation.code.coding:loincEDD.system">
+      <path value="Observation.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://loinc.org"/>
+    </element>    
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <short value="Subject is the pregnant individual"/>
+      <definition value="Subject is the pregnant individual." />
       <min value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="161714006" />
-      </patternCoding>
-    </element>
-    <element id="Observation.code.coding:eddScanSNOMEDCode">
-      <path value="Observation.code.coding" />
-      <sliceName value="eddScanSNOMEDCode" />
-      <short value="EDD by Scan (SNOMED)" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="738070007" />
-      </patternCoding>
-    </element>
-    <element id="Observation.code.coding:eddLMPSNOMEDCode">
-      <path value="Observation.code.coding" />
-      <sliceName value="eddLMPSNOMEDCode" />
-      <short value="EDD by Last Menstrual Period (SNOMED)" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <code value="289206005" />
-      </patternCoding>
-    </element>
-    <element id="Observation.code.coding:eddLOINCCode">
-      <path value="Observation.code.coding" />
-      <sliceName value="eddLOINCCode" />
-      <short value="EDD (LOINC)" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11778-8" />
-      </patternCoding>
-    </element>
-    <element id="Observation.code.coding:eddScanLOINCCode">
-      <path value="Observation.code.coding" />
-      <sliceName value="eddScanLOINCCode" />
-      <short value="EDD by Scan (LOINC)" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11781-2" />
-      </patternCoding>
-    </element>
-    <element id="Observation.code.coding:eddLMPLOINCode">
-      <path value="Observation.code.coding" />
-      <sliceName value="eddLMPLOINCode" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://loinc.org" />
-        <code value="11779-6" />
-      </patternCoding>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
