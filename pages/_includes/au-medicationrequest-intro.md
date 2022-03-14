@@ -31,6 +31,10 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
 
+#### Conversion
+NOTE: AU Base on STU3 included the extension Minimum Interval Between Repeats which is now no longer required as direct R4 support is available. 
+
+
 #### Examples
 [Prescription for Stribild  with concurrent supply](MedicationRequest-medicationrequest-example1.html)
 
