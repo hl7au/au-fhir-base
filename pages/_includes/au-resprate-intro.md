@@ -18,8 +18,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Respiration Rate Observation - tachypnoea, simple measurement](Observation-resprate-example0.html)
+[Respiration rate: tachypnoea, simple measurement](Observation-resprate-example0.html)
 
-[Respiration Rate Observation - bradypnoea](Observation-resprate-example1.html)
+[Respiration rate: bradypnoea](Observation-resprate-example1.html)
 
-[Respiration Rate Observation - normal reading](Observation-resprate-example2.html)
+[Respiration rate: normal reading](Observation-resprate-example2.html)

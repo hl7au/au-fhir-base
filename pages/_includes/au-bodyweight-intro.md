@@ -19,8 +19,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Body Weight Observation - simple](Observation-bodyweight-example0.html)
+[Body weight: simple](Observation-bodyweight-example0.html)
 
-[Body Weight Observation - self measured](Observation-bodyweight-example1.html)
+[Body weight: self measured](Observation-bodyweight-example1.html)
 
-[Body Weight Observation - with note](Observation-bodyweight-example2.html)
+[Body weight: with note](Observation-bodyweight-example2.html)

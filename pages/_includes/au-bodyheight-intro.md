@@ -19,8 +19,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Body height Observation - simple](Observation-bodyheight-example0.html)
+[Body height: simple](Observation-bodyheight-example0.html)
 
-[Body height Observation - performed by related person](Observation-bodyheight-example1.html)
+[Body height: performed by related person](Observation-bodyheight-example1.html)
 
-[Body length Observation - precise](Observation-bodyheight-example2.html)
+[Body length: precise](Observation-bodyheight-example2.html)

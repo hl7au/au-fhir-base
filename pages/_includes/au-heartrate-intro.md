@@ -18,8 +18,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Heart Rate Observation - simple](Observation-heartrate-example0.html)
+[Heart rate: simple](Observation-heartrate-example0.html)
 
-[Heart Rate Observation - wearable device generated](Observation-heartrate-example1.html)
+[Heart rate: wearable device generated](Observation-heartrate-example1.html)
 
-[Heart Rate Observation - with interpretation](Observation-heartrate-example2.html)
+[Heart rate: with interpretation](Observation-heartrate-example2.html)

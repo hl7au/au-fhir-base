@@ -19,8 +19,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Head Circumference Observation - 8 week assessment](Observation-headcircum-example0.html)
+[Head circumference: 8 week assessment](Observation-headcircum-example0.html)
 
-[Head Circumference Observation - 4 month assessment](Observation-headcircum-example1.html)
+[Head circumference: 4 month assessment](Observation-headcircum-example1.html)
 
-[Head Circumference Observation - 12 month assessment](Observation-headcircum-example2.html)
+[Head circumference: 12 month assessment](Observation-headcircum-example2.html)

@@ -12,8 +12,8 @@ Refer to that profile for an outline of its mandatory requirements.
 
 #### Examples
 
-[Body Mass Index Observation - underweight](Observation-bmi-example0.html)
+[Body mass index: underweight](Observation-bmi-example0.html)
 
-[Body Mass Index Observation - normal](Observation-bmi-example1.html)
+[Body mass index: normal](Observation-bmi-example1.html)
 
-[Body Mass Index Observation - overweight, with links to height and weight Observations](Observation-bmi-example2.html)
+[Body mass index: overweight, with links to height and weight observations](Observation-bmi-example2.html)

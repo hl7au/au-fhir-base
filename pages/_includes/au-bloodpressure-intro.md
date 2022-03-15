@@ -18,9 +18,9 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Blood Pressure - isolated diastolic hypertension](Observation-bloodpressure-example0.html)
+[Blood pressure: isolated diastolic hypertension](Observation-bloodpressure-example0.html)
 
-[Blood Pressure - systemic hypertension, with interpretation, bodySite, method and referenceRange](Observation-bloodpressure-example1.html)
+[Blood pressure: systemic hypertension, with interpretation, bodySite, method and referenceRange](Observation-bloodpressure-example1.html)
 
-[Blood Pressure - normal reading, simple structure](Observation-bloodpressure-example2.html)
+[Blood pressure: normal reading, simple structure](Observation-bloodpressure-example2.html)
 

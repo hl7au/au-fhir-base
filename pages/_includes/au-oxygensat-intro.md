@@ -18,8 +18,8 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Oxygen saturation 95%, with reference range](Observation-oxygensat-example0.html)
+[Oxygen saturation: 95%, with reference range](Observation-oxygensat-example0.html)
 
-[Oxygen saturation 89%, with interpretation](Observation-oxygensat-example1.html)
+[Oxygen saturation: 89%, with interpretation](Observation-oxygensat-example1.html)
 
-[Oxygen saturation 99%, with pulse oximeter](Observation-oxygensat-example2.html)
+[Oxygen saturation: 99%, with pulse oximeter](Observation-oxygensat-example2.html)
