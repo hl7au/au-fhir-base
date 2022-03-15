@@ -61,6 +61,22 @@
       <min value="1" />
       <fixedCode value="60621009" />
     </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Date, and optionally time, the observation was performed" />
+      <definition value="Date, and optionally time, the observation was performed." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
       <short value="Body mass index"/>
