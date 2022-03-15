@@ -6,12 +6,6 @@ It has been derived from the core R4 specification [Head Circumference](http://h
 Refer to that profile for an outline of its mandatory requirements.
 
 
-#### Usage Notes
-* Requires appropriate SNOMED CT coding
-* Compatible with core [Head Circumference](http://hl7.org/fhir/StructureDefinition/headcircum) vital signs profile.
-* Coded measurement units are restricted to metric only
-
-
 #### Extensions
 
 No extensions are used in this profile.

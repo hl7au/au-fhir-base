@@ -6,11 +6,6 @@ It has been derived from the core R4 specification [Heart Rate](http://hl7.org/f
 Refer to that profile for an outline of its mandatory requirements.
 
 
-#### Usage Notes
-* Requires appropriate SNOMED CT coding
-* Compatible with core [Heart Rate](http://hl7.org/fhir/StructureDefinition/heartrate) vital signs profile.
-
-
 #### Extensions
 
 No extensions are used in this profile.

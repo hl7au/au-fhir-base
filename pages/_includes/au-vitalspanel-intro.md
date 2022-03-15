@@ -6,11 +6,6 @@ It has been derived from the core R4 specification [Vital Signs Panel](http://hl
 Refer to that profile for an outline of its mandatory requirements.
 
 
-#### Usage Notes
-* Requires appropriate SNOMED CT coding
-* Compatible with core [Vital Signs Panel](http://hl7.org/fhir/StructureDefinition/vitalspanel) profile.
-
-
 #### Extensions
 
 No extensions are used in this profile.

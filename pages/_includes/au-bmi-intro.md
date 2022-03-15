@@ -6,9 +6,10 @@ It has been derived from the core R4 specification [Body Mass Index](http://hl7.
 Refer to that profile for an outline of its mandatory requirements.
 
 
-#### Usage Notes
-* Requires appropriate SNOMED CT coding
-* Compatible with core [Body Mass Index](http://hl7.org/fhir/StructureDefinition/bmi) vital signs profile.
+#### Extensions
+
+No extensions are used in this profile.
+
 
 #### Examples
 

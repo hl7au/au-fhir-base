@@ -6,14 +6,14 @@ It has been derived from the core R4 specification [Blood Pressure](http://hl7.o
 Refer to that profile for an outline of its mandatory requirements.
 
 
-#### Usage Notes
-* Requires appropriate SNOMED CT coding
-* Both the systolic and diastolic components must be present and missing values for either can be represented with Observation.component.dataAbsentReason
-
-
 #### Extensions
 
 No extensions are used in this profile.
+
+
+#### Usage Notes
+
+* Both the systolic and diastolic components must be present and missing values for either can be represented with Observation.component.dataAbsentReason
 
 
 #### Examples
