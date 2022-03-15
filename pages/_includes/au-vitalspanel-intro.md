@@ -13,8 +13,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Vital Signs Panel](Observation-vitalspanel-example0.html)
-
-[Vital Signs Panel](Observation-vitalspanel-example1.html)
-
-[Vital Signs Panel](Observation-vitalspanel-example2.html)
+[Vital signs panel: with respiratory rate, heart rate, blood pressure and body temperature hasMember observations](Observation-vitalspanel-example0.html)
