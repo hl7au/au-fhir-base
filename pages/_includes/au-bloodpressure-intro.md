@@ -13,7 +13,7 @@ No extensions are used in this profile.
 
 #### Usage Notes
 
-* Both the systolic and diastolic components must be present and missing values for either can be represented with Observation.component.dataAbsentReason
+Both the systolic and diastolic components must be present and missing values for either can be represented with Observation.component.dataAbsentReason.
 
 
 #### Examples
