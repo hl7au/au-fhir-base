@@ -10,6 +10,9 @@ This profile does not force conformance to core localised concepts. It enables i
 #### Extensions
 No extensions are used in this profile.
 
+Potentially useful extensions:
+* Immunization: [Vaccine Vial Serial Number](StructureDefinition-vaccine-serial-number.html) 
+
 
 #### Examples
 
@@ -18,3 +21,5 @@ No extensions are used in this profile.
 [Administration of a vaccine with administering provider and protocol](Immunization-immunization-example2.html)
 
 [Non-administration of varicella-zoster live vaccine due to refusal](Immunization-immunization-example0.html)
+
+[Administration of Pfizer Comirnaty dose 1 for Sarah Simmons](Immunization-example3.html)
