@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
+    <id value="example1"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+    </meta>
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122"/>
+        <value value="2793d1c8-4e99-11e9-8647-d663bd873d93"/>
+    </identifier>
+    <status value="current"/>
+    <mode value="working"/>
+    <code>
+        <coding>
+            <system
+                value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+            <code value="101.32009"/>
+            <display value="Current Medicine"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example0"/>
+    </subject>
+    <date value="2018-10-24"/>
+<source>
+    <reference value="Practitioner/example1"/>
+</source>        
+   <entry>
+       <item>
+           <reference value="Observation/norelevantfinding-example3"/>
+       </item>
+   </entry>
+</List>
+
+
