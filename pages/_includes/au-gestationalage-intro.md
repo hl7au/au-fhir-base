@@ -1,6 +1,6 @@
-**AU Gestational Age Profile** *[[FMM Level 0](guidance.html)]*
+**AU Gestational Age** *[[DRAFT 0](guidance.html)]*
 
-This profile is provided as a common representation of gestational age related to pregnancy.
+This profile defines an observation structure that represents the gestational age related to pregnancy, for use in an Australian context.
 This may include specific observation of gestational age by scan, or gestational age by last menstrual period (LMP).
 
 #### Usage Notes
