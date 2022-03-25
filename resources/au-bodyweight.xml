@@ -2,48 +2,39 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-bodyweight" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-bodyweight" />
-  <version value="0.1.0" />
+  <version value="1.0.2" />
   <name value="AUBodyWeight" />
   <title value="AU Body Weight" />
   <status value="draft" />
-  <description value="Weight observation with extended observation type coding" />
+  <date value="2022-02-17" />
+  <publisher value="Health Level Seven Australia" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile provides an observation information structure for a patient’s vital sign weight measurement." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved. This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. All copies of this resource must include this copyright statement and all information contained in this statement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc." />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Pattern" />
-  </mapping>
-  <mapping>
-    <identity value="sct-concept" />
-    <uri value="http://snomed.info/conceptdomain" />
-    <name value="SNOMED CT Concept Domain Binding" />
-  </mapping>
-  <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/fivews" />
-    <name value="FiveWs Pattern Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="sct-attr" />
-    <uri value="http://snomed.org/attributebinding" />
-    <name value="SNOMED CT Attribute Binding" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/bodyweight" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <short value="Body weight"/>
+      <definition value="Body weight observation using a standard LOINC code, a SNOMED CT code and a metric UCUM unit of measure."/>
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
@@ -52,40 +43,41 @@
       <path value="Observation.code.coding" />
       <min value="2" />
     </element>
-    <element id="Observation.code.coding:SNOMED">
+    <element id="Observation.code.coding:snomedBodyWeightCode	">
       <path value="Observation.code.coding" />
-      <sliceName value="SNOMED" />
+      <sliceName value="snomedBodyWeightCode" />
+      <short value="SNOMED CT Body Weight"/>
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding:SNOMED.system">
+    <element id="Observation.code.coding:snomedBodyWeightCode.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code.coding:SNOMED.code">
+    <element id="Observation.code.coding:snomedBodyWeightCode.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
       <fixedCode value="27113001" />
     </element>
-    <element id="Observation.value[x]:valueQuantity">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueQuantity" />
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Date, and optionally time, the observation was performed" />
+      <definition value="Date, and optionally time, the observation was performed." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <short value="Body weight"/>
     </element>
     <element id="Observation.value[x]:valueQuantity.code">
       <path value="Observation.value[x].code" />
       <binding>
         <strength value="required" />
-        <description value="Metric Common UCUM units for Body Weight." />
-        <valueSet value="http://terminology.hl7.org.au/ValueSet/ucum-bodyweight" />
-      </binding>
-    </element>
-    <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/metric-body-weight-units-1" />
       </binding>
     </element>
   </differential>
