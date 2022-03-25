@@ -1,11 +1,26 @@
-**AU Blood Pressure Profile** *[[DRAFT 0](guidance.html)]*
+**AU Blood Pressure** *[[DRAFT 0](guidance.html)]*
 
-This profile is provided as a common representation of blood pressure with extended coding option for SNOMED-CT usage
+This profile provides an observation information structure for a patient’s vital sign blood pressure measurement.
+
+It has been derived from the core R4 specification [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bp) vital signs profile. 
+Refer to that profile for an outline of its mandatory requirements.
+
+
+#### Extensions
+
+No extensions are used in this profile.
+
 
 #### Usage Notes
-* Requires appropriate SNOMED coding
-* Compatible with core [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bp) vital signs profile.
 
-**Examples**
+Both the systolic and diastolic components must be present and missing values for either can be represented with Observation.component.dataAbsentReason.
 
-[Blood Pressure Observation](Observation-bloodpressure-example0.html)
+
+#### Examples
+
+[Blood pressure: isolated diastolic hypertension](Observation-bloodpressure-example0.html)
+
+[Blood pressure: systemic hypertension, with interpretation, bodySite, method and referenceRange](Observation-bloodpressure-example1.html)
+
+[Blood pressure: normal reading, simple structure](Observation-bloodpressure-example2.html)
+

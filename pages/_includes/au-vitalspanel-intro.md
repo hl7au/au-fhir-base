@@ -1,11 +1,16 @@
-**AU Vitals Panel Profile** *[[DRAFT 0](guidance.html)]*
+**AU Vitals Panel** *[[DRAFT 0](guidance.html)]*
 
-This profile is provided as a common representation of a vitals panel with extended coding options for SNOMED-CT usage.
+This profile provides an observation information structure for a patient’s vital sign panel.
 
-#### Usage Notes
-* Requires appropriate SNOMED coding
-* Compatible with core [Vital Signs Panel](http://hl7.org/fhir/StructureDefinition/vitalspanel) profile.
+It has been derived from the core R4 specification [Vital Signs Panel](http://hl7.org/fhir/StructureDefinition/vitalspanel) vital signs profile. 
+Refer to that profile for an outline of its mandatory requirements.
 
-**Examples**
 
-[Vital Signs Panel](Observation-vitalspanel-example0.html)
+#### Extensions
+
+No extensions are used in this profile.
+
+
+#### Examples
+
+[Vital signs panel: with member observations respiratory rate, heart rate, blood pressure and body temperature](Observation-vitalspanel-example0.html)
