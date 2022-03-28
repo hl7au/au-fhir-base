@@ -30,7 +30,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Strength](StructureDefinition-medication-strength.html) *[[DRAFT 0](guidance.html)]* - text only medication strength
 * [Medication Type](StructureDefinition-medication-type.html) *[[FMM 2](guidance.html)]* - drug code classification
 * [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) *[[FMM 2](guidance.html)]* - grounds for supplying multiple repeats of a medication prescription at one time
-
+* [Vaccine Vial Serial Number](StructureDefinition-vaccine-serial-number.html) *[[DRAFT 0](guidance.html)]* - serial number of the vial of a vaccine
 
 ## Clinical
 * [Author as a RelatedPerson](StructureDefinition-author-related-person.html) *[[FMM 1](guidance.html)]* - author as a related person
