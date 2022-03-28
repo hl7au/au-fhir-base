@@ -5,7 +5,7 @@ This profile defines an observation structure that represents smoking status, i.
 At the time of publication of this guide this profile is compatible with the International Patient Summary implementation guide.
 
 
-**Examples**
+#### Examples
 
 There are no examples available for this profile.
 
