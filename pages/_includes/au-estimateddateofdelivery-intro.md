@@ -7,6 +7,6 @@ This profile supports recording specific observations at a point in time of EDD 
 At the time of publication of this guide this profile is compatible with the International Patient Summary implementation guide.
 
 
-**Examples**
+#### Examples
 
 There are no examples available for this profile.
