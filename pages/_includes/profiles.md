@@ -54,7 +54,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Vital Signs Panel](StructureDefinition-au-vitalspanel.html) *[[DRAFT 0](guidance.html)]* - vital signs panel
 
 ## Lifestyle Factor Profiles
-* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[DRAFT 0](guidance.html)]* - smoking status lifestyle factor record
+* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[DRAFT 0](guidance.html)]* - smoking status lifestyle factor at a point in time
 
 ## Pregnancy Related Profiles
 * [AU Estimated Date of Delivery](StructureDefinition-au-estimateddateofdelivery.html) *[[DRAFT 0](guidance.html)]* - estimated date of delivery; may be my scan or last menstrual period
