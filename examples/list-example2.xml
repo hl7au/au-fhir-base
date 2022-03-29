@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <List xmlns="http://hl7.org/fhir">
-    <id value="0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
+    <id value="example2"/>
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
     </meta>
@@ -140,13 +140,13 @@
     </text>
     <contained>
         <MedicationStatement xmlns="http://hl7.org/fhir">
-            <id value="7e6620b8-4ea9-11e9-8647-d663bd873d93"/>
+            <id value="medicationstatement-456"/>
             <status value="active"/>
             <medicationCodeableConcept>
                 <text value="Multi-vitamins"/>
             </medicationCodeableConcept>
             <subject>
-                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+                <reference value="#patient-123"/>
             </subject>
             <dateAsserted value="2019-03-15"/>
             <dosage>
@@ -156,13 +156,13 @@
     </contained>
     <contained>
         <MedicationStatement xmlns="http://hl7.org/fhir">
-            <id value="a4d66514-4ea9-11e9-8647-d663bd873d93"/>
+            <id value="medicationstatement-678"/>
             <status value="active"/>
             <medicationCodeableConcept>
                 <text value="Spiriva (tiotropium bromide 18mg per inhalation) inhalant"/>
             </medicationCodeableConcept>
             <subject>
-                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+                <reference value="#patient-123"/>
             </subject>
             <dateAsserted value="2019-03-15"/>
             <reasonCode>
@@ -175,7 +175,7 @@
     </contained>
     <contained>
         <MedicationStatement>
-            <id value="70c4f4b8-4f24-11e9-8647-d663bd873d9"/>
+            <id value="medicationstatement-234"/>
             <status value="active"/>
             <medicationCodeableConcept>
                 <coding>
@@ -185,7 +185,7 @@
                 <text value="paracetamol 665 mg modified release tablet"/>
             </medicationCodeableConcept>
             <subject>
-                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+                <reference value="#patient-123"/>
             </subject>
             <reasonCode>
                 <text value="Osteoarthritis, pain releif"/>
@@ -198,7 +198,7 @@
     </contained>
     <contained>
         <MedicationStatement>
-            <id value="e2ff28ac-4f27-11e9-8647-d663bd873d93"/>
+            <id value="medicationstatement-890"/>
             <status value="active"/>
             <medicationCodeableConcept>
                 <coding>
@@ -208,7 +208,7 @@
                 <text value="cilostazol 100 mg tablet"/>
             </medicationCodeableConcept>
             <subject>
-                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+                <reference value="#patient-123"/>
             </subject>
             <reasonCode>
                 <text value="Blood thinning"/>
@@ -220,7 +220,7 @@
     </contained>
     <contained>
         <MedicationStatement>
-            <id value="da074f86-4f27-11e9-8647-d663bd873d93"/>
+            <id value="medicationstatement-246"/>
             <status value="stopped"/>
             <medicationCodeableConcept>
                 <coding>
@@ -230,7 +230,7 @@
                 <text value="Ibuprofen"/>
             </medicationCodeableConcept>
             <subject>
-                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+                <reference value="#patient-123"/>
             </subject>
             <reasonCode>
                 <text value="Allergic reaction"/>
@@ -239,7 +239,7 @@
     </contained>
     <contained>
         <Patient>
-            <id value="cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+            <id value="patient-123"/>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
                 <valueCoding>
                     <system
@@ -274,16 +274,16 @@
                 <country value="Australia"/>
             </address>
             <generalPractitioner>
-                <reference value="#36294aee-4eab-11e9-8647-d663bd873d93"/>
+                <reference value="#gp-13579"/>
             </generalPractitioner>
             <managingOrganization>
-                <reference value="#b6fab368-623b-45a6-a133-2d77b69663a0"/>
+                <reference value="#org-24680"/>
             </managingOrganization>
         </Patient>
     </contained>
     <contained>
         <Practitioner>
-            <id value="36294aee-4eab-11e9-8647-d663bd873d93"/>
+            <id value="gp-13579"/>
             <name>
                 <family value="Grey"/>
                 <prefix value="Dr"/>
@@ -292,7 +292,7 @@
     </contained>
     <contained>
         <Practitioner>
-            <id value="bd00bd7a-4ffc-11e9-8647-d663bd873d93"/>
+            <id value="dr-97531"/>
             <identifier>
                 <type>
                     <coding>
@@ -352,13 +352,13 @@
     </contained>
     <contained>
         <Organization>
-            <id value="b6fab368-623b-45a6-a133-2d77b69663a0"/>
+            <id value="org-24680"/>
             <name value="Grey Medical Practice"/>
         </Organization>
     </contained>
     <contained>
         <Encounter>
-            <id value="28060b9a-4ffb-11e9-8647-d663bd873d93"/>
+            <id value="enc-24680"/>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
                 <valueString
                     value="Patient presented with weakness over the last couple of days. No other symptoms. Revised patient's medications. Advised patient to see the usual GPs clinic for further consultation and review."
@@ -387,7 +387,7 @@
                 </coding>
             </priority>
             <subject>
-                <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+                <reference value="#patient-123"/>
             </subject>
             <participant>
                 <type>
@@ -397,7 +397,7 @@
                     </coding>
                 </type>
                 <individual>
-                    <reference value="#bd00bd7a-4ffc-11e9-8647-d663bd873d93"/>
+                    <reference value="#dr-97531"/>
                 </individual>
             </participant>
             <period>
@@ -420,14 +420,14 @@
         <text value="Medicine List"/>
     </code>
     <subject>
-        <reference value="#cfd14b34-4eaa-11e9-8647-d663bd873d93"/>
+        <reference value="#patient-123"/>
     </subject>
     <encounter>
-        <reference value="#28060b9a-4ffb-11e9-8647-d663bd873d93"/>
+        <reference value="#enc-24680"/>
     </encounter>
     <date value="2019-03-15"/>
     <source>
-        <reference value="#bd00bd7a-4ffc-11e9-8647-d663bd873d93"/>
+        <reference value="#dr-97531"/>
     </source>
     <entry>
         <flag>
@@ -438,7 +438,7 @@
             </coding>
         </flag>
         <item>
-            <reference value="#7e6620b8-4ea9-11e9-8647-d663bd873d93"/>
+            <reference value="#medicationstatement-456"/>
         </item>
     </entry>
     <entry>
@@ -453,7 +453,7 @@
             </coding>
         </flag>
         <item>
-            <reference value="#a4d66514-4ea9-11e9-8647-d663bd873d93"/>
+            <reference value="#medicationstatement-678"/>
         </item>
     </entry>
     <entry>
@@ -465,7 +465,7 @@
             </coding>
         </flag>
         <item>
-            <reference value="#70c4f4b8-4f24-11e9-8647-d663bd873d9"/>
+            <reference value="#medicationstatement-234"/>
         </item>
     </entry>
     <entry>
@@ -480,7 +480,7 @@
             </coding>
         </flag>
         <item>
-            <reference value="#e2ff28ac-4f27-11e9-8647-d663bd873d93"/>
+            <reference value="#medicationstatement-890"/>
         </item>
     </entry>
     <entry>
@@ -492,7 +492,7 @@
             </coding>
         </flag>
         <item>
-            <reference value="#da074f86-4f27-11e9-8647-d663bd873d93"/>
+            <reference value="#medicationstatement-246"/>
         </item>
     </entry>
 </List>
