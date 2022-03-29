@@ -10,5 +10,5 @@ This extension may be used in conjunction with the flag element of a list entry,
 
 #### Examples
 
-[Current and ceased medicines](List-0ebc46a8-4ea8-11e9-8647-d663bd873d93.html)
+[Current and ceased medicines](List-example2.html)
 
