@@ -16,7 +16,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Ethnicity](StructureDefinition-ethnicity.html) *[[DRAFT 0](guidance.html)]* - patient demographic cultural and ethnic identity  
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) *[[FMM 3](guidance.html)]* - identifier record status 
 * [IHI Status](StructureDefinition-ihi-status.html) *[[FMM 3](guidance.html)]* - identifier status 
-* [IHI Verified Date](StructureDefinition-ihi-verified.html) *[[FMM 1](guidance.html)]* - identifier verification date
+* [IHI Verified Date](StructureDefinition-ihi-verified-date.html) *[[FMM 1](guidance.html)]* - identifier verification date
 * [No Fixed Address](StructureDefinition-no-fixed-address.html) *[[FMM 2](guidance.html)]* - address flag
 
 
@@ -61,6 +61,6 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) *[[FMM 2](guidance.html)]* - accuracy description for dates
 * [IHI Record Status](StructureDefinition-ihi-record-status.html) *[[FMM 3](guidance.html)]* - identifier record status 
 * [IHI Status](StructureDefinition-ihi-status.html) *[[FMM 3](guidance.html)]* - identifier status 
-* [IHI Verified Date](StructureDefinition-ihi-verified.html) *[[FMM 1](guidance.html)]* - identifier verification date
+* [IHI Verified Date](StructureDefinition-ihi-verified-date.html) *[[FMM 1](guidance.html)]* - identifier verification date
 * [Medication Type](StructureDefinition-medication-type.html) *[[FMM 2](guidance.html)]* - drug code classification
 * [Identifier Routability](StructureDefinition-identifier-routability.html) *[[FMM 1](guidance.html)]* - supports identifier selection for routing
