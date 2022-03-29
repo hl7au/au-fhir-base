@@ -7,4 +7,3 @@ An address identifier does not form part of the address itself, e.g. a street nu
 #### Examples
 
 [Postal address (with DPID and G-NAF Identifier) and work address in Darwin, NT](Patient-address-example3.html)
-
