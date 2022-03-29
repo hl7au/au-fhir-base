@@ -1,4 +1,1 @@
-This profile contains the following variations from [Extension](http://hl7.org/fhir/R4/Extension):
-
-1. <span style='color:green'> url </span> 
-   * <span style='color:green'> valueCoding </span> 
+Note: This summary file is kept solely for IG Publisher and is not maintained.

@@ -20,13 +20,13 @@ When capturing a related person as the author of the list, the extension Author 
 
 #### Examples
 
-[Current medicine list, authored by practitioner role, with referenced medication statements](List-e0a6c4a6-4e97-11e9-8647-d663bd873d93.html)
+[Current medicine list, authored by practitioner role, with referenced medication statements](List-example0.html)
 
-[Current medicine list, source of practitioner, with assertion of no known current medicines](List-bdaf4fda-4e98-11e9-8647-d663bd873d93.html)
+[Current medicine list, source of practitioner, with assertion of no known current medicines](List-example1.html)
 
 [Current medicine on discharge (Bundle)](Bundle-9309d080-4e97-11e9-8647-d663bd873d93.html)
 
-[Current and ceased medicines](List-0ebc46a8-4ea8-11e9-8647-d663bd873d93.html)
+[Current and ceased medicines](List-example2.html)
 
 [Current medicine list authored by related person, with medication entry as free text](List-example3.html)
 
