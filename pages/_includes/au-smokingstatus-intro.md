@@ -1,11 +1,15 @@
-**AU Base Smoking Status** *[[DRAFT 0](guidance.html)]*
+**AU Smoking Status** *[[DRAFT 0](guidance.html)]*
 
-This profile defines an observation structure that represents smoking status, for use in an Australian context. It is compatible for use with the International Patient Summmry implementation guide
+This profile defines an observation structure that represents smoking status, i.e. current behaviour for all types of tobacco smoking, for use in an Australian context.
 
-#### Usage Notes
-* Is for use to record smoking status at a point in time.
-* Compatible with the International Patient Summary implementation guide.
+At the time of publication of this guide this profile is compatible with the International Patient Summary implementation guide.
 
-**Examples**
 
-TODO
+#### Extensions
+No extensions are used in this profile.
+
+
+#### Examples
+
+There are no examples available for this profile.
+
