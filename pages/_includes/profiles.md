@@ -58,9 +58,9 @@ These Profiles have been defined for this implementation guide.
 
 ## Pregnancy Related Profiles
 * [AU Estimated Date of Delivery](StructureDefinition-au-estimateddateofdelivery.html) *[[DRAFT 0](guidance.html)]* - estimated date of delivery; may be my scan or last menstrual period
-* [AU Gravidity](StructureDefinition-au-gravidity.html) *[[DRAFT 0](guidance.html)]* - gravidity at a point in time record
-* [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) *[[DRAFT 0](guidance.html)]* - last menstrual period record
-* [AU Parity](StructureDefinition-au-parity.html) *[[DRAFT 0](guidance.html)]* - parity at a point in time record
+* [AU Gravidity](StructureDefinition-au-gravidity.html) *[[DRAFT 0](guidance.html)]* - gravidity at a point in time
+* [AU Last Menstrual Period](StructureDefinition-au-lastmenstrualperiod.html) *[[DRAFT 0](guidance.html)]* - last menstrual period at a point in time
+* [AU Parity](StructureDefinition-au-parity.html) *[[DRAFT 0](guidance.html)]* - parity at a point in time
 
 ## Composition Profiles
 * [AU Base Composition](StructureDefinition-au-composition.html) *[[FMM 2](guidance.html)]* - composition pattern aligned with local CDA requirements
