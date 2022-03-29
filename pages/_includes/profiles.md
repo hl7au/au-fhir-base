@@ -97,6 +97,7 @@ These Profiles have been defined for this implementation guide.
 * [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
 * [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU National Provider Identifier At Organisation](StructureDefinition-au-nationalprovideridentifieratorganisation.html) *[[FMM 1](guidance.html)]* - identifier profile for a National Provider Identifier at Organisation (NPIO)
+* [AU PAI-D Identifier](StructureDefinition-au-paididentifier.html) *[[DRAFT 0](guidance.html)]* - identifier profile for a My Health Record Assigned Identity - Device (PAI-D)
 * [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) *[[FMM 1](guidance.html)]* - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) *[[FMM 1](guidance.html)]* - identifier profile for an Pensioner Concession Card number
