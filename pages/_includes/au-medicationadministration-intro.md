@@ -8,7 +8,8 @@ This profile does not force conformance to core localised concepts. It enables i
 
 
 #### Extensions
-No extensions are available for this profile.
+Extensions used in this profile:
+* Medication.code.coding: [Medication Type](StructureDefinition-medication-type.html)
 
 
 #### Usage Notes

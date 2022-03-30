@@ -8,7 +8,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [AHPRA Profession Details](StructureDefinition-ahpraprofession-details.html) *[[FMM 1](guidance.html)]* - practitioner qualification
 * [AHPRA Registration Details](StructureDefinition-ahpraregistration-details.html) *[[FMM 1](guidance.html)]* - practitioner qualification
 * [Associated Healthcare Service](StructureDefinition-associated-healthcareservice.html) *[[FMM 1](guidance.html)]* - Healthcare service associated with a resource
-* [Australian Indigenous Status](StructureDefinition-indigenous-status.html) *[[FMM 3](guidance.html)]* - patient indigenous status
+* [Australian Indigenous Status](StructureDefinition-indigenous-status.html) *[[FMM 4](guidance.html)]* - patient indigenous status
 * [Contact Purpose](StructureDefinition-contact-purpose.html) *[[FMM 1](guidance.html)]* - the purpose for which a contact can be reached
 * [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) *[[FMM 2](guidance.html)]* - accuracy description for dates
 * [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) *[[FMM 1](guidance.html)]* - the date a person first arrived in Australia, from another country, with the intention of living in Australia for one year or more
@@ -29,10 +29,8 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) *[[FMM 1](guidance.html)]* - text generic name that can be added to profiles
 * [Medication Strength](StructureDefinition-medication-strength.html) *[[DRAFT 0](guidance.html)]* - text only medication strength
 * [Medication Type](StructureDefinition-medication-type.html) *[[FMM 2](guidance.html)]* - drug code classification
-* [Minimum Interval Between Repeats](StructureDefinition-minimum-interval-between-repeats.html) *[[FMM 1](guidance.html)]* - minimum allowed dispensing interval
 * [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) *[[FMM 2](guidance.html)]* - grounds for supplying multiple repeats of a medication prescription at one time
 * [Vaccine Vial Serial Number](StructureDefinition-vaccine-serial-number.html) *[[DRAFT 0](guidance.html)]* - serial number of the vial of a vaccine
-
 
 ## Clinical
 * [Author as a RelatedPerson](StructureDefinition-author-related-person.html) *[[FMM 1](guidance.html)]* - author as a related person
