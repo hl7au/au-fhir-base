@@ -1,3 +1,1 @@
-This profile contains the following variations from [ProcedureRequest](http://hl7.org/fhir/R4/ProcedureRequest):
-
-tbd
+Note: This summary file is kept solely for IG Publisher and is not maintained.

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="ihi-verified" />
-  <url value="http://hl7.org.au/fhir/StructureDefinition/ihi-verified" />
-  <version value="2.1.2"/>
-  <name value="IHIVerified" />
+  <id value="ihi-verified-date" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/ihi-verified-date" />
+  <version value="2.2.2"/>
+  <name value="IHIVerifiedDate" />
   <title value="IHI Verification Date"/>
   <status value="active" />
-  <date value="2021-11-15" />
+  <date value="2022-03-29" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="The date that the IHI was verified with HI Services." />
+  <description value="This extension applies to the Identifier data type and is used to represent the date, and optionally time, that the IHI was verified with HI Services." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -37,12 +37,12 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="IHI Verification Date" />
-      <definition value="The date that the IHI was verified with HI Services." />
+      <definition value="The date, and optionally time, that the IHI was verified with HI Services." />
       <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ihi-verified" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ihi-verified-date" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

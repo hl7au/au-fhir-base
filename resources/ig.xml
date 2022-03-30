@@ -2,12 +2,12 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="au-base"/>
   <url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
-  <version value="2.1.0"/>
+  <version value="2.2.0"/>
   <name value="AUBaseImplementationGuide"/>
   <title value="AU Base Implementation Guide"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2019-10-09"/>
+  <date value="2022-03-31"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -231,7 +231,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ihi-verified"/>
+        <reference value="StructureDefinition/ihi-verified-date"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -890,13 +890,6 @@
     <resource>
       <reference>
         <reference value="ValueSet/medication-type"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/smoking-status"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -2076,7 +2069,8 @@
       </reference>
       <name value="Prescription with brand and generic name extensions"/>
       <description value="Prescription with brand and generic name extensions"/>
-      <exampleBoolean value="false"/>
+    <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2084,6 +2078,8 @@
       </reference>
       <name value="Encounter with description"/>
       <description value="Encounter with encounter description"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2091,20 +2087,26 @@
       </reference>
       <name value="Encounter with narative description"/>
       <description value="Encounter with narrative description"/>
+            <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="List/e0a6c4a6-4e97-11e9-8647-d663bd873d93"/>
+        <reference value="List/example0"/>
       </reference>
       <name value="Medicine List example with referenced entries"/>
       <description value="Medicine List example with referenced entries"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="List/bdaf4fda-4e98-11e9-8647-d663bd873d93"/>
+        <reference value="List/example1"/>
       </reference>
       <name value="Medicine List example - no known current medicine"/>
       <description value="Medicine List example - no known current medicine"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2112,13 +2114,17 @@
       </reference>
       <name value="Medicine List in a bundle"/>
       <description value="Medicine List in a bundle"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="List/0ebc46a8-4ea8-11e9-8647-d663bd873d93"/>
+        <reference value="List/example2"/>
       </reference>
       <name value="Medicine List with changes"/>
       <description value="Medicine List with changes"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2230,6 +2236,8 @@
       </reference>
       <name value="Sex Assigned at Birth observation - intersex"/>
       <description value="Sex Assigned at Birth observation - intersex"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2237,6 +2245,8 @@
       </reference>
       <name value="Sex Assigned at Birth observation - male"/>
       <description value="Sex Assigned at Birth observation - male"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2244,6 +2254,8 @@
       </reference>
       <name value="Sex Assigned at Birth observation - female"/>
       <description value="Sex Assigned at Birth observation - female"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <!-- AU Base Substance examples-->
     <resource>
@@ -2252,6 +2264,8 @@
       </reference>
       <name value="Body Substance example - eppiglottic mucus"/>
       <description value="Body Substance example - eppiglottic mucus"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2259,6 +2273,8 @@
       </reference>
       <name value="Allergen - peanuts"/>
       <description value="Allergen - peanuts"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -2266,6 +2282,8 @@
       </reference>
       <name value="Medication substance with two active ingredients"/>
       <description value="Medication substance with two active ingredients"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
     </resource>    
     <resource>
       <reference>
