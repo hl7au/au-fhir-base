@@ -2,8 +2,7 @@
 
 This profile provides an observation information structure for a patient’s vital sign head circumference measurement.
 
-It has been derived from the core R4 specification [Head Circumference](http://hl7.org/fhir/StructureDefinition/headcircum) vital signs profile. 
-Refer to that profile for an outline of its mandatory requirements.
+This profile identifies the additional cardinality, value sets and other constraints that build on [Head Circumference](http://hl7.org/fhir/StructureDefinition/headcircum) for use in an Australian context. 
 
 
 #### Extensions

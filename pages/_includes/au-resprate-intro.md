@@ -2,8 +2,7 @@
 
 This profile provides an observation information structure for a patient’s vital sign respiration rate measurement.
 
-It has been derived from the core R4 specification [Respiration Rate](http://hl7.org/fhir/StructureDefinition/resprate) vital signs profile. 
-Refer to that profile for an outline of its mandatory requirements.
+This profile identifies the additional cardinality, value sets and other constraints that build on [Respiration Rate](http://hl7.org/fhir/StructureDefinition/resprate) for use in an Australian context. 
 
 
 #### Extensions
