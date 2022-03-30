@@ -7,7 +7,7 @@ This identifier profile defines an Individual Healthcare Identifier (IHI)[<sup>[
 Extensions used in this profile:
 * Identifier: [IHI Status](StructureDefinition-ihi-status.html)
 * Identifier: [IHI Record Status](StructureDefinition-ihi-record-status.html)
-* Identifier: [IHI Verified](StructureDefinition-ihi-verified.html)
+* Identifier: [IHI Verified Date](StructureDefinition-ihi-verified-date.html)
 
 
 #### Usage Notes

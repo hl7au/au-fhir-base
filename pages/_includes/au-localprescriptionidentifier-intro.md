@@ -22,3 +22,5 @@ See the Australian Digital Health Agency's [R4 FAQ](https://github.com/AuDigital
 [Prescription for Stribild  with concurrent supply](MedicationRequest-medicationrequest-example1.html)
 
 [Prescription for paracetamol + codeine](MedicationRequest-medicationrequest-example0.html)
+
+[Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
