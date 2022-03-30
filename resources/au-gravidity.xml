@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-gravidity" />
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-gravidity" />
-  <version value="1.0.1" />
+  <version value="1.0.2" />
   <name value="AUGravidity" />
   <title value="AU Gravidity" />
   <status value="draft" />
-  <date value="2022-02-28" />
+  <date value="2022-03-29" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -15,14 +15,14 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile defines an observation structure that represents the gravidity count related to pregnancy, for use in an Australian context." />
+  <description value="This profile defines an observation structure that represents the gravidity count related to pregnancy at a point in time, for use in an Australian context." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
       <code value="AU" />
     </coding>
   </jurisdiction>
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved. This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. All copies of this resource must include this copyright statement and all information contained in this statement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -30,6 +30,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="Gravidity" />
+      <definition value="An observation of gravidity count related to pregnancy at a point in time." />
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
@@ -99,7 +104,7 @@
         <code value="Quantity" />
       </type>
       <constraint>
-        <key value="inv0-gravidity" />
+        <key value="inv-gravidity-value-0" />
         <severity value="error" />
         <human value="gravidity must be a whole number" />
         <expression value="value.toString().contains('.').not()" />
