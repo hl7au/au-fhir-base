@@ -1,6 +1,6 @@
 **AU Base Medication Administration**  *[[FMM 2](guidance.html)]*
 
-This profile defines a medication administration structure including core localisation concepts for use in an Australian context. 
+This profile defines a medication administration structure that localises core concepts, including terminology, for use in an Australian context.
 
 The purpose of this profile is to provide national level agreement on core localised concepts. 
 
