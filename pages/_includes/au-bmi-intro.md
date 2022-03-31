@@ -2,8 +2,7 @@
 
 This profile provides an observation information structure for a patient’s vital sign body mass index (BMI) measurement.
 
-It has been derived from the core R4 specification [Body Mass Index](http://hl7.org/fhir/StructureDefinition/bmi) vital signs profile. 
-Refer to that profile for an outline of its mandatory requirements.
+This profile identifies the additional cardinality, value sets and other constraints that build on [Body Mass Index](http://hl7.org/fhir/StructureDefinition/bmi) for use in an Australian context. 
 
 
 #### Extensions
