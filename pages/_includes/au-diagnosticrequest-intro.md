@@ -23,4 +23,4 @@ An imaging order is preferred to be a member of the [Imaging Procedure](https://
 
 #### Examples
 
-[Hepatitis B surface antibody measurement order](ServiceRequest-servicerequest-hepatitis-b-antibody.html)
+[Hepatitis B surface antibody measurement order](ServiceRequest-hepatitis-b-antibody.html)

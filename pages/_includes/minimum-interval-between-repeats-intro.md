@@ -7,4 +7,4 @@ This is different to the PBS rules for claiming subsidies for repeat prescriptio
 
 #### Examples
 
-[Prescription for paracetamol + codeine](MedicationRequest-medicationrequest-example0.html)
+[Prescription for paracetamol + codeine](MedicationRequest-example0.html)

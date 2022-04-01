@@ -25,7 +25,7 @@ A full medication definition as medicationReference or medicationCodeableConcept
 
 
 #### Examples
-[Fluconazole Dose Based Medication](Medication-MedicationDoseBased.html)
+[Fluconazole Dose Based Medication](Medication-DoseBased.html)
 
 [Paracetamol Generic Pack](Medication-GenericPack0.html)
 

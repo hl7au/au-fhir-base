@@ -7,12 +7,12 @@ Note: Known issues with observation constraints should be considered when using 
 
 **Examples**
 
-[4 years](Observation-observation-age-example-4years.html)
+[4 years](Observation-age-example-4years.html)
 
-[6 months and over](Observation-observation-age-example-6monthsandover.html)
+[6 months and over](Observation-age-example-6monthsandover.html)
 
-[6 months to 5 years](Observation-observation-age-example-6monthsto5years.html)
+[6 months to 5 years](Observation-age-example-6monthsto5years.html)
 
-[12 to 18 months](Observation-observation-age-example-12-18months.html)
+[12 to 18 months](Observation-age-example-12-18months.html)
 
-[12 months](Observation-observation-age-example-12months.html)
+[12 months](Observation-age-example-12months.html)

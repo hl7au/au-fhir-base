@@ -7,6 +7,6 @@ The value of this extension is 1 when there are no repeats. The value increments
 
 #### Examples
 
-[First dispense for Reaptan](MedicationDispense-medicationdispense-example0.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
+[First dispense for Reaptan](MedicationDispense-example0.html) against [Prescription for Reaptan](MedicationRequest-example2.html)
 
-[Second dispense for Reaptan](MedicationDispense-medicationdispense-example1.html) against [Prescription for Reaptan](MedicationRequest-medicationrequest-example2.html)
+[Second dispense for Reaptan](MedicationDispense-example1.html) against [Prescription for Reaptan](MedicationRequest-example2.html)
