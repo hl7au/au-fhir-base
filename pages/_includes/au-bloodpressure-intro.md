@@ -2,8 +2,7 @@
 
 This profile provides an observation information structure for a patient’s vital sign blood pressure measurement.
 
-It has been derived from the core R4 specification [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bp) vital signs profile. 
-Refer to that profile for an outline of its mandatory requirements.
+This profile identifies the additional cardinality, value sets and other constraints that build on [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bp) for use in an Australian context. 
 
 
 #### Extensions

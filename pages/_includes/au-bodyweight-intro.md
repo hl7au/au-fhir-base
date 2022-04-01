@@ -1,9 +1,8 @@
 **AU Body Weight** *[[DRAFT 0](guidance.html)]*
 
-This profile provides an observation information structure for a patient’s vital sign weight measurement.
+This profile provides an observation information structure for patient’s body weight at a point in time.
 
-It has been derived from the core R4 specification [Body Weight](http://hl7.org/fhir/StructureDefinition/bodyweight) vital signs profile. 
-Refer to that profile for an outline of its mandatory requirements.
+This profile identifies the additional cardinality, value sets and other constraints that build on [Body Weight](http://hl7.org/fhir/StructureDefinition/bodyweight) for use in an Australian context. 
 
 
 #### Extensions

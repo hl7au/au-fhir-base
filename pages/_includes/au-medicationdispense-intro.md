@@ -1,6 +1,6 @@
 **AU Base Medication Dispense**  *[[FMM 2](guidance.html)]*
 
-This profile defines a medication dispense structure including core localisation concepts for use as a dispense record in an Australian context.
+This profile defines a medication dispense structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 
 The purpose of this profile is to provide national level agreement on core localised concepts. 
 

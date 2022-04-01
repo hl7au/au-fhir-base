@@ -2,8 +2,7 @@
 
 This profile provides an observation information structure for a patient’s vital sign body temperature measurement.
 
-It has been derived from the core R4 specification [Body Temperature](http://hl7.org/fhir/StructureDefinition/bodytemp) vital signs profile. 
-Refer to that profile for an outline of its mandatory requirements.
+This profile identifies the additional cardinality, value sets and other constraints that build on [Body Temperature](http://hl7.org/fhir/StructureDefinition/bodytemp) for use in an Australian context. 
 
 
 #### Extensions
