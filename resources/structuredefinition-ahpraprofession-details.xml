@@ -5,7 +5,7 @@
   <version value="2.1.1" />
   <name value="AHPRAProfessionDetails" />
   <title value="AHPRA Profession Details" />
-  <status value="draft" />
+  <status value="active" />
   <date value="2021-07-05" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
@@ -69,7 +69,9 @@
     </element>
     <element id="Extension.extension:ahpraCondition">
       <path value="Extension.extension" />
+      <short value="Condition on practice details"/>
       <sliceName value="ahpraCondition" />
+      
     </element>
     <element id="Extension.extension:ahpraCondition.extension">
       <path value="Extension.extension.extension" />
@@ -83,6 +85,7 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionEditDate">
       <path value="Extension.extension.extension" />
+    
       <sliceName value="ahpraConditionEditDate" />
       <max value="1" />
     </element>
@@ -92,6 +95,7 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
+      <short value="Condition on practice last edited date"/>
       <type>
         <code value="date" />
       </type>
@@ -107,7 +111,8 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <type>
+        <short value="Condition on practice type e.g.Health, Practice, Registration, Other"/>
+        <type>
         <code value="CodeableConcept" />
       </type>
     </element>
@@ -122,6 +127,7 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
+      <short value="Condition on practice description"/>
       <type>
         <code value="string" />
       </type>
