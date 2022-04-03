@@ -1,6 +1,6 @@
 **AU Respiration Rate** *[[DRAFT 0](guidance.html)]*
 
-This profile provides an observation information structure for a patient’s vital sign respiration rate measurement.
+This profile provides an observation information structure for a patient’s respiration rate at a point in time.
 
 This profile identifies the additional cardinality, value sets and other constraints that build on [Respiration Rate](http://hl7.org/fhir/StructureDefinition/resprate) for use in an Australian context. 
 
