@@ -1,4 +1,4 @@
-**AU Australian Registered Body Number**  *[[FMM 1](guidance.html)]*
+**AU Australian Registered Body Number**  *[[FMM 2](guidance.html)]*
 
 This identifier profile defines an Australian Registered Body Number (ARBN) [<sup>[1]</sup>](https://www.ppsr.gov.au/arbn-australian-registered-body-number){:target="_blank"} in an Australian context. 
 

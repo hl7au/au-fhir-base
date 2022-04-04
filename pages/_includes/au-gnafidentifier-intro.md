@@ -1,4 +1,4 @@
-**AU G-NAF Identifier**  *[[FMM 1](guidance.html)]*
+**AU G-NAF Identifier**  *[[FMM 2](guidance.html)]*
 
 This identifier profile defines a Geocoded National Address File (G-NAF) identifier [<sup>[1]</sup>](https://psma.com.au/product/gnaf/){:target="_blank"}.
 
