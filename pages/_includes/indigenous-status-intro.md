@@ -1,4 +1,4 @@
-**Extension: Australian Indigenous Status** *[[FMM 3](guidance.html)]*
+**Extension: Australian Indigenous Status** *[[FMM 4](guidance.html)]*
 
 This extension applies to the Patient resource and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin. [<sup>[1]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/602543){:target="_blank"}
 

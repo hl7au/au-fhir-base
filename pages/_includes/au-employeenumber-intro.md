@@ -1,4 +1,4 @@
-**AU Employee Number**  *[[FMM 1](guidance.html)]*
+**AU Employee Number**  *[[FMM 2](guidance.html)]*
 
 This identifier profile defines an employee number (sometimes referred to as an employee identifier (EI)) in an Australian context. An employee number is an organisation's identifier for an individual employed by that organisation.
 

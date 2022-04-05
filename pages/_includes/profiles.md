@@ -73,7 +73,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for an Australian Business Number (ABN)
 * [AU Australian Company Number](StructureDefinition-au-australiancompanynumber.html) *[[FMM 2](guidance.html)]* - identifier profile for an Australian Company Number (ACN)
 * [AU Australian Registered Body Number](StructureDefinition-au-australianregistredbodynumber.html) *[[FMM 2](guidance.html)]* - identifier profile for an Australian Registered Body Number (ARBN)
-* [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) registration number
+* [AU AHPRA Registration Number](StructureDefinition-au-ahpraregistrationnumber.html) *[[FMM 1](guidance.html)]* - identifier profile for an Australian Health Practitioner Regulation Agency (AHPRA) registration number
 * [AU Care Agency Employee Identifier](StructureDefinition-au-careagencyemployeeidentifier.html) *[[FMM 1](guidance.html)]* - identifier profile for a care agency employee identifier
 * [AU Commonwealth Seniors Health Card Number](StructureDefinition-au-cwlthseniorshealthcardnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a Commonwealth Seniors Health Card number
 * [AU CSP Registration Number](StructureDefinition-au-cspregistrationnumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a Contracted Service Provider (CSP) registration number
@@ -90,16 +90,16 @@ These Profiles have been defined for this implementation guide.
 * [AU Local Dispense Identifier](StructureDefinition-au-localdispenseidentifier.html) *[[FMM 1](guidance.html)]* - identifier profile for a local dispense identifier
 * [AU Local Order Identifier](StructureDefinition-au-localorderidentifier.html) *[[FMM 1](guidance.html)]* - identifier profile for a local order identifier
 * [AU Local Prescription Identifier](StructureDefinition-au-localprescriptionidentifier.html) *[[FMM 2](guidance.html)]* - identifier profile for a local prescription identifier
-* [AU Local Report Identifier](StructureDefinition-au-localreportidentifier.html) *[[FMM 2](guidance.html)]* - identifier profile for a local report identifier
+* [AU Local Report Identifier](StructureDefinition-au-localreportidentifier.html) *[[FMM 1](guidance.html)]* - identifier profile for a local report identifier
 * [AU Location Specific Practice Number](StructureDefinition-au-locationspecificpracticenumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a Location Specific Practice Number (LSPN)
 * [AU Medical Record Number](StructureDefinition-au-medicalrecordnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a medical record number (MRN)
 * [AU Medicare Card Number](StructureDefinition-au-medicarecardnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a Medicare card number
 * [AU Medicare Provider Number](StructureDefinition-au-medicareprovidernumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a Medicare provider number
-* [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
-* [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) site number
+* [AU NATA Accreditation Number](StructureDefinition-au-nataaccreditationnumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) accreditation number
+* [AU NATA Site Number](StructureDefinition-au-natasitenumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a National Association of Testing Authorities (NATA) site number
 * [AU National Provider Identifier At Organisation](StructureDefinition-au-nationalprovideridentifieratorganisation.html) *[[FMM 2](guidance.html)]* - identifier profile for a National Provider Identifier at Organisation (NPIO)
 * [AU PAI-D Identifier](StructureDefinition-au-paididentifier.html) *[[DRAFT 0](guidance.html)]* - identifier profile for a My Health Record Assigned Identity - Device (PAI-D)
-* [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) *[[FMM 1](guidance.html)]* - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
+* [AU PAI-O Identifier](StructureDefinition-au-paioidentifier.html) *[[FMM 2](guidance.html)]* - identifier profile for a My Health Record Assigned Identity - Organisation (PAI-O)
 * [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html) *[[FMM 2](guidance.html)]* - identifier profile for a Pharmaceutical Benefits Scheme (PBS) prescriber number
 * [AU Pensioner Concession Card Number](StructureDefinition-au-pensionerconcessioncardnumber.html) *[[FMM 2](guidance.html)]* - identifier profile for an Pensioner Concession Card number
 * [AU Pharmacy Approval Number](StructureDefinition-au-pharmacyapprovalnumber.html) *[[FMM 1](guidance.html)]* - identifier profile for a pharmacy approval number
