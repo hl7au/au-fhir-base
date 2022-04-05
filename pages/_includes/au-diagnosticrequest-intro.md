@@ -1,4 +1,4 @@
-**AU Diagnostic Service Request** *[[DRAFT 0](guidance.html)]*
+**AU Diagnostic Service Request** *[[FMM 1](guidance.html)]*
 
 This profile defines a service request structure that includes core localisation concepts for use as a request for a diagnostic investigation in an Australian context. This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations.
 

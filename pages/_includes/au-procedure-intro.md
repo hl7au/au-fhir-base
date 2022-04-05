@@ -1,4 +1,4 @@
-**AU Base Procedure** *[[DRAFT 0](guidance.html)]*
+**AU Base Procedure** *[[FMM 1](guidance.html)]*
 
 This profile defines a procedure structure that localises core concepts, including terminology, for use in an Australian context.
 
