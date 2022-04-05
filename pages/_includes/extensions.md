@@ -41,15 +41,15 @@ Related to administration records such as patient, practitioner, practitioner ro
 
 
 ## HL7 V2 Identity
-* [Assigning Authority](StructureDefinition-au-assigningauthority.html) *[[FMM 2](guidance.html)]* - v2 namespace for an identifier
-* [Receiving Application](StructureDefinition-au-receivingapplication.html) *[[FMM 2](guidance.html)]* - identity attribute for v2 endpoints
-* [Receiving Facility](StructureDefinition-au-receivingfacility.html) *[[FMM 2](guidance.html)]* - identity attribute for v2 endpoints
+* [Assigning Authority](StructureDefinition-au-assigningauthority.html) *[[FMM 3](guidance.html)]* - v2 namespace for an identifier
+* [Receiving Application](StructureDefinition-au-receivingapplication.html) *[[FMM 3](guidance.html)]* - identity attribute for v2 endpoints
+* [Receiving Facility](StructureDefinition-au-receivingfacility.html) *[[FMM 3](guidance.html)]* - identity attribute for v2 endpoints
 
 
 ## Endpoint Attributes
 * [Encryption Certificate PEM x509](StructureDefinition-encryption-certificate-pem-x509.html) *[[FMM 3](guidance.html)]* - encrypting public certificate attribute for an endpoint
-* [Receiving Application](StructureDefinition-au-receivingapplication.html) *[[FMM 2](guidance.html)]* - identity attribute for v2 endpoints
-* [Receiving Facility](StructureDefinition-au-receivingfacility.html) *[[FMM 2](guidance.html)]* - identity attribute for v2 endpoints
+* [Receiving Application](StructureDefinition-au-receivingapplication.html) *[[FMM 3](guidance.html)]* - identity attribute for v2 endpoints
+* [Receiving Facility](StructureDefinition-au-receivingfacility.html) *[[FMM 3](guidance.html)]* - identity attribute for v2 endpoints
 
 
 ## Data types
@@ -61,4 +61,4 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [IHI Status](StructureDefinition-ihi-status.html) *[[FMM 3](guidance.html)]* - identifier status 
 * [IHI Verified Date](StructureDefinition-ihi-verified-date.html) *[[FMM 1](guidance.html)]* - identifier verification date
 * [Medication Type](StructureDefinition-medication-type.html) *[[FMM 2](guidance.html)]* - drug code classification
-* [Identifier Routability](StructureDefinition-identifier-routability.html) *[[FMM 1](guidance.html)]* - supports identifier selection for routing
+* [Identifier Routability](StructureDefinition-identifier-routability.html) *[[FMM 2](guidance.html)]* - supports identifier selection for routing
