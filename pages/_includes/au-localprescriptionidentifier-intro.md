@@ -1,4 +1,4 @@
-**AU Local Prescription Identifier**  *[[FMM 1](guidance.html)]*
+**AU Local Prescription Identifier**  *[[FMM 2](guidance.html)]*
 
 This identifier profile defines a local prescription identifier (sometimes referred to as prescription number) in an Australian context. A local prescription identifier is an organisation's identifier for a prescription in that organisation's local system set of prescriptions.
 

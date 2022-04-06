@@ -1,6 +1,6 @@
 **AU Blood Pressure** *[[DRAFT 0](guidance.html)]*
 
-This profile provides an observation information structure for a patient’s vital sign blood pressure measurement.
+This profile provides an observation information structure for a patient’s blood pressure at a point in time.
 
 This profile identifies the additional cardinality, value sets and other constraints that build on [Blood Pressure](http://hl7.org/fhir/StructureDefinition/bp) for use in an Australian context. 
 

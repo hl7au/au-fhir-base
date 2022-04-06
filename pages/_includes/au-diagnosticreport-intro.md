@@ -1,4 +1,4 @@
-**AU Base Diagnostic Report** *[[DRAFT 0](guidance.html)]*
+**AU Base Diagnostic Report** *[[FMM 1](guidance.html)]*
 
 This profile defines a diagnostic report structure that localises core concepts, including identifiers and terminology, for use in an Australian context.
 

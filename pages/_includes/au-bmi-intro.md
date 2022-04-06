@@ -1,6 +1,6 @@
 **AU Body Mass Index** *[[DRAFT 0](guidance.html)]*
 
-This profile provides an observation information structure for a patient’s vital sign body mass index (BMI) measurement.
+This profile provides an observation information structure for a patient’s body mass index (BMI) at a point in time.
 
 This profile identifies the additional cardinality, value sets and other constraints that build on [Body Mass Index](http://hl7.org/fhir/StructureDefinition/bmi) for use in an Australian context. 
 

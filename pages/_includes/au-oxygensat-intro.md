@@ -1,6 +1,6 @@
 **AU Oxygen Saturation** *[[DRAFT 0](guidance.html)]*
 
-This profile provides an observation information structure for a patient’s vital sign oxygen saturation measurement.
+This profile provides an observation information structure for a patient’s oxygen saturation at a point in time.
 
 This profile identifies the additional cardinality, value sets and other constraints that build on [Oxygen Saturation](http://hl7.org/fhir/StructureDefinition/oxygensat) for use in an Australian context. 
 
