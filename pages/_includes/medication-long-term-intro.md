@@ -9,4 +9,4 @@ The value of this extension is 'true' if the medication is for long term use.
 
 #### Examples
 
-[Long-term use of medication Zoloft](MedicationStatement-MedicationStatementexample1.html)
+[Long-term use of medication Zoloft](MedicationStatement-example1.html)

@@ -13,4 +13,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Specimen of serum](Specimen-specimen-serum.html)
+[Specimen of serum](Specimen-serum.html)

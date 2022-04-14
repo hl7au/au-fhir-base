@@ -4,4 +4,4 @@ This extension applies to the Composition resource and identifies who is respons
 
 **Examples**
 
-[Composition with some sections having a different section author to the composition author](Composition-composition-different-authors.html)
+[Composition with some sections having a different section author to the composition author](Composition-different-authors.html)
