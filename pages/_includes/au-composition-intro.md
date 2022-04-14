@@ -23,7 +23,7 @@ NOTE: AU Base on STU3 included three extensions Authoring Practitioner Role, Att
 
 [Composition with multiple information recipients](Composition-multiple-information-recipients.html)
 
-[Composition with some sections having a different section author to the composition author](Composition-composition-different-authors.html)
+[Composition with some sections having a different section author to the composition author](Composition-different-authors.html)
 
 [Patient's preference upon death](Composition-example0.html)
 

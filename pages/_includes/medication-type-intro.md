@@ -4,7 +4,7 @@ This extension applies to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Cod
 
 #### Examples
 
-[Fluconazole Dose Based Medication](Medication-MedicationDoseBased.html)
+[Fluconazole Dose Based Medication](Medication-DoseBased.html)
 
 [Paracetamol Generic Pack](Medication-GenericPack0.html)
 

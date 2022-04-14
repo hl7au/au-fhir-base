@@ -26,5 +26,5 @@ If the pathology laboratory is a discipline specific laboratory then one of the 
 
 #### Examples
 
-[Measurement of Hepatitis B surface antibody](Observation-observation-specimen-hepatitus-b-serology.html)
+[Measurement of Hepatitis B surface antibody](Observation-specimen-hepatitus-b-serology.html)
 
