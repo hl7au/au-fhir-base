@@ -24,7 +24,7 @@ When capturing a related person as the author of the list, the extension Author 
 
 [Current medicine list, source of practitioner, with assertion of no known current medicines](List-example1.html)
 
-[Current medicine on discharge (Bundle)](Bundle-9309d080-4e97-11e9-8647-d663bd873d93.html)
+[Current medicine on discharge (Bundle)](Bundle-example0.html)
 
 [Current and ceased medicines](List-example2.html)
 

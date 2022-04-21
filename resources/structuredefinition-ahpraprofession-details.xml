@@ -6,7 +6,7 @@
   <name value="AHPRAProfessionDetails" />
   <title value="AHPRA Profession Details" />
   <status value="active" />
-  <date value="2021-07-05" />
+  <date value="2022-04-14" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -55,6 +55,8 @@
     </element>
     <element id="Extension.extension:ahpraProfession">
       <path value="Extension.extension" />
+      <short value="AHPRA registered profession"/>
+      <definition value="Details on the AHPRA profession registration."/>
       <sliceName value="ahpraProfession" />
     </element>
     <element id="Extension.extension:ahpraProfession.url">
@@ -63,6 +65,8 @@
     </element>
     <element id="Extension.extension:ahpraProfession.value[x]">
       <path value="Extension.extension.value[x]" />
+     <short value="AHPRA registered profession type code"/>
+      <definition value="AHPRA registered profession type coded value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -70,7 +74,7 @@
     <element id="Extension.extension:ahpraCondition">
       <path value="Extension.extension" />
       <short value="Work conditions detail"/>
-      <description value="Practitioner is subject to testing and work practice conditions detail."/>
+      <definition value="Practitioner is subject to testing and work practice conditions detail."/>
     <sliceName value="ahpraCondition" />
    </element>
     <element id="Extension.extension:ahpraCondition.extension">
@@ -85,7 +89,9 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionEditDate">
       <path value="Extension.extension.extension" />
-    
+     <short value="Work condition last edited date details"/>
+      <definition value="Practitioner testing and work practice condition last edited date details."/>
+  
       <sliceName value="ahpraConditionEditDate" />
       <max value="1" />
     </element>
@@ -95,14 +101,17 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work condition last edited date"/>
-      <description value="Practitioner testing and work practice condition last edited date."/>
+      <short value="Work condition last edited date value"/>
+      <definition value="Practitioner testing and work practice condition last edited date value."/>
       <type>
         <code value="date" />
       </type>
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionType">
       <path value="Extension.extension.extension" />
+      <short value="Work conditions type details"/>
+      <definition value="Practitioner testing and work practice condition type details."/>
+
       <sliceName value="ahpraConditionType" />
       <max value="1" />
     </element>
@@ -112,14 +121,16 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work conditions type"/>
-      <description value="Practitioner testing and work practice condition type e.g.Health, Practice, Registration, Other."/>
+      <short value="Work conditions type value"/>
+      <definition value="Practitioner testing and work practice condition type value. e.g.Health, Practice, Registration, Other."/>
         <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionDetail">
       <path value="Extension.extension.extension" />
+      <short value="Work conditions description details"/>
+      <definition value="Practitioner testing and work practice conditions description details."/>
       <sliceName value="ahpraConditionDetail" />
       <max value="1" />
     </element>
@@ -129,8 +140,8 @@
     </element>
     <element id="Extension.extension:ahpraCondition.extension:ahpraConditionDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work conditions description"/>
-      <description value="Practitioner testing and work practice conditions description."/>
+      <short value="Work conditions description value"/>
+      <definition value="Practitioner testing and work practice conditions description value."/>
       <type>
         <code value="string" />
       </type>
@@ -146,7 +157,7 @@
     <element id="Extension.extension:ahpraUndertaking">
       <path value="Extension.extension" />
       <short value="Work undertakings detail"/>
-      <description value="Practitioner is subject to testing and workplace practice undertakings detail."/>
+      <definition value="Practitioner is subject to testing and workplace practice undertakings detail."/>
       <sliceName value="ahpraUndertaking" />
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension">
@@ -161,6 +172,9 @@
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingEditDate">
       <path value="Extension.extension.extension" />
+      <short value="Work undertaking last edited date details"/>
+      <definition value="Practitioner testing and workplace practice undertakings last edited date details."/>
+
       <sliceName value="ahpraUndertakingEditDate" />
       <max value="1" />
     </element>
@@ -170,13 +184,16 @@
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work undertaking last edited date"/>
+      <short value="Work undertaking last edited date value"/>
+      <definition value="Practitioner testing and workplace practice undertakings last edited date value."/>
       <type>
         <code value="date" />
       </type>
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingType">
       <path value="Extension.extension.extension" />
+      <short value="Work undertakings type details"/>
+      <definition value="Practitioner testing and workplace practice undertakings type details."/>
       <sliceName value="ahpraUndertakingType" />
       <max value="1" />
     </element>
@@ -186,14 +203,17 @@
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work undertakings type"/>
-      <description value="Practitioner testing and workplace practice undertakings type."/>
+      <short value="Work undertakings type value"/>
+      <definition value="Practitioner testing and workplace practice undertakings type value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingDetail">
       <path value="Extension.extension.extension" />
+      <short value="Work undertakings description details"/>
+      <definition value="Practitioner testing and workplace practice undertakings description details."/>
+ 
       <sliceName value="ahpraUndertakingDetail" />
       <max value="1" />
     </element>
@@ -203,8 +223,8 @@
     </element>
     <element id="Extension.extension:ahpraUndertaking.extension:ahpraUndertakingDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work undertakings description"/>
-      <description value="Practitioner testing and workplace practice undertakings description."/>
+      <short value="Work undertakings description value"/>
+      <definition value="Practitioner testing and workplace practice undertakings description value."/>
       <type>
         <code value="string" />
       </type>
@@ -220,7 +240,7 @@
     <element id="Extension.extension:ahpraReprimand">
       <path value="Extension.extension" />
       <short value="Work reprimands detail"/>
-      <description value="Practitioner is subject to testing and work practice reprimands detail."/>
+      <definition value="Practitioner is subject to testing and work practice reprimands detail."/>
       <sliceName value="ahpraReprimand" />
     </element>
     <element id="Extension.extension:ahpraReprimand.extension">
@@ -235,6 +255,9 @@
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandEditDate">
       <path value="Extension.extension.extension" />
+      <short value="Work reprimands last edited date details"/>
+      <definition value="Practitioner testing and work practice reprimands last edited date details."/>
+ 
       <sliceName value="ahpraReprimandEditDate" />
       <max value="1" />
     </element>
@@ -244,14 +267,17 @@
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work reprimands last edited date"/>
-     <description value="Practitioner testing and work practice reprimands last edited date."/>
+      <short value="Work reprimands last edited date value"/>
+      <definition value="Practitioner testing and work practice reprimands last edited date value."/>
        <type>
         <code value="date" />
       </type>
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandType">
       <path value="Extension.extension.extension" />
+      <short value="Work reprimands type details"/>
+      <definition value="Practitioner testing and work practice reprimands type details."/>
+      
       <sliceName value="ahpraReprimandType" />
       <max value="1" />
     </element>
@@ -261,14 +287,17 @@
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work reprimands type"/>
-      <description value="Practitioner testing and work practice reprimands type."/>
+      <short value="Work reprimands type value"/>
+      <definition value="Practitioner testing and work practice reprimands type value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandDetail">
       <path value="Extension.extension.extension" />
+      <short value="Work reprimands description details"/>          
+      <definition value="Practitioner testing and work practice reprimands description details."/>
+      
       <sliceName value="ahpraReprimandDetail" />
       <max value="1" />
     </element>
@@ -278,8 +307,8 @@
     </element>
     <element id="Extension.extension:ahpraReprimand.extension:ahpraReprimandDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work reprimands description"/>          
-      <description value="Practitioner testing and work practice reprimands description."/>
+      <short value="Work reprimands description value"/>          
+      <definition value="Practitioner testing and work practice reprimands description value."/>
       <type>
         <code value="string" />
       </type>
@@ -295,7 +324,7 @@
     <element id="Extension.extension:ahpraCaution">
       <path value="Extension.extension" />
       <short value="Work cautions detail"/>
-      <description value="Practitioner is subject to testing and work practice cautions detail."/>
+      <definition value="Practitioner is subject to testing and work practice cautions detail."/>
       <sliceName value="ahpraCaution" />
     </element>
     <element id="Extension.extension:ahpraCaution.extension">
@@ -310,6 +339,10 @@
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionEditDate">
       <path value="Extension.extension.extension" />
+      
+      <short value="Work cautions last edited date details"/>
+      <definition value="Practitioner testing and work practice cautions last edited date details."/>
+
       <sliceName value="ahpraCautionEditDate" />
       <max value="1" />
     </element>
@@ -319,8 +352,8 @@
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work cautions last edited date"/>
-      <description value="Practitioner testing and work practice cautions last edited date."/>
+      <short value="Work cautions last edited date value"/>
+      <definition value="Practitioner testing and work practice cautions last edited date value."/>
  
       <type>
         <code value="date" />
@@ -328,6 +361,9 @@
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionType">
       <path value="Extension.extension.extension" />
+      <short value="Work cautions type details"/>
+      <definition value="Practitioner testing and work practice cautions type details."/>
+ 
       <sliceName value="ahpraCautionType" />
       <max value="1" />
     </element>
@@ -337,14 +373,16 @@
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work cautions type"/>
-      <description value="Practitioner testing and work practice cautions type."/>
+      <short value="Work cautions type value"/>
+      <definition value="Practitioner testing and work practice cautions type value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionDetail">
       <path value="Extension.extension.extension" />
+      <short value="Work cautions description details"/>
+      <definition value="Practitioner testing and work practice cautions description details."/>  
       <sliceName value="ahpraCautionDetail" />
       <max value="1" />
     </element>
@@ -354,8 +392,8 @@
     </element>
     <element id="Extension.extension:ahpraCaution.extension:ahpraCautionDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="Work cautions description"/>
-      <description value="Practitioner testing and work practice cautions description."/>
+      <short value="Work cautions description value"/>
+      <definition value="Practitioner testing and work practice cautions description value."/>
       <type>
         <code value="string" />
       </type>

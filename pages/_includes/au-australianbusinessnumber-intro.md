@@ -10,7 +10,7 @@ No extensions are used in this profile.
 
 #### Usage Notes
 
-When coding type, the preferred coding from the required [hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203-extended.html) value set is 'XX' (Organization identifier) sent with a text value 'ABN'.
+When coding type, the current recommended coding from the required [hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203-extended.html) value set is 'XX' (Organization identifier) sent with a text value 'ABN'. However, it is expected that future versions of the Identifier Type valueset may contain a specific coding as 'ABN'.
 
 
 #### Examples
@@ -21,7 +21,7 @@ When coding type, the preferred coding from the required [hl7VS-identifierType -
 
 [Devonport Family Medicine Clinic with ABN](Organization-example3.html)
 
-[ACME Pathology with NATA Number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP](Organization-f799e349-0385-4fbc-a2aa-b5b50af957ea.html)
+[ACME Pathology with NATA Number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP](Organization-example6.html)
 
 [The Corporation of the Council of the Ward of Nundah](Organization-example5.html)
 

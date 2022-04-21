@@ -14,6 +14,6 @@ No extensions are used in this profile.
 
 [Holistic Medical Pty Ltd with ABN and HPI-O](Organization-example2.html)
 
-[ACME Pathology with NATA accreditation number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP registration number](Organization-f799e349-0385-4fbc-a2aa-b5b50af957ea.html)
+[ACME Pathology with NATA accreditation number, ARBN, ABN, ACN, HPI-O, PAI-O and CSP registration number](Organization-example6.html)
 
 [HealthcareService with HPI-O and SNOMED-CT coded specialty](HealthcareService-example0.html)

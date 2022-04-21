@@ -5,4 +5,4 @@ This extension applies to the MedicationRequest and MedicationDispense resources
 
 #### Examples
 
-[Prescription for Stribild  with concurrent supply](MedicationRequest-medicationrequest-example1.html)
+[Prescription for Stribild  with concurrent supply](MedicationRequest-example1.html)

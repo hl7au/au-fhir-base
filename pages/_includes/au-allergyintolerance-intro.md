@@ -11,10 +11,10 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Ibuprofen allergy, with a manifestation of urticaria](AllergyIntolerance-allergyintolerance-example0.html)
+[Ibuprofen allergy, with a manifestation of urticaria](AllergyIntolerance-example0.html)
 
-[Self-reported allergy to eggs](AllergyIntolerance-allergyintolerance-example1.html)
+[Self-reported allergy to eggs](AllergyIntolerance-example1.html)
 
-[Confirmed intolerance to lactose](AllergyIntolerance-allergyintolerance-example2.html)
+[Confirmed intolerance to lactose](AllergyIntolerance-example2.html)
 
-[Confirmed no known allergy](AllergyIntolerance-allergyintolerance-example3.html)
+[Confirmed no known allergy](AllergyIntolerance-example3.html)

@@ -28,7 +28,7 @@ For more information, see [AU Base Patient](http://build.fhir.org/ig/hl7au/au-fh
 
 [Sex assigned at birth: Female](Observation-sex-at-birth-female.html)
 
-[Sex assigned at birth: Male](Observation-06d63c90-0316-426d-97fa-d34ee65a0abd.html)
+[Sex assigned at birth: Male](Observation-sex-at-birth-male.html)
 
 
 
