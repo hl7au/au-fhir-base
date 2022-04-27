@@ -5,7 +5,7 @@
   <name value="AUHealthProgramParticipationSummary"/>
   <title value="AU Health Program Participation Summary"/>
   <status value="draft"/>
-  <date value="2022-04-07" />
+  <date value="2022-04-28" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -145,7 +145,7 @@
       <sliceName value="notParticipantStatusReason"/>
       <short value="Reason for not participating" />
       <definition value="The reason why an individual is not actively participating in a program. This may include the reason why an individual's participation is suspended or stopped participating prior to completion. This value is asserted as current at the time this observation is asserted." />
-      <comment value="When participation status is suspended and the health program is a disease screening program this concept is equivalent to Australian Institute of Health and Welfare data element 568096 [Person—reason for suspending disease screening participation](https://meteor.aihw.gov.au/content/index.phtml/itemId/568096) and data element 568098 [Person—reason for suspending disease screening participation, code N](https://meteor.aihw.gov.au/content/index.phtml/itemId/568098). When participation status is opted off and the health program is a disease screening program this concept is equivalent to Australian Institute of Health and Welfare data element 568084 [Person—reason for opting off a disease screening program](https://meteor.aihw.gov.au/content/index.phtml/itemId/568066) and data element 732523 [Person—reason for opting off a disease screening program, code N](https://meteor.aihw.gov.au/content/index.phtml/itemId/732523)."/>
+      <comment value="When participation status is suspended and the health program is a disease screening program this concept is equivalent to Australian Institute of Health and Welfare data element 568096 [Person—reason for suspending disease screening participation](https://meteor.aihw.gov.au/content/index.phtml/itemId/568096) and data element 568098 [Person—reason for suspending disease screening participation, code N](https://meteor.aihw.gov.au/content/index.phtml/itemId/568098). When participation status is opted off and the health program is a disease screening program this concept is equivalent to Australian Institute of Health and Welfare data element 568084 [Person—reason for opting off a disease screening program](https://meteor.aihw.gov.au/content/index.phtml/itemId/568084) and data element 732523 [Person—reason for opting off a disease screening program, code N](https://meteor.aihw.gov.au/content/index.phtml/itemId/732523)."/>
     </element>
     <element id="Observation.component:notParticipantStatusReason.code">
       <path value="Observation.component.code"/>
@@ -259,7 +259,7 @@
     <element id="Observation.component:forecastStatus">
       <path value="Observation.component" />
       <sliceName value="forecastStatus"/>
-      <short value="Forecast status with reference to program pathway, e.g. overdue, as at the time this observation is asserted." />
+      <short value="Forecast status with reference to program pathway, e.g. overdue, as at the time this observation is asserted" />
       <definition value="The most clinically relevant state at the time of assertion of this observation for future program participation, e.g. overdue or eligible at 25, and may repeat exception states relevant to forecasting program participation. This may be used in conjunction with reporting against an immunisation program." />
       <comment value="When this concept is valued in an instance, the element identified with the concept may have values such as: overdue, due now, eligible at (date), eligible at (age), completed, ineligible, completing at (age), completing at (date), exited at diagnosis, referral recommended."/>
       <max value="1"/>
