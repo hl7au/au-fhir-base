@@ -4,14 +4,22 @@
   <meta>
 	<profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
   </meta>
-  <identifier>
-    <use value="usual"/>
+ <identifier>
     <type>
-      <text value="INSEE"/>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
     </type>
-    <system value="urn:oid:1.2.250.1.61"/>
-    <value value="272117510400399"/>
+    <system
+            value="http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003621566684455"/>
+    <value value="767767765FRD"/>
+    <assigner>
+      <reference value="Organization/example0"/>
+      <display value="Downunder Hospital"/>
+    </assigner>
   </identifier>
+
   <active value="true"/>
 
   <patient>

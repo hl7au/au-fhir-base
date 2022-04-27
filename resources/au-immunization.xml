@@ -113,7 +113,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="function.coding" />
+          <path value="function" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -135,14 +135,12 @@
       <path value="Immunization.performer.function" />
       <short value="Administering role" />
       <min value="1" />
-    </element>
-    <element id="Immunization.performer:administeredBy.function.coding">
-      <path value="Immunization.performer.function.coding" />
-      <min value="1" />
-      <patternCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
-        <code value="AP" />
-      </patternCoding>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
+          <code value="AP" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Immunization.performer:administeredBy.actor">
       <path value="Immunization.performer.actor" />
@@ -158,14 +156,12 @@
       <path value="Immunization.performer.function" />
       <short value="Approver role" />
       <min value="1" />
-    </element>
-    <element id="Immunization.performer:approvedBy.function.coding">
-      <path value="Immunization.performer.function.coding" />
-      <min value="1" />
-      <patternCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
-        <code value="OP" />
-      </patternCoding>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
+          <code value="OP" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Immunization.performer:approvedBy.actor">
       <path value="Immunization.performer.actor" />
