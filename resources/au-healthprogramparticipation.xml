@@ -5,7 +5,7 @@
   <name value="AUHealthProgramParticipationSummary"/>
   <title value="AU Health Program Participation Summary"/>
   <status value="draft"/>
-  <date value="2022-04-28" />
+  <date value="2022-05-04" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
     <telecom>
@@ -33,17 +33,43 @@
       <path value="Observation"/>
       <short value="Health program participation summary observation" />
       <definition value="A summary of an individual's participation in a health program, e.g. weight management, disease screening, or substance use therapy. Participation information may include information on an individual's eligibility for a program, suspension of participation in a program, or status of participation in a program." />
-      <constraint>
-        <key value="inv-hpps-0" />
-        <severity value="error" />
-        <human value="One category shall be Program 'program' 'http://terminology.hl7.org.au/CodeSystem/observation-category'" />
-        <expression value="category.coding.where(system='http://terminology.hl7.org.au/CodeSystem/observation-category' and code='program').exists()" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-healthprogramparticipation" />
-      </constraint>
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="coding.system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.category:hPCat">
+      <path value="Observation.category"/>
+      <short value="Health program"/>
+      <min value="1"/>
+      <max value="1" />
+    </element>
+    <element id="Observation.category:hPCat.coding">
+      <path value="Observation.category.coding"/>
+      <sliceName value="hPCat"/>
+      <min value="1"/>
+    </element>
+    <element id="Observation.category:hPCat.coding.system">
+      <path value="Observation.category.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://terminology.hl7.org.au/CodeSystem/observation-category"/>
+    </element>
+    <element id="Observation.category:hPCat.coding.code">
+      <path value="Observation.category.coding.code" />
+      <min value="1" />
+      <fixedCode value="program" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
