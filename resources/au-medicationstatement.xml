@@ -1,204 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-medicationstatement"/>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
-  <version value="2.1.6"/>
-  <name value="AUBaseMedicationStatement"/>
-  <title value="AU Base Medication Statement"/>
-  <status value="active"/>
-  <date value="2022-04-04"/>
-  <publisher value="Health Level Seven Australia (Medications WG)"/>
+  <id value="au-medicationstatement" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement" />
+  <version value="2.1.6" />
+  <name value="AUBaseMedicationStatement" />
+  <title value="AU Base Medication Statement" />
+  <status value="active" />
+  <date value="2022-04-04" />
+  <publisher value="Health Level Seven Australia (Medications WG)" />
   <contact>
     <telecom>
-      <system value="url"/>
-      <value value="http://hl7.com.au"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description
-    value="This profile defines a medication statement structure that localises core concepts, including terminology, for use in an Australian context."/>
+  <description value="This profile defines a medication statement structure that localises core concepts, including terminology, for use in an Australian context." />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="AU"/>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
     </coding>
   </jurisdiction>
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
-  <fhirVersion value="4.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="MedicationStatement"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
-  <derivation value="constraint"/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
   <differential>
     <element id="MedicationStatement">
-      <path value="MedicationStatement"/>
-      <short
-        value="A record of medication being taken by a patient in an Australian healthcare context"
-      />
+      <path value="MedicationStatement" />
+      <short value="A record of medication being taken by a patient in an Australian healthcare context" />
     </element>
     <element id="MedicationStatement.extension">
-      <path value="MedicationStatement.extension"/>
+      <path value="MedicationStatement.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="MedicationStatement.extension:longTerm">
-      <path value="MedicationStatement.extension"/>
-      <sliceName value="longTerm"/>
-      <short value="Medication Long Term Indicator"/>
+      <path value="MedicationStatement.extension" />
+      <sliceName value="longTerm" />
+      <short value="Medication Long Term Indicator" />
+      <min value="0" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term"/>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-long-term" />
       </type>
     </element>
     <element id="MedicationStatement.medication[x]">
-      <path value="MedicationStatement.medication[x]"/>
+      <path value="MedicationStatement.medication[x]" />
       <slicing>
         <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
+          <type value="type" />
+          <path value="$this" />
         </discriminator>
-        <rules value="closed"/>
+        <rules value="closed" />
       </slicing>
-      <short value="Medication Detail"/>
+      <short value="Medication Detail" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
-      <path value="MedicationStatement.medication[x]"/>
-      <sliceName value="medicationCodeableConcept"/>
-      <short value="Coded Medication"/>
-      <min value="0"/>
+      <path value="MedicationStatement.medication[x]" />
+      <sliceName value="medicationCodeableConcept" />
+      <short value="Coded Medication" />
       <type>
-        <code value="CodeableConcept"/>
+        <code value="CodeableConcept" />
       </type>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding">
-      <path value="MedicationStatement.medication[x].coding"/>
+      <path value="MedicationStatement.medication[x].coding" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="system"/>
+          <type value="value" />
+          <path value="system" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="Medication Codes"/>
+      <short value="Medication Codes" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <sliceName value="pbs"/>
-      <short value="PBS Item Code"/>
-      <comment
-        value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record (MedicationDispense)."/>
+      <path value="MedicationStatement.medication[x].coding" />
+      <sliceName value="pbs" />
+      <short value="PBS Item Code" />
+      <comment value="PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record (MedicationDispense)." />
       <binding>
-        <strength value="preferred"/>
-        <valueSet value="http://terminology.hl7.org.au/ValueSet/pbs-item"/>
+        <strength value="preferred" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/pbs-item" />
       </binding>
-
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs.system">
-      <path value="MedicationStatement.medication[x].coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://pbs.gov.au/code/item"/>
+      <path value="MedicationStatement.medication[x].coding.system" />
+      <min value="1" />
+      <fixedUri value="http://pbs.gov.au/code/item" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:gtin">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <sliceName value="gtin"/>
-      <short value="Medication Package Global Trade Item Number (GTIN)"/>
-      <comment value="GTIN value from http://www.gs1.org/gtin."/>
+      <path value="MedicationStatement.medication[x].coding" />
+      <sliceName value="gtin" />
+      <short value="Medication Package Global Trade Item Number (GTIN)" />
+      <comment value="GTIN value from http://www.gs1.org/gtin." />
       <binding>
-        <strength value="preferred"/>
-        <valueSet value="http://terminology.hl7.org/ValueSet/v3-GTIN"/>
+        <strength value="preferred" />
+        <valueSet value="http://terminology.hl7.org/ValueSet/v3-GTIN" />
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:gtin.system">
-      <path value="MedicationStatement.medication[x].coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://www.gs1.org/gtin"/>
+      <path value="MedicationStatement.medication[x].coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.gs1.org/gtin" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <sliceName value="amt"/>
-      <short value="AMT Medicines"/>
+      <path value="MedicationStatement.medication[x].coding" />
+      <sliceName value="amt" />
+      <short value="AMT Medicines" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1"/>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
       </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension">
-      <path value="MedicationStatement.medication[x].coding.extension"/>
+      <path value="MedicationStatement.medication[x].coding.extension" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="url"/>
+          <type value="value" />
+          <path value="url" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
-    <element
-      id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
-      <path value="MedicationStatement.medication[x].coding.extension"/>
-      <sliceName value="medicationClass"/>
-      <max value="1"/>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass">
+      <path value="MedicationStatement.medication[x].coding.extension" />
+      <sliceName value="medicationClass" />
+      <min value="0" />
+      <max value="1" />
       <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type" />
       </type>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.system">
-      <path value="MedicationStatement.medication[x].coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
+      <path value="MedicationStatement.medication[x].coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <sliceName value="mimsPackage"/>
-      <short value="MIMS Package"/>
-      <max value="1"/>
+      <path value="MedicationStatement.medication[x].coding" />
+      <sliceName value="mimsPackage" />
+      <short value="MIMS Package" />
+      <max value="1" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet value="http://terminology.hl7.org.au/ValueSet/mims"/>
+        <strength value="preferred" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/mims" />
       </binding>
     </element>
-    <element
-      id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage.system">
-      <path value="MedicationStatement.medication[x].coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://www.mims.com.au/codes"/>
+    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage.system">
+      <path value="MedicationStatement.medication[x].coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.mims.com.au/codes" />
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.text">
-      <path value="MedicationStatement.medication[x].text"/>
-      <short value="Medication primary text"/>
-      <definition
-        value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."
-      />
+      <path value="MedicationStatement.medication[x].text" />
+      <short value="Medication primary text" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry." />
     </element>
     <element id="MedicationStatement.medication[x]:medicationReference">
-      <path value="MedicationStatement.medicationReference"/>
-      <sliceName value="medicationReference"/>
-      <short value="Medication Reference"/>
-      <min value="0"/>
+      <path value="MedicationStatement.medicationReference" />
+      <sliceName value="medicationReference" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
+        <code value="Reference" />
       </type>
     </element>
     <element id="MedicationStatement.reasonCode">
-      <path value="MedicationStatement.reasonCode"/>
+      <path value="MedicationStatement.reasonCode" />
       <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1"
-        />
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1" />
       </binding>
     </element>
     <element id="MedicationStatement.dosage">
-      <path value="MedicationStatement.dosage"/>
+      <path value="MedicationStatement.dosage" />
       <type>
-        <code value="Dosage"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage"/>
+        <code value="Dosage" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dosage" />
       </type>
     </element>
   </differential>
