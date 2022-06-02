@@ -1,6 +1,5 @@
 == Suppressed Messages ==
 
-Attempt to use Terminology server when no Terminology server is available
 
 # The following code systems are external and not supported by terminology server
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' is unknown so the code cannot be validated
@@ -20,7 +19,52 @@ Code System URI 'http://example.acme.com.au/generic-packages' is unknown so the 
 Code System URI 'https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0' is unknown so the code cannot be validated
 Code System URI 'http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0' is unknown so the code cannot be validated
 
+Unable to find value set "https://healthterminologies.gov.au/fhir/ValueSet/substance-1"
+Unable to provide support for code system http://www.mims.com.au/codes
+Unable to provide support for code system http://pbs.gov.au/code/item
 The value set import https://healthterminologies.gov.au/fhir/ValueSet/substance-1 could not be found so cannot be checked
+ValueSet https://healthterminologies.gov.au/fhir/ValueSet/substance-1 not found by validator
+The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1 on element Extension.value[x] could not be resolved
+Unable to provide support for code system http://www.mims.com.au/codes
+Unable to provide support for code system http://pbs.gov.au/code/item
+Error from server: Unable to provide support for code system http://pbs.gov.au/code/item
+Error from server: Unable to provide support for code system http://www.mims.com.au/codes
+Error from server: Unable to find value set "https://healthterminologies.gov.au/fhir/ValueSet/substance-1"
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+Code System URI 'http://pbs.gov.au/code/item' is unknown so the code cannot be validated
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/StructureDefinition/au-patient
+This element does not match any known slice defined in the profile http://hl7.org.au/fhir/StructureDefinition/au-immunization
+None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#17561000)
+
+Attempt to use Terminology server when no Terminology server is available
+
+None of the codings provided are in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages), and a coding is recommended to come from this value set) (codes = urn:ietf:bcp:47#yue)
+None of the codings provided are in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages), and a coding is recommended to come from this value set) (codes = urn:ietf:bcp:47#cmn)
+None of the codings provided are in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages), and a coding is recommended to come from this value set) (codes = urn:ietf:bcp:47#vi)
+
+# contained examples IG publisher issue
+The link 'Encounter-example2_enc-24680.xml.html' for "XML" cannot be resolved
+The link 'Encounter-example2_enc-24680.json.html' for "JSON" cannot be resolved
+The link 'Encounter-example2_enc-24680.ttl.html' for "Turtle" cannot be resolved
+The link 'Organization-example2_org-24680.xml.html' for "XML" cannot be resolved
+The link 'Organization-example2_org-24680.json.html' for "JSON" cannot be resolved
+The link 'Organization-example2_org-24680.ttl.html' for "Turtle" cannot be resolved
+The link 'Organization-example4_org-1234.xml.html' for "XML" cannot be resolved
+The link 'Organization-example4_org-1234.json.html' for "JSON" cannot be resolved
+The link 'Organization-example4_org-1234.ttl.html' for "Turtle" cannot be resolved
+The link 'Organization-example4_org-5678.xml.html' for "XML" cannot be resolved
+The link 'Organization-example4_org-5678.json.html' for "JSON" cannot be resolved
+The link 'Organization-example4_org-5678.ttl.html' for "Turtle" cannot be resolved
+The link 'Patient-example2_patient-123.xml.html' for "XML" cannot be resolved
+The link 'Patient-example2_patient-123.json.html' for "JSON" cannot be resolved
+The link 'Patient-example2_patient-123.ttl.html' for "Turtle" cannot be resolved
+The link 'Practitioner-example2_dr-97531.xml.html' for "XML" cannot be resolved
+The link 'Practitioner-example2_dr-97531.json.html' for "JSON" cannot be resolved
+The link 'Practitioner-example2_dr-97531.ttl.html' for "Turtle" cannot be resolved
+The link 'Practitioner-example2_gp-13579.xml.html' for "XML" cannot be resolved
+The link 'Practitioner-example2_gp-13579.json.html' for "JSON" cannot be resolved
+The link 'Practitioner-example2_gp-13579.ttl.html' for "Turtle" cannot be resolved
+
 
 
 The valueSet reference https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1 on element Observation.value[x] could not be resolved
@@ -209,9 +253,9 @@ The Implementation Guide contains no examples for this data type profile
 The Implementation Guide contains no examples for this extension
 The Implementation Guide contains no examples for this profile
 
-# Examples using content defined in the au-fhir-pd IG (but included here for the other extensions)
-Code System URI 'http://hl7.org.au/fhir/CodeSystem/smd-interfaces' is unknown so the code cannot be validated
-Code System URI 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' is unknown so the code cannot be validated
+# Code systems not included
+# Code System URI 'http://hl7.org.au/fhir/CodeSystem/smd-interfaces' is unknown so the code cannot be validated
+# Code System URI 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' is unknown so the code cannot be validated
 
 # DataType profiles supporting a choice of open types (for downstream profiling)
 Found multiple matching profiles among choices: ; [http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address]
@@ -242,3 +286,5 @@ Found multiple matching profiles among choices: ; [http://hl7.org/fhir/Structure
 Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-localprescriptionidentifier]
 Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-localdispenseidentifier]
 Found multiple matching profiles among choices: ; [http://hl7.org/fhir/StructureDefinition/Identifier, http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier]
+
+# Contained examples
