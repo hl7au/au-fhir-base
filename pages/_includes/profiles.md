@@ -54,6 +54,7 @@ These Profiles have been defined for this implementation guide.
 * [AU Vital Signs Panel](StructureDefinition-au-vitalspanel.html) *[[DRAFT 0](guidance.html)]* - vital signs panel
 
 ## Lifestyle Factor Profiles
+* [AU Health Program Participation Summary](StructureDefinition-au-healthprogramparticipation.html) *[[DRAFT 0](guidance.html)]* - summary of an individual's participation in a health program, e.g. weight management, at a point in time
 * [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[DRAFT 0](guidance.html)]* - smoking status lifestyle factor at a point in time
 
 ## Pregnancy Related Profiles

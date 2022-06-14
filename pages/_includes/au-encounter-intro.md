@@ -24,3 +24,5 @@ NOTE: AU Base on STU3 included two extensions Encounter Origin Organisation, and
 [Admitted for elective bronchoscopy](Encounter-example0.html)
 
 [Involved in a rear end motor vehicle accident](Encounter-example1.html)
+
+[Annual checkup](Encounter-example2.html)

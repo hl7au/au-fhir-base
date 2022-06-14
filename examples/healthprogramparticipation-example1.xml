@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="healthprogramparticipation-example1"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-healthprogramparticipation"/>
+    </meta>
+    <!--Scenario: Deferred BreastScreen Australia Screening due to travel
+    Scenario Description: Participant was invited to screen, Deferred screening for 10 months due to travel.  
+    Information recorded by BreastScreen VIC -->
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org.au/CodeSystem/observation-category"/>
+            <code value="program"/>
+            <display value="Program"/>
+        </coding>
+        <text value="Cancer screening program"/>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1602091000168107"/>
+            <display value="Breast cancer screening program participation"/>
+        </coding>
+        <text value="BreastScreen Australia Program Participation"/>
+    </code>
+    <subject>
+        <reference value="Patient/example5"/>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="MC"/>
+                    <display value="Patient's Medicare number"/>
+                </coding>
+                <text value="Medicare Number"/>
+            </type>
+            <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+            <value value="22968184811"/>
+            <period>
+                <end value="2022-12"/>
+            </period>
+        </identifier>
+    </subject>
+    <effectiveDateTime value="2022-05-14"/>
+    <!--BreastScreen Victoria-->
+    <performer>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="XX"/>
+                </coding>
+                <text value="ABN"/>
+            </type>
+            <system value="http://hl7.org.au/id/abn"/>
+            <value value="54505206361"/>
+        </identifier>
+    </performer>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1603781000168102"/>
+                <display value="Program participation status"/>
+            </coding>
+            <text value="Participation status"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1601981000168101"/>
+                <display value="Participation temporarily suspended"/>
+            </coding>
+            <text value="Deferred next screening"/>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1603791000168104"/>
+            </coding>
+            <text value="Participation status period"/>
+        </code>
+        <valuePeriod>
+            <start value="2022-05-14"/>
+            <end value="2023-03-14"/>
+        </valuePeriod>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1603991000168102"/>
+                <display value="Reason for program non participation"/>
+            </coding>
+            <text value="Reason for deferral"/>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="420008001"/>
+                <display value="Travel"/>
+            </coding>
+            <text value="Travelling"/>
+        </valueCodeableConcept>
+    </component>
+</Observation>
