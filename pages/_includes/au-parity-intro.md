@@ -9,4 +9,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-There are no examples available for this profile.
+[Parity - 1 birth](Observation-parity-example0.html)

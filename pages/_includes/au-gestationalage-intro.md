@@ -7,4 +7,4 @@ This profile supports specific observation of gestational age by scan, or gestat
 
 #### Examples
 
-There are no examples available for this profile.
+[Gestational age by scan](Observation-gestationalage-example0.html)

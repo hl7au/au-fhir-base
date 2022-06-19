@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="estimateddateofdelivery-example0"/>
+	<meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-estimateddateofdelivery"/>
+	</meta>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="exam"/>
+			<display value="Exam"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="161714006"/>
+			<display value="Estimated date of delivery"/>
+		</coding>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="11778-8"/>
+			<display value="Delivery date Estimated"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/example0"/>
+	</subject>
+	<effectiveDateTime value="2022-06-06T09:30:10+10:00"/>
+	<valueDateTime value="2023-01-26"/>
+</Observation>
