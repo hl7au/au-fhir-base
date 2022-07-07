@@ -39,6 +39,30 @@
         </coding>
       </patternCodeableConcept>
     </element>
+   <element id="Observation.category">
+      <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.category:socialHistory">
+      <path value="Observation.category"/>
+      <sliceName value="socialHistory"/>
+      <min value="1"/>
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+          <code value="social-history"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
    <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
@@ -63,7 +87,7 @@
         <code value="CodeableConcept"/>
       </type>
       <binding>
-        <strength value="required"/>
+        <strength value="extensible"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/alcohol-intake-status-1"/>
       </binding>
     </element>
