@@ -41,8 +41,8 @@
       <path value="Observation.category" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="coding.system"/>
+          <type value="pattern"/>
+          <path value="$this"/>
         </discriminator>
         <rules value="open"/>
       </slicing>
@@ -54,20 +54,12 @@
       <short value="Health program"/>
       <min value="1"/>
       <max value="1" />
-    </element>
-    <element id="Observation.category:hPCat.coding">
-      <path value="Observation.category.coding"/>
-      <min value="1"/>
-    </element>
-    <element id="Observation.category:hPCat.coding.system">
-      <path value="Observation.category.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://terminology.hl7.org.au/CodeSystem/observation-category"/>
-    </element>
-    <element id="Observation.category:hPCat.coding.code">
-      <path value="Observation.category.coding.code" />
-      <min value="1" />
-      <fixedCode value="program" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/observation-category"/>
+          <code value="program"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
