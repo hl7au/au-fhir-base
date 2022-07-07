@@ -8,5 +8,5 @@ No extensions are used in this profile.
 
 #### Examples
 
-There are no examples available for this profile.
+[Alcohol status: current drinker](Observation-alcohol-status-example0.html)
 
