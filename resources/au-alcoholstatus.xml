@@ -27,8 +27,8 @@
       <path value="Observation"/>
     </element>
     <element id="Observation.status">
-      <path value="Observation.status"/>
-      <mustSupport value="true"/>
+      <path value="Observation.status" />
+      <fixedCode value="final" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
@@ -38,7 +38,6 @@
           <code value="160573003"/>
         </coding>
       </patternCodeableConcept>
-      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]"/>
@@ -60,7 +59,6 @@
       <type>
         <code value="dateTime"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
@@ -68,7 +66,6 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/alcohol-intake-status-1"/>
