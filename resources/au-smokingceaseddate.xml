@@ -83,20 +83,6 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-      <min value="1"/>
-    </element>
-    <element id="Observation.valueDateTime">
-      <path value="Observation.valueDateTime"/>
-      <min value="1"/>
-      <max value="1"/>
       <type>
         <code value="dateTime"/>
       </type>
