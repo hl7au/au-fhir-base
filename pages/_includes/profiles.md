@@ -55,8 +55,10 @@ These Profiles have been defined for this implementation guide.
 
 ## Lifestyle Factor Profiles
 * [AU Health Program Participation Summary](StructureDefinition-au-healthprogramparticipation.html) *[[DRAFT 0](guidance.html)]* - summary of an individual's participation in a health program, e.g. weight management, at a point in time
-* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[DRAFT 0](guidance.html)]* - smoking status lifestyle factor at a point in time
 * [AU Alcohol Status](StructureDefinition-au-alcoholstatus.html) *[[DRAFT 0](guidance.html)]* - alcohol status lifestyle factor at a point in time
+* [AU Smoking Status](StructureDefinition-au-smokingstatus.html) *[[DRAFT 0](guidance.html)]* - smoking status lifestyle factor at a point in time
+* [AU Smoking Started Date](StructureDefinition-au-smokingstarteddate.html) *[[DRAFT 0](guidance.html)]* - recorded date of tobacco smoking started
+* [AU Smoking Ceased Date](StructureDefinition-au-smokingceaseddate.html) *[[DRAFT 0](guidance.html)]* - recorded date of tobacco smking ceased, quit date
 
 ## Pregnancy Related Profiles
 * [AU Estimated Date of Delivery](StructureDefinition-au-estimateddateofdelivery.html) *[[DRAFT 0](guidance.html)]* - estimated date of delivery at a point in time
