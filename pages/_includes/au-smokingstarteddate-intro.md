@@ -1,4 +1,4 @@
-**AU Smoking Status** *[[DRAFT 0](guidance.html)]*
+**FMM Status** *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure that represents recorded tobacco smoking start date.
 
