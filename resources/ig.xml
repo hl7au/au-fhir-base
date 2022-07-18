@@ -6,7 +6,7 @@
   <title value="AU Base Implementation Guide"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2022-05-30"/>
+  <date value="2022-07-15"/>
   <publisher value="HL7 Australia"/>
   <contact>
     <name value="HL7 Australia Patient Administration Working Group"/>
@@ -29,14 +29,6 @@
     <telecom>
       <system value="url"/>
       <value value="https://confluence.hl7australia.com/display/MED"/>
-      <use value="work"/>
-    </telecom>
-  </contact>
-  <contact>
-    <name value="HL7 Australia Child Health Working Group"/>
-    <telecom>
-      <system value="url"/>
-      <value value="https://confluence.hl7australia.com/display/CHWG"/>
       <use value="work"/>
     </telecom>
   </contact>
@@ -701,6 +693,27 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/au-smokingstatus"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-smokingstartdate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-smokingceasedate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/au-alcoholstatus"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -1717,11 +1730,19 @@
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/alcohol-status-example0"/>
+      </reference>
+      <name value="Observation of alcohol status"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
    <resource>
       <reference>
         <reference value="Observation/vitalspanel-example0"/>
       </reference>
-      <name value="Observation of vital signs panel Australian profile"/>
+      <name value="Observation of a vital signs panel"/>
       <description value="Shows an example of extended SNOMED terminology use"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -1730,7 +1751,7 @@
       <reference>
         <reference value="Observation/bodyheight-example0"/>
       </reference>
-      <name value="Observation of body height Australian profile"/>
+      <name value="Observation of body height"/>
       <description value="Shows an example of extended SNOMED terminology use"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -1831,6 +1852,15 @@
       </reference>
       <name value="Observation of body temperature Australian profile - low, measured in the right ear by tympanic thermometry"/>
       <description value="Shows an example of extended SNOMED terminology use"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/smokingstatus-example0"/>
+      </reference>
+      <name value="Observation of smoking status"/>
+      <description value="Shows an example of record of current smoker"/>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>

@@ -1,4 +1,4 @@
-**AU Smoking Status** *[[DRAFT 0](guidance.html)]*
+**FMM Status** *[[DRAFT 0](guidance.html)]*
 
 This profile defines an observation structure that represents smoking status, i.e. current behaviour for all types of tobacco smoking, for use in an Australian context.
 
@@ -11,5 +11,5 @@ No extensions are used in this profile.
 
 #### Examples
 
-There are no examples available for this profile.
+[Smoking status: Current smoker](Observation-smokingstatus-example0.html)
 
