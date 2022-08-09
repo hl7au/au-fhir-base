@@ -9,4 +9,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-[Gravidity - 2 pregnancies](Observation-gravidity-example0.html)
+[Gravidity with 2 pregnancies](Observation-gravidity-example0.html)
