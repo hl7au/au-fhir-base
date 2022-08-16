@@ -9,4 +9,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-There are no examples available for this profile.
+[Last menstrual period of 21st April 2022](Observation-lastmenstrualperiod-example0.html)
