@@ -13,4 +13,4 @@ No extensions are used in this profile.
 
 #### Examples
 
-There are no examples available for this profile.
+[Estimated date of delivery by scan](Observation-estimateddateofdelivery-example0.html)
