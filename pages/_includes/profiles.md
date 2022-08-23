@@ -26,12 +26,12 @@ These Profiles have been defined for this implementation guide.
 * [AU Base Body Structure](StructureDefinition-au-bodystructure.html) *[[FMM 1](guidance.html)]* - body structure with local terminology 
 * [AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html) *[[FMM 1](guidance.html)]* - diagnostic report with local identifiers and terminology
 * [AU Base Specimen](StructureDefinition-au-specimen.html) *[[FMM 1](guidance.html)]* - specimen details with local terminology
-* [AU Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html) *[[FMM 1](guidance.html)]* - diagnostic imaging report with local identifiers and terminology
-* [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) *[[FMM 1](guidance.html)]* - diagnostic imaging result with local terminology
-* [AU Diagnostic Request](StructureDefinition-au-diagnosticrequest.html) *[[FMM 1](guidance.html)]*  - diagnostic request with local identifiers and terminology
-* [AU Diagnostic Result](StructureDefinition-au-diagnosticresult.html) *[[FMM 1](guidance.html)]* - diagnostic result with local terminology
-* [AU Pathology Report](StructureDefinition-au-pathologyreport.html) *[[FMM 1](guidance.html)]* - pathology report with local identifiers and terminology
-* [AU Pathology Result](StructureDefinition-au-pathologyresult.html) *[FMM 1](guidance.html)]* - pathology test result with local terminology
+* [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html) *[[FMM 1](guidance.html)]* - diagnostic imaging report with local identifiers and terminology
+* [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) *[[FMM 1](guidance.html)]* - diagnostic imaging result with local terminology
+* [AU Base Diagnostic Request](StructureDefinition-au-diagnosticrequest.html) *[[FMM 1](guidance.html)]*  - diagnostic request with local identifiers and terminology
+* [AU Base Diagnostic Result](StructureDefinition-au-diagnosticresult.html) *[[FMM 1](guidance.html)]* - diagnostic result with local terminology
+* [AU Base Pathology Report](StructureDefinition-au-pathologyreport.html) *[[FMM 1](guidance.html)]* - pathology report with local identifiers and terminology
+* [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html) *[FMM 1](guidance.html)]* - pathology test result with local terminology
 
 ## Clinical Profiles
 * [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) *[[FMM 1](guidance.html)]* - observation with assertion of no relevant finding
