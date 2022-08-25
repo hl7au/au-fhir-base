@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<id value="hl7.fhir.au.core"/>
+	<url value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+	<version value="0.0.1"/>
+	<name value="AUCoreImplementationGuide"/>
+	<title value="AU Core Implementation Guide"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<publisher value="HL7 Australia"/>
+	<contact>
+		<name value="HL7 Australia Patient Administration Working Group"/>
+		<telecom>
+			<system value="url"/>
+			<value value="http://confluence.hl7australia.com/display/PA"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<contact>
+		<name value="HL7 Australia Orders and Observations Working Group"/>
+		<telecom>
+			<system value="url"/>
+			<value value="https://confluence.hl7australia.com/display/OO"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<contact>
+		<name value="HL7 Australia Medications Working Group"/>
+		<telecom>
+			<system value="url"/>
+			<value value="https://confluence.hl7australia.com/display/MED"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="This implementation guide is provided to support the use of FHIR®© in an Australian context, and defines the minimum set of constraints on the FHIR resources to create the AU Core profiles. This implementation guide forms the foundation to build future AU Realm FHIR implementation guides and its content will continue to grow to meet the needs of AU implementers."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<packageId value="hl7.fhir.au.core"/>
+	<license value="CC0-1.0"/>
+	<fhirVersion value="4.0.1"/>
+	<dependsOn id="aubaser4">
+		<uri value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
+		<packageId value="hl7.fhir.au.base"/>
+		<version value="current"/>
+	</dependsOn>
+	<definition>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-allergyintolerance"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-documentcomposition"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-condition"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-diagnosticreport"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-encounter"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-healthcareservice"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-immunization"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-location"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medication"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationadministration"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationdispense"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationrequest"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-medicationstatement"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-organization"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-patient"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-practitioner"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-practitionerrole"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-procedure"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-relatedperson"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-specimen"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-substance"/>
+			</reference>
+		</resource>
+		<!--VITAL SIGNS-->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bloodpressure"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bodyheight"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bodyweight"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-vitalspanel"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-oxygensat"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bmi"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-bodytemp"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-resprate"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-headcircum"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-heartrate"/>
+			</reference>
+		</resource>
+		<!--LIFESTYLE FACTOR-->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-alcoholstatus"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-healthprogramparticipation"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-smokingceasedate"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-smokingstartdate"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-smokingstatus"/>
+			</reference>
+		</resource>
+		<!--PREGNANCY RELATED-->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-estimateddateofdelivery"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-gestationalage"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-lastmenstrualperiod"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-gravidity"/>
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-parity"/>
+			</reference>
+		</resource>
+
+		<page>
+			<nameUrl value="toc.html"/>
+			<title value="Table of Contents"/>
+			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="Home"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="conformance.html"/>
+				<title value="Conformance"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="general-requirements.html"/>
+					<title value="General Requirements"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="must-support.html"/>
+					<title value="Must Support"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+			<page>
+				<nameUrl value="guidance.html"/>
+				<title value="Guidance"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="profiles-and-extensions.html"/>
+				<title value="Profiles and Extensions"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="capability-statements.html"/>
+				<title value="Capability Statements"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="search-parameters-and-operations.html"/>
+				<title value="Search Parameters and Operations"/>
+				<generation value="markdown"/>
+			</page>
+			<!--<page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+      </page>-->
+			<!--<page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>-->
+			<page>
+				<nameUrl value="examples.html"/>
+				<title value="Examples"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="downloads.html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
+			</page>
+			<!--<page>
+        <nameUrl value="changes.html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
+      </page>-->
+		</page>
+		<!-- copyright year is a mandatory parameter -->
+		<parameter>
+			<code value="copyrightyear"/>
+			<value value="2022+"/>
+		</parameter>
+		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="find-other-resources"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input\history"/>
+		</parameter>
+		<parameter>
+			<code value="path-liquid"/>
+			<value value="templates\liquid"/>
+		</parameter>
+		<parameter>
+			<code value="shownav"/>
+			<value value="true"/>
+		</parameter>
+		<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="excludexml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludejson"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>-->
+		<parameter>
+			<code value="showsource"/>
+			<value value="true"/>
+		</parameter>
+	</definition>
+</ImplementationGuide>

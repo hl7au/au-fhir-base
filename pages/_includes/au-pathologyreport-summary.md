@@ -1,1 +1,0 @@
-Note: This summary file is kept solely for IG Publisher and is not maintained.
