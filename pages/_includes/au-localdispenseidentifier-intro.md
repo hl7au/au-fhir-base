@@ -1,6 +1,6 @@
 **AU Local Dispense Identifier**  *[[FMM 1](guidance.html)]*
 
-This identifier profile defines a local dispense identifier in an Australian context. A local dispense identifier assigned by an organisation to a dispense record in that organisation's set of dispense records.
+This identifier profile defines a local dispense identifier in an Australian context. A local dispense identifier is an organisation's identifier for a dispense record in that organisation's local system set of dispense records.
 
 A dispense record identifier is typically assigned by the dispensing system and allows linking of a dispensing record to the dispensing system's local identifier.
 
