@@ -24,7 +24,7 @@ Related to administration records such as patient, practitioner, practitioner ro
 * [Change Description](StructureDefinition-change-description.html) *[[FMM 1](guidance.html)]* - description of the change including reason for change
 * [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) *[[FMM 3](guidance.html)]* - patient flag, CTG eligible
 * [Dispense Number](StructureDefinition-dispense-number.html) *[[FMM 2](guidance.html)]* - number of this dispense
-* [Medication Long Term](StructureDefinition-medication-long-term.html) *[[FMM 2](guidance.html)]* - medication long-term indicator
+* [Long Term](StructureDefinition-medication-long-term.html) *[[FMM 2](guidance.html)]* - medication long-term indicator
 * [Medication Brand Name](StructureDefinition-medication-brand-name.html) *[[FMM 1](guidance.html)]* - text brand name
 * [Medication Generic Name](StructureDefinition-medication-generic-name.html) *[[FMM 1](guidance.html)]* - text generic name
 * [Medication Strength](StructureDefinition-medication-strength.html) *[[DRAFT 0](guidance.html)]* - text only medication strength

@@ -9,7 +9,7 @@ This profile does not force conformance to core localised concepts. It enables i
 
 #### Extensions
 Extensions used in this profile:
-* MedicationStatement: [Medication Long Term](StructureDefinition-medication-long-term.html)
+* MedicationStatement: [Long Term](StructureDefinition-medication-long-term.html)
 * MedicationStatement.medication.coding: [Medication Type](StructureDefinition-medication-type.html)
 
 Potentially useful extensions:
