@@ -26,26 +26,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- ================================================ -->
 
-<br />
-
-**Externally Published code systems**
-
-|URI|Source|Comment|OID (for non-FHIR systems)|
-|---|---|---|---|
-
-TBD
 
 
-<p>
-</p>
-
-### ConceptMaps
-
-The following concept mappings have been defined as part of the this guide.
-
-  {%raw%}{% include list-simple-conceptmaps.xhtml %}{%endraw%}
-<p>
-</p>
-
--->
 

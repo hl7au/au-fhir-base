@@ -1,6 +1,3 @@
-# {{ page.title }}
-
-
 ## Introduction
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
