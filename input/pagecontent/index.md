@@ -1,10 +1,10 @@
-## Introduction
+### Introduction
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
 This document is a working specification that is expected to be implemented and tested by FHIR<sup>&reg;&copy;</sup> system producers
 to enable feedback to improve the content of this guide.
 
-## Scope
+### Scope
 
 This document presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification. 
 * [Profiles](profiles-and-extensions.html#profiles) - are useful constraints of core FHIR resources and datatype for Australian use
@@ -21,7 +21,7 @@ FHIR profiles are managed under HL7 Australia working groups and projects:
 
 Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liaison Officer](mailto:wglo@hl7.org.au)
 
-## Usage
+### Usage
 
 This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
 
@@ -33,7 +33,7 @@ profiles that can be further constrained for a particular usage.
 FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of the guide as being suitable for 
 implementation. This implementation guide will be used as the basis for Australian connectathon events.
 
-## Collaboration
+### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
 * Australian FHIR Implementers Community
