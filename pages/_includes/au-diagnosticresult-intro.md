@@ -1,4 +1,4 @@
-**AU Diagnostic Result**  *[[FMM 1](guidance.html)]*
+**AU Base Diagnostic Result**  *[[FMM 1](guidance.html)]*
 
 This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel.
 
@@ -9,9 +9,9 @@ Extensions used in this profile:
 * Observation: [bodySite](https://www.hl7.org/fhir/r4/extension-bodysite.html) (core extension) 
 
 #### Boundaries and relationships
-Use the [AU Pathology Result](StructureDefinition-au-pathologyresult.html) profile to represent the result of a pathology test.
+Use the [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html) profile to represent the result of a pathology test.
 
-Use the [AU Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology examination or an imaging intensive diagnostic investigation.
+Use the [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology examination or an imaging intensive diagnostic investigation.
 
 
 #### Usage Notes
