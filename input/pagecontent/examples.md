@@ -1,5 +1,5 @@
 
-e following examples are published with this guide and all available as a downloadable as zip file [here](downloads.html#examples).
+The following examples are published with this guide and all available as a downloadable as zip file [here](downloads.html#examples).
 
 {% include nonnormative-example-boilerplate.md %}
 
