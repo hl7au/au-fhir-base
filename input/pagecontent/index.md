@@ -2,13 +2,12 @@
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
 This specification provides FHIR<sup>&reg;&copy;</sup> representations that may form the basis of developing implementation guides.
-The AU Base implementation guide alone does not constrain profiles suficiently to ensure typical use cases can be met.
 
+The AU Base implementation guide alone does not constrain profiles suficiently to ensure particular implementation use cases can be met, but may be used elsewhere to define profiles that require or mandate support for AU Base representations.
 
 For an implementation guide that has basic constraints to support many uses it is recommended that the AU Core implementation guide is used.
-The implementable AU Core specificaiton references and use AU Base profiles, this constrains elements further and defines an expected level of interface interaction support around profies.
+The implementable AU Core specificaiton references and uses AU Base profiles, this constrains elements further and defines an expected level of interface interaction support around profies.
 If an implementation is AU Core confromant this allows a level of core capability to be assumed when using.
-
 
 ### Scope
 
