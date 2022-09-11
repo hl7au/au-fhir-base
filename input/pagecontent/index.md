@@ -1,8 +1,14 @@
 ### Introduction
 This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
-This document is a working specification that is expected to be implemented and tested by FHIR<sup>&reg;&copy;</sup> system producers
-to enable feedback to improve the content of this guide.
+This specification provides FHIR<sup>&reg;&copy;</sup> representations that may form the basis of developing implementation guides.
+The AU Base implementation guide alone does not constrain profiles suficiently to ensure typical use cases can be met.
+
+
+For an implementation guide that has basic constraints to support many uses it is recommended that the AU Core implementation guide is used.
+The implementable AU Core specificaiton references and use AU Base profiles, this constrains elements further and defines an expected level of interface interaction support around profies.
+If an implementation is AU Core confromant this allows a level of core capability to be assumed when using.
+
 
 ### Scope
 
@@ -23,8 +29,6 @@ Some profiles indicate the responsible working group, or enquires can be directe
 
 ### Usage
 
-This document is a working specification that may be directly implemented by FHIR<sup>&reg;&copy;</sup> system producers.
-
 Information contained in this document is aimed at providing guidance on representing Australian local concepts 
 using FHIR. This includes code systems, extensions and profiles on base FHIR types.  The content of the implementation guide is 
 general in nature and seeks to provide a ‘how-to’ guide when representing concepts, it includes core base
@@ -39,6 +43,7 @@ This guide is the product of collaborative work undertaken with participants fro
 * Australian FHIR Implementers Community
 * HL7 Australia Working Groups
 * Australian Digital Health Agency
+* CSIRO Australian e-Health Research Centre 
 * Secure Messaging Technical Working Group
 
 

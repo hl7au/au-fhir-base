@@ -1,4 +1,4 @@
-## Contained Resources
+### Contained Resources
 In some circumstances, the content referred to in the resource reference does not have an independent existence apart from the resource that contains it - it cannot be identified independently, and nor can it have its own independent transaction scope. For example, use of a Medication resource to represent medicinal product identification within the context of a MedicationRequest. In these circumstances the resource should be [contained](http://hl7.org/fhir/R4/references.html#contained). 
 
 If referencing a contained resource, both the contained resource and the referencing resource **SHALL** conform to an AU Core profile. Further guidance about the general use case for [contained resources](http://hl7.org/fhir/R4/references.html#contained) can be found in the base FHIR specification.
@@ -9,7 +9,7 @@ In AU Core profiles:
   - Operations on BodyStructure resources are expected to be within the context of a referencing resource query such as a Consent, DiagnosticReport, Observation, or ServiceRequest.
 - Otherwise, when responding to a query, servers should not use inline contained resources to represent the returned data.
 
-## Missing Data
+### Missing Data
 
 There are situations when information for a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **SHALL** be omitted from the resource.  If the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarised below:
 
@@ -91,7 +91,7 @@ There are situations when information for a particular data element is missing a
 <!-- If one of these status code is missing, in response to a read transaction on the resource a `404` http error code and an OperationOutcome **SHALL** be returned. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed. -->
 
 
-## Suppressed Data
+### Suppressed Data
 In some circumstances, specific pieces of data may hidden due to security or privacy reasons. Elements with a minimum cardinality = 0 (including elements labeled Must Support), the element SHALL be omitted from the resource if they are suppressed.
 
 For mandatory elements (minimum cardinality is > 0), the element SHALL be populated but it may exceed the data receiver’s access rights to know that the data is suppressed:
@@ -121,7 +121,7 @@ System obligations on handling additional elements are:
   - **MAY** choose to reject non-conformant resources but are not required to
 
 
-## Medicine information
+### Medicine information
 
 The FHIR standard defines the following resources for exchanging medicine information:
 - [Medication](http://hl7.org/fhir/R4/medication.html)
@@ -305,12 +305,12 @@ These data elements may be supported as coded, or text, and systems are likely t
     ~~~
 
 
-## Lists
+### Lists
 
 *TBD: Insert guidance.*
 
 
-## Representing communication preferences
+### Representing communication preferences
 
 **Patient**
 
