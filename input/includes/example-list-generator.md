@@ -1,6 +1,8 @@
 {% assign my_types = "" %}
 
 {% for p in site.data.ig.definition.resource %}
+
+    XXX
   {%- if p.exampleBoolean or p.exampleCanonical -%}
     
     {% assign my_types =  my_types | append: "," | append: p.reference.reference | split: '/' | first %}
