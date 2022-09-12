@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-	<id value="au-base"/>
-	<url value="http://hl7.org.au/fhir/ImplementationGuide/au-base"/>
+	<id value="hl7.fhir.au.base"/>
+	<url value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
 	<version value="4.2.0"/>
 	<name value="AUBaseImplementationGuide"/>
 	<title value="AU Base Implementation Guide"/>
@@ -42,6 +42,11 @@
 	<packageId value="hl7.fhir.au.base"/>
 	<license value="CC0-1.0"/>
 	<fhirVersion value="4.0.1"/>
+	<dependsOn id="uscore">
+		<uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+		<packageId value="hl7.fhir.us.core"/>
+		<version value="5.0.1"/>
+	</dependsOn>
 	<definition>
 		<resource>
 			<reference>
@@ -2008,6 +2013,10 @@
 		<parameter>
 			<code value="show-inherited-invariants"/>
 			<value value="false"/>
+		</parameter>
+		<parameter>
+			<code value="system-version"/>
+			<valueUri value="http://snomed.info/sct|http://snomed.info/sct/32506021000036107"/>
 		</parameter>
 	</definition>
 </ImplementationGuide>
