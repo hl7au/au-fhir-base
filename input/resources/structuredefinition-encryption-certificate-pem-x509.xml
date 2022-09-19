@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="encryption-certificate-pem-x509" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509" />
+  <name value="EncryptionCertificatePEMx509" />
+  <title value="Encryption Certificate PEM X509" />
+  <status value="active" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This extension applies to the Endpoint resource and is used to support encrypted certficate content for use with an endpoint." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Endpoint" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="PEM X509 certificate" />
+      <definition value="Mechanism to hold the value of a X509 certificate as a string (base64 encoded PEM certificate)." />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="Base64 encoded string PEM format X509 certificate" />
+      <definition value="Base64 encoded string containing PEM (RFC 7468) formatted X509 certificate." />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

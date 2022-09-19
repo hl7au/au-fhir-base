@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="medication-generic-name"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name"/>
+  <name value="MedicationGenericName"/>
+  <title value="Medication Generic Drug Name"/>
+  <status value="active"/>
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description
+    value="This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and is used to represent the generic name of a medication."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Medication"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationRequest"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationDispense"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationStatement"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Medication generic drug name"/>
+      <definition
+        value="The generic medication text name for an associated medication. This may not be the same as the subject medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept."/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <short value="Generic drug name"/>
+      <min value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

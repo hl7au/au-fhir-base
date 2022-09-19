@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-careagencyemployeeidentifier" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-careagencyemployeeidentifier" />
+  <name value="AUCareAgencyEmployeeIdentifier" />
+  <title value="AU Care Agency Employee Identifier" />
+  <status value="draft" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a care agency employee (CAE) identifier in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Care Agency Employee (CAE) Identifier" />
+      <definition value="Care agency employee (CAE) identifier assigned to a person. A CAE identifier may be issued to an employee of, or person under contracted arrangement with, a care agency who wishes to participate in the My Health Record." />
+      <constraint>
+        <key value="inv-caei-0" />
+        <severity value="error" />
+        <human value="CAE identifier shall be 16 digits" />
+        <expression value="value.matches('^([0-9]{16})$')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-careagencyemployeeidentifier" />
+      </constraint>
+      <constraint>
+        <key value="inv-caei-1" />
+        <severity value="error" />
+        <human value="CAE identifier prefix shall be 900360" />
+        <expression value="value.startsWith('900360')" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-careagencyemployeeidentifier" />
+      </constraint>
+      <constraint>
+        <key value="inv-caei-2" />
+        <severity value="error" />
+        <human value="CAE identifier shall pass the Luhn algorithm check" />
+        <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-careagencyemployeeidentifier" />
+      </constraint>
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <min value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
+          <code value="CAEI" />
+        </coding>
+      </patternCodeableConcept>
+    </element>    
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/pcehr/caei/1.0" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="CAE identifier" />
+      <min value="1" />
+      <example>
+        <label value="CAE identifier" />
+        <valueString value="9003600003999997" />
+      </example>
+      <maxLength value="16" />
+    </element>
+  </differential>
+</StructureDefinition>

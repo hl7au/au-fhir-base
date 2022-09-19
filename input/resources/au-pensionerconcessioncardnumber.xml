@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-pensionerconcessioncardnumber" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pensionerconcessioncardnumber" />
+  <name value="AUPensionerConcessionCardNumber" />
+  <title value="AU Pensioner Concession Card Number" />
+  <status value="active" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This identifier profile defines a Pensioner Concession Card number in an Australian context. This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Pensioner Concession Card."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction> 
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Pensioner Concession Card Number" />
+      <definition value="Pensioner Concession Card number as the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) displayed on the individual's Pensioner Concession Card."/>
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PEN" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="Centrelink CRN as displayed on the Pensioner Concession Card" />
+      <comment value="A Centrelink CRN is a 10 character identifier in the format of 9 digits ending with a letter." />
+      <min value="1" />
+      <example>
+        <label value="Centrelink CRN" />
+        <valueString value="307111942H" />
+      </example>
+      <maxLength value="10" />
+    </element>
+  </differential>
+</StructureDefinition>

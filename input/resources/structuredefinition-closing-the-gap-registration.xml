@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="closing-the-gap-registration" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration" />
+  <name value="ClosingTheGapRegistration" />
+  <title value="Closing the Gap Registration" />
+  <status value="active" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This extension applies to the Patient resource and provides an indicator of whether the patient is eligible for a Closing the Gap (CTG) co-payment." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element"/>
+    <expression value="Patient"/>
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Closing the Gap co-payment eligibility indicator" />
+      <definition value="Indication of eligibility for the Closing the Gap co-payment." />
+      <comment value="See [Australian Institute of Health and Welfare (AIHW) Patient—Closing the Gap co-payment eligibility indicator (ID 603671)](https://meteor.aihw.gov.au/content/index.phtml/itemId/603671) for further information."/>
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

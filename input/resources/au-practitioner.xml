@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-practitioner" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+  <name value="AUBasePractitioner" />
+  <title value="AU Base Practitioner" />
+  <status value="active" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile defines a practitioner structure that localises core concepts, including identifiers and terminology, for use in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Practitioner">
+      <path value="Practitioner" />
+      <short value="A practitioner in an Australian healthcare context" />
+    </element>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-hpii" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-pbsprescribernumber" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-careagencyemployeeidentifier" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber" />
+      </type>
+    </element>
+    <element id="Practitioner.address">
+      <path value="Practitioner.address" />
+      <comment value="The address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates. Postal addresses are often used as proxies for physical locations (also see the Location resource)."/>
+      <type>
+        <code value="Address" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Address" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-address" />
+      </type>
+    </element>
+    <element id="Practitioner.qualification">
+      <path value="Practitioner.qualification" />
+      <constraint>
+        <key value="inv-pra-0" />
+        <severity value="error" />
+        <human value="A qualification shall only have AHPRA Profession details if the code is AHPRA Profession" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAHPRAProfession').exists()" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </constraint>
+      <constraint>
+        <key value="inv-pra-1" />
+        <severity value="error" />
+        <human value="A qualification shall only have AHPRA Registration details if the code is AHPRA Registration" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAHPRARegistration').exists()" />
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </constraint>
+    </element>
+    <element id="Practitioner.qualification.extension">
+      <path value="Practitioner.qualification.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.qualification.extension:ahpraProfession-details">
+      <path value="Practitioner.qualification.extension" />
+      <sliceName value="ahpraProfession-details" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details" />
+      </type>
+    </element>
+    <element id="Practitioner.qualification.extension:ahpraRegistration-details">
+      <path value="Practitioner.qualification.extension" />
+      <sliceName value="ahpraRegistration-details" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details" />
+      </type>
+    </element>
+    <element id="Practitioner.qualification.identifier">
+      <path value="Practitioner.qualification.identifier" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber" />
+      </type>
+    </element>
+    <element id="Practitioner.qualification.code">
+      <path value="Practitioner.qualification.code" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/v2-0360-extended" />
+      </binding>
+    </element>
+    <element id="Practitioner.communication">
+      <path value="Practitioner.communication" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

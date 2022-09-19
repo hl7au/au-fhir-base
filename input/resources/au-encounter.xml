@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-encounter" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-encounter" />
+  <name value="AUBaseEncounter" />
+  <title value="AU Base Encounter" />
+  <status value="draft" />
+  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.com.au" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This profile defines an encounter structure including core localisation concepts for use in an Australian context." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <short value="An encounter in an Australian healthcare context" />
+    </element>
+    <element id="Encounter.extension">
+      <path value="Encounter.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.extension:encounterDescription">
+      <path value="Encounter.extension" />
+      <sliceName value="encounterDescription" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/encounter-description" />
+      </type>
+    </element>
+    <element id="Encounter.extension:associatedHealthcareService">
+      <path value="Encounter.extension" />
+      <sliceName value="associatedHealthcareService" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice" />
+      </type>
+    </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/v3-ActEncounterCode-extended" />
+      </binding>
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1" />
+      </binding>
+    </element>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1" />
+      </binding>
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <short value="Separation Mode" />
+      <definition value="Category or kind of location after discharge." />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vaccine-serial-number" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number" />
+  <name value="VaccineSerialNumber" />
+  <title value="Vaccine Vial Serial Number" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Health Level Seven Australia (Medications WG)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="This extension applies to the Immunization resource and is used to represent the serial number of the vial of vaccine." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element"/>
+  <expression value="Immunization"/>
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Vaccine vial serial number" />
+      <definition value="Serial number for the vial of vaccine used in an administration." />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

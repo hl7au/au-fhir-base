@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="contact-purpose"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/contact-purpose"/>
+  <name value="ContactPurpose"/>
+  <title value="Contact Purpose"/>
+  <status value="active"/>
+  <publisher value="Health Level Seven Australia (Patient Administration WG)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description
+    value="This extension applies to the ContactPoint data type and is used to represent the purpose for which a contact can be reached, e.g. after hours or billing."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="ContactPoint"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Contact purpose"/>
+      <definition value="Indicates a purpose for which the contact can be reached."/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/contact-purpose"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="Contact purpose"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/contact-purpose"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
