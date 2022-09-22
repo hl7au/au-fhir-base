@@ -1,6 +1,6 @@
 {% assign my_types = "" %}
 
-NAME: {{site.data.ig.name]}
+NAME: {{site.data.ig.name}}
 {% for p in site.data.ig.definition.resource %}
   {%- if p.exampleBoolean or p.exampleCanonical -%}
     
