@@ -1,9 +1,0 @@
-**Extension: Address Identifier** *[[FMM 1](guidance.html)]*
-
-This extension applies to the [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type and is used to represent an identifier for an address. 
-
-An address identifier does not form part of the address itself, e.g. a street number. It is a unique identifier associated with a location address and may be used to look up an address, validate an address, or link to other data relating to an address.
-
-#### Examples
-
-[Postal address (with DPID and G-NAF Identifier) and work address in Darwin, NT](Patient-address-example3.html)
