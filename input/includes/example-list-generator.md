@@ -10,13 +10,12 @@
 {% assign my_array = my_types | split: "," %}
 {% assign my_array = my_array | sort | uniq %}
 
-
 {% assign lhtype = "" %}
 {% for i in my_array offset:1 %}
    {% assign dhtype = i | split: '-'  | first %}
    {%- if lhtype != dhtype %}
     {% assign lhtype = dhtype %}
-  <h3>{{ lhtype }}</h3>
+  <h4>{{ lhtype }}</h4>
    {% endif %}
   <ul>
   {%- for r_hash in site.data.pages -%}
