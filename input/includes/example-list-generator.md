@@ -16,7 +16,7 @@
    {% assign dhtype = i | split: '-'  | first %}
    {%- if lhtype != dhtype %}
     {% assign lhtype = dhtype %}
-  <h4>{{ lhtype }}</h4>
+  <h3>{{ lhtype }}</h3>
    {% endif %}
   <ul>
   {%- for r_hash in site.data.pages -%}
