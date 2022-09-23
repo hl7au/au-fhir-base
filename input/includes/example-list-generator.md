@@ -1,3 +1,1 @@
-
-{{site.data.ig.title}}
-
+{{ site.data | json }}
