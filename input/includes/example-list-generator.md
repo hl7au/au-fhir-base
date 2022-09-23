@@ -11,9 +11,13 @@
 {% assign my_array = my_array | sort | uniq %}
 
 
+{% assign lhtype = "" %}
 {% for i in my_array offset:1 %}
    {% assign dhtype = i | split: '-'  | first %}
+   {% if lhtype != dhtype }
+    {% assign lhtype = dhtype %}
   <h4>{{ dhtype }}</h4>
+   {% endif %}
   <ul>
   {%- for r_hash in site.data.pages -%}
       {% assign r_type = r_hash[0] | split: '/' | first %}
