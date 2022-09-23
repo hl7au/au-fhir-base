@@ -39,4 +39,4 @@
 </ul>
 
 
-{{ site.data | json }}
+{{ site | json }}
