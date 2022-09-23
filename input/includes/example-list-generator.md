@@ -10,8 +10,11 @@
 {% assign my_array = my_types | split: "," %}
 {% assign my_array = my_array | sort | uniq %}
 
-<ul>
+
 {% for i in my_array offset:1 %}
+   {% assign dhtype = i | split: '-'  | first %}
+  <h4>{{ dhtype }}</h4>
+  <ul>
   {%- for r_hash in site.data.pages -%}
       {% assign r_type = r_hash[0] | split: '/' | first %}
       {%- assign r = r_hash[1] -%}
@@ -20,5 +23,6 @@
           <li><a href="{{r_type}}">{{dtype}} : {{r.title}}</a></li>
       {% endif %}
   {%- endfor -%}
+  </ul>
 {% endfor %}
-</ul>
+
