@@ -1,5 +1,7 @@
 
-This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core implementation Guide. For more information on using codes in US Core, see the [FHIR Terminology] section in the FHIR specification and the [Coded Elements] section in this guide.
+This page lists all the ValueSets and CodeSystems defined as part of this specification. 
+
+As well as these included definitions this speification typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
 ### Value Sets
 
