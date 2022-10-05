@@ -1,4 +1,4 @@
-This extension allows an endpoint entry to define a suitable certficate for use in communications on the associated channel.
+This extension allows an endpoint entry to define a suitable certificate for use in communications on the associated channel.
 
 #### Usage Notes
 
