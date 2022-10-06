@@ -1,3 +1,5 @@
+A Medicare card is provided to individuals who are enrolled in Medicare. This definition supports sending either the 10 digit Medicare card number or the 11 digit number (includes the individual reference number (IRN)).
+
 #### Usage Notes
 
 The 10 digit format is supported as some systems do not support the 11 digit Medicare card number. 

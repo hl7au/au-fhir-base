@@ -1,0 +1,1 @@
+Pharmacy approval number assigned by the Department of Health to pharmacies that are approved to supply pharmaceutical benefits at particular premises under the the National Health Act 1953.

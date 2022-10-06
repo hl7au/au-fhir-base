@@ -1,3 +1,5 @@
+An employee number is an organisation’s identifier for an individual employed by that organisation.
+
 #### Usage Notes
 
 It is preferable that an organisation uses their own local system identifier namespace but if that is not available then an organisation can use their ABN or HPI-O to construct a legal globally unique identifier system for their local identifiers. 

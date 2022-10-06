@@ -1,3 +1,7 @@
+The purpose of this profile is to provide national level agreement on core localised concepts.
+
+This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. profiling, about how to support these concepts for specific implementation needs.
+
 Extensions under consideration:
 * Patient: [Ethnicity](StructureDefinition-ethnicity.html)
 

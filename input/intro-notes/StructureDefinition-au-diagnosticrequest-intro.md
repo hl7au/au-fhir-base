@@ -1,3 +1,5 @@
+This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations.
+
 #### Usage Notes
 The procedure-targetBodyStructure extension should only be used if not implicit in the code found in ServiceRequest.code. If the use case requires bodySite to be handled as a separate resource instead of an inline coded element (e.g. to identify and track separately) then use the standard extension [procedure-targetBodyStructure](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html). 
 
