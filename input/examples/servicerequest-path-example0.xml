@@ -1,0 +1,62 @@
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="path-example0"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest"/>
+    </meta>
+    <!-- Multiple "result copies to" with different resource type and a text only (display) entry-->    
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/result-copies-to">
+        <valueReference>
+            <reference value="Practitioner/example4"/>
+            <display value="Dr Robert Smith"/>            
+        </valueReference>
+    </extension>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/result-copies-to">
+        <valueReference>
+            <reference value="Organization/example3"/>
+            <display value="Devonport Family Medicine Clinic"/>    
+        </valueReference>
+    </extension>  
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/result-copies-to">
+        <valueReference>
+            <display value="Dr Jo Traveller, PO Box 123456, Port Douglas 4877, Qld."/>    
+        </valueReference>
+    </extension>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PLAC"/>
+                <display value="Placer Identifier"/>
+            </coding>
+        </type>
+        <system value="https://albionhospital.example.com/labs/order-identifier"/>
+        <value value="789012345"/>
+        <assigner>
+            <reference value="Organization/example1"/>
+            <display value="Albion Hospital"/>
+        </assigner>
+    </identifier>
+    <status value="active"/>
+    <intent value="order"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="26604007"/>
+            <display value="Complete blood count"/>
+        </coding>
+        <text value="Full blood count"/>
+    </code>
+    <subject>
+        <reference value="Patient/example1"/>
+    </subject>
+    <authoredOn value="2022-04-02"/>
+    <requester>
+        <reference value="PractitionerRole/example3"/>
+    </requester>
+    <performer>
+        <reference value="Organization/example6"/>
+    </performer>
+    <reasonCode>
+        <text value="Past history lymphoma"/>
+    </reasonCode>
+</ServiceRequest>
