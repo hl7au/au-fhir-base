@@ -1,4 +1,4 @@
-#### Usage Notes
+### Usage Notes
 
 This content provides the values for a sender to use where assigning authority components should be valued in fields in HL7 messages. 
 

@@ -8,5 +8,5 @@ Potentially useful core extensions:
 * Address.line: [Street Name Type](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnametype.html)
 * Address.line: [Street Name Base](http://hl7.org/fhir/R4/extension-iso21090-adxp-streetnamebase.html)
 
-#### Usage Notes
+### Usage Notes
 Non-Australian addresses can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type.

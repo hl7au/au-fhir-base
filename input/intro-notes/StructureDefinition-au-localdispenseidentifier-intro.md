@@ -2,7 +2,7 @@ A local dispense identifier is an organisation's identifier for a dispense recor
 
 A dispense record identifier is typically assigned by the dispensing system and allows linking of a dispensing record to the dispensing system's local identifier.
 
-#### Usage Notes
+### Usage Notes
 
 It is preferable that an organisation uses their own local system identifier namespace but if that is not available then an organisation can use their HPI-O to construct a legal globally unique identifier system for their local identifiers. 
 

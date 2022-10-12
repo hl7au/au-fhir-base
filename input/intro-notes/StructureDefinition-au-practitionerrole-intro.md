@@ -6,7 +6,7 @@ Potentially useful extensions:
 * PractitionerRole.telecom: [Contact Purpose](StructureDefinition-contact-purpose.html)
 
 
-#### Usage Notes
+### Usage Notes
 
 To indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
 

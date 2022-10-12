@@ -1,4 +1,4 @@
-#### Usage Notes
+### Usage Notes
 
 When capturing a composition practitioner role as the sole author of the composition, a practitioner linked to that practitioner role is required to be supplied as a composition author. Where there is more than one author this is not necessary or recommended.
 

@@ -2,6 +2,6 @@ This definition supports sending the Centrelink Customer Reference Number (CRN) 
 
 A Commonwealth Seniors Health Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to retirees of age pension qualification age to assist with certain living costs by allowing access to specific goods and services at a concessional rate.
 
-#### Usage Notes
+### Usage Notes
 
 Although a DVA-issued card will also include an individual's state-based DVA file number only the CRN should be sent as the Commonwealth Seniors Health Card number.
