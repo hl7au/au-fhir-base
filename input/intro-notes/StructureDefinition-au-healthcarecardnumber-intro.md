@@ -1,4 +1,4 @@
-This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Health Care Card.
+This definition supports sending the Centrelink Customer Reference Number (CRN)[<sup>[1]</sup>](https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn){:target="_blank"}[<sup>[2]</sup>](http://meteor.aihw.gov.au/content/index.phtml/itemId/690579){:target="_blank"} (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Health Care Card.
 
 An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers. 
 
