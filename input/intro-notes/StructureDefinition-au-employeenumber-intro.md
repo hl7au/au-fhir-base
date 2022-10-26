@@ -1,4 +1,4 @@
-An employee number is an organisation’s identifier for an individual employed by that organisation.
+An employee number is an organisation's identifier for an individual employed by that organisation.
 
 ### Usage Notes
 

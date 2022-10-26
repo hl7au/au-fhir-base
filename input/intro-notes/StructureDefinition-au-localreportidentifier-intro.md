@@ -1,4 +1,4 @@
-A local report identifier is an organisation’s identifier for a report in that organisation’s local system set of reports.
+A local report identifier is an organisation's identifier for a report in that organisation's local system set of reports.
 
 A report identifier must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems).
 
