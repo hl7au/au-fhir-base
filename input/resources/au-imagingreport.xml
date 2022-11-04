@@ -17,12 +17,6 @@
     </telecom>
   </contact>
   <description value="This profile defines a diagnostic report structure to represent a diagnostic imaging report issued by a diagnostic service provider in an Australian context." />
-  <jurisdiction>
-    <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="AU"/>
-    </coding>
-  </jurisdiction>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -60,7 +54,7 @@
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
       <short value="Relevant diagnostic imaging category: service, modality and anatomic region of interest" />
-      <comment value="A cateogry denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available. A third category to provide the anatomic region of interest should be provided where possible."/>
+      <comment value="A category denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available. A third category to provide the anatomic region of interest should be provided where possible."/>
       <min value="1" />
     </element>
     <element id="DiagnosticReport.category.coding">
@@ -89,7 +83,7 @@
     </element>
     <element id="DiagnosticReport.code">
       <path value="DiagnosticReport.code" />
-      <short value="Diagnostic imaging exmaination or study" />
+      <short value="Diagnostic imaging examination or study" />
       <binding>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1" />
