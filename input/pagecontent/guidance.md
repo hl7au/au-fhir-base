@@ -20,7 +20,7 @@ For an directly implementable usage of AU Base for a general level of capability
 
 
 ### Maturity Levels 
-These levels used for this Implementation Guide are associated with the [FHIR Maturity Model](http://build.fhir.org/versions.html#maturity) and adjusted for local use.
+These levels used for this Implementation Guide are associated with the [FHIR Maturity Model](versions.html#maturity) and adjusted for local use.
 
 The content of this release has been subject to significant review through ballot and other HL7 AU processes and many aspects of it have been implemented and 
 subjected to interoperability testing through Connectathons and early adoption. However, the degree of testing has varied. Some resources have been well tested 
@@ -45,7 +45,7 @@ The following FMM levels are defined:
 
 **Normative** the artifact is now considered stable.
 
-Reference should also be made to [Version Management Policy](http://build.fhir.org/versions.html)
+Reference should also be made to [Version Management Policy](versions.html)
 
 
 
