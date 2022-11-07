@@ -153,11 +153,11 @@ In addition to the medication code, the majority of use cases support exchange o
 These data elements may be supported as coded, or text, and systems are likely to use a combination of coded and text elements when constructing a Medication resource. The guidance for how to support coded or text is summarised below: 
 
 1. For *coded* support for brand name, generic name, manufacturer, item form and strength:
-   - Fully coded support is provided using code.coding with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) extension in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
-      - brand name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - generic name = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - generic item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
-      - branded item form and strength = `code.coding` with [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](http://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-medication-type.html)
+   - Fully coded support is provided using code.coding with [Medication Type extension](StructureDefinition-medication-type.html) extension in the resource (i.e. MedicationAdministration, MedicationStatement, MedicationDispense, MedicationRequest, Medication):
+      - brand name = `code.coding` with [Medication Type extension](StructureDefinition-medication-type.html) using `BPD` from the [Medication Type code system](CodeSystem-medication-type.html)
+      - generic name = `code.coding` with [Medication Type extension](StructureDefinition-medication-type.html) using `UPD` from the [Medication Type code system](CodeSystem-medication-type.html)
+      - generic item form and strength = `code.coding` with [Medication Type extension](StructureDefinition-medication-type.html) using `UPDSF` from the [Medication Type code system](CodeSystem-medication-type.html)
+      - branded item form and strength = `code.coding` with [Medication Type extension](StructureDefinition-medication-type.html) using `BPDSF` from the [Medication Type code system](CodeSystem-medication-type.html)
    - If the resource is a Medication resource:
       - form and strength are also provided in `form`, `ingredient.itemCodeableConcept` and `ingredient.strength`
       - manufacturer = `manufacturer.identifer`
@@ -275,8 +275,8 @@ These data elements may be supported as coded, or text, and systems are likely t
 
 1.  For *non-coded* support for brand name, generic name, manufacturer, item form and strength:
     - Fully non-coded support is provided using the Medication resource
-        - brand name = [Medication Brand Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html)
-        - generic name = [Medication Generic Name extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html)
+        - brand name = [Medication Brand Name extension](StructureDefinition-medication-brand-name.html)
+        - generic name = [Medication Generic Name extension](StructureDefinition-medication-generic-name.html)
         - item form and strength = `code.text`
         - manufacturer = `manufacturer.display`
   
