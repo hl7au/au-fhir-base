@@ -4,6 +4,7 @@ Unable to find code 33791000087105 in http://snomed.info/sct (version http://sno
 
 # Misc
 Found multiple matching profiles among 2 choices: 
+This element does not match any known slice defined in the profile
 The Implementation Guide contains no examples for this data type profile
 The Implementation Guide contains no examples for this extension
 URL Mismatch http://hl7.org.au/fhir/CodeSystem/
@@ -20,6 +21,7 @@ Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1' is unknown so the code cannot be validated
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1' is unknown so the code cannot be validated
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' is unknown so the code cannot be validated
+Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' is unknown so the code cannot be validated
 
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2 not found by validator
 ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator
@@ -69,15 +71,16 @@ Code System URI 'http://www.mims.com.au/codes' is unknown so the code cannot be 
 Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1' is unknown so the code cannot be validated
 Code System URI 'https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0' is unknown so the code cannot be validated
 Code System URI 'https://acmepathology.example.com/labs' is unknown so the code cannot be validated
+Code System URI 'http://example.acme.com.au/generic-packages' is unknown so the code cannot be validated
 
 Code System URI 'http://hl7.org.au/fhir/CodeSystem/smd-interfaces' is unknown so the code cannot be validated
 Code System URI 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' is unknown so the code cannot be validated
 
 
-
 # terminology support
 Error from server: Unable to provide support for code system http://pbs.gov.au/code/item
 Error from server: Unable to provide support for code system http://www.mims.com.au/codes
+Unable to check whether code is in value set http://terminology.hl7.org.au/ValueSet/mims: [Code System URI 'http://www.mims.com.au/codes' is unknown so the code cannot be validated]
 
 # terminology id
 Conformance resource /scratch/ig-build-temp-IN0OEL/repo/input/resources/codesystem-au-location-physical-type.xml - the canonical URL (http://hl7.org.au/fhir/CodeSystem/au-location-physical-type) does not match the URL (http://terminology.hl7.org.au/CodeSystem/location-physical-type)
@@ -142,3 +145,9 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+
+# HL7 core warnings
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+warning	The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
