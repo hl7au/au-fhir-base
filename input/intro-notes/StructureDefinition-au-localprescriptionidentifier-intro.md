@@ -1,7 +1,3 @@
-A local prescription identifier is an organisation's identifier for a prescription in that organisation's local system set of prescriptions.
-
-A local prescription identifier allows linking of a prescription to a system's local identifier.
-
 ### Usage Notes
 
 It is preferable that an organisation uses their own local system identifier namespace but if that is not available then an organisation can use their HPI-O to construct a legal globally unique identifier system for their local identifiers. 

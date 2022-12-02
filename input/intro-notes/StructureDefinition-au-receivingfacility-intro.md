@@ -1,1 +1,0 @@
-This content allows a sender using these endpoint details to include Receiving Facility (MSH-6) information in HL7 V2 messages sent via this channel which allow correct delivery within the receiving system.

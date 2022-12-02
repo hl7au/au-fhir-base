@@ -1,6 +1,3 @@
-The generic medication text name may not be the same as the subject medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept.
-
-
 ### Usage Notes
 This extension is not to be the sole representation of the medication concept; it shall not be used as a substitute for medication code (e.g. Medication.code or MedicationStatement.medicationCodeableConcept). If a system can only supply generic product information, and only in text form, that information will be supplied in the text portion of that code e.g. code.text or medicationCodeableConcept.text.
 
