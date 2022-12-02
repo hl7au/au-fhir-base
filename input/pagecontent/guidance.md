@@ -6,24 +6,24 @@ Instead it defines representations of how commonly needed concepts, in an Austra
 This implementation guide can then be drawn on for specific use cases and further constraints added for the needs of those cases.
 By referencing the AU Base definition in downstream implementation guides there is a basic level of alignment in representation across those guides.  
 This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration translation tasks.
-This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information in an out of multiple domains of interest is addressed.
+This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information into and out of multiple domains of interest is addressed.
 
 
 This approach manifests as the following representation outcomes in this guide, as follows:
 * Cardinality:  most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
-* Must Support: the FHIR profiling Must Support flags is not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
+* Must Support: the FHIR profiling Must Support flags are not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
 * Terminology Binding: elements that can be bound to terminology are often sliced to offer one or more specific binding options that can be required in downstream guides; this also provides value sets that are common/suitable for the Australian context. 
 * Slice Constraints: in this guide choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
 
 
-For an directly implementable usage of AU Base for a general level of capability it is recommended the AU Core implementation guide be considered. AU Core introduces a required level of element support that give a core set of capability that can be implemented and assumed.
+For a directly implementable usage of AU Base for a general level of capability it is recommended the AU Core implementation guide be considered. AU Core introduces a required level of element support that give a core set of capability that can be implemented and assumed.
 
 
 ### Maturity Levels 
 These levels used for this Implementation Guide are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
 
 The content of this release has been subject to significant review through ballot and other HL7 AU processes and many aspects of it have been implemented and 
-subjected to interoperability testing through Connectathons and early adoption. However, the degree of testing has varied. Some resources have been well tested 
+subjected to interoperability testing through connectathons and early adoption. However, the degree of testing has varied. Some resources have been well tested 
 in a variety of environments. Others have received relatively little real-world exercise. In general, the infrastructure should be considered to be more stable 
 than the resources themselves. Guidance from early implementation will help address these areas.
 
