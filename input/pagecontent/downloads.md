@@ -5,10 +5,12 @@ The following package file includes an NPM package file used by many of the FHIR
 
 - [Package](package.tgz){::download="true"}
 
-See the overview on [validating FHIR profiles and resources](http://hl7.org/fhir/R4/validation.html) for more information about validating profiles and how to use these artefacts
+See the overview on [validating FHIR profiles and resources](http://hl7.org/fhir/R4/validation.html) for more information about validating profiles and how to use these artefacts.
+
 
 ### Examples
- all the examples that are used in this Implementation Guide available for download:
+
+All examples included in this implementation guide are available for download:
 
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
