@@ -1,5 +1,5 @@
 ### Introduction
-This implementation guide is provided to support the use of FHIR<sup>&reg;&copy;</sup> in an Australian context.
+This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context.
 
 This specification provides FHIR<sup>&reg;&copy;</sup> representations that may form the basis of developing implementation guides.
 
