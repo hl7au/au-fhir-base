@@ -5,6 +5,6 @@ A full medication definition as medicationReference or medicationCodeableConcept
 * [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
 * [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 
-Potentially useful extensions:
+**Potentially useful extensions:**
 * MedicationStatement: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
 * MedicationStatement: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
