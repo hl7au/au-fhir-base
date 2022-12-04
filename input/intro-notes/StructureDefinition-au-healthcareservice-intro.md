@@ -4,5 +4,5 @@ HPI-O is used as an identifier in this profile to support the case where network
 
 To indicate the purpose of a contact point (e.g. telecom), the extension Contact Purpose could be used.
 
-Potentially useful extensions:
+**Potentially useful extensions:**
 * HealthcareService.telecom: [Contact Purpose](StructureDefinition-contact-purpose.html)
