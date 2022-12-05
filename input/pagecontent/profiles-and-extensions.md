@@ -14,7 +14,7 @@ The following profiles and have been defined for this implementation guide.
 
 ### Extensions
 
-The following [extensions]({{site.data.fhir.path}}extensibility.html) have been defined as part of this implementation Guide. A [registry of standard extensions]({{site.data.fhir.path}}extensibility-registry.html) can be found in the FHIR specification and additional extensions may be registered on the HL7 FHIR registry at <http://hl7.org/fhir/registry>.
+The following [extensions]({{site.data.fhir.path}}extensibility.html) have been defined as part of this guide. A [registry of standard extensions]({{site.data.fhir.path}}extensibility-registry.html) can be found in the FHIR specification and additional extensions may be registered on the HL7 FHIR registry at <http://hl7.org/fhir/registry>.
 
 
 <!-- ================================================ -->

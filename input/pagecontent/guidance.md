@@ -45,7 +45,7 @@ The following FMM levels are defined:
 
 **Normative** the artifact is now considered stable.
 
-Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html)
+Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
 
 
 
