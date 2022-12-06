@@ -1,7 +1,3 @@
-The purpose of this profile is to provide national level agreement on core localised concepts. 
-
-This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
-
 ### Usage Notes
 Where including information from AHPRA about a practitioner, Practitioner.qualification should be instantiated with either the extension [ahpraprofession-details](StructureDefinition-ahpraprofession-details.html) or [ahpraregistration-details](StructureDefinition-ahpraregistration-details.html). Detailed guidance on representing AHPRA data in Practitioner is available [here](http://hl7.org.au/notes/ahpra-registration-number/index.html){:target="_blank"}.
 

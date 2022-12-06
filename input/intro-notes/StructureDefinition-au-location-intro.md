@@ -1,7 +1,3 @@
-The purpose of this profile is to provide national level agreement on core localised concepts. 
-
-This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
-
 ### Usage Notes
 An instantiation of Location may form part of defining a mobile or remotely delivered service. As part of defining a mobile service, Location should have:
 * mode='kind'

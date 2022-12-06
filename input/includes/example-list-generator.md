@@ -23,7 +23,7 @@
       {%- assign r = r_hash[1] -%}
       {% assign dtype = r_type | split: '-'  | first %}
       {%- if r_type == i %}
-          <li><a href="{{r_type}}">{{dtype}} : {{r.title}}</a></li>
+          <li><a href="{{r_type}}">{{r.title}}</a></li>
       {% endif %}
   {%- endfor -%}
   </ul>
