@@ -5,8 +5,8 @@
     <valueInteger value="1"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details" />
-  <name value="AHPRARegistrationDetails" />
-  <title value="AHPRA Registration Details" />
+  <name value="AhpraRegistrationDetails" />
+  <title value="Ahpra Registration Details" />
   <status value="active" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" /><contact>
     <telecom>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (AHPRA)([[1]](https://www.ahpra.gov.au), [[2]](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number)) registration details. This extension supports the inclusion of the AHPRA profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s AHPRA registration."/>
+  <description value="This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (Ahpra)([[1]](https://www.ahpra.gov.au), [[2]](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number)) registration details. This extension supports the inclusion of the Ahpra profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s Ahpra registration."/>
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -35,8 +35,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="AHPRA Registration Details" />
-      <definition value="Details on the AHPRA registration of profession."/>
+      <short value="Ahpra Registration Details" />
+      <definition value="Details on the Ahpra registration of profession."/>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
@@ -50,8 +50,8 @@
     </element>
     <element id="Extension.extension:ahpraProfession">
       <path value="Extension.extension" />
-      <short value="AHPRA registered profession"/>
-      <definition value="Details on the AHPRA profession registration."/>
+      <short value="Ahpra registered profession"/>
+      <definition value="Details on the Ahpra profession registration."/>
       <sliceName value="ahpraProfession" />
     </element>
     <element id="Extension.extension:ahpraProfession.url">
@@ -60,8 +60,8 @@
     </element>
     <element id="Extension.extension:ahpraProfession.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registered profession type code"/>
-      <definition value="AHPRA registered profession type coded value."/>
+      <short value="Ahpra registered profession type code"/>
+      <definition value="Ahpra registered profession type coded value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -69,8 +69,8 @@
     <element id="Extension.extension:ahpraRegistrationRecordNumber">
       <path value="Extension.extension" />
       <sliceName value="ahpraRegistrationRecordNumber" />
-      <short value="AHPRA registration number details"/>
-      <definition value="AHPRA registration number details."/>
+      <short value="Ahpra registration number details"/>
+      <definition value="Ahpra registration number details."/>
     </element>
     <element id="Extension.extension:ahpraRegistrationRecordNumber.url">
       <path value="Extension.extension.url" />
@@ -78,16 +78,16 @@
     </element>
     <element id="Extension.extension:ahpraRegistrationRecordNumber.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registration number value"/>
-      <definition value="AHPRA registration number value."/>
+      <short value="Ahpra registration number value"/>
+      <definition value="Ahpra registration number value."/>
       <type>
         <code value="string" />
       </type>
     </element>    
     <element id="Extension.extension:ahpraDivision">
       <path value="Extension.extension" />
-      <short value="AHPRA registration division details"/>
-      <definition value="AHPRA registration division details."/>
+      <short value="Ahpra registration division details"/>
+      <definition value="Ahpra registration division details."/>
       <sliceName value="ahpraDivision" />
     </element>
     <element id="Extension.extension:ahpraDivision.url">
@@ -96,16 +96,16 @@
     </element>
     <element id="Extension.extension:ahpraDivision.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registration division value"/>
-      <definition value="AHPRA registration division value."/>
+      <short value="Ahpra registration division value"/>
+      <definition value="Ahpra registration division value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraRegistrationType">
       <path value="Extension.extension" />
-      <short value="AHPRA registration type details"/>
-      <definition value="AHPRA registration type details."/>
+      <short value="Ahpra registration type details"/>
+      <definition value="Ahpra registration type details."/>
       <sliceName value="ahpraRegistrationType" />
     </element>
     <element id="Extension.extension:ahpraRegistrationType.url">
@@ -114,16 +114,16 @@
     </element>
     <element id="Extension.extension:ahpraRegistrationType.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registration type value"/>
-      <definition value="AHPRA registration type value."/>
+      <short value="Ahpra registration type value"/>
+      <definition value="Ahpra registration type value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraRegistrationSubtype">
       <path value="Extension.extension" />
-      <short value="AHPRA registration subtype details"/>
-      <definition value="AHPRA registration subtype details."/>
+      <short value="Ahpra registration subtype details"/>
+      <definition value="Ahpra registration subtype details."/>
       <sliceName value="ahpraRegistrationSubtype" />
     </element>
     <element id="Extension.extension:ahpraRegistrationSubtype.url">
@@ -132,16 +132,16 @@
     </element>
     <element id="Extension.extension:ahpraRegistrationSubtype.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registration subtype value"/>
-      <definition value="AHPRA registration subtype value."/>
+      <short value="Ahpra registration subtype value"/>
+      <definition value="Ahpra registration subtype value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraRegistrationStatus">
       <path value="Extension.extension" />
-      <short value="AHPRA registration status details"/>
-      <definition value="AHPRA registration status details."/>
+      <short value="Ahpra registration status details"/>
+      <definition value="Ahpra registration status details."/>
       <sliceName value="ahpraRegistrationStatus" />
     </element>
     <element id="Extension.extension:ahpraRegistrationStatus.url">
@@ -150,16 +150,16 @@
     </element>
     <element id="Extension.extension:ahpraRegistrationStatus.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registration status value"/>
-      <definition value="AHPRA registration status value."/>
+      <short value="Ahpra registration status value"/>
+      <definition value="Ahpra registration status value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraSpecialty">
       <path value="Extension.extension" />
-      <short value="AHPRA registration specialty details"/>
-      <definition value="AHPRA registration specialty details."/>
+      <short value="Ahpra registration specialty details"/>
+      <definition value="Ahpra registration specialty details."/>
       <sliceName value="ahpraSpecialty" />
     </element>
     <element id="Extension.extension:ahpraSpecialty.url">
@@ -168,16 +168,16 @@
     </element>
     <element id="Extension.extension:ahpraSpecialty.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registration specialty value"/>
-      <definition value="AHPRA registration specialty value."/>
+      <short value="Ahpra registration specialty value"/>
+      <definition value="Ahpra registration specialty value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraFieldofSpecialtyPractice">
       <path value="Extension.extension" />
-      <short value="AHPRA registered field of specialty practice details"/>
-      <definition value="AHPRA registered field of specialty practice details."/>
+      <short value="Ahpra registered field of specialty practice details"/>
+      <definition value="Ahpra registered field of specialty practice details."/>
       <sliceName value="ahpraFieldofSpecialtyPractice" />
     </element>
     <element id="Extension.extension:ahpraFieldofSpecialtyPractice.url">
@@ -186,16 +186,16 @@
     </element>
     <element id="Extension.extension:ahpraFieldofSpecialtyPractice.value[x]">
       <path value="Extension.extension.value[x]" />
-      <short value="AHPRA registered field of specialty practice value"/>
-      <definition value="AHPRA registered field of specialty practice value."/>
+      <short value="Ahpra registered field of specialty practice value"/>
+      <definition value="Ahpra registered field of specialty practice value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraEndorsement">
       <path value="Extension.extension" />
-      <short value="AHPRA registered endorsement details"/>
-      <definition value="AHPRA registered endorsement details."/>
+      <short value="Ahpra registered endorsement details"/>
+      <definition value="Ahpra registered endorsement details."/>
       <sliceName value="ahpraEndorsement" />
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension">
@@ -210,8 +210,8 @@
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementEditDate">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA registered endorsement edited date details"/>
-      <definition value="AHPRA registered endorsement last edited date details."/>
+      <short value="Ahpra registered endorsement edited date details"/>
+      <definition value="Ahpra registered endorsement last edited date details."/>
       <sliceName value="ahpraEndorsementEditDate" />
       <max value="1" />
     </element>
@@ -221,16 +221,16 @@
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA registered endorsement edited date value"/>
-      <definition value="AHPRA registered endorsement last edited date value."/>
+      <short value="Ahpra registered endorsement edited date value"/>
+      <definition value="Ahpra registered endorsement last edited date value."/>
       <type>
         <code value="date" />
       </type>
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementType">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA registered endorsement type details"/>
-      <definition value="AHPRA registered endorsement type details."/>
+      <short value="Ahpra registered endorsement type details"/>
+      <definition value="Ahpra registered endorsement type details."/>
       <sliceName value="ahpraEndorsementType" />
       <max value="1" />
     </element>
@@ -240,16 +240,16 @@
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA registered endorsement type value"/>
-      <definition value="AHPRA registered endorsement type value."/>
+      <short value="Ahpra registered endorsement type value"/>
+      <definition value="Ahpra registered endorsement type value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementSubtype">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA registered endorsement subtype details"/>
-      <definition value="AHPRA registered endorsement subtype details."/>
+      <short value="Ahpra registered endorsement subtype details"/>
+      <definition value="Ahpra registered endorsement subtype details."/>
       <sliceName value="ahpraEndorsementSubtype" />
       <max value="1" />
     </element>
@@ -259,16 +259,16 @@
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementSubtype.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA registered endorsement subtype value"/>
-      <definition value="AHPRA registered endorsement subtype value."/>
+      <short value="Ahpra registered endorsement subtype value"/>
+      <definition value="Ahpra registered endorsement subtype value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementDetail">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA registered endorsement descriptive details"/>
-      <definition value="AHPRA registered endorsement descriptive details."/>
+      <short value="Ahpra registered endorsement descriptive details"/>
+      <definition value="Ahpra registered endorsement descriptive details."/>
       <sliceName value="ahpraEndorsementDetail" />
       <max value="1" />
     </element>
@@ -278,8 +278,8 @@
     </element>
     <element id="Extension.extension:ahpraEndorsement.extension:ahpraEndorsementDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA registered endorsement descriptive details value"/>
-      <definition value="AHPRA registered endorsement descriptive details value."/>
+      <short value="Ahpra registered endorsement descriptive details value"/>
+      <definition value="Ahpra registered endorsement descriptive details value."/>
       <type>
         <code value="string" />
       </type>
@@ -294,8 +294,8 @@
     </element>
     <element id="Extension.extension:ahpraNotation">
       <path value="Extension.extension" />
-      <short value="AHPRA other notation details"/>
-      <definition value="AHPRA other notation details."/>
+      <short value="Ahpra other notation details"/>
+      <definition value="Ahpra other notation details."/>
       <sliceName value="ahpraNotation" />
     </element>
     <element id="Extension.extension:ahpraNotation.extension">
@@ -310,8 +310,8 @@
     </element>
     <element id="Extension.extension:ahpraNotation.extension:ahpraNotationEditDate">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA notation edit date details"/>
-      <definition value="AHPRA notation last edit date details."/>
+      <short value="Ahpra notation edit date details"/>
+      <definition value="Ahpra notation last edit date details."/>
       <sliceName value="ahpraNotationEditDate" />
       <max value="1" />
     </element>
@@ -321,16 +321,16 @@
     </element>
     <element id="Extension.extension:ahpraNotation.extension:ahpraNotationEditDate.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA notation edit date value"/>
-      <definition value="AHPRA notation last edit date value."/>
+      <short value="Ahpra notation edit date value"/>
+      <definition value="Ahpra notation last edit date value."/>
       <type>
         <code value="date" />
       </type>
     </element>
     <element id="Extension.extension:ahpraNotation.extension:ahpraNotationType">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA notation type details"/>
-      <definition value="AHPRA notation type details."/>
+      <short value="Ahpra notation type details"/>
+      <definition value="Ahpra notation type details."/>
       <sliceName value="ahpraNotationType" />
       <max value="1" />
     </element>
@@ -340,16 +340,16 @@
     </element>
     <element id="Extension.extension:ahpraNotation.extension:ahpraNotationType.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA notation type value"/>
-      <definition value="AHPRA notation type value."/>
+      <short value="Ahpra notation type value"/>
+      <definition value="Ahpra notation type value."/>
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Extension.extension:ahpraNotation.extension:ahpraNotationDetail">
       <path value="Extension.extension.extension" />
-      <short value="AHPRA notation descriptive details"/>
-      <definition value="AHPRA notation descriptive details."/>
+      <short value="Ahpra notation descriptive details"/>
+      <definition value="Ahpra notation descriptive details."/>
       <sliceName value="ahpraNotationDetail" />
       <max value="1" />
     </element>
@@ -359,8 +359,8 @@
     </element>
     <element id="Extension.extension:ahpraNotation.extension:ahpraNotationDetail.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <short value="AHPRA notation descriptive details value"/>
-      <definition value="AHPRA notation descriptive details value."/>
+      <short value="Ahpra notation descriptive details value"/>
+      <definition value="Ahpra notation descriptive details value."/>
       <type>
         <code value="string" />
       </type>

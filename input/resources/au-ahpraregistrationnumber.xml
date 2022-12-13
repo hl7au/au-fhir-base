@@ -5,8 +5,8 @@
     <valueInteger value="1"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber" />
-  <name value="AUAHPRARegistrationNumber" />
-  <title value="AU AHPRA Registration Number" />
+  <name value="AUAhpraRegistrationNumber" />
+  <title value="AU Ahpra Registration Number" />
   <status value="draft" />
   <publisher value="Health Level Seven Australia (Patient Administration WG)" />
   <contact>
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines an Australian Health Practitioner Regulation Agency (AHPRA) registration number ([[1]](https://www.ahpra.gov.au), [[2]](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number)) in an Australian context." />
+  <description value="This identifier profile defines an Australian Health Practitioner Regulation Agency (Ahpra) registration number ([[1]](https://www.ahpra.gov.au), [[2]](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number)) in an Australian context." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -42,12 +42,12 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Australian Health Practitioner Regulation Agency (AHPRA) Registration Number" />
-      <definition value="Australian Health Practitioner Regulation Authority (AHPRA) registration number assigned to a practitioner." />
+      <short value="Australian Health Practitioner Regulation Agency (Ahpra) Registration Number" />
+      <definition value="Australian Health Practitioner Regulation Authority (Ahpra) registration number assigned to a practitioner." />
       <constraint>
         <key value="inv-ahpra-0" />
         <severity value="error" />
-        <human value="AHPRA identifier shall be 3 uppercase letters, followed by 10 digits" />
+        <human value="Ahpra identifier shall be 3 uppercase letters, followed by 10 digits" />
         <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber" />
       </constraint>
@@ -58,7 +58,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
-          <code value="AHPRA" />
+          <code value="Ahpra" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -69,10 +69,10 @@
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="AHPRA registration number" />
+      <short value="Ahpra registration number" />
       <min value="1" />
       <example>
-        <label value="AHPRA registration number" />
+        <label value="Ahpra registration number" />
         <valueString value="MED0000932846" />
       </example>
     </element>

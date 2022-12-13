@@ -54,15 +54,15 @@
       <constraint>
         <key value="inv-pra-0" />
         <severity value="error" />
-        <human value="A qualification shall only have AHPRA Profession details if the code is AHPRA Profession" />
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAHPRAProfession').exists()" />
+        <human value="A qualification shall only have Ahpra Profession details if the code is Ahpra Profession" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAhpraProfession').exists()" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
         <key value="inv-pra-1" />
         <severity value="error" />
-        <human value="A qualification shall only have AHPRA Registration details if the code is AHPRA Registration" />
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAHPRARegistration').exists()" />
+        <human value="A qualification shall only have Ahpra Registration details if the code is Ahpra Registration" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/ahpraregistration-details').exists() implies code.coding.where(system='http://terminology.hl7.org.au/CodeSystem/v2-0360' and code='AUAhpraRegistration').exists()" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
     </element>
