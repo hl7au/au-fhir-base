@@ -1,2 +1,4 @@
 ### Usage Notes
-The value of this extension is 'true' if the medication is for long term use.
+
+**Profile specific implementation guidance:**
+- Set to "true" if a medication is for long term use.
