@@ -47,6 +47,148 @@ The following FMM levels are defined:
 
 Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
 
+### Business Identifiers
+
+["Business" identifiers](http://hl7.org/fhir/R4/resource.html#identifiers) are used extensively to consistently identify real world entities across systems, contexts of use, and other formats (e.g. HL7 v2 , CDA , XDS, and many more). 
+
+Defined in this implementation guide are profiles for business identifiers for use in populating the following data elements:
+   - `Device.identifier`
+   - `DiagnosticReport.identifier`
+   - `HealthcareService.identifier`
+   - `MedicationDispense.identifier`
+   - `MedicationRequest.identifier`
+   - `Observation.identifier`
+   - `Organization.identifier`
+   - `Patient.identifier`
+   - `RelatedPerson.identifier`
+   - `Practitioner.identifier`
+   - `PractitionerRole.identifier`
+   - `ServiceRequest.identifier`
+          
+Business identifiers will typically be a national identifier (ABN, Medicare Provider, IHI), registry / exchange service identifier (ETP, eRx), or local identifier (MRN, Placer Identifier).  
+
+This guide publishes and maintains rules on how to exchange various business identifiers in Australia as a set of Identifier data type profiles, e.g. [AU PBS Prescriber Number](http://hl7.org.au/fhir/4.0.0/StructureDefinition-au-pbsprescribernumber.html). 
+
+While national and registry / exchange service identifiers will define the namespace to use when sending an identifier, a local identifier requires the organisation to define their own namespace when exchanging identifiers they manage.  
+
+When constructing a local identifier it is preferable that an organisation uses their own local system identifier namespace (e.g. "https://local organisation domain/identifier type") but if that is not available then an organisation can use their HPI-O or ABN to construct a legal, globally unique identifier system for some local identifiers.
+
+**HPI-O scoped identifiers**
+
+HPI-O scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record or a pathology report by combining a dedicated Australian Digital Health Agency published namespace and their HPI-O to construct a legal, globally unique identifier system for their local identifiers.
+
+The full list of available identifier namespaces can be found by browsing the [ns.electronichealth.net.au identifier namespaces](http://ns.electronichealth.net.au/browse-identifiers.html); there are several HPI-O scoped identifier namespaces available:
+   - http://ns.electronichealth.net.au/id/hpio-scoped/accessionnumber/1.0
+   - http://ns.electronichealth.net.au/id/hpio-scoped/dispense/1.0
+   - http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0
+   - http://ns.electronichealth.net.au/id/hpio-scoped/order/1.0
+   - http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0
+   - http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0
+   - http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0
+
+There are four parts to using a HPI-O scoped identifier in FHIR: system, value, assigner and depending on the identifier profile requirements, a coded type. 
+
+The system value is constructed in the format of [baseURL]/HPI-O, e.g.:
+
+~~~
+"system" : "http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003621566684455"
+~~~
+
+The value contains the local identifier, e.g.:
+~~~
+"value" : "3235209"
+~~~
+
+The assigner contains the name of the organisation that issues or manages the identifier, e.g.:
+
+~~~
+assigner" : {
+    "display" : "Devonport Family Medicine Clinic"
+}
+~~~
+
+Example: PractitionerRole resource with an employee number (local identifier)
+~~~
+{
+  "resourceType" : "PractitionerRole",
+    ...
+    "identifier" : [
+      {
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code" : "EI",
+              "display" : "Employee number"
+              }
+            ],
+          "text" : "Employee Number"
+      },
+      "system" : "http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003621566684455",
+      "value" : "3235209",
+      "assigner" : {
+        "display" : "Devonport Family Medicine Clinic"
+    },
+  ...
+}  
+~~~
+
+
+**ABN scoped identifier**
+
+ABN scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record by combining a dedicated Australian Digital Health Agency published namespace and their ABN to construct a legal, globally unique identifier system for their local identifiers.
+
+The full list of available identifier namespaces can be found by browsing the [ns.electronichealth.net.au identifier namespaces](http://ns.electronichealth.net.au/browse-identifiers.html); there are two ABN-scoped identifier namespaces available:
+   - http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0
+   - http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0
+
+There are four parts to using an ABN scoped identifier in FHIR: system, value, assigner and depending on the identifier profile requirements, a coded type. 
+
+The system value is constructed in the format of [baseURL]/ABN, e.g.:
+
+~~~
+"system" : "http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455"
+~~~
+
+The value contains the local identifier, e.g.:
+~~~
+"value" : "12345446"
+~~~
+
+The assigner contains the name of the organisation that issues or manages the identifier, e.g.:
+
+~~~
+assigner" : {
+    "display" : "Test Hospital Org"
+}
+~~~
+
+Example: Patient resource with a medical record number (local identifier)
+~~~
+{
+  "resourceType" : "Patient",
+    ...
+      "identifier" : [
+        {
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                     "code" : "MR",
+                     "display" : "Medical record number"
+                   }
+                 ],
+          "text" : "Medical Record Number"
+        },
+        "system" : "http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455",
+        "value" : "12344456",
+        "assigner" : {
+          "display" : "Test Hospital Org"
+    },
+  ...
+}
+~~~
+
 
 
 
