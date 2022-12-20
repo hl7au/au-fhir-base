@@ -6,8 +6,8 @@
   - *Woman or female* may be represented by sending the code "446141000124107" (Identifies as female gender)
   - *Non-binary* may be represented by sending the code "33791000087105" (Identifies as nonbinary gender), see example [Patient/example4](Patient-example4.html)
   - *[I/They] use a different term (please specify)*  may be represented by sending only text and no code, see example [Patient/example7](Patient-example7.html)
-  - *Prefer not to answer* may be represented by sending the code `asked-declined`, see example [Patient/example0](Patient-example0.html)
-  - *Not stated or inadequately described* may be represented by the code `unknown`
+  - *Prefer not to answer* may be represented by sending the code "asked-declined", see example [Patient/example0](Patient-example0.html)
+  - *Not stated or inadequately described* may be represented by the code "unknown"
 - Need for an interpreter service can be represented with the [interpreterRequired extension](http://hl7.org/fhir/R4/extension-patient-interpreterrequired.html) set as "true" 
   - If the language for interpreter service is known, the language is included in `Patient.communication.language` and `Patient.communication.preferred` is set to "true". 
   - If communication.preferred has not been included, or is set to "false", systems should understand this as the language for the interpreter service is not known.
