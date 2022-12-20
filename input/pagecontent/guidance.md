@@ -52,6 +52,7 @@ Defined in this implementation guide are profiles for business identifiers for u
    - `Device.identifier`
    - `DiagnosticReport.identifier`
    - `HealthcareService.identifier`
+   - `Location.identifier`
    - `MedicationDispense.identifier`
    - `MedicationRequest.identifier`
    - `Observation.identifier`
