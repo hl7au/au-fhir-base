@@ -1,7 +1,11 @@
-### Usage Notes
 The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel. 
 
-Use the [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html) profile to represent the result of a pathology test.
+### Usage Notes
 
-Use the [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile to represent the result of a radiology examination or an imaging intensive diagnostic investigation.
-The bodySite extension may be used when a coded concept does not provide the necessary detail needed for the use case.
+**Profile specific implementation guidance:**
+- the [bodySite](http://hl7.org/fhir/R4/extension-bodysite.html) extension may be suitable for use where
+   - the body site is not implicit in the code found in `Observation.code` and  
+   - body site information is to be handled as a separate resource (e.g. to identify and track separately) instead of an inline coded element in `Observation.bodySite`. 
+- See the [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html) profile for guidance on representing the result of a pathology test.
+- See the [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html) profile for guidance on representing the result of a radiology examination or an imaging intensive diagnostic investigation.
+- See each Identifier profile page for guidance related to that identifier type.
