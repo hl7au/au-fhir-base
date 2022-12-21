@@ -71,7 +71,7 @@ While national and registry / exchange service identifiers will define the names
 
 When constructing a local identifier it is preferable that an organisation uses their own local system identifier namespace (e.g. "https://local organisation domain/identifier type") but if that is not available then an organisation can use their HPI-O or ABN to construct a legal, globally unique identifier system for some local identifiers.
 
-**HPI-O scoped identifiers**
+**HPI-O scoped Identifiers**
 
 HPI-O scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record or a pathology report by combining a dedicated Australian Digital Health Agency published namespace and their HPI-O to construct a legal, globally unique identifier system for their local identifiers.
 
@@ -132,7 +132,7 @@ Example: PractitionerRole resource with an employee number (local identifier)
 ~~~
 
 
-**ABN scoped identifier**
+**ABN scoped Identifiers**
 
 ABN scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record by combining a dedicated Australian Digital Health Agency published namespace and their ABN to construct a legal, globally unique identifier system for their local identifiers.
 
