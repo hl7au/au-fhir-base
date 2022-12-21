@@ -1,8 +1,14 @@
 ### Usage Notes
-The observation may represent the result of a simple examination or it may group the set of results produced by a study series. In the latter cases, the observation carries the code of the study / panel and the overall comments in the note element, or a global interpretation by the producer of the study in the interpretation element. The observation references the individual observations that make up the study as ‘has-member’ child observations.
 
-The bodySite extension may be used when a coded concept does not provide the necessary detail needed for the use case.
-
-When sending observations that group the set of results of a multi-modality procedure:
-* a multi-modality procedure observation is sent with individual component examinations in Observation.hasMember
-* an individual component examination observation is referenced by that multi-modality procedure observation (Observation.hasMember) rather than directly at the diagnostic report level (DiagnosticReport.result)
+**Profile specific implementation guidance:**
+- The [bodySite](http://hl7.org/fhir/R4/extension-bodysite.html) extension may be suitable for use where
+   - body site is not implicit in the code found in `Observation.code` and  
+   - body site information is to be handled as a separate resource (e.g. to identify and track separately) instead of an inline coded element in `Observation.bodySite`.
+- When sending an observation that represents a study series or panel:
+  - the group / panel code is sent in `Observation.code`
+  -  overall comments is sent in `Observation.note`
+  - the global interpretation by the producer of the study is sent in `Observation.interpretation`
+  - individual results may be sent in `Observation.component` or by referencing individual observation results in `Observation.hasMember`
+- When sending observations that group the set of results of a multi-modality procedure:
+  - A multi-modality procedure observation is sent with individual component examinations in `Observation.hasMember`.
+  - An individual component examination observation is referenced by that multi-modality procedure observation (`Observation.hasMember`) rather than directly at the diagnostic report level (`DiagnosticReport.result`).

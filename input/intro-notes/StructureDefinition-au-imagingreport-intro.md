@@ -1,13 +1,12 @@
 ### Usage Notes
-When constructing the report:
-<ul>
-<li>a local identifier is sent with a <a href="http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0/index.html">HPI-O scoped</a> identifier namespace if there isn't a local namespace available (see the <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/wiki/Frequently-Asked-Questions">FAQ</a>) for more information</li>
-<li>code matches one Observation.code referenced in result</li>
-<li>performer is sent as one Organization (radiology laboratory) and one or more PractitionerRoles (radiologist)</li></ul>
 
-For a report of a multi-modality procedure:
-<ul>
-<li>result is sent with the Observation representing the multi-modality procedure observation</li>  
-<li>code is sent with the same code in that multi-modality procedure Observation</li>  
-<li>the individual component examinations are referenced by that Observation (Observation.hasMember) and not directly referenced by the DiagnosticReport</li>  
-</ul>
+**Profile specific implementation guidance:**
+- Results that are free text or report form are represented in `DiagnosticReport.presentedForm`.
+- Results that are structured in FHIR resources are referenced in `DiagnosticResult.result`. Each referenced Observation resource represents an individual diagnostic examination and result value or component result values, or a nested grouping of Observations such as a multi-modality procedure which references other Observations in `Observation.hasMember`.
+- When constructing a report for a nested grouping of Observations:
+  - the individual component examinations are referenced by that grouping Observation in `Observation.hasMember` and not directly referenced in `DiagnosticReport.result`
+  - `DiagnosticReport.code` and the grouping Observation `Observation.code` should be the same concept where it is a one-to-one relationship
+- See each Identifier profile page for guidance related to that identifier type.
+- The radiology laboratory is sent as a reference to an Organization in `DiagnosticReport.performer`.
+- Each radiologist is sent as a references to a PractitionerRole resource in `DiagnosticReport.performer`.
+  

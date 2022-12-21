@@ -1,20 +1,17 @@
 ### Usage Notes
-When constructing the report:
-<ul>
-<li>a local identifier is sent with a <a href="http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0/index.html">HPI-O scoped</a> identifier namespace if there isn't a local namespace available (see the <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/wiki/Frequently-Asked-Questions">FAQ</a>) for more information</li>
-<li>code matches one Observation.code referenced in result</li>
-<li>effective[x] is the earliest specimen collection date time</li>
-<li>performer is sent as one Organization (pathology laboratory) and one or more PractitionerRoles (pathologist)</li></ul>
 
-For a report of a multi-test study or panel:
-<ul>
-<li>result is sent with the Observation representing the study / panel</li>  
-<li>code is sent with the same code in that study / panel Observation</li>  
-<li>the individual component tests are referenced by that Observation (Observation.hasMember) and not the DiagnosticReport</li>  
-</ul>
-
-If the pathology laboratory is a discipline specific laboratory then one of the appropriate discipline specific value sets may be more suitable for use than the entire reporting set available in the profile:
-* [ValueSet : RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3?ui:source=search)
-* [ValueSet : RCPA - SPIA Haematology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3?ui:source=search)
-* [ValueSet : RCPA - SPIA Immunopathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3?ui:source=search)
-* [ValueSet : RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3?ui:source=search)
+**Profile specific implementation guidance:**
+- Results that are free text or report form are represented in `DiagnosticReport.presentedForm`.
+- Results that are structured in FHIR resources are referenced in `DiagnosticResult.result`. Each referenced Observation resource represents an individual pathology test and result value or component result values, or a study / panel which references other Observations in `Observation.hasMember`.
+- When constructing a report for a study / panel:
+  - the individual component examinations are referenced by that grouping Observation in `Observation.hasMember` and not directly referenced in `DiagnosticReport.result`
+  - `DiagnosticReport.code` and the study / panel Observation `Observation.code` should be the same concept where it is a one-to-one relationship
+- See each Identifier profile page for guidance related to that identifier type.
+- `effective[x]` is the earliest specimen collection date time.
+- The pathology laboratory is sent as a reference to an Organization in `DiagnosticReport.performer`.
+- Each pathologist is sent as a reference to a PractitionerRole resource in `DiagnosticReport.performer`.
+- When sending a discipline specific laboratory result, one of discipline specific value sets may be more suitable for use than the entire reporting value set bound in this profile to `DiagnosticReport.code`:
+  - [ValueSet : RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3?ui:source=search)
+  - [ValueSet : RCPA - SPIA Haematology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3?ui:source=search)
+  - [ValueSet : RCPA - SPIA Immunopathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3?ui:source=search)
+  - [ValueSet : RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3?ui:source=search)
