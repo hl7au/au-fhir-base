@@ -3,7 +3,7 @@
 **Profile specific implementation guidance:**
 - When sending an observation that represents a study series or panel:
   - the group / panel code is sent in `Observation.code`
-  -  overall comments is sent in `Observation.note`
+  - the overall comments are sent in `Observation.note`
   - the global interpretation by the producer of the study is sent in `Observation.interpretation`
   - individual results may be sent in `Observation.component` or by referencing individual observation results in `Observation.hasMember`
 - When sending a discipline specific laboratory result, one of discipline specific value sets may be more suitable for use than the entire reporting value set bound in this profile to `Observation.code`:

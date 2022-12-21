@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines Health Care Card number[[1]](https://www.servicesaustralia.gov.au/individuals/services/centrelink/health-care-card) in an Australian context. This definition supports sending the Centrelink Customer Reference Number (CRN)[[1]](https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn)[[2]](http://meteor.aihw.gov.au/content/index.phtml/itemId/690579) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Health Care Card. An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.&#xa;&#xa;A Health Care Card is a concession card assigned by Services Australia to benefit recipients, low income earners and selected other groups (e.g. foster children) to assist with certain health costs, by allowing access to specific services at a concessional rate." />
+  <description value="This identifier profile defines Health Care Card number in an Australian context (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/services/centrelink/health-care-card) for further information).&#xa;&#xa;This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Health Care Card (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn) for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.&#xa;&#xa;A Health Care Card is a concession card assigned by Services Australia to benefit recipients, low income earners and selected other groups (e.g. foster children) to assist with certain health costs, by allowing access to specific services at a concessional rate." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -47,8 +47,8 @@
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Centrelink CRN as displayed on the Commonwealth Seniors Health Card" />
-      <comment value="A Centrelink CRN is a 10 character identifier in the format of 9 digits ending with a letter." />
+      <short value="Centrelink CRN as displayed on the Health Care Card" />
+      <comment value="A Centrelink CRN is a 10 character identifier in the format of 9 digits ending with a letter. This concept is equivalent to Australian Institute of Health and Welfare data element 690579 [Person—government funding identifier, Centrelink customer reference number N(9)A](https://meteor.aihw.gov.au/content/index.phtml/itemId/690579)." />
       <min value="1" />
       <example>
         <label value="Centrelink CRN" />

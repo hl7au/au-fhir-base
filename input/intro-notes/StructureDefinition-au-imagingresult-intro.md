@@ -6,7 +6,7 @@
    - body site information is to be handled as a separate resource (e.g. to identify and track separately) instead of an inline coded element in `Observation.bodySite`.
 - When sending an observation that represents a study series or panel:
   - the group / panel code is sent in `Observation.code`
-  -  overall comments is sent in `Observation.note`
+  - the overall comments are sent in `Observation.note`
   - the global interpretation by the producer of the study is sent in `Observation.interpretation`
   - individual results may be sent in `Observation.component` or by referencing individual observation results in `Observation.hasMember`
 - When sending observations that group the set of results of a multi-modality procedure:
