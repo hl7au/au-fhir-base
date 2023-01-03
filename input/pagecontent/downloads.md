@@ -8,7 +8,7 @@ The following package file includes an NPM package file used by many of the FHIR
 See the overview on [validating FHIR profiles and resources](http://hl7.org/fhir/R4/validation.html) for more information about validating profiles and how to use these artefacts.
 
 
-### Downloadable copy of entire specification
+### Downloadable Copy of Entire Specification
 
 A downloadable version of the entire implementation guide is available so it can be hosted locally:
 

@@ -1,2 +1,4 @@
 ### Usage Notes
-Detailed guidance on representing AHPRA data using this extension in Practitioner is available [here](http://hl7.org.au/notes/ahpra-registration-number/index.html){:target="_blank"}.
+
+**Profile specific implementation guidance:**
+- See [Ahpra Data Guidance](guidance.html#ahpra-data-guidance) for detailed guidance on representing Ahpra data using this extension.
