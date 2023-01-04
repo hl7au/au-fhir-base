@@ -2,7 +2,7 @@
 FHIR R4 Release
 * Modernised template update to standard approaches 
 * Relocation of lifestyle, pregnancy and vital-signs Observation resource profiles to AU Core
-* Relocation of biological sex Observaton profile to AU Core
+* Relocation of biological sex Observation profile to AU Core
 * Introduction of diagnostics profiles including diagnostic request, pathology report and diagnostic imaging report
 * Introduction of guidance on representation of gender identity on Patient resource profile
 
