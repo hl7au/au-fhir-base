@@ -1450,9 +1450,17 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Medication/UncodedProduct0"/>
+			</reference>
+			<name value="Medication - uncoded medicinal product information"/>
+			<description value="Medication with uncoded medicinal product information"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Medication/BrandedPack1"/>
 			</reference>
-			<name value="Medication - with brand and generic name extensions"/>
+			<name value="Medication - branded pack"/>
 			<description value="Medication with brand and generic name extensions"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
 		</resource>
@@ -1901,7 +1909,7 @@
 		</parameter>
 		<parameter>
 			<code value="show-inherited-invariants"/>
-			<value value="false"/>
+			<value value="true"/>
 		</parameter>
 		<parameter>
 			<code value="excludemap"/>

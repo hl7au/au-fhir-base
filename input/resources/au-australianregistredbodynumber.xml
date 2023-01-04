@@ -16,24 +16,9 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This identifier profile defines an Australian Registered Body Number (ARBN)[[1]](https://www.ppsr.gov.au/arbn-australian-registered-body-number) in an Australian context." />
+  <description value="This identifier profile defines an Australian Registered Body Number (ARBN) in an Australian context. ARBNs are issued to registrable Australian bodies and foreign companies." />
   <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="servd" />
-    <uri value="http://www.omg.org/spec/ServD/1.0/" />
-    <name value="ServD" />
-  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -68,6 +53,7 @@
     <element id="Identifier.value">
       <path value="Identifier.value" />
       <short value="ARBN" />
+      <comment value="See information on the [format of the ARBN](https://www.ppsr.gov.au/arbn-australian-registered-body-number)."/>
       <min value="1" />
     </element>
   </differential>

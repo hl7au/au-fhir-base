@@ -1,5 +1,7 @@
 ### Usage Notes
 
-When capturing a composition practitioner role as the sole author of the composition, a practitioner linked to that practitioner role is required to be supplied as a composition author. Where there is more than one author this is not necessary or recommended.
-
-Where practicable it is preferred that the assertion of clinical judgement that there are no known items for this list is handled via an entry with the appropriate negation code over making use of section emptyReason. For example the instantiation of an AllergyIntolerance with code that is a child of 716186003 \|No known allergy\| from SNOMED CT[<sup>[1]</sup>](https://www.snomed.org).
+**Profile specific implementation guidance:**
+- It is important to clearly differentiate between representing the extent of a system's information for a patient versus clinical judgement of no relevant finding:
+  - When asserting clinical judgement that there are no items of specific interest, (e.g. no current medications, no known allergies, or no history of vaccination), `Composition.section.entry` with a reference to a supported FHIR resource containing the record of assertion should be sent.
+    - Guidance is provided in the core FHIR specification for AllergyIntolerance and Condition, and [AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html) is defined in this implementation guide to support additional concepts.
+  - When a statement is about the nature or extent of the information the system has access to or is permitted to share, (e.g. not asked or information withheld), `Composition.section.emptyReason` should be sent with an appropriate code from the [ListEmptyReasons](http://hl7.org/fhir/R4/valueset-list-empty-reason.html) value set.

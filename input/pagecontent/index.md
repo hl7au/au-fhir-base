@@ -10,7 +10,7 @@ The implementable AU Core specification references and uses AU Base profiles, th
 If an implementation is AU Core conformant this allows a level of core capability to be assumed when using.
 
 
-### How to read this guide
+### How to Read this Guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 

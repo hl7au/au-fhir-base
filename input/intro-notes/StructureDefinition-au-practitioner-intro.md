@@ -1,8 +1,7 @@
 ### Usage Notes
-Where including information from Ahpra about a practitioner, Practitioner.qualification should be instantiated with either the extension [ahpraprofession-details](StructureDefinition-ahpraprofession-details.html) or [ahpraregistration-details](StructureDefinition-ahpraregistration-details.html). Detailed guidance on representing Ahpra data in Practitioner is available [here](http://hl7.org.au/notes/ahpra-registration-number/index.html){:target="_blank"}.
 
-The [ahpraprofession-details](StructureDefinition-ahpraprofession-details.html) extension supports inclusion of an Ahpra profession code and information about conditions, undertakings, reprimands and cautions in a qualification element instance representing a practitioner’s Ahpra profession.
-
-The [ahpraregistration-details](StructureDefinition-ahpraregistration-details.html) extension supports inclusion of an Ahpra profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s Ahpra registration.
-
-Tertiary qualifications and professional memberships should be represented by instantiating an instance of Practitioner.qualification for each qualification to be included. Where a suitable code is not yet available, textual representation may be provided in Practitioner.qualification.code.text. Work around terminology for Australian college memberships is being considered; if completed the concepts are expected to be available in the preferred value set [hl7VS-degreeLicenseCertificate - AU Extended](ValueSet-au-v2-0360-extended.html).
+**Profile specific implementation guidance:**
+- See [Ahpra Data Guidance](guidance.html#ahpra-data-guidance) for detailed guidance on representing Ahpra-sourced data.
+- A tertiary qualification or professional membership (non-Ahpra-sourced data) is represented by `Practitioner.qualification` 
+  - If none of the codes from the preferred value set are suitable then at least text should be sent in `Practitioner.qualification.code`
+- See each Identifier profile page for guidance related to that identifier type.
