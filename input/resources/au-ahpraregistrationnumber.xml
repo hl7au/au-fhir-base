@@ -1,64 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="au-ahpraregistrationnumber" />
+  <id value="au-ahpraregistrationnumber"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/> 
+    <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber" />
-  <name value="AUAHPRARegistrationNumber" />
-  <title value="AU AHPRA Registration Number" />
-  <status value="draft" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber"/>
+  <name value="AUAhpraRegistrationNumber"/>
+  <title value="AU Ahpra Registration Number"/>
+  <status value="draft"/>
+  <publisher value="Health Level Seven Australia (Patient Administration WG)"/>
   <contact>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="http://hl7.com.au"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="This identifier profile defines an Australian Health Practitioner Regulation Agency (AHPRA) registration number in an Australian context (see [Ahrpa](https://www.ahpra.gov.au) for further information)." />
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
-  <fhirVersion value="4.0.1" />
-  <kind value="complex-type" />
-  <abstract value="false" />
-  <type value="Identifier" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
-  <derivation value="constraint" />
+  <description
+    value="This identifier profile defines an Australian Health Practitioner Regulation Agency (Ahpra) registration number in an Australian context (see [Ahpra](https://www.ahpra.gov.au) for further information)."/>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <type value="Identifier"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Identifier">
-      <path value="Identifier" />
-      <short value="Australian Health Practitioner Regulation Agency (AHPRA) Registration Number" />
-      <definition value="Australian Health Practitioner Regulation Authority (AHPRA) registration number assigned to a practitioner." />
+      <path value="Identifier"/>
+      <short value="Australian Health Practitioner Regulation Agency (Ahpra) Registration Number"/>
+      <definition
+        value="Australian Health Practitioner Regulation Authority (Ahpra) registration number assigned to a practitioner."/>
       <constraint>
-        <key value="inv-ahpra-0" />
-        <severity value="error" />
-        <human value="AHPRA identifier shall be 3 uppercase letters, followed by 10 digits" />
-        <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')" />
-        <source value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber" />
+        <key value="inv-ahpra-0"/>
+        <severity value="error"/>
+        <human value="Ahpra identifier shall be 3 uppercase letters, followed by 10 digits"/>
+        <expression value="value.matches('^[A-Z]{3}[0-9]{10}$')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber"/>
       </constraint>
     </element>
     <element id="Identifier.type">
-      <path value="Identifier.type" />
-      <min value="1" />
+      <path value="Identifier.type"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203" />
-          <code value="AHPRA" />
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+          <code value="AHPRA"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Identifier.system">
-      <path value="Identifier.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org.au/id/ahpra-registration-number" />
+      <path value="Identifier.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org.au/id/ahpra-registration-number"/>
     </element>
     <element id="Identifier.value">
-      <path value="Identifier.value" />
-      <short value="AHPRA registration number" />
-      <min value="1" />
+      <path value="Identifier.value"/>
+      <short value="Ahpra registration number"/>
+      <min value="1"/>
       <example>
-        <label value="AHPRA registration number" />
-        <valueString value="MED0000932846" />
+        <label value="Ahpra registration number"/>
+        <valueString value="MED0000932846"/>
       </example>
     </element>
   </differential>
