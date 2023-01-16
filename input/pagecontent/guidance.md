@@ -24,7 +24,7 @@ subjected to interoperability testing through connectathons and early adoption. 
 in a variety of environments. Others have received relatively little real-world exercise. In general, the infrastructure should be considered to be more stable 
 than the resources themselves. Guidance from early implementation will help address these areas.
 
-All artifacts in this specification are assigned a "Maturity Level", known as FMM (after the well known CMM  grades). The FMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
+All artifacts in this specification are assigned a "Maturity Level", known as FMM (after the well-known CMM  grades). The FMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
 The following FMM levels are defined:
 
 {:start="0"}
@@ -352,6 +352,3 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
         <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraNotation</td>
     </tr>
 </table>
-
-
-
