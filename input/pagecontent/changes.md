@@ -1,5 +1,3 @@
-This change log includes a summary of changes between official releases of this guide.
-
 ### Release 4.1.0
 - Publication date: TBD
 - Publication status: Trial Use
