@@ -60,6 +60,7 @@ Defined in this implementation guide are profiles for business identifiers for u
    - `Patient.identifier`
    - `RelatedPerson.identifier`
    - `Practitioner.identifier`
+   - `Practitioner.qualification.identifier`
    - `PractitionerRole.identifier`
    - `ServiceRequest.identifier`
           
