@@ -52,11 +52,11 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add genderIdentity and change the binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a> (extensible) (<a href="https://github.com/hl7au/au-fhir-base/issues/599">au-fhir-base #599</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-186">FHIRIG #186</a>).</li>
 <li>Changed Encounter.type binding in <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> to Encounter Type (preferred) (<a href="https://github.com/hl7au/au-fhir-base/issues/382">au-fhir-base #382</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
 <li>Changed Encounter.serviceType binding in <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> to Service Type (preferred)(<a href="https://github.com/hl7au/au-fhir-base/issues/684">au-fhir-base #684</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
-<li>Technical correction of DiagnosticReport.code binding strength in <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a> to preferred (<a href="https://jira.hl7australia.com/browse/FHIRIG-146">FHIRIG #146</a>).</li>
+<li>Technical correction of DiagnosticReport.code binding strength in <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a> to preferred (<a href="https://jira.hl7australia.com/browse/FHIRIG-233">FHIRIG #233</a>).</li>
 <li>Changed Immunization.statusReason binding in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to Reason Vaccine Not Administered v3 (<a href="https://github.com/hl7au/au-fhir-base/issues/745">au-fhir-base #745</a>).</li>
 <li>Changed Immunization.site.coding cardinality in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
 <li>Changed Immunization.route.coding cardinality in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
-<li>Changed Observation.category slicing in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> to move the preferred binding to a slice for Specific discipline of pathology (<a href="https://github.com/hl7au/au-fhir-base/issues/382">au-fhir-base #744</a>).</li>
+<li>Changed Observation.category slicing in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> to move the preferred binding to a slice for Specific discipline of pathology (<a href="https://github.com/hl7au/au-fhir-base/issues/744">au-fhir-base #744</a>).</li>
 </ul>
 
 
@@ -70,20 +70,20 @@ To help implementers, only the more significant changes are listed here.
 **Changes in this version**
 <ul>
 <li>Changed the canonical URL to http://terminology.hl7.org.au and applied new OIDs to HL7 AU CodeSystems and ValueSets.</li>
-<li>Technical correction to extensions to remove slicing (refactoring) (<a href="https://jira.hl7australia.com/browse/FHIRIG-146">FHIRIG #146</a>).</li>
-<li>Changed identifier slices to Identifier profiles in resource profiles (<a href="https://github.com/hl7au/au-fhir-base/issues/429">au-fhir-base #429</a>).</li>
+<li>Technical correction to extensions to remove slicing (refactoring).</li>
+<li>Changed identifier slices to Identifier profiles in resource profiles.</li>
 <li>New extensions: 
 <ul style="-moz-column-count: 3; -moz-column-gap: 20px;  -webkit-column-count: 3;  -webkit-column-gap: 20px;  column-count: 3;  column-gap: 20px;">
-<li>Address Identifier (<a href="https://github.com/hl7au/au-fhir-base/issues/478">au-fhir-base #478</a>)</li>
-<li>AHPRA Profession Details (<a href="https://github.com/hl7au/au-fhir-base/issues/547">au-fhir-base #547</a>)</li>
-<li>AHPRA Registration Details (<a href="https://github.com/hl7au/au-fhir-base/issues/547">au-fhir-base #547</a>)</li>
-<li>Contact Purpose (<a href="https://github.com/hl7au/au-fhir-base/issues/458">au-fhir-base #458</a> <a href="https://github.com/hl7au/au-fhir-base/issues/363">au-fhir-base #363</a>)</li>
-<li>Date of Arrival in Australia (<a href="https://github.com/hl7au/au-fhir-base/issues/357">au-fhir-base #357</a>)</li>
+<li>Address Identifier</li>
+<li>AHPRA Profession Details</li>
+<li>AHPRA Registration Details</li>
+<li>Contact Purpose</li>
+<li>Date of Arrival in Australia</li>
 <li>Ethnicity</li>
 <li>IHI Verified Date</li>
-<li>Vaccine Vial Serial Number (<a href="https://github.com/hl7au/au-fhir-base/issues/712">au-fhir-base #712</a>)</li>
+<li>Vaccine Vial Serial Number</li>
 <li>Medication Strength</li>
-<li>Australian Time Zone (<a href="https://github.com/hl7au/au-fhir-base/issues/68">au-fhir-base #68</a>)</li>
+<li>Australian Time Zone</li>
 </ul>
 </li> 
 <li>New profiles:
@@ -112,7 +112,7 @@ To help implementers, only the more significant changes are listed here.
   <li>AU Parity</li>
   </ul>
   </li>
-  <li>Identifier type profiles (<a href="https://github.com/hl7au/au-fhir-base/issues/429">au-fhir-base #429</a>): 
+  <li>Identifier type profiles: 
   <ul style="-moz-column-count: 3; -moz-column-gap: 20px;  -webkit-column-count: 3;  -webkit-column-gap: 20px;  column-count: 3;  column-gap: 20px;">
   <li>AU Accession Number</li>
   <li>AU Australian Business Number</li>
