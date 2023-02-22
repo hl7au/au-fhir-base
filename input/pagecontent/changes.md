@@ -1,5 +1,5 @@
 ### Release 4.1.0
-- Publication date: TBD
+- Publication date: 2023-02-22
 - Publication status: Trial Use
 - Based on FHIR version: 4.0.1
 
@@ -57,6 +57,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed Immunization.site.coding cardinality in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
 <li>Changed Immunization.route.coding cardinality in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
 <li>Changed Observation.category slicing in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> to move the preferred binding to a slice for Specific discipline of pathology (<a href="https://github.com/hl7au/au-fhir-base/issues/744">au-fhir-base #744</a>).</li>
+<li>Changed <a href="CodeSystem-au-location-physical-type.html">Location Type (Physical) AU</a> to deprecate concept 'vi'.</li>
 </ul>
 
 
