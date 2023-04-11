@@ -86,6 +86,21 @@
         <code value="Extension" />
         <profile value="http://hl7.org.au/fhir/StructureDefinition/no-fixed-address" />
       </type>
+      <condition value="inv-add-1"/>
+      <condition value="inv-add-2"/>
+    </element>
+    <element id="Address.type">
+      <path value="Address.type" />
+      <condition value="inv-add-1"/>
+    </element>
+    <element id="Address.text">
+      <path value="Address.text" />
+      <condition value="inv-add-0"/>
+      <condition value="inv-add-2"/>
+    </element>
+    <element id="Address.line">
+      <path value="Address.line" />
+      <condition value="inv-add-0"/>
     </element>
     <element id="Address.city">
       <path value="Address.city" />
@@ -101,6 +116,7 @@
     </element>
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
+      <condition value="inv-add-3"/>
       <constraint>
         <key value="inv-add-3" />
         <severity value="error" />

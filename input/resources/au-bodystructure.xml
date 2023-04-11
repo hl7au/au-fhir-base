@@ -44,6 +44,7 @@
     </element>
     <element id="BodyStructure.location">
       <path value="BodyStructure.location" />
+      <condition value="inv-bodstr-0"/>
       <binding>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
@@ -55,6 +56,14 @@
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1" />
       </binding>
+    </element>
+    <element id="BodyStructure.description">
+      <path value="BodyStructure.description" />
+      <condition value="inv-bodstr-0"/>
+    </element>
+    <element id="BodyStructure.image">
+      <path value="BodyStructure.image" />
+      <condition value="inv-bodstr-0"/>
     </element>
   </differential>
 </StructureDefinition>
