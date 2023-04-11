@@ -1,3 +1,37 @@
+### Release TBD
+- Expected Publication date: December 2023
+- Expected Publication status: Trial Use
+- Based on FHIR version: 4.0.1
+
+The changes in this update are in progress and yet to be balloted.
+
+To help implementers, only the more significant changes are listed here.
+
+#### Changes in this version
+<ul>
+<li>TBD.</li>
+<li>New profiles:
+<ul>
+<li>None</li>
+</ul>
+</li>
+<li>New extensions:
+<ul>
+<li>None</li>
+</ul>
+</li>
+<li>New value sets:
+<ul>
+<li>None</li>
+</ul>
+</li>
+<li>New code systems:
+<ul>
+<li>None</li>
+</ul>
+</li>
+</ul>
+
 ### Release 4.1.0
 - Publication date: 2023-02-22
 - Publication status: Trial Use
