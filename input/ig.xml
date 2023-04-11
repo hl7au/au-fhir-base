@@ -49,6 +49,12 @@
 	<definition>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/patient-sexParameterForClinicalUse"/>
+			</reference>
+			<description value="Patient Sex Parameter For Clinical Use"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-condition"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -561,25 +567,25 @@
 			<reference>
 				<reference value="StructureDefinition/contact-purpose"/>
 			</reference>
-			<exampleBoolean value="false"/>	
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-deliverypointidentifier"/>
 			</reference>
-			<exampleBoolean value="false"/>	
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-gnafidentifier"/>
 			</reference>
-			<exampleBoolean value="false"/>	
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/address-identifier"/>
 			</reference>
-			<exampleBoolean value="false"/>	
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
@@ -591,7 +597,7 @@
 			<reference>
 				<reference value="StructureDefinition/ahpraregistration-details"/>
 			</reference>
-			<exampleBoolean value="false"/>	
+			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
 			<reference>
@@ -638,6 +644,18 @@
 		<resource>
 			<reference>
 				<reference value="ValueSet/service-provision-conditions"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/sex-parameter-for-clinical-use"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/sex-parameter-for-clinical-use"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -929,7 +947,7 @@
 			</reference>
 			<name value="BodyStructure - Blister of right foot"/>
 			<description value="Blister of right foot"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"/>			
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1032,8 +1050,7 @@
 				<reference value="HealthcareService/example3"/>
 			</reference>
 			<name value="HealthcareService - general practice"/>
-			<description
-			  value="Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages"/>
+			<description value="Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
 		</resource>
 		<resource>
@@ -1041,18 +1058,16 @@
 				<reference value="Patient/example0"/>
 			</reference>
 			<name value="Patient - with IHI, Medicare Card Number and the extension for Indigenous Status"/>
-			<description
-			  value="Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status"/>
+			<description value="Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
-	
+
 		<resource>
 			<reference>
 				<reference value="Patient/example1"/>
 			</reference>
 			<name value="Patient - with IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
-			<description
-			  value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
+			<description value="Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
@@ -1108,8 +1123,7 @@
 				<reference value="Practitioner/example0"/>
 			</reference>
 			<name value="Practitioner - with HPI-I and Prescriber Number"/>
-			<description
-			  value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
+			<description value="Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
 		</resource>
 		<resource>
@@ -1117,8 +1131,7 @@
 				<reference value="PractitionerRole/example0"/>
 			</reference>
 			<name value="PractitionerRole - with Provider Number and ANZSCO coded role"/>
-			<description
-			  value="Shows a typical practitioner role using the identifier profile for Provider Number at a specific location, with role using ANZSCO"/>
+			<description value="Shows a typical practitioner role using the identifier profile for Provider Number at a specific location, with role using ANZSCO"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
 		</resource>
 		<resource>
@@ -1134,8 +1147,7 @@
 				<reference value="Organization/example6"/>
 			</reference>
 			<name value="Organization - a Pathology organisation with NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
-			<description
-			  value="Shows a pathology organisation using the identifier profile for NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
+			<description value="Shows a pathology organisation using the identifier profile for NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
 		</resource>
 		<resource>
@@ -1143,8 +1155,7 @@
 				<reference value="Organization/5-8631-1"/>
 			</reference>
 			<name value="Organization - a Pathology organisation with HPI-O and is a parent organization"/>
-			<description
-			  value="Shows a parent pathology organisation using the identifier profile for HPI-O"/>
+			<description value="Shows a parent pathology organisation using the identifier profile for HPI-O"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
 		</resource>
 		<resource>
@@ -1152,8 +1163,7 @@
 				<reference value="HealthcareService/example0"/>
 			</reference>
 			<name value="HealthcareService - with HPI-O and eligibility"/>
-			<description
-			  value="Shows a typical healthcare service using the identifier profile for HPI-O, and eligibility information"/>
+			<description value="Shows a typical healthcare service using the identifier profile for HPI-O, and eligibility information"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
 		</resource>
 		<resource>
@@ -1169,8 +1179,7 @@
 				<reference value="Patient/DateAccuracyIndicatorAAAexample0"/>
 			</reference>
 			<name value="Patient - with Birth Date Accuracy Indicator of AAA"/>
-			<description
-			  value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
+			<description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
@@ -1178,8 +1187,7 @@
 				<reference value="Patient/DateAccuracyIndicatorAAUexample1"/>
 			</reference>
 			<name value="Patient - with Birth Date Accuracy Indicator of AAU"/>
-			<description
-			  value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+			<description value="Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
@@ -1187,8 +1195,7 @@
 				<reference value="Patient/DateAccuracyIndicatorUAAexample2"/>
 			</reference>
 			<name value="Patient - with Birth Date Accuracy Indicator of UAA"/>
-			<description
-			  value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
+			<description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
@@ -1196,8 +1203,7 @@
 				<reference value="Patient/DateAccuracyIndicatorUEAexample3"/>
 			</reference>
 			<name value="Patient - with Birth Date Accuracy Indicator of UEA"/>
-			<description
-			  value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
+			<description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
@@ -1205,8 +1211,7 @@
 				<reference value="Patient/DateAccuracyIndicatorUUUexample4"/>
 			</reference>
 			<name value="Patient - with Birth Date Accuracy Indicator of UUU"/>
-			<description
-			  value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
+			<description value="Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
@@ -1359,7 +1364,7 @@
 			</reference>
 			<name value="Observation - of no relevant finding of patient taking any medications"/>
 			<description value="Shows an example of patient not taking any medications"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>		
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1503,7 +1508,7 @@
 			</reference>
 			<name value="Medication - Branded Pack with Batch Details"/>
 			<description value="Shows a branded pack with batch details"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>	
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1558,7 +1563,7 @@
 				<reference value="MedicationRequest/example0"/>
 			</reference>
 			<name value="MedicationRequest - a prescription for codeine with paracetamol"/>
-            <description value="Shows a prescription for codeine with paracetamol"/>
+			<description value="Shows a prescription for codeine with paracetamol"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"/>
 		</resource>
 		<resource>
@@ -1698,7 +1703,7 @@
 				<reference value="HealthcareService/example5"/>
 			</reference>
 			<name value="HealthcareService - Leafy Grove Home for the Not Very Aged"/>
-            <description value="Shows Leafy Grove Home for the Not Very Aged healthcare service"/>
+			<description value="Shows Leafy Grove Home for the Not Very Aged healthcare service"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
 		</resource>
 		<resource>
@@ -1734,7 +1739,7 @@
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
 		</resource>
 
-	
+
 		<!-- AU Base Substance examples-->
 		<resource>
 			<reference>
@@ -1915,6 +1920,18 @@
 		<parameter>
 			<code value="path-expansion-params"/>
 			<value value="../input/_resources/exp-params.json"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"/>
 		</parameter>
 		<parameter>
 			<code value="special-url"/>

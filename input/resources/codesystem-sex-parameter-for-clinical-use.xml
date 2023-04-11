@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="sex-parameter-for-clinical-use"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.4.2038"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SexParameterForClinicalUseCS"/>
+  <title value="Sex Parameter For Clinical Use"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2023-03-26T08:47:34+11:00"/>
+  <publisher value="HL7 International / FHIR Infrastructure"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/fhir-i"/>
+    </telecom>
+  </contact>
+  <description value="A summary parameter that provides guidance on how a receiver should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.&#xa;&#xa;This code system is an R4 (4.0.1) conversion of the canonical code system published in the R5 [FHIR Extensions Pack](http://hl7.org/fhir/extensions/1.0.0/CodeSystem-sex-parameter-for-clinical-use.html)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <property>
+    <code value="usage-note"/>
+    <uri value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use/property/usage-note"/>
+    <description value="Usage notes for the concept."/>
+    <type value="string"/>
+  </property>
+  <concept>
+    <code value="female-typical"/>
+    <display value="Apply female-typical setting or reference range"/>
+    <definition value="Available data indicates that diagnostics, analytics, and treatments should consider best practices associated with female reference populations."/>
+  </concept>
+  <concept>
+    <code value="male-typical"/>
+    <display value="Apply male-typical setting or reference range"/>
+    <definition value="Available data indicates that diagnostics, analytics, and treatments should consider best practices associated with male reference populations."/>
+  </concept>
+  <concept>
+    <code value="specified"/>
+    <display value="Apply specified setting or reference range"/>
+    <definition value="Available data indicates that diagnostics, analytics, and treatment best practices may be undefined or not aligned with sex-derived reference populations. Additional information may be available in the form of comments and/or observations."/>
+    <property>
+      <code value="usage-note"/>
+      <valueString value="Individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment. Systems that are unable to review additional information may manage a SPECIFIED and an UNKNOWN value in the same way."/>
+    </property>
+  </concept>
+</CodeSystem>

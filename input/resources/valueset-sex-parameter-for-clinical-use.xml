@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sex-parameter-for-clinical-use"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="CodeSystem-sex-parameter-for-clinical-use.html"><code>http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use</code></a></li><li>Include these codes as defined in <a href="http://terminology.hl7.org/5.0.0/CodeSystem-data-absent-reason.html"><code>http://terminology.hl7.org/CodeSystem/data-absent-reason</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/5.0.0/CodeSystem-data-absent-reason.html#data-absent-reason-unknown">unknown</a></td><td>Unknown</td><td>The value is expected to exist but is not known.</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.3.3181"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="SexParameterForClinicalUse"/>
+  <title value="Sex Parameter for Clinical Use"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2023-03-26T08:47:34+11:00"/>
+  <publisher value="HL7 International / FHIR Infrastructure"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/fhir-i"/>
+    </telecom>
+  </contact>
+  <description value="A summary parameter that provides guidance on how a receiver should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.&#xa;&#xa;This value set is an R4 (4.0.1) conversion of the canonical value set published in the R5 [FHIR Extensions Pack](http://hl7.org/fhir/extensions/1.0.0/ValueSet-sex-parameter-for-clinical-use.html)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+    </include>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+      <concept>
+        <code value="unknown"/>
+        <display value="Unknown"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
