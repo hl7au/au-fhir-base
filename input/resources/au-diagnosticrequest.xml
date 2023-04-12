@@ -48,6 +48,15 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure" />
       </type>
     </element>
+    <element id="ServiceRequest.extension:sexForClinicalUse">
+      <path value="ServiceRequest.extension"/>
+      <sliceName value="sexForClinicalUse"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"/>
+      </type>
+    </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
       <short value="Identifiers assigned to this order" />
