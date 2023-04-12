@@ -1,7 +1,13 @@
 <Patient xmlns="http://hl7.org/fhir">
     <id value="example-sex-and-gender"/>
-    <!--   This purpose of this example is to demonstrate the R5 pre-adopted extensions for sex and gender.
+    <!--   This purpose of this example is to demonstrate the R5 pre-adopted extensions for sex and gender:
+    - Individual Pronouns
+    - Patient Sex Parameter For Clinical Use
+    - Person Recorded Sex Or Gender   
     This example is taken and adapted from the R5 Transgender Person Example  -->
+    <meta>
+		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+	</meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
         <valueCodeableConcept>
             <coding>
