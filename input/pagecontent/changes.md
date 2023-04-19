@@ -30,6 +30,12 @@ To help implementers, only the more significant changes are listed here.
 <li>None</li>
 </ul>
 </li>
+<li>New search parameters:
+<ul>
+<li><a href="SearchParameter-indigenous-status.html">AustralianIndigenousStatus</a></li>
+<li><a href="SearchParameter-patient-gender-identity.html">PatientGenderIdentity</a></li>
+</ul>
+</li>
 </ul>
 
 ### Release 4.1.0
