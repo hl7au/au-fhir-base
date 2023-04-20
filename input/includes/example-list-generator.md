@@ -1,4 +1,3 @@
-<!-- Use for sorted flat list resources ValueSet, CodeSystem, SearchParameter, OperationDefinition  allows for highlighting new stuff using include parameter -->
 {% assign my_types = "" %}
 {%- for r_hash in site.data.artifacts -%}
   {% assign r_type = r_hash[0] | split: '/' | first %}
@@ -15,7 +14,7 @@
    {% assign dhtype = i | split: '-'  | first %}
    {%- if lhtype != dhtype %}
     {% assign lhtype = dhtype %}
-  <h4>{{ lhtype }}</h4>
+### {{ lhtype }}
    {% endif %}
   <ul>
   {%- for r_hash in site.data.pages -%}
