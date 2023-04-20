@@ -7,7 +7,7 @@ As well as these included definitions this specification typically references [N
 
 ### Value Sets
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. The following value sets are unique to this guide and not listed in the base FHIR specification.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. The following value sets are unique to this guide and not listed in the base FHIR specification.
 
 **Value sets published in this guide**
 <!-- ================================================ -->
@@ -85,7 +85,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 <!-- ================================================ -->
 
 **Code systems published in the NCTS**
-- [Australian Immunisation Register Vaccine](https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats)
+- [Australian Immunisation Register Vaccine](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-immunisation-register-vaccine-20221118?ui:source=search)
 - [Australian Indigenous Status](https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1)
 - [Australian States and Territories](https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1)
 - [Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 2.0)](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/anzsic-2006-20130626)
@@ -93,3 +93,16 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 - [Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1)
 - [Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1)
 - [Separation Mode](https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1)
+
+### Concept Maps
+
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the base FHIR specification. The following concept maps are unique to this guide and not listed in the base FHIR specification.
+
+**Concept maps published in the NCTS**
+- [Australian States and Territories v1 to Australian States and Territories v2](https://healthterminologies.gov.au/fhir/ConceptMap/australian-states-territories-v1-to-v2-1)
+- [METeOR Indigenous Status 291036 to Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-indigenous-291036-to-australian-indigenous-status-2)
+- [METeOR Person Gender 635994 to HL7 FHIR AdministrativeGender](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-gender-635994-to-hl7-fhir-administrativegender-1)
+- [METeOR Person Gender 741825 to HL7 FHIR AdministrativeGender](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-gender-741825-to-fhir-administrativegender-1)
+- [METeOR Person Sex 635126 to Biological Sex](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-sex-635126-to-biological-sex-1)
+- [Reason Vaccine Not Administered v1 to Reason Vaccine Not Administered v2](https://healthterminologies.gov.au/fhir/ConceptMap/reason-vaccine-not-administered-v1-to-v2-1)
+- [Reason Vaccine Not Administered v2 to Reason Vaccine Not Administered v3](https://healthterminologies.gov.au/fhir/ConceptMap/reason-vaccine-not-administered-v2-to-v3-1)
