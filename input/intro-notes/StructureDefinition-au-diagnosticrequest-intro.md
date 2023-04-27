@@ -1,5 +1,3 @@
-<p class="stu-note">We have introduced support for the extension Patient Sex Parameter For Clinical Use. This extension is published in this guide to pre-adopt the material published in the R5 <a href="http://hl7.org/fhir/extensions/1.0.0">FHIR Extensions Pack</a>. This extension is an R4 (4.0.1) conversion of the canonical extension and contains forwards incompatible data types when converted to R4 (see the extension page in this guide for information on any  material differences). Implementers are advised to take note that this content may be removed or changed and to take caution if using this extension.</p>
-
 ### Usage Notes
 
 **Profile specific implementation guidance:**

@@ -19,19 +19,17 @@ To help implementers, only the more significant changes are listed here.
 <ul>
 <li><a href="StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="StructureDefinition-individual-pronouns.html">Individual Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
-<li><a href="StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> published in this guide to pre-adopt an extension published in R5</li>
 </ul>
 </li>
 <li>New value sets:
 <ul>
 <li><a href="ValueSet-pronouns.html">Personal Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="ValueSet-recorded-sex-or-gender-type.html">Recorded Sex Or Gender Type</a> published in this guide to pre-adopt an extension published in R5</li>
-<li><a href="ValueSet-sex-parameter-for-clinical-use.html">Sex Parameter for Clinical Use</a> published in this guide to pre-adopt an extension published in R5</li>
 </ul>
 </li>
 <li>New code systems:
 <ul>
-<li><a href="CodeSystem-sex-parameter-for-clinical-use.html">Sex Parameter for Clinical Use</a> published in this guide to pre-adopt an extension published in R5</li>
+<li>None</li>
 </ul>
 </li>
 <li>New search parameters:
@@ -41,8 +39,6 @@ To help implementers, only the more significant changes are listed here.
 </ul>
 </li>
 <li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add Individual Pronouns and Person Recorded Sex Or Gender</li>
-<li>Changed ServiceRequest.extension in <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> to add Patient Sex Parameter For Clinical Use</li>
-<li>Changed MedicationRequest.extension in <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a> to add Patient Sex Parameter For Clinical Use</li>
 </ul>
 
 ### Release 4.1.0

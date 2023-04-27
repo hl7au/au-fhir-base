@@ -18,4 +18,3 @@
 
 **Extensions under consideration:**
 * Patient: [Ethnicity](StructureDefinition-ethnicity.html)
-* Patient: [Patient Sex Parameter For Clinical Use](StructureDefinition-patient-sexParameterForClinicalUse.html)

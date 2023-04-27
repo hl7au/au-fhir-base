@@ -3,7 +3,7 @@ This page lists all ValueSets and CodeSystems defined as part of this specificat
 
 As well as these included definitions this specification typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
-<p class="stu-note">We have introduced some terminology to support extensions around sex and gender. These extensions are currently under discussion with HL7 Australia and/or HL7 International. The terminology resources introduced are: Personal Pronouns value set, Recorded Sex Or Gender Type value set, Sex Parameter for Clinical Use value set, and Sex Parameter for Clinical Use code system. These extensions, and the associated terminology, may be removed or changed prior to publication of the next version of this guide.</p>
+<p class="stu-note">We have introduced some terminology to support extensions around sex and gender. These extensions are currently under discussion with HL7 Australia and/or HL7 International. The terminology resources introduced are: Personal Pronouns value set and Recorded Sex Or Gender Type value set. These extensions, and the associated terminology, may be removed or changed prior to publication of the next version of this guide.</p>
 
 ### Value Sets
 

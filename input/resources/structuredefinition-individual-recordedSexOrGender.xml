@@ -29,7 +29,7 @@
       <value value="http://hl7.org/Special/committees/fhir-i"/>
     </telecom>
   </contact>
-  <description value="Recorded sex or gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. Examples of recorded sex or gender concepts include administrative gender, administrative sex, and sex assigned at birth.  When exchanging this concept, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).&#xa;&#xa;This extension is published in this guide to pre-adopt an extension published in R5. This extension is an R4 (4.0.1) conversion of the canonical extension published in the R5 [FHIR Extensions Pack](http://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html). Implementers are advised to take note that the data type for the extension part sourceDocument (Reference) is not forwards compatible to the R5 type for that part (CodeableReference). No other material differences are present between the R4 extension published in this guide and R5 extension published the FHIR Extensions Pack."/>
+  <description value="Recorded sex or gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. Examples of recorded sex or gender concepts include administrative gender, administrative sex, and sex assigned at birth.  When exchanging this concept, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).&#xa;&#xa;This extension is published in this guide to pre-adopt an extension published in the R5 [FHIR Extensions Pack](http://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html). The only material difference is the data type for extension part sourceDocument (R5 CodeableReference to a choice between R4 CodeableConcept or Reference)."/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -220,7 +220,27 @@
     </element>
     <element id="Extension.extension:sourceDocument.value[x]">
       <path value="Extension.extension.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
       <min value="1"/>
+    </element>
+    <element id="Extension.extension:sourceDocument.value[x]:valueCodeableConcept">
+      <path value="Extension.extension.value[x]"/>
+      <sliceName value="valueCodeableConcept"/>
+      <min value="0"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Extension.extension:sourceDocument.value[x]:valueReference">
+      <path value="Extension.extension.value[x]"/>
+      <sliceName value="valueReference"/>
+      <min value="0"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
