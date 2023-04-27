@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="encounter-discharge-disposition" />
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+        <valueInteger value="0"/>
+    </extension>
+    <url value="http://hl7.org.au/fhir/SearchParameter/encounter-discharge-disposition" />
+    <name value="EncounterDischargeDisposition" />
+    <status value="draft" />
+    <description value="This search parameter returns encounters with a discharge-disposition matching the specified code." />
+    <code value="discharge-disposition"/>
+    <base value="Encounter"/>
+    <type value="token"/>
+    <expression value="Encounter.hospitalization.dischargeDisposition"/>
+    <multipleOr value="true">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="MAY"/>
+        </extension>
+    </multipleOr>
+    <multipleAnd value="true">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="MAY"/>
+        </extension>
+    </multipleAnd>
+</SearchParameter>

@@ -4,6 +4,10 @@ The following [search parameters]({{site.data.fhir.path}}search.html) have been 
 NOTE: The following search parameters **SHALL NOT** be interpreted on their own as a list of search requirements for a server.
 {:.bg-warning}
 
+### Encounter
+
+- [discharge-disposition](SearchParameter-encounter-discharge-disposition.html)
+
 
 ### Patient
 

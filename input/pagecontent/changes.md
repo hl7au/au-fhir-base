@@ -33,6 +33,7 @@ To help implementers, only the more significant changes are listed here.
 <li>New search parameters:
 <ul>
 <li><a href="SearchParameter-indigenous-status.html">AustralianIndigenousStatus</a></li>
+<li><a href="SearchParameter-encounter-discharge-disposition.html">EncounterDischargeDisposition</a></li>
 <li><a href="SearchParameter-patient-gender-identity.html">PatientGenderIdentity</a></li>
 </ul>
 </li>
