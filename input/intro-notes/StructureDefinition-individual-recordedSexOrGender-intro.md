@@ -1,0 +1,3 @@
+<p class="stu-note">This R4 (4.0.1) conversion of the Person Recorded Sex Or Gender extension is not forwards compatible due to data types. The extension part sourceDocument, CodeableReference in R5, is represented in the R4 extension as a choice between CodeableConcept and Reference. Implementers are advised to take note that this content may be removed or changed and to take caution if using this extension.</p>
+
+### Usage Notes

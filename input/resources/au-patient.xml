@@ -8,17 +8,7 @@
   <name value="AUBasePatient" />
   <title value="AU Base Patient" />
   <status value="active" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
-  <contact>
-    <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
-    </telecom>
-  </contact>
   <description value="This profile defines a patient structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs." />
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
-  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
@@ -114,6 +104,22 @@
         <strength value="extensible" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1" />
       </binding>
+    </element>   
+    <element id="Patient.extension:individualPronouns">
+      <path value="Patient.extension"/>
+      <sliceName value="individualPronouns"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
+      </type>
+    </element>
+    <element id="Patient.extension:recordedSexOrGender">
+      <path value="Patient.extension"/>
+      <sliceName value="recordedSexOrGender"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+      </type>
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
@@ -135,6 +141,7 @@
       <path value="Patient.birthDate" />
       <short value="Date of birth extended for time and accuracy indicator" />
       <requirements value="Age of the individual drives many clinical processes. May include accuracy indicator and specific birth time." />
+      <condition value="inv-pat-0"/>
     </element>
     <element id="Patient.birthDate.extension">
       <path value="Patient.birthDate.extension" />
@@ -165,6 +172,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
       </type>
+      <condition value="inv-pat-0"/>
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />

@@ -9,6 +9,7 @@
   - [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 - If a medication is compounded and is a list of ingredients, `MedicationRequest.code` is still present and may contain only the list of ingredients as text in `MedicationRequest.code.text`.
 - Where additional medicinal product information is needed, `MedicationRequest.medicationReference` is preferred to `MedicationRequest.code` and use of extensions, see guidance on [AU Base Medication](StructureDefinition-au-medication.html).
+- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 - See each Identifier profile page for guidance related to that identifier type.
 
 **Potentially useful extensions:**

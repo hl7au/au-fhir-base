@@ -17,12 +17,14 @@ To help implementers, only the more significant changes are listed here.
 </li>
 <li>New extensions:
 <ul>
-<li>None</li>
+<li><a href="StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> published in this guide to pre-adopt an extension published in R5</li>
+<li><a href="StructureDefinition-individual-pronouns.html">Individual Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
 </ul>
 </li>
 <li>New value sets:
 <ul>
-<li>None</li>
+<li><a href="ValueSet-pronouns.html">Personal Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
+<li><a href="ValueSet-recorded-sex-or-gender-type.html">Recorded Sex Or Gender Type</a> published in this guide to pre-adopt an extension published in R5</li>
 </ul>
 </li>
 <li>New code systems:
@@ -30,6 +32,14 @@ To help implementers, only the more significant changes are listed here.
 <li>None</li>
 </ul>
 </li>
+<li>New search parameters:
+<ul>
+<li><a href="SearchParameter-indigenous-status.html">AustralianIndigenousStatus</a></li>
+<li><a href="SearchParameter-encounter-discharge-disposition.html">EncounterDischargeDisposition</a></li>
+<li><a href="SearchParameter-patient-gender-identity.html">PatientGenderIdentity</a></li>
+</ul>
+</li>
+<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add Individual Pronouns and Person Recorded Sex Or Gender</li>
 </ul>
 
 ### Release 4.1.0

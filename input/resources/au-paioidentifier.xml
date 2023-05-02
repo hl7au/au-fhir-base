@@ -8,17 +8,7 @@
   <name value="AUPAIOIdentifier" />
   <title value="AU PAI-O Identifier" />
   <status value="draft" />
-  <publisher value="Health Level Seven Australia (Patient Administration WG)" />
-  <contact>
-    <telecom>
-      <system value="url" />
-      <value value="http://hl7.com.au" />
-      <use value="work" />
-    </telecom>
-  </contact>
   <description value="This identifier profile defines a My Health Record Assigned Identity - Organisation (PAI-O) identifier in an Australian context. A PAI-O may be issued to organisations who wish to participate in the My Health Record and who are not eligible for a Healthcare Provider Identifier - Organisation (HPI-O)." />
-  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved." />
-  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -77,6 +67,9 @@
         <valueString value="8003640011000059" />
       </example>
       <maxLength value="16" />
+      <condition value="inv-paio-0"/>
+      <condition value="inv-paio-1"/>
+      <condition value="inv-paio-2"/>
     </element>
   </differential>
 </StructureDefinition>
