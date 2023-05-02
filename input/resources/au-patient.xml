@@ -104,6 +104,22 @@
         <strength value="extensible" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1" />
       </binding>
+    </element>   
+    <element id="Patient.extension:individualPronouns">
+      <path value="Patient.extension"/>
+      <sliceName value="individualPronouns"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
+      </type>
+    </element>
+    <element id="Patient.extension:recordedSexOrGender">
+      <path value="Patient.extension"/>
+      <sliceName value="recordedSexOrGender"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+      </type>
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />

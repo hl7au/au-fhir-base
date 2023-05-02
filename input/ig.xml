@@ -70,6 +70,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/individual-recordedSexOrGender"/>
+			</reference>
+			<description value="Patient Sex Parameter For Clinical Use"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-condition"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -664,6 +670,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="ValueSet/recorded-sex-or-gender-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="CodeSystem/pbs-item-external"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -1055,6 +1067,14 @@
 			<name value="HealthcareService - general practice"/>
 			<description value="Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example-sex-and-gender"/>
+			</reference>
+			<name value="Patient - Transgender Person Example"/>
+			<description value="Shows an example of a patient that demonstrates the R5 pre-adopted extensions for sex and gender. This example is taken and adapted from the R5 Transgender Person Example."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
 			<reference>
@@ -1921,6 +1941,22 @@
 		<parameter>
 			<code value="path-expansion-params"/>
 			<value value="../input/_resources/exp-params.json"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org/ValueSet/pronouns"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
 		</parameter>
 		<parameter>
 			<code value="special-url"/>

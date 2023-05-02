@@ -1,3 +1,5 @@
+<p class="stu-note">We have introduced support for the following extensions: Individual Pronouns, Patient Sex Parameter For Clinical Use, Person Recorded Sex Or Gender. These extensions are published in this guide to pre-adopt the material published in the R5 <a href="http://hl7.org/fhir/extensions/1.0.0">FHIR Extensions Pack</a>. These extensions are an R4 (4.0.1) conversion of the canonical extension and may contain forwards incompatible data types when converted to R4 (see the extension page in this guide for information on any  material differences). Implementers are advised to take note that this content may be removed or changed and to take caution if using these extensions.</p>
+
 ### Usage Notes
 
 **Profile specific implementation guidance:**
@@ -8,6 +10,7 @@
   - *[I/They] use a different term (please specify)*  may be represented by sending only text and no code, see example [Patient/example7](Patient-example7.html)
   - *Prefer not to answer* may be represented by sending the code "asked-declined", see example [Patient/example0](Patient-example0.html)
   - *Not stated or inadequately described* may be represented by the code "unknown"
+- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 - Need for an interpreter service can be represented with the [interpreterRequired extension](http://hl7.org/fhir/R4/extension-patient-interpreterrequired.html) set to "true" 
   - If the language for interpreter service is known, the language is included in `Patient.communication.language` and `Patient.communication.preferred` is set to "true". 
   - If `Patient.communication.preferred` has not been included, or is set to "false", systems should understand this as the language for the interpreter service is not known.
