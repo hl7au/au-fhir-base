@@ -3,25 +3,28 @@
 	<meta>
 		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
 	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
 	<url value="http://terminology.hl7.org.au/ValueSet/accession-number-type"/>
-	<identifier> 
-		<system value="urn:ietf:rfc:3986"/> 
-		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.23"/> 
-	</identifier> 
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.23"/>
+	</identifier>
 	<name value="AccessionNumberType"/>
 	<title value="Accession Number Type"/>
 	<status value="active"/>
 	<experimental value="false"/>
 	<description value="Identifier types that may be associated with an accession number in an Australian context."/>
 	<compose>
-		<include> 
-			<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/> 
-			<concept> 
-				<code value="ACSN"/> 
-			</concept> 
-			<concept> 
-				<code value="LACSN"/> 
-			</concept> 
-		</include> 
-	</compose> 
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+			<concept>
+				<code value="ACSN"/>
+			</concept>
+			<concept>
+				<code value="LACSN"/>
+			</concept>
+		</include>
+	</compose>
 </ValueSet>
