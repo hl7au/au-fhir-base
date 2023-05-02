@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-diagnosticresult" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/> 
+    <valueInteger value="1"/>
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult" />
   <name value="AUBaseDiagnosticResult" />
@@ -79,6 +79,14 @@
         <code value="Period" />
       </type>
     </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <condition value="inv-obs-0"/>
+    </element>
+    <element id="Observation.dataAbsentReason">
+      <path value="Observation.dataAbsentReason" />
+      <condition value="inv-obs-0"/>
+    </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
       <short value="Individual examinations in a group or study series" />
@@ -88,6 +96,15 @@
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult" />
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
       </type>
+      <condition value="inv-obs-0"/>
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]" />
+      <condition value="inv-obs-0"/>
+    </element>
+    <element id="Observation.component.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason" />
+      <condition value="inv-obs-0"/>
     </element>
   </differential>
 </StructureDefinition>
