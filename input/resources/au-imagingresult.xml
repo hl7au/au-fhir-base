@@ -26,24 +26,6 @@
         <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
       </constraint>
     </element>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:bodySite">
-      <path value="Observation.extension" />
-      <sliceName value="bodySite" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
-      </type>
-    </element>
     <element id="Observation.category">
       <path value="Observation.category"/>
       <slicing>
@@ -137,6 +119,25 @@
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
       </binding>
+    </element>
+    <element id="Observation.bodySite.extension">
+      <path value="Observation.bodySite.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.bodySite.extension:bodySite">
+      <path value="Observation.bodySite.extension" />
+      <sliceName value="bodySite" />
+      <max value="1"/>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
+      </type>
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
