@@ -25,11 +25,13 @@ To help implementers, only the more significant changes are listed here.
 <ul>
 <li><a href="ValueSet-pronouns.html">Personal Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="ValueSet-recorded-sex-or-gender-type.html">Recorded Sex Or Gender Type</a> published in this guide to pre-adopt an extension published in R5</li>
+<li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
+<li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
 </ul>
 </li>
 <li>New code systems:
 <ul>
-<li>None</li>
+<li><a href="ValueSet-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
 </ul>
 </li>
 <li>New search parameters:

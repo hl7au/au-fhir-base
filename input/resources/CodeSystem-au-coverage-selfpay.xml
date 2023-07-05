@@ -1,15 +1,30 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="au-coverage-selfpay"/>
-  <url value="http://teminology.hl7.org.au/CodeSystem/coverage-selfpay"/>
+  <meta>
+		<profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
+  <url value="http://terminology.hl7.org.au/CodeSystem/coverage-selfpay"/>
+  <identifier> 
+		<system value="urn:ietf:rfc:3986"/> 
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.1.4.28"/> 
+	</identifier>
   <name value="CoverageSelfPayCodesAU"/>
   <title value="Coverage SelfPay Codes AU"/>
   <status value="draft"/>
-  <description value="Extended concept codes for Coverage SelfPay Codes for use in an Australian context."/>
+  <experimental value="false"/>
+  <description value="Additional concept codes for coverage self pay type defined for use in Australian context. These codes are used as extensions to the HL7 International code set."/>
+  <caseSensitive value="true" />
+	<valueSet value="http://terminology.hl7.org.au/ValueSet/coverage-selfpay"/>
+	<compositional value="false" />
+	<versionNeeded value="false" />
   <content value="complete"/>
   <count value="1"/>
   <concept>
     <code value="payconc"/>
     <display value="Concession"/>
-    <definition value="An individual or organization is paying directly a concessional fee for goods and services"/>
+    <definition value="An individual or organisation is paying directly a concessional fee for goods and services."/>
   </concept>
 </CodeSystem>
