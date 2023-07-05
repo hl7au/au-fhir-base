@@ -31,7 +31,7 @@ To help implementers, only the more significant changes are listed here.
 </li>
 <li>New code systems:
 <ul>
-<li><a href="ValueSet-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
+<li><a href="CodeSystem-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
 </ul>
 </li>
 <li>New search parameters:
