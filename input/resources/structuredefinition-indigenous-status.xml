@@ -8,7 +8,7 @@
   <name value="AustralianIndigenousStatus" />
   <title value="Australian Indigenous Status" />
   <status value="active" />
-  <description value="This extension applies to the Patient and RelatedPerson resource and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin." />
+  <description value="This extension applies to the Patient, Person and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin." />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -18,6 +18,10 @@
   <context>
     <type value="element"/>
     <expression value="RelatedPerson"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Person"/>
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
