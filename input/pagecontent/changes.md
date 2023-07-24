@@ -42,6 +42,7 @@ To help implementers, only the more significant changes are listed here.
 </ul>
 </li>
 <li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add Individual Pronouns and Person Recorded Sex Or Gender</li>
+<li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
 </ul>
 
 ### Release 4.1.0
