@@ -8,12 +8,20 @@
   <name value="AustralianIndigenousStatus" />
   <title value="Australian Indigenous Status" />
   <status value="active" />
-  <description value="This extension applies to the Patient resource and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin." />
+  <description value="This extension applies to the Patient, Person and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin." />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element"/>
     <expression value="Patient"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="RelatedPerson"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Person"/>
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -22,7 +30,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Indigenous status" />
-      <definition value="National Health Data Dictionary (NHDD) based indigenous status for a patient." />
+      <definition value="National Health Data Dictionary (NHDD) based indigenous status for a patient or a person that is involved in the care for a patient." />
       <comment value="This concept is equivalent to Australian Institute of Health and Welfare data element 602543 [Person—Indigenous status, code N](https://meteor.aihw.gov.au/content/index.phtml/itemId/602543)." />
       <max value="1" />
     </element>
