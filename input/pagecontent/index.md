@@ -37,15 +37,9 @@ This guide is the product of collaborative work undertaken with participants fro
 FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of the guide as being suitable for 
 implementation. This implementation guide will be used as the basis for Australian connectathon events.
 
-FHIR profiles are managed under HL7 Australia working groups and projects:
+FHIR profiles are managed under HL7 Australia work groups and projects managed by the [HL7 Australia FHIR Work Group](https://confluence.hl7.org/display/HAFWG)
 
-* [HL7 Australia Patient Administration Working Group](https://confluence.hl7australia.com/display/PA/Patient+Administration+Work+Group)
-* [HL7 Australia Medications Working Group](https://confluence.hl7australia.com/display/MED/Medications+Work+Group)
-* [HL7 Australia Orders and Observations Working Group](https://confluence.hl7australia.com/display/OO/Orders+and+Observations+Work+Group)
-* [HL7 Australia Child Health Working Group](https://confluence.hl7australia.com/display/CHWG/Child+Health+Working+Group)
-* [HL7 Argonaut Australia Project](https://confluence.hl7australia.com/display/AFR/HL7+Australia+Standards+Development)
-
-Some profiles indicate the responsible working group, or enquires can be directed to the [Working Group Liaison Officer](mailto:wglo@hl7.com.au)
+Some profiles indicate the responsible work group, or enquires can be directed to the [Work Group Liaison Officer](mailto:wglo@hl7.com.au)
 
 
 
