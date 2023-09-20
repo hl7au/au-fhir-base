@@ -19,6 +19,7 @@ To help implementers, only the more significant changes are listed here.
 <ul>
 <li><a href="StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="StructureDefinition-individual-pronouns.html">Individual Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
+<li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
 </ul>
 </li>
 <li>New value sets:
@@ -41,7 +42,10 @@ To help implementers, only the more significant changes are listed here.
 <li><a href="SearchParameter-patient-gender-identity.html">PatientGenderIdentity</a></li>
 </ul>
 </li>
-<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add Individual Pronouns and Person Recorded Sex Or Gender</li>
+<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> 
+<ul><li>to add Individual Pronouns and Person Recorded Sex Or Gender</li>
+<li>to add Australian Veteran Status</li>
+</ul>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
 </ul>
 
