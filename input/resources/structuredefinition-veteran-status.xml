@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="veteran-status" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/veteran-status" />
+  <name value="AustralianVeteranStatus" />
+  <title value="Australian Veteran Status" />
+  <status value="draft" />
+  <description value="This extension applies to the Patient resource and is used to indicate whether a person is serving, or has served, in the Australian Defence Force." />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element"/>
+    <expression value="Patient"/>
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Veteran / Australian Defence Force (ADF) status" />
+      <definition value="Veteran / Australian Defence Force (ADF) status for a person." />
+      <comment value="This concept is equivalent to Australian Institute of Health and Welfare data element 737931 [Person—ADF veteran status, code N](https://meteor.aihw.gov.au/content/737931)." />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+			<path value="Extension.url" />
+			<fixedUri value="http://hl7.org.au/fhir/StructureDefinition/veteran-status" />
+		</element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="Veteran status" />
+      <definition value="Veteran / Australian Defence Force (ADF) status code." />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
