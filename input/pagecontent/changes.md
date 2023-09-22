@@ -42,7 +42,7 @@ To help implementers, only the more significant changes are listed here.
 <li><a href="SearchParameter-patient-gender-identity.html">PatientGenderIdentity</a></li>
 </ul>
 </li>
-<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> 
+<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a>: 
 <ul><li>to add Individual Pronouns and Person Recorded Sex Or Gender</li>
 <li>to add Australian Veteran Status</li>
 </ul>
