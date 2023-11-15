@@ -19,6 +19,7 @@ To help implementers, only the more significant changes are listed here.
 <ul>
 <li><a href="StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="StructureDefinition-individual-pronouns.html">Individual Pronouns</a> published in this guide to pre-adopt an extension published in R5</li>
+<li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
 </ul>
 </li>
 <li>New value sets:
@@ -41,7 +42,11 @@ To help implementers, only the more significant changes are listed here.
 <li><a href="SearchParameter-patient-gender-identity.html">PatientGenderIdentity</a></li>
 </ul>
 </li>
-<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add Individual Pronouns and Person Recorded Sex Or Gender</li>
+<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a>: 
+<ul><li>to add Individual Pronouns and Person Recorded Sex Or Gender</li>
+<li>to add Australian Veteran Status</li>
+</ul>
+</li>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
 </ul>
 
@@ -96,7 +101,7 @@ To help implementers, only the more significant changes are listed here.
     <li>AU Vital Signs Panel</li>
 </ul>
 </li>
-<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a> to add genderIdentity and change the binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a> (extensible) (<a href="https://github.com/hl7au/au-fhir-base/issues/599">au-fhir-base #599</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-186">FHIRIG #186</a>).</li>
+<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient:</a> to add genderIdentity and change the binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a> (extensible) (<a href="https://github.com/hl7au/au-fhir-base/issues/599">au-fhir-base #599</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-186">FHIRIG #186</a>).</li>
 <li>Changed Encounter.type binding in <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> to Encounter Type (preferred) (<a href="https://github.com/hl7au/au-fhir-base/issues/382">au-fhir-base #382</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
 <li>Changed Encounter.serviceType binding in <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> to Service Type (preferred)(<a href="https://github.com/hl7au/au-fhir-base/issues/684">au-fhir-base #684</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
 <li>Technical correction of DiagnosticReport.code binding strength in <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a> to preferred (<a href="https://jira.hl7australia.com/browse/FHIRIG-233">FHIRIG #233</a>).</li>
