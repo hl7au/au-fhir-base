@@ -22,9 +22,12 @@ Email fhirwglist@hl7.com.au to join the HL7 AU FHIR working group.
 
 If you have a question, feature request, or proposed change, the best place to start is Zulip e.g. the https://chat.fhir.org/#narrow/stream/179166-implementers stream. If what you want to discuss is specific to Australia you can post in the Australia stream https://chat.fhir.org/#narrow/stream/179173-australia.
 
-### 3. Log a HL7 Jira issue
+### 3. Log a GitHub issue
 
-If you have a question, feature request, or proposed change, the best place to start is by logging a [FHIR IG Jira issue](https://jira.hl7australia.com/projects/FHIRIG/issues) on the HL7 AU Jira site directly or use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac) option at the bottom of each page of the IG to submit a JIRA issue.
+Search the Issues list in [GitHub](https://github.com/hl7au/au-fhir-base/issues?q=is%3Aissue) to ensure the error was not already reported.
+
+If you're unable to find an open bug addressing the problem, please create a bug report or issue in this repository. You can use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
+ option at the bottom of each page of the IG to trigger the creation of a GitHub issue.
 
 ### 4. Discuss with the team
 
