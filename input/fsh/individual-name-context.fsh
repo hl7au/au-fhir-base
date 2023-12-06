@@ -18,7 +18,7 @@ Title: "Example Individual Name Context"
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'></div>"
 
 * name 
-  * extension[individual-name-context].valueCodeableConcept = http://terminology.hl7.org.au/CodeSystem/individual-name-context#ihi-validation "IHI Validation"
+  * extension[individual-name-context].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/individual-name-context#ihi-validation "IHI Validation"
 
 * name.family = "Example"
 * name.given = "Mary"
