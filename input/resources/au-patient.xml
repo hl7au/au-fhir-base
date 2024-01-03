@@ -26,6 +26,13 @@
         <expression value="birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()" />
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
+      <constraint>
+        <key value="inv-pat-1" />
+        <severity value="warning" />
+        <human value="Gender identity shall be a member of the Gender Identity Response value set if any of the codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/patient-genderIdentity').empty() or extension('http://hl7.org/fhir/StructureDefinition/patient-genderIdentity').valueCodeableConcept.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+</constraint>
     </element>
     <element id="Patient.extension">
       <path value="Patient.extension" />
@@ -102,17 +109,8 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity" />
       </type>
+      <condition value="inv-pat-1"/>
     </element>
-    <element id="Patient.extension:genderIdentity.valueCodeableConcept">
-      <path value="Patient.extension.valueCodeableConcept" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1" />
-      </binding>
-    </element>   
     <element id="Patient.extension:individualPronouns">
       <path value="Patient.extension"/>
       <sliceName value="individualPronouns"/>
