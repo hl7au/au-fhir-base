@@ -1,0 +1,39 @@
+{
+  "resourceType": "Patient",
+  "id": "example-individual-name-context",
+  "name": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/individual-name-context",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "ihi-validation",
+                "system": "http://terminology.hl7.org.au/CodeSystem/individual-name-context",
+                "display": "IHI Validation"
+              }
+            ]
+          }
+        }
+      ],
+      "family": "Example",
+      "given": [
+        "Mary"
+      ],
+      "text": "Mary Example"
+    }
+  ],
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+  },
+  "birthDate": "1971",
+  "gender": "female",
+  "identifier": [
+    {
+      "system": "http://example.org/mrn",
+      "value": "12345679"
+    }
+  ]
+}
