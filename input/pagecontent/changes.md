@@ -45,9 +45,10 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a>: 
 <ul><li>to add Individual Pronouns and Person Recorded Sex Or Gender</li>
 <li>to add Australian Veteran Status</li>
+<li>to remove the value slice with the binding to Gender Identity Response (extensible) from genderIdentity (<a href="https://github.com/hl7au/au-fhir-base/issues/815">au-fhir-base #815</a>)</li>
 </ul>
-</li>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
+<li>Added new invariant to Patient root element for genderIdentity extension terminology (<a href="https://github.com/hl7au/au-fhir-base/issues/815">au-fhir-base #815</a>).</li></li> 
 </ul>
 
 ### Release 4.1.0
