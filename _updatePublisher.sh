@@ -127,3 +127,4 @@ if [[ $skipPrompts == true ]] || [[ $response =~ ^[yY].*$ ]]; then
   cp /tmp/_updatePublisher.new _updatePublisher.sh
   rm /tmp/_updatePublisher.new
 fi
+q
