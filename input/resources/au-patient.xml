@@ -32,7 +32,14 @@
         <human value="Gender identity shall be a member of the Gender Identity Response value set if any of the codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/patient-genderIdentity').empty() or extension('http://hl7.org/fhir/StructureDefinition/patient-genderIdentity').valueCodeableConcept.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
-</constraint>
+      </constraint>
+      <constraint>
+        <key value="inv-pat-2" />
+        <severity value="warning" />
+        <human value="Pronouns shall be a member of the Australian Pronouns value set if any of the codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').valueCodeableConcept.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/au-pronouns-1')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+        </constraint>
     </element>
     <element id="Patient.extension">
       <path value="Patient.extension" />
@@ -107,17 +114,20 @@
       <comment value="Gender identity [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). See [Australian Bureau of Statics (ABS) Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) for further materials."/>
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
       </type>
       <condition value="inv-pat-1"/>
     </element>
     <element id="Patient.extension:individualPronouns">
       <path value="Patient.extension"/>
       <sliceName value="individualPronouns"/>
+      <short value="The patient's pronouns shall be a member of the Australian Pronouns value set if any of the codes within that value set can apply"/>
+      <comment value="Pronouns [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/au-pronouns-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
       </type>
+      <condition value="inv-pat-2"/>
     </element>
     <element id="Patient.extension:recordedSexOrGender">
       <path value="Patient.extension"/>

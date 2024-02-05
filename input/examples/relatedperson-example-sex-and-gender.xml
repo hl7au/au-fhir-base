@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example-sex-and-gender"/>
+      <!--   This purpose of this example is to demonstrate the use of adopted extensions for sex and gender:
+    - Individual Gender Identity  
+    - Pronouns
+    -->
+  <meta>
+	<profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+  </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="33791000087105"/>
+                    <display value="Non-binary gender identity"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>    
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="LA29520-6-8"/>
+                    <display value="they/them/their/theirs/themselves"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+    </extension>   
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/example0"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+      <code value="N"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="FAMMEMB"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="usual"/>
+    <family value="Baker"/>
+    <given value="Alex"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="(02) 5550 6767"/>
+  </telecom>
+  <gender value="other"/> 
+  </RelatedPerson>
