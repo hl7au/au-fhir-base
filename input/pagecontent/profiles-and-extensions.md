@@ -16,7 +16,7 @@ The following profiles and have been defined for this implementation guide.
 
 The following [extensions]({{site.data.fhir.path}}extensibility.html) have been defined as part of this guide. A [registry of standard extensions]({{site.data.fhir.path}}extensibility-registry.html) can be found in the FHIR specification and additional extensions may be registered on the HL7 FHIR registry at <http://hl7.org/fhir/registry>.
 
-<p class="stu-note">We have introduced support for the following extensions: <a href="StructureDefinition-individual-pronouns.html">Individual Pronouns</a> and <a href="StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a>. These extensions are re-published as R4 structures in this guide to pre-adopt the material published in the R5 <a href="http://hl7.org/fhir/extensions/1.0.0">FHIR Extensions Pack</a> (see each extension page in this guide for information on any material differences). Implementers are advised to take note that this content may be removed or changed and to take caution if using these extensions.</p>
+<p class="stu-note">We have introduced support for the Person Recorded Sex Or Gender extension. It is published in this guide to pre-adopt the material published in the R5 <a href="http://hl7.org/fhir/extensions/1.0.0">FHIR Extensions Pack</a>. This extension is an R4 (4.0.1) conversion of the canonical extension and may contain forwards incompatible data types when converted to R4 (see the extension page in this guide for information on any  material differences). Implementers are advised to take note that this content may be removed or changed and to take caution if using this extension.</p>
 
 
 <!-- ================================================ -->
