@@ -38,3 +38,4 @@ Once the issue is logged, you should discuss with the team on [chat.fhir.org in 
 When everyone has agreed on a course of action, IG changes should be submitted as a pull request for review in this repository.
 
 
+
