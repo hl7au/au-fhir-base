@@ -16,7 +16,7 @@ If you're unable to find an open bug addressing the problem, please create a bug
 
 ### 1. Join the HL7 AU FHIR Working Group
 
-Email fhirwglist@hl7.com.au to join the HL7 AU FHIR working group.
+Email fhirwglist@hl7.com.au to join the HL7 AU FHIR working group. Visit the [HL7 Australia FHIR Work Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+FHIR+Work+Group+Home).
 
 ### 2. Discuss an issue in chat.fhir.org
 
