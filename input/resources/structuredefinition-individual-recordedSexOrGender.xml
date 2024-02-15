@@ -220,31 +220,14 @@
     </element>
     <element id="Extension.extension:sourceDocument.value[x]">
       <path value="Extension.extension.value[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="closed"/>
-      </slicing>
-      <min value="1"/>
-    </element>
-    <element id="Extension.extension:sourceDocument.value[x]:valueCodeableConcept">
-      <path value="Extension.extension.value[x]"/>
-      <sliceName value="valueCodeableConcept"/>
-      <min value="0"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
-    </element>
-    <element id="Extension.extension:sourceDocument.value[x]:valueReference">
-      <path value="Extension.extension.value[x]"/>
-      <sliceName value="valueReference"/>
-      <min value="0"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
+      <min value="1"/>
     </element>
     <element id="Extension.extension:sourceField">
       <path value="Extension.extension"/>
