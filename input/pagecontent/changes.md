@@ -26,6 +26,7 @@ To help implementers, only the more significant changes are listed here.
 <li><a href="ValueSet-recorded-sex-or-gender-type.html">Recorded Sex Or Gender Type</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
 <li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
+<li><a href="ValueSet-au-pronouna.html">AU Pronouns</a> (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
 </ul>
 </li>
 <li>New code systems:
@@ -41,14 +42,13 @@ To help implementers, only the more significant changes are listed here.
 </ul>
 </li>
 <li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient</a>: 
-<ul><li>to add Individual Pronouns and Person Recorded Sex Or Gender</li>
+<ul><li>to add Individual Pronouns (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>) and Person Recorded Sex Or Gender</li>
 <li>to add Australian Veteran Status</li>
 <li>to remove genderIdentity extension and replace it with the Individual Gender Identity extension (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
-<li>to add Individual Pronouns extension (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
 </ul>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
 <li>Removed genderIdentity terminology constraint and replaced it with the Australian Individual Gender Identity terminology constraint in AU Base Patient (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>).</li>
-<li>Added Australian Individual Pronouns terminology constraint (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>).</li></li>
+<li>Added Individual Pronouns terminology constraint (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>).</li></li>
 <li>Changed RelatedPerson.extension in <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:<ul>
   <li>to add Individual Gender Identity extension (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
   <li>to add Individual Pronouns extension (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
