@@ -26,7 +26,6 @@ To help implementers, only the more significant changes are listed here.
 <li><a href="ValueSet-recorded-sex-or-gender-type.html">Recorded Sex Or Gender Type</a> published in this guide to pre-adopt an extension published in R5</li>
 <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
 <li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
-<li><a href="ValueSet-au-pronouna.html">AU Pronouns</a> (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
 </ul>
 </li>
 <li>New code systems:
@@ -47,19 +46,22 @@ To help implementers, only the more significant changes are listed here.
 <li>to remove genderIdentity extension and replace it with the Individual Gender Identity extension (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
 </ul>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
-<li>Removed genderIdentity terminology constraint and replaced it with the Australian Individual Gender Identity terminology constraint in AU Base Patient (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>).</li>
-<li>Added Individual Pronouns terminology constraint (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>).</li></li>
+<li>Added invariants to the Patient element to ensure behavior consistent with an extensible binding:<ul>
+<li>inv-pat-1, for Individual Gender Identity terminology (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
+<li>inv-pat-2, for Individual Pronouns terminology (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>).</li></ul></li>
 <li>Changed RelatedPerson.extension in <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:<ul>
   <li>to add Individual Gender Identity extension (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
   <li>to add Individual Pronouns extension (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
-</ul>
-</li> 
+</ul></li>
+<li>Added invariants to the RelatedPerson element to ensure behavior consistent with an extensible binding:<ul>
+<li>inv-relper-0, for Individual Gender Identity terminology (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
+<li>inv-relper-1, for Individual Pronouns terminology (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>).</li></ul></li> 
 <li>Changed Practitioner.extension in <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:<ul>
   <li>to add Individual Gender Identity extension (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
-  <li>to add Individual Pronouns extension (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
-</ul>
-<li>Added Australian Individual Gender Identity terminology constraint (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>) and Australian Individual Pronouns terminology constraint (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>) in AU Base RelatedPerson and AU Base Practitioner.</li>
-</li>
+  <li>to add Individual Pronouns extension (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li></ul></li>
+<li>Added invariants to the Practitioner element to ensure behavior consistent with an extensible binding:<ul>
+<li>inv-pra-2, for Individual Gender Identity terminology (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
+<li>inv-pra-3, for Individual Pronouns terminology (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li></ul></li> 
 </ul>
 
 ### Release 4.1.0
