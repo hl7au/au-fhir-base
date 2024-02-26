@@ -62,7 +62,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Added invariants to the Practitioner element to ensure behavior consistent with an extensible binding:<ul>
 <li>inv-pra-2, for Individual Gender Identity terminology (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
 <li>inv-pra-3, for Individual Pronouns terminology (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li></ul></li> 
-</ul>
+</li></ul>
 
 ### Release 4.1.0
 - Publication date: 2023-02-22
