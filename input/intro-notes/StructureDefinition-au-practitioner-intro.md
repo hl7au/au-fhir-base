@@ -13,3 +13,4 @@
   - *Prefer not to answer* may be represented by sending the code "asked-declined"
   - *Not stated or inadequately described* may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
+- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
