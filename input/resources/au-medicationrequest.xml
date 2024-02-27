@@ -115,11 +115,8 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1"/>
       </binding>
     </element>
-    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding">
-      <path value="MedicationRequest.medication[x].coding"/>
-    </element>
     <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding.extension">
-      <path value="MedicationRequest.medication[x].medicationCodeableConcept.extension"/>
+      <path value="MedicationRequest.medication[x].medicationCodeableConcept.coding.extension"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -129,7 +126,7 @@
       </slicing>
     </element>
     <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding.extension:medicationClass">
-      <path value="MedicationRequest.medication[x].medicationCodeableConcept.extension"/>
+      <path value="MedicationRequest.medication[x].medicationCodeableConcept.coding.extension"/>
       <sliceName value="medicationClass"/>
       <max value="1"/>
       <type>

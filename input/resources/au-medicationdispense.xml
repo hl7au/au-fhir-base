@@ -125,15 +125,8 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1"/>
       </binding>
     </element>
-    <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding">
-      <path value="MedicationDispense.medication[x].coding"/>
-    </element>
-   <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding">
-      <path value="MedicationDispense.medication[x].coding"/>
-      <short value="Medication Codes"/>
-    </element>
     <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding.extension">
-      <path value="MedicationDispense.medication[x].medicationCodeableConcept.extension"/>
+      <path value="MedicationDispense.medication[x].medicationCodeableConcept.coding.extension"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -143,7 +136,7 @@
       </slicing>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCodeableConcept.coding.extension:medicationClass">
-      <path value="MedicationDispense.medication[x].medicationCodeableConcept.extension"/>
+      <path value="MedicationDispense.medication[x].medicationCodeableConcept.coding.extension"/>
       <sliceName value="medicationClass"/>
       <max value="1"/>
       <type>
@@ -154,9 +147,7 @@
     <element id="MedicationDispense.medication[x]:medicationCodeableConcept.text">
       <path value="MedicationDispense.medication[x].text"/>
       <short value="Medication primary text"/>
-      <definition
-        value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."
-      />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&#xD;&#xA;&#xD;&#xA;This may be a brand or generic name as suitable for the intent of the entry."/>
     </element>
     <element id="MedicationDispense.medication[x]:medicationReference">
       <path value="MedicationDispense.medication[x]"/>
