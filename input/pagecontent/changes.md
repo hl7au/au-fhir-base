@@ -49,6 +49,7 @@ To help implementers, only the more significant changes are listed here.
 </ul>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
 <li>Added new invariant to Patient root element for genderIdentity extension terminology (<a href="https://github.com/hl7au/au-fhir-base/issues/815">au-fhir-base #815</a>).</li></li> 
+<li>Changed Immunization.extension in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to add <a href="StructureDefinition-vaccine-serial-number.html">Vaccine Vial Serial Number</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/815">au-fhir-base #825</a>)</li>.
 </ul>
 
 ### Release 4.1.0

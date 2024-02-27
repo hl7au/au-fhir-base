@@ -19,6 +19,24 @@
       <path value="Immunization" />
       <short value="An immunisation statement in an Australian healthcare context" />
     </element>
+    <element id="Immunization.extension">
+      <path value="Immunization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.extension:vaccineSerialNumber">
+      <path value="Immunization.extension" />
+      <sliceName value="vaccineSerialNumber" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number" />
+      </type>
+    </element>
     <element id="Immunization.statusReason">
       <path value="Immunization.statusReason" />
       <binding>
