@@ -4,7 +4,8 @@
     <!--   This purpose of this example is to demonstrate the use of sex and gender elements:
     - Gender Harmony Gender Identity (Individual Gender Identity extension)
     - Gender Harmony Pronouns (Individual Pronouns extension)
-    -->
+    - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
+     -->
 	<meta>
 		<profile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
 	</meta>
@@ -30,7 +31,30 @@
             </valueCodeableConcept>
         </extension>
     </extension> 
-	<identifier>
+<extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/administrative-gender"/>
+                    <code value="male"/>
+                    <display value="Male"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="type">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org.au/CodeSystem/au-recorded-sex-or-gender-type"/>
+                    <code value="au-ahpra"/>
+                    <display value="Australian Health Practitioner Regulation Agency"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="acquisitionDate">
+            <valueDateTime value="2020-05-11"/>
+        </extension>
+    </extension>
+    <identifier>
 		<type>
 			<coding>
 				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
