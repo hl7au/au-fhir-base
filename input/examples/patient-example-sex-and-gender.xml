@@ -4,7 +4,7 @@
     - Gender Harmony Gender Identity (Individual Gender Identity extension)
     - Gender Harmony Pronouns (Individual Pronouns extension)
     - and demonstrate the R5 pre-adopted extensions for sex and gender:
-    - Person Recorded Sex Or Gender   
+    - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
     This example is taken and adapted from the R5 Transgender Person Example  -->
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
@@ -29,8 +29,15 @@
                     <display value="she/her/her/hers/herself"/>
                 </coding>
             </valueCodeableConcept>
+        <extension url="period">
+            <valuePeriod>
+                <start value="2001-05-06"/>
+            </valuePeriod>
         </extension>
-    </extension>    
+        <extension url="comment">
+            <valueString value="Patient transitioned from male to female in 2001."/>
+        </extension>
+    </extension> 
     <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
         <extension url="value">
             <valueCodeableConcept>

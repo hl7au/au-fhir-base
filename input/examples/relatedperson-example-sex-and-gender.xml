@@ -9,16 +9,45 @@
 	<profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
   </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+      <extension url="value">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="446151000124109"/>
+            <display value="Identifies as male gender"/>
+          </coding>
+          <text value="Male"/>
+      </valueCodeableConcept>
+     </extension>
+     <extension url="period">
+        <valuePeriod>
+          <start value="2018-01-01"/>
+          <end value="2021-12-23"/>
+        </valuePeriod>
+      </extension>
+      <extension url="comment">
+        <valueString value="Identified as male during this period. Began exploring gender identity more deeply towards the end of this period."/>
+      </extension>     
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
         <extension url="value">
             <valueCodeableConcept>
                 <coding>
                     <system value="http://snomed.info/sct"/>
                     <code value="33791000087105"/>
-                    <display value="Non-binary gender identity"/>
+                    <display value="Identifies as nonbinary gender"/>
                 </coding>
-                <code value="Non-binary"/>
+                <text value="Non-binary"/>
             </valueCodeableConcept>
-        </extension>    
+        </extension>
+        <extension url="period">
+          <valuePeriod>
+            <start value="2022-05-06"/>
+          </valuePeriod>
+        </extension>
+        <extension url="comment">
+          <valueString value="Currently identifies as non-binary and uses 'they/them' pronouns. Open to exploring further gender fluidity."/>
+        </extension>     
     </extension>
     <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
         <extension url="value">

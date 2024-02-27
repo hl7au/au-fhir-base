@@ -14,9 +14,21 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 - [indigenous-status](SearchParameter-indigenous-status.html)
 - [gender-identity](SearchParameter-gender-identity.html)
 
+
+### Person
+
+- [gender-identity](SearchParameter-gender-identity.html)
+
+
 ### Practitioner
 
 - [gender-identity](SearchParameter-gender-identity.html)
+
+
+### PractitionerRole
+
+- [gender-identity](SearchParameter-gender-identity.html)
+
 
 ### RelatedPerson
 
