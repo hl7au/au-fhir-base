@@ -82,6 +82,62 @@
       <path value="Observation.code" />
       <short value="Pathology test or test group" />
       <binding>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+					<extension url="purpose">
+						<valueCode value="preferred"/>
+					</extension>
+					<extension url="valueSet">
+						<valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3"/>
+					</extension>
+					<extension url="documentation">
+						<valueMarkdown value="Use [RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3) when reporting chemical pathology results in Australia."/>
+					</extension>
+          <extension url="shortDoco">
+						<valueString value="Use RCPA - SPIA Chemical Pathology Terminology Reference Set when reporting chemical pathology results in Australia"/>
+					</extension>
+				</extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+					<extension url="purpose">
+						<valueCode value="preferred"/>
+					</extension>
+					<extension url="valueSet">
+						<valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3"/>
+					</extension>
+					<extension url="documentation">
+						<valueMarkdown value="Use [RCPA - SPIA Haematology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3) when reporting haematology pathology results in Australia."/>
+					</extension>
+          <extension url="shortDoco">
+						<valueString value="Use RCPA - SPIA Haematology Terminology Reference Set when reporting haematology pathology results in Australia"/>
+					</extension>
+				</extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+					<extension url="purpose">
+						<valueCode value="preferred"/>
+					</extension>
+					<extension url="valueSet">
+						<valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3"/>
+					</extension>
+					<extension url="documentation">
+						<valueMarkdown value="Use [RCPA - SPIA Immunopathology  Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3) when reporting immunopathology  pathology results in Australia."/>
+					</extension>
+          <extension url="shortDoco">
+						<valueString value="Use RCPA - SPIA Immunopathology  Pathology Terminology Reference Set when reporting immunopathology pathology results in Australia"/>
+					</extension>
+				</extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+					<extension url="purpose">
+						<valueCode value="preferred"/>
+					</extension>
+					<extension url="valueSet">
+						<valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3"/>
+					</extension>
+					<extension url="documentation">
+						<valueMarkdown value="Use [RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3) when reporting microbiology pathology results in Australia."/>
+					</extension>
+          <extension url="shortDoco">
+						<valueString value="Use RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set when reporting microbiology pathology results in Australia"/>
+					</extension>
+				</extension>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
       </binding>
