@@ -40,6 +40,17 @@
       <path value="Organization.type" />
       <comment value="When selecting a code for Organization type, if a system is unable to provide a code from the preferred value set [Healthcare Organisation Role Type](https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1) because the implementation context is not restricted to healthcare practitioner providers then it is recommended to select from the wider set available in SNOMED CT. If a suitable code from SNOMED CT is not available, a code from the code system [Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 2.0)](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/anzsic-2006-20130626) may be used."/>
       <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+					<extension url="purpose">
+						<valueCode value="preferred"/>
+					</extension>
+					<extension url="valueSet">
+						<valueCanonical value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
+					</extension>
+					<extension url="documentation">
+						<valueMarkdown value="For when representing an organisation code according to [Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 2.0)](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/anzsic-2006-20130626) formats."/>
+					</extension>
+				</extension>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1" />
       </binding>
