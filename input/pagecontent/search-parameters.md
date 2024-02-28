@@ -12,4 +12,24 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 ### Patient
 
 - [indigenous-status](SearchParameter-indigenous-status.html)
-- [patient-gender-identity](SearchParameter-patient-gender-identity.html)
+- [gender-identity](SearchParameter-gender-identity.html)
+
+
+### Person
+
+- [gender-identity](SearchParameter-gender-identity.html)
+
+
+### Practitioner
+
+- [gender-identity](SearchParameter-gender-identity.html)
+
+
+### PractitionerRole
+
+- [gender-identity](SearchParameter-gender-identity.html)
+
+
+### RelatedPerson
+
+- [gender-identity](SearchParameter-gender-identity.html)

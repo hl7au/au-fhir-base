@@ -3,8 +3,6 @@ This page lists all ValueSets and CodeSystems defined as part of this specificat
 
 As well as these included definitions this specification typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
-<p class="stu-note">We have introduced some terminology to support extensions around sex and gender. These extensions are currently under discussion with HL7 Australia and/or HL7 International. The terminology resources introduced are: Personal Pronouns value set and Recorded Sex Or Gender Type value set. These extensions, and the associated terminology, may be removed or changed prior to publication of the next version of this guide.</p>
-
 ### Value Sets
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. The following value sets are unique to this guide and not listed in the base FHIR specification.
@@ -23,6 +21,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 - [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 - [Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1)
 - [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1)
+- [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1)
 - [Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)
 - [Australian Veteran Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1)
 - [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
