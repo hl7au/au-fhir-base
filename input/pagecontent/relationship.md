@@ -6,7 +6,7 @@ Australian realm IGs and implementers are expected to use an AU Base defined con
 In summary, AU Base:
 - defines Australian realm concepts (e.g. Medicare card number) as an additional set of options to what is available in the FHIR standard including extensions and terminology.
 - provides ‘Base’ profiles to inform a reader of which added concepts are considered relevant to a particular resource type. 
-- does not apply cardinality constraints or required binding strengths that enforce conformance to those concepts except in rare circumstances. Must support flags are not utilised in AU base profiles.
+- does not apply cardinality constraints or required binding strengths that enforce conformance to those concepts except in rare circumstances. Must support flags are not utilised in AU Base profiles.
 - does not recommend or mandate any particular resource, element, or interactions.
 
 The figure below shows the layering of HL7 AU FHIR standards: 
