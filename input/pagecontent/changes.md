@@ -49,6 +49,7 @@ To help implementers, only the more significant changes are listed here.
 </ul>
 <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
 <li>Added new invariant to Patient root element for genderIdentity extension terminology (<a href="https://github.com/hl7au/au-fhir-base/issues/815">au-fhir-base #815</a>).</li></li> 
+<li>Changed the cardinality in the slice definition in <a href="StructureDefinition-identifier-routability.html">Identifier Routability</a> extension.</li>
 </ul>
 
 ### Release 4.1.0
