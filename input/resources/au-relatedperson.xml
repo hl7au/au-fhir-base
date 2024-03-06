@@ -18,6 +18,60 @@
     <element id="RelatedPerson">
       <path value="RelatedPerson" />
       <short value="A person related to a patient in an Australian healthcare context" />
+      <constraint>
+        <key value="inv-relper-0" />
+        <severity value="warning" />
+        <human value="Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').value.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </constraint>
+      <constraint>
+        <key value="inv-relper-1" />
+        <severity value="warning" />
+        <human value="Individual pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').value.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+        </constraint>
+    </element>
+    <element id="RelatedPerson.extension">
+      <path value="RelatedPerson.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.extension:genderIdentity">
+      <path value="RelatedPerson.extension" />
+      <sliceName value="genderIdentity" />
+      <short value="Gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply"/>
+      <comment value="Individual Gender identity [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
+      </type>
+      <condition value="inv-relper-0"/>
+    </element> 
+    <element id="RelatedPerson.extension:individualPronouns">
+      <path value="RelatedPerson.extension"/>
+      <sliceName value="individualPronouns"/>
+      <short value="Pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply"/>
+      <comment value="Individual Pronouns [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
+      </type>
+      <condition value="inv-relper-1"/>
+    </element>
+    <element id="RelatedPerson.extension:recordedSexOrGender">
+      <path value="RelatedPerson.extension"/>
+      <sliceName value="recordedSexOrGender"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+      </type>
     </element>
     <element id="RelatedPerson.identifier">
       <path value="RelatedPerson.identifier" />

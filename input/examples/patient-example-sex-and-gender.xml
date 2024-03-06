@@ -1,20 +1,23 @@
 <Patient xmlns="http://hl7.org/fhir">
     <id value="example-sex-and-gender"/>
-    <!--   This purpose of this example is to demonstrate the R5 pre-adopted extensions for sex and gender:
-    - Individual Pronouns
-    - Person Recorded Sex Or Gender   
+    <!--   This purpose of this example is to demonstrate the use of sex and gender elements:
+    - Gender Harmony Gender Identity (Individual Gender Identity extension)
+    - Gender Harmony Pronouns (Individual Pronouns extension)
+    - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
     This example is taken and adapted from the R5 Transgender Person Example  -->
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
     </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="446141000124107"/>
-                <display value="Identifies as female gender (finding)"/>
-            </coding>
-        </valueCodeableConcept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="446141000124107"/>
+                    <display value="Identifies as female gender (finding)"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>    
     </extension>
     <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
         <extension url="value">
@@ -25,7 +28,7 @@
                     <display value="she/her/her/hers/herself"/>
                 </coding>
             </valueCodeableConcept>
-        </extension>
+        </extension>    
         <extension url="period">
             <valuePeriod>
                 <start value="2001-05-06"/>
@@ -34,7 +37,7 @@
         <extension url="comment">
             <valueString value="Patient transitioned from male to female in 2001."/>
         </extension>
-    </extension>
+    </extension> 
     <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
         <extension url="value">
             <valueCodeableConcept>

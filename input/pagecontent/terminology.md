@@ -21,6 +21,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 - [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 - [Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1)
 - [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1)
+- [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1)
 - [Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)
 - [Australian Veteran Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1)
 - [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1)
