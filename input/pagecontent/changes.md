@@ -78,6 +78,7 @@ To help implementers, only the more significant changes are listed here.
     </ul>
   </li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
+  <li>Changed the cardinality in the slice definition in <a href="StructureDefinition-identifier-routability.html">Identifier Routability</a> extension.</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
 </ul>
 
