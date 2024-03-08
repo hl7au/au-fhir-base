@@ -3,6 +3,8 @@ This page lists all ValueSets and CodeSystems defined as part of this specificat
 
 As well as these included definitions this specification typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
+<p class="stu-note">The <a href="ValueSet-recorded-sex-or-gender-type.html">Recorded Sex Or Gender Type</a> value set  is included to support the local conversion  of the <a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> extension published in the R5 <a href="http://hl7.org/fhir/extensions/1.0.0">FHIR Extensions Pack</a>. This value set will be removed once the local <a href="StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> conversion is removed.</p>
+
 ### Value Sets
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. The following value sets are unique to this guide and not listed in the base FHIR specification.
