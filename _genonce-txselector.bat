@@ -5,7 +5,7 @@ SET input_cache_path=%CD%\input-cache
 
 :isonline
 ECHO We're online -tx https://tx.dev.hl7.org.au/fhir
-SET txoption= -tx http://localhost:8080
+SET txoption= -tx https://txreg.azurewebsites.net/txdev
 
 :igpublish
 
