@@ -14,8 +14,11 @@
   - _Prefer not to answer_ may be represented by sending the code "asked-declined"
   - _Not stated or inadequately described_ may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
-  - This profile supports the practitioner's sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](StructureDefinition-individual-recordedSexOrGender.html) extension, as per the guidance in the following table.
-    <table border="1">
+- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
+
+**Person Recorded Sex Or Gender implementation guidance**
+This profile supports the practitioner's sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](StructureDefinition-individual-recordedSexOrGender.html) extension, as per the guidance in the following table.
+  <table border="1">
     <thead>
     <tr>
     <th>Sex and gender information to represent</th>
@@ -44,5 +47,4 @@
     <td></td>
     </tr>
     </tbody>
-    </table>
-- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
+  </table>
