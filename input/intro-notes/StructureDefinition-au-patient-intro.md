@@ -16,7 +16,7 @@
 - See each Identifier profile page for guidance related to that identifier type.
 
 **Person Recorded Sex Or Gender implementation guidance**
-  This profile supports patient sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](StructureDefinition-individual-recordedSexOrGender.html) extension, as per the guidance in the following table.
+  This profile supports patient sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](https://hl7.org/fhir/extensions/5.1.0-snapshot1/StructureDefinition-individual-recordedSexOrGender.html) extension, as per the guidance in the following table.
   <table border="1">
     <thead>
     <tr>

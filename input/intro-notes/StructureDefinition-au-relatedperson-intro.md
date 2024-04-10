@@ -13,7 +13,7 @@
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 
 **Person Recorded Sex Or Gender implementation guidance**
-This profile supports patient sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](StructureDefinition-individual-recordedSexOrGender.html) extension, as per the guidance in the following table.
+This profile supports patient sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](https://hl7.org/fhir/extensions/5.1.0-snapshot1/StructureDefinition-individual-recordedSexOrGender.html) extension, as per the guidance in the following table.
   <table border="1">
     <thead>
     <tr>
