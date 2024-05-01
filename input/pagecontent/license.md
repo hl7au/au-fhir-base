@@ -10,8 +10,11 @@ A number of key considerations are included here to support HL7 Australia FHIR I
 
 HL7 Australia provides HL7 Australia Content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia Content, to the extent permitted by law, HL7 Australia:
 (a) makes no warranties, express or implied:
+
   (i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; 
+  
   or
+
   (ii) that HL7 Australia Content is suitable, complete or applicable for any particularpurpose or use contemplated by the User, and
 
 (b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
@@ -27,9 +30,7 @@ HL7 Australia licenses some HL7 Australia Content under Creative Commons license
 
 Copyright © 2012+ HL7 Australia
 
-Most trademarks used in conjunction with HL7® products, services and activities are
-registered and/or owned by HL7 International, rather than by HL7 Australia, and their use
-is subject to the associated HL7 International IP policies and licensing terms.
+Most trademarks used in conjunction with HL7® products, services and activities are registered and/or owned by HL7 International, rather than by HL7 Australia, and their use is subject to the associated HL7 International IP policies and licensing terms.
 
 HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR logo are trademarks owned by Health Level Seven International, registered with the United States Patent and Trademark Office.
 
