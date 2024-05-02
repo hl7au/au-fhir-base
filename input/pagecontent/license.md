@@ -9,15 +9,16 @@ A number of key considerations are included here to support HL7 Australia FHIR I
 ###  Disclaimer and Warning of Use
 
 HL7 Australia provides HL7 Australia Content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia Content, to the extent permitted by law, HL7 Australia:
-(a) makes no warranties, express or implied:
 
-  (i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; 
+&nbsp;&nbsp;(a) makes no warranties, express or implied:
+
+&nbsp;&nbsp;&nbsp;&nbsp;(i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; 
   
-  or
+&nbsp;&nbsp;&nbsp;&nbsp;or
 
-  (ii) that HL7 Australia Content is suitable, complete or applicable for any particularpurpose or use contemplated by the User, and
+&nbsp;&nbsp;&nbsp;&nbsp;(ii) that HL7 Australia Content is suitable, complete or applicable for any particularpurpose or use contemplated by the User, and
 
-(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
+&nbsp;&nbsp;(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
 
 By accessing or using HL7 Australia Content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia Content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia Content.
 
