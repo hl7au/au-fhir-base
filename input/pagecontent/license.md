@@ -1,6 +1,6 @@
 
 ### HL7 Australia Intellectual Propery Policy
-HL7 Austalia has an overarching intellectual property policy in place. The HL7 Australia - Intellectual Property Policy document defines the HL7 Australia organisation position on many aspects related to the copyright, licensing, liabilities and usage of HL7 Australia FHIR Implementation Guides. This also includes how the HL7 Australia FHIR Implementation Guides referencing other underlying material from HL7 International and 3rd parties shall be considered when using HL7 Australia published material. This policy document is maintained with the current official position of HL7 Autralia with respect to these considerations.
+HL7 Austalia has an overarching intellectual property policy in place. The [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document defines the HL7 Australia organisation position on many aspects related to the copyright, licensing, liabilities and usage of HL7 Australia FHIR Implementation Guides. This also includes how the HL7 Australia FHIR Implementation Guides referencing other underlying material from HL7 International and 3rd parties shall be considered when using HL7 Australia published material. This policy document is maintained with the current official position of HL7 Autralia with respect to these considerations.
 
 HL7 FHIR® [Licensing and Legal Terms](https://hl7.org/fhir/license.html) should also be referenced as the underlying standards published terms on which HL7 Australia FHIR Implementation Guides depend.
 
@@ -12,7 +12,7 @@ HL7 Australia provides HL7 Australia Content for informational and reference pur
 
 * (a) makes no warranties, express or implied:
   * (i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
-  * (ii) that HL7 Australia Content is suitable, complete or applicable for any particularpurpose or use contemplated by the User, and
+  * (ii) that HL7 Australia Content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
 * (b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
 
 By accessing or using HL7 Australia Content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia Content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia Content.
@@ -40,7 +40,7 @@ HL7 Australia licenses use of some HL7 Australia Content under Creative Commons 
 
 Copyright © 2012+ HL7 Australia
 
-Intellectual propery rights and trademarks are defined in full in the HL7 Australia Intellectual Property Policy document. 
+Intellectual propery rights and trademarks are defined in full in the [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document. 
 
 
 ### Third-party artifacts and terminologies
