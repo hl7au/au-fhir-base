@@ -8,7 +8,6 @@ Context: Patient.name, RelatedPerson.name, Person.name
 * value[x] from IndividualNameContextValueSet
 
 
-
 Instance: example-name-context
 InstanceOf: Patient
 Description: "Name context extension example"
