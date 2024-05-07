@@ -5,7 +5,7 @@ Description: "Context of use applied to a name."
 Context: Patient.name, RelatedPerson.name, Person.name
 
 * value[x] only CodeableConcept
-* value[x] from IndividualNameContextValueSet
+* value[x] from NameContextValueSet
 
 
 Instance: example-name-context
