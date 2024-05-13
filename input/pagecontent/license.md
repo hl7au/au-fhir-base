@@ -1,6 +1,6 @@
 
-### HL7 Australia Intellectual Propery Policy
-HL7 Austalia has an overarching intellectual property policy in place. The [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document defines the HL7 Australia organisation position on many aspects related to the copyright, licensing, liabilities and usage of HL7 Australia FHIR Implementation Guides. This also includes how the HL7 Australia FHIR Implementation Guides referencing other underlying material from HL7 International and 3rd parties shall be considered when using HL7 Australia published material. This policy document is maintained with the current official position of HL7 Autralia with respect to these considerations.
+### HL7 Australia Intellectual Property Policy
+HL7 Australia has an overarching intellectual property policy in place. The [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document defines the HL7 Australia organisation position on many aspects related to the copyright, licensing, liabilities and usage of HL7 Australia FHIR Implementation Guides. This also includes how the HL7 Australia FHIR Implementation Guides referencing other underlying material from HL7 International and 3rd parties shall be considered when using HL7 Australia published material. This policy document is maintained with the current official position of HL7 Australia with respect to these considerations.
 
 HL7 FHIR® [Licensing and Legal Terms](https://hl7.org/fhir/license.html) should also be referenced as the underlying standards published terms on which HL7 Australia FHIR Implementation Guides depend.
 
@@ -21,7 +21,7 @@ By accessing or using HL7 Australia Content, Users agree to indemnify and hold h
 ### FHIR Licensing and Trademarks
 
 #### HL7 International Licensing
-HL7 Protocol Specifications Copyright © 2011+ HL7.
+HL7 International Protocol Specifications Copyright © 2011+ HL7.
 
 This specification (including downloadable content) is based on HL7 Protocol Specifications produced by HL7 International under the terms of [HL7® Governance and Operations Manual](https://www.hl7.org/documentcenter/public/membership/HL7_Governance_and_Operations_Manual.pdf) relating to Intellectual Property (Section 09, at the time this specification was published), specifically its copyright, trademark and patent provisions.
 
@@ -40,16 +40,16 @@ HL7 Australia licenses use of some HL7 Australia Content under Creative Commons 
 
 Copyright © 2012+ HL7 Australia
 
-Intellectual propery rights and trademarks are defined in full in the [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document. 
+Intellectual property rights and trademarks are defined in full in the [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document. 
 
 
-### Third-party artifacts and terminologies
+### Third-party artefacts and terminologies
 
 HL7 Australia FHIR Implementation Guides contain and reference intellectual property owned by third parties ("Third Party IP"). Acceptance of these License Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licenses or authorisations to utilise Third Party IP in connection with the specification or otherwise.
 
-Following is a non-exhaustive list of third-party artifacts and terminologies that may require a separate license:
+Following is a non-exhaustive list of third-party artefacts and terminologies that may require a separate license:
 
-| Artefact / Terminoloy | Statement |
+| Artefact / Terminology | Statement |
 | SNOMED CT | International Healthcare Terminology Standards Developing Organization ([IHTSDO](http://snomed.org)). This specification includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO) and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement |
 | DICOM | National Electrical Manufacturers Association ([NEMA](http://dicom.nema.org/)).  This specification may reference content from DICOM, which is copyright NEMA, and distributed by agreement between NEMA/DICOM and HL7. Implementer use of DICOM is not covered by this agreement |
 | Logical Observation Identifiers Names & Codes (LOINC) | This material contains content from LOINC ([http://loinc.org](http://loinc.org)). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at [http://loinc.org/license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc. |
