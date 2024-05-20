@@ -1,6 +1,7 @@
 Extension: NameContext
 Id: name-context
 Parent: Extension
+Title: "Name Context"
 Description: "A context of use for a name can be indicated using this extension. 
 This includes an ability to provide a coded concept or text description of suitable use of an associated name.
 The usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate
@@ -14,20 +15,16 @@ Context: Patient.name, RelatedPerson.name, Person.name
 
 Instance: example-name-context
 InstanceOf: Patient
-Description: "Name context extension applied to indicate name is suitable for IHI (Individual Healthcare Identifier) validation."
 Title: "Patient - indicate IHI validation name context"
-* text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'></div>"
+Usage: #example
 * name 
   * extension[name-context].valueCodeableConcept = http://terminology.hl7.org.au/CodeSystem/name-context#ihi-validation "IHI Validation"
 * name.family = "Example"
 * name.given = "Mary"
 * name.text = "Mary Example"
-
 * birthDate = "1971"
 * gender = #female
-* identifier.system = "http://example.org/mrn"
-* identifier.value = "12345679"
+
 
 
 ValueSet: NameContextValueSet
