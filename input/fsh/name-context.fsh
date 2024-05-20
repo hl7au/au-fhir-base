@@ -26,7 +26,6 @@ Usage: #example
 * gender = #female
 
 
-
 ValueSet: NameContextValueSet
 Id: name-context
 Title: "Name Context ValueSet"
