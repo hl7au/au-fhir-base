@@ -26,14 +26,15 @@ Usage: #example
 * gender = #female
 
 
-ValueSet: NameContextValueSet
+ValueSet: NameContext
 Id: name-context
 Title: "Name Context"
 Description: "The Name Context valueset is used to classify suitable uses or purposes of names."
 * ^url = "http://terminology.hl7.org.au/ValueSet/name-context"
 * include codes from system NameContextCodeSystem
 
-CodeSystem: NameContextCodeSystem
+
+CodeSystem: NameContextCodes
 Id: name-context
 Title: "Name Context Codes"
 Description: "The Name Context code system defines concepts describing suitable uses of names. This provides well known concepts that can be used to indicate usage to achieve an associated purpose e.g. identifier validation or (in)appropriate cultural, religious or social usage of names."
