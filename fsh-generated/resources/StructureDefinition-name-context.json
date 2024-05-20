@@ -4,7 +4,7 @@
   "url": "http://hl7.org.au/fhir/StructureDefinition/name-context",
   "name": "NameContext",
   "status": "active",
-  "description": "Context of use applied to a name.",
+  "description": "A context of use for a name can be indicated using this extension. \r\nThis includes an ability to provide a coded concept or text description of suitable use of an associated name.\r\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\r\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -37,7 +37,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "definition": "Context of use applied to a name."
+        "definition": "A context of use for a name can be indicated using this extension. \r\nThis includes an ability to provide a coded concept or text description of suitable use of an associated name.\r\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\r\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname."
       },
       {
         "id": "Extension.extension",
@@ -52,6 +52,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
