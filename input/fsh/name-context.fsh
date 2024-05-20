@@ -10,7 +10,7 @@ Context: Patient.name, RelatedPerson.name, Person.name
 
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from NameContextValueSet
+* value[x] from NameContextValueSet (extensible)
 
 
 Instance: example-name-context
