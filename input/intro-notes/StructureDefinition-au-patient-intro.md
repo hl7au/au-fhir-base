@@ -11,7 +11,7 @@
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the Data Absent Reason code "not-asked"
 - This profile supports indvidual pronouns using the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) and the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) value set supplied as the individual pronoun value.
   - *they/them/their/theirs/themselves* may be represented by sending the LOINC Answer (LA) code LA29520-6
-  - *she/her/her/hers/herself* may be represented by sending the LOINC Answer (LA) code LA29519-8, see example [Patient/xample-sex-and-gender](Patient-example-sex-and-gender.json.html)
+  - *she/her/her/hers/herself* may be represented by sending the LOINC Answer (LA) code LA29519-8, see example [Patient/example-sex-and-gender](Patient-example-sex-and-gender.json.html)
   - *he/him/his/his/himself* may be represented by sending the LOINC Answer (LA) code LA29518-0
   - *Prefer not to answer* may be represented by sending the Data Absent Reason code "asked-declined"
   - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
