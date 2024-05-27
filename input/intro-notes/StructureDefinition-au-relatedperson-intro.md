@@ -10,11 +10,11 @@
   - *Prefer not to answer* may be represented by sending the code "asked-declined"
   - *Not stated or inadequately described* may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
-- This profile supports patient sex and gender information currently in use in various official documents and services using the [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension, as per the guidance in the following table.
+- This profile supports a recorded sex or gender (RSG) value using the using the [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension. RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
 <table border="1">
     <thead>
     <tr>
-    <th>Sex and gender information to represent</th>
+    <th>RSG information to represent</th>
     <th>extension:value</th>
     <th>extension:type</th>
     <th>extension:sourceDocument</th>
@@ -25,7 +25,7 @@
     <tbody>
     <tr>
     <td>Sex and gender information from a document, e.g. Australian passport or driver's license</td>
-    <td>A sex or gender value.</td>
+    <td>The sex or gender value.</td>
     <td>"document"</td>
     <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-type.html">Common AU Recorded Sex or Gender (RSG) Source Document Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "passport".</td>
     <td>The name of the field within the source document where this information is recorded, e.g. "Sex".</td>
@@ -33,7 +33,7 @@
     </tr>
     <tr>
     <td>Sex and gender information in use in services and infrastructure, e.g. HI Services or My Health Record</td>
-    <td>A sex or gender value.</td>
+    <td>The sex or gender value.</td>
     <td>SHALL use an appropriate value from <a href="ValueSet-rsg-type.html">Common AU Recorded Sex or Gender Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "au-hi-service".</td>
     <td></td>
     <td></td>
