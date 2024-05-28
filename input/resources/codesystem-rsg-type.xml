@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="rsg-type" />
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+        <valueInteger value="0"/>
+    </extension>
+    <url value="http://terminology.hl7.org.au/CodeSystem/rsg-type" />
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.3.4.1.4.29"/>
+    </identifier>
+    <name value="AURecordedSexOrGenderType" />
+    <title value="AU Recorded Sex or Gender Type" />
+    <status value="draft" />
+    <experimental value="false"/>
+    <description value="The AU Recorded Sex or Gender Type code system defines concepts that represent the type or category of sex or gender that is recorded." />
+    <caseSensitive value="true" />
+    <hierarchyMeaning value="is-a"/>
+    <valueSet value="http://terminology.hl7.org.au/ValueSet/au-recorded-sex-or-gender-type"/>
+    <compositional value="false" />
+    <versionNeeded value="false" />
+    <content value="complete" /> 
+    <property>
+        <code value="not-selectable"/>
+        <uri value="http://hl7.org/fhir/concept-properties#notSelectable"/>
+        <type value="boolean"/>
+    </property>
+    <concept>
+       <code value="sex-gender"/>
+        <display value="Sex/Gender"/>
+        <definition value="A sex or gender recorded as an interchangeable sex and/or gender value."/>
+    </concept>
+    <concept>
+       <code value="document"/>
+        <display value="Document"/>
+        <definition value="Sex or gender recorded in a document."/>
+    </concept>
+    <concept>
+        <code value="insurance-scheme"/>
+        <display value="Insurance Scheme"/>
+        <definition value="The sex or gender recorded through enrolment in an insurance scheme."/>
+        <property>
+          <code value="not-selectable"/>
+          <valueBoolean value="true"/>
+        </property>
+        <concept>
+            <code value="au-medicare"/>
+            <display value="Australian Medicare"/>
+            <definition value="The sex or gender recorded through enrolment in the Australian Medicare universal healthcare insurance scheme."/>
+        </concept>       
+    </concept>
+    <concept>
+        <code value="registration-and-accreditation-scheme"/>
+        <display value="Registration and accreditation scheme"/>
+        <definition value="The sex or gender recorded through registration in a registration and/or accreditation scheme."/>
+        <property>
+          <code value="not-selectable"/>
+          <valueBoolean value="true"/>
+        </property>
+        <concept>
+            <code value="au-ahpra"/>
+            <display value="Australian Health Practitioner Regulation Agency"/>
+            <definition value="The sex or gender recorded through registration in the Australian Health Practitioner Regulation Agency (AHPRA) registration and accreditation scheme."/>
+        </concept>       
+    </concept>
+    <concept>
+        <code value="digital-health-infrastructure-service"/>
+        <display value="Digital Health Infrastructure Service"/>
+        <definition value="The sex or gender recorded in a digital health infrastructure service."/>
+        <property>
+          <code value="not-selectable"/>
+          <valueBoolean value="true"/>
+        </property>
+        <concept>
+            <code value="au-hi-service"/>
+            <display value="Australian Healthcare Identifiers Service"/>
+            <definition value="The sex or gender recorded in the Australian Healthcare Identifiers (HI) Service."/>
+        </concept>
+        <concept>
+            <code value="au-my-health-record"/>
+            <display value="Australian My Health Record System"/>
+            <definition value="The sex or gender recorded in the Australian My Health Record System."/>
+        </concept>
+        <concept>
+            <code value="au-nhsd"/>
+            <display value="Australian National Health Services Directory"/>
+            <definition value="The sex or gender recorded in the Australian National Health Services Directory (NHSD)."/>
+        </concept>           
+    </concept>
+</CodeSystem>
