@@ -18,7 +18,38 @@
   - *Not stated or inadequately described* may be represented by the Data Absent Reason code "unknown"
   - Where the workflow does not support obtaining a pronoun, it may be represented by sending the Data Absent Reason code "not-asked"
   - Where a preferred pronoun is provided but is not one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative  specific coded value can be supplied.
-- When exchanging concepts of sex, gender or pronouns, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
+- This profile supports a recorded sex or gender (RSG) value using the using the [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension. RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
+  <table border="1">
+    <thead>
+    <tr>
+    <th>RSG information to represent</th>
+    <th>extension:value</th>
+    <th>extension:type</th>
+    <th>extension:sourceDocument</th>
+    <th>extension:sourceField</th>
+    <th>extension:jurisdiction</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Sex and gender information from a document, e.g. Australian passport or driver's license.</td>
+    <td>The sex or gender value.</td>
+    <td>"document"</td>
+    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-type.html">Common AU Recorded Sex or Gender (RSG) Source Document Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "passport".</td>
+    <td>The name of the field within the source document where this information is recorded, e.g. "Sex".</td>
+    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-jurisdiction.html">Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a> value set if any of the codes within the value set can apply to the concept being communicated. If representing an Australian document use "AU" or the applicable state or territory code.</td>
+    </tr>
+    <tr>
+    <td>Sex and gender information in use in services and infrastructure, e.g. HI Services or My Health Record.</td>
+    <td>The sex or gender value.</td>
+    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-type.html">Common AU Recorded Sex or Gender Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "au-hi-service".</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    </tbody>
+  </table>
+- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 - Need for an interpreter service can be represented with the [interpreterRequired extension](http://hl7.org/fhir/R4/extension-patient-interpreterrequired.html) set to "true" 
   - If the language for interpreter service is known, the language is included in `Patient.communication.language` and `Patient.communication.preferred` is set to "true". 
   - If `Patient.communication.preferred` has not been included, or is set to "false", systems should understand this as the language for the interpreter service is not known.
