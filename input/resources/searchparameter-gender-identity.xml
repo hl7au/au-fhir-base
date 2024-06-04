@@ -17,7 +17,7 @@
     <base value="Practitioner"/>
     <base value="PractitionerRole"/>
     <type value="token"/>
-    <expression value= "Patient.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').value | RelatedPerson.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').value | Practitioner.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').value | Person.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').value | PractitionerRole.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').value"/>
+    <expression value= "Patient.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | RelatedPerson.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | Practitioner.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | Person.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | PractitionerRole.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value"/>
     <multipleOr value="true">
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
             <valueCode value="MAY"/>
