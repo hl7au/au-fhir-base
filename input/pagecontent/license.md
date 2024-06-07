@@ -10,7 +10,7 @@ A number of key considerations are included here to support HL7 Australia FHIR I
 
 HL7 Australia provides HL7 Australia Content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia Content, to the extent permitted by law, HL7 Australia:
 
-<br/>&nbsp;&nbsp;(a) makes no warranties, express or implied:
+&nbsp;&nbsp;(a) makes no warranties, express or implied:
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;(i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;(ii) that HL7 Australia Content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
 <br/>&nbsp;&nbsp;(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
