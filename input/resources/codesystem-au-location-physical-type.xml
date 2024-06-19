@@ -22,6 +22,20 @@
 	<compositional value="false" />
 	<versionNeeded value="false" />
 	<content value="complete" />
+	<property> 
+		<code value="status"/> 
+		<uri value="http://hl7.org/fhir/concept-properties#status"/> 
+		<description value="A property that indicates the status of the concept. One of active, experimental,
+		deprecated, retired"/> 
+		<type value="code"/> 
+	</property> 
+	<property> 
+		<code value="deprecationDate"/> 
+		<uri value="http://hl7.org/fhir/concept-properties#deprecationDate"/> 
+		<description value="The date at which a concept was deprecated. Concepts that are deprecated but not
+		inactive can still be used, but their use is discouraged"/> 
+		<type value="dateTime"/> 
+	</property> 
 	<concept>
 		<code value="vi" />
 		<display value="Virtual" />
