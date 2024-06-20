@@ -9,7 +9,6 @@ To help implementers, only the more significant changes are listed here.
 
 #### Changes in this version
 <ul>
-  <li>TBD.</li>
   <li>New profiles:
   <ul>
   <li>None</li>
