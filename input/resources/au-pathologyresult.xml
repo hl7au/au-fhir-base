@@ -82,6 +82,50 @@
       <path value="Observation.code" />
       <short value="Pathology test or test group" />
       <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when reporting chemical pathology results in Australia."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when for reporting haematology pathology results in Australia."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when for reporting immunopathology pathology results in Australia."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when for reporting microbiology pathology results in Australia."/>
+          </extension>
+        </extension>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
       </binding>
