@@ -26,46 +26,33 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3" />
       </binding>
     </element>
-    <element id="Immunization.vaccineCode.coding">
-      <path value="Immunization.vaccineCode.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Immunization.vaccineCode.coding:amtVaccineCode">
-      <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="amtVaccineCode" />
-      <short value="AMT Vaccine" />
-      <max value="1" />
+    <element id="Immunization.vaccineCode">
+      <path value="Immunization.vaccineCode" />
       <binding>
-        <strength value="preferred" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="preferred"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This value set is for use when Australian Medicines Terminology are preferred."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="preferred"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This value set is for use when AIR codes are preferred."/>
+          </extension>
+        </extension>
+        <strength value="example" />
       </binding>
-    </element>
-    <element id="Immunization.vaccineCode.coding:amtVaccineCode.system">
-      <path value="Immunization.vaccineCode.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Immunization.vaccineCode.coding:airVaccineCode">
-      <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="airVaccineCode" />
-      <short value="AIR Vaccine" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1" />
-      </binding>
-    </element>
-    <element id="Immunization.vaccineCode.coding:airVaccineCode.system">
-      <path value="Immunization.vaccineCode.coding.system" />
-      <min value="1" />
-      <fixedUri value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats" />
     </element>
     <element id="Immunization.manufacturer">
       <path value="Immunization.manufacturer" />
