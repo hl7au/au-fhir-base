@@ -116,6 +116,25 @@
         <strength value="example" />
       </binding>
     </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding.extension">
+      <path value="MedicationRequest.medication[x].coding.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding.extension:medicationClass">
+      <path value="MedicationRequest.medication[x].coding.extension"/>
+      <sliceName value="medicationClass"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
+      </type>
+    </element>
     <element id="MedicationRequest.medication[x]:medicationCodeableConcept.text">
       <path value="MedicationRequest.medication[x].text"/>
       <short value="Medication primary text"/>
