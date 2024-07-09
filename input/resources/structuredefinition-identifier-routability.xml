@@ -28,7 +28,7 @@
         <key value="inv-idrout-0" />
         <severity value="error" />
         <human value="preference is required when flag is true" />
-        <expression value="extension('routability-flag').value implies extension('routability-preference').exists()" />
+        <expression value="extension.where(url='routability-flag').value.single()=true implies extension.where(url='routability-preference').exists()"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/identifier-routability" />
       </constraint>
     </element>
