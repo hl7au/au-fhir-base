@@ -94,7 +94,6 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
   <li>Changed Observation.code to add additional bindings for component value sets in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> (<a href="https://jira.hl7.org/browse/FHIR-46080">FHIR-46080</a>).</li>
-  <li>Corrected the invariant inv-idrout-0 FHIRPath expression in <a href="StructureDefinition-identifier-routability.html">Identifier Routability</a> (<a href="https://jira.hl7.org/browse/FHIR-46213">FHIR-46213</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
 </ul>
 
