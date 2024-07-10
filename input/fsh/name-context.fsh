@@ -14,17 +14,34 @@ Context: Patient.name, RelatedPerson.name, Person.name, Practitioner.name
 * value[x] ^short = "Name context"
 
 
-Instance: example-name-context
+Instance: example-patient-name-context
 InstanceOf: Patient
 Title: "Patient - indicate IHI validation name context"
 Usage: #example
-* name 
+* name[0].use = #usual
+* name[0].family = "Chan"
+* name[0].given = "May"
+* name[0].text = "May Chan"
+* name[1] 
   * extension[name-context].valueCodeableConcept = http://terminology.hl7.org.au/CodeSystem/name-context#ihi-validation "IHI Validation"
-* name.family = "Example"
-* name.given = "Mary"
-* name.text = "Mary Example"
-* birthDate = "1971"
+* name[1].use = #official
+* name[1].family = "Chan"
+* name[1].given = "Xiang"
+* name[1].text = "Xiang Chan"
+* birthDate = "1972-03-03"
 * gender = #female
+
+Instance: example-practitioner-name-context
+InstanceOf: Practitioner
+Title: "Practitioner - indicate HPI-I validation name context"
+Usage: #example
+* active = true
+* name 
+  * extension[name-context][0].valueCodeableConcept = http://terminology.hl7.org.au/CodeSystem/name-context#hpii-validation "IHI Validation"
+* name.family = "Mayo"
+* name.given = "Helen"
+* name.text = "Helen Mayo"
+
 
 
 ValueSet: NameContextValueSet
