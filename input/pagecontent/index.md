@@ -1,7 +1,7 @@
 ### Introduction
-This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context.
+This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context.  
 
-The AU Base implementation guide presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification as base profiles that can be further constrained in a separate implementation guide for a particular usage.
+The AU Base implementation guide defines Australian realm concepts (e.g. Medicare card number) as an additional set of options to what is available in the core FHIR standard, including extensions, terminology and identifiers.  It provides base profiles to inform a reader of which added concepts are considered relevant to a particular resource type, and these base profiles may be further constrained in a separate implementation guide for a particular usage.  For this reason, the AU Base implementation guide does not apply cardinality constraints or required binding strengths to added concepts (except in rare circumstances), utilise must support flags or recommend or mandate any particular resource, element or interactions.
 
 This guide alone does not constrain profiles sufficiently to ensure implementation use cases can be met. 
 
@@ -9,6 +9,9 @@ For an implementation guide that has basic constraints to support many uses it i
 The implementable AU Core specification references and uses AU Base profiles, this constrains elements further and defines an expected level of interface interaction support around profiles.
 If an implementation is AU Core conformant this allows a level of core capability to be assumed when using.
 
+### Dependencies
+
+{% include dependency-table.xhtml %}
 
 ### How to Read this Guide
 
@@ -24,25 +27,20 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Search Parameters](search-parameters.html): This set of pages lists the search parameters defined in this guide for use in AU operations.
   - [Terminology](terminology.html): This set of pages lists the value sets and code systems defined in this guide.
 - [Examples](examples.html): This page lists all the examples used in this guide.
-- [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Base FHIR NPM package.
+- Support:
+  - [Downloads](downloads.html): This page provides links to downloadable artefacts including the AU Base FHIR NPM package.
+  - [License and Legal](license.html): This page outlines license and legal considerations relating to FHIR Implementation Guides.
 - [Change Log](changes.html): This page documents the changes across versions of this guide.
 
 
 ### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
+* [Sparked HL7 AU Technical Design Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
+* [HL7 Australia FHIR Working Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+FHIR+Work+Group+Home)
 * Australian FHIR Implementers Community
-* HL7 Australia Working Groups
-* Australian Digital Health Agency
-* CSIRO Australian e-Health Research Centre 
-* Secure Messaging Technical Working Group
 
-FHIR<sup>&reg;&copy;</sup> connectathon events are key to the verification of the guide as being suitable for 
-implementation. This implementation guide will be used as the basis for Australian connectathon events.
-
-FHIR profiles are managed under HL7 Australia work groups and projects managed by the [HL7 Australia FHIR Work Group](https://confluence.hl7.org/display/HAFWG)
-
-Some profiles indicate the responsible work group, or enquires can be directed to the [Work Group Liaison Officer](mailto:wglo@hl7.com.au)
+Primary Editors: Brett Esler, Danielle Tavares-Rixon, Dusica Bojicic.
 
 
 
