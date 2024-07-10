@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="rsg-type" />
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+        <valueInteger value="0"/>
+    </extension>
+    <url value="http://terminology.hl7.org.au/ValueSet/rsg-type" />
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.31"/>
+    </identifier>
+    <name value="CommonAURecordedSexOrGenderType" />
+    <title value="Common AU Recorded Sex or Gender Type" />
+    <status value="draft" />
+    <experimental value="false"/>
+    <description value="The Common AU Recorded Sex or Gender Type value set includes codes that can be used to represent the type or category of sex or gender that is recorded." />
+    <compose>
+       <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="76689-9"/>
+            </concept>
+            <concept>
+                <code value="46098-0"/>
+            </concept>
+            <concept>
+                <code value="LP61312-2"/>
+            </concept>
+        </include>    
+        <include>
+            <system value="http://terminology.hl7.org.au/CodeSystem/rsg-type" />
+        </include>       
+    </compose>
+</ValueSet>

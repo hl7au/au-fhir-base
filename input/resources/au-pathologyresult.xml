@@ -7,7 +7,7 @@
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult" />
   <name value="AUBasePathologyResult" />
   <title value="AU Base Pathology Result" />
-  <status value="draft" />
+  <status value="active" />
   <description value="This profile defines an observation structure to represent a pathology test result issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics. The observation may represent the result of a simple test such as haemoglobin or it may group the set of results produced by a multi-test study or panel such as a full blood count, or urine specimen study.&#xa;&#xa;This profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example [RCPA’s structured pathology reporting of cancer](https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer)); this is not in the scope of this implementation guide at this time." />
   <kind value="resource" />
   <abstract value="false" />
@@ -82,6 +82,50 @@
       <path value="Observation.code" />
       <short value="Pathology test or test group" />
       <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when reporting chemical pathology results in Australia."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when for reporting haematology pathology results in Australia."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when for reporting immunopathology pathology results in Australia."/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="component"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="This component value set (i.e. subset of the element binding) is for use when for reporting microbiology pathology results in Australia."/>
+          </extension>
+        </extension>
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1" />
       </binding>

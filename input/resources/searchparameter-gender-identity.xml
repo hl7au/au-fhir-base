@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="gender-identity" />
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+        <valueInteger value="1"/>
+    </extension>
+    <url value="http://hl7.org.au/fhir/SearchParameter/gender-identity" />
+    <name value="GenderIdentity" />
+    <status value="active" />
+    <description value="This search parameter returns resources with the Individual Gender Identity extension matching the specified code." />
+    <code value="gender-identity"/>
+    <base value="Patient"/>
+    <base value="RelatedPerson"/>
+    <base value="Person"/>
+    <base value="Practitioner"/>
+    <base value="PractitionerRole"/>
+    <type value="token"/>
+    <expression value= "Patient.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | RelatedPerson.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | Practitioner.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | Person.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value | PractitionerRole.extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value"/>
+    <multipleOr value="true">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="MAY"/>
+        </extension>
+    </multipleOr>
+    <multipleAnd value="true">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+            <valueCode value="MAY"/>
+        </extension>
+    </multipleAnd>
+</SearchParameter>
