@@ -27,7 +27,7 @@ Usage: #example
 * gender = #female
 
 
-ValueSet: NameContext
+ValueSet: NameContextValueSet
 Id: name-context
 Title: "Name Context"
 Description: "The Name Context valueset is used to classify suitable uses or purposes of names."
@@ -35,7 +35,7 @@ Description: "The Name Context valueset is used to classify suitable uses or pur
 * include codes from system NameContextCodeSystem
 
 
-CodeSystem: NameContextCodes
+CodeSystem: NameContextCodeSystem
 Id: name-context
 Title: "Name Context Codes"
 Description: "The Name Context code system defines concepts describing usage of names. This provides well known concepts that can be used to indicate usage to achieve an associated purpose e.g. identifier validation or (in)appropriate cultural, religious or social usage of names."
