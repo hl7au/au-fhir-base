@@ -838,6 +838,20 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<resource>
 			<reference>
 				<reference value="ValueSet/rsg-source-document-jurisdiction"/>
@@ -1503,10 +1517,18 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Patient/example-name-context"/>
+				<reference value="Patient/example-patient-name-context"/>
 			</reference>
 			<name value="Patient - indicate IHI validation name context"/>
 			<description value="Shows an IHI validation name context indication"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example-practitioner-name-context"/>
+			</reference>
+			<name value="Practitioner - indicate HPI-I validation name context"/>
+			<description value="Shows an HPI-I validation name context indication"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
 		</resource>
 		<resource>
