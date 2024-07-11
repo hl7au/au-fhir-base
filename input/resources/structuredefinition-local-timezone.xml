@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-local-timezone"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-local-timezone"/>
+  <version value="0.5.0-ci-build"/>
+  <name value="AULocalTimezone"/>
+  <title value="AU Local Timezone"/>
+  <status value="active"/>
+  <description value="This profile defines the minimum expectations for a [Person Recorded Sex or Gender extension](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-individual-recordedSexOrGender.html) when representing Sex Assigned at Birth. This profile identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Extension when conforming to this profile."/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="date"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="dateTime"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="instant"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Meta"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="time"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/timezone"/>
+  <derivation value="constraint"/>
+   <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="IANA Autralian Timezones Code per BCP 175"/>
+      <definition
+                  value="An IANA Australian region timezone code for the timezone offset per [BCP 175](https://www.iana.org/go/rfc6557). The offset is specified as part of a dateTime/instant (or using the tzOffset extension on a date if necessary). The timezone code may also be provided to allow for human display of the location associated with the offset."/>
+      <comment
+               value="These are codes like &quot;America/New_York&quot; or &quot;America/Los_Angeles&quot;. See https://www.iana.org/time-zones for the official source, and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for more information."/>
+      <min value="0"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/timezone"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Australian Timezones (BCP 175)"/>
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-timezone"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
