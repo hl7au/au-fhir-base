@@ -2,17 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "name-context",
   "url": "http://hl7.org.au/fhir/StructureDefinition/name-context",
+  "version": "4.2.2-ci-build",
   "name": "NameContext",
+  "title": "Name Context",
   "status": "active",
-  "description": "A context of use for a name can be indicated using this extension. \r\nThis includes an ability to provide a coded concept or text description of suitable use of an associated name.\r\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\r\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname.",
+  "description": "A suitable context of use for a patient, person, practitioner or related person name can be indicated using this extension. \r\nThis includes an ability to provide a coded concept or text description of a suitable use of the associated name.\r\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\r\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [
@@ -27,6 +22,10 @@
     {
       "expression": "Person.name",
       "type": "element"
+    },
+    {
+      "expression": "Practitioner.name",
+      "type": "element"
     }
   ],
   "type": "Extension",
@@ -37,7 +36,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "definition": "A context of use for a name can be indicated using this extension. \r\nThis includes an ability to provide a coded concept or text description of suitable use of an associated name.\r\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\r\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname."
+        "short": "Name Context",
+        "definition": "A suitable context of use for a patient, person, practitioner or related person name can be indicated using this extension. \r\nThis includes an ability to provide a coded concept or text description of a suitable use of the associated name.\r\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\r\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname."
       },
       {
         "id": "Extension.extension",
@@ -52,6 +52,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "short": "Name context",
         "min": 1,
         "type": [
           {
@@ -59,7 +60,7 @@
           }
         ],
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://terminology.hl7.org.au/ValueSet/name-context"
         }
       }

@@ -1,7 +1,15 @@
 {
   "resourceType": "Patient",
-  "id": "example-name-context",
+  "id": "example-patient-name-context",
   "name": [
+    {
+      "use": "usual",
+      "family": "Chan",
+      "given": [
+        "May"
+      ],
+      "text": "May Chan"
+    },
     {
       "extension": [
         {
@@ -17,23 +25,14 @@
           }
         }
       ],
-      "family": "Example",
+      "use": "official",
+      "family": "Chan",
       "given": [
-        "Mary"
+        "Xiang"
       ],
-      "text": "Mary Example"
+      "text": "Xiang Chan"
     }
   ],
-  "text": {
-    "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
-  },
-  "birthDate": "1971",
-  "gender": "female",
-  "identifier": [
-    {
-      "system": "http://example.org/mrn",
-      "value": "12345679"
-    }
-  ]
+  "birthDate": "1972-03-03",
+  "gender": "female"
 }
