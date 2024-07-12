@@ -8,19 +8,24 @@
     <valueInteger value="0"/>
   </extension>
   <url value="http://terminology.hl7.org.au/CodeSystem/name-context"/>
-  <name value="NameContextCodeSystem"/>
-  <title value="Name Context Codes"/>
-  <status value="active"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.3.4.1.4.31"/>
+  </identifier>
+  <name value="NameContextCodes"/>
+  <title value="Name Context"/>
+  <status value="draft"/>
+  <experimental value="false"/>
   <description value="The Name Context code system defines concepts describing usage of names. This provides well known concepts that can be used to indicate usage to achieve an associated purpose e.g. identifier validation or (in)appropriate cultural, religious or social usage of names."/>
   <content value="complete"/>
   <concept>
     <code value="ihi-validation"/>
     <display value="IHI Validation"/>
-    <definition value="Indicates associated name is for IHI (Individual Healthcare Identifier) Validation"/>
+    <definition value="Indicates associated name is for IHI (Individual Healthcare Identifier) validation."/>
   </concept>
   <concept>
     <code value="hpii-validation"/>
     <display value="HPI-I Validation"/>
-    <definition value="Indicates associated name is for HPI-I (Healthcare Provider Identifier - Individual) Validation"/>
+    <definition value="Indicates associated name is for HPI-I (Healthcare Provider Identifier - Individual) validation."/>
   </concept>
 </CodeSystem>
