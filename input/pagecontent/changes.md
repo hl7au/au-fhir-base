@@ -18,22 +18,25 @@ To help implementers, only the more significant changes are listed here.
   <li>New extensions:
   <ul>
   <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
+  <li><a href="StructureDefinition-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New value sets:
   <ul>
-  <li><a href="ValueSet-rsg-source-document-jurisdiction.html">Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a></li>
-  <li><a href="ValueSet-rsg-source-document-type.html">Common AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
-  <li><a href="ValueSet-rsg-type.html">Common AU Recorded Sex or Gender Type</a></li>
-  <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
-  <li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
+   <li><a href="ValueSet-rsg-source-document-jurisdiction.html">Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a></li>
+   <li><a href="ValueSet-rsg-source-document-type.html">Common AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
+   <li><a href="ValueSet-rsg-type.html">Common AU Recorded Sex or Gender Type</a></li>
+   <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
+   <li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
+   <li><a href="ValueSet-name-context.html">Name Context</a></li>
   </ul>
   </li>
   <li>New code systems:
   <ul>
   <li><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></li>
    <li><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
-  <li><a href="CodeSystem-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
+   <li><a href="CodeSystem-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
+   <li><a href="CodeSystem-name-context.html">Name Context</a></li>
   </ul>
   </li>
   <li>New search parameters:
@@ -78,7 +81,7 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
-      <li>Practitioner.extension changed to:
+      <li>Practitioner.extension added:
         <ul>
           <li>add Individual Gender Identity (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
           <li>add Individual Pronouns (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
