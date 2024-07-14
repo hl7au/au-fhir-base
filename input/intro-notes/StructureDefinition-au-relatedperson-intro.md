@@ -36,14 +36,14 @@
     <td>Sex and gender information from a document, e.g. Australian passport or driver's license.</td>
     <td>The sex or gender value.</td>
     <td>"document"</td>
-    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-type.html">Common AU Recorded Sex or Gender (RSG) Source Document Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "passport".</td>
+    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "passport".</td>
     <td>The name of the field within the source document where this information is recorded, e.g. "Sex".</td>
-    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-jurisdiction.html">Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a> value set if any of the codes within the value set can apply to the concept being communicated. If representing an Australian document use "AU" or the applicable state or territory code.</td>
+    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-jurisdiction.html">AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a> value set if any of the codes within the value set can apply to the concept being communicated. If representing an Australian document use "AU" or the applicable state or territory code.</td>
     </tr>
     <tr>
     <td>Sex and gender information in use in services and infrastructure, e.g. HI Services or My Health Record.</td>
     <td>The sex or gender value.</td>
-    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-type.html">Common AU Recorded Sex or Gender Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "au-hi-service".</td>
+    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "au-hi-service".</td>
     <td></td>
     <td></td>
     <td></td>
