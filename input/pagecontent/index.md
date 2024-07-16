@@ -5,7 +5,7 @@ AU Base defines Australian realm concepts (e.g. Medicare card number) as an addi
 
 This guide alone does not constrain profiles sufficiently to ensure implementation use cases can be met. 
 
-For an implementation guide that has basic constraints to support many uses it is recommended that the AU Core implementation guide is used.  AU Core uses AU Base, where available, as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined.
+AU Core defines a set of conformance requirements that enforce a set of ‘minimum requirements’ on the Australian localised concepts from AU Base through cardinality constraints, Must Support flags, required/extensible binding strengths, and capability statements. AU Core is for use by Australian stakeholders when implementing FHIR to provide a common implementation and should be built on top of when creating additional Australian profiles and implementation guides. Conformance to AU Core may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 
 
 ### Dependencies
@@ -28,7 +28,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](support.html): These pages provide supporting material for implementation of AU Base.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
-  - [License and Legal](license.html): This page outlines license and legal considerations relating to AU Base.
+  - [License and Legal](license.html): This page outlines license and legal requirements relating to AU Base.
 - [Change Log](changes.html): This page documents the changes across versions of this guide.
 
 
