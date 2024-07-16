@@ -18,22 +18,25 @@ To help implementers, only the more significant changes are listed here.
   <li>New extensions:
   <ul>
   <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
+  <li><a href="StructureDefinition-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New value sets:
   <ul>
-  <li><a href="ValueSet-rsg-source-document-jurisdiction.html">Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a></li>
-  <li><a href="ValueSet-rsg-source-document-type.html">Common AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
-  <li><a href="ValueSet-rsg-type.html">Common AU Recorded Sex or Gender Type</a></li>
+  <li><a href="ValueSet-rsg-source-document-jurisdiction.html">AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a></li>
+  <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
+  <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
   <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
   <li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
+  <li><a href="ValueSet-name-context.html">Name Context</a></li>
   </ul>
   </li>
   <li>New code systems:
   <ul>
   <li><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></li>
    <li><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
-  <li><a href="CodeSystem-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
+   <li><a href="CodeSystem-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
+   <li><a href="CodeSystem-name-context.html">Name Context</a></li>
   </ul>
   </li>
   <li>New search parameters:
@@ -55,9 +58,9 @@ To help implementers, only the more significant changes are listed here.
       </li>    
       <li>Added invariant inv-pat-1 to apply Gender Identity Response value set (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
       <li>Added invariant inv-pat-2 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
-      <li>Added invariant inv-pat-3 to RSG.type to bind Common AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-pat-4 to RSG.sourceDocument.type to bind Common AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-pat-5 to RSG.sourceDocument.jurisdiction to bind Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pat-3 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pat-4 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pat-5 to RSG.sourceDocument.jurisdiction to bind AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul> 
   </li>
   <li>Changes to <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
@@ -71,14 +74,14 @@ To help implementers, only the more significant changes are listed here.
       </li>
       <li>Added invariant inv-relper-0 to apply Gender Identity Response value set (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
       <li>Added invariant inv-relper-1 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
-      <li>Added invariant inv-relper-2 to RSG.type to bind Common AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-relper-3 to RSG.sourceDocument.type to bind Common AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-relper-4 to RSG.sourceDocument.jurisdiction to bind Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-relper-2 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-relper-3 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-relper-4 to RSG.sourceDocument.jurisdiction to bind AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
-      <li>Practitioner.extension changed to:
+      <li>Practitioner.extension added:
         <ul>
           <li>add Individual Gender Identity (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
           <li>add Individual Pronouns (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
@@ -87,13 +90,19 @@ To help implementers, only the more significant changes are listed here.
       </li>
       <li>Added invariant inv-pra-2 to apply Gender Identity Response value set (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
       <li>Added invariant inv-pra-3 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
-      <li>Added invariant inv-pra-4 to RSG.type to bind Common AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-pra-5 to RSG.sourceDocument.type to bind Common AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pra-4 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pra-5 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
   <li>Changed Observation.code to add additional bindings for component value sets in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> (<a href="https://jira.hl7.org/browse/FHIR-46080">FHIR-46080</a>).</li>
+  <li>Changed Medication.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medication.html">AU Base Medication</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationAdministration.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationDispense.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationRequest.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationStatement.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
 </ul>
 

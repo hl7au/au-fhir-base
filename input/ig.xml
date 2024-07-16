@@ -840,6 +840,18 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="ValueSet/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="ValueSet/rsg-source-document-jurisdiction"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -859,6 +871,12 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-timezone"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/name-context"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
@@ -1503,6 +1521,22 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Patient/example-patient-name-context"/>
+			</reference>
+			<name value="Patient - indicate IHI validation name context"/>
+			<description value="Shows an IHI validation name context indication"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example-practitioner-name-context"/>
+			</reference>
+			<name value="Practitioner - indicate HPI-I validation name context"/>
+			<description value="Shows an HPI-I validation name context indication"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Medication/DoseBased"/>
 			</reference>
 			<name value="Medication - dose based"/>
@@ -1905,6 +1939,11 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
+				<nameUrl value="generalguidance.html"/>
+				<title value="General Guidance"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
 				<nameUrl value="relationship.html"/>
 				<title value="Relationship with other IGs"/>
 				<generation value="markdown"/>
@@ -1939,6 +1978,11 @@
 			<page>
 				<nameUrl value="examples.html"/>
 				<title value="Examples"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="support.html"/>
+				<title value="Support"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
@@ -2053,6 +2097,10 @@
 		</parameter>
 		<parameter>
 			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/name-context"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
 			<value value="http://terminology.hl7.org.au/ValueSet/dva-entitlement"/>
 		</parameter>
 		<parameter>
@@ -2118,6 +2166,10 @@
 		<parameter>
 			<code value="special-url"/>
 			<value value="http://terminology.hl7.org.au/CodeSystem/medication-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/name-context"/>
 		</parameter>
 		<parameter>
 			<code value="special-url"/>
