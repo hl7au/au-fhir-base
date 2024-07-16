@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="name-context"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/name-context"/>
+  <name value="NameContext"/>
+  <title value="Name Context"/>
+  <status value="draft"/>
+  <description value="This extension applies to the [HumanName](http://hl7.org/fhir/R4/datatypes.html#HumanName) data type, in the context of Patient, Person, Practitioner or RelatedPerson resources and is used to indicate a suitable use of the associated name.&#xA;The usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate use when referring to an individual e.g. deceased Aboriginal name, transgender deadname."/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Patient.name"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="RelatedPerson.name"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Person.name"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Practitioner.name"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Name Context"/>
+      <definition value="A suitable context of use for a patient, person, practitioner or related person name can be indicated using this extension. &#xA;This includes an ability to provide a coded concept or text description of a suitable use of the associated name.&#xA;The usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate&#xA;use when referring to an individual e.g. deceased Aboriginal name, transgender deadname."/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/name-context"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <short value="Name context"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/name-context"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
