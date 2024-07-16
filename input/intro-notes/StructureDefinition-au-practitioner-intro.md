@@ -55,3 +55,4 @@
     </tbody>
   </table>
 - When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
+
