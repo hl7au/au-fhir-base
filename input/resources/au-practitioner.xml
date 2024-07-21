@@ -49,8 +49,8 @@
       <constraint>
         <key value="inv-pra-6" />
         <severity value="warning" />
-        <human value="Recorded sex or gender jurisdiction shall be a member of the Jurisdiction - AU Extended value set if any codes within that value set can apply" />
-        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"/>
+        <human value="Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/au-jurisdiction-extended'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
     </element>
@@ -89,8 +89,8 @@
     <element id="Practitioner.extension:recordedSexOrGender">
       <path value="Practitioner.extension"/>
       <sliceName value="recordedSexOrGender"/>
-      <short value="Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply. Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply. Recorded sex or gender jurisdiction shall be a member of the Jurisdiction - AU Extended value set if any codes within that value set can apply"/>
-      <comment value="Person Recorded Sex Or Gender type [AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender source document [AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender jurisdiction [Jurisdiction - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <short value="Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply. Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply. Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply"/>
+      <comment value="Person Recorded Sex Or Gender type [AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender source document [AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender jurisdiction [Jurisdiction ValueSet - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
