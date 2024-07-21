@@ -23,7 +23,7 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>New value sets:
   <ul>
-  <li><a href="valueset-au-jurisdiction-extended.html">Jurisdiction - AU Extended</a></li>
+  <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction - AU Extended</a></li>
   <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
   <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
   <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
