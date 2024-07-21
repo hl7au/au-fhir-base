@@ -15,7 +15,7 @@ AU Base will be published yearly. Yearly AU Base updates reflect changes from:
 <br/>
 
 #### Maturing the Baseline
-The approach to develop and mature AU Base is outlined below making reference to the [FHIR Maturity Level (FMM) levels](guidance.html#maturity-levels) is shown in the figure below.
+The approach to develop and mature AU Base is outlined below making reference to the [FHIR Maturity Level (FMM) levels](generalguidance.html#maturity-levels) is shown in the figure below.
 
  <div> 
     <img src="maturing.png" alt="Maturing the AU Base baseline" style="width:90%"/>
