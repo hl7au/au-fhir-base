@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="rsg-source-document-jurisdiction" />
+    <id value="au-jurisdiction-extended" />
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
         <valueInteger value="0"/>
     </extension>
-    <url value="http://terminology.hl7.org.au/ValueSet/rsg-source-document-jurisdiction" />
+    <url value="http://terminology.hl7.org.au/ValueSet/jurisdiction-extended" />
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.33"/>
     </identifier>
-    <name value="AURecordedSexOrGenderSourceDocumentType" />
-    <title value="AU Recorded Sex or Gender (RSG) Source Document Jurisdiction" />
+    <name value="JurisdictionValueSetAUExtended"/>
+    <title value="Jurisdiction ValueSet - AU Extended" />
     <status value="draft" />
     <experimental value="false"/>
-    <description value="The AU Recorded Sex or Gender (RSG) Source Document Jurisdiction value set includes codes that can be used to identify the jurisdiction that issued the source document where the sex or gender value is recorded."/>
+    <description value="Jurisdiction ValueSet extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set."/>
     <compose>
         <include>
-            <system value="urn:iso:std:iso:3166" />
-        </include>       
-        <include>
-            <system value="urn:iso:std:iso:3166:-2" />
+          <system value="http://terminology.hl7.org/ValueSet/jurisdiction"/>
         </include>       
         <include>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1" />
