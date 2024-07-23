@@ -116,8 +116,8 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 |[IdentifierType AU](CodeSystem-au-v2-0203.html)|[hl7VS-identifierType - AU Extended](ValueSet-au-v2-0203-extended.html), [DVA Entitlement](ValueSet-dva-entitlement.html)|AU Base|
 |[Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1)|[Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)|NCTS|
 |[Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1)|[Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1)|NCTS|
-|[ISO3166Part1](https://terminology.hl7.org/CodeSystem-ISO3166Part1.html)|[AU Recorded Sex or Gender (RSG) Source Document Jurisdiction](ValueSet-rsg-source-document-jurisdiction.html)|FHIR|
-|[ISO3166_2](https://terminology.hl7.org/6.0.0/CodeSystem-v3-iso3166-2.html)|[AU Recorded Sex or Gender (RSG) Source Document Jurisdiction](ValueSet-rsg-source-document-jurisdiction.html)|FHIR|
+|[ISO3166Part1](https://terminology.hl7.org/CodeSystem-ISO3166Part1.html)|[Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html)|FHIR|
+|[ISO3166_2](https://terminology.hl7.org/6.0.0/CodeSystem-v3-iso3166-2.html)|[Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html)|FHIR|
 |[LocationType](http://terminology.hl7.org/ValueSet/location-physical-type)|[Location Type (Physical) - AU Extended](ValueSet-au-location-physical-type-extended.html)|FHIR|
 |[Location Type (Physical) AU](CodeSystem-au-location-physical-type.html)|[Location Type (Physical) - AU Extended](ValueSet-au-location-physical-type-extended.html)|AU Base|
 |[Location Type AU](CodeSystem-au-location-type.html)|[ServiceDeliveryLocationRoleType - AU Extended](ValueSet-au-location-physical-type-extended.html)|AU Base|
