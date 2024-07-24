@@ -69,7 +69,7 @@ jobs:
 
     - name: Create directories
       run: |
-        mkdir -p webroot/fhir/base
+        mkdir -p webroot/fhir
 
     - name: Download package-list.json
       run: |
@@ -116,4 +116,4 @@ jobs:
     #     dry-run: true
 
     - name: Upload artifacts to S3
-      run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+      run: aws s3 cp ./webroot/fhir s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
