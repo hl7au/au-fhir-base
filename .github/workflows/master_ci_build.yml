@@ -1,0 +1,77 @@
+name: Au Base IG Profiles ci build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - "**"
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
+    steps:
+    # to save load time can build custom image with dependencies and push to docker hub
+    - name: install aws cli
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip -q awscliv2.zip
+        ./aws/install
+
+    - name: Extract branch name
+      shell: bash
+      run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+      id: extract_branch
+
+    
+    - name: Configure AWS credentials from GitHub OIDC
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+        aws-region: ap-southeast-2
+        
+    - name: Checkout AU base Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/au-fhir-base
+
+    - name: Update Publisher
+      run: |
+        echo "Updating Publisher"
+        ./_updatePublisher.sh -f -y
+
+    # - name: Basic Publisher build
+    #   run: |
+    #     _genonce.sh
+
+    - name: Run AutoIG Publisher build
+      run: java -jar input-cache/publisher.jar -ig ig.ini -auto-ig-build -target https://build.fhir.org.au/ig/hl7au/au-fhir-base/branches/${{ steps.extract_branch.outputs.branch }}/
+
+    - name: List directories
+      run:  |
+        find . -type d
+
+    # - name: Upload Artifact
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: ig-output
+    #     path: output/full-ig.zip
+
+    # - name: 📂 Sync files # ftp is incredibly slow > 30 min sometimes, costing compute and efficency 
+    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    #   with:
+    #     server: ${{secrets.BUILD_SERVER}} # change to be env variable to support multiple environments later on
+    #     username: ${{ secrets.FTP_USER }}
+    #     password: ${{ secrets.FTP_PASSWORD }}
+    #     local-dir: aubase/output/
+    #     server-dir: /ig/hl7au/au-fhir-base/branches/${{ github.ref }}/gopublish/
+    #     dry-run: true
+
+    - name: Upload artifacts to S3
+      run: aws s3 cp output/ s3://hl7au-fhir-ig/base-ci/${{ steps.extract_branch.outputs.branch }}/ --recursive --only-show-errors
