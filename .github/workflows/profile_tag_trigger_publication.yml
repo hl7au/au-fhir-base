@@ -78,7 +78,6 @@ jobs:
         FULL_URL="$URL/package-list.json"
         
         curl --output webroot/fhir/package-list.json --url $FULL_URL
-        curl --output webroot/fhir/base/package-list.json --url $FULL_URL
 
     - name: Download package-feed.xml
       run: |
