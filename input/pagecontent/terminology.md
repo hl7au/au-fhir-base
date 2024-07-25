@@ -38,7 +38,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 |[Concurrent Supply Grounds](https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1)|[Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html)|NCTS|
 |[Contact Purpose](ValueSet-contact-purpose.html)|[AU Base Organisation](StructureDefinition-au-organization.html), [Contact Purpose](StructureDefinition-contact-purpose.html)|AU Base|
 |[Contact Relationship Type](https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3)|[AU Base Patient](StructureDefinition-au-patient.html)|NCTS|
-|[Date Accuracy Indicator](ValueSet/date-accuracy-indicator-1)|[Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html), [Date of Arrival](StructureDefinition-date-of-arrival.html)|NCTS|
+|[Date Accuracy Indicator](https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1)|[Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html), [Date of Arrival](StructureDefinition-date-of-arrival.html)|NCTS|
 |[DVA Entitlement](ValueSet-dva-entitlement.html)|[AU DVA Number](StructureDefinition-au-dvanumber.html)|AU Base|
 |[Encounter Type](https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1)|[AU Base Encounter](StructureDefinition-au-encounter.html)|NCTS|
 |[Evaluation Procedure](https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1)|[AU Base Diagnostic Report](StructureDefinition-au-diagnosticreport.html), [AU Base Diagnostic Request](StructureDefinition-au-diagnosticrequest.html), [AU Base Diagnostic Result](StructureDefinition-au-diagnosticresult.html)|NCTS|
