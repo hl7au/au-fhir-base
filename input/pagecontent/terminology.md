@@ -5,7 +5,7 @@ As well as these included definitions this specification typically references [N
 
 
 <div class="stu-note">
-Expansions of ValueSets in this Implementation Guide may differ from expansions returned from interactions with a terminology server using the latest version of terminology.hl7.org (THO).
+Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using [HL7 Terminology (THO)](http://terminology.hl7.org/6.0.2) version 6.0.0 or higher.
 </div> 
 
 ### Value Sets
