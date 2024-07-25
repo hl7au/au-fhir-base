@@ -23,7 +23,7 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>New value sets:
   <ul>
-  <li><a href="ValueSet-rsg-source-document-jurisdiction.html">AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a></li>
+  <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></li>
   <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
   <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
   <li><a href="ValueSet-name-context.html">Name Context</a></li>
@@ -57,7 +57,7 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-pat-2 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
       <li>Added invariant inv-pat-3 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
       <li>Added invariant inv-pat-4 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-pat-5 to RSG.sourceDocument.jurisdiction to bind AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pat-5 to RSG.sourceDocument.jurisdiction to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul> 
   </li>
   <li>Changes to <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
@@ -73,7 +73,7 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-relper-1 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
       <li>Added invariant inv-relper-2 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
       <li>Added invariant inv-relper-3 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-relper-4 to RSG.sourceDocument.jurisdiction to bind AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-relper-4 to RSG.sourceDocument.jurisdiction to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
@@ -89,7 +89,7 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-pra-3 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
       <li>Added invariant inv-pra-4 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
       <li>Added invariant inv-pra-5 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
-      <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind AU Recorded Sex or Gender (RSG) Source Document Jurisdiction (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
+      <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
