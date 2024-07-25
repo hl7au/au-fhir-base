@@ -26,8 +26,6 @@ To help implementers, only the more significant changes are listed here.
   <li><a href="ValueSet-rsg-source-document-jurisdiction.html">AU Recorded Sex or Gender (RSG) Source Document Jurisdiction</a></li>
   <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
   <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
-  <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></li>
-  <li><a href="ValueSet-au-coverage-selfpay-extended.html">Coverage SelfPay Codes - AU Extended</a></li>
   <li><a href="ValueSet-name-context.html">Name Context</a></li>
   </ul>
   </li>
@@ -35,7 +33,6 @@ To help implementers, only the more significant changes are listed here.
   <ul>
   <li><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></li>
    <li><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
-   <li><a href="CodeSystem-au-coverage-selfpay.html">Coverage SelfPay Codes AU</a></li>
    <li><a href="CodeSystem-name-context.html">Name Context</a></li>
   </ul>
   </li>

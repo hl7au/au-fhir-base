@@ -3,6 +3,11 @@ This page lists all ValueSets and CodeSystems defined as part of this specificat
 
 As well as these included definitions this specification typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
+
+<div class="stu-note">
+Expansions of ValueSets in this Implementation Guide may differ from expansions returned from interactions with a terminology server using the latest version of terminology.hl7.org (THO).
+</div> 
+
 ### Value Sets
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. The following value sets are unique to this guide and not listed in the base FHIR specification.
@@ -33,8 +38,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 |[Concurrent Supply Grounds](https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1)|[Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html)|NCTS|
 |[Contact Purpose](ValueSet-contact-purpose.html)|[AU Base Organisation](StructureDefinition-au-organization.html), [Contact Purpose](StructureDefinition-contact-purpose.html)|AU Base|
 |[Contact Relationship Type](https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3)|[AU Base Patient](StructureDefinition-au-patient.html)|NCTS|
-|[Coverage SelfPay Codes - AU Extended](ValueSet-au-coverage-selfpay-extended.html)|[AU Base Coverage](StructureDefinition-au-coverage.html)|AU Base|
-|[Coverage Type and Self-Pay Codes - AU Extended](ValueSet-au-coverage-type-extended.html)|[AU Base Coverage](StructureDefinition-au-coverage.html)|AU Base|
 |[Date Accuracy Indicator](ValueSet/date-accuracy-indicator-1)|[Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html), [Date of Arrival](StructureDefinition-date-of-arrival.html)|NCTS|
 |[DVA Entitlement](ValueSet-dva-entitlement.html)|[AU DVA Number](StructureDefinition-au-dvanumber.html)|AU Base|
 |[Encounter Type](https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1)|[AU Base Encounter](StructureDefinition-au-encounter.html)|NCTS|
@@ -106,8 +109,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 |[Australian Veteran Status](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-veteran-status-1)|[Australian Veteran Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1)|NCTS|
 |[Concurrent Supply Grounds](https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1)|[Concurrent Supply Grounds](https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1)|NCTS|
 |[Contact Purpose](CodeSystem-contact-purpose.html)|[Contact Purpose](ValueSet-contact-purpose.html)|AU Base|
-|[Coverage SelfPay Codes](http://terminology.hl7.org/CodeSystem/coverage-selfpay)|[Coverage SelfPay Codes - AU Extended](ValueSet-au-coverage-selfpay-extended.html), [Coverage Type and Self-Pay Codes - AU Extended](ValueSet-au-coverage-type-extended.html)|FHIR|
-|[Coverage SelfPay Codes AU](CodeSystem-au-coverage-selfpay.html)|[Coverage SelfPay Codes - AU Extended](ValueSet-au-coverage-selfpay-extended.html), [Coverage Type and Self-Pay Codes - AU Extended](ValueSet-au-coverage-type-extended.html)|AU Base|
 |[Data Absent Reason](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/data-absent-reason)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1)|NCTS|
 |[Date Accuracy Indicator](https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1)|[Date Accuracy Indicator](https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1)|NCTS|
 |[DegreeLicenseCertificate AU](CodeSystem-au-v2-0360.html)|[hl7VS-degreeLicenseCertificate - AU Extended](ValueSet-au-v2-0360-extended.html)|AU Base|
