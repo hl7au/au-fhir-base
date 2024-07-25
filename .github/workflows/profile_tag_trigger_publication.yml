@@ -43,6 +43,7 @@ jobs:
       with:
         repository: hl7au/au-fhir-base
         path: hl7au/au-fhir-base
+        ref: ${{ steps.get_tag.outputs.tag }}
 
     - name: Checkout IG History Template Repository
       uses: actions/checkout@v4
@@ -94,26 +95,6 @@ jobs:
 
     - name: Run Aubase Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates -tx https://txreg.azurewebsites.net/txdev
-
-    - name: List directories
-      run:  |
-        find . -type d
-
-    # - name: Upload Artifact
-    #   uses: actions/upload-artifact@v3
-    #   with:
-    #     name: publish-output
-    #     path: webroot/fhir/base
-
-    # - name: 📂 Sync files # ftp is incredibly slow > 30 min sometimes, costing compute and efficency 
-    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-    #   with:
-    #     server: ${{secrets.BUILD_SERVER}} # change to be env variable to support multiple environments later on
-    #     username: ${{ secrets.FTP_USER }}
-    #     password: ${{ secrets.FTP_PASSWORD }}
-    #     local-dir: aubase/output/
-    #     server-dir: /ig/hl7au/au-fhir-base/branches/${{ github.ref }}/gopublish/
-    #     dry-run: true
 
     - name: Upload artifacts to S3
       run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
