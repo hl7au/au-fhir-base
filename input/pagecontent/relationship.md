@@ -12,7 +12,7 @@ In summary, AU Base:
 The context of AU Base within the set of HL7 AU standards is shown in the figure below:
 - the **FHIR standard** is the foundation, which creates a common platform or foundation on which a variety of different solutions are implemented. 
 - **AU Base** defines local concepts for use in an Australian context introducing relevant identifiers, terminology, extensions. 
-- **AU Core** defines a set of conformance requirements that enforce a set of 'minimum requirements' on the local concepts from AU Base through cardinality constraints, required/extensible binding strengths, RESTful API, and conformance requirements.
+- **AU Core** defines a set of conformance requirements that enforce a set of 'minimum requirements' on the local concepts from AU Base, specifying the elements, extensions, vocabularies, and value sets that SHALL be present and how they SHALL be used, along with the RESTful API interactions.
 - **Use case IGs** (e.g AU eRequesting and Provider Directory) build on AU Core to address specific use cases, defining a set of conformance requirements on top of AU Core, using additional building blocks from AU Base as needed.
 
 This layering of IGs balances relative adoption and implementation maturity of FHIR and requirements of the use cases involved.
@@ -40,7 +40,7 @@ The relationship of AU Base to other implementation guides is shown in the figur
 
 Implementation Guide |Relationship
 ---|---
-[AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/)|This IG defines a set of conformance requirements that enforce a set of 'minimum requirements' on the local concepts from AU Base through cardinality constraints, required/extensible binding strengths, RESTful API, and conformance requirements. AU Core uses AU Base as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined.
+[AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/)|This IG defines a set of conformance requirements that enforce a set of 'minimum requirements' on the local concepts from AU Base, specifying the elements, extensions, vocabularies, and value sets that SHALL be present and how they SHALL be used, along with the RESTful API interactions. 
 [AU Provider Directory](https://build.fhir.org/ig/hl7au/au-fhir-pd/)|This IG defines a set of conformance requirements for the purpose of implementation of provider directory services. AU Provider Directory uses AU Base as the basis for profiles that define the FHIR resources to be supported, and the elements, extensions, vocabularies, and value sets that SHALL be present are identified, and how they are used is defined.
 [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)|This IG provides definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. Sex and gender concepts from this IG have been reviewed for the potential for adoption in Australia. Where adopted, these concepts are included by reference in AU Base.
 [International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/)|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The profiles in this IG were reviewed and considered during development of AU Base. 
