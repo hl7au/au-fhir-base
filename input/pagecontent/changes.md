@@ -1,5 +1,5 @@
 ### Release TBD
-- Expected Publication date: December 2023
+- Expected Publication date: December 2024
 - Expected Publication status: Trial Use
 - Based on FHIR version: 4.0.1
 
