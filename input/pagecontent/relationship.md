@@ -19,7 +19,7 @@ The figure below shows the layering of HL7 AU FHIR standards:
 This layering of IGs balances relative adoption and implementation maturity of FHIR and requirements of the use cases involved.
 
   <div> 
-    <img src="architecture.png" alt="HL7 AU FHIR specification architecture" style="width:85%"/>
+    <img src="architecture.png" alt="HL7 AU FHIR specification architecture" style="width:70%"/>
   </div>
 *Figure 1: Context of AU Base within the set of HL7 AU standards*
 <br/>
