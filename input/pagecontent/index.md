@@ -19,6 +19,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Home](index.html): This page provides the introduction and scope for this guide.
 - [Guidance](guidance.html):  These pages list the guidance for this guide.
   - [General Guidance](generalguidance.html): This page provides guidance on using the profiles defined in this guide.
+  - [Sex and Gender](sexgender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Base and other implementation guides.
   - [Future of AU Base](future.html): This page outlines the yearly update cycle and approach to maturing AU Base.
 - [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
