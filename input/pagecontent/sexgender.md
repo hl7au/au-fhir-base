@@ -161,62 +161,7 @@ Example: Patient resource with Name to Use
 {
   "resourceType" : "Patient",
     ...
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
-      "extension" : [
-        {
-          "url" : "value",
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://hl7.org/fhir/administrative-gender",
-                "code" : "male",
-                "display" : "Male"
-              }
-            ]
-          }
-        },
-        {
-          "url" : "type",
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://loinc.org",
-                "code" : "76689-9",
-                "display" : "Sex Assigned At Birth"
-              }
-            ]
-          }
-        },
-        {
-          "url" : "effectivePeriod",
-          "valuePeriod" : {
-            "start" : "1974-12-25"
-          }
-        },
-        {
-          "url" : "acquisitionDate",
-          "valueDateTime" : "2005-12-06"
-        },
-        {
-          "url" : "sourceDocument",
-          "valueCodeableConcept" : //     Reference to a scan of the birth certificate 
-          {
-            "coding" : [
-              {
-                "system" : "http://loinc.org",
-                "code" : "71230-7",
-                "display" : "Birth certificate"
-              },
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "444561001",
-                "display" : "Birth certificate"
-              }
-            ],
-            "text" : "Scan of birth certificate"
-          }
-        },
+    
   ...
 }  
 ~~~
