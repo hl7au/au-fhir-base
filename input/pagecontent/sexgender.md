@@ -1,9 +1,9 @@
 ### Name to Use (NtU)​
 
 AU Base supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
-- [AU Base Patient](StructureDefinition-au-patient.html): [Patient - Transgender Person Example](Patient-example-sex-and-gender.html)
-- [AU Base Practitioner](StructureDefinition-au-practitioner.html): [Practitioner - for use in sex and gender](Practitioner-example-sex-and-gender.html)
-- [AU Base Related Person](StructureDefinition-au-relatedperson.html): [RelatedPerson - as family member, for use in sex and gender](RelatedPerson-example-sex-and-gender.html)
+- [AU Base Patient](StructureDefinition-au-patient.html)
+- [AU Base Practitioner](StructureDefinition-au-practitioner.html)
+- [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 Name to Use is represented using ‘usual’ in `name.use`. 
 
@@ -28,9 +28,9 @@ Example: Patient resource with Name to Use
 
 ### Pronouns​
 AU Base supports representation and exchange of the Pronouns data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
-- [AU Base Patient](StructureDefinition-au-patient.html): [Patient - Transgender Person Example](Patient-example-sex-and-gender.html)
-- [AU Base Practitioner](StructureDefinition-au-practitioner.html): [Practitioner - for use in sex and gender](Practitioner-example-sex-and-gender.html)
-- [AU Base Related Person](StructureDefinition-au-relatedperson.html): [RelatedPerson - as family member, for use in sex and gender](RelatedPerson-example-sex-and-gender.html)
+- [AU Base Patient](StructureDefinition-au-patient.html)
+- [AU Base Practitioner](StructureDefinition-au-practitioner.html)
+- [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 Pronouns is represented with the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension. In AU Base the value element of the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) is constrained to be [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
 
@@ -57,9 +57,9 @@ Example: Patient resource with Pronouns tbd
 
 ### Gender Identity (GI)
 AU Base supports representation and exchange of the Gender Identity data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) and aligned to [Australian Bureau of Statics Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) in:
-- [AU Base Patient](StructureDefinition-au-patient.html): [Patient - Transgender Person Example](Patient-example-sex-and-gender.html)
-- [AU Base Practitioner](StructureDefinition-au-practitioner.html): [Practitioner - for use in sex and gender](Practitioner-example-sex-and-gender.html)
-- [AU Base Related Person](StructureDefinition-au-relatedperson.html): [RelatedPerson - as family member, for use in sex and gender](RelatedPerson-example-sex-and-gender.html) 
+- [AU Base Patient](StructureDefinition-au-patient.html)
+- [AU Base Practitioner](StructureDefinition-au-practitioner.html)
+- [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 Gender Identity is represented with the [Individual Gender Identity extension](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension. In AU Base the value element of the [Individual Gender Identity extension](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) is constrained to be [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) value set ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
 
@@ -102,9 +102,9 @@ Example: Patient resource with Gender Identity
 ### Recorded Sex or Gender (RSG)
 
 - This profile supports a recorded sex or gender (RSG) value using the using the [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension in:
-- [AU Base Patient](StructureDefinition-au-patient.html): [Patient - Transgender Person Example](Patient-example-sex-and-gender.html)
-- [AU Base Practitioner](StructureDefinition-au-practitioner.html): [Practitioner - for use in sex and gender](Practitioner-example-sex-and-gender.html)
-- [AU Base Related Person](StructureDefinition-au-relatedperson.html): [RelatedPerson - as family member, for use in sex and gender](RelatedPerson-example-sex-and-gender.html) 
+- [AU Base Patient](StructureDefinition-au-patient.html)
+- [AU Base Practitioner](StructureDefinition-au-practitioner.html)
+- [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 
 RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. Blank cells in the table indicate that the given element is absent from the resource.
@@ -150,8 +150,11 @@ Example: Patient resource with Name to Use
 ~~~
 
 ### Sex Assigned at Birth
+Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) 
 
-Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). It should be noted the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) is not marked as *Must Support* in this version of the profile.
+- [AU Base Patient](StructureDefinition-au-patient.html)
+
+as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). 
 
 Example: Patient resource with Name to Use
 ~~~
