@@ -1,3 +1,5 @@
+When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
+
 ### Name to Use (NtU)​
 
 AU Base supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
@@ -7,10 +9,10 @@ AU Base supports representation and exchange of the Name to Use data element (as
 
 Name to Use is represented using ‘usual’ in `name.use`. 
 
-Example: Patient resource with Name to Use
+Example: RelatedPerson resource with name to use
 ~~~
 {
-  "resourceType" : "Patient",
+  "resourceType" : "RelatedPerson",
     ...
     "name" : [
     {
@@ -32,9 +34,9 @@ AU Base supports representation and exchange of the Pronouns data element (as de
 - [AU Base Practitioner](StructureDefinition-au-practitioner.html)
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
-Pronouns is represented with the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension. In AU Base the value element of the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) is constrained to be [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
+Pronouns is represented with the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension. In AU Base the value element of the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension is constrained to be [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
 
-When populating the value element of the [Individual Pronouns extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension:
+When populating the value element of the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension:
 - *they/them/their/theirs/themselves* may be represented by sending the LOINC Answer (LA) code LA29520-6
 - *she/her/her/hers/herself* may be represented by sending the LOINC Answer (LA) code LA29519-8
 - *he/him/his/his/himself* may be represented by sending the LOINC Answer (LA) code LA29518-0
@@ -44,12 +46,59 @@ When populating the value element of the [Individual Pronouns extension](http://
 - Where the workflow does not support obtaining a pronoun, it may be represented by sending the Data Absent Reason code "not-asked"
 - Where a preferred pronoun is provided but is not one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative specific coded value can be supplied.
 
-Example: Patient resource with Pronouns tbd
+Example: Practitioner resource with pronouns
+~~~
+{
+  "resourceType" : "Practitioner",
+    ...
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/individual-pronouns",
+      "extension" : [
+        {
+          "url" : "value",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "LA29519-8",
+                "display" : "she/her/her/hers/herself"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "period",
+          "valuePeriod" : {
+            "start" : "2001-05-06"
+          }
+        }
+      ]
+    },
+  ...
+}  
+~~~
+
+Example: Patient resource with prefer not to answer for pronouns
 ~~~
 {
   "resourceType" : "Patient",
     ...
-
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/individual-pronouns",
+      "extension" : [
+        {
+          "url" : "value",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                "code" : "asked-declined",
+              }
+            ]
+          }
+        }
+      ]
+    },
   ...
 }  
 ~~~
@@ -61,9 +110,9 @@ AU Base supports representation and exchange of the Gender Identity data element
 - [AU Base Practitioner](StructureDefinition-au-practitioner.html)
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
-Gender Identity is represented with the [Individual Gender Identity extension](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension. In AU Base the value element of the [Individual Gender Identity extension](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) is constrained to be [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) value set ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
+Gender Identity is represented with the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension. In AU Base the value element of the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension is constrained to be [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) value set ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)).
 
-When populating the value element of the [Individual Gender Identity extension](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension:
+When populating the value element of the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension:
   - *Man or male* may be represented by sending the SNOMED CT code 446151000124109\|Identifies as male gender\|
   - *Woman or female* may be represented by sending the SNOMED CT code 446141000124107\|Identifies as female gender\|
   - *Non-binary* may be represented by sending the SNOMED CT code 33791000087105\|Identifies as nonbinary gender\|
@@ -72,7 +121,7 @@ When populating the value element of the [Individual Gender Identity extension](
   - *Not stated or inadequately described* may be represented by the code "unknown"
   - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
 
-Example: Patient resource with Gender Identity
+Example: Patient resource with gender identity
 ~~~
 {
   "resourceType" : "Patient",
@@ -139,7 +188,7 @@ RSG information includes the various sex and gender concepts that are often used
     </tbody>
   </table>
 
-Example: Patient resource with Name to Use
+Example: Patient resource with recorded gender from a passport
 ~~~
 {
   "resourceType" : "Patient",
@@ -150,22 +199,95 @@ Example: Patient resource with Name to Use
 ~~~
 
 ### Sex Assigned at Birth
-Sex assigned at birth is represented using the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) 
+Sex assigned at birth is represented using the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) 
 
 - [AU Base Patient](StructureDefinition-au-patient.html)
 
 as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). 
 
-Example: Patient resource with Name to Use
+Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
 {
   "resourceType" : "Patient",
     ...
-    
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+      "extension" : [
+        {
+          "url" : "value",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "248153007",
+                "display" : "Male"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "1515311000168102",
+                "display" : "Biological sex at birth"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "effectivePeriod",
+          "valuePeriod" : {
+            "start" : "1974-12-25"
+          }
+        },
+        {
+          "url" : "acquisitionDate",
+          "valueDateTime" : "2005-12-06"
+        },
+        {
+          "url" : "sourceDocument",
+          "valueCodeableConcept" : 
+          {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "71230-7",
+                "display" : "Birth certificate"
+              },
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "444561001",
+                "display" : "Birth certificate"
+              }
+            ],
+            "text" : "Scan of birth certificate"
+          }
+        },
+        {
+          "url" : "sourceField",
+          "valueString" : "Sex"
+        },
+        {
+          "url" : "jurisdiction",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
+                "code" : "QLD"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "comment",
+          "valueString" : "Patient transitioned from male to female in 2001, but their birth certificate still indicates male."
+        }
+      ]
+    },
   ...
 }  
 ~~~
 
-
-### Profile specific implementation guidance
-- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
