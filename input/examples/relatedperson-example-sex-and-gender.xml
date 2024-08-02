@@ -5,6 +5,7 @@
     - Gender Harmony Gender Identity (Individual Gender Identity extension)
     - Gender Harmony Pronouns (Individual Pronouns extension)
     - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
+    - Gender Harmony Sex Assigned at Birth (Person Recorded Sex Or Gender extension)
     -->
   <meta>
 	<profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
@@ -65,8 +66,8 @@
         <extension url="value">
             <valueCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/administrative-gender"/>
-                    <code value="male"/>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="248153007"/>
                     <display value="Male"/>
                 </coding>
             </valueCodeableConcept>
@@ -74,23 +75,16 @@
         <extension url="type">
             <valueCodeableConcept>
                 <coding>
-                    <system value="http://loinc.org"/>
-                    <code value="76689-9"/>
-                    <display value="Sex Assigned At Birth"/>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="1515311000168102"/>
+                    <display value="Biological sex at birth"/>
                 </coding>
             </valueCodeableConcept>
-        </extension>
-        <extension url="effectivePeriod">
-            <valuePeriod>
-                <start value="2001-10-24"/>
-            </valuePeriod>
         </extension>
         <extension url="acquisitionDate">
             <valueDateTime value="2019-11-01"/>
         </extension>
         <extension url="sourceDocument">
-            <!--    Reference to a scan of the birth certificate 
-            (adapted from the R5 example to use codeable concept instead of a reference to a broken link in the R5 spec) -->
             <valueCodeableConcept>
                 <coding>
                     <system value="http://loinc.org"/>
