@@ -96,8 +96,14 @@ jobs:
     - name: Run Aubase Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates -tx https://txreg.azurewebsites.net/txdev
 
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ig-output
+        path: output/full-ig.zip
+    
     - name: Upload Base webroot to S3
       run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
 
-    - name: Upload Base output to S3
-      run: aws s3 cp ./hl7au/au-fhir-base/output s3://hl7au-fhir-ig/fhir/output --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+    #   - name: Upload Base output to S3
+    #     run: aws s3 cp ./hl7au/au-fhir-base/output s3://hl7au-fhir-ig/fhir/output --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
