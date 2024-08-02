@@ -4,7 +4,8 @@
     - Gender Harmony Gender Identity (Individual Gender Identity extension)
     - Gender Harmony Pronouns (Individual Pronouns extension)
     - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
-    This example is taken and adapted from the R5 Transgender Person Example  -->
+    - Gender Harmony Sex Assigned at Birth (Person Recorded Sex Or Gender extension)
+   This example is taken and adapted from the R5 Transgender Person Example  -->
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
     </meta>
@@ -42,8 +43,8 @@
         <extension url="value">
             <valueCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/administrative-gender"/>
-                    <code value="male"/>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="248153007"/>
                     <display value="Male"/>
                 </coding>
             </valueCodeableConcept>
@@ -51,9 +52,9 @@
         <extension url="type">
             <valueCodeableConcept>
                 <coding>
-                    <system value="http://loinc.org"/>
-                    <code value="76689-9"/>
-                    <display value="Sex Assigned At Birth"/>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="1515311000168102"/>
+                    <display value="Biological sex at birth"/>
                 </coding>
             </valueCodeableConcept>
         </extension>
@@ -66,8 +67,6 @@
             <valueDateTime value="2005-12-06"/>
         </extension>
         <extension url="sourceDocument">
-            <!--    Reference to a scan of the birth certificate 
-            (adapted from the R5 example to use codeable concept instead of a reference to a broken link in the R5 spec) -->
             <valueCodeableConcept>
                 <coding>
                     <system value="http://loinc.org"/>
@@ -83,14 +82,13 @@
             </valueCodeableConcept>
         </extension>
         <extension url="sourceField">
-            <valueString value="SEX"/>
+            <valueString value="Sex"/>
         </extension>
         <extension url="jurisdiction">
             <valueCodeableConcept>
                 <coding>
-                    <system value="https://www.usps.com/"/>
-                    <code value="OH"/>
-                    <display value="Ohio"/>
+                    <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1"/>
+                    <code value="QLD"/>
                 </coding>
             </valueCodeableConcept>
         </extension>
@@ -104,50 +102,7 @@
             <valueCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/administrative-gender"/>
-                    <code value="male"/>
-                    <display value="Male"/>
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <extension url="effectivePeriod">
-            <valuePeriod>
-                <start value="2021-05-25"/>
-            </valuePeriod>
-        </extension>
-        <extension url="acquisitionDate">
-            <valueDateTime value="2021-06-06"/>
-        </extension>
-        <extension url="sourceDocument">
-            <!--    Reference to a scan of the insurance card  
-            (adapted from the R5 example to use display instead of a reference to a broken link in the R5 spec) -->
-            <valueReference>
-                <display value="Scan of insurance card"/>
-            </valueReference>
-        </extension>
-        <extension url="sourceField">
-            <valueString value="SEX"/>
-        </extension>
-        <extension url="jurisdiction">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://local-code-system.org/recorded-sex-or-gender-jurisdiction"/>
-                    <code value="ICCA-P"/>
-                    <display value="Indigo Crucifix Cobalt Aegis Payer"/>
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <extension url="comment">
-            <valueString value="Patient transitioned from male to female in 2001, but their insurance card still
-       indicates male."/>
-        </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
-        <extension url="value">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://ohio.example.gov/drivers-license-sex"/>
-                    <code value="M"/>
-                    <display value="Male"/>
+                    <code value="female"/>
                 </coding>
             </valueCodeableConcept>
         </extension>
@@ -161,31 +116,28 @@
         </extension>
         <extension url="effectivePeriod">
             <valuePeriod>
-                <start value="1974-12-25"/>
+                <start value="2024-12-25"/>
             </valuePeriod>
         </extension>
-        <extension url="acquisitionDate">
-            <valueDateTime value="2005-12-06"/>
-        </extension>
         <extension url="sourceDocument">
-            <!--    Reference to a scan of the driver's license  
-            (adapted from the R5 example to use display instead of a reference to a broken link in the R5 spec) -->
-            <valueReference>
-                <display value="Scan of Drivers license"/>
-            </valueReference>
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type"/>
+                    <code value="passport"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="sourceField">
+            <valueString value="Sex"/>
         </extension>
         <extension url="jurisdiction">
             <valueCodeableConcept>
                 <coding>
-                    <system value="https://www.usps.com/"/>
-                    <code value="OH"/>
-                    <display value="Ohio"/>
+                    <system value="urn:iso:std:iso:3166"/>
+                    <code value="AU"/>
+                    <display value="Australia"/>
                 </coding>
             </valueCodeableConcept>
-        </extension>
-        <extension url="comment">
-            <valueString value="Patient transitioned from male to female in 2001, but their driver's license still
-       indicates male."/>
         </extension>
     </extension>
     <identifier>
