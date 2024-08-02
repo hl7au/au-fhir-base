@@ -1,5 +1,4 @@
-When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
-
+The guidance below addresses how sex, gender, and related concepts can be structured in FHIR and conformant to AU Base.
 
 ### Name to Use (NtU)​
 AU Base supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
