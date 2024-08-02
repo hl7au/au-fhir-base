@@ -101,7 +101,7 @@ To help implementers, only the more significant changes are listed here.
   <li>Changed MedicationStatement.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
   <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
-  <li>Changed the maturity level to FMM1 for the following:
+  <li>Maturity level changed to FMM 1 for the following:
     <ul>
       <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set, <a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46528">FHIR-46528</a>)</li>
       <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> value set, <a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46529">FHIR-46529</a>)</li>
