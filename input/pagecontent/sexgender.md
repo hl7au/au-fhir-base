@@ -41,7 +41,7 @@ When populating the value element of the [Individual Pronouns](http://hl7.org/fh
 - *he/him/his/his/himself* may be represented by sending the LOINC Answer (LA) code LA29518-0
 - *Prefer not to answer* may be represented by sending the Data Absent Reason code "asked-declined"
 - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
-- *Not stated or inadequately described* may be represented by the Data Absent Reason code "unknown"
+- *Not stated or inadequately described* may be represented by sending the Data Absent Reason code "unknown"
 - Where the workflow does not support obtaining a pronoun, it may be represented by sending the Data Absent Reason code "not-asked"
 - Where a preferred pronoun is provided but is not one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative specific coded value can be supplied.
 
@@ -116,9 +116,9 @@ When populating the value element of the [Individual Gender Identity](http://hl7
   - *Woman or female* may be represented by sending the SNOMED CT code 446141000124107\|Identifies as female gender\|
   - *Non-binary* may be represented by sending the SNOMED CT code 33791000087105\|Identifies as nonbinary gender\|
   - *[I/They] use a different term (please specify)*  may be represented by sending only `text` and no `coding`
-  - *Prefer not to answer* may be represented by sending the code "asked-declined"
-  - *Not stated or inadequately described* may be represented by the code "unknown"
-  - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the code "not-asked"
+  - *Prefer not to answer* may be represented by sending the Data Absent Reason code "asked-declined"
+  - *Not stated or inadequately described* may be represented by sending the Data Absent Reason code "unknown"
+  - Where the workflow does not support obtaining a gender identity value, it may be represented by sending the Data Absent Reason code "not-asked"
 
 Example: Patient resource with gender identity
 ~~~
@@ -239,13 +239,13 @@ AU Base supports representation and exchange of the Sex Assigned at Birth data e
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 Sex Assigned at Birth is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension:
-- the type element is populated with 1515311000168102\|Biological sex at birth\|
+- the type element is populated with the SNOMED CT code 1515311000168102\|Biological sex at birth\|
 - the value element is constrained to be [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
 When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
   - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
   - *Female* may be represented by sending the SNOMED CT code 248152002\|Female\|
-  - *Intersex* may be represented by sending the SNOMED CT code 33791000087105\|Intersex\|
+  - *Intersex* may be represented by sending the SNOMED CT code 32570691000036108\|Intersex\|
   - *Indeterminate sex* may be represented by sending the SNOMED CT code 32570681000036106\|Indeterminate sex\|
 
 Example: Patient resource with Sex Assigned at Birth from birth certificate
