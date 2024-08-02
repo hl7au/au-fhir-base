@@ -1,0 +1,119 @@
+name: Au base IG Profiles publish->go-publish
+
+on:
+  push:
+    tags:
+      - '**'
+
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
+    steps:
+    
+    # to save load time can build custom image with dependencies and push to docker hub
+    - name: install aws cli
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip -q awscliv2.zip
+        ./aws/install
+    
+    - name: Get the tag name
+      id: get_tag
+      run: echo "##[set-output name=tag;]${GITHUB_REF#refs/tags/}"
+
+    - name: Checkout Publications Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/publications
+
+    - name: Configure AWS credentials from GitHub OIDC
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+        aws-region: ap-southeast-2
+        
+    - name: Checkout AU base Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/au-fhir-base
+        path: hl7au/au-fhir-base
+        ref: ${{ steps.get_tag.outputs.tag }} # explicit, not usually since the default is to checkout the initiating commit
+
+    - name: Checkout IG History Template Repository
+      uses: actions/checkout@v4
+      with:
+        repository: HL7/fhir-ig-history-template
+        path: fhir-history
+    
+    - name: Checkout IG Registry Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/ig-registry
+        path: ig-registry
+
+    - name: Update Publisher
+      run: |
+        echo "Updating Publisher"
+        ./_updatePublisher.sh -f -y
+
+          
+    - name: Basic Publish for Aubase
+      run: |
+          echo "Generating Publish for  Aubase IG..."
+          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+
+    - name: Create directories
+      run: |
+        mkdir -p webroot/fhir/base
+
+    - name: Download package-list.json
+      run: |
+        rm -rf hl7au/au-fhir-base/package-list.json
+        URL="https://hl7.org.au/fhir"
+        FULL_URL="$URL/package-list.json"
+        
+        curl --output webroot/fhir/package-list.json --url $FULL_URL
+        curl --output webroot/fhir/base/package-list.json --url $FULL_URL
+
+    - name: Download package-feed.xml
+      run: |
+        curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
+        curl --output webroot/fhir/package-feed.$(date+’%Y/%m/%d’).xml --url https://hl7.org.au/fhir/package-feed.xml
+
+    - name: Download publication-feed.xml
+      run: |
+        curl --output webroot/fhir/publication-feed.xml --url https://hl7.org.au/fhir/publication-feed.xml
+        curl --output webroot/fhir/publication-feed.$(date+’%Y/%m/%d’).xml --url https://hl7.org.au/fhir/publication-feed.xml
+
+    - name: Generate Package Registry
+      run: |
+        java -jar input-cache/publisher.jar -generate-package-registry webroot
+
+    - name: Run Aubase Go Publisher build
+      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
+    
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@0.7.6
+      with:
+        type: 'zip'
+        filename: 'output.zip'
+        path: './webroot/fhir'
+        exclusions: '**/full-ig.zip'
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ig-output
+        path: ./output.zip
+    
+    - name: Upload Base webroot to S3
+      run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+
+    #   - name: Upload Base output to S3
+    #     run: aws s3 cp ./hl7au/au-fhir-base/output s3://hl7au-fhir-ig/fhir/output --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
