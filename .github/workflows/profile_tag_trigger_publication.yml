@@ -102,7 +102,7 @@ jobs:
         type: 'zip'
         filename: 'output.zip'
         path: './webroot/fhir'
-        exclusions: 'full-ig.zip'
+        exclusions: '**/full-ig.zip'
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
