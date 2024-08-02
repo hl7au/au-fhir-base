@@ -1,7 +1,6 @@
 When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 
 ### Name to Use (NtU)​
-
 AU Base supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
 - [AU Base Practitioner](StructureDefinition-au-practitioner.html)
@@ -148,45 +147,22 @@ Example: Patient resource with gender identity
 }  
 ~~~
 
-### Recorded Sex or Gender (RSG)
 
-- This profile supports a recorded sex or gender (RSG) value using the using the [Person Recorded Sex Or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension in:
+### Recorded Sex or Gender (RSG)
+AU Base supports representation and exchange of the Recorded Sex or Gender (RS) data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
 - [AU Base Practitioner](StructureDefinition-au-practitioner.html)
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
+RSG is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. In AU Base:
+- the type element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [AU Recorded Sex or Gender Type](ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the sourceDocument element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the jurisdiction element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
-RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. Blank cells in the table indicate that the given element is absent from the resource.
-<table border="1">
-    <thead>
-    <tr>
-    <th>RSG information to represent</th>
-    <th>extension:value</th>
-    <th>extension:type</th>
-    <th>extension:sourceDocument</th>
-    <th>extension:sourceField</th>
-    <th>extension:jurisdiction</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Sex and gender information from a document, e.g. Australian passport or driver's license.</td>
-    <td>The sex or gender value.</td>
-    <td>"document"</td>
-    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "passport".</td>
-    <td>The name of the field within the source document where this information is recorded, e.g. "Sex".</td>
-    <td>SHALL use an appropriate value from <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> value set if any of the codes within the value set can apply to the concept being communicated. If representing an Australian document use "AU" or the applicable state or territory code.</td>
-    </tr>
-    <tr>
-    <td>Sex and gender information in use in services and infrastructure, e.g. HI Services or My Health Record.</td>
-    <td>The sex or gender value.</td>
-    <td>SHALL use an appropriate value from <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set if any of the codes within the value set can apply to the concept being communicated, e.g. "au-hi-service".</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    </tbody>
-  </table>
+RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. When populating recorded sex or gender it is important to select a meaningful terminology for the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. 
+For example, when representing a biological sex value it is recommended to use a biological sex value set.
+
+See [Sex Assigned at Birth](sexgender.html#sex-assigned-at-birth) for specific guidance on the representation of Sex Assigned at Birth.
 
 Example: Patient resource with recorded gender from a passport
 ~~~
