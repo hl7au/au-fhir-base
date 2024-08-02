@@ -101,6 +101,18 @@ To help implementers, only the more significant changes are listed here.
   <li>Changed MedicationStatement.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
   <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
+  <li>Changed the maturity level to FMM1 for the following:
+    <ul>
+      <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set, <a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46528">FHIR-46528</a>)</li>
+      <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> value set, <a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46529">FHIR-46529</a>)</li>
+      <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46530">FHIR-46530</a>)</li>
+     <li><a href="StructureDefinition-au-paididentifier.html">AU PAI-D Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-46531">FHIR-46531</a>)</li>
+     <li><a href="StructureDefinition-au-residentialagedcareserviceidentifier.html">AU Residential Aged Care Service Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-46532">FHIR-46532</a>)</li>
+      <li><a href="StructureDefinition-au-substance.html">AU Base Substance</a> (<a href="https://jira.hl7.org/browse/FHIR-46533">FHIR-46533</a>)</li>
+      <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://jira.hl7.org/browse/FHIR-46534">FHIR-46534</a>)</li>
+      <li><a href="StructureDefinition-name-context.html">Name Context</a> extension, <a href="ValueSet-name-context.html">Name Context</a> value set, <a href="CodeSystem-name-context.html">Name Context</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46535">FHIR-46535</a>)</li>
+    </ul>
+  </li>
 </ul>
 
 ### Release 4.1.0
