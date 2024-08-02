@@ -148,8 +148,8 @@ Example: Patient resource with gender identity
 ~~~
 
 
-### Recorded Sex or Gender (RSG)
-AU Base supports representation and exchange of the Recorded Sex or Gender (RS) data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
+### Recorded Sex or Gender
+AU Base supports representation and exchange of the Recorded Sex or Gender (RSG) data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
 - [AU Base Practitioner](StructureDefinition-au-practitioner.html)
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
