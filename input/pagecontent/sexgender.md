@@ -7,7 +7,7 @@ AU Base supports representation and exchange of the Name to Use data element (as
 - [AU Base Practitioner](StructureDefinition-au-practitioner.html)
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
-Name to Use is represented using ‘usual’ in `name.use`. 
+Name to Use is represented using "usual" in `name.use`. 
 
 Example: RelatedPerson resource with name to use
 ~~~
@@ -156,21 +156,78 @@ AU Base supports representation and exchange of the Recorded Sex or Gender (RS) 
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 RSG is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. In AU Base:
-- the type element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [AU Recorded Sex or Gender Type](ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
-- the sourceDocument element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
-- the jurisdiction element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the type element is constrained to be [AU Recorded Sex or Gender Type](ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the sourceDocument element is constrained to be [AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the jurisdiction element is constrained to be [Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
-RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. When populating recorded sex or gender it is important to select a meaningful terminology for the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. 
-For example, when representing a biological sex value it is recommended to use a biological sex value set.
-
-See [Sex Assigned at Birth](sexgender.html#sex-assigned-at-birth) for specific guidance on the representation of Sex Assigned at Birth.
+RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. When populating recorded sex or gender it is important to select a meaningful terminology for the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. For example, when representing a biological sex value it is recommended to use a biological sex value set. See [Sex Assigned at Birth](sexgender.html#sex-assigned-at-birth) for specific guidance on the representation of Sex Assigned at Birth.
 
 Example: Patient resource with recorded gender from a passport
 ~~~
 {
   "resourceType" : "Patient",
     ...
-
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+      "extension" : [
+        {
+          "url" : "value",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://hl7.org/fhir/administrative-gender",
+                "code" : "female"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "46098-0"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "effectivePeriod",
+          "valuePeriod" : {
+            "start" : "2024-12-25"
+          }
+        },
+        {
+          "url" : "sourceDocument",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type",
+                "code" : "passport"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "sourceField",
+          "valueString" : "Sex"
+        },
+        {
+          "url" : "jurisdiction",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "urn:iso:std:iso:3166",
+                "code" : "AU",
+                "display" : "Australia"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
   ...
 }  
 ~~~
@@ -183,8 +240,8 @@ AU Base supports representation and exchange of the Sex Assigned at Birth data e
 - [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
 Sex Assigned at Birth is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension:
-- the type element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension should be 1515311000168102\|Biological sex at birth\|
-- the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the type element is populated with 1515311000168102\|Biological sex at birth\|
+- the value element is constrained to be [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
 When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
   - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
