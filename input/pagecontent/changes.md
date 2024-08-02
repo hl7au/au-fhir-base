@@ -23,17 +23,17 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>New value sets:
   <ul>
-  <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></li>
-  <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></li>
-  <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
-  <li><a href="ValueSet-name-context.html">Name Context</a></li>
+  <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46351">FHIR-46351</a>)</li>
+  <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+  <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+  <li><a href="ValueSet-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New code systems:
   <ul>
-  <li><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></li>
-   <li><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a></li>
-   <li><a href="CodeSystem-name-context.html">Name Context</a></li>
+  <li><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+   <li><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>)</li>
+   <li><a href="CodeSystem-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New search parameters:
@@ -49,7 +49,7 @@ To help implementers, only the more significant changes are listed here.
           <ul>
             <li>add Individual Pronouns (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
             <li>add Person Recorded Sex Or Gender (RSG) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
-            <li>add Australian Veteran Status</li>
+            <li>add Australian Veteran Status (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
             <li>remove genderIdentity extension and replace it with the Individual Gender Identity extension (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
           </ul>
       </li>    
