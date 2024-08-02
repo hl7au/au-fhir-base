@@ -94,13 +94,21 @@ jobs:
         java -jar input-cache/publisher.jar -generate-package-registry webroot
 
     - name: Run Aubase Go Publisher build
-      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates -tx https://txreg.azurewebsites.net/txdev
-
+      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
+    
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@0.7.6
+      with:
+        type: 'zip'
+        filename: 'output.zip'
+        path: './webroot/fhir'
+        exclusions: 'full-ig.zip'
+      
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: ig-output
-        path: ./webroot/fhir/base/*/full-ig.zip
+        path: ./output.zip
     
     - name: Upload Base webroot to S3
       run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
