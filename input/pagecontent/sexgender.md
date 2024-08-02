@@ -1,5 +1,6 @@
 When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 
+
 ### Name to Use (NtU)​
 AU Base supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
@@ -174,12 +175,22 @@ Example: Patient resource with recorded gender from a passport
 }  
 ~~~
 
+
 ### Sex Assigned at Birth
-Sex assigned at birth is represented using the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) 
-
+AU Base supports representation and exchange of the Sex Assigned at Birth data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
+- [AU Base Practitioner](StructureDefinition-au-practitioner.html)
+- [AU Base Related Person](StructureDefinition-au-relatedperson.html)
 
-as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html). 
+Sex Assigned at Birth is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension:
+- the type element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension should be 1515311000168102\|Biological sex at birth\|
+- the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension is constrained to be [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+
+When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
+  - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
+  - *Female* may be represented by sending the SNOMED CT code 248152002\|Female\|
+  - *Intersex* may be represented by sending the SNOMED CT code 33791000087105\|Intersex\|
+  - *Indeterminate sex* may be represented by sending the SNOMED CT code 32570681000036106\|Indeterminate sex\|
 
 Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
