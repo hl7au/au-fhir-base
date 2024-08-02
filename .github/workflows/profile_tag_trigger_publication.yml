@@ -100,7 +100,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ig-output
-        path: ./webroot/fhir/base/full-ig.zip
+        path: ./webroot/fhir/base/*/full-ig.zip
     
     - name: Upload Base webroot to S3
       run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
