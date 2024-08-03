@@ -4,3 +4,129 @@
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+AllergyIntolerance/example1: AllergyIntolerance.text.div: Invalid element name inside a paragraph in the XHTML ('ul')
+AllergyIntolerance/example2: AllergyIntolerance.text.div: Invalid element name inside a paragraph in the XHTML ('ul')
+
+# Expected unavailable terminology
+Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set '' because the code system http://www.mims.com.au/codes was not found
+MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
+ValueSet.where(id = 'au-jurisdiction-extended'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/ValueSet/jurisdiction
+
+# IG publisher unable to execute FHIRPath
+Patient/example-sex-and-gender: Patient: Constraint failed: inv-pat-3: 'Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+Patient/example-sex-and-gender: Patient: Constraint failed: inv-pat-5: 'Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+Patient/example7: Patient: Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+RelatedPerson/example-sex-and-gender: RelatedPerson: Constraint failed: inv-relper-2: 'Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-relatedperson)
+
+# Expected recommendation does not apply
+Observation/norelevantfinding-example0: Observation: Best Practice Recommendation: In general, all observations should have a performer
+Observation/norelevantfinding-example1: Observation: Best Practice Recommendation: In general, all observations should have a performer
+Observation/norelevantfinding-example2: Observation: Best Practice Recommendation: In general, all observations should have a performer
+
+# Expected further work is required
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-deliverypointidentifier'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport'): The Implementation Guide contains no examples for this profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult'): The Implementation Guide contains no examples for this profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-dvanumber'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-etpprescriptionidentifier'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-gnafidentifier'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-imagingreport'): The Implementation Guide contains no examples for this profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-imagingresult'): The Implementation Guide contains no examples for this profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-localreportidentifier'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-locationspecificpracticenumber'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-paididentifier'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-pathologyreport'): The Implementation Guide contains no examples for this profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-pharmacyapprovalnumber'): The Implementation Guide contains no examples for this data type profile
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice'): The Implementation Guide contains no examples for this extension
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/identifier-routability'): The Implementation Guide contains no examples for this extension
+StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/medication-strength'): The Implementation Guide contains no examples for this extension
+
+# Expected multiple matches for open datatype choice
+Coverage/dva: Coverage.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-dvanumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Coverage/private: Coverage.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+HealthcareService/example0: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+HealthcareService/example4: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+HealthcareService/example5: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+Location/example1: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Location/example2: Location.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-natasitenumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Location/example2: Location.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-locationspecificpracticenumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Location/example2: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Location/example3: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Location/example8: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Location/example9: Location.address: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+MedicationRequest/example0: MedicationRequest.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localprescriptionidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+MedicationRequest/example1: MedicationRequest.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localprescriptionidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+MedicationRequest/example2: MedicationRequest.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localprescriptionidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/5-8631-1: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/5-8631-1: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Organization/example0: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example0: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Organization/example1: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example2: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example2: Organization.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example2: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Organization/example3: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example3: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Organization/example4: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example4: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Organization/example5: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example5: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Organization/example6: Organization.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-nataaccreditationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.identifier[2]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.identifier[3]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-australiancompanynumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.identifier[4]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.identifier[5]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-paioidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.identifier[6]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-cspregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Organization/example6: Organization.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Patient/example0: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example0: Patient.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example0: Patient.identifier[2]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-healthcarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example1: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example1: Patient.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-dvanumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example2: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example4: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example4: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Patient/example5: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example5: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Patient/example6: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example7: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example7: Patient.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-pensionerconcessioncardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example7: Patient.identifier[2]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-cwlthseniorshealthcardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example7: Patient.identifier[3]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Patient/example7: Patient.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+Patient/example8: Patient.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ihi, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example-sex-and-gender: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example0: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example0: Practitioner.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-pbsprescribernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example0: Practitioner.identifier[2]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example0: Practitioner.identifier[3]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-careagencyemployeeidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example1: Practitioner.qualification[0].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example2: Practitioner.qualification[0].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example3: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example3: Practitioner.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example3: Practitioner.qualification[0].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.identifier[1]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.identifier[2]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.qualification[3].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.qualification[4].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.qualification[5].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Practitioner/example4: Practitioner.qualification[6].identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+PractitionerRole/example0: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+PractitionerRole/example1: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation, http://hl7.org/fhir/StructureDefinition/Identifier
+PractitionerRole/example2: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
+PractitionerRole/example3: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+PractitionerRole/example4: PractitionerRole.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+RelatedPerson/example0: RelatedPerson.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+RelatedPerson/example1: RelatedPerson.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+RelatedPerson/example2: RelatedPerson.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+RelatedPerson/example2: RelatedPerson.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+RelatedPerson/example3: RelatedPerson.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+RelatedPerson/example3: RelatedPerson.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
+ServiceRequest/hepatitis-b-antibody: ServiceRequest.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+ServiceRequest/path-example0: ServiceRequest.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+

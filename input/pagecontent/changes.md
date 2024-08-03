@@ -1,18 +1,17 @@
-### Release TBD
-- Expected Publication date: December 2024
-- Expected Publication status: Trial Use
+### Release 4.2.2-ballot
+- Publication date: 2024-08-04
+- Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
-The changes in this update are in progress and yet to be balloted.
+The changes in this update are for ballot. 
 
 To help implementers, only the more significant changes are listed here.
 
 #### Changes in this version
 <ul>
-  <li>TBD.</li>
   <li>New profiles:
   <ul>
-  <li>None</li>
+   <li><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
   </ul>
   </li>
   <li>New extensions:
