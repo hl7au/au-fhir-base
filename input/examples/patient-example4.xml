@@ -13,14 +13,16 @@
       </coding>
     </valueCodeableConcept>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="33791000087105"/>
-        <display value="Identifies as nonbinary gender"/>
-      </coding>
-    </valueCodeableConcept>
+ <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+		<extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="33791000087105"/>
+          <display value="Non-binary gender identity"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
   </extension>
   <identifier>
     <type>
