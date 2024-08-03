@@ -2,6 +2,6 @@ NOTE: There is concern on the appropriateness of the [Australian Standard Classi
 
 NOTE: This extension is not suitable for use when an ethnic identity is comprised of an unstructured string of potentially multiple composites (e.g. 'Of Malaysian and German descent but associates more as a Malay'). Feedback is sought on how to support an unstructured string, including the possibility of a string alternative to cater for narrative or composite text statements.
 
-<p class="request-for-feedback">This extension is published at <a href="generalguidance.html#maturity-levels">FHIR maturity model DRAFT 0</a> level only.  Input is requested to assess whether this extension has support to be approved, should be retained as a draft for further discussion or is no longer needed.  Please comment by raising <a href="https://jira.hl7.org/projects/FHIR/issues">HL7 Jira Issues</a>.</p>
+{% include fmm0-request-for-feedback.md -%}
 
 ### Usage Notes
