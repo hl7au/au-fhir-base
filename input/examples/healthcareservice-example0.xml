@@ -10,30 +10,12 @@
 				<b>Narrative</b>
 			</p>
 			<p><b>id</b>: example0</p>
+			<p><b>name</b>: Cardiothoracic Services</p>
 			<p><b>meta</b>: </p>
 			<p><b>identifier</b>: HPI-O: 8003621566684455</p>
 			<p><b>active</b>: true</p>
 			<p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 394603008}">Cardiothoracic surgery</span></p>
 			<p><b>telecom</b>: ph: 0255503333(WORK), ph: 0255504444(WORK - Medical Record), ph: 0255505555(WORK - After Hours)</p>
-			<h3>Eligibilities</h3>
-			<table class="grid">
-				<tr>
-					<td>-</td>
-					<td>
-						<b>Code</b>
-					</td>
-					<td>
-						<b>Comment</b>
-					</td>
-				</tr>
-				<tr>
-					<td>*</td>
-					<td>
-						<span title="Codes: {http://example.org/eligibility dva}">DVA Required</span>
-					</td>
-					<td>Returned veterans by referral only</td>
-				</tr>
-			</table>
 		</div>
 	</text>
 	<identifier>
@@ -56,6 +38,7 @@
 			<display value="Cardiothoracic surgery"/>
 		</coding>
 	</specialty>
+	<name value="Cardiothoracic Services" />
 	<telecom>
 		<system value="phone"/>
 		<value value="0255503333"/>
@@ -89,14 +72,4 @@
 		<value value="0255505555"/>
 		<use value="work"/>
 	</telecom>
-	<eligibility>
-		<code>
-			<coding>
-				<system value="http://example.org/eligibility"/>
-				<code value="dva"/>
-				<display value="DVA Required"/>
-			</coding>
-		</code>
-		<comment value="Returned veterans by referral only"/>
-	</eligibility>
 </HealthcareService>
