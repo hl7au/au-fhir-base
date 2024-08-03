@@ -1,3 +1,1 @@
-<p class="request-for-feedback">This extension is published at <a href="generalguidance.html#maturity-levels">FHIR maturity model DRAFT 0</a> level only.  Input is requested to assess whether this extension has support to be approved, should be retained as a draft for further discussion or is no longer needed.  Please comment by raising <a href="https://jira.hl7.org/projects/FHIR/issues">HL7 Jira Issues</a>.</p>
-
 ### Usage Notes
