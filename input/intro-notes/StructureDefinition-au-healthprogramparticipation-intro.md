@@ -1,3 +1,2 @@
-<p class="request-for-feedback">This profile is published at [FHIR maturity model DRAFT 0](generalguidance.html#maturity-levels) level only.  Input is requested to assess whether this profile has support to proceed with further development, should be retained for further discussion or is no longer needed.  Please comment by raising <a href="https://jira.hl7.org/projects/FHIR/issues">HL7 Jira Issues</a>.</p>
-
+<p class="request-for-feedback">This profile is published at <a href="generalguidance.html#maturity-levels">FHIR maturity model DRAFT 0</a> level only.  Input is requested to assess whether this profile has support to be approved, should be retained as a draft for further discussion or is no longer needed.  Please comment by raising <a href="https://jira.hl7.org/projects/FHIR/issues">HL7 Jira Issues</a>.</p>
 ### Usage Notes
