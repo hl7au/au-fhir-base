@@ -84,12 +84,12 @@ jobs:
     - name: Download package-feed.xml
       run: |
         curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
-        curl --output webroot/fhir/package-feed.$(date+’%Y/%m/%d’).xml --url https://hl7.org.au/fhir/package-feed.xml
+        curl --output webroot/fhir/package-feed.bak.xml --url https://hl7.org.au/fhir/package-feed.xml
 
     - name: Download publication-feed.xml
       run: |
         curl --output webroot/fhir/publication-feed.xml --url https://hl7.org.au/fhir/publication-feed.xml
-        curl --output webroot/fhir/publication-feed.$(date+’%Y/%m/%d’).xml --url https://hl7.org.au/fhir/publication-feed.xml
+        curl --output webroot/fhir/publication-feed.bak.xml --url https://hl7.org.au/fhir/publication-feed.xml
 
     - name: Generate Package Registry
       run: |
