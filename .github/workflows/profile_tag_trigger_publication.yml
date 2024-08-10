@@ -113,7 +113,8 @@ jobs:
         path: ./output.zip
     
     - name: Upload Base webroot to S3
-      run: aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
-
-    #   - name: Upload Base output to S3
-    #     run: aws s3 cp ./hl7au/au-fhir-base/output s3://hl7au-fhir-ig/fhir/output --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+      run: |
+        aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        aws s3 cp ./webroot/fhir/package-feed.xml s3:///hl7au-fhir-ig/fhir/package-feed.aubase.xml
+        aws s3 cp ./webroot/fhir/publication-feed.xml s3:///hl7au-fhir-ig/fhir/publication-feed.aubase.xml
+        
