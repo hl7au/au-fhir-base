@@ -44,6 +44,61 @@ The following FMM levels are defined:
 
 Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
 
+### SNOMED CT-AU 
+[SNOMED CT](https://snomed.info/sct) (Systematized Nomenclature of Medicine – Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information.
+In Australia, SNOMED CT-AU extends SNOMED CT for recording structured clinical data in health
+records in Australian conditions. Many SNOMED CT-AU value sets have already been developed and published by the National Clinical Terminology Service [NCTS](https://www.healthterminologies.gov.au). 
+These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability. 
+
+#### SNOMED CT Version Options
+
+1. Using only the system http://snomed.info/sct refers to an unspecified edition and version of SNOMED CT. For example:
+
+    ~~~
+    "code": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct,
+                    "code": "322236009",
+                    "display": "Paracetamol 500 mg oral tablet"
+                }
+            ],
+            "text": "paracetamol 500 mg tablet"
+        }
+    ~~~
+
+1. Using the system *plus* the AU extension identifier `http://snomed.info/sct/32506021000036107` denotes using an unspecified version of the Australian edition of SNOMED CT (SNOMED CT-AU). For example: 
+
+    ~~~
+    "code": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct,
+                    "version": "http://snomed.info/sct/32506021000036107",
+                    "code": "322236009",
+                    "display": "Paracetamol 500 mg oral tablet"
+                }
+            ],
+            "text": "paracetamol 500 mg tablet"
+        }
+    ~~~
+
+1. Using the system *plus* the AU extension identifier, *plus* a version denotes using a specific version of SNOMED CT-AU `http://snomed.info/sct/32506021000036107/version/20240531`. For example: 
+
+    ~~~
+    "code": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct,
+                    "version": "http://snomed.info/sct/32506021000036107/version/20240531",
+                    "code": "23628011000036109",
+                    "display": "paracetamol 500 mg tablet"
+                }
+            ],
+            "text": "paracetamol 500 mg tablet"
+        }
+    ~~~
+
 ### Business Identifiers
 
 ["Business" identifiers](http://hl7.org/fhir/R4/resource.html#identifiers) are used extensively to consistently identify real world entities across systems, contexts of use, and other formats (e.g. HL7 v2 , CDA , XDS, and many more). 
