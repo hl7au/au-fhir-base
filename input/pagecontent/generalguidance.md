@@ -44,7 +44,7 @@ The following FMM levels are defined:
 
 Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
 
-### SNOMED CT-AU 
+### SNOMED CT Australian Edition
 [SNOMED CT](https://snomed.info/sct) (Systematized Nomenclature of Medicine – Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information.
 In Australia, SNOMED CT-AU extends SNOMED CT for recording structured clinical data in health
 records in Australian conditions. Many SNOMED CT-AU value sets have already been developed and published by the National Clinical Terminology Service [NCTS](https://www.healthterminologies.gov.au). 
