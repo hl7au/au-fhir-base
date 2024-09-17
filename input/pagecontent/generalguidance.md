@@ -46,13 +46,13 @@ Reference should also be made to [Version Management Policy](http://hl7.org/fhir
 
 ### SNOMED CT Australian Edition
 [SNOMED CT](https://snomed.info/sct) (Systematized Nomenclature of Medicine – Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information.
-In Australia, SNOMED CT-AU extends SNOMED CT for recording structured clinical data in health
-records in Australian conditions. Many SNOMED CT-AU value sets have already been developed and published by the National Clinical Terminology Service [NCTS](https://www.healthterminologies.gov.au). 
+In Australia SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT with local variations and customisation relevant to the Australian healthcare community.
+Many SNOMED CT-AU value sets have already been developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS). 
 These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability. 
 
 #### SNOMED CT Version Options
 
-1. Using only the system http://snomed.info/sct refers to an unspecified edition and version of SNOMED CT. For example:
+1. Using only the system http://snomed.info/sct refers to an unspecified edition and version of SNOMED CT. This default method leaves it to the server to select the SNOMED CT edition and version to validate against. For example:
 
     ~~~
     "code": {
@@ -67,7 +67,7 @@ These nationally agreed and published value sets are maximal in nature to suppor
         }
     ~~~
 
-1. Using the system *plus* the AU extension identifier `http://snomed.info/sct/32506021000036107` denotes using an unspecified version of the Australian edition of SNOMED CT (SNOMED CT-AU). For example: 
+1. Using the system *plus* the AU extension identifier `http://snomed.info/sct/32506021000036107` denotes using an unspecified version of the Australian edition of SNOMED CT (SNOMED CT-AU). This can be used to specify the Australian Edition for the purposes of validation of an Australian Medicinal Product code. For example: 
 
     ~~~
     "code": {
@@ -75,15 +75,15 @@ These nationally agreed and published value sets are maximal in nature to suppor
                 {
                     "system": "http://snomed.info/sct,
                     "version": "http://snomed.info/sct/32506021000036107",
-                    "code": "322236009",
-                    "display": "Paracetamol 500 mg oral tablet"
+                    "code": "23628011000036109",
+                    "display": "paracetamol 500 mg tablet"
                 }
             ],
             "text": "paracetamol 500 mg tablet"
         }
     ~~~
 
-1. Using the system *plus* the AU extension identifier, *plus* a version denotes using a specific version of SNOMED CT-AU `http://snomed.info/sct/32506021000036107/version/20240531`. For example: 
+1. Using the system *plus* the AU extension identifier, *plus* a version denotes using a specific version of SNOMED CT-AU `http://snomed.info/sct/32506021000036107/version/20240531`. This might be used for validating a Medicinal Product Unit of Use code from a previous version of SNOMED CT-AU. For example: 
 
     ~~~
     "code": {
