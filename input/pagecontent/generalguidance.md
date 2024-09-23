@@ -26,7 +26,7 @@ than the resources themselves. Guidance from early implementation will help addr
 
 All artifacts in this specification are assigned a "Maturity Level",known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
 
-The following FMM levels are defined:
+The following AFMM levels are defined:
 
 {:start="0"}
 **DRAFT 0** The resource or profile (artifact) has been published on the current build. Artifacts with this level must have a standards status of Draft.
