@@ -24,23 +24,24 @@ subjected to interoperability testing through connectathons and early adoption. 
 in a variety of environments. Others have received relatively little real-world exercise. In general, the infrastructure should be considered to be more stable 
 than the resources themselves. Guidance from early implementation will help address these areas.
 
-All artifacts in this specification are assigned a "Maturity Level", known as FMM (after the well-known CMM  grades). The FMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
+All artifacts in this specification are assigned a "Maturity Level",known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
+
 The following FMM levels are defined:
 
 {:start="0"}
-**DRAFT 0** The resource or profile (artifact) has been published on the current build. This level is synonymous with Draft.
+**DRAFT 0** The resource or profile (artifact) has been published on the current build. Artifacts with this level must have a standards status of Draft.
 
-**FMM 1** DRAFT 0 PLUS the artifact produces no warnings during the build process and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation. 
+**AFMM 1** DRAFT 0 PLUS the artifact produces no warnings or errors during the build process that have not been accepted by the responsible WG; and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation.
 
-**FMM 2** FMM 1 PLUS the artifact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using semi-realistic data and scenarios based on at least one of the declared scopes of the artifact (e.g. at a connectathon). These interoperability results must have been reported to and accepted by the responsible working group.
+**AFMM 2** AFMM 1 PLUS the artifact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using appropriate data and scenarios based on at least one of the declared scopes of the artifact (e.g. at a connectathon). These interoperability results must have been reported to and accepted by the FHIRWG.
 
-**FMM 3** FMM 2 PLUS the artifact has been verified by the work group as meeting the [Conformance Resource Quality Guidelines](https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria); has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organizations resulting in at least one substantive change.
+**AFMM 3** AFMM 2 PLUS the artifact has been verified by the work group as meeting the [Conformance Resource Quality Guidelines](https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria); has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organizations resulting in at least one substantive change.
 
-**FMM 4** FMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
+**AFMM 4** AFMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
 
-**FMM 5** FMM 5 PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
+**AFMM 5** AFMM 4 PLUS the artifact has been published in two formal publication release cycles at AFMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
 
-**Normative** the artifact is now considered stable.
+**Normative** AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the [inter-version](https://hl7.org/fhir/versions.html#change) change rules and the artifact has passed HL7 AU normative ballot. This is synonymous with [Normative](https://hl7.org/fhir/versions.html#normative) standard status.
 
 Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
 
