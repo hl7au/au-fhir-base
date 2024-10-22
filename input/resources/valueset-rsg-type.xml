@@ -17,7 +17,7 @@
     <status value="active" />
     <experimental value="false"/>
     <description value="The AU Recorded Sex or Gender Type value set includes codes that can be used to represent the type or category of sex or gender that is recorded." />
-    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc" />
+    <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc" />
     <compose>
        <include>
             <system value="http://loinc.org"/>
@@ -33,6 +33,12 @@
         </include>    
         <include>
             <system value="http://terminology.hl7.org.au/CodeSystem/rsg-type" />
+        </include>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="1515311000168102" />
+            </concept>
         </include>       
     </compose>
 </ValueSet>
