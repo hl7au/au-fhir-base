@@ -242,11 +242,17 @@ Sex Assigned at Birth is represented with the [Person Recorded Sex or Gender](ht
 - the type element is populated with the SNOMED CT code 1515311000168102\|Biological sex at birth\|
 - the value element is constrained to be [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
+<p class="stu-note">The FHIR Work Group is interested in views on whether <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a> value set should be a required binding in future releases of AU Base. Please join a meeting or contact the FHIR Work Group if you have any views or perspectives on this.</p>
+
 When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
   - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
   - *Female* may be represented by sending the SNOMED CT code 248152002\|Female\|
   - *Intersex* may be represented by sending the SNOMED CT code 32570691000036108\|Intersex\|
   - *Indeterminate sex* may be represented by sending the SNOMED CT code 32570681000036106\|Indeterminate sex\|
+  - *Prefer not to answer* may be represented by sending the Data Absent Reason code "asked-declined"
+  - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
+  - *Not stated or inadequately described* may be represented by sending the Data Absent Reason code "unknown"
+  - Where the workflow does not support obtaining a sex at birth, it may be represented by sending the Data Absent Reason code "not-asked"
 
 Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
