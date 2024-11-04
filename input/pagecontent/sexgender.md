@@ -43,7 +43,7 @@ When populating the value element of the [Individual Pronouns](http://hl7.org/fh
 - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
 - *Not stated or inadequately described* may be represented by sending the Data Absent Reason code "unknown"
 - Where the workflow does not support obtaining a pronoun, it may be represented by sending the Data Absent Reason code "not-asked"
-- Where a preferred pronoun is provided but is not one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative specific coded value can be supplied.
+- Where a pronoun is provided but does not correspond to one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative specific coded value can be supplied.
 
 Example: Practitioner resource with pronouns
 ~~~
