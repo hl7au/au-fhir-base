@@ -77,7 +77,7 @@ When constructing a local identifier it is preferable that an organisation uses 
 
 HPI-O scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record or a pathology report by combining a dedicated Australian Digital Health Agency published namespace and their HPI-O to construct a legal, globally unique identifier system for their local identifiers.
 
-The full list of available identifier namespaces can be found by browsing the [ns.electronichealth.net.au identifier namespaces](http://ns.electronichealth.net.au/browse-identifiers.html); there are several HPI-O scoped identifier namespaces available:
+The full list of available identifier namespaces can be found by browsing the [ns.electronichealth.net.au identifier namespaces](https://developer.digitalhealth.gov.au/namespaces/browse-identifiers.html); there are several HPI-O scoped identifier namespaces available:
    - http://ns.electronichealth.net.au/id/hpio-scoped/accessionnumber/1.0
    - http://ns.electronichealth.net.au/id/hpio-scoped/dispense/1.0
    - http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0
@@ -102,7 +102,7 @@ The value contains the local identifier, e.g.:
 The assigner contains the name of the organisation that issues or manages the identifier, e.g.:
 
 ~~~
-assigner" : {
+"assigner" : {
     "display" : "Devonport Family Medicine Clinic"
 }
 ~~~
@@ -138,7 +138,7 @@ Example: PractitionerRole resource with an employee number (local identifier)
 
 ABN scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record by combining a dedicated Australian Digital Health Agency published namespace and their ABN to construct a legal, globally unique identifier system for their local identifiers.
 
-The full list of available identifier namespaces can be found by browsing the [ns.electronichealth.net.au identifier namespaces](http://ns.electronichealth.net.au/browse-identifiers.html); there are two ABN-scoped identifier namespaces available:
+The full list of available identifier namespaces can be found by browsing the [ns.electronichealth.net.au identifier namespaces](https://developer.digitalhealth.gov.au/namespaces/browse-identifiers.html); there are two ABN-scoped identifier namespaces available:
    - http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0
    - http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0
 
@@ -158,7 +158,7 @@ The value contains the local identifier, e.g.:
 The assigner contains the name of the organisation that issues or manages the identifier, e.g.:
 
 ~~~
-assigner" : {
+"assigner" : {
     "display" : "Test Hospital Org"
 }
 ~~~
@@ -190,7 +190,7 @@ Example: Patient resource with a medical record number (local identifier)
 ~~~
 
 
-### Ahpra Data Guidance
+### Australian Health Practitioner Regulation Agency (Ahpra) Data Guidance
 This guidance on the representation of Ahpra-sourced data is taken and adapted from Ahpra's practitioner information exchange (PIE) interoperability specification: Find registration.
 
 Ahpra data items should be exchanged using a Practitioner resource.
