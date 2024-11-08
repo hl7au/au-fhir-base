@@ -43,7 +43,7 @@ When populating the value element of the [Individual Pronouns](http://hl7.org/fh
 - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
 - *Not stated or inadequately described* may be represented by sending the Data Absent Reason code "unknown"
 - Where the workflow does not support obtaining a pronoun, it may be represented by sending the Data Absent Reason code "not-asked"
-- Where a preferred pronoun is provided but is not one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative specific coded value can be supplied.
+- Where a pronoun is provided but does not correspond to one of the [Australian Pronouns](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/australian-pronouns-1) terms then a text only or alternative specific coded value can be supplied.
 
 Example: Practitioner resource with pronouns
 ~~~
@@ -159,7 +159,7 @@ RSG is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir
 - the sourceDocument element is constrained to be [AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 - the jurisdiction element is constrained to be [Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
-RSG information includes the various sex and gender concepts that are often used in existing systems but are known NOT to represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. When populating recorded sex or gender it is important to select a meaningful terminology for the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. For example, when representing a biological sex value it is recommended to use a biological sex value set. See [Sex Assigned at Birth](sexgender.html#sex-assigned-at-birth) for specific guidance on the representation of Sex Assigned at Birth.
+RSG information includes the various sex and gender concepts that are often used in existing systems but are known to not reliably represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. When populating recorded sex or gender it is important to select a meaningful terminology for the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. For example, when representing a biological sex value it is recommended to use a biological sex value set. See [Sex Assigned at Birth](sexgender.html#sex-assigned-at-birth) for specific guidance on the representation of Sex Assigned at Birth.
 
 Example: Patient resource with recorded gender from a passport
 ~~~
@@ -242,11 +242,17 @@ Sex Assigned at Birth is represented with the [Person Recorded Sex or Gender](ht
 - the type element is populated with the SNOMED CT code 1515311000168102\|Biological sex at birth\|
 - the value element is constrained to be [Biological Sex](https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
+<p class="stu-note">The FHIR Work Group is interested in views on whether <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a> value set should be a required binding in future releases of AU Base. Please join a meeting or contact the FHIR Work Group if you have any views or perspectives on this.</p>
+
 When populating the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension for Sex Assigned at Birth:
   - *Male* may be represented by sending the SNOMED CT code 248153007\|Male\|
   - *Female* may be represented by sending the SNOMED CT code 248152002\|Female\|
   - *Intersex* may be represented by sending the SNOMED CT code 32570691000036108\|Intersex\|
   - *Indeterminate sex* may be represented by sending the SNOMED CT code 32570681000036106\|Indeterminate sex\|
+  - *Prefer not to answer* may be represented by sending the Data Absent Reason code "asked-declined"
+  - *Asked but not known* may be represented by sending the Data Absent Reason code "asked-unknown"
+  - *Not stated or inadequately described* may be represented by sending the Data Absent Reason code "unknown"
+  - Where the workflow does not support obtaining a sex at birth, it may be represented by sending the Data Absent Reason code "not-asked"
 
 Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
