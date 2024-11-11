@@ -115,6 +115,10 @@ To help implementers, only the more significant changes are listed here.
       <li><a href="StructureDefinition-name-context.html">Name Context</a> extension, <a href="ValueSet-name-context.html">Name Context</a> value set, <a href="CodeSystem-name-context.html">Name Context</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46535">FHIR-46535</a>)</li>
     </ul>
   </li>
+  <li>CodeSystem and ValueSet profile changed to align with NCTS <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4">Complete CodeSystem 4</a> and <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> Composed ValueSet 4</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a> and <a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>) 
+  </li>
+  <li>CodeSystem properties updated to align with NCTS <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4">Complete CodeSystem 4</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>) 
+  </li>
 </ul>
 
 ### Release 4.1.0
