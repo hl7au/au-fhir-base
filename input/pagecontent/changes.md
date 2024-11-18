@@ -12,7 +12,7 @@ To help implementers, only the more significant changes are listed here.
   <li>TBD.</li>
   <li>New profiles:
   <ul>
-  <li>None</li>
+  <li><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
   </ul>
   </li>
   <li>New extensions:
@@ -92,7 +92,9 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
+  <li>Deprecated <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
+  <li>Changed Coverage.identifier type in <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> to add AU Pensioner Concession Card Number, AU Commonwealth Seniors Health Card Number and AU Health Care Card Number (<a href="https://jira.hl7.org/browse/FHIR-47191">FHIR-47191</a>).</li>
   <li>Changed Observation.code to add additional bindings for component value sets in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> (<a href="https://jira.hl7.org/browse/FHIR-46080">FHIR-46080</a>).</li>
   <li>Changed Medication.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medication.html">AU Base Medication</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
   <li>Changed MedicationAdministration.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
@@ -114,6 +116,10 @@ To help implementers, only the more significant changes are listed here.
       <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://jira.hl7.org/browse/FHIR-46534">FHIR-46534</a>)</li>
       <li><a href="StructureDefinition-name-context.html">Name Context</a> extension, <a href="ValueSet-name-context.html">Name Context</a> value set, <a href="CodeSystem-name-context.html">Name Context</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46535">FHIR-46535</a>)</li>
     </ul>
+  </li>
+  <li>Updated AU Base CodeSystem resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>) 
+  </li>
+  <li>Updated AU Base ValueSet resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>) 
   </li>
 </ul>
 
