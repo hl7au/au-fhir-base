@@ -44,9 +44,14 @@
         <valueString value="32788511952" />
       </example>
       <maxLength value="11" />
-    <extension url="http://hl7.org/fhir/StructureDefinition/minLength">
-		    <valueInteger value="10"/>
-	    </extension>
+      <condition value="inv-mcn-01"/>
+        <constraint>
+        <key value="inv-mcn-01"/>
+        <severity value="error"/>
+        <human value="Medicare Card Number shall be at least 10 digits"/>
+        <expression value="$this.toString().length() >= 10"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber"/>
+      </constraint>
     </element>
     <element id="Identifier.period">
       <path value="Identifier.period" />
