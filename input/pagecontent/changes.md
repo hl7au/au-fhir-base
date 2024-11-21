@@ -93,6 +93,7 @@ To help implementers, only the more significant changes are listed here.
     </ul>
   </li>
   <li>Deprecated <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
+  <li>Removed minimum constraint on Identifier.assigner in <a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
   <li>Changed Coverage.identifier type in <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> to add AU Pensioner Concession Card Number, AU Commonwealth Seniors Health Card Number and AU Health Care Card Number (<a href="https://jira.hl7.org/browse/FHIR-47191">FHIR-47191</a>).</li>
   <li>Changed Observation.code to add additional bindings for component value sets in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> (<a href="https://jira.hl7.org/browse/FHIR-46080">FHIR-46080</a>).</li>
