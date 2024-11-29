@@ -126,7 +126,6 @@ To help implementers, only the more significant changes are listed here.
   <li>Deprecated <a href="StructureDefinition-encounter-description.html">Encounter Description</a> extension and removed reference to Encounter Description from <a href="StructureDefinition-au-encounter">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>)</li>
 </ul>
 
-
 ### Release 4.1.0
 - Publication date: 2023-02-22
 - Publication status: Trial Use
