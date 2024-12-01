@@ -35,7 +35,7 @@ The relationship of AU Base to other implementation guides is shown in the figur
  <div> 
     <img src="context-colour.png" alt="Relationship to other IGs" style="width:70%"/>
   </div>
-*Figure 3: Relationship to Other IGs*
+*Figure 2: Relationship to Other IGs*
 <br/>
 
 Implementation Guide |Relationship
