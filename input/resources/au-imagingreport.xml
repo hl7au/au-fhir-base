@@ -12,7 +12,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="DiagnosticReport" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport" />
   <derivation value="constraint" />
   <differential>
     <element id="DiagnosticReport">
@@ -43,8 +43,8 @@
     </element>
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
-      <short value="Relevant diagnostic imaging category: service, modality and anatomic region of interest" />
-      <comment value="A category denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available. A third category to provide the anatomic region of interest should be provided where possible."/>
+      <short value="Relevant diagnostic imaging category: service, modality" />
+      <comment value="A category denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available."/>
       <min value="1" />
     </element>
     <element id="DiagnosticReport.category.coding">
@@ -56,20 +56,6 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-    </element>
-    <element id="DiagnosticReport.category.coding:anatomicRegionOfInterest">
-      <path value="DiagnosticReport.category.coding"/>
-      <sliceName value="anatomicRegionOfInterest"/>
-      <short value="Anatomic Region Of Interest"/>
-      <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1"/>
-      </binding>
-    </element>
-    <element id="DiagnosticReport.category.coding:anatomicRegionOfInterest.system">
-      <path value="DiagnosticReport.category.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
     </element>
     <element id="DiagnosticReport.code">
       <path value="DiagnosticReport.code" />

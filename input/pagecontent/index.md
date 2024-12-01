@@ -22,7 +22,8 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Sex and Gender](sexgender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Base and other implementation guides.
   - [Future of AU Base](future.html): This page outlines the yearly update cycle and approach to maturing AU Base.
-- [FHIR Artefacts](artifacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
+- [FHIR Artefacts](fhirartefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
+  - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to represent Australian local concepts using FHIR. Each profile page includes a narrative description, guidance, and formal definition. Although the guidance typically focuses on the profiled elements and seeks to provide a ‘how-to’ guide when representing concepts, it may also may focus on un-profiled elements to aid with implementation.
   - [Search Parameters](search-parameters.html): This page lists the search parameters defined in this guide for use in AU operations.
   - [Terminology](terminology.html): This page lists the value sets and code systems localised in this guide.
