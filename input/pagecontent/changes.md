@@ -1,4 +1,4 @@
-### Release 4.2.1-preview
+### Release 4.2.2-preview
 - Publication date: 2 December 2024
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
