@@ -1,3 +1,6 @@
+<p class="stu-note">This profile is deprecated. See <a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a>.</p>
+
+
 ### Usage Notes
 
 **Profile specific implementation guidance:**
