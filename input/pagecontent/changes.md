@@ -106,7 +106,7 @@ To help implementers, only the more significant changes are listed here.
   <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
   <li>Added a guidance page on sex, gender, and related concepts to AU Base to provide guidance on Name to Use, Gender Identity, Pronouns, Recorded Sex or Gender, and Sex Assigned at Birth (<a href="https://jira.hl7.org/browse/FHIR-46415">FHIR-46415</a>, <a href="https://jira.hl7.org/browse/FHIR-46429">FHIR-46429</a>, <a href="https://jira.hl7.org/browse/FHIR-46430">FHIR-46430</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>).</li>
-  <li>Added Biological Sex at Birth code to <a href="http://terminology.hl7.org.au/ValueSet/rsg-type">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
+  <li>Added Biological Sex at Birth code to <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
   <li>Maturity level changed to FMM 1 for the following:
     <ul>
       <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set, <a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46528">FHIR-46528</a>)</li>
