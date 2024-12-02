@@ -10,7 +10,7 @@
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest" />
   <name value="AUBaseDiagnosticRequest" />
   <title value="AU Base Diagnostic Request" />
-  <status value="active" />
+  <status value="retired" />
   <description value="This profile defines a service request structure to represent a request for a diagnostic investigation in an Australian context. This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations." />
   <kind value="resource" />
   <abstract value="false" />
@@ -20,8 +20,8 @@
   <differential>
     <element id="ServiceRequest">
       <path value="ServiceRequest" />
-      <short value="A diagnostic service request in an Australian healthcare context" />
-      <definition value="A record of a request for one or more diagnostic investigations to be performed." />
+      <short value="Deprecated: A diagnostic service request in an Australian healthcare context" />
+      <definition value="This profile is deprecated because it is use case specific. It is replaced by [AU Base Service Request](StructureDefinition-au-servicerequest.html), which is broader in scope and allows use case specific profiling downstream. A record of a request for one or more diagnostic investigations to be performed." />
     </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension" />
