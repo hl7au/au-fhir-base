@@ -242,6 +242,9 @@ To help implementers, only the more significant changes are listed here.
       <li><a href="StructureDefinition-name-context.html">Name Context</a> extension, <a href="ValueSet-name-context.html">Name Context</a> value set, <a href="CodeSystem-name-context.html">Name Context</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46535">FHIR-46535</a>)</li>
     </ul>
   </li>
+  <li>Deprecated <a href="StructureDefinition-encounter-description.html">Encounter Description</a> extension and removed reference to Encounter Description from <a href="StructureDefinition-au-encounter">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>)</li>
+  <li>Removed DiagnosticReport.category.coding:anatomicRegionOfInterest slice from <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46933">FHIR-46933</a>)</li>
+  <li>Change base definition of <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a> and <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a> to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
 </ul>
 
 ### Release 4.1.0
