@@ -7,6 +7,29 @@ To help implementers, only the more significant changes are listed here.
 
 #### Changes in this version
 <ul>
+  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
+    <ul>
+      <li>moved the usage of the BodyStructure reference extension to the Observation element instead of Observation.bodySite, renamed the slice from bodySite to bodyStructure, and added invariant inv-obs-1 to ensure  that bodySite and bodyStructure are mutually exclusive (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)
+      </li>
+    </ul>
+  </li>
+    <li>Changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
+    <ul>
+      <li>renamed the bodySite slice to bodyStructure, and added invariant inv-obs-1 to ensure that bodySite and bodyStructure are mutually exclusive (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)
+      </li>
+    </ul>
+  </li>
+</ul>
+
+### Release 4.2.2-preview
+- Publication date: 2024-12-02
+- Publication status: Preview
+- Based on FHIR version: 4.0.1
+
+To help implementers, only the more significant changes are listed here.
+
+#### Changes in this version
+<ul>
   <li>New profiles:
   <ul>
   <li><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
