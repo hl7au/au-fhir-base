@@ -141,7 +141,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 ### Concept Maps
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the base FHIR specification. The following concept maps are unique to this guide and not listed in the base FHIR specification.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the base FHIR specification. The following Australian concept maps are unique to this guide and not listed in the base FHIR specification. These are relevant to value sets that are bound to AU Base profiles.
 
 **Concept maps published in the NCTS**
 - [Australian States and Territories v1 to Australian States and Territories v2](https://healthterminologies.gov.au/fhir/ConceptMap/australian-states-territories-v1-to-v2-1)
