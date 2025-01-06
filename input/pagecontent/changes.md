@@ -124,8 +124,7 @@ To help implementers, only the more significant changes are listed here.
   <li>Removed codes from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>)
   </li>
   <li>Removed DiagnosticReport.category.coding:anatomicRegionOfInterest slice from <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46933">FHIR-46933</a>)</li>
-  <li>Change base definition of <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a> and <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a> to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
-  <li>Changed Observation.effective[x] type in <a href="StructureDefinition-au-diagnosticresult.html"> AU Base Diagnostic Result </a> to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
+  <li>Change base definition of <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a> and <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a> to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li> 
 </ul>
 
 ### Release 4.2.2-ballot
