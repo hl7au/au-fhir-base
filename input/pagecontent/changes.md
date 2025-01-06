@@ -6,7 +6,33 @@
 To help implementers, only the more significant changes are listed here.
 
 #### Changes in this version
-<ul>TBD
+<ul>
+<li>New profiles:
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>New extensions:
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>New value sets:
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>New code systems:
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>New search parameters:
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>Changed Observation.effective[x] type in <a href="StructureDefinition-au-diagnosticresult.html"> AU Base Diagnostic Result </a> to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
 </ul>
 
 ### Release 4.2.2-preview
