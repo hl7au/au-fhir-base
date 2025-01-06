@@ -120,7 +120,9 @@ To help implementers, only the more significant changes are listed here.
   <li>Updated AU Base CodeSystem resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>) 
   </li>
   <li>Updated AU Base ValueSet resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>) 
-  </li>  
+  </li>
+  <li>Removed codes from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>)
+  </li>
   <li>Removed DiagnosticReport.category.coding:anatomicRegionOfInterest slice from <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46933">FHIR-46933</a>)</li>
   <li>Change base definition of <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a> and <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a> to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
 </ul>
@@ -194,7 +196,7 @@ To help implementers, only the more significant changes are listed here.
           <li>add Individual Pronouns (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
           <li>add Person Recorded Sex Or Gender (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
         </ul>
-      </li> 
+      </li>
       <li>Added invariant inv-relper-0 to apply Gender Identity Response value set (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
       <li>Added invariant inv-relper-1 to apply Australian Pronouns value set (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
       <li>Added invariant inv-relper-2 to RSG.type to bind AU Recorded Sex or Gender Type (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
