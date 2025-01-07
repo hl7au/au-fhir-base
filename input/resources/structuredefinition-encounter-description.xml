@@ -4,6 +4,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/> 
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="deprecated"/> 
+  </extension> 
   <url value="http://hl7.org.au/fhir/StructureDefinition/encounter-description"/>
   <name value="EncounterDescription"/>
   <title value="Encounter Description"/>
@@ -20,13 +23,10 @@
   <derivation value="constraint"/>
   <differential>
     <element id="Extension">
-     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="deprecated"/> 
-      </extension> 
       <path value="Extension"/>
-      <short value="Deprecated. Description, overview or summary of an encounter"/>
+      <short value="Deprecated: Description, overview or summary of an encounter"/>
       <definition
-        value="This extension is deprecated. Description, overview or summary of a clinical event and its reasons."/>
+        value="This extension is deprecated because the original purpose of including clinical notes with an Encounter, for example an Event Summary clinical synopsis, is no longer best practice.  Future discussion is required to consider an approach for clinical notes, and input is invited on whether this extension is required or currently implemented. Description, overview or summary of a clinical event and its reasons."/>
       <max value="1" />
     </element>
     <element id="Extension.url">

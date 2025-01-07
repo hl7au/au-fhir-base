@@ -40,6 +40,12 @@ To help implementers, only the more significant changes are listed here.
   <li><a href="SearchParameter-gender-identity.html">GenderIdentity</a> (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
   </ul>
   </li>
+  <li>Deprecated:
+  <ul>
+  <li><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
+  <li><a href="StructureDefinition-encounter-description.html">Encounter Description</a>  (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
+  </ul>
+  </li>
   <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Patient.extension changed to:
@@ -89,10 +95,6 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
-  <li>Deprecations
-    <li>Deprecated <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
-    <li>Deprecated <a href="StructureDefinition-encounter-description.html">Encounter Description</a>  (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
-  </li>
   <li>Removed cardinality constraint on Identifier.assigner in <a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a>, changing it from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
   <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
@@ -128,8 +130,9 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>Removed DiagnosticReport.category.coding:anatomicRegionOfInterest slice from <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46933">FHIR-46933</a>)</li>
   <li>Change base definition of <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a> and <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a> to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
+  <li>Removed Encounter Description extension from <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>)</li>
 </ul>
-<li>Removed reference to Encounter Description from <a href="StructureDefinition-au-encounter">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>)</li>
+
 
 ### Release 4.2.2-ballot
 - Publication date: 2024-08-04
