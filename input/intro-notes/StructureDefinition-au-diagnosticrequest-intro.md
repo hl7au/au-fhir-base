@@ -1,5 +1,4 @@
-<p class="stu-note">This profile is deprecated. See <a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a>.</p>
-
+<p class="stu-note">This profile is deprecated because it is use case specific, and work is being undertaken by the AU eRequesting project to define an <a href="https://build.fhir.org/ig/hl7au/au-fhir-erequesting/StructureDefinition-au-erequesting-diagnosticrequest.html">AU eRequesting Diagnostic Request</a> profile. It is replaced by <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-servicerequest.html">AU Base Service Request</a>, which is broader in scope and allows use case specific profiling downstream.</p>
 
 ### Usage Notes
 
