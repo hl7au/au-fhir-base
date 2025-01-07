@@ -6,6 +6,9 @@
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="deprecated"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
+      <valueMarkdown value="This profile is deprecated in AU Base as work is being undertaken in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project to define the requirements for a diagnostic request. In AU Base this profile is replaced by [AU Base Service Request](StructureDefinition-au-servicerequest.html), which localises core concepts, including identifiers and terminology, for use in an Australian context and enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs."/>
+    </extension>
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest" />
   <name value="AUBaseDiagnosticRequest" />
@@ -21,7 +24,7 @@
     <element id="ServiceRequest">
       <path value="ServiceRequest" />
       <short value="Deprecated: A diagnostic service request in an Australian healthcare context" />
-      <definition value="This profile is deprecated because it is use case specific, and work is being undertaken by the AU eRequesting project to define an [AU eRequesting Diagnostic Request](https://build.fhir.org/ig/hl7au/au-fhir-erequesting/StructureDefinition-au-erequesting-diagnosticrequest.html) profile. It is replaced by [AU Base Service Request](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-servicerequest.html), which is broader in scope and allows use case specific profiling downstream. A record of a request for one or more diagnostic investigations to be performed." />
+      <definition value="This profile is deprecated in AU Base as work is being undertaken in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project to define the requirements for a diagnostic request. In AU Base this profile is replaced by [AU Base Service Request](StructureDefinition-au-servicerequest.html), which localises core concepts, including identifiers and terminology, for use in an Australian context and enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs. A record of a request for one or more diagnostic investigations to be performed." />
     </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension" />

@@ -92,19 +92,19 @@ To help implementers, only the more significant changes are listed here.
   <li>Changes to <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a>: 
   <ul>
     <li>Removed DiagnosticReport.category.coding:anatomicRegionOfInterest slice (<a href="https://jira.hl7.org/browse/FHIR-46933">FHIR-46933</a>)</li>
-    <li>Changed referenced profile for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
+    <li>Changed Type for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
   </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a>:
   <ul>
     <li>Changed base definition to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
-    <li>Changed referenced profile for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
+    <li>Changed Type for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
   </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a>:
   <ul>
     <li>Changed base definition to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
-    <li>Changed referenced profile for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
+    <li>Changed Type for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
   </ul>
   </li>
   <li>Deprecated <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
