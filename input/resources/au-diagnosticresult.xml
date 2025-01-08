@@ -28,7 +28,7 @@
       <constraint>
         <key value="inv-obs-1" />
         <severity value="error" />
-        <human value="bodyStructure shall only be present if Observation.bodySite is not present" />
+        <human value="bodySite extension shall only be present if Observation.bodySite is not present" />
         <expression value="bodySite.exists() implies extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()"/>
       </constraint>
     </element>
