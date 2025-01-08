@@ -1,3 +1,4 @@
 - [General Guidance](generalguidance.html)
+- [Sex and Gender](sexgender.html)
 - [Relationship with other IGs](relationship.html)
 - [Future of AU Base](future.html)
