@@ -47,16 +47,6 @@
       <comment value="A category denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available."/>
       <min value="1" />
     </element>
-    <element id="DiagnosticReport.category.coding">
-      <path value="DiagnosticReport.category.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
     <element id="DiagnosticReport.code">
       <path value="DiagnosticReport.code" />
       <short value="Diagnostic imaging examination or study" />
