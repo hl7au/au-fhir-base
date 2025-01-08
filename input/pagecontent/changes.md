@@ -126,14 +126,14 @@ To help implementers, only the more significant changes are listed here.
   <li>Change base definition of <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a> and <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a> to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>)</li>
   <li>Changed Observation.effective[x] type in <a href="StructureDefinition-au-diagnosticresult.html"> AU Base Diagnostic Result </a> to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
 <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:<ul>
-    <li>moved the usage of the bodySite extension to the Observation element instead of Observation.bodySite (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
-    <li>changed the bodySite extension slice name from bodySite to bodyStructure(<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
-    <li>to ensure the bodySite extension is present only when Observation.bodySite is not present preadopted from the R5 invariant (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
+    <li>moved the BodyStructure Reference extension to the Observation element instead of Observation.bodySite (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
+    <li>changed the BodyStructure Reference extension slice name from bodySite to bodyStructure(<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
+    <li>added invariant inv-obs-1 to preadopt behaviors expected in R5 by ensuring the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
   </ul>
 </li>
 <li>Changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:<ul>
-    <li>changed the bodySite extension slice name from bodySite to bodyStructure(<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
-    <li>added invariant inv-obs-1 to ensure the bodySite extension is present only when Observation.bodySite is not present preadopted from the R5 invariant (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
+    <li>changed the BodyStructure Reference extension slice name from bodySite to bodyStructure(<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
+    <li>added invariant inv-obs-1 to preadopt behaviors expected in R5 by ensuring the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
   </ul>
 </li>
 </ul>
