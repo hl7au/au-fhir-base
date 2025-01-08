@@ -15,7 +15,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 |ValueSet|Profile where used|Available from|Publisher|
 |---|---|---|---|
 |[Accession Number Type](ValueSet-accession-number-type.html)|[AU Accession Number](StructureDefinition-au-accessionnumber.html)|AU Base|HL7 Australia|
-|[ActEncounterCode - AU Extended](ValueSet-au-v3-ActEncounterCode-extended.html)|[AU Base Encounter](StructureDefinition-au-encounter.html)|AU Base|Australian Digital Health Agency|
+|[ActEncounterCode - AU Extended](ValueSet-au-v3-ActEncounterCode-extended.html)|[AU Base Encounter](StructureDefinition-au-encounter.html)|AU Base|HL7 Australia|
 |[Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)|[AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html)|NCTS|Australian Digital Health Agency|
 |[AMT Medicinal Product and Substances](ValueSet-amt-mp-codes.html)|[AU Base Medication](StructureDefinition-au-medication.html)|AU Base|Australian Digital Health Agency
 |[Assertion Of Absence](https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1)|[AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html)|NCTS|Australian Digital Health Agency|
