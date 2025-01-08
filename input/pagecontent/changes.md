@@ -104,19 +104,6 @@ To help implementers, only the more significant changes are listed here.
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
   <li>Added a guidance page on sex, gender, and related concepts to AU Base to provide guidance on Name to Use, Gender Identity, Pronouns, Recorded Sex or Gender, and Sex Assigned at Birth (<a href="https://jira.hl7.org/browse/FHIR-46415">FHIR-46415</a>, <a href="https://jira.hl7.org/browse/FHIR-46429">FHIR-46429</a>, <a href="https://jira.hl7.org/browse/FHIR-46430">FHIR-46430</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>).</li>
   <li>Added Biological Sex at Birth code to <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
-  <li>Maturity level changed to FMM 1 for the following:
-    <ul>
-      <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set, <a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46528">FHIR-46528</a>)</li>
-      <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> value set, <a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46529">FHIR-46529</a>)</li>
-      <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46530">FHIR-46530</a>)</li>
-     <li><a href="StructureDefinition-au-paididentifier.html">AU PAI-D Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-46531">FHIR-46531</a>)</li>
-     <li><a href="StructureDefinition-au-residentialagedcareserviceidentifier.html">AU Residential Aged Care Service Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-46532">FHIR-46532</a>)</li>
-      <li><a href="StructureDefinition-au-substance.html">AU Base Substance</a> (<a href="https://jira.hl7.org/browse/FHIR-46533">FHIR-46533</a>)</li>
-      <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://jira.hl7.org/browse/FHIR-46534">FHIR-46534</a>)</li>
-      <li><a href="StructureDefinition-name-context.html">Name Context</a> extension, <a href="ValueSet-name-context.html">Name Context</a> value set, <a href="CodeSystem-name-context.html">Name Context</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46535">FHIR-46535</a>)</li>
-      <li><a href="StructureDefinition-result-copies-to.html">Result Copies To</a> extension (<a href="https://jira.hl7.org/browse/FHIR-47187">FHIR-47187</a>)</li>
-    </ul>
-  </li>
   <li>Updated AU Base CodeSystem resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>) 
   </li>
   <li>Updated AU Base ValueSet resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>) 
@@ -231,18 +218,6 @@ To help implementers, only the more significant changes are listed here.
   <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
   <li>Added a guidance page on sex, gender, and related concepts to AU Base to provide guidance on Name to Use, Gender Identity, Pronouns, Recorded Sex or Gender, and Sex Assigned at Birth (<a href="https://jira.hl7.org/browse/FHIR-46415">FHIR-46415</a>, <a href="https://jira.hl7.org/browse/FHIR-46429">FHIR-46429</a>, <a href="https://jira.hl7.org/browse/FHIR-46430">FHIR-46430</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>).</li>
-  <li>Maturity level changed to FMM 1 for the following:
-    <ul>
-      <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set, <a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46528">FHIR-46528</a>)</li>
-      <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> value set, <a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46529">FHIR-46529</a>)</li>
-      <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46530">FHIR-46530</a>)</li>
-     <li><a href="StructureDefinition-au-paididentifier.html">AU PAI-D Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-46531">FHIR-46531</a>)</li>
-     <li><a href="StructureDefinition-au-residentialagedcareserviceidentifier.html">AU Residential Aged Care Service Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-46532">FHIR-46532</a>)</li>
-      <li><a href="StructureDefinition-au-substance.html">AU Base Substance</a> (<a href="https://jira.hl7.org/browse/FHIR-46533">FHIR-46533</a>)</li>
-      <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://jira.hl7.org/browse/FHIR-46534">FHIR-46534</a>)</li>
-      <li><a href="StructureDefinition-name-context.html">Name Context</a> extension, <a href="ValueSet-name-context.html">Name Context</a> value set, <a href="CodeSystem-name-context.html">Name Context</a> code system (<a href="https://jira.hl7.org/browse/FHIR-46535">FHIR-46535</a>)</li>
-    </ul>
-  </li>
 </ul>
 
 ### Release 4.1.0
