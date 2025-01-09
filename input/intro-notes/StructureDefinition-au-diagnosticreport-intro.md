@@ -7,5 +7,5 @@
   - the individual component examinations are referenced by that grouping Observation in `Observation.hasMember` and not directly referenced in `DiagnosticReport.result`
   - `DiagnosticReport.code` and the study / panel Observation `Observation.code` should be the same concept if the report contains only the results of that study / panel
 - See each Identifier profile page for guidance related to that identifier type.
-- See the preferred [AU Base Pathology Report](StructureDefinition-au-pathologyreport.html) profile for guidance on representing a pathology report issued by the diagnostic service provider.
-- See the preferred [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html) profile for guidance on representing an imaging report issued by the diagnostic service provider.
+- For representing a pathology report issued by the diagnostic service provider, the [AU Base Pathology Report](StructureDefinition-au-pathologyreport.html) profile is preferred.
+- For representing an imaging report issued by the diagnostic service provider, the [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html) profile is preferred.
