@@ -4,10 +4,16 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/> 
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="deprecated"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
+    <valueMarkdown value="This extension is deprecated as supporting clinical summary information (including clinical notes) in a resource-level extension is not in alignment with widely implemented approaches internationally and not considered best practice.&#xA;&#xA;Support for clinical notes in Australia is subject to further discussion and input is sought from the community."/>
+  </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/encounter-description"/>
   <name value="EncounterDescription"/>
   <title value="Encounter Description"/>
-  <status value="active"/>
+  <status value="retired"/>
   <description value="This extension applies to the Encounter resource and is used to represent a narrative description of the healthcare event or encounter. The description may include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event. The description may capture text about the encounter that is not captured in other fields."/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -20,13 +26,10 @@
   <derivation value="constraint"/>
   <differential>
     <element id="Extension">
-     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/> 
-      </extension> 
       <path value="Extension"/>
-      <short value="Description, overview or summary of an encounter"/>
+      <short value="Deprecated: Description, overview or summary of an encounter"/>
       <definition
-        value="Description, overview or summary of a clinical event and its reasons."/>
+        value="This extension is deprecated as supporting clinical summary information (including clinical notes) in a resource-level extension is not in alignment with widely implemented approaches internationally and not considered best practice. Support for clinical notes in Australia is subject to further discussion and input is sought from the community.&#xA;&#xA;Description, overview or summary of a clinical event and its reasons."/>
       <max value="1" />
     </element>
     <element id="Extension.url">
