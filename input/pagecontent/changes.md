@@ -42,7 +42,7 @@ To help implementers, only the more significant changes are listed here.
   <li>Deprecated:
   <ul>
   <li><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
-  <li><a href="StructureDefinition-encounter-description.html">Encounter Description extension</a>  (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
+  <li><a href="StructureDefinition-encounter-description.html">Encounter Description</a> extension (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
   </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
