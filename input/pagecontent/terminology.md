@@ -10,14 +10,16 @@ Implementers are advised to take note that expansions of value sets visible in t
 
 ### Value Sets
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. The following value sets are unique to this guide and not listed in the base FHIR specification.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. 
+
+The following value sets are unique to this guide and not listed in the base FHIR specification. The "Available from" column indicates the source or location where the value set can be accessed, while the "Publisher" column identifies the organisation responsible for maintaining the value set.
 
 |ValueSet|Profile where used|Available from|Publisher|
 |---|---|---|---|
 |[Accession Number Type](ValueSet-accession-number-type.html)|[AU Accession Number](StructureDefinition-au-accessionnumber.html)|AU Base|HL7 Australia|
 |[ActEncounterCode - AU Extended](ValueSet-au-v3-ActEncounterCode-extended.html)|[AU Base Encounter](StructureDefinition-au-encounter.html)|AU Base|HL7 Australia|
 |[Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)|[AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html)|NCTS|Australian Digital Health Agency|
-|[AMT Medicinal Product and Substances](ValueSet-amt-mp-codes.html)|[AU Base Medication](StructureDefinition-au-medication.html)|AU Base|Australian Digital Health Agency
+|[AMT Medicinal Product and Substances](ValueSet-amt-mp-codes.html)|[AU Base Medication](StructureDefinition-au-medication.html)|AU Base|HL7 Australia|
 |[Assertion Of Absence](https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1)|[AU Assertion of No Relevant Finding](StructureDefinition-au-norelevantfinding.html)|NCTS|Australian Digital Health Agency|
 |[AU Time Zone](ValueSet-au-timezone.html)|[Australian Time Zone](StructureDefinition-au-timezone.html)|AU Base|HL7 Australia|
 |[Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)|[AU Base Immunisation](StructureDefinition-au-immunization.html)|NCTS|Australian Digital Health Agency|
@@ -50,8 +52,8 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 |[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|[AU Base Immunisation](StructureDefinition-au-immunization.html)|AU Base|HL7 Australia|
 |[Imaging Anatomic Region Of Interest](https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1)|[AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)|NCTS|Australian Digital Health Agency|
 |[Imaging Procedure](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1)|[AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)|NCTS|Australian Digital Health Agency|
-|[Immunisation Anatomical Site](https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1)|[AU Base Immunisation](StructureDefinition-au-immunization.html)|NCTS|
-|[Immunisation Route of Administration](https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1)|[AU Base Immunisation](StructureDefinition-au-immunization.html)|NCTS|
+|[Immunisation Anatomical Site](https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1)|[AU Base Immunisation](StructureDefinition-au-immunization.html)|NCTS|Australian Digital Health Agency|
+|[Immunisation Route of Administration](https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1)|[AU Base Immunisation](StructureDefinition-au-immunization.html)|NCTS|Australian Digital Health Agency|
 |[Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)|[AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html)|NCTS|Australian Digital Health Agency|
 |[Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)|[IHI Record Status](StructureDefinition-ihi-record-status.html)|NCTS|Australian Digital Health Agency|
 |[Individual Healthcare Identifier Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1)|[IHI Record Status](StructureDefinition-ihi-record-status.html)|NCTS|Australian Digital Health Agency|
@@ -60,13 +62,13 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 |[Medication Reason Taken](https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1)|[AU Base Medication Statement](StructureDefinition-au-medicationstatement.html)|NCTS|Australian Digital Health Agency|
 |[Medication Type](ValueSet-medication-type.html)|[Medication Type](StructureDefinition-medication-type.html)|AU Base|HL7 Australia|
 |[Medicine Item Change](ValueSet-medicine-item-change.html)|[AU Medicine List](StructureDefinition-au-medlist.html)|AU Base|HL7 Australia|
-|[Medicine Substitution Reason](https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1)|[AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html), [AU Base Medication Request](StructureDefinition-au-medicationrequest.html)|NCTS|
-|[MIMS](ValueSet-mims.html)|[AU Base Medication](StructureDefinition-au-medication.html), [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html), [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html), [AU Base Medication Request](StructureDefinition-au-medicationrequest.html), [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html)|AU Base|
+|[Medicine Substitution Reason](https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1)|[AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html), [AU Base Medication Request](StructureDefinition-au-medicationrequest.html)|NCTS|Australian Digital Health Agency|
+|[MIMS](ValueSet-mims.html)|[AU Base Medication](StructureDefinition-au-medication.html), [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html), [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html), [AU Base Medication Request](StructureDefinition-au-medicationrequest.html), [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html)|AU Base|HL7 Australia|
 |[Name Context](ValueSet-name-context.html)|[Name Context](StructureDefinition-name-context.html)|AU Base|HL7 Australia|
 |[Observation Category Codes - AU Extended](ValueSet-au-observation-category-extended.html)||AU Base|HL7 Australia|
 |[Order Identifier Type](ValueSet-order-identifier-type.html)|[AU Local Order Identifier](StructureDefinition-au-localorderidentifier.html)|AU Base|HL7 Australia|
-|[Participation in Health Program](https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1)|[AU Health Program Participation Summary](StructureDefinition-au-healthprogramparticipation.html)|NCTS|
-|[Pathology Diagnostic Service Category](https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1)|[AU Base Pathology Report](StructureDefinition-au-pathologyreport.html), [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html)|NCTS|
+|[Participation in Health Program](https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1)|[AU Health Program Participation Summary](StructureDefinition-au-healthprogramparticipation.html)|NCTS|Australian Digital Health Agency|
+|[Pathology Diagnostic Service Category](https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1)|[AU Base Pathology Report](StructureDefinition-au-pathologyreport.html), [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html)|NCTS|Australian Digital Health Agency|
 |[PBS Item Codes](ValueSet-pbs-item.html)|[AU Base Medication](StructureDefinition-au-medication.html), [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html), [AU Base Medication Dispense](StructureDefinition-au-medicationdispense.html), [AU Base Medication Request](StructureDefinition-au-medicationrequest.html), [AU Base Medication Statement](StructureDefinition-au-medicationstatement.html)|AU Base|HL7 Australia|
 |[Procedure](https://healthterminologies.gov.au/fhir/ValueSet/procedure-1)|[AU Base Procedure](StructureDefinition-au-procedure.html)|NCTS|Australian Digital Health Agency|
 |[RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3)|[AU Base Pathology Report](StructureDefinition-au-pathologyreport.html), [AU Base Pathology Result](StructureDefinition-au-pathologyresult.html)|NCTS|Australian Digital Health Agency|
@@ -81,7 +83,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 |[Related Person Relationship Type](https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1)|[AU Base Related Person](StructureDefinition-au-relatedperson.html)|NCTS|Australian Digital Health Agency|
 |[Route of Administration](https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1)|[AU Base Allergy Intolerance](StructureDefinition-au-allergyintolerance.html), [AU Base Dosage](StructureDefinition-au-dosage.html), [AU Base Medication Administration](StructureDefinition-au-medicationadministration.html)|NCTS|Australian Digital Health Agency|
 |[Separation Mode](https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1)|[AU Base Encounter](StructureDefinition-au-encounter.html)|NCTS|Australian Digital Health Agency|
-|[Service Provision Conditions Australian Concepts](ValueSet-service-provision-conditions.html)|[AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html)|NCTS|Australian Digital Health Agency|
+|[Service Provision Conditions Australian Concepts](ValueSet-service-provision-conditions.html)|[AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html)|AU Base|HL7 Australia|
 |[Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)|[AU Base Encounter](StructureDefinition-au-encounter.html), [AU Base Healthcare Service](StructureDefinition-au-healthcareservice.html)|NCTS|Australian Digital Health Agency|
 |[ServiceDeliveryLocationRoleType - AU Extended](ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|[AU Base Location](StructureDefinition-au-location.html)|AU Base|HL7 Australia|
 |[Specimen Collection Procedure](https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1)|[AU Base Specimen](StructureDefinition-au-specimen.html)|NCTS|Australian Digital Health Agency|
@@ -94,7 +96,11 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valueset
 
 ### Code Systems
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of codes system names used in FHIR.  Most code systems used in this guide are defined in the base FHIR specification. The following code systems are used in the above value sets.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification. 
+
+The following code systems are used in the value sets listed above. The "Available from" column indicates where the code system can be accessed, and the "Publisher" column specifies the organisation responsible for maintaining it.
+
+
 
 |CodeSystem|ValueSet where used|Available from|Publisher|
 |---|---|---|---|
@@ -103,7 +109,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 |[AU Recorded Sex or Gender Source Document Type](CodeSystem-rsg-source-document-type.html)|[AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html)|AU Base|HL7 Australia|
 |[AU Recorded Sex or Gender Type](CodeSystem-rsg-type.html)|[AU Recorded Sex or Gender Type](ValueSet-rsg-type.html)|AU Base|HL7 Australia|
 |[Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 2.0)](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/anzsic-2006-20130626)|[Australian And New Zealand Standard Industrial Classification](https://healthterminologies.gov.au/fhir/ValueSet/anzsic-1)|NCTS|Australian Bureau of Statistics (ABS)
-|[Australian Immunisation Register Vaccine](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-immunisation-register-vaccine-20221118)|[Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)|NCTS|Australian Digital Health Agency|
+|[Australian Immunisation Register Vaccine](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-immunisation-register-vaccine-20221118)|[Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)|NCTS|Services Australia|
 |[Australian Indigenous Status](https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1)|[Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1)|NCTS|Australian Digital Health Agency|
 |[Australian States and Territories](https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1)|[Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)|NCTS|Australian Digital Health Agency|
 |[Australian Veteran Status](https://www.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-veteran-status-1)|[Australian Veteran Status](https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1)|NCTS|Australian Digital Health Agency|
@@ -129,7 +135,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 |[Name Context](CodeSystem-name-context.html)|[Name Context](ValueSet-name-context.html)|AU Base|HL7 Australia|
 |[Observation Category Codes AU](CodeSystem-au-observation-category.html)|[Observation Category Codes - AU Extended](ValueSet-au-observation-category-extended.html)|AU Base|HL7 Australia|
 |[PBS Item Codes](CodeSystem-pbs-item-external.html)|[PBS Item Codes](ValueSet-pbs-item.html)|AU Base|Department of Health and Aged Care, Commonwealth of Australia|
-|[providerRole](http://terminology.hl7.org/CodeSystem/v2-0443)|[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|HL7 Terminology|HL7 Australia|
+|[providerRole](http://terminology.hl7.org/CodeSystem/v2-0443)|[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|HL7 Terminology|HL7 Terminology|
 |[providerRole AU](CodeSystem-au-v2-0443.html)|[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|AU Base|HL7 Australia|
 |[RoleCode](http://terminology.hl7.org/CodeSystem/v3-RoleCode)|[ServiceDeliveryLocationRoleType - AU Extended](ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|HL7 Terminology|Health Level Seven International|
 |[Separation Mode](https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1)|[Separation Mode](https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1)|NCTS|Australian Digital Health Agency|
