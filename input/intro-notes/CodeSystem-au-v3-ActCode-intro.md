@@ -1,9 +1,4 @@
 <div class="stu-note">
-AU Base Version 4.2.2 introduced a breaking change to the AU Base Encounter class binding. The following codes are no longer valid values for Encounter.class in AU Base because they are subsumed by the VR code from the <a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a> code system. 
-<ul><li>PHONE</li>
-    <li>VIDEO</li>
-    <li>EMAIL</li>
-    <li>SMS </li> 
-</ul>
+The PHONE, VIDEO, EMAIL and SMS codes are subsumed by the VR code from the <a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a> code system and can no longer be used in R4 (though can be used in R5). The codes are retained for other purposes, but may be deprecated in future releases. 
 </div>
 ### Usage Notes
