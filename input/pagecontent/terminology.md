@@ -3,10 +3,9 @@ This page lists all ValueSets and CodeSystems defined as part of this specificat
 
 As well as these included definitions this specification typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources. 
 
-
 <div class="stu-note">
-Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org/6.0.2">HL7 Terminology (THO)</a> version 6.0.0 or higher.
-</div> 
+Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
+</div>
 
 ### Value Sets
 

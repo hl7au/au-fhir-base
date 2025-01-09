@@ -339,19 +339,21 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
 }  
 ~~~
 
-### Administrative Gender
-AU Base supports the `Patient.gender` property as a representation of an administrative gender (as defined in the [FHIR specification](https://www.hl7.org/fhir/R4/patient.html#gender)) in:
+### Administrative Gender (Patient.gender)
+AU Base supports representation and exchange of Administrative Gender (as described in the [FHIR specification](https://www.hl7.org/fhir/R4/patient.html#gender))  in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
 
-The `Patient.gender` value **SHALL** be regarded as a Recorded Sex or Gender (RSG) value. If assertions regarding the nature of the `Patient.gender` value are required, a single instance of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension may be included with these assertions and its `genderElementQualifier` subelement set to a value of "true".
+Administrative Gender is represented using the `Patient.gender` element. This concept is used for administrative and record-keeping purposes, such as patient matching. 
+
+In AU Base, the `Patient.gender` value is regarded as a Recorded Sex or Gender. If assertions regarding the nature of the `Patient.gender` value are required, a single instance of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension may be included with these assertions and its `genderElementQualifier` subelement set to a value of "true".
 
 Example: Patient resource with Patient.gender qualified with Person Recorded Sex or Gender extension
 ~~~
 {
   "resourceType" : "Patient",
   ...
-  "gender" : "male",
-  {
+  "extension" : [
+    {
       "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
       "extension" : [
         {
@@ -372,6 +374,8 @@ Example: Patient resource with Patient.gender qualified with Person Recorded Sex
         }
       ]
     }
+  ],
   ...
+  "gender" : "male"
 }
 ~~~
