@@ -25,6 +25,12 @@
         <human value="A diagnostic result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
         <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
       </constraint>
+      <constraint>
+        <key value="inv-obs-1" />
+        <severity value="error" />
+        <human value="BodyStructure Reference extension shall only be present if the body site is not present" />
+        <expression value="bodySite.exists() implies extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()"/>
+      </constraint>
     </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
@@ -36,13 +42,14 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:bodySite">
+    <element id="Observation.extension:bodyStructure">
       <path value="Observation.extension" />
-      <sliceName value="bodySite" />
+      <sliceName value="bodyStructure" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
       </type>
+      <condition value="inv-obs-1"/>
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
