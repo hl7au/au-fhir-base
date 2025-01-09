@@ -12,7 +12,7 @@ Implementers are advised to take note that expansions of value sets visible in t
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. 
 
-The following value sets are unique to this guide and not listed in the base FHIR specification. The "Available from" column indicates the source or location where the value set can be accessed, while the "Publisher" column identifies the organisation responsible for maintaining the value set.
+The following value sets are unique to this guide and not listed in the base FHIR specification. The "Available from" column indicates the location where the value set can be accessed, and the "Publisher" column identifies the organisation responsible for maintaining the value set.
 
 |ValueSet|Profile where used|Available from|Publisher|
 |---|---|---|---|
@@ -98,9 +98,7 @@ The following value sets are unique to this guide and not listed in the base FHI
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification. 
 
-The following code systems are used in the value sets listed above. The "Available from" column indicates where the code system can be accessed, and the "Publisher" column specifies the organisation responsible for maintaining it.
-
-
+The following code systems are used in the value sets listed above. The "Available from" column indicates the location where the the code system can be accessed, and the "Publisher" column identifies the organisation responsible for maintaining the code system.
 
 |CodeSystem|ValueSet where used|Available from|Publisher|
 |---|---|---|---|
@@ -135,7 +133,7 @@ The following code systems are used in the value sets listed above. The "Availab
 |[Name Context](CodeSystem-name-context.html)|[Name Context](ValueSet-name-context.html)|AU Base|HL7 Australia|
 |[Observation Category Codes AU](CodeSystem-au-observation-category.html)|[Observation Category Codes - AU Extended](ValueSet-au-observation-category-extended.html)|AU Base|HL7 Australia|
 |[PBS Item Codes](CodeSystem-pbs-item-external.html)|[PBS Item Codes](ValueSet-pbs-item.html)|AU Base|Department of Health and Aged Care, Commonwealth of Australia|
-|[providerRole](http://terminology.hl7.org/CodeSystem/v2-0443)|[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|HL7 Terminology|HL7 Terminology|
+|[providerRole](http://terminology.hl7.org/CodeSystem/v2-0443)|[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|HL7 Terminology|Health Level Seven International|
 |[providerRole AU](CodeSystem-au-v2-0443.html)|[hl7VS-providerRole - AU Extended](ValueSet-au-v2-0443-extended.html)|AU Base|HL7 Australia|
 |[RoleCode](http://terminology.hl7.org/CodeSystem/v3-RoleCode)|[ServiceDeliveryLocationRoleType - AU Extended](ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|HL7 Terminology|Health Level Seven International|
 |[Separation Mode](https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1)|[Separation Mode](https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1)|NCTS|Australian Digital Health Agency|
