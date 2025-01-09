@@ -42,9 +42,7 @@ To help implementers, only the more significant changes are listed here.
   <li>Deprecated:
   <ul>
   <li><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
-  <li><a href="StructureDefinition-encounter-description.html">Encounter Description</a>  (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
-  <li>PHONE, VIDEO, EMAIL, SMS codes from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>)
-  </li>
+  <li><a href="StructureDefinition-encounter-description.html">Encounter Description extension</a>  (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
   </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
@@ -114,7 +112,6 @@ To help implementers, only the more significant changes are listed here.
     <li>Changed Type for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>.)</li>
   </ul>
   </li>
-  <li>Deprecated <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
   <li>Removed cardinality constraint on Identifier.assigner in <a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a>, changing it from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
   <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
   <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson.</li>
