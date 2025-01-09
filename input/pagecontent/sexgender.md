@@ -1,4 +1,71 @@
-The guidance below addresses how sex, gender, and related concepts can be structured in FHIR and conformant to AU Base.
+In support of the vision for LGBTIQA+ people achieving equitable health and wellbeing outcomes, AU Base has included content to represent and exchange key data elements including Name to Use, Pronouns and Gender Identity.
+Where possible, AU Base has considered:
+- the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
+- the FHIR representations of the Gender Harmony data elements in the core FHIR standard and FHIR core extensions
+
+The guidance below addresses how sex and gender related concepts can be structured in FHIR and conformant to AU Base.
+
+### Localisation of sex and gender concepts in AU Base
+
+AU Base represents sex and gender related concepts, and describes their use for Patient, Practitioner and Related Person. AU Base does not place *Must Support* or Obligations on any concepts. The table below provides an overview of the sex and gender related concepts represented in AU Base, indicating for which profiles the concept is localised or supported. 
+
+**Legend:**
+
+<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept has *Must Support* and Obligations defined.
+
+<img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but does not have *Must Support* or Obligations defined.
+
+<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: Sex or gender related concept is not localised for use in an Australian context.
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">Sex and Gender Concept</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-patient.html">AU Base Patient</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-relatedperson.html">AU Base Related Person</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#name-to-use-ntu">Name to Use</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#pronouns">Pronouns</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#gender-identity-gi">Gender Identity</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#recorded-sex-or-gender">Recorded Sex or Gender</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#sex-assigned-at-birth">Sex Assigned at Birth</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#administrative-gender-patient.gender">Administrative Gender (Patient.gender)</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
+        </tr>
+    </tbody>
+</table>
+
 
 ### Name to Use (NtU)​
 AU Base supports representation and exchange of the Name to Use data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
