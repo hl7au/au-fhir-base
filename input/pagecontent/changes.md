@@ -145,6 +145,11 @@ To help implementers, only the more significant changes are listed here.
     <li>added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>)</li>
   </ul>
 </li>
+<li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:<ul>
+    <li>Removed invariants inv-pra-0 and inv-pra-1 (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
+    <li>Removed the explicit inclusion of the Ahpra Profession Details and Ahpra Registration Details extension from Practitioner.qualification (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
+  </ul>
+</li>
 </ul>
 
 
