@@ -20,11 +20,11 @@ For a directly implementable usage of AU Base for a general level of capability 
 These levels used for this Implementation Guide are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
 
 The content of this release has been subject to significant review through ballot and other HL7 AU processes and many aspects of it have been implemented and 
-subjected to interoperability testing through connectathons and early adoption. However, the degree of testing has varied. Some resources have been well tested 
+subjected to interoperability testing through Connectathons and early adoption. However, the degree of testing has varied. Some resources have been well tested 
 in a variety of environments. Others have received relatively little real-world exercise. In general, the infrastructure should be considered to be more stable 
 than the resources themselves. Guidance from early implementation will help address these areas.
 
-All artifacts in this specification are assigned a "Maturity Level",known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
+All artifacts in this specification are assigned a "Maturity Level", known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
 
 The following AFMM levels are defined:
 
@@ -33,7 +33,7 @@ The following AFMM levels are defined:
 
 **AFMM 1** DRAFT 0 PLUS the artifact produces no warnings or errors during the build process that have not been accepted by the responsible WG; and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation.
 
-**AFMM 2** AFMM 1 PLUS the artifact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using appropriate data and scenarios based on at least one of the declared scopes of the artifact (e.g. at a connectathon). These interoperability results must have been reported to and accepted by the FHIRWG.
+**AFMM 2** AFMM 1 PLUS the artifact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using appropriate data and scenarios based on at least one of the declared scopes of the artifact (e.g. at a Connectathon). These interoperability results must have been reported to and accepted by the FHIRWG.
 
 **AFMM 3** AFMM 2 PLUS the artifact has been verified by the work group as meeting the [Conformance Resource Quality Guidelines](https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria); has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organizations resulting in at least one substantive change.
 
