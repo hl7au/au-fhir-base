@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-patient" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="3"/> 
+    <valueInteger value="3"/>
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
   <name value="AUBasePatient" />
@@ -54,14 +54,14 @@
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('sourceDocument').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('sourceDocument').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source-document-type'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
       </constraint>
-  <constraint>
+      <constraint>
         <key value="inv-pat-5" />
         <severity value="warning" />
         <human value="Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply" />
-        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"/> 
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
-  </constraint>
- </element>
+      </constraint>
+    </element>
     <element id="Patient.extension">
       <path value="Patient.extension" />
       <slicing>
@@ -132,7 +132,7 @@
       <path value="Patient.extension" />
       <sliceName value="genderIdentity" />
       <short value="Gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply"/>
-      <comment value="Individual Gender identity [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). See [Australian Bureau of Statics (ABS) Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) for further materials."/>
+      <comment value="The individual's gender identity is populated in the `extension:value.value[x]` of the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension and shall contain one of the codes from the [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) value set if any of the codes within the value set can apply.&#xA;&#xA;See [Australian Bureau of Statics (ABS) Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) for further materials."/>
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
@@ -143,7 +143,7 @@
       <path value="Patient.extension"/>
       <sliceName value="individualPronouns"/>
       <short value="Pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply"/>
-      <comment value="Individual Pronouns [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <comment value="The individual's pronouns are populated in the `extension:value.value[x]` of the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension and shall contain one of the codes from the [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1) value set if any of the codes within the value set can apply."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
@@ -154,7 +154,7 @@
       <path value="Patient.extension"/>
       <sliceName value="recordedSexOrGender"/>
       <short value="Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply. Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply. Recorded sex or gender jurisdiction shall be a member of the Jurisdiction - ValueSet AU Extended value set if any codes within that value set can apply"/>
-      <comment value="Person Recorded Sex Or Gender type [AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender source document [AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender jurisdiction [Jurisdiction ValueSet - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <comment value="The type of recorded sex or gender is populated in the `extension:type.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) value set if any of the codes within the value set can apply.&#xA;&#xA;The document from which the sex or gender property was acquired is populated in the `extension:sourceDocument.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) value set if any of the codes within the value set can apply.&#xA;&#xA;The jurisdiction that issued the document where the sex or gender was acquired is populated in the `extension:jurisdiction.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [Jurisdiction ValueSet - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-jurisdiction-extended.html) value set if any of the codes within the value set can apply."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
