@@ -1,7 +1,7 @@
 
 This page lists all ValueSets and CodeSystems referenced as part of AU Base.
 
-As well as the terminology defined in this specification, AU Base typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources.
+As well as the terminology defined in this guide, AU Base typically references [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir) terminology resources.
 
 <div class="stu-note">
 Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
