@@ -22,7 +22,7 @@ The following value sets are unique to this guide and not listed in the base FHI
 
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
   <thead>
-    <tr>
+    <tr style="background-color: #f2f2f2;">
       <th>ValueSet</th>
       <th>Profiles and Extensions where used</th>
       <th>Available from</th>
@@ -453,7 +453,7 @@ The following code systems are used in the value sets listed above. The "ValueSe
 
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
   <thead>
-    <tr>
+    <tr style="background-color: #f2f2f2;">
       <th>CodeSystem</th>
       <th>ValueSet where used</th>
       <th>Available from</th>
