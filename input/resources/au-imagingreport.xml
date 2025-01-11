@@ -37,7 +37,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-servicerequest" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
       </type>
     </element>
@@ -46,16 +46,6 @@
       <short value="Relevant diagnostic imaging category: service, modality" />
       <comment value="A category denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available."/>
       <min value="1" />
-    </element>
-    <element id="DiagnosticReport.category.coding">
-      <path value="DiagnosticReport.category.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
     </element>
     <element id="DiagnosticReport.code">
       <path value="DiagnosticReport.code" />
