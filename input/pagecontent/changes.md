@@ -45,16 +45,23 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>Changes to <a href="StructureDefinition-au-imagingreport.html" >AU Base Diagnostic Imaging Report</a>:
   <ul>
-    <li>Changed base definition to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>).</li>
+    <li>Changed base definition from <a href="https://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> to <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>).</li>
     <li>Changed type for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
   </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-pathologyreport.html" >AU Base Pathology Report</a>:
   <ul>
-    <li>Changed base definition to be <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>).</li>
+    <li>Changed base definition from <a href="https://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> to <a href="StructureDefinition-au-diagnosticreport.html" >AU Base Diagnostic Report</a> (<a href="https://jira.hl7.org/browse/FHIR-46898">FHIR-46898</a>).</li>
     <li>Changed type for DiagnosticReport.basedOn from AU Base Diagnostic Request to AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>).</li>
   </ul>
   </li>
+  <li>Changed Observation.effective[x] type in <a href="StructureDefinition-au-diagnosticresult.html"> AU Base Diagnostic Result </a> to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
+  <li>Changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:<ul>
+    <li>Changed the BodyStructure Reference extension slice name from bodySite to bodyStructure (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
+    <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
+     <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
+  </ul>
+</li>
   <li>Removed cardinality constraint on Identifier.assigner in <a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a>, changing it from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
   <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
   <li>Changed Coverage.identifier type in <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> to add AU Pensioner Concession Card Number, AU Commonwealth Seniors Health Card Number and AU Health Care Card Number (<a href="https://jira.hl7.org/browse/FHIR-47191">FHIR-47191</a>).</li>
@@ -64,19 +71,13 @@ To help implementers, only the more significant changes are listed here.
   <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate Encounter.class in R4.
   </li>
   <li>Removed deprecated Encounter Description extension from <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
-  <li>Changed Observation.effective[x] type in <a href="StructureDefinition-au-diagnosticresult.html"> AU Base Diagnostic Result </a> to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
 <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:<ul>
     <li>Moved the BodyStructure Reference extension to the Observation element instead of Observation.bodySite (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
     <li>Changed the BodyStructure Reference extension slice name from bodySite to bodyStructure (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
     <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
   </ul>
 </li>
-<li>Changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:<ul>
-    <li>Changed the BodyStructure Reference extension slice name from bodySite to bodyStructure (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
-    <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
-     <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
-  </ul>
-</li>
+
 </ul>
 
 ### Release 4.2.2-ballot
@@ -158,7 +159,7 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
-      <li>Practitioner.extension added:
+      <li>Practitioner.extension changed to:
         <ul>
           <li>add Individual Gender Identity (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
           <li>add Individual Pronouns (<a href="https://jira.hl7.org/browse/FHIR-43719">FHIR-43719</a>)</li>
