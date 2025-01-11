@@ -5,6 +5,7 @@ on:
     tags:
       - '**'
 
+
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read  # This is required for actions/checkout
@@ -60,11 +61,12 @@ jobs:
       run: |
         echo "Updating Publisher"
         ./_updatePublisher.sh -f -y
+
           
-    - name: Basic Publish for Aubase 1
+    - name: Basic Publish for Aubase
       run: |
-        echo "Generating Publish for  Aubase IG..."
-        java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+          echo "Generating Publish for  Aubase IG..."
+          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
 
     - name: Create directories
       run: |
@@ -93,20 +95,9 @@ jobs:
       run: |
         java -jar input-cache/publisher.jar -generate-package-registry webroot
 
-    - name: Run Aubase Go Publisher build 1
+    - name: Run Aubase Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
-      
-    - name: Upload Base webroot to S3 and publish
-      run: |
-        aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
-        aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/package-feed.bak.xml
-        aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/publication-feed.bak.xml      
-
-    - name: Basic Publish for Aubase 2
-      run: |
-        echo "Generating Publish for Aubase IG..."
-        java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
-   
+    
     - name: Zip Release
       uses: TheDoctor0/zip-release@0.7.6
       with:
@@ -120,12 +111,12 @@ jobs:
       with:
         name: ig-output
         path: ./output.zip
-   
-    - name: Upload Base webroot to S3 and publish fix QA
+    
+    - name: Upload Base webroot to S3 and publish
       run: |
-        aws s3 cp ./webroot/fhir/base/qa*.* s3://hl7au-fhir-ig/fhir/
+        aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
         aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/package-feed.bak.xml
         aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/publication-feed.bak.xml
-        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/package-feed.test.xml
-        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/publication-feed.test.xml
-  
+        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/package-feed.xml
+        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/publication-feed.xml
+        
