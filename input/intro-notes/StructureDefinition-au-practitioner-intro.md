@@ -8,3 +8,6 @@
 - A tertiary qualification or professional membership (non-Ahpra-sourced data) is represented by `Practitioner.qualification`
   - If none of the codes from the preferred value set are suitable then at least text should be sent in `Practitioner.qualification.code`
 
+**Potentially useful extension:**
+* Practitioner.qualification: [Ahpra Profession Details](StructureDefinition-ahpraprofession-details.html)
+* Practitioner.qualification: [Ahpra Registration Details](StructureDefinition-ahpraregistration-details.html)
