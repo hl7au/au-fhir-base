@@ -27,27 +27,10 @@ The approach to develop and mature AU Base is outlined below making reference to
 AU Base has been based on [FHIR Version R4](https://hl7.org/fhir/R4/index.html) since AU Base version 2.0.0. Prior versions were based on FHIR Version STU3. The next version of FHIR that AU Base will be based on has not been decided. It is under consideration on whether the next supported FHIR version is the upcoming FHIR Version R6 and not R5. As of the publication date, there is no timeline for this update.
 
 #### Future Candidate Requirements Under Consideration
-
-##### Patient Internal Identifier (PI) Profile
-The introduction of an AU Patient Internal Identifier profile with Identifier.type = PI (Patient internal identifier) has been requested to support internal system patient identifiers used in diagnostic requests. This proposal aligns with current practices in systems.
-
-##### Family Member History Profile
-The addition of an AU Base Family Member History profile has been proposed to align with Australian use cases. 
-
-##### Panel of Observations Guidance
-The guidance on representing panels of observations in AU Base diagnostic profiles requires further investigation and community consultation to determine the most appropriate approach for Australian use cases.
-
-##### Discharge Disposition Value Set
-The `Encounter.hospitalization.dischargeDisposition` value set requires review to align with updated terminology. Future updates to AU Base will consider this change, including consultation with the implementer community to assess adoption.
-
-##### AU Base Language Support for Healthcare Services
-Australian specific language binding may be added to the AU Base HealthcareService profile to align with existing AU Base profiles and support consistent use in downstream implementation guides. Further exploration and testing are required.
-
-##### AU Base ChargeItem Profile
-The addition of an AU Base ChargeItem profile has been proposed to support MBS codes and align with Australian use cases.
-
-##### NDIS (National Disability Insurance Scheme) Identification Number
-The inclusion of support for the NDIS identification number has been proposed for AU Base to enable standardized use in FHIR for Australian use cases. The NDIS number, sometimes called the reference number, is a unique nine-digit identifier assigned to individuals participating in the scheme. Further requirements gathering and testing are necessary before implementation.
-
-##### State-Issued Seniors Card Identifier
-The addition of support for a state-issued Seniors Card identifier has been proposed for inclusion in AU Base to align with Australian use cases and facilitate standardized implementation. Further requirements gathering and collaboration with jurisdictions are needed.
+The following items are under consideration to add to AU Base.
+- **FamilyMemberHistory**: The inclusion of an AU Base FamilyMemberHistory profile is recommended to support localisation of family health history information. Future versions of AU Base will consider this profile to standardise the representation of family health history in Australia.
+ - **ChargeItem**: The inclusion of an AU Base ChargeItem profile is recommended to support localisation for representing medical billing information, including MBS codes. Future versions of AU Base will consider this profile to provide consistent representation of chargeable items in the Australian healthcare context.
+- **NDIS (National Disability Insurance Scheme) Number**: The inclusion of the NDIS Number Identifier type has been approved for AU Base. Future versions of AU Base will define this identifier to standardise its use in Australian FHIR implementations.
+- **State issued Seniors Card Identifier**: The creation of an identifier data type profile for state issued Seniors Cards is under consideration. Further details, examples, and use cases are required to progress this work.
+- **Ahpra extensions and content**: Consideration is needed to evaluate the need and the suitability of [Ahpra Profession Details](StructureDefinition-ahpraprofession-details.html) and [Ahpra Registration Details](StructureDefinition-ahpraregistration-details.html) extensions in AU Base, including whether they are appropriately structured to meet relevant requirements.
+- **AU Base policies and governance**: Future versions of AU Base will include defined policies and conventions for FHIR artefacts. This may involve an HL7 AU project to develop the material and provide recommendations for enhancing HL7 AU Implementation Guides. This work will address related issues and ensure alignment with governance practices.
