@@ -28,3 +28,19 @@ AU Base has been based on [FHIR Version R4](https://hl7.org/fhir/R4/index.html) 
 
 #### Future Candidate Requirements Under Consideration
 
+##### Patient Internal Identifier (PI) Profile
+The introduction of an AU Patient Internal Identifier profile with Identifier.type = PI (Patient internal identifier) has been requested to support internal system patient identifiers used in diagnostic requests. This proposal aligns with current practices in systems.
+
+##### Family Member History Profile
+The addition of an AU Base Family Member History profile has been proposed to align with Australian use cases. 
+
+##### Panel of Observations Guidance
+The guidance on representing panels of observations in AU Base diagnostic profiles requires further investigation and community consultation to determine the most appropriate approach for Australian use cases.
+
+##### Discharge Disposition Value Set
+The `Encounter.hospitalization.dischargeDisposition` value set requires review to align with updated terminology. Future updates to AU Base will consider this change, including consultation with the implementer community to assess adoption.
+
+##### AU Base Language Support for Healthcare Services
+Australian specific language binding may be added to the AU Base HealthcareService profile to align with existing AU Base profiles and support consistent use in downstream implementation guides. Further exploration and testing are required.
+
+#####
