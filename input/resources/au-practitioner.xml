@@ -19,35 +19,35 @@
       <path value="Practitioner" />
       <short value="A practitioner in an Australian healthcare context" />
       <constraint>
-        <key value="inv-pra-2" />
+        <key value="inv-pra-0" />
         <severity value="warning" />
         <human value="Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').all(extension('value').value.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
-        <key value="inv-pra-3" />
+        <key value="inv-pra-1" />
         <severity value="warning" />
         <human value="Individual pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').all(extension('value').value.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
-        <key value="inv-pra-4" />
+        <key value="inv-pra-2" />
         <severity value="warning" />
         <human value="Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('type').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('type').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-type'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
-        <key value="inv-pra-5" />
+        <key value="inv-pra-3" />
         <severity value="warning" />
         <human value="Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('sourceDocument').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('sourceDocument').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-document-type'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
-        <key value="inv-pra-6" />
+        <key value="inv-pra-4" />
         <severity value="warning" />
         <human value="Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"/>
@@ -73,7 +73,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
       </type>
-      <condition value="inv-pra-3"/>
+      <condition value="inv-pra-1"/>
     </element>
     <element id="Practitioner.extension:individualPronouns">
       <path value="Practitioner.extension"/>
@@ -94,9 +94,9 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
       </type>
+      <condition value="inv-pra-2"/>
+      <condition value="inv-pra-3"/>
       <condition value="inv-pra-4"/>
-      <condition value="inv-pra-5"/>
-      <condition value="inv-pra-6"/>
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
@@ -120,7 +120,6 @@
     </element>
     <element id="Practitioner.qualification.code">
       <path value="Practitioner.qualification.code" />
-      <condition value="inv-pat-1"/>
       <binding>
         <strength value="preferred" />
         <valueSet value="http://terminology.hl7.org.au/ValueSet/v2-0360-extended" />
