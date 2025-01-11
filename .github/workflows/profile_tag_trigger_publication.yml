@@ -64,8 +64,8 @@ jobs:
           
     - name: Basic Publish for Aubase
       run: |
-          echo "Generating Publish for  Aubase IG..."
-          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+        echo "Generating Publish for  Aubase IG..."
+        java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
 
     - name: Create directories
       run: |
@@ -105,8 +105,8 @@ jobs:
 
    - name: Basic Publish for Aubase again to fix QA
       run: |
-          echo "Generating Publish for Aubase IG..."
-          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+        echo "Generating Publish for Aubase IG..."
+        java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
 
     - name: Run Aubase Go Publisher build again
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
@@ -132,3 +132,4 @@ jobs:
         aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/publication-feed.bak.xml
         aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/package-feed.test.xml
         aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/publication-feed.test.xml
+  
