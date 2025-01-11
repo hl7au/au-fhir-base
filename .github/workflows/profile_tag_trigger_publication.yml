@@ -5,7 +5,6 @@ on:
     tags:
       - '**'
 
-
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read  # This is required for actions/checkout
@@ -62,7 +61,7 @@ jobs:
         echo "Updating Publisher"
         ./_updatePublisher.sh -f -y
           
-    - name: Basic Publish for Aubase
+    - name: Basic Publish for Aubase 1
       run: |
         echo "Generating Publish for  Aubase IG..."
         java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
@@ -94,7 +93,7 @@ jobs:
       run: |
         java -jar input-cache/publisher.jar -generate-package-registry webroot
 
-    - name: Run Aubase Go Publisher build 
+    - name: Run Aubase Go Publisher build 1
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
       
     - name: Upload Base webroot to S3 and publish
@@ -103,12 +102,12 @@ jobs:
         aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/package-feed.bak.xml
         aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/publication-feed.bak.xml      
 
-   - name: Basic Publish for Aubase again to fix QA
+    - name: Basic Publish for Aubase 2
       run: |
         echo "Generating Publish for Aubase IG..."
         java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
 
-    - name: Run Aubase Go Publisher build again
+    - name: Run Aubase Go Publisher build 2
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
     
     - name: Zip Release
