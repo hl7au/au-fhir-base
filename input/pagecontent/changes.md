@@ -62,22 +62,26 @@ To help implementers, only the more significant changes are listed here.
      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-48632">FHIR-48632</a>).</li>
   </ul>
 </li>
-  <li>Removed cardinality constraint on Identifier.assigner in <a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a>, changing it from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
-  <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
-  <li>Changed Coverage.identifier type in <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> to add AU Pensioner Concession Card Number, AU Commonwealth Seniors Health Card Number and AU Health Care Card Number (<a href="https://jira.hl7.org/browse/FHIR-47191">FHIR-47191</a>).</li>
-  <li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
-  <li>Updated AU Base CodeSystem resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>).</li>
-  <li>Updated AU Base ValueSet resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>).</li>
-  <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate Encounter.class in R4.
-  </li>
-  <li>Removed deprecated Encounter Description extension from <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
+<li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:<ul>
+    <li>Removed invariants inv-pra-0 and inv-pra-1 which makes the use of Ahpra Profession Details and Ahpra Registration Details extensions no longer mutually exclusive (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
+    <li>Removed the explicit inclusion of the Ahpra Profession Details and Ahpra Registration Details extension from Practitioner.qualification(<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
+  </ul>
+</li>
 <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:<ul>
     <li>Moved the BodyStructure Reference extension to the Observation element instead of Observation.bodySite (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
     <li>Changed the BodyStructure Reference extension slice name from bodySite to bodyStructure (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
     <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
   </ul>
 </li>
-
+<li>Removed cardinality constraint on Identifier.assigner in <a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a>, changing it from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
+<li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
+<li>Changed Coverage.identifier type in <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> to add AU Pensioner Concession Card Number, AU Commonwealth Seniors Health Card Number and AU Health Care Card Number (<a href="https://jira.hl7.org/browse/FHIR-47191">FHIR-47191</a>).</li>
+<li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
+<li>Updated AU Base CodeSystem resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>).</li>
+<li>Updated AU Base ValueSet resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>).</li>
+<li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate Encounter.class in R4.
+</li>
+<li>Removed deprecated Encounter Description extension from <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
 </ul>
 
 ### Release 4.2.2-ballot
@@ -181,7 +185,7 @@ To help implementers, only the more significant changes are listed here.
   <li>Changed MedicationRequest.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
   <li>Changed MedicationStatement.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
   <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
-  <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides.</li>
+  <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides (<a href="https://jira.hl7.org/browse/FHIR-43843">FHIR-43843</a>).</li>
   <li>Added a guidance page on sex, gender, and related concepts to AU Base to provide guidance on Name to Use, Gender Identity, Pronouns, Recorded Sex or Gender, and Sex Assigned at Birth (<a href="https://jira.hl7.org/browse/FHIR-46415">FHIR-46415</a>, <a href="https://jira.hl7.org/browse/FHIR-46429">FHIR-46429</a>, <a href="https://jira.hl7.org/browse/FHIR-46430">FHIR-46430</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>, <a href="https://jira.hl7.org/browse/FHIR-47160">FHIR-47160</a>).</li>
 </ul>
 
