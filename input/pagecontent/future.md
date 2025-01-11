@@ -43,4 +43,11 @@ The `Encounter.hospitalization.dischargeDisposition` value set requires review t
 ##### AU Base Language Support for Healthcare Services
 Australian specific language binding may be added to the AU Base HealthcareService profile to align with existing AU Base profiles and support consistent use in downstream implementation guides. Further exploration and testing are required.
 
-#####
+##### AU Base ChargeItem Profile
+The addition of an AU Base ChargeItem profile has been proposed to support MBS codes and align with Australian use cases.
+
+##### NDIS (National Disability Insurance Scheme) Identification Number
+The inclusion of support for the NDIS identification number has been proposed for AU Base to enable standardized use in FHIR for Australian use cases. The NDIS number, sometimes called the reference number, is a unique nine-digit identifier assigned to individuals participating in the scheme. Further requirements gathering and testing are necessary before implementation.
+
+##### State-Issued Seniors Card Identifier
+The addition of support for a state-issued Seniors Card identifier has been proposed for inclusion in AU Base to align with Australian use cases and facilitate standardized implementation. Further requirements gathering and collaboration with jurisdictions are needed.
