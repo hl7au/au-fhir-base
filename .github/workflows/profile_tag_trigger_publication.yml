@@ -117,6 +117,6 @@ jobs:
         aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/ --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
         aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/package-feed.bak.xml
         aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/publication-feed.bak.xml
-        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/package-feed.xml
-        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/publication-feed.xml
+        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/package-feed.staging.xml
+        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/publication-feed.staging.xml
         
