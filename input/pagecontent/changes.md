@@ -81,7 +81,7 @@ To help implementers, only the more significant changes are listed here.
 </li>
 <li>Removed cardinality constraint on Identifier.assigner in <a href="http://hl7.org.au/fhir/5.0.0/StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a>, changing it from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
 <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="http://hl7.org.au/fhir/5.0.0/StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
-<li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
+<li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to <a href="http://hl7.org.au/fhir/5.0.0/ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
 <li>Updated AU Base CodeSystem resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>).</li>
 <li>Updated AU Base ValueSet resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>).</li>
 <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="http://hl7.org.au/fhir/5.0.0/ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate Encounter.class in R4.
@@ -120,7 +120,7 @@ To help implementers, only the more significant changes are listed here.
   <li>New value sets:
   <ul>
   <li><a href="http://hl7.org.au/fhir/4.2.2-ballot/ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46351">FHIR-46351</a>)</li>
-  <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+  <li><a href="http://hl7.org.au/fhir/4.2.2-ballot/ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
   <li><a href="http://hl7.org.au/fhir/4.2.2-ballot/ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
   <li><a href="http://hl7.org.au/fhir/4.2.2-ballot/ValueSet-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
@@ -260,7 +260,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed Immunization.site.coding cardinality in <a href="http://hl7.org.au/fhir/4.1.0/StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
 <li>Changed Immunization.route.coding cardinality in <a href="http://hl7.org.au/fhir/4.1.0/StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
 <li>Changed Observation.category slicing in <a href="http://hl7.org.au/fhir/4.1.0/StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> to move the preferred binding to a slice for Specific discipline of pathology (<a href="https://github.com/hl7au/au-fhir-base/issues/744">au-fhir-base #744</a>).</li>
-<li>Changed <a href="CodeSystem-au-location-physical-type.html">Location Type (Physical) AU</a> to deprecate concept 'vi'.</li>
+<li>Changed <a href="http://hl7.org.au/fhir/4.1.0/CodeSystem-au-location-physical-type.html">Location Type (Physical) AU</a> to deprecate concept 'vi'.</li>
 </ul>
 
 
