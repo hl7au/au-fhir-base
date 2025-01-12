@@ -11,26 +11,6 @@ To help implementers, only the more significant changes are listed here.
       <li><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
     </ul>
   </li>
-  <li>New extensions:
-    <ul>
-      <li>None</li>
-    </ul>
-  </li>
-  <li>New value sets:
-    <ul>
-      <li>None</li>
-    </ul>
-  </li>
-  <li>New code systems:
-    <ul>
-      <li>None</li>
-    </ul>
-  </li>
-  <li>New search parameters:
-    <ul>
-      <li>None</li>
-    </ul>
-  </li>
   <li>Deprecated:
    <ul>
     <li><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
