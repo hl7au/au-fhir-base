@@ -14,7 +14,7 @@ AU Base will be published yearly. Yearly AU Base updates reflect changes from:
 *Figure 1: Yearly update of AU Base*
 <br/>
 
-#### Maturing the Baseline
+### Maturing the Baseline
 The approach to develop and mature AU Base is outlined below making reference to the [FHIR Maturity Level (FMM) levels](generalguidance.html#maturity-levels) is shown in the figure below.
 
  <div> 
@@ -23,10 +23,10 @@ The approach to develop and mature AU Base is outlined below making reference to
 *Figure 3: Maturing the AU Base baseline*
 <br/>
 
-#### FHIR Version Support
+### FHIR Version Support
 AU Base has been based on [FHIR Version R4](https://hl7.org/fhir/R4/index.html) since AU Base version 2.0.0. Prior versions were based on FHIR Version STU3. The next version of FHIR that AU Base will be based on has not been decided. It is under consideration on whether the next supported FHIR version is the upcoming FHIR Version R6 and not R5. As of the publication date, there is no timeline for this update.
 
-#### Future Candidate Requirements Under Consideration
+### Future Candidate Requirements Under Consideration
 The following items are under consideration to add to AU Base.
 - **FamilyMemberHistory**: The inclusion of an AU Base FamilyMemberHistory profile is recommended to support localisation of family health history information. Future versions of AU Base will consider this profile to standardise the representation of family health history in Australia.
  - **ChargeItem**: The inclusion of an AU Base ChargeItem profile is recommended to support localisation for representing medical billing information, including MBS codes. Future versions of AU Base will consider this profile to provide consistent representation of chargeable items in the Australian healthcare context.
