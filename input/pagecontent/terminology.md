@@ -1,4 +1,9 @@
-This page lists ValueSets, CodeSystems, and Concept Maps defined in this specification. It also includes terminology resources used in AU Base, typically published by the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) or [HL7 Terminology (THO)](https://terminology.hl7.org/).
+This page includes all terminology artefacts defined as part of AU Base and:
+- value sets that form part of localised requirements (i.e. referenced in an AU Base imposed constraint)
+- code systems referenced by those value sets
+- concept maps unique to those value sets and not listed in the base FHIR specification
+
+Terminology artefacts used in AU Base are published in AU Base, the base FHIR specification, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
 
 <div class="stu-note">
 Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
@@ -8,12 +13,12 @@ Implementers are advised to take note that expansions of value sets visible in t
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. 
 
-The following value sets are unique to this guide and not listed in the base FHIR specification.
+The following value sets form part of localised requirements (i.e. are referenced in an AU Base imposed constraint).
 
-<p><strong>Column attribute descriptions are as follows:</strong></p>
+<p>Column attribute descriptions are as follows:</p>
 <ul>
   <li><strong>ValueSet:</strong> The title of the value set.</li>
-  <li><strong>Profiles and Extensions where used:</strong> Identifies the profiles and extensions that reference the value set.</li>
+  <li><strong>Profiles and Extensions where used:</strong> The profiles and extensions that reference the value set.</li>
   <li><strong>Available from:</strong> Where the value set is published.</li>
 </ul>
 
@@ -439,9 +444,9 @@ The following value sets are unique to this guide and not listed in the base FHI
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification. 
 
-The following code systems are used in the value sets listed above.
+The following code systems are referenced by the value sets listed above.
 
-<p><strong>Column attribute descriptions are as follows:</strong></p>
+<p>Column attribute descriptions are as follows:</p>
 <ul>
   <li><strong>CodeSystem:</strong> The title of a code system.</li>
   <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system.</li>
