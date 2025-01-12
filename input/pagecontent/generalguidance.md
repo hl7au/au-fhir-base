@@ -37,13 +37,26 @@ The following AFMM levels are defined:
 
 **AFMM 3** AFMM 2 PLUS the artifact has been verified by the work group as meeting the [Conformance Resource Quality Guidelines](https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria); has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organisations resulting in at least one substantive change.
 
-**AFMM 4** AFMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
+**AFMM 4** AFMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artifact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
 
 **AFMM 5** AFMM 4 PLUS the artifact has been published in two formal publication release cycles at AFMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
 
 **Normative** AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the [inter-version](https://hl7.org/fhir/versions.html#change) change rules and the artifact has passed HL7 AU normative ballot. This is synonymous with [Normative](https://hl7.org/fhir/versions.html#normative) standard status.
 
 Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
+
+
+### Artifact Release Management Publishing Policy
+Based on the application of the Australian FHIR Maturity Model assessment of artifacts there are some specific publishing requirements applied to HL7 AU Implementation Guide production.
+
+**DRAFT 0** maturity level artifacts are considered not substantially complete by the responsible workgroup and not necessarily ready for implementation. Subsequently any artifact content remaining at this level **WILL NOT** be published in ballot reconciled releases of [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) level specifications.
+
+ **DRAFT 0** material may be included and published in [Draft](https://hl7.org/fhir/R4/versions.html#std-process) level specifications or in any releases provided as **draft**, **preview** or **ballot** snapshots. This allows feedback to be sought on this material through Connectathons, testing and ballot activities.
+
+It should be noted that **DRAFT 0** level artifacts, by committee consensus, may achieve **AFMM 1** between ballot and final publication allowing them to be included in final [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) level specification publications.
+
+The editorial removal of **DRAFT 0** level artifacts that are available in the main continuous integration (CI) branch of a specifications for final releases may result in differences to the narrative, summary and profile content to exclude description of, and reference to, these artifacts. Any **DRAFT 0** artifacts that are removed in this way will be mentioned in the specification change log as being draft artifacts not included in the specific release.
+
 
 ### Business Identifiers
 
