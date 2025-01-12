@@ -146,7 +146,7 @@ To help implementers, only the more significant changes are listed here.
   </ul>
 </li>
 <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:<ul>
-    <li>Removed invariants inv-pra-0 and inv-pra-1 which makes the use of Ahpra Profession Details and Ahpra Registration Details extensions no longer mutually exclusive (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
+    <li>Removed invariants inv-pra-0 (related to the Ahpra Profession Details extension) and inv-pra-1 (related to the Ahpra Registration Details extension), which makes the use of these extensions no longer mutually exclusive. Remaining invariants were renumbered, and the profile now includes new inv-pra-0 and inv-pra-1 rules (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
     <li>Removed the explicit inclusion of the Ahpra Profession Details and Ahpra Registration Details extension from Practitioner.qualification(<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
   </ul>
 </li>
