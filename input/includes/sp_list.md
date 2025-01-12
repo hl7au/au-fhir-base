@@ -57,6 +57,3 @@ TBD
 
 ##### RelatedPerson
 TBD
-
-##### ServiceRequest
-TBD

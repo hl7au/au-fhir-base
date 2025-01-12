@@ -103,7 +103,6 @@ The following value sets form part of localised requirements (i.e. are reference
         <a href="StructureDefinition-au-bodystructure.html">AU Base Body Structure</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>, 
-        <a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a>, 
         <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, 
         <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a>, 
         <a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>, 
@@ -198,18 +197,12 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a></td>
     <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>,
-      <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>, 
-      <a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a></td>
+      <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a></td>
     <td><a href="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">Individual Gender Identity</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-program-participation-status-1">Health Program Participation Status</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -318,11 +311,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>AU Base</td>
 </tr>
 <tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
     <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
@@ -363,13 +351,8 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason For Non Participation In Health Program</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a></td>
-    <td><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a></td>
+    <td><a href="<a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -709,7 +692,6 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">Encounter Type</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-program-participation-status-1">Health Program Participation Status</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1">Imaging Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1">Imaging Anatomic Region Of Interest</a>, 
@@ -719,9 +701,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason for Non Participation in Health Program</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a>, 

@@ -37,7 +37,6 @@
 [Conformance requirements for the AU Core Server]: CapabilityStatement-us-core-server.html
 [Consent]: {{site.data.fhir.path}}consent.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
-[Coverage]: {{site.data.fhir.path}}coverage.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
 [Changes Between Versions]: changes-between-versions.html
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
@@ -150,7 +149,6 @@
 [Search Parameters and Operations]: search-parameters-and-operations.html
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
 [Security]: security.html
-[ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Terminology]: terminology.html "Terminology Page"
 [Terminology Binding Extensible]: http://hl7.org/fhir/R4/terminologies.html#extensible
@@ -201,7 +199,6 @@
 [AU Core Security]: security.html
 [AU Core RelatedPerson Profile]: StructureDefinition-au-core-relatedperson.html
 [AU Core Respiratory Rate Profile]: StructureDefinition-au-core-respiratory-rate.html
-[AU Core ServiceRequest Profile]: StructureDefinition-au-core-servicerequest.html
 [AU Core Smoking Status Observation Profile]: StructureDefinition-au-core-smokingstatus.html
 [AU Core Vital Signs Profile]: StructureDefinition-au-core-vital-signs.html
 [Value sets]: terminology.html
@@ -241,14 +238,12 @@
 [quantity]: {{site.data.fhir.path}}search.html#quantity
 [search]: http://hl7.org/fhir/search.html
 [security considerations]: {{site.data.fhir.path}}security.html
-[ethnicity]: SearchParameter-au-core-ethnicity.html
 [race]: SearchParameter-au-core-race.html
 [gender-identity]: SearchParameter-au-core-patient-gender-identity.html
 [asserted-date]: SearchParameter-au-core-condition-asserted-date.html
 [role]: SearchParameter-au-core-careteam-role.html
 [discharge-disposition]: SearchParameter-au-core-encounter-discharge-disposition.html
 [description]: SearchParameter-au-core-goal-description.html
-[`ethnicity`]: SearchParameter-au-core-ethnicity.html
 [`gender-identity`]: SearchParameter-au-core-patient-gender-identity.html
 [`asserted-date`]: SearchParameter-au-core-condition-asserted-date.html
 [`role`]: SearchParameter-au-core-careteam-role.html
