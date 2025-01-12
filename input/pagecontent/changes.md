@@ -76,38 +76,38 @@ To help implementers, only the more significant changes are listed here.
 <ul>
   <li>New profiles:
   <ul>
-   <li><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
+   <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
   </ul>
   </li>
   <li>New extensions:
   <ul>
-  <li><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
-  <li><a href="StructureDefinition-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-veteran-status.html">Australian Veteran Status</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/790">au-fhir-base #790</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New value sets:
   <ul>
-  <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46351">FHIR-46351</a>)</li>
-  <li><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
-  <li><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
-  <li><a href="ValueSet-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46351">FHIR-46351</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/ValueSet-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New code systems:
   <ul>
-  <li><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
-   <li><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>)</li>
-   <li><a href="CodeSystem-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>)</li>
+   <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a> (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>)</li>
+   <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/CodeSystem-name-context.html">Name Context</a> (<a href="https://jira.hl7.org/browse/FHIR-45980">FHIR-45980</a>)</li>
   </ul>
   </li>
   <li>New search parameters:
   <ul>
-  <li><a href="SearchParameter-indigenous-status.html">AustralianIndigenousStatus</a></li>
-  <li><a href="SearchParameter-encounter-discharge-disposition.html">EncounterDischargeDisposition</a></li>
-  <li><a href="SearchParameter-gender-identity.html">GenderIdentity</a> (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/SearchParameter-indigenous-status.html">AustralianIndigenousStatus</a></li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/SearchParameter-encounter-discharge-disposition.html">EncounterDischargeDisposition</a></li>
+  <li><a href="https://hl7.org.au/fhir/4.2.2-ballot/SearchParameter-gender-identity.html">GenderIdentity</a> (<a href="https://jira.hl7.org/browse/FHIR-43718">FHIR-43718</a>)</li>
   </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+  <li>Changes to <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Patient.extension changed to:
           <ul>
@@ -124,7 +124,7 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-pat-5 to RSG.sourceDocument.jurisdiction to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul> 
   </li>
-  <li>Changes to <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
+  <li>Changes to <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
     <ul>
       <li>RelatedPerson.extension changed to:
         <ul>
@@ -140,7 +140,7 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-relper-4 to RSG.sourceDocument.jurisdiction to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
+  <li>Changes to <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
       <li>Practitioner.extension changed to:
         <ul>
@@ -156,14 +156,14 @@ To help implementers, only the more significant changes are listed here.
       <li>Added invariant inv-pra-6 to RSG.sourceDocument.type to bind Jurisdiction ValueSet - AU Extended (extensible) (<a href="https://jira.hl7.org/browse/FHIR-43834">FHIR-43834</a>).</li>
     </ul>
   </li>
-  <li>Changed context of extension <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson (<a href="https://github.com/hl7au/au-fhir-base/issues/794">au-fhir-base #794</a>).</li>
-  <li>Changed Observation.code to add Additional Bindings for component value sets in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> (<a href="https://jira.hl7.org/browse/FHIR-46080">FHIR-46080</a>).</li>
-  <li>Changed Medication.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medication.html">AU Base Medication</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
-  <li>Changed MedicationAdministration.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
-  <li>Changed MedicationDispense.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
-  <li>Changed MedicationRequest.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
-  <li>Changed MedicationStatement.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
-  <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
+  <li>Changed context of extension <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> to add Person and RelatedPerson (<a href="https://github.com/hl7au/au-fhir-base/issues/794">au-fhir-base #794</a>).</li>
+  <li>Changed Observation.code to add Additional Bindings for component value sets in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> (<a href="https://jira.hl7.org/browse/FHIR-46080">FHIR-46080</a>).</li>
+  <li>Changed Medication.code to replace slices with Additional Bindings as 'preferred' in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-medication.html">AU Base Medication</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationAdministration.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationDispense.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationRequest.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed MedicationStatement.medicationCodeableConcept to replace slices with Additional Bindings as 'preferred' in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-44823">FHIR-44823</a>).</li>
+  <li>Changed Immunization.code to replace slices with Additional Bindings as 'preferred' in <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-immunization.html">AU Base Immunisation</a> (<a href="https://jira.hl7.org/browse/FHIR-44821">FHIR-44821</a>).</li>
   <li>Added a guidance page on AU Base relationship with other HL7 AU FHIR implementation guides (<a href="https://jira.hl7.org/browse/FHIR-43843">FHIR-43843</a>).</li>
   <li>Added a guidance page on sex, gender, and related concepts to AU Base to provide guidance on Name to Use, Gender Identity, Pronouns, Recorded Sex or Gender, and Sex Assigned at Birth (<a href="https://jira.hl7.org/browse/FHIR-46415">FHIR-46415</a>, <a href="https://jira.hl7.org/browse/FHIR-46429">FHIR-46429</a>, <a href="https://jira.hl7.org/browse/FHIR-46430">FHIR-46430</a>, <a href="https://jira.hl7.org/browse/FHIR-46428">FHIR-46428</a>, <a href="https://jira.hl7.org/browse/FHIR-47160">FHIR-47160</a>).</li>
 </ul>
@@ -180,22 +180,22 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed HL7 AU implementation guide publication structure and format to better align to current HL7 practices.</li>
 <li>New profiles:
 <ul>
-<li><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
+<li><a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
 </ul>
 </li>
 <li>New extensions:
 <ul>
-<li><a href="StructureDefinition-result-copies-to.html">Result copies to</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/670">au-fhir-base #670</a>)</li>
+<li><a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-result-copies-to.html">Result copies to</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/670">au-fhir-base #670</a>)</li>
 </ul>
 </li>
 <li>New value sets:
 <ul>
-<li><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></li>
+<li><a href="https://hl7.org.au/fhir/4.1.0/ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></li>
 </ul>
 </li>
 <li>New code systems:
 <ul>
-<li><a href="CodeSystem-au-observation-category.html">Observation Category Codes AU</a></li>
+<li><a href="https://hl7.org.au/fhir/4.1.0/CodeSystem-au-observation-category.html">Observation Category Codes AU</a></li>
 </ul>
 </li>
 <li>Removed profiles (migrated to AU Core):
@@ -219,15 +219,15 @@ To help implementers, only the more significant changes are listed here.
     <li>AU Vital Signs Panel</li>
 </ul>
 </li>
-<li>Changed Patient.extension in <a href="StructureDefinition-au-patient.html">AU Base Patient:</a> to add genderIdentity and change the binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a> (extensible) (<a href="https://github.com/hl7au/au-fhir-base/issues/599">au-fhir-base #599</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-186">FHIRIG #186</a>).</li>
-<li>Changed Encounter.type binding in <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> to Encounter Type (preferred) (<a href="https://github.com/hl7au/au-fhir-base/issues/382">au-fhir-base #382</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
-<li>Changed Encounter.serviceType binding in <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> to Service Type (preferred)(<a href="https://github.com/hl7au/au-fhir-base/issues/684">au-fhir-base #684</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
-<li>Technical correction of DiagnosticReport.code binding strength in <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a> to preferred (<a href="https://jira.hl7australia.com/browse/FHIRIG-233">FHIRIG #233</a>).</li>
-<li>Changed Immunization.statusReason binding in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to Reason Vaccine Not Administered v3 (<a href="https://github.com/hl7au/au-fhir-base/issues/745">au-fhir-base #745</a>).</li>
-<li>Changed Immunization.site.coding cardinality in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
-<li>Changed Immunization.route.coding cardinality in <a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
-<li>Changed Observation.category slicing in <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> to move the preferred binding to a slice for Specific discipline of pathology (<a href="https://github.com/hl7au/au-fhir-base/issues/744">au-fhir-base #744</a>).</li>
-<li>Changed <a href="CodeSystem-au-location-physical-type.html">Location Type (Physical) AU</a> to deprecate concept 'vi'.</li>
+<li>Changed Patient.extension in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-patient.html">AU Base Patient:</a> to add genderIdentity and change the binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a> (extensible) (<a href="https://github.com/hl7au/au-fhir-base/issues/599">au-fhir-base #599</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-186">FHIRIG #186</a>).</li>
+<li>Changed Encounter.type binding in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-encounter.html">AU Base Encounter</a> to Encounter Type (preferred) (<a href="https://github.com/hl7au/au-fhir-base/issues/382">au-fhir-base #382</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
+<li>Changed Encounter.serviceType binding in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-encounter.html">AU Base Encounter</a> to Service Type (preferred)(<a href="https://github.com/hl7au/au-fhir-base/issues/684">au-fhir-base #684</a>, <a href="https://jira.hl7australia.com/browse/FHIRIG-191">FHIRIG #191</a>).</li>
+<li>Technical correction of DiagnosticReport.code binding strength in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a> to preferred (<a href="https://jira.hl7australia.com/browse/FHIRIG-233">FHIRIG #233</a>).</li>
+<li>Changed Immunization.statusReason binding in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-immunization.html">AU Base Immunisation</a> to Reason Vaccine Not Administered v3 (<a href="https://github.com/hl7au/au-fhir-base/issues/745">au-fhir-base #745</a>).</li>
+<li>Changed Immunization.site.coding cardinality in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
+<li>Changed Immunization.route.coding cardinality in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-immunization.html">AU Base Immunisation</a> to remove cardinality restriction (<a href="https://jira.hl7australia.com/browse/FHIRIG-242">FHIRIG #242</a>).</li>
+<li>Changed Observation.category slicing in <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a> to move the preferred binding to a slice for Specific discipline of pathology (<a href="https://github.com/hl7au/au-fhir-base/issues/744">au-fhir-base #744</a>).</li>
+<li>Changed <a href="https://hl7.org.au/fhir/4.1.0/CodeSystem-au-location-physical-type.html">Location Type (Physical) AU</a> to deprecate concept 'vi'.</li>
 </ul>
 
 
