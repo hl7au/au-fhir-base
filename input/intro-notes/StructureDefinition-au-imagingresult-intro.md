@@ -1,3 +1,5 @@
+{% include breaking-change-au-imagingresult.md -%}
+
 ### Usage Notes
 
 **Profile specific implementation guidance:**
