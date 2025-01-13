@@ -70,7 +70,7 @@ jobs:
 
     - name: Create directories
       run: |
-        mkdir -p webroot/fhir
+        mkdir -p webroot/fhir/base
 
     - name: Download package-list.json
       run: |
@@ -79,7 +79,7 @@ jobs:
         FULL_URL="$URL/package-list.json"
         
         curl --output webroot/fhir/package-list.json --url $FULL_URL
-        curl --output webroot/fhir/package-list.json --url $FULL_URL
+        curl --output webroot/fhir/base/package-list.json --url $FULL_URL
 
     - name: Download package-feed.xml
       run: |
@@ -97,7 +97,7 @@ jobs:
 
     - name: Download past versions
       run: |  
-        aws s3 sync s3://hl7au-fhir-ig/fhir ./webroot/fhir  --only-show-errors #/${{ steps.get_tag.outputs.tag }} --exclude pd --exclude core --exclude ereq --exclude staging
+        aws s3 sync s3://hl7au-fhir-ig/fhir ./webroot/fhir  --only-show-errors #/${{ steps.get_tag.outputs.tag }} --exclude pd --exclude core --exclude ereq --exclude staging --exclude *.zip
    
     - name: Run Aubase Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
@@ -118,7 +118,7 @@ jobs:
     
     - name: Upload Base webroot to S3 and publish
       run: |  
-        aws s3 cp ./webroot/fhir s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
         aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.bak.xml
         aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.bak.xml
         aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.xml
