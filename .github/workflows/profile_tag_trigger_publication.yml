@@ -101,6 +101,11 @@ jobs:
         aws s3 cp s3://hl7au-fhir-ig/fhir/4.2.2-preview/package.tgz ./webroot/fhir/4.2.2-preview
         mkdir -p webroot/fhir/4.2.2-ballot
         aws s3 cp s3://hl7au-fhir-ig/fhir/4.2.2-ballot/package.tgz ./webroot/fhir/4.2.2-ballot
+        mkdir -p webroot/fhir/4.2.1-preview
+        aws s3 cp s3://hl7au-fhir-ig/fhir/4.2.1-preview/package.tgz ./webroot/fhir/4.2.1-preview
+        mkdir -p webroot/fhir/4.2.0-preview
+        aws s3 cp s3://hl7au-fhir-ig/fhir/4.2.0-preview/package.tgz ./webroot/fhir/4.2.0-preview
+        
 #        aws s3 sync s3://hl7au-fhir-ig/fhir ./webroot/fhir  --only-show-errors #/${{ steps.get_tag.outputs.tag }} --exclude pd --exclude core --exclude ereq --exclude staging --exclude *.zip
    
     - name: Run Aubase Go Publisher build
