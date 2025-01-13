@@ -64,8 +64,8 @@ jobs:
     
     - name: Download past versions
       run: |  
-        aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --recursive --include 'package.tgz' --exclude pd --exclude core --exclude ereq --exclude staging
-           
+        aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --recursive --exclude "*" --include "*/package.tgz"
+
     - name: Basic Publish for Aubase
       run: |
           echo "Generating Publish for  Aubase IG..."
