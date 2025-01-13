@@ -81,13 +81,13 @@ To help implementers, only the more significant changes are listed here.
 <ul>
   <li>Draft artifacts:
   <ul>
-   <li>Added <a href="http://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
+   <li>Added <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
   </ul>
     <ul>
-      <li>Retained <a href="http://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-ethnicity.html">Ethnicity Extension</a></li>
+      <li>Retained <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-ethnicity.html">Ethnicity Extension</a></li>
     </ul>
     <ul>
-      <li>Retained <a href="http://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
+      <li>Retained <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
     </ul>
   </li>
   <li>New extensions:
@@ -258,7 +258,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed identifier slices to Identifier profiles in resource profiles.</li>
   <li>Draft artifacts (not included):
    <ul>
-      <li>Added <a href="http://hl7.org.au/fhir/4.0.0/StructureDefinition-ethnicity.html">Ethnicity Extension</a></li>
+      <li>Added <a href="https://hl7.org.au/fhir/4.0.0/StructureDefinition-ethnicity.html">Ethnicity Extension</a></li>
     </ul>
   </li>
 <li>New extensions: 
