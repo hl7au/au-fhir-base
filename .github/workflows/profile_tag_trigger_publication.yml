@@ -97,7 +97,11 @@ jobs:
 
     - name: Download past versions
       run: |  
-        aws s3 sync s3://hl7au-fhir-ig/fhir ./webroot/fhir  --only-show-errors #/${{ steps.get_tag.outputs.tag }} --exclude pd --exclude core --exclude ereq --exclude staging --exclude *.zip
+        mkdir -p webroot/fhir/4.2.2-preview
+        aws s3 cp s3://hl7au-fhir-ig/fhir/4.2.2-preview/package.tgz ./webroot/fhir/4.2.2-preview
+        mkdir -p webroot/fhir/4.2.2-ballot
+        aws s3 cp s3://hl7au-fhir-ig/fhir/4.2.2-ballot/package.tgz ./webroot/fhir/4.2.2-ballot
+#        aws s3 sync s3://hl7au-fhir-ig/fhir ./webroot/fhir  --only-show-errors #/${{ steps.get_tag.outputs.tag }} --exclude pd --exclude core --exclude ereq --exclude staging --exclude *.zip
    
     - name: Run Aubase Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
