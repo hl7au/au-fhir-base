@@ -49,7 +49,7 @@ Reference should also be made to [Version Management Policy](http://hl7.org/fhir
 ### HL7 AU FHIR Artefact Release Publishing Policy
 Publishing requirements applied to HL7 AU FHIR implementation guides are applied based on the AFMM assessment of artefacts and govern whether artefacts may form part of a draft release, preview release, ballot release, or official publication of a standard.
 
-**DRAFT 0** maturity level artefacts are considered not substantially complete by the responsible workgroup and not necessarily ready for implementation. Subsequently any artefact content remaining at this level will not be published in official publication of [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) specifications.
+**DRAFT 0** maturity level artefacts are considered not substantially complete by the responsible work group and not necessarily ready for implementation. Subsequently any artefact content remaining at this level will not be published in official publication of [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) specifications.
 
  **DRAFT 0** material may be included in any releases provided as **draft**, **preview** or **ballot** snapshots. This allows feedback to be sought on this material through Connectathons, testing and ballot activities. **DRAFT 0** level artefacts, by committee consensus, may achieve **AFMM 1** between ballot and official publication allowing them to be included in the official publication of a [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) specification.
 
