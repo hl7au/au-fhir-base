@@ -95,7 +95,7 @@ jobs:
       run: |
         java -jar input-cache/publisher.jar -generate-package-registry webroot
 
-     - name: Download past versions
+    - name: Download past versions
       run: |  
         aws s3 sync s3://hl7au-fhir-ig/fhir ./webroot/fhir  --only-show-errors #/${{ steps.get_tag.outputs.tag }} --exclude pd --exclude core --exclude ereq --exclude staging
    
