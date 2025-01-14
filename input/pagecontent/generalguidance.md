@@ -3,12 +3,12 @@ This implementation guide does not attempt to constrain for specific use cases.
 Instead it defines representations of how commonly needed concepts, in an Australian context, can be applied generally.
 
 This implementation guide can then be drawn on for specific use cases and further constraints added for the needs of those cases.
-By referencing the AU Base definition in downstream implementation guides there is a basic level of alignment in representation across those guides.  
+By referencing the AU Base definition in downstream implementation guides there is a basic level of alignment in representation across those guides.
 This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration translation tasks.
 This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information into and out of multiple domains of interest is addressed.
 
 This approach manifests as the following representation outcomes in this guide, as follows:
-* Cardinality:  most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
+* Cardinality: most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
 * Must Support: the FHIR profiling Must Support flags are not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
 * Terminology Binding: elements that can be bound to terminology are often sliced to offer one or more specific binding options that can be required in downstream guides; this also provides value sets that are common/suitable for the Australian context. 
 * Slice Constraints: in this guide choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
@@ -24,26 +24,41 @@ subjected to interoperability testing through Connectathons and early adoption. 
 in a variety of environments. Others have received relatively little real-world exercise. In general, the infrastructure should be considered to be more stable 
 than the resources themselves. Guidance from early implementation will help address these areas.
 
-All artifacts in this specification are assigned a "Maturity Level", known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. 
+All artefacts in this specification are assigned a "Maturity Level", known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artefact is. 
 
 The following AFMM levels are defined:
 
 {:start="0"}
-**DRAFT 0** The resource or profile (artifact) has been published on the current build. Artifacts with this level must have a standards status of Draft.
+**DRAFT 0** The resource or profile (artefact) has been published on the current build. Artefacts with this level must have a standards status of Draft.
 
-**AFMM 1** DRAFT 0 PLUS the artifact produces no warnings or errors during the build process that have not been accepted by the responsible WG; and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation.
+**AFMM 1** DRAFT 0 PLUS the artefact produces no warnings or errors during the build process that have not been accepted by the responsible WG; and the responsible WG has indicated that they consider the artefact substantially complete and ready for implementation.
 
-**AFMM 2** AFMM 1 PLUS the artifact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using appropriate data and scenarios based on at least one of the declared scopes of the artifact (e.g. at a Connectathon). These interoperability results must have been reported to and accepted by the FHIRWG.
+**AFMM 2** AFMM 1 PLUS the artefact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using appropriate data and scenarios based on at least one of the declared scopes of the artefact (e.g. at a Connectathon). These interoperability results must have been reported to and accepted by the FHIRWG.
 
-**AFMM 3** AFMM 2 PLUS the artifact has been verified by the work group as meeting the [Conformance Resource Quality Guidelines](https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria); has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organisations resulting in at least one substantive change.
+**AFMM 3** AFMM 2 PLUS the artefact has been verified by the work group as meeting the [Conformance Resource Quality Guidelines](https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria); has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organisations resulting in at least one substantive change.
 
-**AFMM 4** AFMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
+**AFMM 4** AFMM 3 PLUS the artefact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
 
-**AFMM 5** AFMM 4 PLUS the artifact has been published in two formal publication release cycles at AFMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
+**AFMM 5** AFMM 4 PLUS the artefact has been published in two formal publication release cycles at AFMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
 
-**Normative** AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the [inter-version](https://hl7.org/fhir/versions.html#change) change rules and the artifact has passed HL7 AU normative ballot. This is synonymous with [Normative](https://hl7.org/fhir/versions.html#normative) standard status.
+**Normative** AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the [inter-version](https://hl7.org/fhir/versions.html#change) change rules and the artefact has passed HL7 AU normative ballot. This is synonymous with [Normative](https://hl7.org/fhir/versions.html#normative) standard status.
 
 Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
+
+
+### HL7 AU FHIR Artefact Release Publishing Policy
+Publishing requirements applied to HL7 AU FHIR implementation guides are applied based on the AFMM assessment of artefacts and govern whether artefacts may form part of a draft release, preview release, ballot release, or official publication of a standard.
+
+**DRAFT 0** maturity level artefacts are considered not substantially complete by the responsible work group and not necessarily ready for implementation. Subsequently any artefact content remaining at this level will not be published in official publication of [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) specifications.
+
+ **DRAFT 0** maturity level artefacts may be included in any releases provided as **draft**, **preview** or **ballot** snapshots. This allows feedback to be sought on this material through Connectathons, testing and ballot activities. **DRAFT 0** level artefacts, by committee consensus, may achieve **AFMM 1** between ballot and official publication allowing them to be included in the official publication of a [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) specification.
+
+The editorial removal of **DRAFT 0** maturity level artefacts that are available in the main continuous integration (CI) branch of a specifications for official publication releases may result in differences to the narrative, summary and profile content to exclude description of, and reference to, these artefacts. Any **DRAFT 0** maturity level artefacts that are removed in this way will be mentioned in the specification change log.
+
+**AFMM 1+** maturity level artefacts are eligible for inclusion in all official [Trial-Use or Normative](https://hl7.org/fhir/R4/versions.html#std-process) publications and also **draft**, **preview** or **ballot** snapshots. Artefact AFMM levels may be revised from time to time using the Australian FHIR Maturity Model level assessment criteria to progress material towards assertion of [Normative](https://hl7.org/fhir/R4/versions.html#std-process) status.
+
+Official publication of a [Normative](https://hl7.org/fhir/R4/versions.html#std-process) specification will have one or more artefacts confirmed at **AFMM 5** or **Normative** maturity level. 
+
 
 ### Business Identifiers
 
@@ -65,11 +80,11 @@ Defined in this implementation guide are profiles for business identifiers for u
    - `PractitionerRole.identifier`
    - `ServiceRequest.identifier`
           
-Business identifiers will typically be a national identifier (ABN, Medicare Provider, IHI), registry / exchange service identifier (ETP, eRx), or local identifier (MRN, Placer Identifier).  
+Business identifiers will typically be a national identifier (ABN, Medicare Provider, IHI), registry / exchange service identifier (ETP, eRx), or local identifier (MRN, Placer Identifier).
 
 This guide publishes and maintains rules on how to exchange various business identifiers in Australia as a set of Identifier data type profiles, e.g. [AU PBS Prescriber Number](/StructureDefinition-au-pbsprescribernumber.html). 
 
-While national and registry / exchange service identifiers will define the namespace to use when sending an identifier, a local identifier requires the organisation to define their own namespace when exchanging identifiers they manage.  
+While national and registry / exchange service identifiers will define the namespace to use when sending an identifier, a local identifier requires the organisation to define their own namespace when exchanging identifiers they manage.
 
 When constructing a local identifier it is preferable that an organisation uses their own local system identifier namespace (e.g. "https://local organisation domain/identifier type") but if that is not available then an organisation can use their HPI-O or ABN to construct a legal, globally unique identifier system for some local identifiers.
 
