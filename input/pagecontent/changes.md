@@ -8,7 +8,7 @@ To help implementers, only the more significant changes are listed here.
 ##### Breaking Changes <a name="breakingchanges"></a>
   This trial use release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
-  <li><a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
+  <li><a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
     <ul>
       <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
     </ul>
