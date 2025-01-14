@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# HL7 core warnings
+# === HL7 core warnings ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
@@ -27,7 +27,7 @@ WARNING: Medication/GenericPack0: Medication.code.coding[0].system: A definition
 WARNING: Medication/GenericPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
 WARNING: Specimen/serum: Specimen.container[0].type.coding[0].system: A definition for CodeSystem 'https://acmepathology.example.com/labs' could not be found, so the code cannot be validated
 
-# Reported Ontoserver fault
+# Reported Ontoserver Fault
 ERROR: List/example2: List.contained[7]/*Practitioner/dr-97531*/.qualification[0].code.coding[0]: Error from https://tx.ontoserver.csiro.au/fhir: Error: NullPointerException Information: X-Request-Id:
 ERROR: Practitioner/example3: Practitioner.qualification[0].code.coding[0]: Error from https://tx.ontoserver.csiro.au/fhir: Error: NullPointerException Information: X-Request-Id:
 
@@ -65,23 +65,19 @@ INFORMATION: Medication/UnbrandedProduct1: Medication.ingredient[0].item.ofType(
 INFORMATION: Medication/UnbrandedProduct2: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 INFORMATION: Medication/BrandedPackSingleActiveIngredient0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 
-# Mismatched standards status
-INFORMATION: CodeSystem/au-observation-category: CodeSystem: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
-INFORMATION: ValueSet/au-observation-category-extended: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
-
 # Expected large expansions
 INFORMATION: ValueSet.where(id = 'amt-mp-codes'): The value set expansion is too large, and only a subset has been displayed
 INFORMATION: ValueSet.where(id = 'au-jurisdiction-extended'): The value set expansion is too large, and only a subset has been displayed
 
-# Use of pattern deprecated
+# Expected use of pattern deprecated
 INFORMATION: StructureDefinition/au-immunization: StructureDefinition.differential.element[6].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/au-immunization: StructureDefinition.snapshot.element[26].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# Deprecated information
+# Expected deprecated profiles
 INFORMATION: Encounter/example0: Encounter.extension[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/StructureDefinition/au-encounter|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Encounter/example0: Encounter.extension[0]: The extension http://hl7.org.au/fhir/StructureDefinition/encounter-description|5.0.0 is deprecated
 
-# Multiple slice matches due to R4 resource target
+# Multiple slice matches due datatype choice
 WARNING: HealthcareService/example0: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
 WARNING: HealthcareService/example4: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
 WARNING: HealthcareService/example5: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -156,7 +152,7 @@ WARNING: RelatedPerson/example2: RelatedPerson.address[0]: Found multiple matchi
 WARNING: RelatedPerson/example3: RelatedPerson.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 WARNING: RelatedPerson/example3: RelatedPerson.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
 
-# Informative only
+# Informative matching messages
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.subject: Details for urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[0].item: Details for urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[1].item: Details for urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
@@ -174,7 +170,7 @@ WARNING: Observation/norelevantfinding-example0: Observation: Best Practice Reco
 WARNING: Observation/norelevantfinding-example1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/norelevantfinding-example2: Observation: Best Practice Recommendation: In general, all observations should have a performer
 
-# No examples
+# Expected no examples warning
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber'): The Implementation Guide contains no examples for this data type profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber'): The Implementation Guide contains no examples for this data type profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-deliverypointidentifier'): The Implementation Guide contains no examples for this data type profile
