@@ -6,7 +6,7 @@
 To help implementers, only the more significant changes are listed here.
 
 ##### Breaking Changes <a name="breakingchanges"></a>
-  This trial use release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
+This trial use release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
     <ul>
@@ -37,7 +37,7 @@ To help implementers, only the more significant changes are listed here.
 
 
 ##### Not Included
-  The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM **DRAFT 0** maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
+The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM **DRAFT 0** maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
   <ul>
       <li>AU Base Service Request</li>
       <li>AU Base Coverage</li>
@@ -50,6 +50,8 @@ To help implementers, only the more significant changes are listed here.
   </ul>
 
 ##### Changes in this version
+To help implementers, only the more significant changes are listed here.
+
 <ul>
   <li>Deprecated profiles:
    <ul>
@@ -92,11 +94,11 @@ To help implementers, only the more significant changes are listed here.
     <li>Removed invariants inv-pra-0 (related to the Ahpra Profession Details extension) and inv-pra-1 (related to the Ahpra Registration Details extension), relaxing contraint on their use, and remaining invariants were renumbered (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
     <li>Removed the explicit inclusion of the Ahpra Profession Details and Ahpra Registration Details extension from Practitioner.qualification(<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
   </ul>
+  <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
 </li>
 <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
   <ul>
     <li>Moved the BodyStructure Reference extension to the Observation element instead of Observation.bodySite (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
-    <li>Changed the BodyStructure Reference extension slice name from bodySite to bodyStructure (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
     <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
   </ul>
 </li>
@@ -105,6 +107,11 @@ To help implementers, only the more significant changes are listed here.
     <li>Removed cardinality constraint on Identifier.assigner from 1..1 to 0..1 (<a href="https://jira.hl7.org/browse/FHIR-47188">FHIR-47188</a>).</li>
   </ul>
 </li>
+<li><a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
+    <ul>
+      <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
+    </ul>
+  </li>
 <li>Changes to <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>:
   <ul>
    <li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
