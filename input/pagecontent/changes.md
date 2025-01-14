@@ -6,7 +6,7 @@
 To help implementers, only the more significant changes are listed here.
 
 ##### Breaking Changes <a name="breakingchanges"></a>
-This trial use release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
+This release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
     <ul>
@@ -34,7 +34,6 @@ This trial use release includes breaking changes to the following artefacts. Imp
       </ul>
   </li>
 </ul>
-
 
 ##### Not Included
 The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM **DRAFT 0** maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
@@ -144,7 +143,7 @@ To help implementers, only the more significant changes are listed here.
 <ul>
   <li>New profiles:
     <ul>
-      <li>Draft - <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
+      <li>AFMM **DRAFT 0** <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a></li>
     </ul>
   </li>
   <li>New extensions:
@@ -248,21 +247,21 @@ To help implementers, only the more significant changes are listed here.
 <li>Changed HL7 AU implementation guide publication structure and format to better align to current HL7 practices.</li>
 <li>New profiles:
   <ul>
-    <li>Draft - <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
+    <li>AFMM **DRAFT 0** <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
   </ul>
   <ul>
-    <li>Draft - <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-result-copies-to.html">Result copies to</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/670">au-fhir-base #670</a>)</li>
+    <li>AFMM **DRAFT 0** <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-result-copies-to.html">Result copies to</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/670">au-fhir-base #670</a>)</li>
   </ul>
 </li>
 <li>New value sets:
 <ul>
-<li><a href="https://hl7.org.au/fhir/4.1.0/ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></li>
-
+<li>AFMM **DRAFT 0** <a href="https://hl7.org.au/fhir/4.1.0/ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a>
+</li>
 </ul>
 </li>
 <li>New code systems:
 <ul>
-<li><a href="https://hl7.org.au/fhir/4.1.0/CodeSystem-au-observation-category.html">Observation Category Codes AU</a></li>
+<li>AFMM **DRAFT 0** <a href="https://hl7.org.au/fhir/4.1.0/CodeSystem-au-observation-category.html">Observation Category Codes AU</a></li>
 </ul>
 </li>
 <li>Removed profiles (migrated to AU Core):
@@ -321,7 +320,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Vaccine Vial Serial Number</li>
 <li>Medication Strength</li>
 <li>Australian Time Zone</li>
-<li>Draft - Ethnicity Extension</li>
+<li>Ethnicity Extension</li>
 </ul>
 </li> 
 <li>New profiles:
