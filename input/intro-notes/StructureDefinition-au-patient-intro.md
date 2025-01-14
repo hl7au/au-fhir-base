@@ -9,5 +9,3 @@
   - If the language for interpreter service is known, the language is included in `Patient.communication.language` and `Patient.communication.preferred` is set to "true". 
   - If `Patient.communication.preferred` has not been included, or is set to "false", systems should understand this as the language for the interpreter service is not known.
 
-**Extensions under consideration:**
-* Patient: [Ethnicity](StructureDefinition-ethnicity.html)

@@ -1,3 +1,5 @@
+{% include breaking-change-au-medicarecardnumber.md -%}
+
 ### Usage Notes
 
 The 10 digit format is supported as some systems do not support the 11 digit Medicare card number. 
