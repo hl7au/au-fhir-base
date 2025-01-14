@@ -9,40 +9,26 @@ The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 
-# Inherited HL7 information
-INFORMATION: StructureDefinition/au-medicationdispense: StructureDefinition.snapshot.element[44].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# Expected missing terminology
-WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[0].system: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
-WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[1]: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
-WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[2]: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+# === PBS terminology content is not published in FHIR  ===
 ERROR: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept).coding[0].code: Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'
+
+# === IG publisher FHIR Path resolve terminology in invariants does not apply AU authoritative TX server selection ===  
+WARNING: Patient/example-sex-and-gender: Patient.extension[2].extension[6].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1' could not be found, so the code cannot be validated
+WARNING: Patient/example-sex-and-gender: Patient: Constraint failed: inv-pat-5: 'Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+WARNING: Patient/example7: Patient: Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+WARNING: RelatedPerson/example-sex-and-gender: RelatedPerson.extension[3].extension[5].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1' could not be found, so the code cannot be validated
+WARNING: RelatedPerson/example-sex-and-gender: RelatedPerson: Constraint failed: inv-relper-4: 'Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-relatedperson)
+
+
+# Expected terminology content is not published
 WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
 WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; The provided code 'http://snomed.info/sct#824201000168102 ('Insulin glargine 100 units/mL injection, 5 x 3 mL pen devices')' was not found in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0'; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item, http://snomed.info/sct was not found
-WARNING: Medication/BrandedPack0: Medication.code.coding[0].system: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
-WARNING: Medication/BrandedPack0: Medication.code.coding[1].system: A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
-WARNING: Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set '' because the code system http://www.mims.com.au/codes was not found
-WARNING: Medication/BrandedPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
-WARNING: Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|5.0.0' because the code system http://example.acme.com.au/generic-packages, http://www.mims.com.au/codes, http://www.whocc.no/atc, http://snomed.info/sct, http://snomed.info/sct was not found
-WARNING: Medication/GenericPack0: Medication.code.coding[0].system: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
-WARNING: Medication/GenericPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
-WARNING: Specimen/serum: Specimen.container[0].type.coding[0].system: A definition for CodeSystem 'https://acmepathology.example.com/labs' could not be found, so the code cannot be validated
 
-# Reported Ontoserver Fault
-ERROR: List/example2: List.contained[7]/*Practitioner/dr-97531*/.qualification[0].code.coding[0]: Error from https://tx.ontoserver.csiro.au/fhir: Error: NullPointerException Information: X-Request-Id:
-ERROR: Practitioner/example3: Practitioner.qualification[0].code.coding[0]: Error from https://tx.ontoserver.csiro.au/fhir: Error: NullPointerException Information: X-Request-Id:
+# Expected example terminology content 
 
-# Expected Draft/Experimental Terminology
-INFORMATION: HealthcareService/example1: HealthcareService.availableTime[0].availableStartTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
-INFORMATION: HealthcareService/example1: HealthcareService.availableTime[0].availableEndTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
-INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.0.1
-INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.0.1
-INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.0.1
-INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.0.1
-INFORMATION: Organization/example1: Organization.contact[1].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
-INFORMATION: Organization/example1: Organization.contact[2].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
-INFORMATION: PractitionerRole/example2: PractitionerRole.availableTime[0].availableStartTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
-INFORMATION: PractitionerRole/example2: PractitionerRole.availableTime[0].availableEndTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
+
+# === Expected additional binding to experimental terminology
 WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.differential.element[8].binding.extension[0]: The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.differential.element[8].binding.extension[1]: The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.differential.element[8].binding.extension[2]: The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
@@ -52,33 +38,8 @@ WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.snapshot.el
 WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.snapshot.element[38].binding.extension[2]: The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.snapshot.element[38].binding.extension[3]: The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3' which is experimental, but this structure is not labeled as experimental
 
-# Expected Trial Use Terminology
-INFORMATION: Medication/BrandProductwithBatchDetails0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/DoseBased: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[1].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[2].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[3].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/TwoActiveIngredientsProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/TwoActiveIngredientsProduct0: Medication.ingredient[1].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/UnbrandedProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/UnbrandedProduct1: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/UnbrandedProduct2: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
-INFORMATION: Medication/BrandedPackSingleActiveIngredient0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 
-# Expected large expansions
-INFORMATION: ValueSet.where(id = 'amt-mp-codes'): The value set expansion is too large, and only a subset has been displayed
-INFORMATION: ValueSet.where(id = 'au-jurisdiction-extended'): The value set expansion is too large, and only a subset has been displayed
-
-# Expected use of pattern deprecated
-INFORMATION: StructureDefinition/au-immunization: StructureDefinition.differential.element[6].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/au-immunization: StructureDefinition.snapshot.element[26].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-
-# Expected deprecated profiles
-INFORMATION: Encounter/example0: Encounter.extension[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/StructureDefinition/au-encounter|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Encounter/example0: Encounter.extension[0]: The extension http://hl7.org.au/fhir/StructureDefinition/encounter-description|5.0.0 is deprecated
-
-# Multiple slice matches due datatype choice
+# === Expected multiple slice matches due datatype choice approach in AU Base ===
 WARNING: HealthcareService/example0: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
 WARNING: HealthcareService/example4: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
 WARNING: HealthcareService/example5: HealthcareService.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -153,25 +114,12 @@ WARNING: RelatedPerson/example2: RelatedPerson.address[0]: Found multiple matchi
 WARNING: RelatedPerson/example3: RelatedPerson.identifier[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 WARNING: RelatedPerson/example3: RelatedPerson.address[0]: Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-address, http://hl7.org/fhir/StructureDefinition/Address
 
-# Informative matching messages
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.subject: Details for urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[0].item: Details for urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[1].item: Details for urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[2].item: Details for urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[3].item: Details for urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[4].item: Details for urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[5].item: Details for urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[6].item: Details for urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[7].item: Details for urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
-INFORMATION: List/example2: List.contained[9]/*Encounter/enc-24680*/.participant[0].individual: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
-INFORMATION: List/example2: List.source: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
-
-# Known variance from best practice recommendation
+# === IG publisher Best Practice advice is not relevant for examples. We intend not to change ===
 WARNING: Observation/norelevantfinding-example0: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/norelevantfinding-example1: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/norelevantfinding-example2: Observation: Best Practice Recommendation: In general, all observations should have a performer
 
-# Expected no examples warning
+# == Expected no examples warnings for these profiles.  We welcome example submissions from the community ===
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber'): The Implementation Guide contains no examples for this data type profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber'): The Implementation Guide contains no examples for this data type profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-deliverypointidentifier'): The Implementation Guide contains no examples for this data type profile
@@ -195,5 +143,58 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefini
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/identifier-routability'): The Implementation Guide contains no examples for this extension
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/result-copies-to'): The Implementation Guide contains no examples for this extension
 
+# Inherited HL7 information
+INFORMATION: StructureDefinition/au-medicationdispense: StructureDefinition.snapshot.element[44].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
+# Informative matching messages
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.subject: Details for urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[0].item: Details for urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[1].item: Details for urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[2].item: Details for urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[3].item: Details for urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[4].item: Details for urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[5].item: Details for urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[6].item: Details for urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[7].item: Details for urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+INFORMATION: List/example2: List.contained[9]/*Encounter/enc-24680*/.participant[0].individual: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+INFORMATION: List/example2: List.source: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
 
+# Expected Trial Use Terminology
+INFORMATION: Medication/BrandProductwithBatchDetails0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/DoseBased: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[1].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[2].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[3].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/TwoActiveIngredientsProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/TwoActiveIngredientsProduct0: Medication.ingredient[1].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/UnbrandedProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/UnbrandedProduct1: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/UnbrandedProduct2: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/BrandedPackSingleActiveIngredient0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+
+# Expected large expansions
+INFORMATION: ValueSet.where(id = 'amt-mp-codes'): The value set expansion is too large, and only a subset has been displayed
+INFORMATION: ValueSet.where(id = 'au-jurisdiction-extended'): The value set expansion is too large, and only a subset has been displayed
+
+# Expected use of pattern deprecated
+INFORMATION: StructureDefinition/au-immunization: StructureDefinition.differential.element[6].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/au-immunization: StructureDefinition.snapshot.element[26].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# Expected deprecated profiles
+INFORMATION: Encounter/example0: Encounter.extension[0]: The extension http://hl7.org.au/fhir/StructureDefinition/encounter-description|5.0.0 is deprecated
+
+# Expected use of potentially useful extension
+INFORMATION: Encounter/example0: Encounter.extension[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/StructureDefinition/au-encounter|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# Expected Draft/Experimental Terminology
+INFORMATION: HealthcareService/example1: HealthcareService.availableTime[0].availableStartTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
+INFORMATION: HealthcareService/example1: HealthcareService.availableTime[0].availableEndTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
+INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.0.1
+INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.0.1
+INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.0.1
+INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.0.1
+INFORMATION: Organization/example1: Organization.contact[1].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: Organization/example1: Organization.contact[2].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: PractitionerRole/example2: PractitionerRole.availableTime[0].availableStartTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
+INFORMATION: PractitionerRole/example2: PractitionerRole.availableTime[0].availableEndTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
