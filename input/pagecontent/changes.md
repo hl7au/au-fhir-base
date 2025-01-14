@@ -37,14 +37,14 @@ To help implementers, only the more significant changes are listed here.
 
 
 ##### Not Included
-  The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM **DRAFT 0** maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these **DRAFT 0** maturity level artefacts may be available if retained in the specification.
+  The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM **DRAFT 0** maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
   <ul>
-      <li>AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
-      <li>AU Base Coverage (Draft supporting AU eRequesting FHIR IG)</li>
+      <li>AU Base Service Request</li>
+      <li>AU Base Coverage</li>
       <li>AU Health Program Participation Summary</li>
-      <li>Vaccine Vial Serial Number Extension</li>
-      <li>Medication Strength Extension</li>
-      <li>Ethnicity Extension</li>
+      <li>Vaccine Vial Serial Number extension</li>
+      <li>Medication Strength extension</li>
+      <li>Ethnicity extension</li>
       <li>Observation Category Codes - AU Extended value set</li>
       <li>Observation Category Codes AU code system</li>
   </ul>
