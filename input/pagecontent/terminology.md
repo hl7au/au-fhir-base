@@ -301,11 +301,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>AU Base</td>
 </tr>
 <tr>
-    <td><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></td>
-    <td>-</td>
-    <td>AU Base</td>
-</tr>
-<tr>
     <td><a href="ValueSet-order-identifier-type.html">Order Identifier Type</a></td>
     <td><a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a></td>
     <td>AU Base</td>
@@ -630,12 +625,6 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-name-context.html">Name Context</a></td>
         <td><a href="ValueSet-name-context.html">Name Context</a></td>
-        <td>AU Base</td>
-        <td>HL7 Australia</td>
-    </tr>
-    <tr>
-        <td><a href="CodeSystem-au-observation-category.html">Observation Category Codes AU</a></td>
-        <td><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
