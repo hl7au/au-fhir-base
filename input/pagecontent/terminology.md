@@ -197,7 +197,7 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a></td>
     <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>,
-      <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>
+      <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -347,7 +347,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a></td>
-    <td><a href="<a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a></td>
+    <td><a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
