@@ -7,15 +7,15 @@ The guidance below addresses how sex and gender related concepts can be structur
 
 ### Localisation of sex and gender concepts in AU Base
 
-AU Base represents sex and gender related concepts, and describes their use for Patient, Practitioner and Related Person. AU Base does not place *Must Support* or obligations on any concepts. The table below provides an overview of the sex and gender related concepts represented in AU Base, indicating for which profiles the concept is localised or supported. 
+AU Base represents sex and gender related concepts, and describes their use for Patient, Practitioner and Related Person. AU Base does not place *Must Support* on any concepts. The table below provides an overview of the sex and gender related concepts represented in AU Base, indicating for which profiles the concept is localised or supported. 
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept has *Must Support* and obligations defined.
+<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept is marked as *Must Support*.
 
-<img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but does not have *Must Support* or obligations defined.
+<img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but is not marked as *Must Support*.
 
-<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: Sex or gender related concept is not localised for use in an Australian context.
+<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: The sex or gender related concept is not localised for use in an Australian context.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
