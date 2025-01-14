@@ -6,24 +6,29 @@
 To help implementers, only the more significant changes are listed here.
 
 ##### Breaking Changes <a name="breakingchanges"></a>
-  This trial use release includes breaking changes to some profiles. Implementers are advised to consider the changes described in these artefacts when in use.
+  This trial use release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
-  <li>Breaking changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
+  <li><a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
     <ul>
       <li>Added minimum length constraint of 10 characters to Identifier.value in <a href="StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a> (<a href="https://jira.hl7.org/browse/FHIR-46619">FHIR-46619</a>).</li>
     </ul>
   </li>
-  <li>Breaking changes to <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
+  <li><a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
     <ul>
        <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate the <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> Encounter.class element in FHIR R4.</li>
     </ul>
   </li>
-  <li>Breaking changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
+  <li><a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a>:
+    <ul>
+       <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set as these concepts are subsumed by the VR concept (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
       <ul>
         <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
       </ul>
   </li>
-  <li>Breaking changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
+  <li><a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
       <ul>
         <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
       </ul>
@@ -105,6 +110,11 @@ To help implementers, only the more significant changes are listed here.
    <li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
   </ul>
 </li>
+<li>Changes to <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a>:
+    <ul>
+       <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set as these concepts are subsumed by the VR concept (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>).</li>
+    </ul>
+  </li>
 <li>Changes to all AU Base code systems and value sets:
   <ul>
     <li>Updated AU Base code system resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>).</li>
