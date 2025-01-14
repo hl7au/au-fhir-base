@@ -105,7 +105,7 @@ To help implementers, only the more significant changes are listed here.
    <li>Added Biological Sex at Birth SNOMED CT code (1515311000168102) to value set (<a href="https://jira.hl7.org/browse/FHIR-46544">FHIR-46544</a>).</li>
   </ul>
 </li>
-<li>Changes to all AU Base codes ystems and value sets:
+<li>Changes to all AU Base code systems and value sets:
   <ul>
     <li>Updated AU Base code system resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablecodesystem">ShareableCodeSystem</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"> NCTS Complete CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-47148">FHIR-47148</a>).</li>
     <li>Updated AU Base value set resources to remove conformance to HL7 International <a href="http://hl7.org/fhir/StructureDefinition/shareablevalueset">ShareableValueSet</a> and instead claim conformance to <a href="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"> NCTS Composed ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-47149">FHIR-47149</a>).</li>   
