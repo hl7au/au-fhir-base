@@ -127,7 +127,7 @@ To help implementers, only the more significant changes are listed here.
 <ul>
   <li>New profiles:
     <ul>
-      <li>Draft <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
+      <li>Draft - <a href="https://hl7.org.au/fhir/4.2.2-ballot/StructureDefinition-au-coverage.html">AU Base Coverage</a> (Draft supporting AU eRequesting FHIR IG)</li>
     </ul>
   </li>
   <li>New extensions:
@@ -229,12 +229,12 @@ To help implementers, only the more significant changes are listed here.
 #### Changes in this version
 <ul>
 <li>Changed HL7 AU implementation guide publication structure and format to better align to current HL7 practices.</li>
-<li>Draft artifacts:
+<li>New profiles:
   <ul>
-    <li>Draft <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
+    <li>Draft - <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></li>
   </ul>
   <ul>
-    <li>Draft <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-result-copies-to.html">Result copies to</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/670">au-fhir-base #670</a>)</li>
+    <li>Draft - <a href="https://hl7.org.au/fhir/4.1.0/StructureDefinition-result-copies-to.html">Result copies to</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/670">au-fhir-base #670</a>)</li>
   </ul>
 </li>
 <li>New value sets:
@@ -292,12 +292,7 @@ To help implementers, only the more significant changes are listed here.
 <ul>
 <li>Changed the canonical URL to http://terminology.hl7.org.au and applied new OIDs to HL7 AU code systems and value sets.</li>
 <li>Technical correction to extensions to remove slicing (refactoring).</li>
-<li>Changed identifier slices to Identifier profiles in resource profiles.</li>
-  <li>Draft artifacts (not included):
-   <ul>
-      <li>Added <a href="https://hl7.org.au/fhir/4.0.0/StructureDefinition-ethnicity.html">Ethnicity Extension</a></li>
-    </ul>
-  </li>
+<li>Changed identifier slices to Identifier profiles in resource profiles.</li> 
 <li>New extensions: 
 <ul style="-moz-column-count: 3; -moz-column-gap: 20px;  -webkit-column-count: 3;  -webkit-column-gap: 20px;  column-count: 3;  column-gap: 20px;">
 <li>Address Identifier</li>
@@ -309,6 +304,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Vaccine Vial Serial Number</li>
 <li>Medication Strength</li>
 <li>Australian Time Zone</li>
+<li>Draft - Ethnicity Extension</li>
 </ul>
 </li> 
 <li>New profiles:
