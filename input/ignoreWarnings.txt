@@ -12,6 +12,20 @@ Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/c
 # Inherited HL7 information
 INFORMATION: StructureDefinition/au-medicationdispense: StructureDefinition.snapshot.element[44].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
+# Expected missing terminology
+WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[0].system: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[1]: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[2]: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+ERROR: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept).coding[0].code: Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'
+WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; The provided code 'http://snomed.info/sct#824201000168102 ('Insulin glargine 100 units/mL injection, 5 x 3 mL pen devices')' was not found in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0'; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item, http://snomed.info/sct was not found
+WARNING: Medication/BrandedPack0: Medication.code.coding[0].system: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
+WARNING: Medication/BrandedPack0: Medication.code.coding[1].system: A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
+WARNING: Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set '' because the code system http://www.mims.com.au/codes was not found
+WARNING: Medication/BrandedPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
+WARNING: Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|5.0.0' because the code system http://example.acme.com.au/generic-packages, http://www.mims.com.au/codes, http://www.whocc.no/atc, http://snomed.info/sct, http://snomed.info/sct was not found
+WARNING: Medication/GenericPack0: Medication.code.coding[0].system: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
+WARNING: Medication/GenericPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be valida
+WARNING: Specimen/serum: Specimen.container[0].type.coding[0].system: A definition for CodeSystem 'https://acmepathology.example.com/labs' could not be found, so the code cannot be validated
 
 # Reported Ontoserver fault
 ERROR: List/example2: List.contained[7]/*Practitioner/dr-97531*/.qualification[0].code.coding[0]: Error from https://tx.ontoserver.csiro.au/fhir: Error: NullPointerException Information: X-Request-Id: f1f33777-f00e-4f53-a66c-8a93db1b5a1d
@@ -41,6 +55,7 @@ INFORMATION: Medication/TwoActiveIngredientsProduct0: Medication.ingredient[1].i
 INFORMATION: Medication/UnbrandedProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 INFORMATION: Medication/UnbrandedProduct1: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 INFORMATION: Medication/UnbrandedProduct2: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
+INFORMATION: Medication/BrandedPackSingleActiveIngredient0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 
 # Mismatched standards status
 INFORMATION: CodeSystem/au-observation-category: CodeSystem: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
@@ -145,4 +160,30 @@ INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[6].item: Details fo
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[7].item: Details for urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
 INFORMATION: List/example2: List.contained[9]/*Encounter/enc-24680*/.participant[0].individual: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
 INFORMATION: List/example2: List.source: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+
+# No examples
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-deliverypointidentifier'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-dvanumber'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-etpprescriptionidentifier'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-gnafidentifier'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-ihi'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-imagingreport'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-imagingresult'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-localreportidentifier'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-locationspecificpracticenumber'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-paididentifier'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-pathologyreport'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/au-pharmacyapprovalnumber'): The Implementation Guide contains no examples for this data type profi
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/identifier-routability'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/result-copies-to'): The Implementation Guide contains no examples for this extension
+
+
 
