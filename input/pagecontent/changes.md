@@ -5,7 +5,7 @@
 
 To help implementers, only the more significant changes are listed here.
 
-#### Breaking Changes <a name="breakingchanges"></a>
+##### Breaking Changes <a name="breakingchanges"></a>
   This trial use release includes breaking changes to some profiles. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li>Breaking changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
@@ -15,7 +15,7 @@ To help implementers, only the more significant changes are listed here.
   </li>
   <li>Breaking changes to <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
     <ul>
-       <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate the <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> Encounter.class element in FHIR R4.
+       <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate the <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> Encounter.class element in FHIR R4.</li>
     </ul>
   </li>
   <li>Breaking changes to <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>:
@@ -28,10 +28,10 @@ To help implementers, only the more significant changes are listed here.
         <li>Added invariant inv-obs-1 to preadopt R5 behaviour to ensure the BodyStructure Reference extension is present only when Observation.bodySite is not present (<a href="https://jira.hl7.org/browse/FHIR-47117">FHIR-47117</a>).</li>
       </ul>
   </li>
-</ui>
+</ul>
 
 
-#### Not Included
+##### Not Included
   The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM **DRAFT 0** maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these **DRAFT 0** maturity level artefacts may be available if retained in the specification.
   <ul>
       <li>AU Base Service Request (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
@@ -44,7 +44,7 @@ To help implementers, only the more significant changes are listed here.
       <li>Observation Category Codes AU code system</li>
   </ul>
 
-#### Changes in this version
+##### Changes in this version
 <ul>
   <li>Deprecated profiles:
    <ul>
