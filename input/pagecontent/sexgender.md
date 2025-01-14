@@ -1,21 +1,14 @@
-In support of the vision for LGBTIQA+ people achieving equitable health and wellbeing outcomes, AU Base has included content to represent and exchange key data elements including Name to Use, Pronouns and Gender Identity.
-Where possible, AU Base has considered:
-- the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
-- the FHIR representations of the Gender Harmony data elements in the core FHIR standard and FHIR core extensions
+This page addresses how sex and gender related concepts can be structured in FHIR and conformant to AU Base. Where possible, AU Base has considered the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/).
 
-The guidance below addresses how sex and gender related concepts can be structured in FHIR and conformant to AU Base.
-
-### Localisation of sex and gender concepts in AU Base
-
-AU Base represents sex and gender related concepts, and describes their use for Patient, Practitioner and Related Person. AU Base does not place *Must Support* on any concepts. The table below provides an overview of the sex and gender related concepts represented in AU Base, indicating for which profiles the concept is localised or supported. 
+The table below provides an overview of the sex and gender related concepts in AU Base.
 
 **Legend:**
 
-<img src="green_checkmark.svg.png" width="20"/> **Supported**: The sex or gender related concept is marked as *Must Support*.
+<img src="green_checkmark.svg.png" width="20"/> **Supported**<sup>1</sup>: The sex or gender related concept is marked as *Must Support*.
 
 <img src="orange_checkmark.svg.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but is not marked as *Must Support*.
 
-<img src="minus_symbol.svg.png" width="20"/> **Not applicable**: The sex or gender related concept is not localised for use in an Australian context.
+<img src="minus_symbol.svg.png" width="20"/> **Not localised**: The sex or gender related concept is not localised for use in an Australian context.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -65,6 +58,10 @@ AU Base represents sex and gender related concepts, and describes their use for 
         </tr>
     </tbody>
 </table>
+
+
+Notes:
+1. AU Base provides national level agreement on core localised concepts but does not force conformance, and therefore, no elements are marked as Must Support. Use case implementation guides may apply conformance requirements to sex and gender concepts, e.g. AU Core, and readers are advised to refer to the corresponding table in the applicable implementation guide for information.
 
 
 ### Administrative Gender (Patient.gender)
