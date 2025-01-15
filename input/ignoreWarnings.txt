@@ -10,8 +10,10 @@ Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/c
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 
 
-# === PBS terminology content is not published in FHIR  ===
+# === PBS terminology content is not published in FHIR format, validation is not expected  ===
 ERROR: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept).coding[0].code: Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'
+WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
+WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; The provided code 'http://snomed.info/sct#824201000168102 ('Insulin glargine 100 units/mL injection, 5 x 3 mL pen devices')' was not found in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0'; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item, http://snomed.info/sct was not found
 
 # === IG publisher FHIR Path resolve terminology in invariants does not apply AU authoritative TX server selection ===  
 WARNING: Patient/example-sex-and-gender: Patient.extension[2].extension[6].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1' could not be found, so the code cannot be validated
@@ -20,13 +22,20 @@ WARNING: Patient/example7: Patient: Constraint failed: inv-pat-1: 'Individual ge
 WARNING: RelatedPerson/example-sex-and-gender: RelatedPerson.extension[3].extension[5].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1' could not be found, so the code cannot be validated
 WARNING: RelatedPerson/example-sex-and-gender: RelatedPerson: Constraint failed: inv-relper-4: 'Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended if any codes within that value set can apply' (defined in http://hl7.org.au/fhir/StructureDefinition/au-relatedperson)
 
+# === Terminology content is not published, validation is not expected 
+WARNING: Medication/BrandedPack0: Medication.code.coding[1].system: A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
+WARNING: Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set '' because the code system http://www.mims.com.au/codes was not found
+WARNING: Medication/BrandedPack0: Medication.code: Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|5.0.0' because the code system http://example.acme.com.au/generic-packages, http://www.mims.com.au/codes, http://www.whocc.no/atc, http://snomed.info/sct, http://snomed.info/sct was not found
+WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
+WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
+WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item, http://snomed.info/sct was not found
 
-# Expected terminology content is not published
-WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
-WARNING: MedicationAdministration/example1: MedicationAdministration.medication.ofType(CodeableConcept): A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated; The provided code 'http://snomed.info/sct#824201000168102 ('Insulin glargine 100 units/mL injection, 5 x 3 mL pen devices')' was not found in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0'; Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found; Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|5.0.0' because the code system http://pbs.gov.au/code/item, http://snomed.info/sct was not found
-
-# Expected example terminology content 
-
+# === Expected example terminology content ===
+WARNING: Medication/BrandedPack0: Medication.code.coding[0].system: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
+WARNING: Medication/BrandedPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
+WARNING: Specimen/serum: Specimen.container[0].type.coding[0].system: A definition for CodeSystem 'https://acmepathology.example.com/labs' could not be found, so the code cannot be validated
+WARNING: Medication/GenericPack0: Medication.code.coding[0].system: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
+WARNING: Medication/GenericPack0: Medication.code.coding[0]: A definition for CodeSystem 'http://example.acme.com.au/generic-packages' could not be found, so the code cannot be validated
 
 # === Expected additional binding to experimental terminology
 WARNING: StructureDefinition/au-pathologyresult: StructureDefinition.differential.element[8].binding.extension[0]: The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
@@ -142,6 +151,11 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefini
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice'): The Implementation Guide contains no examples for this extension
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/identifier-routability'): The Implementation Guide contains no examples for this extension
 WARNING: StructureDefinition.where(url = 'http://hl7.org.au/fhir/StructureDefinition/result-copies-to'): The Implementation Guide contains no examples for this extension
+
+# Example uses PD specification coding not available
+WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[0].system: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[1]: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[2]: A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
 
 # Inherited HL7 information
 INFORMATION: StructureDefinition/au-medicationdispense: StructureDefinition.snapshot.element[44].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
