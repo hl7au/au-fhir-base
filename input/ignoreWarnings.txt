@@ -164,10 +164,11 @@ WARNING: Endpoint/example0: Endpoint.payloadType[0].coding[2]: A definition for 
 WARNING: CodeSystem/au-location-physical-type: CodeSystem.property[0]: The uri 'http://hl7.org/fhir/concept-properties#status' for the property 'status' implies the code 'status' exists in the CodeSystem FHIR Defined Concept Properties for http://hl7.org/fhir/concept-properties but it does not exist
 WARNING: CodeSystem/au-location-physical-type: CodeSystem.property[1]: The uri 'http://hl7.org/fhir/concept-properties#deprecationDate' for the property 'deprecationDate' implies the code 'deprecationDate' exists in the CodeSystem FHIR Defined Concept Properties for http://hl7.org/fhir/concept-properties but it does not exist
 
-# === Inherited HL7 information ===
+# === IG publisher information ===
 INFORMATION: StructureDefinition/au-medicationdispense: StructureDefinition.snapshot.element[44].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: List/example2: List.contained[5]/*Patient/patient-123*/.extension[0].value.ofType(Coding): A definition for CodeSystem 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' could not be found, so the code cannot be 
 
-# Informative matching messages
+# === Informative matching messages ===
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.subject: Details for urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[0].item: Details for urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
 INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[1].item: Details for urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
@@ -180,7 +181,7 @@ INFORMATION: Bundle/example0: Bundle.entry[0].resource.entry[7].item: Details fo
 INFORMATION: List/example2: List.contained[9]/*Encounter/enc-24680*/.participant[0].individual: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
 INFORMATION: List/example2: List.source: Details for #dr-97531 matching against profile http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
 
-# Expected Trial Use Terminology
+# === Expected Trial Use Terminology ===
 INFORMATION: Medication/BrandProductwithBatchDetails0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 INFORMATION: Medication/DoseBased: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 INFORMATION: Medication/FourOrMoreActiveIngredientsProduct0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
@@ -194,21 +195,21 @@ INFORMATION: Medication/UnbrandedProduct1: Medication.ingredient[0].item.ofType(
 INFORMATION: Medication/UnbrandedProduct2: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 INFORMATION: Medication/BrandedPackSingleActiveIngredient0: Medication.ingredient[0].item.ofType(CodeableConcept): Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/amt-mp-codes|5.0.0
 
-# Expected large expansions
+# === Expected large expansions ===
 INFORMATION: ValueSet.where(id = 'amt-mp-codes'): The value set expansion is too large, and only a subset has been displayed
 INFORMATION: ValueSet.where(id = 'au-jurisdiction-extended'): The value set expansion is too large, and only a subset has been displayed
 
-# Expected use of pattern deprecated
+# === Expected use of pattern deprecated ===
 INFORMATION: StructureDefinition/au-immunization: StructureDefinition.differential.element[6].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/au-immunization: StructureDefinition.snapshot.element[26].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# Expected deprecated profiles
+# === Expected deprecated profiles ===
 INFORMATION: Encounter/example0: Encounter.extension[0]: The extension http://hl7.org.au/fhir/StructureDefinition/encounter-description|5.0.0 is deprecated
 
-# Expected use of potentially useful extension
+# === Expected use of potentially useful extension ===
 INFORMATION: Encounter/example0: Encounter.extension[0]: This element does not match any known slice defined in the profile http://hl7.org.au/fhir/StructureDefinition/au-encounter|5.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# Expected Draft/Experimental Terminology
+# === Expected Draft/Experimental Terminology ===
 INFORMATION: HealthcareService/example1: HealthcareService.availableTime[0].availableStartTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
 INFORMATION: HealthcareService/example1: HealthcareService.availableTime[0].availableEndTime.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://www.iana.org/time-zones|20210124 from fhir.tx.support.r4#0.27.0
 INFORMATION: Observation/specimen-hepatitis-b-serology: Observation.code: Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.0.1
