@@ -5,7 +5,10 @@
 
 To help implementers, only the more significant changes are listed here.
 
-TBC
+### Changes in this version
+<ul>
+<li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>)</li>
+</ul>
 
 
 ### Release 5.0.0
@@ -138,8 +141,6 @@ To help implementers, only the more significant changes are listed here.
   </ul>
 </li>
 <li>Removed deprecated Encounter Description extension from <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a> (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
-<li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>)</li>
-
 </ul>
 
 ### Release 4.2.2-ballot
