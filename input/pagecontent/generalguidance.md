@@ -63,7 +63,8 @@ Official publication of a [Normative](https://hl7.org/fhir/R4/versions.html#std-
 [SNOMED CT](https://snomed.info/sct) (Systematized Nomenclature of Medicine – Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information.
 In Australia SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT with local variations and customisation relevant to the Australian healthcare community.
 Many SNOMED CT-AU value sets have already been developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS). 
-These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability. 
+These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability.
+The SNOMED CT Australian Edition is used extensively in AU Base for various clinical concepts including allergies, problems, and procedures. When using concepts from SNOMED CT in AU Base profile, implementers can use the default system URI referring to an unspecified edition/or version (as shown in option one) or when supporting validation on AU Edition-only concepts and preferred terms implementers provide the accompanying extension identifier (as per option two) and also describe a specific version of SNOMED CT-AU (as shown in option three).
 
 #### SNOMED CT Version Options
 
