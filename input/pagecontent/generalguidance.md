@@ -68,7 +68,7 @@ The SNOMED CT Australian Edition is used extensively in AU Base for various clin
 
 #### SNOMED CT Version Options
 
-1. Using only the system http://snomed.info/sct refers to an unspecified edition and version of SNOMED CT. This default method leaves it to the server to select the SNOMED CT edition and version to validate against. For example:
+1. Using only the system `http://snomed.info/sct` refers to an unspecified edition and version of SNOMED CT. This default method leaves it to the server to select the SNOMED CT edition and version to validate against. For example:
 
     ~~~
     "code": {
