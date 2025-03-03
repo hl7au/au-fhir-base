@@ -5,7 +5,10 @@
 
 To help implementers, only the more significant changes are listed here.
 
-TBC
+### Changes in this version
+<ul>
+<li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>)</li>
+</ul>
 
 
 ### Release 5.0.0
