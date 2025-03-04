@@ -13,7 +13,7 @@ To help implementers, only the more significant changes are listed here.
 </li>
 <li>Changes to <a href="StructureDefinition-vaccine-serial-number.html" >Vaccine Vial Serial Number Extension</a>:
 <ul>
-<li>Vaccine Vial Serial Number extension to <b?AFMM1</b> maturity level (<a href="https://jira.hl7.org/browse/FHIR-49936">FHIR-49936</a>)</li>
+<li>Vaccine Vial Serial Number extension to <b>AFMM1</b> maturity level (<a href="https://jira.hl7.org/browse/FHIR-49936">FHIR-49936</a>)</li>
 </ul>
 </li>
 <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
