@@ -6,9 +6,14 @@
 To help implementers, only the more significant changes are listed here.
 
 ### Changes in this version
-<ul>
-<li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>)</li>
-</ul>
+<li>
+  <ul>
+    <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> removed OID identifier. (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>)</li>
+  </ul>
+  <ul>
+    <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>)</li>
+  </ul>
+</li>
 
 
 ### Release 5.0.0
