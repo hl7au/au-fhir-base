@@ -7,9 +7,9 @@ To help implementers, only the more significant changes are listed here.
 
 ### Changes in this version
 <ul>
-<li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
+<li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunisation</a>:
   <ul>
-    <li>Include Vaccine Vial Serial Number in AU Base Immunization extensions (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>)</li>
+    <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>)</li>
   </ul>
 </li>
 <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>)</li>
