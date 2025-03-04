@@ -7,16 +7,6 @@ To help implementers, only the more significant changes are listed here.
 
 ### Changes in this version
 <ul>
-<li>Changes to <a href="StructureDefinition-au-servicerequest.html" >AU Base Service Request</a>:
-  <ul>
-    <li>AU Service Request to <b>AFMM1</b> maturity level (<a href="https://jira.hl7.org/browse/FHIR-49935">FHIR-49935</a>)</li>
-  </ul>
-</li>
-<li>Changes to <a href="StructureDefinition-vaccine-serial-number.html" >Vaccine Vial Serial Number Extension</a>:
-  <ul>
-    <li>Vaccine Vial Serial Number extension to <b>AFMM1</b> maturity level (<a href="https://jira.hl7.org/browse/FHIR-49936">FHIR-49936</a>)</li>
-  </ul>
-</li>
 <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
   <ul>
     <li>Include Vaccine Vial Serial Number in AU Base Immunization extensions (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>)</li>
