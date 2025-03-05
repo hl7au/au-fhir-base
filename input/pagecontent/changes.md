@@ -5,6 +5,19 @@
 
 To help implementers, only the more significant changes are listed here.
 
+### Reinstated
+This version reinstates profiles not included in the AU Base 5.0.0 release:
+  <ul>
+      <li>AU Base Service Request</li>
+      <li>AU Base Coverage</li>
+      <li>AU Health Program Participation Summary</li>
+      <li>Vaccine Vial Serial Number extension</li>
+      <li>Medication Strength extension</li>
+      <li>Ethnicity extension</li>
+      <li>Observation Category Codes - AU Extended value set</li>
+      <li>Observation Category Codes AU code system</li>
+  </ul>
+  
 ### Changes in this version
 <ul>
   <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
