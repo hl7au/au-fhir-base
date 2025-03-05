@@ -1,6 +1,6 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 5.1.0-preview
+- Publication date: 5 March 2025
+- Publication status: Preview
 - Based on FHIR version: 4.0.1
 
 To help implementers, only the more significant changes are listed here.
