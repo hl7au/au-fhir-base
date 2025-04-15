@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="example9"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-instance-name">
+        <valueString value="Patient - demonstrating Patient internal identifier"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-instance-description">
+        <valueMarkdown value="Shows an example of a patient, Nichole Jones, for the *AU Base Patient* profile, including Patient internal identifier assigned by Devonport Family Medicine Clinic and demographic information."/>
+    </extension>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PI"/>
+                <display value="Patient internal identifier"/>
+            </coding>
+        </type>
+        <system value="https://dfmc.example.com/patient/pi"/>
+        <value value="12345"/>
+        <assigner>
+            <reference value="Organization/example3"/>
+            <display value="Devonport Family Medicine Clinic"/>
+        </assigner>
+    </identifier>
+    <name>   
+        <family value="Jones"/>
+        <given value="Nichole"/>		
+    </name>
+    <telecom>
+        <system value="email"/>
+        <value value="nichole.jones@amail.example.com"/>
+        <use value="home"/>
+    </telecom>
+    <telecom>
+        <system value="phone" />
+        <value value="(0491) 579 456" />
+        <use value="mobile" />
+    </telecom>
+    <gender value="female"/>
+    <birthDate value="1948-11-18"/>
+    <address>
+        <use value="home"/>
+        <line value="4 Brisbane Street"/>
+        <city value="Brisbane"/>
+        <state value="QLD"/>
+        <postalCode value="4112"/>
+        <country value="Australia"/>
+    </address>
+</Patient>
