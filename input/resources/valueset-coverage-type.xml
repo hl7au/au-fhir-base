@@ -1,0 +1,54 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="coverage-type"/>
+	<meta>
+		<profile value="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"/>
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
+	<url value="http://terminology.hl7.org.au/ValueSet/coverage-type"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.999"/>
+	</identifier>
+	<name value="CoverageType"/>
+	<title value="Coverage Type"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<description value="Coverage type codes for use in an Australian context."/>
+	<compose>
+		<include>
+			<system value="http://terminology.hl7.org.au/CodeSystem/coverage-type"/>
+		</include>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+			<concept>
+				<code value="AUTOPOL" />
+				<display value="automobile" />
+			</concept>
+			<concept>
+				<code value="HIP" />
+				<display value="health insurance plan policy" />
+			</concept>
+			<concept>
+				<code value="WCBPOL" />
+				<display value="worker's compensation" />
+			</concept>
+			<concept>
+				<code value="VET" />
+				<display value="veteran health program" />
+			</concept>
+		</include>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/coverage-selfpay" />
+			<concept>
+				<code value="pay" />
+				<display value="Pay" />
+			</concept>
+			<concept>
+				<code value="payconc" />
+				<display value="Concession" />
+			</concept>
+		</include>
+	</compose>
+</ValueSet>
