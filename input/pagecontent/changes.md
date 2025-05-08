@@ -20,10 +20,16 @@ This version of current build reinstates profiles not included in the AU Base 5.
   
 #### Changes in this version
 <ul>
-  <li>New profiles:
-<ul>
-  <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-patientinternalidentifier.html">AU Patient Internal Identifier</a></li>
-</ul>
+  <li>New value sets:
+    <ul>
+      <li><a href="">Coverage Type</a> (<a href="https://jira.hl7.org/browse/FHIR-50781">FHIR-50781</a>)</li>
+    </ul>
+  </li>
+  <li>New code systems:
+    <ul>
+      <li><a href="">Coverage Type</a> (<a href="https://jira.hl7.org/browse/FHIR-50767">FHIR-50767</a>)</li>
+    </ul>
+  </li>
   <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunisation</a>:
     <ul>
@@ -31,6 +37,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
+  <li>Updated guidance on the use of Coverage type codes in <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> (<a href="https://jira.hl7.org/browse/FHIR-50781">FHIR-50781</a>).</li>
 </ul>
 
 ### Release 5.0.0
