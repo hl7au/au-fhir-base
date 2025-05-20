@@ -386,6 +386,26 @@
       <path value="Extension.extension.value[x]"/>
       <max value="0"/>
     </element>
+      <element id="Extension.extension:registration">
+      <path value="Extension.extension"/>
+      <short value="AHPRA registration details"/>
+      <definition value="Details of registration for the profession."/>
+      <sliceName value="ahpraRegistration"/>
+    </element>
+     <element id="Extension.extension:registration.extension">
+      <path value="Extension.extension.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Extension.extension:ahpraCaution.extension:ahpraRegistration.url">
+      <path value="Extension.extension.extension.url"/>
+      <fixedUri value="ahpraRegistration"/>
+    </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
       <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details"/>
