@@ -1,8 +1,8 @@
 ### Usage Notes
 
 **Profile specific implementation guidance:**
-- An organisation **SHOULD** use their own local system identifier namespace and create a stable identifier that is unique within the application. For example:
-```json
+- An organisation can create a stable identifier that is unique within the application by including aspects such as software provider, system instance, instance identifier and identifier type with the use of `Identifier.system` and `Identifier.value`. For example:
+```
        {
           ...
           "system": "http://example.system.com/system-instance/identifiers/identifer-type",
