@@ -20,7 +20,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   
 ##### Breaking Changes <a name="breakingchanges"></a>
 <ul>
-  <li><a href="StructureDefinition-au-healthcareservice.html">AU HealthcareService</a>:
+  <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
       <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible). (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)</li>
     </ul>
