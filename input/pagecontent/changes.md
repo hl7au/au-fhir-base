@@ -18,6 +18,15 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Observation Category Codes AU code system</li>
   </ul>
   
+##### Breaking Changes <a name="breakingchanges"></a>
+<ul>
+  <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
+    <ul>
+      <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible). (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)</li>
+    </ul>
+  </li>
+</ul>
+
 #### Changes in this version
 <ul>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title to:
