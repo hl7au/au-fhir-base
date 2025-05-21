@@ -29,7 +29,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
 
 #### Changes in this version
 <ul>
-  <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title <a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
+  <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
       <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></li>
