@@ -18,14 +18,36 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Observation Category Codes AU code system</li>
   </ul>
   
+##### Breaking Changes <a name="breakingchanges"></a>
+<ul>
+  <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
+    <ul>
+      <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible). (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)</li>
+    </ul>
+  </li>
+</ul>
+
 #### Changes in this version
 <ul>
-  <li>New profiles:
-<ul>
-  <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-patientinternalidentifier.html">AU Patient Internal Identifier</a></li>
-</ul>
+  <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
+    <ul>
+      <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
+      <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></li>
+      <li><a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a></li>
+      <li><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></li>
+      <li><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a></li>
+      <li><a href="StructureDefinition-au-bodystructure.html">AU Base BodyStructure</a></li>
+      <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a></li>
+      <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a></li>
+      <li><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a></li>
+      <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></li>
+      <li><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a></li>
+      <li><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></li>
+      <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a></li>
+    </ul>
+  </li>
   <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
-  <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunisation</a>:
+  <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
     <ul>
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
     </ul>
