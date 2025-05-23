@@ -47,9 +47,19 @@ This version of current build reinstates profiles not included in the AU Base 5.
     </ul>
   </li>
   <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
+  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Imaging Result</a>:
+    <ul>
+      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
+    </ul>
+  </li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
     <ul>
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
+    <ul>
+      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
