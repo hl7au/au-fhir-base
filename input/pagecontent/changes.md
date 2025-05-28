@@ -10,12 +10,9 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <ul>
       <li>AU Base Service Request</li>
       <li>AU Base Coverage</li>
-      <li>AU Health Program Participation Summary</li>
       <li>Vaccine Vial Serial Number extension</li>
       <li>Medication Strength extension</li>
       <li>Ethnicity extension</li>
-      <li>Observation Category Codes - AU Extended value set</li>
-      <li>Observation Category Codes AU code system</li>
   </ul>
   
 ##### Breaking Changes <a name="breakingchanges"></a>
