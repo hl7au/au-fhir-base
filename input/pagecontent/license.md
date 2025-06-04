@@ -1,4 +1,3 @@
-
 ### HL7 Australia Intellectual Property Policy
 HL7 Australia has an overarching intellectual property policy in place. The [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document defines the HL7 Australia organisation position on many aspects related to the copyright, licensing, liabilities and usage of HL7 Australia FHIR Implementation Guides. This also includes how the HL7 Australia FHIR Implementation Guides referencing other underlying material from HL7 International and 3rd parties shall be considered when using HL7 Australia published material. This policy document is maintained with the current official position of HL7 Australia with respect to these considerations.
 
@@ -6,16 +5,16 @@ HL7 FHIR® [Licensing and Legal Terms](https://hl7.org/fhir/license.html) should
 
 A number of key considerations are included here to support HL7 Australia FHIR Implementation Guide usage.
 
-###  Disclaimer and Warning of Use
+### Disclaimer and Warning of Use
 
-HL7 Australia provides HL7 Australia Content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia Content, to the extent permitted by law, HL7 Australia:
+HL7 Australia provides HL7 Australia content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia content, to the extent permitted by law, HL7 Australia:
 
 &nbsp;&nbsp;(a) makes no warranties, express or implied:
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;(i) that HL7 Australia Content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;(ii) that HL7 Australia Content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
-<br/>&nbsp;&nbsp;(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia Content.
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;(i) that HL7 Australia content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;(ii) that HL7 Australia content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
+<br/>&nbsp;&nbsp;(b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia content.
 
-By accessing or using HL7 Australia Content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia Content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia Content.
+By accessing or using HL7 Australia content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia content.
 
 
 ### FHIR Licensing and Trademarks
@@ -34,9 +33,9 @@ HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR logo are trademarks owned by He
 
 #### HL7 Australia Licensing
 
-HL7 Australia licenses use of some HL7 Australia Content under Creative Commons licenses. Users may only rely on the terms of a Creative Commons license where HL7 Australia has explicitly licensed the use of an Artefact under a Creative Commons licence and shall not presume that a Creative Commons license applies to any other HL7 Australia Content not explicitly covered by a Creative Commons licence.
+HL7 Australia licenses use of some HL7 Australia content under Creative Commons license. Users may only rely on the terms of a Creative Commons licence where HL7 Australia has explicitly licensed the use of an Artefact under a Creative Commons licence and shall not presume that a Creative Commons licence applies to any other HL7 Australia content not explicitly covered by a Creative Commons licence.
 
-**HL7 Australia defines use of this specification is licensed under Creative Commons "No Rights Reserved" ([CC0](http://creativecommons.org/publicdomain/zero/1.0/)).**
+**HL7 Australia use of this specification is licensed under Creative Commons "No Rights Reserved" ([CC0](http://creativecommons.org/publicdomain/zero/1.0/)).**
 
 Copyright © 2012+ HL7 Australia
 
@@ -45,9 +44,9 @@ Intellectual property rights and trademarks are defined in full in the [HL7 Aust
 
 ### Third-party artefacts and terminologies
 
-HL7 Australia FHIR Implementation Guides contain and reference intellectual property owned by third parties ("Third Party IP"). Acceptance of these License Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licenses or authorisations to utilise Third Party IP in connection with the specification or otherwise.
+HL7 Australia FHIR Implementation Guides contain and reference intellectual property owned by third parties ("Third Party IP"). Acceptance of these License Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licences or authorisations to utilise Third Party IP in connection with the specification or otherwise.
 
-Following is a non-exhaustive list of third-party artefacts and terminologies that may require a separate license:
+Following is a non-exhaustive list of third-party artefacts and terminologies that may require a separate licence:
 
 | Artefact / Terminology | Statement |
 | SNOMED CT | International Healthcare Terminology Standards Developing Organization ([IHTSDO](http://snomed.org)). Where this specification includes or references content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO) it is distributed by agreement between IHTSDO and HL7, or the Australian Digital Health Agency via NCTS terms. Implementer use of SNOMED CT is not covered by this agreement |

@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-relatedperson" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="2"/> 
+    <valueInteger value="2"/>
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
   <name value="AUBaseRelatedPerson" />
-  <title value="AU Base Related Person" />
+  <title value="AU Base RelatedPerson" />
   <status value="active" />
   <description value="This profile defines a related person structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs." />
   <kind value="resource" />
@@ -31,28 +31,28 @@
         <human value="Individual pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').all(extension('value').value.memberOf('https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
-        </constraint>
-         <constraint>
+      </constraint>
+      <constraint>
         <key value="inv-relper-2" />
         <severity value="warning" />
-        <human value="Recorded sex or gender type shall be a member of the Common AU Recorded Sex or Gender Type value set if any codes within that value set can apply" />
+        <human value="Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('type').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('type').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-type'))"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
       </constraint>
       <constraint>
-          <key value="inv-relper-3" />
-          <severity value="warning" />
-          <human value="Recorded sex or gender source document type shall be a member of the Common AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply" />
-          <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('sourceDocument').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('sourceDocument').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source-document-type'))"/>
-          <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+        <key value="inv-relper-3" />
+        <severity value="warning" />
+        <human value="Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('sourceDocument').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('sourceDocument').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source-document-type'))"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
       </constraint>
       <constraint>
-          <key value="inv-relper-4" />
-          <severity value="warning" />
-          <human value="Recorded sex or gender jurisdiction shall be a member of the Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction value set if any codes within that value set can apply" />
-        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source-document-jurisdiction'))"/>
-          <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
-        </constraint>
+        <key value="inv-relper-4" />
+        <severity value="warning" />
+        <human value="Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended if any codes within that value set can apply" />
+        <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').all(extension('jurisdiction').value.memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </constraint>
     </element>
     <element id="RelatedPerson.extension">
       <path value="RelatedPerson.extension" />
@@ -68,18 +68,18 @@
       <path value="RelatedPerson.extension" />
       <sliceName value="genderIdentity" />
       <short value="Gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply"/>
-      <comment value="Individual Gender identity [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <comment value="The individual's gender identity is populated in the `extension:value.value[x]` of the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension and shall contain one of the codes from the [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) value set if any of the codes within the value set can apply.&#xA;&#xA;See [Australian Bureau of Statics (ABS) Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) for further materials."/>
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
       </type>
       <condition value="inv-relper-0"/>
-    </element> 
+    </element>
     <element id="RelatedPerson.extension:individualPronouns">
       <path value="RelatedPerson.extension"/>
       <sliceName value="individualPronouns"/>
       <short value="Pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply"/>
-      <comment value="Individual Pronouns [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1) ([Extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <comment value="The individual's pronouns are populated in the `extension:value.value[x]` of the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension and shall contain one of the codes from the [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1) value set if any of the codes within the value set can apply."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
@@ -89,8 +89,8 @@
     <element id="RelatedPerson.extension:recordedSexOrGender">
       <path value="RelatedPerson.extension"/>
       <sliceName value="recordedSexOrGender"/>
-      <short value="Recorded sex or gender type shall be a member of the Common AU Recorded Sex or Gender Type value set if any codes within that value set can apply.Recorded sex or gender source document type shall be a member of the Common AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply. Recorded sex or gender jurisdiction shall be a member of the Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction value set if any codes within that value set can apply"/>
-      <comment value="Person Recorded Sex Or Gender type [Common AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender source document [Common AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). Person Recorded Sex Or Gender jurisdiction [Common AU Recorded Sex or Gender (RSG) Source Document Jurisdiction](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-jurisdiction.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))."/>
+      <short value="Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply. Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply. Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended if any codes within that value set can apply"/>
+      <comment value="The type of recorded sex or gender is populated in the `extension:type.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) value set if any of the codes within the value set can apply.&#xA;&#xA;The document from which the sex or gender property was acquired is populated in the `extension:sourceDocument.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) value set if any of the codes within the value set can apply.&#xA;&#xA;The jurisdiction that issued the document where the sex or gender was acquired is populated in the `extension:jurisdiction.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [Jurisdiction ValueSet - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-jurisdiction-extended.html) value set if any of the codes within the value set can apply."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>

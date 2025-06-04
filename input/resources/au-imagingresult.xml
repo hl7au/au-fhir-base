@@ -8,7 +8,7 @@
   <name value="AUBaseDiagnosticImagingResult" />
   <title value="AU Base Diagnostic Imaging Result" />
   <status value="active" />
-  <description value="This profile defines an observation structure to represent a imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple test such as haemoglobin or it may group the set of results produced by a multi-test study or panel such as a full blood count, or urine specimen study." />
+  <description value="This profile defines an observation structure to represent a imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the conclusions of a diagnostic procedure such as Left retina Foveal thickness by OCT, or it may group the set of results produced by a multi-test study or panel such as Biophysical profile panel." />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
@@ -25,6 +25,31 @@
         <human value="An imaging result shall at least have value or data absent reason or a child observation with a value or data absent reason" />
         <expression value="value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()" />
       </constraint>
+      <constraint>
+        <key value="inv-obs-1" />
+        <severity value="error" />
+        <human value="BodyStructure Reference extension shall only be present if the body site is not present" />
+        <expression value="bodySite.exists() implies extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()"/>
+      </constraint>
+    </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.extension:bodyStructure">
+      <path value="Observation.extension" />
+      <sliceName value="bodyStructure" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
+      </type>
+      <condition value="inv-obs-1"/>
     </element>
     <element id="Observation.category">
       <path value="Observation.category"/>
@@ -98,12 +123,6 @@
       <path value="Observation.effective[x]" />
       <short value="Time of diagnostic imaging examination" />
       <min value="1" />
-      <type>
-        <code value="dateTime" />
-      </type>
-      <type>
-        <code value="Period" />
-      </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -119,25 +138,7 @@
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1" />
       </binding>
-    </element>
-    <element id="Observation.bodySite.extension">
-      <path value="Observation.bodySite.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.bodySite.extension:bodySite">
-      <path value="Observation.bodySite.extension" />
-      <sliceName value="bodySite" />
-      <max value="1"/>
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
-      </type>
+      <condition value="inv-obs-1"/>
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />

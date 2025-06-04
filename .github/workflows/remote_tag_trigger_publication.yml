@@ -1,0 +1,24 @@
+name: Dispatch Event from au-fhir-base to publications repo
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the tag name
+        id: get_tag
+        run: echo "##[set-output name=tag;]${GITHUB_REF#refs/tags/}"
+
+      - name: Trigger publications repository
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          curl -X POST \
+          -H "Authorization: token $GH_PAT" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/hl7au/publications/dispatches \
+          -d '{"event_type":"tag_created","client_payload":{"repository":"au-fhir-base","tag":"${{ steps.get_tag.outputs.tag }}"}}'
