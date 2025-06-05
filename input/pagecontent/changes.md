@@ -10,12 +10,9 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <ul>
       <li>AU Base Service Request</li>
       <li>AU Base Coverage</li>
-      <li>AU Health Program Participation Summary</li>
       <li>Vaccine Vial Serial Number extension</li>
       <li>Medication Strength extension</li>
       <li>Ethnicity extension</li>
-      <li>Observation Category Codes - AU Extended value set</li>
-      <li>Observation Category Codes AU code system</li>
   </ul>
   
 ##### Breaking Changes <a name="breakingchanges"></a>
@@ -47,9 +44,24 @@ This version of current build reinstates profiles not included in the AU Base 5.
     </ul>
   </li>
   <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
+  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
+    <ul>
+      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a>:
+      <ul>
+        <li>Changed Encounter.reasonCode binding to Reason for Encounter (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>).</li>
+    </ul>
+  </li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
     <ul>
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
+    <ul>
+      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
