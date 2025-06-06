@@ -13,4 +13,5 @@
   - A patient internal identifier is an identifier for a patient assigned within an application instance and may be exchanged with other applications, with the expectation that subsequent exchanges may return this patient internal identifier to aid in patient matching. It is not intended to be broadly shared beyond the consuming applications and is not managed by an assigning application like a Patient Master Index. A patient internal identifier is **not** a strong key, implementers need to take great care when sharing patient internal identifiers.
 
 
+
  
