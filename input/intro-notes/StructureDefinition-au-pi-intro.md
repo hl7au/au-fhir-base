@@ -8,9 +8,9 @@
    - `http://cloud-provider.com/identifiers/patient-id` for a cloud provider assigning patient identifiers for multiple clients
    - `http://cloud-provider.com/identifiers/tenant-id/patient-id` for an identifier assigned within the context of a tenant of a multi-tenanted application
 - Additional guidance can be found in the [Identifiers](https://hl7.org/fhir/R4/datatypes.html#Identifier) section of the FHIR Specification.
-- A PI is different to a Medical Record Number (MR) in a number of ways:
-  - An MR is purposefully intended to be referenced and shared by many systems in a given network, hospital or health service. The purpose of an MR is to identify and match against patients across that network. It is assigned, managed and kept in sync by an assigning application, typically a Patient Master Index. 
-  - A PI is an identifier for a patient assigned within an application instance and may be exchanged with other applications, with the expectation that subsequent exchanges may return this PI to aid in patient matching. It is not intended to be broadly shared beyond the consuming applications and is not managed by an assigning application like a Patient Master Index. A PI is **not** a strong key, implementers need to take great care when sharing PIs.
+- A patient internal identifier is different to a Medical Record Number (MRN) in a number of ways:
+  - An MRN is purposefully intended to be referenced and shared by many systems in a given network, hospital or health service. The purpose of an MRN is to identify and match against patients across that network. It is assigned, managed and kept in sync by an assigning application, typically a Patient Master Index. 
+  - A patient internal identifier is an identifier for a patient assigned within an application instance and may be exchanged with other applications, with the expectation that subsequent exchanges may return this patient internal identifier to aid in patient matching. It is not intended to be broadly shared beyond the consuming applications and is not managed by an assigning application like a Patient Master Index. A patient internal identifier is **not** a strong key, implementers need to take great care when sharing patient internal identifiers.
 
 
  
