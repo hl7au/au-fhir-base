@@ -7,8 +7,8 @@
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-pi" />
   <name value="AUPatientInternalIdentifier" />
   <title value="AU Patient Internal Identifier" />
-  <status value="active" />
-  <description value="This identifier profile defines a patient identifier that is unique within an application used in an Australian context. The Patient Internal Identifier is not to be confused with a Medical Record Number. Patient internal identifiers may be assigned by single instance on-premise practice management systems, or multi tenanted cloud based electronical medical record applications or other clinical information systems such as Pharmacy, Laboratory, or Imaging to name a few." />
+  <status value="draft" />
+  <description value="This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is an identifier assigned to a patient within an application instance, such as on-premise practice management system, multi-tenant cloud based electronic medical record application, or other clinical information systems including those used in pharmacy, laboratory, or imaging settings. It is not intended for sharing across systems and should not be confused with a Medical Record Number (MR)." />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -17,8 +17,8 @@
   <differential>
     <element id="Identifier">
       <path value="Identifier" />
-      <short value="Patient Internal Identifier" />
-      <definition value="Identifier assigned to a patient within an application, for example a practice management system." />      
+      <short value="Patient internal identifier" />
+      <definition value="Identifier assigned to a patient within an application, for example a practice management system, with the expectation that subsequent exchanges with other applications may return this PI to aid in patient matching. A PI is not intended for broad sharing or for use as a strong key." />      
     </element> 
     <element id="Identifier.type">
       <path value="Identifier.type" />
@@ -38,12 +38,12 @@
     </element>
     <element id="Identifier.value">
       <path value="Identifier.value" />
-      <short value="Patient Internal Identifier" />
+      <short value="Patient internal identifier" />
       <min value="1" />          
     </element>
     <element id="Identifier.assigner">
       <path value="Identifier.assigner" />
-      <short value="Organisation that assigned the patient identifier" />
+      <short value="Organisation that assigned the patient internal identifier" />
       <min value="1" />
     </element>
     <element id="Identifier.assigner.display">
