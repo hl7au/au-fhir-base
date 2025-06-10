@@ -8,7 +8,7 @@
   <name value="AUPatientInternalIdentifier" />
   <title value="AU Patient Internal Identifier" />
   <status value="draft" />
-  <description value="This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is an identifier assigned to a patient within an application, such as on-premise practice management system, multi-tenant cloud based electronic medical record application, or other clinical information systems including those used in pharmacy, laboratory, or imaging settings. It is not intended for sharing across systems and should not be confused with a Medical Record Number." />
+  <description value="This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is an identifier assigned to a patient by an application instance (e.g. practice management system, a cloud-based Electronic Medical Record, or other clinical information systems including those used in pharmacy, laboratory, or imaging settings). Its primary purpose is to uniquely identify a patient within that application instance.&#xa;&#xa;While a patient internal identifier can be exchanged with other applications, its scope for sharing is limited to context-specific patient matching. For example, a patient internal identifier from a practice management system might be included in a pathology lab request, and the lab could then return that same identifier in the pathology report to assist matching to a patient record in the practice management system.&#xa;&#xa;Unlike a Medical Record Number (MRN), a patient internal identifier is not intended for broad sharing across diverse healthcare systems. It's not a strong key that is universally managed or guaranteed to be unique outside its originating application instance. Implementers must exercise caution when sharing patient internal identifiers, as their utility and uniqueness are confined to specific workflows and application pairings." />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -18,7 +18,7 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Patient Internal Identifier" />
-      <definition value="Identifier assigned to a patient within an application, for example a practice management system, with the expectation that subsequent exchanges with other applications may return the patient internal identifier to aid in patient matching. A patient internal identifier is not intended for broad sharing or for use as a strong key." />      
+      <definition value="Identifier assigned to a patient within an application, for example a practice management system, that is primarily intended for use within that application." />      
     </element> 
     <element id="Identifier.type">
       <path value="Identifier.type" />
