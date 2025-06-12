@@ -29,7 +29,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li> New profiles:
     <ul>
       <li>Identifier type profiles: 
-          <ul style="-moz-column-count: 3; -moz-column-gap: 20px;  -webkit-column-count: 3;  -webkit-column-gap: 20px;  column-count: 3;  column-gap: 20px;">
+          <ul style="-moz-column-count: 3; -moz-column-gap: 20px; -webkit-column-count: 3; -webkit-column-gap: 20px; column-count: 3; column-gap: 20px;">
               <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
           </ul>
       </li>
