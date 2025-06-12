@@ -8,6 +8,6 @@ Testing plays a crucial role in the development of HL7 AU specifications. It hel
 
 Testing helps identify issues, challenges, or gaps in the specification, enabling its improvement. During testing, implementers test their FHIR resources, software products, and/or proof of concepts against these specifications and provide essential feedback.
 
-To learn more about testing AU Core or express your interest in participating, see [Sparked FHIR IG Testing](hhttps://confluence.hl7.org/spaces/HAFWG/pages/358875974/Sparked+FHIR+IG+Testing).
+To learn more about testing AU Core or express your interest in participating, see [Sparked FHIR IG Testing](https://confluence.hl7.org/spaces/HAFWG/pages/358875974/Sparked+FHIR+IG+Testing).
 
 </div>
