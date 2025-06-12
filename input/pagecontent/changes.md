@@ -1,6 +1,6 @@
-### Release 5.2.0-preview
+### Release 6.0.0-draft
 - Publication date: 2025-06-12
-- Publication status: Preview
+- Publication status: Draft
 - Based on FHIR version: 4.0.1
 
 To help implementers, only the more significant changes are listed here.

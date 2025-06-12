@@ -1,8 +1,8 @@
 <div class="stu-note" markdown="1">
 
-#### AU Base 5.2.0-preview for testing 
+#### AU Base 6.0.0-draft for testing 
 
-This June 2025 preview snapshot of AU Base supports testing of AU Core, AU Patient Summary, and AU eRequesting prior to Ballot of AU Core R2, AU Patient Summary R1, and AU eRequesting R1.
+This June 2025 draft snapshot of AU Base supports testing of AU Core, AU Patient Summary, and AU eRequesting prior to Ballot of AU Core R2, AU Patient Summary R1, and AU eRequesting R1.
 
 Testing plays a crucial role in the development of HL7 AU specifications. It helps to ensure that the specifications are  aligned with their intended purpose and are practical, and responsive to the diverse needs of various stakeholders.  
 
