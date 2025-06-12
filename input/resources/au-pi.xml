@@ -8,7 +8,7 @@
   <name value="AUPatientInternalIdentifier" />
   <title value="AU Patient Internal Identifier" />
   <status value="draft" />
-  <description value="This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is assigned to a patient by an application instance (e.g. practice management system or a cloud-based Electronic Medical Record). Its primary purpose is to uniquely identify a patient within that single application.&#xa;&#xa;While a patient internal identifier can be exchanged with other applications, its scope for sharing is limited. This exchange typically occurs for context-specific patient matching. For example, a patient internal identifier from a practice management system instance might be included in a lab request, and the lab could then return that same patient internal identifier in the report to that instance of the practice management system to aid matching.&#xa;&#xa;Unlike a Medical Record Number (MRN), a patient internal identifier is not a strong key that is universally managed or guaranteed to be unique outside its originating application. Therefore, implementers must exercise caution when sharing patient internal identifiers, as their utility and uniqueness are confined to specific workflows and application pairings." />
+  <description value="This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is assigned to a patient by an application (e.g. practice management system or a cloud-based electronic medical record). Its primary purpose is to uniquely identify a patient within that application.&#xa;&#xa;While a patient internal identifier can be exchanged with other applications, its scope for sharing is limited. This exchange typically occurs for context-specific patient matching (e.g. a patient internal identifier from a practice management system might be included in a lab request, and the lab could then return that patient internal identifier in the pathology report to aid matching). Implementers should be aware when sharing a patient internal identifier that it is only unique to the assigning application, unlike a Medical Record Number (MRN) that is unique within an institution." />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -18,7 +18,7 @@
     <element id="Identifier">
       <path value="Identifier" />
       <short value="Patient Internal Identifier" />
-      <definition value="Identifier assigned to a patient within an application instance, for example a practice management system, that is used to uniquely identify a patient in that application." />      
+      <definition value="Identifier assigned to a patient within an application, for example a practice management system, that is used to uniquely identify a patient in that application." />      
     </element> 
     <element id="Identifier.type">
       <path value="Identifier.type" />
