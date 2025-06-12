@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="IngredientStrengthExtension0"/>
+  <meta>
+    <profile
+             value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+  </meta>
+  <code>
+    <text value="Sunsense 200g"/>
+  </code>
+  <form>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385099005"/>
+      <display value="Cream"/>
+    </coding>
+  </form>
+  <ingredient>
+    <itemCodeableConcept>
+        <text value="Zinc oxide"/>
+    </itemCodeableConcept>
+    <strength>
+      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
+        <valueCodeableConcept>
+            <text value="15 %"/>
+        </valueCodeableConcept>
+      </extension>
+    </strength>
+  </ingredient>
+</Medication>

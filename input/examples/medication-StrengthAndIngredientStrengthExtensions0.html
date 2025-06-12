@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="StrengthAndIngredientStrengthExtensions0"/>
+  <meta>
+    <profile
+             value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+  </meta>
+  <extension
+             url="http://hl7.org.au/fhir/StructureDefinition/medication-strength">
+    <valueString value="2 mg/mL"/>
+  </extension>
+  <code>
+    <text value="Omeprazole"/>
+  </code>
+  <form>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385024007"/>
+      <display value="Oral suspension"/>
+    </coding>
+  </form>
+  <ingredient>
+    <itemCodeableConcept>
+        <text value="Omeprazole"/>
+    </itemCodeableConcept>
+    <strength>
+      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
+        <valueCodeableConcept>
+            <text value="2 mg/mL"/>
+        </valueCodeableConcept>
+      </extension>
+    </strength>
+  </ingredient>  
+  <ingredient>
+    <itemCodeableConcept>
+        <text value="Sodium Bicarbonate"/>
+    </itemCodeableConcept>
+    <strength>
+      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
+        <valueCodeableConcept>
+            <text value="84 mg/mL"/>
+        </valueCodeableConcept>
+      </extension>
+    </strength>
+  </ingredient>
+</Medication>
