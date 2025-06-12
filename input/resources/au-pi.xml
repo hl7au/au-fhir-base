@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-pi" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-pi" />
+  <name value="AUPatientInternalIdentifier" />
+  <title value="AU Patient Internal Identifier" />
+  <status value="draft" />
+  <description value="This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is assigned to a patient by an application (e.g. practice management system or a cloud-based electronic medical record) to uniquely identify a patient within that application. While a patient internal identifier can be exchanged with other applications, its scope for sharing is limited and typically occurs for context-specific patient matching (e.g. a patient internal identifier included in a pathology request can be returned in the associated pathology report). Implementers should be aware when sharing a patient internal identifier that it is only unique within the assigning application, unlike a Medical Record Number (MRN) that is unique within an institution." />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier" />
+      <short value="Patient Internal Identifier" />
+      <definition value="A patient internal identifier is assigned to a patient by an application (e.g. a practice management system or a cloud-based electronic medical record) to uniquely identify the patient within that application. It may be exchanged with other applications in specific contexts to support patient matching (e.g. a patient internal identifier included in a pathology request may be returned in the resulting pathology report). However, unlike an MRN, a patient internal identifier is not intended for broad sharing across applications and should not be relied on as a stable identifier outside the assigning application." />      
+    </element> 
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <min value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PI" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <short
+             value="System identifier namespace for the application that assigned the patient internal identifier"/>
+      <min value="1" /> 
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="Patient internal identifier" />
+      <min value="1" />          
+    </element>
+    <element id="Identifier.assigner">
+      <path value="Identifier.assigner" />
+      <short value="Organisation that assigned the patient internal identifier" />
+      <min value="1" />
+    </element>
+    <element id="Identifier.assigner.display">
+      <path value="Identifier.assigner.display" />
+      <short value="Name of the assigning organisation" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
