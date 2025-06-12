@@ -15,7 +15,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Ethnicity extension</li>
   </ul>
   
-##### Breaking Changes <a name="breakingchanges"></a>
+##### Breaking Changes <a name="breakingchanges-r6"></a>
 <ul>
   <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
