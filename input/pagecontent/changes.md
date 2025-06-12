@@ -1,6 +1,6 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 5.2.0-preview
+- Publication date: 2025-06-12
+- Publication status: Preview
 - Based on FHIR version: 4.0.1
 
 To help implementers, only the more significant changes are listed here.
@@ -19,7 +19,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
 <ul>
   <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
-      <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible). (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)</li>
+      <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible) (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>).</li>
     </ul>
   </li>
 </ul>
