@@ -73,6 +73,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
     </ul>
   </li>
+  <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+    <ul>
+      <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+    </ul>
+  </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
 </ul>
 
