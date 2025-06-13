@@ -130,7 +130,6 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1"/>
       </binding>
     </element>
-
     <element id="Medication.ingredient">
       <path value="Medication.ingredient"/>
       <definition
@@ -147,6 +146,20 @@
     <element id="Medication.ingredient.strength">
       <path value="Medication.ingredient.strength"/>
       <short value="Quantity/strength of ingredient present"/>
+    </element>
+    <element id="Medication.ingredient.extension:strengthCodeableConcept">
+      <path value="Medication.ingredient.extension"/>
+      <sliceName value="strengthCodeableConcept"/>
+      <sliceIsConstraining value="true"/>
+      <short value="Quantity of ingredient present"/>
+      <definition value="Specifies how many (or how much) of the items there are in this Medication. This cross-version extension represents Medication.ingredient.strengthCodeableConcept from http://hl7.org/fhir/StructureDefinition/Medication|5.0.0 for use in FHIR R4."/>
+      <comment value="Preadoption of the R5 element Medication.ingredient.strengthCodeableConcept is intended to support free-text representation of ingredient strength data where structured data suitable for the R4 element is unavailable."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength"/>
+      </type>
     </element>
   </differential>
 </StructureDefinition>
