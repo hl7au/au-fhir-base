@@ -79,6 +79,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
+  <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
 </ul>
 
 ### Release 5.0.0
