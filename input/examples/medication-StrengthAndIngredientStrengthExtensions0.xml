@@ -2,11 +2,9 @@
 <Medication xmlns="http://hl7.org/fhir">
   <id value="StrengthAndIngredientStrengthExtensions0"/>
   <meta>
-    <profile
-             value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
   </meta>
-  <extension
-             url="http://hl7.org.au/fhir/StructureDefinition/medication-strength">
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-strength">
     <valueString value="2 mg/mL"/>
   </extension>
   <code>
@@ -20,23 +18,27 @@
     </coding>
   </form>
   <ingredient>
-    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
-      <valueCodeableConcept>
+    <itemCodeableConcept>
+      <text value="Omeprazole"/>
+    </itemCodeableConcept>
+    <strength>
+      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
+        <valueCodeableConcept>
           <text value="2 mg/mL"/>
-      </valueCodeableConcept>
-    </extension>
-    <itemCodeableConcept>
-        <text value="Omeprazole"/>
-    </itemCodeableConcept>
-  </ingredient>  
+        </valueCodeableConcept>
+      </extension>
+    </strength>
+  </ingredient>
   <ingredient>
-    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
-      <valueCodeableConcept>
-          <text value="84 mg/mL"/>
-      </valueCodeableConcept>
-    </extension>
     <itemCodeableConcept>
-        <text value="Sodium Bicarbonate"/>
+      <text value="Sodium Bicarbonate"/>
     </itemCodeableConcept>
+    <strength>
+      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
+        <valueCodeableConcept>
+          <text value="84 mg/mL"/>
+        </valueCodeableConcept>
+      </extension>
+    </strength>
   </ingredient>
 </Medication>
