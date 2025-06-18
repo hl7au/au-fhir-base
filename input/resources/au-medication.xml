@@ -147,9 +147,9 @@
       <path value="Medication.ingredient.strength"/>
       <short value="Quantity/strength of ingredient present"/>
     </element>
-<element id="Medication.ingredient.strength.extension:strength">
+<element id="Medication.ingredient.strength.extension:strength[x]">
       <path value="Medication.ingredient.strength.extension"/>
-      <sliceName value="strength"/>
+      <sliceName value="strength[x]"/>
       <sliceIsConstraining value="true"/>
       <short value="Quantity of ingredient present"/>
       <definition value="Specifies how many (or how much) of the items there are in this Medication. This cross-version extension represents Medication.ingredient.strengthCodeableConcept from http://hl7.org/fhir/StructureDefinition/Medication|5.0.0 for use in FHIR R4."/>
@@ -158,7 +158,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]"/>
       </type>
     </element>
     <element id="Medication.ingredient.strength.extension.valueCodeableConcept">

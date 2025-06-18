@@ -15,9 +15,9 @@
   - medication strength in [Medication Strength](StructureDefinition-medication-strength.html) extension
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
-- When structured data for `Medication.ingredient.strength` is unavailable, ingredient strength can be surfaced as free-text via the backported R5 `Medication.ingredient.strengthCodeableConcept` extension:
+- When data for `Medication.ingredient.strength` is unavailable as a ratio, ingredient strength can be surfaced as free-text via the [backported R5](https://hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient.strength[x]) `Medication.ingredient.strength` extension:
   - This is to be interpreted as the strength of that specific ingredient, not the strength of the medication as a whole
-  - The extension can be used once on each `Medication.ingredient` element
+  - The extension can be used once on each `Medication.ingredient.strength` element
   - Where the existing `Medication.ingredient.strength` element can be used, this should be used in preference to using the R5 extension
 
 **Potentially useful extensions:**
