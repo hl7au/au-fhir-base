@@ -26,6 +26,15 @@ This version of current build reinstates profiles not included in the AU Base 5.
 
 #### Changes in this version
 <ul>
+  <li> New profiles:
+    <ul>
+      <li>Identifier type profiles: 
+          <ul>
+              <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
+          </ul>
+      </li>
+    </ul>
+  </li>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
@@ -49,6 +58,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
     </ul>
   </li>
+  <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a>:
+      <ul>
+        <li>Changed Encounter.reasonCode binding to Reason for Encounter (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>).</li>
+    </ul>
+  </li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
     <ul>
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
@@ -57,6 +71,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li>Changes to <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+    <ul>
+      <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
