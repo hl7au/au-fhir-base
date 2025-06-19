@@ -11,15 +11,13 @@
     <text value="Vial"/>
   </form>
   <ingredient>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]">
+      <valueCodeableConcept>
+        <text value=">= 1,000 mouse LD50 units"/>
+      </valueCodeableConcept>
+    </extension>
     <itemCodeableConcept>
       <text value="Live attenuated yellow fever virus (17D strain)"/>
     </itemCodeableConcept>
-    <strength>
-      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength">
-        <valueCodeableConcept>
-          <text value=">= 1,000 mouse LD50 units"/>
-        </valueCodeableConcept>
-      </extension>
-    </strength>
   </ingredient>
 </Medication>
