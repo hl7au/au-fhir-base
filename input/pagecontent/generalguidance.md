@@ -434,11 +434,11 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
 
 ### Representing communication preferences
 
-Communication preferences describe how a patient or a related person prefers to communicate when receiving healthcare, including language preferences and whether an interpreter is required.
-
-This section describes how to represent communication preferences for a patient or a related person using the communication element on the Patient or RelatedPerson resource, and the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension. It includes guidance for indicating preferred languages, interpreter requirements, and multilingual communication.
-
-The table below provides guidance on representing these preferences in the resource. Blank cells in the table indicate that the given element is absent from the resource.
+The guidance below describes how to represent languages that may be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension:
+* When sent in a Patient resource, the information exchanged is about the languages that may be used to communicate with the patient about their health. 
+* When sent in a RelatedPerson resource, the information exchanged is about languages that may be used to communicate with the related person about the patient's health.
+ 
+The table below is divided into different scenarios. Blank cells indicate that the given element is absent from the resource in that scenario.
 
 <table class="list" style="width:100%">
     <colgroup>
