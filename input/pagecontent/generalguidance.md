@@ -431,3 +431,102 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
         <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraNotation</td>
     </tr>
 </table>
+
+### Representing communication preferences
+
+The guidance below describes how to represent languages that may be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension:
+* When sent in a Patient resource, the information exchanged is about the languages that may be used to communicate with the patient about their health. 
+* When sent in a RelatedPerson resource, the information exchanged is about languages that may be used to communicate with the related person about the patient's health.
+ 
+The table below is divided into different scenarios. Blank cells indicate that the given element is absent from the resource in that scenario.
+
+<table class="list" style="width:100%">
+    <colgroup>
+       <col span="1" style="width: 20%;"/>
+       <col span="1" style="width: 18%;"/>
+       <col span="1" style="width: 18%;"/>
+       <col span="1" style="width: 20%;"/>
+       <col span="1" style="width: 24%;"/>
+    </colgroup>
+	<tbody>
+      <tr>
+        <th>Scenario</th>
+        <th>communication.language</th>
+        <th>communication.preferred</th>
+        <th>extension:interpreterRequired</th>
+		<th>Notes</th>
+      </tr>
+      <tr>
+        <td>Preferred language is English</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>No element sent, as per the guidance in the Comments of <a href="http://hl7.org/fhir/patient-definitions.html#Patient.communication">Patient.communication</a> and <a href="https://hl7.org/fhir/relatedperson-definitions.html#RelatedPerson.communication">RelatedPerson.communication</a>.</td>
+      </tr>
+      <tr>
+        <td>Preferred language is other than English</td>
+        <td>language.coding</td>
+        <td>'true'</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreter required, language is known</td>
+        <td>language.coding</td>
+        <td>'true'</td>
+        <td>'true'</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreter required, language is not known</td>
+        <td></td>
+        <td></td>
+        <td>'true'</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreter is not required</td>
+        <td></td>
+        <td></td>
+        <td>'false'</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Communicates with multiple languages</td>
+        <td>language.coding</td>
+        <td></td>
+        <td></td>
+        <td>Each language instantiated in separate communication nodes; communication.preferred and extension:interpreterRequired may be sent as needed.</td>
+      </tr>
+    </tbody>
+</table>
+
+Example: Patient resource with interpreter required and language is known
+~~~
+{
+  "resourceType" : "Patient",
+    ...
+      "extension" : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired",
+          "valueBoolean" : true
+        }          
+       ]
+    },
+    ...
+    "communication" : [
+    {
+      "language" : {
+        "coding" : [
+          {
+            "system" : "urn:ietf:bcp:47",
+            "code" : "yue"
+          }
+        ],
+        "text" : "Cantonese"
+      },
+      "preferred" : true
+    }
+  ]
+}
+~~~
