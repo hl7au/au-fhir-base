@@ -57,6 +57,16 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>NCTS</td>
     </tr>
     <tr>
+        <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
+    <tr>
+        <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
       <td><a href="StructureDefinition-au-timezone.html">Australian Time Zone</a></td>
       <td>AU Base</td>
@@ -140,26 +150,6 @@ The following value sets form part of localised requirements (i.e. are reference
       </td>
       <td>NCTS</td>
     </tr>
-    <tr>
-      <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
-      <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-      <td>AU Base</td>
-    </tr>
-<tr>
-    <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-    <td>AU Base</td>
-</tr>
-<tr>
-    <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-    <td>AU Base</td>
-</tr>
-<tr>
-    <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-    <td>AU Base</td>
-</tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
     <td><a href="StructureDefinition-au-patient.html">AU Base Patient</a>, <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>, <a href="StructureDefinition-au-relatedperson.html">AU Base Related Person</a></td>
@@ -266,6 +256,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1">Individual Healthcare Identifier Status</a></td>
     <td><a href="StructureDefinition-ihi-record-status.html">IHI Record Status</a></td>
     <td>NCTS</td>
+</tr>
+<tr>
+    <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
+    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+    <td>AU Base</td>
 </tr>
 <tr>
     <td><a href="ValueSet-au-location-physical-type-extended.html">Location Type (Physical) - AU Extended</a></td>
