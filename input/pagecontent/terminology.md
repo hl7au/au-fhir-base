@@ -198,11 +198,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-program-participation-status-1">Health Program Participation Status</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a></td>
     <td><a href="StructureDefinition-au-organization.html">AU Base Organisation</a></td>
     <td>NCTS</td>
@@ -303,19 +298,9 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>AU Base</td>
 </tr>
 <tr>
-    <td><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></td>
-    <td>-</td>
-    <td>AU Base</td>
-</tr>
-<tr>
     <td><a href="ValueSet-order-identifier-type.html">Order Identifier Type</a></td>
     <td><a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a></td>
     <td>AU Base</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
-    <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
@@ -355,11 +340,6 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
     <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason For Non Participation In Health Program</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -642,12 +622,6 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-name-context.html">Name Context</a></td>
         <td><a href="ValueSet-name-context.html">Name Context</a></td>
-        <td>AU Base</td>
-        <td>HL7 Australia</td>
-    </tr>
-    <tr>
-        <td><a href="CodeSystem-au-observation-category.html">Observation Category Codes AU</a></td>
-        <td><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
