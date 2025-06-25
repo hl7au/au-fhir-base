@@ -61,7 +61,8 @@ jobs:
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
-        ./_updatePublisher.sh -f -y
+        # ./_updatePublisher.sh -f -y # uses built in update script native to the hl7fhir/ig-publisher-base image
+        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
     
     - name: Download past versions
       run: |  
