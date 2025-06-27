@@ -2,7 +2,7 @@
 - Publication date: TBD
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
-
+ 
 To help implementers, only the more significant changes are listed here.
 
 #### Reinstated
@@ -14,7 +14,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Medication Strength extension</li>
       <li>Ethnicity extension</li>
   </ul>
-  
+
 ##### Breaking Changes <a name="breakingchanges"></a>
 <ul>
   <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
