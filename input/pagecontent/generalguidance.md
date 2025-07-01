@@ -23,16 +23,21 @@ Example resource instances
 
 #### Profiling Approach
 
+AU Base resource profiles are intentionally designed to
+* identify the nationally recognised concepts relevant for use in the Australian context - so there's a lot of extensions (add this 2nd class to the approach below)
+* aren't restrictive - don't enforce any particular use case's perspective of 'minimum'; this is a 'localised' version of the underlying FHIR resource, so it swaps out international for local (where they exist) and add in additional local concepts (where they exist)
+
 This approach manifests as the following representation outcomes in this guide, as follows:
 * Cardinality: most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
-* Must Support: the FHIR profiling Must Support flags are not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
-* Terminology Binding: elements that can be bound to terminology are often sliced to offer one or more specific binding options that can be required in downstream guides; this also provides value sets that are common/suitable for the Australian context. 
-* Slice Constraints: in this guide choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
+* Must Support and Obligations: _Must Support_ flags or Obligation extensions are not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
+* Terminology Binding: where possible, elements are bound to the nationally recognised localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), use case projects that add in additional concepts identified as needed for use in implementation.
+  ** majority of bindings are preferred, only in two cases is extensible applied (the underlying binding is extensible and we can't relax, or )
+  ** talk about additional bindings
+* Slice Constraints: in this guide, slicing is avoided as much as possible. Slicing limits downstream ...  choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
+* Extensions: .....
+* type choices: ... note the ignore warning to be triggered
 
-
-
-
-
+Generic use case profiles... then moved to the project when one exists. For example the Australian profiles for vitals were moved to AU Core, Diagnostic Request is moved to AU eRewuesting project.
 
 ### Maturity Levels 
 These levels used for HL7 AU FHIR Implementation Guides are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
