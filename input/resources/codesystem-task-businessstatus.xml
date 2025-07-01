@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="task-businessstatus"/>
+  <meta>
+    <profile value="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"/>
+  </meta> 
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension> 
+  <url value="http://terminology.hl7.org.au/CodeSystem/task-businessstatus"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.3.4.1.4.34"/>
+  </identifier>
+  <name value="TaskBusinessStatus"/>
+  <title value="Task Business Status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-05-28"/>
+  <publisher value="HL7 Australia"/>
+  <contact>
+    <name value="HL7 Australia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7.org/display/HAFWG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7 Australia FHIR Work Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7.org/display/HAFWG"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Business status codes for a Task used in the Australian context."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License. HL7 Australia© 2024+; Licensed Under Creative Commons No Rights Reserved."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://terminology.hl7.org.au/ValueSet/task-businessstatus"/>
+  <compositional value="false"/>
+  <versionNeeded value="true"/>
+  <content value="complete"/>
+  <count value="10"/>
+  <concept>
+    <code value="booked"/>
+    <display value="Booked"/>
+    <definition value="Service has been booked."/>
+  </concept>
+  <concept>
+    <code value="claimed"/>
+    <display value="Claimed"/>
+    <definition value="Service request has been claimed by an alternative filler."/>
+  </concept>
+  <concept>
+    <code value="user-cancelled"/>
+    <display value="User cancelled"/>
+    <definition value="Service request has been cancelled by the placer."/>
+  </concept>
+  <concept>
+    <code value="cancel-handled"/>
+    <display value="Cancel handled"/>
+    <definition value="Cancellation has been handled by the filler."/>
+  </concept>
+  <concept>
+    <code value="data-issue"/>
+    <display value="Data issue"/>
+    <definition value="Rejected fulfilment due to an issue with the request data."/>
+  </concept>
+  <concept>
+    <code value="preliminary"/>
+    <display value="Preliminary"/>
+    <definition value="Preliminary result completed."/>
+  </concept>
+  <concept>
+    <code value="addendum"/>
+    <display value="Addendum"/>
+    <definition value="Addendum created for reporting."/>
+  </concept>
+  <concept>
+    <code value="collected"/>
+    <display value="Collected"/>
+    <definition value="Specimen has been collected in lab collection centre."/>
+  </concept>
+  <concept>
+    <code value="in-lab"/>
+    <display value="In Lab"/>
+    <definition value="Specimen is being processed in the pathology lab."/>
+  </concept>
+  <concept>
+    <code value="acquired"/>
+    <display value="Acquired"/>
+    <definition value="Image has been acquired at radiology service."/>
+  </concept>
+</CodeSystem>

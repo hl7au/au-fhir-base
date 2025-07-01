@@ -35,6 +35,13 @@ This version of current build reinstates profiles not included in the AU Base 5.
       </li>
     </ul>
   </li>
+  <li>New code systems:
+    <ul>
+      <li><a href="http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason">CommunicationRequest Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51348">FHIR-51348</a>)</li> 
+      <li><a href="http://terminology.hl7.org.au/CodeSystem/task-businessstatus">Task Business Status</a> (<a href="https://jira.hl7.org/browse/FHIR-51350">FHIR-51350</a>)</li>
+      <li><a href="http://terminology.hl7.org.au/CodeSystem/task-tag">Task Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
+    </ul>
+  </li>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
