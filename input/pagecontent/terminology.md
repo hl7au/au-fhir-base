@@ -171,6 +171,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="ValueSet-coverage-type.html">Coverage Type</a></td>
+    <td><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
     <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a>, <a href="StructureDefinition-date-of-arrival.html">Date of Arrival</a></td>
     <td>NCTS</td>
@@ -508,6 +513,12 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-contact-purpose.html">Contact Purpose</a></td>
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-coverage-type.html">Coverage Type</a></td>
+        <td><a href="ValueSet-coverage-type.html">Coverage Type</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>

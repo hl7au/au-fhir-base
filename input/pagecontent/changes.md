@@ -35,9 +35,15 @@ This version of current build reinstates profiles not included in the AU Base 5.
       </li>
     </ul>
   </li>
+   <li>New value sets:
+    <ul>
+      <li><a href="http://terminology.hl7.org.au/ValueSet/coverage-type">Coverage Type</a> (<a href="https://jira.hl7.org/browse/FHIR-50781">FHIR-50781</a>)</li>
+    </ul>
+  </li> 
   <li>New code systems:
     <ul>
-      <li><a href="http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason">CommunicationRequest Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51348">FHIR-51348</a>)</li> 
+      <li><a href="http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason">CommunicationRequest Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51348">FHIR-51348</a>)</li>
+      <li><a href="http://terminology.hl7.org.au/CodeSystem/coverage-type">Coverage Type</a> (<a href="https://jira.hl7.org/browse/FHIR-50767">FHIR-50767</a>)</li> 
       <li><a href="http://terminology.hl7.org.au/CodeSystem/task-businessstatus">Task Business Status</a> (<a href="https://jira.hl7.org/browse/FHIR-51350">FHIR-51350</a>)</li>
       <li><a href="http://terminology.hl7.org.au/CodeSystem/task-tag">Task Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
     </ul>
