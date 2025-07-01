@@ -40,6 +40,13 @@ This version of current build reinstates profiles not included in the AU Base 5.
       </li>
     </ul>
   </li>
+  <ul>
+    <li>Deprecated extensions:
+      <ul>
+        <li><a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
+      </ul>
+    </li>
+  </ul>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
