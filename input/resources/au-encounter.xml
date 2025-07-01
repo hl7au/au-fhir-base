@@ -29,12 +29,15 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.extension:associatedHealthcareService">
-      <path value="Encounter.extension" />
-      <sliceName value="associatedHealthcareService" />
+    <element>
+      <id value="Patient.extension:birthPlace"/>
+      <path value="Patient.extension"/>
+      <sliceName value="r5participant"/>
+      <min value="0"/>
+      <max value="*"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.participant"/>
       </type>
     </element>
     <element id="Encounter.class">
