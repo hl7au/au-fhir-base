@@ -91,8 +91,6 @@ This version of current build reinstates profiles not included in the AU Base 5.
     <li>Changes to <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
       <li>Changed HealthcareService.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
-    </ul>
-     <ul>
       <li>Changed HealthcareService.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
