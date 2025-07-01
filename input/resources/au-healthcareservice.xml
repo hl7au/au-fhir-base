@@ -58,22 +58,6 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2" />
       </binding>
     </element>
-     <element id="HealthcareService.availableTime">
-      <path value="HealthcareService.availableTime" />
-    </element>
-    <element id="HealthcareService.availableTime.availableStartTime">
-      <path value="HealthcareService.availableTime.availableStartTime" />
-    </element>
-    <element id="HealthcareService.availableTime.availableStartTime.extension">
-      <path value="HealthcareService.availableTime.availableStartTime.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="HealthcareService.availableTime.availableStartTime.extension:startTimeZoneUsage">
       <path value="HealthcareService.availableTime.availableStartTime.extension" />
       <sliceName value="startTimeZoneUsage" />
@@ -81,21 +65,9 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-timezone-usage" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/timezone" />
       </type>
     </element>
-     <element id="HealthcareService.availableTime.availableEndTime">
-      <path value="HealthcareService.availableTime.availableEndTime" />
-    </element>
-     <element id="HealthcareService.availableTime.availableEndTime.extension">
-      <path value="HealthcareService.availableTime.availableEndTime.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="HealthcareService.availableTime.availableEndTime.extension:endTimeZoneUsage">
       <path value="HealthcareService.availableTime.availableEndTime.extension" />
@@ -104,7 +76,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-timezone-usage" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/timezone" />
       </type>
     </element>
   </differential>

@@ -7,6 +7,7 @@
   - contact information is sent in `HealthcareService.telecom`
   - purpose for the contact is sent using the [Contact Purpose](StructureDefinition-contact-purpose.html) extension in `HealthcareService.telecom.extension`
 - See the [AU Base Location](StructureDefinition-au-location.html) profile for guidance on using a Location resource as part of defining a type of mobile or remotely delivered service.
+- If a system wishes to apply availability times (`HealthcareService.availableTime.availableStartTime`, `HealthcareService.availableTime.availableEndTime`) with time zones restricted to Australian state and/or territory time zone offsets then the [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html) profile may be used in conjunction with the [Timezone Code](http://hl7.org/fhir/StructureDefinition/timezone) extension.
 
 **Potentially useful extensions:**
 * HealthcareService.telecom: [Contact Purpose](StructureDefinition-contact-purpose.html)
