@@ -81,16 +81,12 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Backported Medication.ingredient.strengthCodeableConcept from R5 to support CodeableConcept representation of strength (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
-    </ul>
-  </li>
-  <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
-    <ul>
       <li>Updated guidance on use of strengthCodeableConcept, strengthRatio, and the AU Base extension for free-text strength (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength extension</a>:
+  <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength</a>:
     <ul>
-      <li>Added usage guidance to Medication Strength extension (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+      <li>Added usage guidance (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
