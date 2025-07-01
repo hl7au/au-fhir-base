@@ -45,9 +45,10 @@
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1" />
       </binding>
     </element>
-    <element id="PractitionerRole.availableTime.availableStartTime.extension:startTimeZoneUsage">
+    <element id="PractitionerRole.availableTime.availableStartTime.extension:timeZone">
       <path value="PractitionerRole.availableTime.availableStartTime.extension" />
-      <sliceName value="startTimeZoneUsage" />
+      <sliceName value="timeZone" />
+      <comment value="Use [Australian Time Zone Usage]:StructureDefinition-au-timezone-usage.html[Australian Time Zone Usage] when restricting use to Australian state and territory time zone offsets only."/>
       <min value="0" />
       <max value="1" />
       <type>
@@ -55,9 +56,10 @@
          <profile value="http://hl7.org/fhir/StructureDefinition/timezone" />
       </type>
     </element>
-    <element id="PractitionerRole.availableTime.availableEndTime.extension:endTimeZoneUsage">
+    <element id="PractitionerRole.availableTime.availableEndTime.extension:timeZone">
       <path value="PractitionerRole.availableTime.availableEndTime.extension" />
-      <sliceName value="endTimeZoneUsage" />
+      <sliceName value="timeZone" />
+      <comment value="Use [Australian Time Zone Usage]:StructureDefinition-au-timezone-usage.html[Australian Time Zone Usage] when restricting use to Australian state and territory time zone offsets only."/>
       <min value="0" />
       <max value="1" />
       <type>

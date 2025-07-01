@@ -84,14 +84,16 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
   <li>Changes to <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
     <ul>
-      <li>Changed PractitionerRole.availableTime.availableStartTime, PractitionerRole.availableTime.availableEndTime use of deprecated <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension replaced with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a>  (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
-      <li>Added profile specific guidance on PractitionerRole.availableTime.availableStartTime, PractitionerRole.availableTime.availableEndTime use of <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension as profiled by the <a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a></li>
+      <li>Changed PractitionerRole.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+      <li>Changed PractitionerRole.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
     <li>Changes to <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
-      <li>Changed HealthcareService.availableTime.availableStartTime, HealthcareService.availableTime.availableEndTime use of deprecated <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension replaced with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a>  (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
-      <li>Added profile specific guidance on HealthcareService.availableTime.availableStartTime, HealthcareService.availableTime.availableEndTime use of <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension as profiled by the <a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a></li>
+      <li>Changed HealthcareService.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+    </ul>
+     <ul>
+      <li>Changed HealthcareService.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
