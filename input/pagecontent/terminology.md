@@ -506,6 +506,12 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
+        <td><a href="CodeSystem-coverage-type.html">Coverage Type</a></td>
+        <td></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">Data Absent Reason</a></td>
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,
