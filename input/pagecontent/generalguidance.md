@@ -39,6 +39,13 @@ This approach manifests as the following representation outcomes in this guide, 
 
 Generic use case profiles... then moved to the project when one exists. For example the Australian profiles for vitals were moved to AU Core, Diagnostic Request is moved to AU eRewuesting project.
 
+##### Data Type Profiling Approach
+TBD
+
+
+#### Extension Approach
+
+
 ### Maturity Levels 
 These levels used for HL7 AU FHIR Implementation Guides are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
 
