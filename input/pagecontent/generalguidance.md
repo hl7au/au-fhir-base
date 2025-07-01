@@ -1,11 +1,27 @@
 ### Intent of this Implementation Guide
-This implementation guide does not attempt to constrain for specific use cases. 
-Instead it defines representations of how commonly needed concepts, in an Australian context, can be applied generally.
 
-This implementation guide can then be drawn on for specific use cases and further constraints added for the needs of those cases.
-By referencing the AU Base definition in downstream implementation guides there is a basic level of alignment in representation across those guides.
+AU Base is designed to serve as a base layer within the broader context of FHIR implementations in an Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in particular use cases. It provides an additional set of localised options in addition to what is available in the FHIR standard including Australian extensions and Australian terminology. AU Base provides a source of truth for nationally agreed concepts in addition to the FHIR, such as Medicare card number or Australian Indigenous Status.
+
+This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and agreed at a national-level without the need for a separate project. Implementers working with a common concept that has national usage are encouraged to submit for consideration for adoption into AU Base. AU Base supports national agreement of the definition of concepts in FHIR and does not require a new project, e.g. AU eRequesting or AU Patient Summary, to standardise a new concept for adoption in Australia.
+
 This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration translation tasks.
 This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information into and out of multiple domains of interest is addressed.
+
+Australian realm IGs and implementers are expected to use an AU Base defined concept where one exists instead of redefining locally. For a directly implementable usage of AU Base for a general level of capability it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. AU Core introduces a required level of element support that give a core set of capability that can be implemented and assumed.
+
+#### Scope of AU Base
+
+HL7 AU Base, as the Australian extension of the base FHIR standard, defines:
+* Extensions for local concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
+* Terminology e.g communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
+* Search parameters to support Australian use concepts 
+* Australian address and Australian time zone profile 
+* Identifier profiles e.g. National patient and provider identifiers
+* Base resource profiles e.g. AU Base Patient
+* Generic use case profiles, where there is no existing project to undertake the work e.g. AU Medicines List, AU Base Diagnostic Imaging Result (definitional constraints; no conformance or support obligations)
+Example resource instances
+
+#### Profiling Approach
 
 This approach manifests as the following representation outcomes in this guide, as follows:
 * Cardinality: most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
@@ -13,7 +29,9 @@ This approach manifests as the following representation outcomes in this guide, 
 * Terminology Binding: elements that can be bound to terminology are often sliced to offer one or more specific binding options that can be required in downstream guides; this also provides value sets that are common/suitable for the Australian context. 
 * Slice Constraints: in this guide choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
 
-For a directly implementable usage of AU Base for a general level of capability it is recommended the AU Core implementation guide be considered. AU Core introduces a required level of element support that give a core set of capability that can be implemented and assumed.
+
+
+
 
 
 ### Maturity Levels 
