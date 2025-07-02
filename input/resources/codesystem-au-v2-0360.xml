@@ -6,13 +6,6 @@
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 		<valueInteger value="1" />
 	</extension>
-	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-		<valueCode value="deprecated">
-		<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
-			<valueMarkdown value="This profile is deprecated in AU Base as no continued use or intent for further maturity development has been indicated by the community."/>
-		</extension>
-		</valueCode>
-  	</extension>
 	<url value="http://terminology.hl7.org.au/CodeSystem/v2-0360" />
 	<identifier>
 		<system value="urn:ietf:rfc:3986" />
@@ -20,7 +13,7 @@
 	</identifier>
 	<name value="DegreeLicenseCertificateAU" />
 	<title value="DegreeLicenseCertificate AU" />
-	<status value="retired" />
+	<status value="active" />
 	<experimental value="false" />
 	<description
 		value="Additional concept codes for qualification defined for use in an Australian context. These codes are used as extensions to the HL7 International code set." />
@@ -28,40 +21,58 @@
 	<valueSet value="http://terminology.hl7.org.au/ValueSet/v2-0360" />
 	<compositional value="false" />
 	<versionNeeded value="true" />
-	<count value="2" />
+	<count value="3" />
 	<content value="complete" />
-	<!--
+	<property>
+		<code value="status" />
+		<uri value="http://hl7.org/fhir/concept-properties#status" />
+		<description value="A property that indicates the status of the concept. One of active, experimental,
+		deprecated, retired" />
+		<type value="code" />
+	</property>
+	<property>
+		<code value="deprecationDate" />
+		<uri value="http://hl7.org/fhir/concept-properties#deprecationDate" />
+		<description value="The date at which a concept was deprecated. Concepts that are deprecated but not
+		inactive can still be used, but their use is discouraged" />
+		<type value="dateTime" />
+	</property>
 	<concept>
 		<code value="AHPRA" />
 		<display value="AHPRA Registration Number" />
 		<definition value="An Australian Health Practitioner Regulation Authority (Ahpra) Registration Number." />
 		<designation>
-				<use>
-					<system value="http://snomed.info/sct" />
-					<code value="900000000000013009" />
-				</use>
-				<value value="Ahpra Profession" />
-			</designation>
+			<use>
+				<system value="http://snomed.info/sct" />
+				<code value="900000000000013009" />
+			</use>
+			<value value="Ahpra Registration Number" />
+		</designation>
 	</concept>
-	-->
 	<concept>
 		<code value="AUAHPRAProfession" />
 		<display value="AHPRA Profession" />
-		<definition
-			value="An Australian Health Practitioner Regulation Authority (Ahpra) profession." />
-			<designation>
-				<use>
-					<system value="http://snomed.info/sct" />
-					<code value="900000000000013009" />
-				</use>
-				<value value="Ahpra Profession" />
-			</designation>
+		<definition value="An Australian Health Practitioner Regulation Authority (Ahpra) profession." />
+		<designation>
+			<use>
+				<system value="http://snomed.info/sct" />
+				<code value="900000000000013009" />
+			</use>
+			<value value="Ahpra Profession" />
+		</designation>
+		<property>
+			<code value="status" />
+			<valueCode value="deprecated" />
+		</property>
+		<property>
+			<code value="deprecationDate" />
+			<valueDateTime value="2025-07-02" />
+		</property>
 	</concept>
 	<concept>
 		<code value="AUAHPRARegistration" />
 		<display value="AHPRA Registration" />
-		<definition
-			value="An Australian Health Practitioner Regulation Authority (Ahpra) registration." />
+		<definition value="An Australian Health Practitioner Regulation Authority (Ahpra) registration." />
 		<designation>
 			<use>
 				<system value="http://snomed.info/sct" />
@@ -69,5 +80,13 @@
 			</use>
 			<value value="Ahpra Registration" />
 		</designation>
+		<property>
+			<code value="status" />
+			<valueCode value="deprecated" />
+		</property>
+		<property>
+			<code value="deprecationDate" />
+			<valueDateTime value="2025-07-02" />
+		</property>
 	</concept>
 </CodeSystem>
