@@ -9,6 +9,7 @@
   - If a system is unable to provide a code from the preferred value set because the implementation context is not restricted to healthcare practitioner providers then it is recommended to select a suitable code from SNOMED CT. 
   - If a suitable code from SNOMED CT is not available a code from the value set [Australian and New Zealand Standard Classification of Occupations](https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1) may be used.
 - See each Identifier profile page for guidance related to that identifier type.
+- When populating available times for a practitioner role, e.g. `PractitionerRole.availableTime.availableStartTime`, an Australian time zone offset is represented using the [Timezone Code](http://hl7.org/fhir/StructureDefinition/timezone) extension as profiled by [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html).
 
 **Potentially useful extensions:**
 * PractitionerRole.telecom: [Contact Purpose](StructureDefinition-contact-purpose.html)
