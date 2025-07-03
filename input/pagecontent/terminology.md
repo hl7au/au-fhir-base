@@ -171,6 +171,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type - AU Extended</a></td>
+    <td><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
     <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a>, <a href="StructureDefinition-date-of-arrival.html">Date of Arrival</a></td>
     <td>NCTS</td>
@@ -494,6 +499,12 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
+        <td><a href="CodeSystem-communicationrequest-reason.html">CommunicationRequest Reason</a></td>
+        <td></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td>NCTS</td>
@@ -502,6 +513,12 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-contact-purpose.html">Contact Purpose</a></td>
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-au-coverage-type.html">Coverage Type AU</a></td>
+        <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
@@ -704,6 +721,18 @@ The following code systems are referenced by the value sets listed above.
         </td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-task-businessstatus.html">Task Business Status</a></td>
+        <td></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+     <tr>
+        <td><a href="CodeSystem-task-tag.html">Task Tag</a></td>
+        <td></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
     </tr>
     <tr>
         <td><a href="https://terminology.hl7.org/CodeSystem-IANATimeZoneDatabase.html">Time Zones</a></td>
