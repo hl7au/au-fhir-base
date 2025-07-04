@@ -1,3 +1,5 @@
+<p class="stu-note">This profile is deprecated in AU Base as no continued use or intent for further maturity development has been indicated by the community.</p>
+
 ### Usage Notes
 
 **Profile specific implementation guidance:**
