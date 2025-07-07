@@ -10,6 +10,9 @@ The following profiles and have been defined for this implementation guide.
 {% include sd-list-generator.md %}
 <!-- ================================================ -->
 
+#### Extension
+* [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html)
+
 <br />
 
 ### Extensions
