@@ -51,7 +51,7 @@
         <valueSet value="http://terminology.hl7.org.au/ValueSet/service-provision-conditions" />
       </binding>
     </element>
-     <element id="HealthcareService.communication">
+    <element id="HealthcareService.communication">
       <path value="HealthcareService.communication" />
       <binding>
         <strength value="extensible" />
@@ -61,21 +61,23 @@
     <element id="HealthcareService.availableTime.availableStartTime.extension:timeZone">
       <path value="HealthcareService.availableTime.availableStartTime.extension" />
       <sliceName value="timeZone" />
+      <comment value="Use [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html) for Australian state and territory time zone offsets."/>
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-timezone" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/timezone" />
       </type>
     </element>
     <element id="HealthcareService.availableTime.availableEndTime.extension:timeZone">
       <path value="HealthcareService.availableTime.availableEndTime.extension" />
       <sliceName value="timeZone" />
+      <comment value="Use [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html) for Australian state and territory time zone offsets."/>
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-timezone" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/timezone" />
       </type>
     </element>
   </differential>
