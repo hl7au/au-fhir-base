@@ -39,9 +39,14 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
     </ul>
   </li>
+  <li>New value sets:
+    <ul>
+      <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-50781">FHIR-50781</a>)</li>
+    </ul>
+  </li> 
   <li>New code systems:
     <ul>      
-      <li><a href="CodeSystem-coverage-type.html">Coverage Type</a> (<a href="https://jira.hl7.org/browse/FHIR-50767">FHIR-50767</a>)</li>     
+      <li><a href="CodeSystem-au-coverage-type.html">Coverage Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-50767">FHIR-50767</a>)</li>     
     </ul>
   </li>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
