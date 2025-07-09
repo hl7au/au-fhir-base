@@ -38,15 +38,9 @@ This version of current build reinstates profiles not included in the AU Base 5.
     <ul>
       <li><a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
     </ul>
-  </li>
-   <li>New value sets:
-    <ul>
-      <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-50781">FHIR-50781</a>)</li>
-    </ul>
-  </li> 
+  </li>   
   <li>New code systems:
     <ul>
-      <li><a href="CodeSystem-au-coverage-type.html">Coverage Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-50767">FHIR-50767</a>)</li> 
       <li><a href="CodeSystem-communicationrequest-reason.html">CommunicationRequest Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51348">FHIR-51348</a>)</li>
       <li><a href="CodeSystem-task-businessstatus.html">Task Business Status</a> (<a href="https://jira.hl7.org/browse/FHIR-51350">FHIR-51350</a>)</li>
       <li><a href="CodeSystem-task-tag.html">Task Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
@@ -69,12 +63,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a></li>
     </ul>
   </li>
-  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
-  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Coverage</a>:
-    <ul>
-        <li>Changed Coverage.type binding to Coverage Type - AU Extended (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-51429">FHIR-51429</a>).</li>
-    </ul>
-  </li>
+  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>  
   <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
