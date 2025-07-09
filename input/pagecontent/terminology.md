@@ -171,7 +171,7 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type - AU Extended</a></td>
+    <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
     <td><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a></td>
     <td>AU Base</td>
 </tr>
@@ -446,13 +446,13 @@ The following code systems are referenced by the value sets listed above.
   <tbody>
     <tr>
       <td><a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a></td>
-      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>, <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
       <td>HL7 Terminology (THO)</td>
       <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-au-v3-ActCode.html">ActCode AU</a></td>
-        <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+        <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>,  <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
@@ -509,13 +509,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>
-    <tr>
-        <td><a href="CodeSystem-au-coverage-type.html">Coverage Type AU</a></td>
-        <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type - AU Extended</a></td>
-        <td>AU Base</td>
-        <td>HL7 Australia</td>
-    </tr>
+    </tr>   
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">Data Absent Reason</a></td>
         <td>

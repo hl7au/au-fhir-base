@@ -18,10 +18,16 @@
 	<description value="Coverage type codes for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set."/>
 	<compose>
 		<include>
-			<system value="http://terminology.hl7.org.au/CodeSystem/au-coverage-type"/>
+			<system value="http://terminology.hl7.org.au/CodeSystem/v3-ActCode"/>
+			<concept>
+				<code value="AUPUBHOSP"/>  
+			</concept>
 		</include>
 		<include>
-			<valueSet value="http://hl7.org/fhir/ValueSet/coverage-type" />
-		</include>		
+			<system value="http://terminology.hl7.org/CodeSystem/coverage-selfpay" />
+		</include>			
+		<include>
+			<valueSet value="http://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode" />
+		</include>
 	</compose>
 </ValueSet>
