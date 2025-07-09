@@ -57,6 +57,16 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>NCTS</td>
     </tr>
     <tr>
+        <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
+    <tr>
+        <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
       <td><a href="StructureDefinition-au-timezone.html">Australian Time Zone</a></td>
       <td>AU Base</td>
@@ -140,26 +150,6 @@ The following value sets form part of localised requirements (i.e. are reference
       </td>
       <td>NCTS</td>
     </tr>
-    <tr>
-      <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
-      <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-      <td>AU Base</td>
-    </tr>
-<tr>
-    <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-    <td>AU Base</td>
-</tr>
-<tr>
-    <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-    <td>AU Base</td>
-</tr>
-<tr>
-    <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-    <td>AU Base</td>
-</tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
     <td><a href="StructureDefinition-au-patient.html">AU Base Patient</a>, <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>, <a href="StructureDefinition-au-relatedperson.html">AU Base Related Person</a></td>
@@ -205,11 +195,6 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a></td>
     <td><a href="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">Individual Gender Identity</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-program-participation-status-1">Health Program Participation Status</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -268,6 +253,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
+    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
     <td><a href="ValueSet-au-location-physical-type-extended.html">Location Type (Physical) - AU Extended</a></td>
     <td><a href="StructureDefinition-au-location.html">AU Base Location</a></td>
     <td>AU Base</td>
@@ -308,19 +298,9 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>AU Base</td>
 </tr>
 <tr>
-    <td><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></td>
-    <td>-</td>
-    <td>AU Base</td>
-</tr>
-<tr>
     <td><a href="ValueSet-order-identifier-type.html">Order Identifier Type</a></td>
     <td><a href="StructureDefinition-au-localorderidentifier.html">AU Local Order Identifier</a></td>
     <td>AU Base</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
-    <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
@@ -360,11 +340,6 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
     <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason For Non Participation In Health Program</a></td>
-    <td><a href="StructureDefinition-au-healthprogramparticipation.html">AU Health Program Participation Summary</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -651,12 +626,6 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-au-observation-category.html">Observation Category Codes AU</a></td>
-        <td><a href="ValueSet-au-observation-category-extended.html">Observation Category Codes - AU Extended</a></td>
-        <td>AU Base</td>
-        <td>HL7 Australia</td>
-    </tr>
-    <tr>
         <td><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
         <td><a href="ValueSet-pbs-item.html">PBS Item Codes</a></td>
         <td>AU Base</td>
@@ -752,7 +721,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptm
 **Concept maps published in the NCTS**
 - [Australian States and Territories v1 to Australian States and Territories v2](https://healthterminologies.gov.au/fhir/ConceptMap/australian-states-territories-v1-to-v2-1)
 - [METeOR Indigenous Status 291036 to Australian Indigenous Status](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-indigenous-291036-to-australian-indigenous-status-2)
-- [METeOR Person Gender 635994 to HL7 FHIR AdministrativeGender](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-gender-635994-to-hl7-fhir-administrativegender-1)
+- [METeOR Person Gender 635994 to HL7 FHIR AdministrativeGender](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-gender-635994-to-fhir-administrativegender-1)
 - [METeOR Person Gender 741825 to HL7 FHIR AdministrativeGender](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-gender-741825-to-fhir-administrativegender-1)
 - [METeOR Person Sex 635126 to Biological Sex](https://healthterminologies.gov.au/fhir/ConceptMap/meteor-person-sex-635126-to-biological-sex-1)
 - [Reason Vaccine Not Administered v1 to Reason Vaccine Not Administered v2](https://healthterminologies.gov.au/fhir/ConceptMap/reason-vaccine-not-administered-v1-to-v2-1)
