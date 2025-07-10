@@ -15,7 +15,7 @@
   - medication strength in [Medication Strength](StructureDefinition-medication-strength.html) extension
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
-- When data for `Medication.ingredient.strength` is unavailable as a ratio, ingredient strength can be surfaced as text via the [backported R5](https://hl7.org/fhir/versions.html#extensions) `Medication.ingredient.strength[x]` [element](https://www.hl7.org/fhir/medication-definitions.html#Medication.ingredient.strength_x_) as a CodeableConcept:
+- When data for `Medication.ingredient.strength` is unavailable as a ratio, ingredient strength can be surfaced as text via the [backported R5](https://hl7.org/fhir/versions.html#extensions) `Medication.ingredient.strength[x]` [element](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient.strength_x_) as a CodeableConcept:
   - This is to be interpreted as the strength of that specific ingredient, not the strength of the medication as a whole.
   - The backported element can be used once on each `Medication.ingredient` element.
   - Where the existing `Medication.ingredient.strength` element can be used, this should be used in preference to using the preadopted R5 element.
