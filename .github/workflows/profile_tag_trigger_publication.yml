@@ -68,7 +68,7 @@ jobs:
     
     - name: Download past versions
       run: |  
-        aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --recursive --include "*"
+        aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --quiet --recursive --include "*"
 
     - name: Basic Publish for Aubase
       run: |
