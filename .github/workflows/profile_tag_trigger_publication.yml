@@ -66,7 +66,7 @@ jobs:
     
     - name: Download past versions
       run: |  
-        aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --recursive --exclude "*" --include "*/package.tgz"
+        aws s3 cp s3://hl7au-fhir-ig/fhir %CD%/webroot/fhir --recursive --include "*"
 
     - name: Basic Publish for Aubase
       run: |
@@ -84,7 +84,6 @@ jobs:
         FULL_URL="$URL/package-list.json"
         
         curl --output webroot/fhir/package-list.json --url $FULL_URL
-        curl --output webroot/fhir/base/package-list.json --url $FULL_URL
 
     - name: Download package-feed.xml
       run: |
@@ -119,9 +118,9 @@ jobs:
     
     - name: Upload Base webroot to S3 and publish
       run: |  
-        aws s3 cp ./webroot/fhir/base s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
-        aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.bak.xml
-        aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.bak.xml
-        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.xml
-        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.xml
+        aws s3 cp ./webroot/fhir s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        # aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.bak.xml
+        # aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.bak.xml
+        # aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.xml
+        # aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.xml
         
