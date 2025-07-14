@@ -36,7 +36,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
   <li>New search parameters:
     <ul>
-        <li><a href="SearchParameter-supporting-info.html">ServiceRequestSupportingInfo</a> (<a href="https://jira.hl7.org/browse/FHIR-51437">FHIR-51437</a>)</li>
+        <li><a href="SearchParameter-servicerequest-supporting-info.html">ServiceRequestSupportingInfo</a> (<a href="https://jira.hl7.org/browse/FHIR-51437">FHIR-51437</a>)</li>
     </ul>
   </li>
   <li>Deprecated extensions:
