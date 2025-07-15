@@ -16,7 +16,7 @@
   - medication form in `Medication.form.text`
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
-- When a `Medication.ingredient.strength` is unavailable as a ratio, ingredient strength text can be surfaced as `CodeableConcept.text` using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]). See this example of use [Tadim](Medication-IngredientStrengthExtension1.html). 
+- When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]). See this example of use [Tadim](Medication-IngredientStrengthExtension1.html). 
   - This is to be interpreted as the strength of that specific ingredient, not the strength of the medication as a whole.
   - The backported element can be used once on each `Medication.ingredient` element. 
   - Where the existing `Medication.ingredient.strength` element can be used, this should be used in preference to using the pre-adopted R5 element.
