@@ -511,6 +511,12 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/coverage-selfpay">Coverage SelfPay Codes</a></td>
+        <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
+    <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">Data Absent Reason</a></td>
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,

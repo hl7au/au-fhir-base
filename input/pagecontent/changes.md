@@ -101,7 +101,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
    <li>Changes to <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a>:
     <ul>
-        <li>Changed Coverage.type binding to Coverage Type - AU Extended (preferred) (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>).</li>
+        <li>Changed Coverage.type binding to Coverage Type and Self-Pay Codes - AU Extended (preferred) (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
