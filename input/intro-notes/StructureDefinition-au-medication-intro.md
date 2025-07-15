@@ -9,7 +9,7 @@
   - [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 - When a code for medication definition is unavailable, just text is allowed in `Medication.code.text`.
 - When a medication is compounded and is a list of ingredients, `Medication.code` may contain only the list of ingredients as text in `Medication.code.text`.
-- Non-coded support for other medicinal product information can be supported as follows:
+- For support as text representation of other medicinal product information consider:
   - ​brand name in [Medication Brand Name](StructureDefinition-medication-brand-name.html) extension
   - ​generic name in [Medication Generic Name](StructureDefinition-medication-generic-name.html) extension
   - medication strength in [Medication Strength](StructureDefinition-medication-strength.html) extension
