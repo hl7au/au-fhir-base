@@ -112,7 +112,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
 
 To help implementers, only the more significant changes are listed here.
 
-##### Breaking Changes <a name="breakingchanges"></a>
+##### Breaking Changes
 This release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
