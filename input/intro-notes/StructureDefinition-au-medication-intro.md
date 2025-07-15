@@ -13,6 +13,7 @@
   - ​brand name in [Medication Brand Name](StructureDefinition-medication-brand-name.html) extension
   - ​generic name in [Medication Generic Name](StructureDefinition-medication-generic-name.html) extension
   - medication strength in [Medication Strength](StructureDefinition-medication-strength.html) extension
+  - medication form in `Medication.form.text`
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
 - When a `Medication.ingredient.strength` is unavailable as a ratio, ingredient strength text can be surfaced as `CodeableConcept.text` using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]). See these examples of use [Stamaril](Medication-IngredientStrengthExtension0.html) and [Tadim](Medication-IngredientStrengthExtension1.html). 
