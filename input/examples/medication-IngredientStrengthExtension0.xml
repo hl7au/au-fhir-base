@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="IngredientStrengthExtension0"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+  </meta>
+  <code>
+    <text value="Tadim"/>
+  </code>
+  <form>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="147011000036100"/>
+    </coding>
+    <text value="Powder"/>    
+  </form>
+  <ingredient>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]">
+      <valueCodeableConcept>
+        <text value="1 Million IU"/>
+      </valueCodeableConcept>
+    </extension>
+    <itemCodeableConcept>
+      <text value="Colistimethate"/>
+    </itemCodeableConcept>
+  </ingredient>
+</Medication>
