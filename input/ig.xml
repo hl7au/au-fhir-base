@@ -135,7 +135,7 @@
 				<reference value="StructureDefinition/medication-generic-name"/>
 			</reference>
 			<exampleBoolean value="false"/>
-		</resource>
+		</resource>		
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/ethnicity"/>
@@ -1588,6 +1588,30 @@
 			</reference>
 			<name value="Medication - Branded Pack with Batch Details"/>
 			<description value="Shows an example of a branded medication, Norvasc, containing the active ingredient amlodipine (10 mg) as a tablet, with batch details including lot number and expiration date, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/StrengthExtension0"/>
+			</reference>
+			<name value="Medication - with Generic Name and Medication Strength Extensions"/>
+			<description value="Shows an example of a medication, Panadeine, as a caplet, with the generic name and medication strength specified in extensions, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+				<resource>
+			<reference>
+				<reference value="Medication/StrengthExtension1"/>
+			</reference>
+			<name value="Medication - with Medication Strength Extension"/>
+			<description value="Shows an example of a medication, Zolgensma, as a solution for infusion, with the medication strength specified in an extension, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/IngredientStrengthExtension0"/>
+			</reference>
+			<name value="Medication - with backported R5 Ingredient Strength Element"/>
+			<description value="Shows an example of a medication, Tadim, containing the ingredient colistimethate (1 Million IU) as a powder, with ingredient strength specified using the preadopted R5 element strengthCodeableConcept, for the *AU Base Medication* profile"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
 		</resource>
 		<resource>
