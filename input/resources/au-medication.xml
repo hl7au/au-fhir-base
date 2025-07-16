@@ -133,6 +133,8 @@
     <element id="Medication.ingredient">
       <path value="Medication.ingredient"/>
       <definition value="Identifies a particular constituent of interest in the product. Can be coded with AMT."/>
+      <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]).
+Where possible use the existing `Medication.ingredient.strength` element in preference to pre-adopting the FHIR R5 `Medication.ingredient.strength[x]` element."/>
     </element>
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]"/>
