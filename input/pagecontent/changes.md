@@ -44,6 +44,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
     </ul>
   </li>
+  <li>New value sets:
+    <ul>
+      <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
+    </ul>
+  </li>  
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
@@ -87,6 +92,16 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
+  <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>
+      <li>Updated guidance on use of medication strength representations using the <a href="StructureDefinition-medication-strength.html">Medication Strength</a> extension and pre-adoption of the FHIR R5 <a href="https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient)">Medication.ingredient.strength[x]</a> element. (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength</a>:
+    <ul>
+      <li>Added usage guidance (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+    </ul>
+  </li>
   <li>Changes to <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
     <ul>
       <li>Changed PractitionerRole.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
@@ -97,6 +112,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
     <ul>
       <li>Changed HealthcareService.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
       <li>Changed HealthcareService.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+    </ul>
+  </li>
+   <li>Changes to <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a>:
+    <ul>
+        <li>Changed Coverage.type binding to Coverage Type and Self-Pay Codes - AU Extended (preferred) (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
@@ -239,7 +259,7 @@ To help implementers, only the more significant changes are listed here.
 - Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
-The changes in this update are for ballot. 
+The changes in this update are for ballot.
 
 To help implementers, only the more significant changes are listed here.
 
