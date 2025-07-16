@@ -515,7 +515,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>    
+    </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/coverage-selfpay">Coverage SelfPay Codes</a></td>
         <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>

@@ -68,7 +68,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a></li>
     </ul>
   </li>
-  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>  
+  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li> 
   <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
