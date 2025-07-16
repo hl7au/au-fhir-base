@@ -84,7 +84,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
   <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Updated guidance on use of strengthCodeableConcept, strengthRatio, and the AU Base extension for free-text strength (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+      <li>Updated guidance on use of medication strength representations using the <a href="StructureDefinition-medication-strength.html">Medication Strength</a> extension and pre-adoption of the FHIR R5 <a href="https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient)">Medication.ingredient.strength[x]</a> element. (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength</a>:
