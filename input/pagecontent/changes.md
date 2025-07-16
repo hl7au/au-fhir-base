@@ -42,8 +42,8 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li>New code systems:
     <ul>
       <li><a href="CodeSystem-communicationrequest-reason.html">CommunicationRequest Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51348">FHIR-51348</a>)</li>
-      <li><a href="CodeSystem-resource-tag.html">Resource Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
       <li><a href="CodeSystem-task-businessstatus.html">Task Business Status</a> (<a href="https://jira.hl7.org/browse/FHIR-51350">FHIR-51350</a>)</li>
+      <li><a href="CodeSystem-task-tag.html">Task Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
     </ul>
   </li>
   <li>New value sets:
@@ -68,7 +68,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a></li>
     </ul>
   </li>
-  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li> 
+  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>  
   <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
@@ -92,6 +92,16 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>
+      <li>Updated guidance on use of medication strength representations using the <a href="StructureDefinition-medication-strength.html">Medication Strength</a> extension and pre-adoption of the FHIR R5 <a href="https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient)">Medication.ingredient.strength[x]</a> element. (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength</a>:
+    <ul>
+      <li>Added usage guidance (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
@@ -251,7 +261,7 @@ To help implementers, only the more significant changes are listed here.
 - Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
-The changes in this update are for ballot. 
+The changes in this update are for ballot.
 
 To help implementers, only the more significant changes are listed here.
 
