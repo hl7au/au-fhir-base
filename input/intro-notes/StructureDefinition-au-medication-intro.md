@@ -12,7 +12,7 @@
 - For support as text representation of other medicinal product information consider:
   - ​brand name in [Medication Brand Name](StructureDefinition-medication-brand-name.html) extension
   - ​generic name in [Medication Generic Name](StructureDefinition-medication-generic-name.html) extension
-  - medication strength in [Medication Strength](StructureDefinition-medication-strength.html) extension
+  - medication strength, for medication as a whole, in [Medication Strength](StructureDefinition-medication-strength.html) extension
   - medication form in `Medication.form.text`
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
