@@ -660,6 +660,12 @@ The following code systems are referenced by the value sets listed above.
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
+     <tr>
+        <td><a href="CodeSystem-resource-tag.html">Resource Tag</a></td>
+        <td></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleCode">RoleCode</a></td>
         <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
@@ -727,13 +733,7 @@ The following code systems are referenced by the value sets listed above.
         <td></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>
-     <tr>
-        <td><a href="CodeSystem-task-tag.html">Task Tag</a></td>
-        <td></td>
-        <td>AU Base</td>
-        <td>HL7 Australia</td>
-    </tr>
+    </tr>    
     <tr>
         <td><a href="https://terminology.hl7.org/CodeSystem-IANATimeZoneDatabase.html">Time Zones</a></td>
         <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
