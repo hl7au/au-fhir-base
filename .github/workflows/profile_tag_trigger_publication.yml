@@ -117,7 +117,13 @@ jobs:
       with:
         name: ig-output
         path: ./output.zip
-    
+
+    - name: Reconfigure AWS credentials from GitHub OIDC
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+        aws-region: ap-southeast-2
+        
     - name: Upload Base webroot to S3 and publish
       run: |  
         aws s3 cp ./webroot/fhir s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
