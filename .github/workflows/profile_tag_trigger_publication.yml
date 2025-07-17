@@ -67,11 +67,11 @@ jobs:
     
     - name: Download past versions
       run: | 
-        ls ..
-        ls ../..
-        ls ../../..
-        ls ../../../..
-        aws s3 sync s3://hl7au-fhir-ig s3://action-runner-working --only-show-errors
+        mv webroot webroot.tmp
+        mkdir webroot
+        s3fs action-runner-working ./webroot -o use_session_token -o url=https://s3.ap-southeast-2.amazonaws.com -o endpoint=ap-southeast-2 &
+        cp -a ./webroot.tmp/. ./webroot
+        # aws s3 sync s3://hl7au-fhir-ig s3://action-runner-working --only-show-errors
         
         
     - name: Basic Publish for Aubase
