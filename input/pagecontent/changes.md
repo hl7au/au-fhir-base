@@ -8,10 +8,7 @@ To help implementers, only the more significant changes are listed here.
 #### Reinstated
 This version of current build reinstates profiles not included in the AU Base 5.0.0 release:
   <ul>
-      <li>AU Base Service Request</li>
       <li>AU Base Coverage</li>
-      <li>Vaccine Vial Serial Number extension</li>
-      <li>Medication Strength extension</li>
       <li>Ethnicity extension</li>
   </ul>
 
@@ -28,6 +25,9 @@ This version of current build reinstates profiles not included in the AU Base 5.
 <ul>
   <li>New profiles:
     <ul>
+      <li><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a> (<a href="https://jira.hl7.org/browse/FHIR-FHIR-46714">FHIR-FHIR-46714</a>)</li>
+    </ul>
+    <ul>
       <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
     </ul>
     <ul>
@@ -37,6 +37,14 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li>New search parameters:
     <ul>
         <li><a href="SearchParameter-servicerequest-supporting-info.html">ServiceRequestSupportingInfo</a> (<a href="https://jira.hl7.org/browse/FHIR-51437">FHIR-51437</a>)</li>
+    </ul>
+  </li>
+   <li>New extensions:
+    <ul>
+        <li><a href="StructureDefinition-medication-strength.html">Medication Strength</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/41">au-fhir-base #41</a>, <a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>)</li>
+    </ul>
+    <ul>
+        <li><a href="StructureDefinition-vaccine-serial-number.html">Vaccine Vial Serial Number</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/712">au-fhir-base #712</a>)</li>
     </ul>
   </li>
   <li>Deprecated extensions:
