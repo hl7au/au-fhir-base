@@ -67,8 +67,9 @@ jobs:
     
     - name: Download past versions
       run: |  
-        aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --quiet --recursive --include "*"
-
+        # aws s3 cp s3://hl7au-fhir-ig/fhir ./webroot/fhir --quiet --recursive --include "*"
+        aws s3 cp s3://hl7au-fhir-ig s3://action-runner-working --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        
     - name: Basic Publish for Aubase
       run: |
           echo "Generating Publish for  Aubase IG..."
@@ -125,7 +126,7 @@ jobs:
         
     - name: Upload Base webroot to S3 and publish
       run: |  
-        aws s3 cp ./webroot/fhir s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        aws s3 cp /webroot/fhir s3://hl7au-fhir-ig/fhir/staging --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
         # aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.bak.xml
         # aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.bak.xml
         # aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.xml
