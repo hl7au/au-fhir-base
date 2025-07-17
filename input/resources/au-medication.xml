@@ -18,16 +18,7 @@
     <element id="Medication">
       <path value="Medication"/>
       <short value="A medication in an Australian healthcare context"/>
-    </element>
-    <element id="Medication.extension">
-      <path value="Medication.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
+      <comment value="For support as text representation of medication strength, for a medication as a whole, consider the [Medication Strength](StructureDefinition-medication-strength.html) extension."/>
     </element>
     <element id="Medication.code">
       <path value="Medication.code"/>
