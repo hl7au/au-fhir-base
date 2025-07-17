@@ -68,6 +68,7 @@ jobs:
     - name: Download past versions
       run: | 
         aws s3 sync s3://hl7au-fhir-ig s3://action-runner-working --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        ls ../../../bucket
         
     - name: Basic Publish for Aubase
       run: |
