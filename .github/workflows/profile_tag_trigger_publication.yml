@@ -67,7 +67,7 @@ jobs:
     
     - name: Download past versions
       run: | 
-        aws s3 sync s3://hl7au-fhir-ig s3://action-runner-working
+        aws s3 sync s3://hl7au-fhir-ig s3://action-runner-working --only-show-errors
         ls ../../../bucket
         
     - name: Basic Publish for Aubase
