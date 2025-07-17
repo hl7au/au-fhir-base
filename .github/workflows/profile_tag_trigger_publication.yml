@@ -59,12 +59,7 @@ jobs:
         repository: hl7au/ig-registry
         path: ig-registry
 
-    - name: Update Publisher
-      run: |
-        echo "Updating Publisher"
-        # ./_updatePublisher.sh -f -y # uses built in update script native to the hl7fhir/ig-publisher-base image
-        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
-    
+        
     - name: Download past versions
       run: | 
         mv webroot webroot.tmp
@@ -72,7 +67,13 @@ jobs:
         s3fs action-runner-working ./webroot -o use_session_token -o url=https://s3.ap-southeast-2.amazonaws.com -o endpoint=ap-southeast-2 &
         cp -a ./webroot.tmp/. ./webroot
         # aws s3 sync s3://hl7au-fhir-ig s3://action-runner-working --only-show-errors
-        
+
+    - name: Update Publisher
+      run: |
+        echo "Updating Publisher"
+        # ./_updatePublisher.sh -f -y # uses built in update script native to the hl7fhir/ig-publisher-base image
+        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
+
         
     - name: Basic Publish for Aubase
       run: |
