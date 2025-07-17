@@ -33,3 +33,7 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 ### RelatedPerson
 
 - [gender-identity](SearchParameter-gender-identity.html)
+
+### ServiceRequest
+
+- [supporting-info](SearchParameter-servicerequest-supporting-info.html)
