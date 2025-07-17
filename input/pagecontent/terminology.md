@@ -662,7 +662,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
      <tr>
         <td><a href="CodeSystem-resource-tag.html">Resource Tag</a></td>
-        <td></td>
+        <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
