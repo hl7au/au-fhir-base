@@ -39,6 +39,7 @@ jobs:
       run: |
         apt-get update
         apt-get install -y s3fs
+        modprobe fuse
         
     - name: Download past versions
       run: |  
