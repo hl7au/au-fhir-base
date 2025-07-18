@@ -16,7 +16,14 @@ jobs:
     #runs-on: ubuntu-latest
     runs-on: self-hosted
     container: hl7fhir/ig-publisher-base    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
+      volumes:
+        - /mnt/webroot:./webroot 
     steps:
+
+      - name: Download past versions
+      run: |  
+        echo "access to mount?"
+        ls -la ./webroot
     
     # to save load time can build custom image with dependencies and push to docker hub
     - name: install aws cli
@@ -37,12 +44,6 @@ jobs:
         
     - name: Download past versions
       run: |  
-        echo "access to mount?"
-        ls ../../webroot
-        echo "copy in"
-        mkdir webroot
-        cp -a ../../webroot/. webroot
-        ls ./webroot
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         
     - name: Checkout Publications Repository
