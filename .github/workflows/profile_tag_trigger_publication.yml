@@ -16,9 +16,18 @@ jobs:
     #runs-on: ubuntu-latest
     runs-on: self-hosted
     # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
-    container: hl7fhir/ig-publisher-base  
+    # container: hl7fhir/ig-publisher-base  
     
     steps:
+
+    - name: Run container with mounted volume
+      run: |
+        docker run --rm -d \
+          --name hl7fhir/ig-publisher-base \
+          -v $ /mnt/webroot:./webroot \
+          ubuntu \
+          tail -f /dev/null
+        ls ./webroot
     
     # to save load time can build custom image with dependencies and push to docker hub
     - name: install aws cli
