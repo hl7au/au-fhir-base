@@ -22,8 +22,8 @@ jobs:
 
     - name: Run container with mounted volume
       run: |
-        docker run --rm -d --name ig-publisher-base -v ${{ github.workspace }}/webroot:/mnt/webroot hl7fhir/ig-publisher-base
-        ls ${{ github.workspace }}//webroot
+        docker run --rm -d --name ig-publisher-base -v ${{ github.workspace }}/webroot2:/mnt/webroot hl7fhir/ig-publisher-base
+        ls ${{ github.workspace }}//webroot2
     
     # to save load time can build custom image with dependencies and push to docker hub
     - name: install aws cli
