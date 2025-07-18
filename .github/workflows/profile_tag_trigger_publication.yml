@@ -42,7 +42,8 @@ jobs:
         
     - name: Download past versions
       run: |  
-        s3fs action-runner-working ./webroot -o use_session_token -o url=https://s3.ap-southeast-2.amazonaws.com -o endpoint=ap-southeast-2 &
+        mkdir webroot
+        s3fs action-runner-working ./webroot -o use_session_token -o url=https://s3.ap-southeast-2.amazonaws.com -o endpoint=ap-southeast-2
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         
     - name: Checkout Publications Repository
