@@ -35,16 +35,10 @@ jobs:
         role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
         aws-region: ap-southeast-2
         
-    - name: Install s3fs
-      run: |
-        apt-get update
-        apt-get install -y s3fs
-        modprobe fuse
-        
     - name: Download past versions
       run: |  
-        mkdir webroot
-        s3fs action-runner-working ./webroot -o use_session_token -o url=https://s3.ap-southeast-2.amazonaws.com -o endpoint=ap-southeast-2
+        ln -s ../../webroot ./webroot
+        ls ./webroot
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         
     - name: Checkout Publications Repository
