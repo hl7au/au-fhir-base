@@ -42,9 +42,9 @@ jobs:
         
     - name: Download past versions
       run: |      
-        aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
+        # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         echo "--root--"
-        ls webroot
+        ls ./webroot
         
     - name: Checkout Publications Repository
       uses: actions/checkout@v4
