@@ -57,6 +57,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
     </ul>
   </li>  
+  <li>New code systems:
+    <ul>
+      <li><a href="CodeSystem-resource-tag.html">Resource Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
+    </ul>
+  </li>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
