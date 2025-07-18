@@ -37,7 +37,11 @@ jobs:
         
     - name: Download past versions
       run: |  
-        ln -s ../../webroot ./webroot
+        echo "access to mount?"
+        ls ../../webroot
+        echo "copy in"
+        mkdir webroot
+        cp -a ../../webroot/. webroot
         ls ./webroot
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         
