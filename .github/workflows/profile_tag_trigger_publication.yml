@@ -58,7 +58,10 @@ jobs:
       run: |
         cp publish-setup.json webroot/
         echo "--setup--"
+        ls .
         ls webroot
+        echo "TEST" > tmp.txt
+        mv tmp.txt webroot/
        
         
     - name: Checkout AU base Repository
