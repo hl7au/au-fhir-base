@@ -24,11 +24,11 @@ jobs:
     steps:
 
     # to save load time can build custom image with dependencies and push to docker hub
-#    - name: install aws cli
-#      run: |
-#        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-#        unzip -q awscliv2.zip
-#        ./aws/install --update
+    - name: install aws cli
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip -q awscliv2.zip
+        ./aws/install --update
     
     - name: Get the tag name
       id: get_tag
@@ -48,8 +48,6 @@ jobs:
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         echo "ls1"
         ls webroot
-        echo "ls2"
-        ls XXXX
         
 #    - name: Checkout Publications Repository
 #      uses: actions/checkout@v4
