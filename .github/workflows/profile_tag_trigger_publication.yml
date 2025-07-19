@@ -44,12 +44,12 @@ jobs:
       run: |
         echo "--src--"
         ls /webroot
-        ln -s /webroot webroot
+        # ln -s /webroot webroot
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
         echo "ls1"
         ls webroot
         echo "ls2"
-        ls webroot/webroot
+        ls XXXX
         
 #    - name: Checkout Publications Repository
 #      uses: actions/checkout@v4
