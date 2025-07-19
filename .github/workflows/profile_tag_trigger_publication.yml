@@ -24,11 +24,11 @@ jobs:
     steps:
 
     # to save load time can build custom image with dependencies and push to docker hub
-    - name: install aws cli
-      run: |
-        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-        unzip -q awscliv2.zip
-        ./aws/install --update
+#    - name: install aws cli
+#      run: |
+#        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+#        unzip -q awscliv2.zip
+#        ./aws/install --update
     
     - name: Get the tag name
       id: get_tag
@@ -51,14 +51,14 @@ jobs:
         echo "ls2"
         ls webroot/webroot
         
-    - name: Checkout Publications Repository
-      uses: actions/checkout@v4
-      with:
-        repository: hl7au/publications
+#    - name: Checkout Publications Repository
+#      uses: actions/checkout@v4
+#      with:
+#        repository: hl7au/publications
       
-    - name: Setup output folder
-      run: |
-        cp publish-setup.json /webroot
+#    - name: Setup output folder
+#      run: |
+#        cp publish-setup.json /webroot
         
        
         
