@@ -57,7 +57,7 @@ jobs:
         ln -s /webroot webroot   
         echo "--before--"
         ls webroot
-        cp publish-setup.json webroot/
+        mv publish-setup.json webroot/
         echo "--setup--"
         ls webroot
         
@@ -80,31 +80,31 @@ jobs:
         repository: hl7au/ig-registry
         path: ig-registry
 
-#    - name: Update Publisher
-#      run: |
-#        echo "Updating Publisher"
-#        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
+    - name: Update Publisher
+      run: |
+        echo "Updating Publisher"
+        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
          
-#    - name: Basic Publish for Aubase
-#      run: |
-#          echo "Generating Publish for  Aubase IG..."
-#          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+    - name: Basic Publish for Aubase
+      run: |
+          echo "Generating Publish for  Aubase IG..."
+          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
       
-#    - name: Create directories
-#      run: |
-#        mkdir -p webroot/fhir/base
+    - name: Create directories
+      run: |
+        mkdir -p webroot/fhir/base
       
-#    - name: Download package-list.json
-#      run: |
-#        rm -rf hl7au/au-fhir-base/package-list.json
-#        URL="https://hl7.org.au/fhir"
-#        FULL_URL="$URL/package-list.json"
-#        curl --output webroot/fhir/package-list.json --url $FULL_URL
+    - name: Download package-list.json
+      run: |
+        rm -rf hl7au/au-fhir-base/package-list.json
+        URL="https://hl7.org.au/fhir"
+        FULL_URL="$URL/package-list.json"
+        curl --output webroot/fhir/package-list.json --url $FULL_URL
       
-#    - name: Generate Package Registry
-#      run: |
-#        java -jar input-cache/publisher.jar -generate-package-registry webroot
+    - name: Generate Package Registry
+      run: |
+        java -jar input-cache/publisher.jar -generate-package-registry webroot
       
-#    - name: Run Aubase Go Publisher build
-#      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
+    - name: Run Aubase Go Publisher build
+      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
                 
