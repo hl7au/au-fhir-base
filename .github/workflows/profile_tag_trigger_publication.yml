@@ -49,15 +49,16 @@ jobs:
         echo "--link--"
         ls webroot
         
-#    - name: Checkout Publications Repository
-#      uses: actions/checkout@v4
-#      with:
-#        repository: hl7au/publications
+    - name: Checkout Publications Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/publications
       
-#    - name: Setup output folder
-#      run: |
-#        cp publish-setup.json /webroot
-        
+    - name: Setup output folder
+      run: |
+        cp publish-setup.json webroot
+        echo "--setup--"
+        ls webroot
        
         
     - name: Checkout AU base Repository
