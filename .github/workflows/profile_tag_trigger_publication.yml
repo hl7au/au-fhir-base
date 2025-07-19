@@ -46,7 +46,11 @@ jobs:
         ls /webroot
         ln -s /webroot webroot
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
-        echo "--link--"
+        echo "--before--"
+        ls webroot
+        echo "TEST" > tmp.txt
+        mv tmp.txt webroot/
+        echo "--after--"
         ls webroot
         
     - name: Checkout Publications Repository
@@ -56,13 +60,11 @@ jobs:
       
     - name: Setup output folder
       run: |
-        cp publish-setup.json webroot/
+        # cp publish-setup.json webroot/
         echo "--setup--"
         ls .
         ls webroot
-        echo "TEST" > tmp.txt
-        mv tmp.txt webroot/
-       
+               
         
     - name: Checkout AU base Repository
       uses: actions/checkout@v4
