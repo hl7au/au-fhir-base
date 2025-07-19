@@ -90,10 +90,6 @@ jobs:
           echo "Generating Publish for  Aubase IG..."
           java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
       
-    - name: Create directories
-      run: |
-        mkdir -p webroot/fhir/base
-      
     - name: Download package-list.json
       run: |
         rm -rf hl7au/au-fhir-base/package-list.json
