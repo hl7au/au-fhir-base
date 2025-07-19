@@ -43,15 +43,18 @@ jobs:
     - name: Download past versions
       run: |
         ln -s /webroot webroot
-        # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
-        echo "--root--"
-        ls ./webroot
-        
+        # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors        
         
     - name: Checkout Publications Repository
       uses: actions/checkout@v4
       with:
         repository: hl7au/publications
+      
+    - name: Setup output folder
+      run: |
+        cp publish-setup.json webroot
+        echo "--output site--"
+        ls ./webroot
         
     - name: Checkout AU base Repository
       uses: actions/checkout@v4
