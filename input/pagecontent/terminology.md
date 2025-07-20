@@ -499,6 +499,12 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
+            <td><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a></td>
+            <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+            <td>AU Base</td>
+            <td>HL7 Australia</td>
+    </tr>
+    <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td>NCTS</td>
