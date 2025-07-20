@@ -182,7 +182,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
-    <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a>, <a href="StructureDefinition-date-of-arrival.html">Date of Arrival</a></td>
+    <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -267,7 +267,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1">Individual Healthcare Identifier Status</a></td>
-    <td><a href="StructureDefinition-ihi-record-status.html">IHI Record Status</a></td>
+    <td><a href="StructureDefinition-ihi-status.html">IHI Status</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -625,7 +625,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc">LOINC</a></td>
         <td>
             <a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a>, 
-            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, 
+            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,  
             <a href="https://www.healthterminologies.gov.au/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a>, 
             <a href="https://www.healthterminologies.gov.au/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a>, 
             <a href="https://www.healthterminologies.gov.au/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a>, 
