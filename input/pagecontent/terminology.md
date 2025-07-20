@@ -522,6 +522,12 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
+            <td><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a></td>
+            <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+            <td>AU Base</td>
+            <td>HL7 Australia</td>
+    </tr>
+    <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td>NCTS</td>
@@ -678,6 +684,12 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
+        <td><a href="CodeSystem-resource-tag.html">Resource Tag</a></td>
+        <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+        </tr>
+    <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleCode">RoleCode</a></td>
         <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
@@ -739,6 +751,12 @@ The following code systems are referenced by the value sets listed above.
         </td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-task-business-status.html">Task Business Status</a></td>
+        <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
     </tr>
     <tr>
         <td><a href="https://terminology.hl7.org/CodeSystem-IANATimeZoneDatabase.html">Time Zones</a></td>
