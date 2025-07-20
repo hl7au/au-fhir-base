@@ -171,6 +171,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
+    <td><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
     <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a>, <a href="StructureDefinition-date-of-arrival.html">Date of Arrival</a></td>
     <td>NCTS</td>
@@ -441,13 +446,13 @@ The following code systems are referenced by the value sets listed above.
   <tbody>
     <tr>
       <td><a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a></td>
-      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>, <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
       <td>HL7 Terminology (THO)</td>
       <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-au-v3-ActCode.html">ActCode AU</a></td>
-        <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+        <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>,  <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
@@ -494,6 +499,12 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
+            <td><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a></td>
+            <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+            <td>AU Base</td>
+            <td>HL7 Australia</td>
+    </tr>
+    <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
         <td>NCTS</td>
@@ -504,6 +515,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/coverage-selfpay">Coverage SelfPay Codes</a></td>
+        <td><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">Data Absent Reason</a></td>
@@ -644,6 +661,12 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
+        <td><a href="CodeSystem-resource-tag.html">Resource Tag</a></td>
+        <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+        </tr>
+    <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleCode">RoleCode</a></td>
         <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
@@ -704,6 +727,12 @@ The following code systems are referenced by the value sets listed above.
         </td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-task-business-status.html">Task Business Status</a></td>
+        <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
     </tr>
     <tr>
         <td><a href="https://terminology.hl7.org/CodeSystem-IANATimeZoneDatabase.html">Time Zones</a></td>

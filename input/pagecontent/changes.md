@@ -8,10 +8,7 @@ To help implementers, only the more significant changes are listed here.
 #### Reinstated
 This version of current build reinstates profiles not included in the AU Base 5.0.0 release:
   <ul>
-      <li>AU Base Service Request</li>
       <li>AU Base Coverage</li>
-      <li>Vaccine Vial Serial Number extension</li>
-      <li>Medication Strength extension</li>
       <li>Ethnicity extension</li>
   </ul>
 
@@ -28,10 +25,26 @@ This version of current build reinstates profiles not included in the AU Base 5.
 <ul>
   <li>New profiles:
     <ul>
+      <li><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
+    </ul>
+    <ul>
       <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
     </ul>
     <ul>
       <li><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a> (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>)</li>
+    </ul>
+  </li>
+  <li>New search parameters:
+    <ul>
+        <li><a href="SearchParameter-servicerequest-supporting-info.html">ServiceRequestSupportingInfo</a> (<a href="https://jira.hl7.org/browse/FHIR-51437">FHIR-51437</a>)</li>
+    </ul>
+  </li>
+   <li>New extensions:
+    <ul>
+        <li><a href="StructureDefinition-medication-strength.html">Medication Strength</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/41">au-fhir-base #41</a>, <a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>)</li>
+    </ul>
+    <ul>
+        <li><a href="StructureDefinition-vaccine-serial-number.html">Vaccine Vial Serial Number</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/712">au-fhir-base #712</a>)</li>
     </ul>
   </li>
   <li>Deprecated extensions:
@@ -39,6 +52,18 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
     </ul>
   </li>
+    <li>New code systems:
+      <ul>
+        <li><a href="CodeSystem-resource-tag.html">Resource Tag</a> (<a href="https://jira.hl7.org/browse/FHIR-51349">FHIR-51349</a>)</li>
+        <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51348">FHIR-51348</a>)</li>
+        <li><a href="CodeSystem-task-business-status.html">Task Business Status</a> (<a href="https://jira.hl7.org/browse/FHIR-51350">FHIR-51350</a>)</li>
+      </ul>
+    </li>
+  <li>New value sets:
+    <ul>
+      <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
+    </ul>
+  </li>  
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></li>
@@ -82,6 +107,16 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
+  <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>
+      <li>Updated guidance on use of medication strength representations using the <a href="StructureDefinition-medication-strength.html">Medication Strength</a> extension and pre-adoption of the FHIR R5 <a href="https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient)">Medication.ingredient.strength[x]</a> element. (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength</a>:
+    <ul>
+      <li>Added usage guidance (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+    </ul>
+  </li>
   <li>Changes to <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
     <ul>
       <li>Changed PractitionerRole.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
@@ -92,6 +127,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
     <ul>
       <li>Changed HealthcareService.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
       <li>Changed HealthcareService.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+    </ul>
+  </li>
+   <li>Changes to <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a>:
+    <ul>
+        <li>Changed Coverage.type binding to Coverage Type and Self-Pay Codes - AU Extended (preferred) (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
@@ -234,7 +274,7 @@ To help implementers, only the more significant changes are listed here.
 - Publication status: Ballot
 - Based on FHIR version: 4.0.1
 
-The changes in this update are for ballot. 
+The changes in this update are for ballot.
 
 To help implementers, only the more significant changes are listed here.
 
