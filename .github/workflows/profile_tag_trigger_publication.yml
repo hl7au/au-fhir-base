@@ -49,6 +49,8 @@ jobs:
     - name: Download past versions
       run: |
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
+        echo "--folder--"
+        ls /webroot
         ln -s /webroot webroot   
         mv publish-setup.json ./webroot/
         echo "--content--"
