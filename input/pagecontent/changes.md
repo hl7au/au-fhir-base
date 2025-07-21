@@ -94,7 +94,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a>:
     <ul>
         <li>Changed Encounter.reasonCode binding to Reason for Encounter (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>).</li>
-        <li>Removed use of deprecated extension <a href="StructureDefinition-associated-healthcareservice.html">Associated Healthcare Service</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>) with added guidance on pre-adoption of FHIR R5 <a href="https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor">Encounter.participant.actor</a> element.</li>
+        <li>Removed use of deprecated extension <a href="StructureDefinition-associated-healthcareservice.html">Associated Healthcare Service</a> (<a href="https://jira.hl7.org/browse/FHIR-50538">FHIR-50538</a>) with added guidance on pre-adoption of FHIR R5 <a href="https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor">Encounter.participant.actor</a> element.</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
