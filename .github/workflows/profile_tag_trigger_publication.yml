@@ -101,4 +101,4 @@ jobs:
                 
     - name: Copy back to staging
       run: |
-        cp -r ./webroot/. /webroot/
+         aws s3 sync ./webroot/fhir s3://action-runner-working/fhir --only-show-errors
