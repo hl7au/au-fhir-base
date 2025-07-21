@@ -68,7 +68,7 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>
     <tr>
       <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
-      <td><a href="StructureDefinition-au-timezone-usage">Australian Time Zone</a></td>
+      <td><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone</a></td>
       <td>AU Base</td>
     </tr>
     <tr>
@@ -139,7 +139,7 @@ The following value sets form part of localised requirements (i.e. are reference
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">Clinical Finding</a></td>
       <td>
-        <a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a>, 
+        <a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>, 
         <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, 
@@ -202,7 +202,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a></td>
-    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>
+    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -257,7 +257,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a></td>
-    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
+    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -341,27 +341,27 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a></td>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a></td>
     <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a></td>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a></td>
     <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a></td>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a></td>
     <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a></td>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a></td>
     <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
     <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
@@ -392,7 +392,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1">Route of Administration</a></td>
-    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a>, <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a></td>
+    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -490,13 +490,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>
-    <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/anzsic-2006-20130626">Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 2.0)</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/anzsic-1">Australian And New Zealand Standard Industrial Classification</a></td>
-        <td>NCTS</td>
-        <td>Australian Bureau of Statistics (ABS)</td>
-    </tr>
+    </tr>   
     <tr>
         <td><a href="https://www.healthterminologies.gov.au/CodeSystem/australian-immunisation-register-vaccine-20221118">Australian Immunisation Register Vaccine</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
@@ -511,7 +505,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1">Australian States and Territories</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2">Australian States and Territories</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2">Australian States and Territories</a>, <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
     </tr>
@@ -538,6 +532,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v2-0131">contactRole2</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3">Contact Relationship Type</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/coverage-selfpay">Coverage SelfPay Codes</a></td>
@@ -632,11 +632,11 @@ The following code systems are referenced by the value sets listed above.
         <td>
             <a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a>, 
             <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,  
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a>
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a>
         </td>
         <td>NCTS, HL7 Terminology (THO)</td>
         <td>Regenstrief Institute, Inc</td>
@@ -664,6 +664,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-name-context.html">Name Context</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v3-ParticipationType">ParticipationType</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
