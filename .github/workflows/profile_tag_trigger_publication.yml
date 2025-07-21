@@ -98,6 +98,6 @@ jobs:
         role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
         aws-region: ap-southeast-2
         
-    - name: Copy back to staging
+    - name: copy back to staging - background
       run: |
          aws s3 sync /webroot s3://action-runner-working --only-show-errors
