@@ -39,11 +39,15 @@ jobs:
       with:
         repository: hl7au/publications
 
+    - name: Configure AWS credentials from GitHub OIDC
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+        aws-region: ap-southeast-2
+        
     - name: Download past versions
       run: |
-        # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
-        echo "--folder--"
-        ls /webroot
+        aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
         ln -s /webroot webroot   
         mv publish-setup.json ./webroot/
         echo "--content--"
