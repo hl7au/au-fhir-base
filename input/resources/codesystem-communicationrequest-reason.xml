@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="communicationrequest-reason"/>
+  <meta>
+    <profile value="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension>  
+  <url value="http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason"/>
+  <name value="CommunicationRequestReason"/>
+  <title value="Communication Request Reason"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <description value="The Communication Request Reason code system defines concepts that represent the reason codes for a communication request."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://terminology.hl7.org.au/ValueSet/communicationrequest-reason" />
+  <compositional value="false"/>
+  <versionNeeded value="false"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="urgent"/>
+    <display value="Urgent Results"/>
+    <definition value="A request for results to be communicated urgently to the nominated recipient."/>
+  </concept>
+  <concept>
+    <code value="patient"/>
+    <display value="Patient Request"/>
+    <definition value="A patient's request about receiving communication from a service provider."/>
+  </concept>
+  <concept>
+    <code value="copyto"/>
+    <display value="Copy To"/>
+    <definition value="A request for results to be copied to an additional recipient."/>
+  </concept>
+</CodeSystem>
