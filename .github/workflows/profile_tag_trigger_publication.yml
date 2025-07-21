@@ -19,7 +19,7 @@ jobs:
     container: 
       image: hl7fhir/ig-publisher-base  
       volumes:
-        - /mnt/webroot:/webroot
+        - ${{ github.workspace }}/webroot:/webroot
             
     steps:
 
@@ -49,12 +49,9 @@ jobs:
     - name: Download past versions
       run: |
         # aws s3 sync s3://hl7au-fhir-ig/fhir s3://action-runner-working/fhir --only-show-errors
-        mkdir ./webroot
-        mkdir ./webroot/fhir
+        ln -s /webroot webroot   
         mv publish-setup.json ./webroot/
-        cp -r /webroot/fhir/. ./webroot/fhir
-        # ln -s /webroot webroot   
-        echo "--after--"
+        echo "--content--"
         ls webroot
         
     - name: Checkout AU base Repository
