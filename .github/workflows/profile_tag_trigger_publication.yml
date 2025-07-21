@@ -50,8 +50,6 @@ jobs:
         aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
         ln -s /webroot webroot   
         mv publish-setup.json ./webroot/
-        echo "--content--"
-        ls webroot
         
     - name: Checkout AU base Repository
       uses: actions/checkout@v4
