@@ -9,6 +9,8 @@
   - [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 - If a medication is compounded and is a list of ingredients, `MedicationStatement.code` is still present and may contain only the list of ingredients as text in `MedicationStatement.code.text`.
 - Where additional medicinal product information is needed, `MedicationStatement.medicationReference` is preferred to `MedicationStatement.code` and use of extensions, see guidance on [AU Base Medication](StructureDefinition-au-medication.html).
+- This profile supports the sex, gender, and related concepts of: Sex Parameter for Clinical Use:
+   - When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sexgender.html) and the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 
 **Potentially useful extensions:**
 * MedicationStatement: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
