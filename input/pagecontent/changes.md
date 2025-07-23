@@ -19,7 +19,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible). (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>)</li>
     </ul>
   </li>
-</ul>
+ </ul>
 
 #### Changes in this version
 <ul>
@@ -57,6 +57,9 @@ This version of current build reinstates profiles not included in the AU Base 5.
     <ul>
       <li><a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> extension (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>)</li>
     </ul>
+    <ul>
+      <li><a href="StructureDefinition-associated-healthcareservice.html">Associated Healthcare Service</a> extension (<a href="https://jira.hl7.org/browse/FHIR-50538">FHIR-50538</a>)</li>
+    </ul>
   </li>
     <li>New code systems:
       <ul>
@@ -93,9 +96,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
     </ul>
   </li>
+
   <li>Changes to <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
-      <ul>
+    <ul>
         <li>Changed Encounter.reasonCode binding to Reason for Encounter (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>).</li>
+        <li>Removed deprecated extension <a href="StructureDefinition-associated-healthcareservice.html">Associated Healthcare Service</a> and added guidance on pre-adoption of FHIR R5 <a href="https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor">Encounter.participant.actor</a> element  (<a href="https://jira.hl7.org/browse/FHIR-50538">FHIR-50538</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
