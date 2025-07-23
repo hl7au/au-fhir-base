@@ -68,7 +68,7 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>
     <tr>
       <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
-      <td><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone</a></td>
+      <td><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a></td>
       <td>AU Base</td>
     </tr>
     <tr>
@@ -186,7 +186,7 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Diagnostic Service Section Codes</a></td>
+    <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">Diagnostic Service Section Codes</a></td>
     <td> <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
 </tr>
@@ -569,7 +569,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0074">DiagnosticServiceSectionId</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Diagnostic Service Section Codes</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
     </tr>   
@@ -720,7 +720,8 @@ The following code systems are referenced by the value sets listed above.
             <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
-            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>,  
+            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1">Body Site</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1">Body Site Relative Site Qualifier</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1">Clinical Condition</a>, 
@@ -740,7 +741,8 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a>,
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason For Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason for Non Participation in Health Program</a>, 
