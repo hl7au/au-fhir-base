@@ -142,7 +142,8 @@ The following value sets form part of localised requirements (i.e. are reference
         <a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>, 
-        <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, 
+        <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>,
+        <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>,  
         <a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>
       </td>
       <td>NCTS</td>
@@ -759,6 +760,12 @@ The following code systems are referenced by the value sets listed above.
         </td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+        <td><a href="https://terminology.hl7.org/CodeSystem-v3-ietf3066.html">Tags for the Identification of Languages</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-task-business-status.html">Task Business Status</a></td>
