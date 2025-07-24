@@ -47,7 +47,7 @@ jobs:
         
     - name: Download past versions
       run: |
-        # aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
+        aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
         ln -s /webroot webroot   
         mv publish-setup.json ./webroot/
         
@@ -94,6 +94,7 @@ jobs:
     - name: Run Aubase Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
       
-    # - name: copy back to staging - background
-    #  run: |
-    #     aws s3 sync /webroot s3://action-runner-working --only-show-errors
+    - name: copy back to staging - background
+      run: |
+         aws s3 sync /webroot s3://action-runner-working --only-show-errors &
+         
