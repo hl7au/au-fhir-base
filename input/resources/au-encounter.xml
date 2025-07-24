@@ -18,25 +18,7 @@
     <element id="Encounter">
       <path value="Encounter" />
       <short value="An encounter in an Australian healthcare context" />
-    </element>
-    <element id="Encounter.extension">
-      <path value="Encounter.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Encounter.extension:associatedHealthcareService">
-      <path value="Encounter.extension" />
-      <sliceName value="associatedHealthcareService" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice" />
-      </type>
-    </element>
+     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
       <binding>
@@ -57,6 +39,10 @@
         <strength value="preferred" />
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1" />
       </binding>
+    </element>
+    <element id="Encounter.participant">
+      <path value="Encounter.participant" />
+      <comment value="When representing a HealthcareService involved in an encounter, pre-adoption of the FHIR R5 [Encounter.participant.actor](https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor) element with the extension URL http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.participant.actor can be used."/>
     </element>
     <element id="Encounter.reasonCode">
       <path value="Encounter.reasonCode" />

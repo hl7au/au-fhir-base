@@ -4,10 +4,17 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/> 
   </extension>
+  <extension  url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="deprecated">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
+      <valueMarkdown value="This extension is deprecated with guidance that pre-adoption of FHIR R5 elements may be a suitable alternative. An example is the pre-adoption of the FHIR R5 [Encounter.participant.actor](https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor) element for the Encounter resource as an appropriate replacement."/>
+      </extension>
+    </valueCode>
+  </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice"/>
   <name value="AssociatedHealthcareService"/>
   <title value="Associated Healthcare Service"/>
-  <status value="active"/>
+  <status value="retired"/>
   <description value="This extension applies to any resource and is used to represent a healthcare service relating to a resource, e.g. healthcare services under which the patient was managed during an encounter."/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -21,10 +28,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Associated healthcare service"/>
-      <definition
-        value="Healthcare service relating to a resource."
-      />
+      <short value="Deprecated: Associated healthcare service"/>
+      <definition value="This extension is deprecated with guidance that pre-adoption of FHIR R5 elements may be a suitable alternative. An example is the pre-adoption of the FHIR R5 [Encounter.participant.actor](https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor) element for the Encounter resource as an appropriate replacement. &#xA;&#xA;Healthcare service relating to a resource."/>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
