@@ -188,7 +188,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">Diagnostic Service Section Codes</a></td>
-    <td> <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
+    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -529,6 +529,12 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/contactentity-type">Contact entity type</a></td>
+        <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
+    <tr>
         <td><a href="CodeSystem-contact-purpose.html">Contact Purpose</a></td>
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
         <td>AU Base</td>
@@ -536,7 +542,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0131">contactRole2</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3">Contact Relationship Type</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3">Contact Relationship Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
     </tr>
@@ -550,7 +556,6 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">Data Absent Reason</a></td>
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,
-          <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a>,
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>
         </td>
         <td>HL7 Terminology (THO)</td>
@@ -561,6 +566,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v2-0360">DegreeLicenseCertificate</a></td>
+        <td><a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a></td>
@@ -665,13 +676,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-name-context.html">Name Context</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>
-    <tr>
-        <td><a href="http://terminology.hl7.org/CodeSystem/v3-ParticipationType">ParticipationType</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
-        <td>HL7 Terminology (THO)</td>
-        <td>Health Level Seven International</td>
-    </tr>
+    </tr>   
     <tr>
         <td><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
         <td><a href="ValueSet-pbs-item.html">PBS Item Codes</a></td>
@@ -698,7 +703,13 @@ The following code systems are referenced by the value sets listed above.
         </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleCode">RoleCode</a></td>
-        <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a>, <a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleClass">RoleClass</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
     </tr>
@@ -732,7 +743,6 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">Encounter Type</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-program-participation-status-1">Health Program Participation Status</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1">Imaging Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1">Imaging Anatomic Region Of Interest</a>, 
@@ -742,10 +752,8 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason For Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason for Non Participation in Health Program</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
@@ -760,6 +768,11 @@ The following code systems are referenced by the value sets listed above.
         </td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr><td><a href="http://unstats.un.org/unsd/methods/m49/m49.htm">Standard country or area codes for statistical use (M49)</a></td>
+        <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
+        <td>UNSD</td>
+        <td>United Nations Statistics Division</td>
     </tr>
     <tr>
         <td><a href="https://terminology.hl7.org/CodeSystem-v3-ietf3066.html">Tags for the Identification of Languages</a></td>
