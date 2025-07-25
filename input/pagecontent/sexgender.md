@@ -713,7 +713,6 @@ Sex Parameter for Clinical Use is represented in FHIR with the [Patient Sex Para
 The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> sub-element, added to the SPCU extension included in the September 2025 ballot of the HL7 International FHIR Extensions Pack.
 </p>
 
-
 Example: Patient resource with Sex Parameter for Clinical Use
 ~~~
 {
