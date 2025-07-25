@@ -10,7 +10,6 @@ The table below provides an overview of the sex and gender related concepts in A
 
 <img src="minus_symbol.png" width="20"/> **Not localised**: The sex or gender related concept is not localised for use in an Australian context.
 
-
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
 	<thead>
 		<tr>
@@ -32,27 +31,29 @@ The table below provides an overview of the sex and gender related concepts in A
 			</th>
 			<th style="width: 12%; text-align: left; vertical-align: middle;">
 				<a href="sexgender.html#gender-identity-gi">Gender Identity</a>
-				</v>
-				<th style="width: 12%; text-align: left; vertical-align: middle;">
-					<a href="sexgender.html#recorded-sex-or-gender">
-						Recorded Sex
-						or Gender
-					</a>
-				</th>
-				<th style="width: 12%; text-align: left; vertical-align: middle;">
-					<a href="sexgender.html#sex-assigned-at-birth">
-						Sex Assigned
-						at Birth
-					</a>
-				</th>
-				<th style="width: 12%; text-align: left; vertical-align: middle;">
-					<a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
-						Sex Parameter
-						for Clinical Use
-						(SPCU)
-					</a>
-				</th>
-			</tr>
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#recorded-sex-or-gender">
+					Recorded Sex
+					or Gender
+				</a>
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#sex-assigned-at-birth">
+					Sex Assigned
+					at Birth
+				</a>
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
+					Sex Parameter
+					for Clinical Use
+					(SPCU)
+				</a>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
 				<a href="StructureDefinition-au-patient.html">AU Base Patient</a>
@@ -235,30 +236,31 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
-		<td style="width: 25%; text-align: center; vertical-align: middle;">
-			<a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="minus_symbol.png" width="20"/>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="minus_symbol.png" width="20"/>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="minus_symbol.png" width="20"/>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="minus_symbol.png" width="20"/>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="minus_symbol.png" width="20"/>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="minus_symbol.png" width="20"/>
-		</td>
-		<td style=" text-align: center; vertical-align: middle;">
-			<img src="orange_checkmark.png" width="20"/>
-		</td>
+		<tr>
+			<td style="width: 25%; text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
 		</tr>
 		<tr>
 			<td style="width: 25%; text-align: center; vertical-align: middle;">
@@ -286,9 +288,8 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
-	</thead>
+	</tbody>
 </table>
-
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
