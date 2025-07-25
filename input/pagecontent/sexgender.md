@@ -10,6 +10,286 @@ The table below provides an overview of the sex and gender related concepts in A
 
 <img src="minus_symbol.png" width="20"/> **Not localised**: The sex or gender related concept is not localised for use in an Australian context.
 
+
+<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				Sex and
+				Gender Concept
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#administrative-gender-patientgender">
+					Administrative Gender
+					(Patient.gender)
+				</a>
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#name-to-use-ntu">Name to Use</a>
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#pronouns">Pronouns</a>
+			</th>
+			<th style="width: 12%; text-align: left; vertical-align: middle;">
+				<a href="sexgender.html#gender-identity-gi">Gender Identity</a>
+				</v>
+				<th style="width: 12%; text-align: left; vertical-align: middle;">
+					<a href="sexgender.html#recorded-sex-or-gender">
+						Recorded Sex
+						or Gender
+					</a>
+				</th>
+				<th style="width: 12%; text-align: left; vertical-align: middle;">
+					<a href="sexgender.html#sex-assigned-at-birth">
+						Sex Assigned
+						at Birth
+					</a>
+				</th>
+				<th style="width: 12%; text-align: left; vertical-align: middle;">
+					<a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
+						Sex Parameter
+						for Clinical Use
+						(SPCU)
+					</a>
+				</th>
+			</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-patient.html">AU Base Patient</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<td style="width: 25%; text-align: center; vertical-align: middle;">
+			<a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="minus_symbol.png" width="20"/>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="minus_symbol.png" width="20"/>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="minus_symbol.png" width="20"/>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="minus_symbol.png" width="20"/>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="minus_symbol.png" width="20"/>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="minus_symbol.png" width="20"/>
+		</td>
+		<td style=" text-align: center; vertical-align: middle;">
+			<img src="orange_checkmark.png" width="20"/>
+		</td>
+		</tr>
+		<tr>
+			<td style="width: 25%; text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+	</thead>
+</table>
+
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -553,7 +833,7 @@ The following subsections provide general and profile specific guidance for use 
 #### AU Base ServiceRequest
 - Inclusion of an SPCU value in AU Base ServiceRequest instances indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
 
-<p class="stu-note">The FHIR Work Group is interested in feedback from adopters and implementers regarding their experiences with SPCU. In particular, feedback is saught regarding:<br/>
+<p class="stu-note">The FHIR Work Group is interested in feedback from adopters and implementers regarding their experiences with SPCU. In particular, feedback is sought regarding:<br/>
 — If additional guidance or examples are required.<br/>
 — If SPCU should explicitly be included in any other AU Base profiles in future releases of AU Base.<br/>
 <br/>
