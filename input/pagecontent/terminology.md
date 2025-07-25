@@ -556,6 +556,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">Data Absent Reason</a></td>
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,
+          <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a>,
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>
         </td>
         <td>HL7 Terminology (THO)</td>
@@ -568,7 +569,7 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
-        <td><a href="http://terminology.hl7.org/CodeSystem/v2-0360">DegreeLicenseCertificate</a></td>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v2-0360">degreeLicenseCertificate</a></td>
         <td><a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
