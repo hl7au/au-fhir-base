@@ -42,7 +42,7 @@ The table below provides an overview of the sex and gender related concepts in A
 			</th>
 			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
-					Sex Parameter	for <br/>Clinical Use	(SPCU)
+					Sex Parameter<br/>for Clinical Use<br/>(SPCU)
 				</a>
 			</th>
 		</tr>
@@ -231,7 +231,7 @@ The table below provides an overview of the sex and gender related concepts in A
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 25%; text-align: center; vertical-align: middle;">
+			<td style=" text-align: center; vertical-align: middle;">
 				<a href="StructureDefinition-au-procedure.html">AU Base <br/>Procedure</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
@@ -257,7 +257,7 @@ The table below provides an overview of the sex and gender related concepts in A
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 25%; text-align: center; vertical-align: middle;">
+			<td style="text-align: center; vertical-align: middle;">
 				<a href="StructureDefinition-au-servicerequest.html">AU Base<br/> ServiceRequest</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
