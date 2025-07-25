@@ -10,6 +10,8 @@
 - If a medication is compounded and is a list of ingredients, `MedicationRequest.code` is still present and may contain only the list of ingredients as text in `MedicationRequest.code.text`.
 - Where additional medicinal product information is needed, `MedicationRequest.medicationReference` is preferred to `MedicationRequest.code` and use of extensions, see guidance on [AU Base Medication](StructureDefinition-au-medication.html).
 - See each Identifier profile page for guidance related to that identifier type.
+- This profile supports the sex, gender, and related concept of Sex Parameter for Clinical Use:
+   - When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sexgender.html) and the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 
 **Potentially useful extensions:**
 * MedicationRequest: [Medication Brand Name](StructureDefinition-medication-brand-name.html) 

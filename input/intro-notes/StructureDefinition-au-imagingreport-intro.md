@@ -9,4 +9,5 @@
 - See each Identifier profile page for guidance related to that identifier type.
 - The radiology laboratory is sent as a reference to an Organization in `DiagnosticReport.performer`.
 - Each radiologist is sent as a references to a PractitionerRole resource in `DiagnosticReport.performer`.
-  
+- This profile supports the sex, gender, and related concepts of: Sex Parameter for Clinical Use:
+   - When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sexgender.html) and the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).  
