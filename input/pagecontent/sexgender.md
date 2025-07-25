@@ -707,7 +707,7 @@ Sex Parameter for Clinical Use is represented in FHIR with the [Patient Sex Para
 - **AU Base Procedure** - Inclusion of SPCU values in AU Base Procedure instances indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
 - **AU Base ServiceRequest** - Inclusion of SPCU values in AU Base ServiceRequest instances indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
 
-<p class="stu-note">The FHIR Work Group is interested in feedback from adopters and implementers regarding their experiences with SPCU. In particular, feedback is sought regarding:<br/>
+<p class="stu-note">The FHIR Work Group is interested in feedback from adopters and implementers regarding their experiences with SPCU. In particular, feedback is sought regarding:
 <ul><li>If additional guidance or examples are required.</li>
 <li>If SPCU should explicitly be included in any other AU Base profiles in future releases of AU Base.</li></ul>
 The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> sub-element, added to the SPCU extension included in the September 2025 ballot of the HL7 International FHIR Extensions Pack.
