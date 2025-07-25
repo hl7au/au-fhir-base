@@ -14,41 +14,35 @@ The table below provides an overview of the sex and gender related concepts in A
 	<thead>
 		<tr>
 			<th style="width: 12%; text-align: center; vertical-align: middle;">
-				Sex and
-				Gender Concept
+				Sex and<br/>Gender Concept
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#administrative-gender-patientgender">
-					Administrative Gender
-					(Patient.gender)
+					Administrative Gender<br/>(Patient.gender)
 				</a>
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#name-to-use-ntu">Name to Use</a>
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#pronouns">Pronouns</a>
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#gender-identity-gi">Gender Identity</a>
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#recorded-sex-or-gender">
-					Recorded Sex
-					or Gender
+					Recorded Sex <br/>or Gender
 				</a>
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#sex-assigned-at-birth">
-					Sex Assigned
-					at Birth
+					Sex Assigned <br/>at Birth
 				</a>
 			</th>
-			<th style="width: 12%; text-align: left; vertical-align: middle;">
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
-					Sex Parameter
-					for Clinical Use
-					(SPCU)
+					Sex Parameter	for <br/>Clinical Use	(SPCU)
 				</a>
 			</th>
 		</tr>
@@ -56,7 +50,7 @@ The table below provides an overview of the sex and gender related concepts in A
 	<tbody>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-patient.html">AU Base Patient</a>
+				<a href="StructureDefinition-au-patient.html">AU Base<br/>Patient</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
@@ -82,7 +76,7 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>
+				<a href="StructureDefinition-au-practitioner.html">AU Base <br/>Practitioner</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -108,7 +102,7 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>
+				<a href="StructureDefinition-au-relatedperson.html">AU Base<br/> RelatedPerson</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -134,7 +128,7 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>
+				<a href="StructureDefinition-au-diagnosticreport.html">AU Base<br/> DiagnosticReport</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -160,7 +154,7 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>
+				<a href="StructureDefinition-au-imagingreport.html">AU Base <br/>Diagnostic Imaging <br/>Report</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -186,7 +180,7 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>
+				<a href="StructureDefinition-au-pathologyreport.html">AU Base <br/>Pathology Report</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -212,33 +206,7 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="orange_checkmark.png" width="20"/>
-			</td>
-		</tr>
-		<tr>
-			<td style="width: 25%; text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>
+				<a href="StructureDefinition-au-medicationrequest.html">AU Base <br/>MedicationRequest</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -264,7 +232,33 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style="width: 25%; text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>
+				<a href="StructureDefinition-au-procedure.html">AU Base <br/>Procedure</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 25%; text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-servicerequest.html">AU Base<br/> ServiceRequest</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
