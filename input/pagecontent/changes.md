@@ -81,13 +81,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a></li>
     </ul>
   </li>
-  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
-  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
-    <ul>
-      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
-    </ul>
-  </li>
-  <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a>:
+  <li>Changes to <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
       <ul>
         <li>Changed Encounter.reasonCode binding to Reason for Encounter (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>).</li>
     </ul>
@@ -97,14 +91,35 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
+   <li>Changes to <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
+    <ul>
+      <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>: 
+    <ul>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>: 
+    <ul>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>: 
+    <ul>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
@@ -123,19 +138,36 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Changed PractitionerRole.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
-    <li>Changes to <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
+  <li>Changes to <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
       <li>Changed HealthcareService.availableTime.availableStartTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
       <li>Changed HealthcareService.availableTime.availableEndTime to replace <a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> extension with <a href="http://hl7.org/fhir/StructureDefinition/timezone">Timezone Code</a> extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
     </ul>
   </li>
-   <li>Changes to <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a>:
+  <li>Changes to <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a>:
     <ul>
         <li>Changed Coverage.type binding to Coverage Type and Self-Pay Codes - AU Extended (preferred) (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>).</li>
     </ul>
   </li>
+  <li>Changes to <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
+    <ul>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>:
+      <ul>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+    </ul>
+  </li>
+  <li>Changes to <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>:
+      <ul>
+      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+    </ul>
+  </li>
+  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
   <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
+  <li>Added sex and gender guidance on use of [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
 </ul>
 
 ### Release 5.0.0
@@ -158,7 +190,7 @@ This release includes breaking changes to the following artefacts. Implementers 
        <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="https://hl7.org.au/fhir/5.0.0/ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate the <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a> Encounter.class element in FHIR R4.</li>
     </ul>
   </li>
-  <li><a href="https://hl7.org.au/fhir/5.0.0/ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a>:
+  <li><a href="https://hl7.org.au/fhir/5.0.0/ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>:
     <ul>
        <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="https://hl7.org.au/fhir/5.0.0/ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set as these concepts are subsumed by the VR concept (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>).</li>
     </ul>
