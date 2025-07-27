@@ -679,7 +679,7 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
 
 ### Sex Parameter for Clinical Use (SPCU)
-Sex Parameter for Clinical Use provides exchange of a physical sex category to inform clinical care where required.
+Sex Parameter for Clinical Use supports exchange of a physical sex category to inform clinical care where required.
 
 AU Base supports representation and exchange of Sex Parameter for Clinical Use (SPCU) information (as defined by the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) with the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension in:
 - [AU Base DiagnosticReport](StructureDefinition-au-diagnosticreport.html)
@@ -699,11 +699,11 @@ When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/exte
 - Implementers who wish to only include the SPCU value in a Patient resource and not in other resources may consider using a reference to a contained Patient resource. For example, instead of including an SPCU value directly in a MedicationRequest, the `MedicationRequest.subject` element could reference a contained Patient resource that includes the SPCU value.
 
 Specific SPCU usage with AU Base profiles includes:
-- **AU Base DiagnosticReport, AU Base Diagnostic Imaging Report, AU Base Pathology Report** - Inclusion of SPCU values in AU Base DiagnosticReport, AU Base Diagnostic Imaging Report or AU Base Pathology Report instances indicates that the sex parameter is relevant to the particular report.
-- **AU Base MedicationRequest** - Inclusion of SPCU values in AU Base MedicationRequest instances indicates that the sex parameter is relevant to the medication request e.g. it informs dosage or use when pregnant.
-- **AU Base Patient** - When exchanging AU Base Patient instances that include SPCU values, but are not directly linked to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) sub-elements always be included and hold a value that provides the clinical context and/or appropriate clinical uses for the SPCU value.
-- **AU Base Procedure** - Inclusion of SPCU values in AU Base Procedure instances indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
-- **AU Base ServiceRequest** - Inclusion of SPCU values in AU Base ServiceRequest instances indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
+- AU Base DiagnosticReport, AU Base Diagnostic Imaging Report, AU Base Pathology Report - Inclusion of SPCU values in these instances indicates that the sex parameter is relevant to the particular report.
+- AU Base MedicationRequest - Inclusion of SPCU values in these instances indicates that the sex parameter is relevant to the medication request e.g. it informs dosage or use when pregnant.
+- AU Base Patient - When exchanging these instances that include SPCU values, but are not directly linked to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) sub-elements always be included and hold a value that provides the clinical context and/or appropriate clinical uses for the SPCU value.
+- AU Base Procedure - Inclusion of SPCU values in these instances indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
+- AU Base ServiceRequest - Inclusion of SPCU values in these instances indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
 
 <p class="stu-note">The FHIR Work Group is interested in feedback from adopters and implementers regarding their experiences with SPCU. In particular, feedback is sought regarding:<br/>
 &bull; If additional guidance or examples are required.<br/>
