@@ -103,23 +103,23 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
   <li>Changes to <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>: 
     <ul>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>: 
     <ul>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>: 
     <ul>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Added AU Patient Internal Identifier to the Patient.identifier list of allowed types (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
@@ -151,17 +151,17 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
   <li>Changes to <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
     <ul>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>:
       <ul>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>:
       <ul>
-      <li>Added [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
+      <li>Added <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a> extension (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-41408</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a> CodeSystem removed OID identifier (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
