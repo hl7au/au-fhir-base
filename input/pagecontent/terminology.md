@@ -187,11 +187,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">Diagnostic Service Section Codes</a></td>
-    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
     <td><a href="ValueSet-dva-entitlement.html">DVA Entitlement</a></td>
     <td><a href="StructureDefinition-au-dvanumber.html">AU DVA Number</a></td>
     <td>AU Base</td>
@@ -493,7 +488,7 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>   
     <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/australian-immunisation-register-vaccine-20221118">Australian Immunisation Register Vaccine</a></td>
+        <td><a href="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats">Australian Immunisation Register Vaccine</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
         <td>NCTS</td>
         <td>Services Australia</td>
@@ -755,6 +750,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet//reason-for-encounter-1">Reason for Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a>, 
