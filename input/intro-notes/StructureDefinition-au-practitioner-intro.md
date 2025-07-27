@@ -7,10 +7,5 @@
 - When constructing an address:
   - an international address can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type
   - an Australian address can be represented using the [Australian Address](StructureDefinition-au-address.html) data type profile
-- See [Australian Health Practitioner Regulation Agency (Ahpra) Data Guidance](generalguidance.html#australian-health-practitioner-regulation-agency-ahpra-data-guidance) for detailed guidance on representing Ahpra-sourced data.
-- A tertiary qualification or professional membership (non-Ahpra-sourced data) is represented by `Practitioner.qualification`
+- A tertiary qualification or professional membership (e.g. Ahpra) is represented by `Practitioner.qualification`
   - If none of the codes from the preferred value set are suitable then at least text should be sent in `Practitioner.qualification.code`
-
-**Potentially useful extensions:**
-* Practitioner.qualification: [Ahpra Profession Details](StructureDefinition-ahpraprofession-details.html)
-* Practitioner.qualification: [Ahpra Registration Details](StructureDefinition-ahpraregistration-details.html)
