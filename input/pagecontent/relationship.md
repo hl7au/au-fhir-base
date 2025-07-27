@@ -1,4 +1,4 @@
-### HL7 AU FHIR specifications
+### HL7 AU FHIR Specifications
  AU Base is designed to serve as a base layer within the broader context of FHIR implementations in an Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation. It provides an additional set of localised options in addition to what is available in the FHIR standard including Australian extensions and Australian terminology. AU Base provides a source of truth for nationally agreed Australian concepts in FHIR such as Medicare card number or Australian Indigenous Status. 
 
 Australian realm IGs and implementers are expected to use an AU Base defined concept where one exists instead of redefining locally.
