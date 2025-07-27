@@ -532,7 +532,7 @@ The following code systems are referenced by the value sets listed above.
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a>,
-          <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>
+          <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>,
           <a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a>
         </td>
         <td>HL7 Terminology (THO)</td>
