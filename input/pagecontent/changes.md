@@ -154,14 +154,14 @@ This version of current build reinstates profiles not included in the AU Base 5.
   
    <li>Changes to <a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a>:
     <ul>
-       <li>Removed <a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a> codes (AUAHPRAProfession, AUAHPRARegistration) from the <a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>) as these concepts are deprecated.</li>
-       <li>Added <a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a> code AHPRA to the <a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
+       <li>Removed codes (AUAHPRAProfession, AUAHPRARegistration) (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>) as these concepts are deprecated.</li>
+       <li>Added code AHPRA (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
     </ul>
   </li>
   <li>Changes to <a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>:
     <ul>
-      <li>Deprecated codes (AUAHPRAProfession, AUAHPRARegistration) in <a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a> code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
-      <li>Added code AHPRA to <a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a> code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
+      <li>Deprecated codes (AUAHPRAProfession, AUAHPRARegistration) (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
+      <li>Added code AHPRA (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
     </ul>
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
