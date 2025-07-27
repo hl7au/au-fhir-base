@@ -269,6 +269,8 @@ Example: Patient resource with a medical record number (local identifier)
 
 ### Australian Health Practitioner Regulation Agency (Ahpra) Data Guidance
 
+<p class="stu-note">This section refers to deprecated material and is retained until the <a href="StructureDefinition-ahpraregistration-details.html">Ahpra Registration Details</a> and <a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> extensions are retired.</p>
+
 This guidance on the representation of Ahpra-sourced data is taken and adapted from Ahpra's practitioner information exchange (PIE) interoperability specification: Find registration.
 
 Ahpra data items should be exchanged using a Practitioner resource.
@@ -336,7 +338,6 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
 </table>
 
 #### Ahpra Profession Data
-<p class="stu-note">This section refers to deprecated material and is retained until the <a href="StructureDefinition-ahpraregistration-details.html">Ahpra Registration Details</a> and <a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> extensions are retired.</p>
 
 <table class="list" width="100%">
     <tr>
