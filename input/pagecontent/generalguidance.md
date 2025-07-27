@@ -1,4 +1,4 @@
-### Intent of this Implementation Guide
+### Intent of This Implementation Guide
 This implementation guide does not attempt to constrain for specific use cases. 
 Instead it defines representations of how commonly needed concepts, in an Australian context, can be applied generally.
 
@@ -432,7 +432,7 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
     </tr>
 </table>
 
-### Representing communication preferences
+### Representing Communication Preferences
 
 The guidance below describes how to represent languages that may be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension:
 * When sent in a Patient resource, the information exchanged is about the languages that may be used to communicate with the patient about their health. 
