@@ -25,7 +25,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
 <ul>
   <li>New profiles:
     <ul>
-      <li><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
+      <li><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
     </ul>
     <ul>
       <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
