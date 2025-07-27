@@ -679,7 +679,9 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
 
 ### Sex Parameter for Clinical Use (SPCU)
-AU Base supports representation and exchange of Sex Parameter for Clinical Use (SPCU) information (as defined by the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
+Sex Parameter for Clinical Use provides exchange of a physical sex category to inform clinical care where required.
+
+AU Base supports representation and exchange of Sex Parameter for Clinical Use (SPCU) information (as defined by the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) with the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension in:
 - [AU Base DiagnosticReport](StructureDefinition-au-diagnosticreport.html)
 - [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html)
 - [AU Base Pathology Report](StructureDefinition-au-pathologyreport.html)
@@ -687,8 +689,6 @@ AU Base supports representation and exchange of Sex Parameter for Clinical Use (
 - [AU Base Patient](StructureDefinition-au-patient.html)
 - [AU Base Procedure](StructureDefinition-au-procedure.html)
 - [AU Base ServiceRequest](StructureDefinition-au-servicerequest.html)
-
-Sex Parameter for Clinical Use provides exchange of a physical sex category to inform clinical care where required.
 
 When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
 - The `value` sub-element is constrained to be [Sex Parameter for Clinical Use](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) ([required](http://hl7.org/fhir/R4/terminologies.html#required)).
