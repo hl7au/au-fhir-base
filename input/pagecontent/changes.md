@@ -96,8 +96,6 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Removed deprecated extension <a href="StructureDefinition-associated-healthcareservice.html">Associated Healthcare Service</a> and added guidance on pre-adoption of FHIR R5 <a href="https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor">Encounter.participant.actor</a> element  (<a href="https://jira.hl7.org/browse/FHIR-50538">FHIR-50538</a>).</li>
      </ul>
   </li>
-    </ul>
-  </li>
   <li>Changes to <a href="StructureDefinition-au-immunization.html" >AU Base Immunization</a>:
     <ul>
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
