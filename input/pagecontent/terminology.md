@@ -43,7 +43,7 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a></td>
-      <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
+      <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
       <td>NCTS</td>
     </tr>
     <tr>
@@ -68,14 +68,14 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>
     <tr>
       <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
-      <td><a href="StructureDefinition-au-timezone.html">Australian Time Zone</a></td>
+      <td><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a></td>
       <td>AU Base</td>
     </tr>
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
-      <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+      <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
       <td>NCTS</td>
-    </tr>
+    </tr>   
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1">Australian Indigenous Status</a></td>
       <td><a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a></td>
@@ -85,11 +85,16 @@ The following value sets form part of localised requirements (i.e. are reference
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a></td>
       <td>
         <a href="StructureDefinition-au-medication.html">AU Base Medication</a>, 
-        <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a>, 
-        <a href="StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a>, 
-        <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a>, 
-        <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a>
+        <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, 
+        <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, 
+        <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>, 
+        <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>
       </td>
+      <td>NCTS</td>
+    </tr>
+     <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a></td>
+      <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
       <td>NCTS</td>
     </tr>
     <tr>
@@ -110,12 +115,12 @@ The following value sets form part of localised requirements (i.e. are reference
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1">Body Site</a></td>
       <td>
-        <a href="StructureDefinition-au-bodystructure.html">AU Base Body Structure</a>, 
+        <a href="StructureDefinition-au-bodystructure.html">AU Base BodyStructure</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>, 
-        <a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a>, 
+        <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>, 
         <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, 
-        <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a>, 
+        <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, 
         <a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>, 
         <a href="StructureDefinition-au-specimen.html">AU Base Specimen</a>
       </td>
@@ -123,7 +128,7 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1">Body Site Relative Site Qualifier</a></td>
-      <td><a href="StructureDefinition-au-bodystructure.html">AU Base Body Structure</a></td>
+      <td><a href="StructureDefinition-au-bodystructure.html">AU Base BodyStructure</a></td>
       <td>NCTS</td>
     </tr>
     <tr>
@@ -134,10 +139,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">Clinical Finding</a></td>
       <td>
-        <a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a>, 
+        <a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>, 
-        <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>, 
+        <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>,
+        <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>,  
         <a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>
       </td>
       <td>NCTS</td>
@@ -145,14 +151,14 @@ The following value sets form part of localised requirements (i.e. are reference
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1">Clinical Specialty</a></td>
       <td>
-        <a href="StructureDefinition-au-healthcareservice.html">AU Base Healthcare Service</a>, 
-        <a href="StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a>
+        <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>, 
+        <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>
       </td>
       <td>NCTS</td>
     </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
-    <td><a href="StructureDefinition-au-patient.html">AU Base Patient</a>, <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>, <a href="StructureDefinition-au-relatedperson.html">AU Base Related Person</a></td>
+    <td><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>, <a href="StructureDefinition-au-patient.html">AU Base Patient</a>, <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>, <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -162,7 +168,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
-    <td><a href="StructureDefinition-au-organization.html">AU Base Organisation</a>, <a href="StructureDefinition-contact-purpose.html">Contact Purpose</a></td>
+    <td><a href="StructureDefinition-au-organization.html">AU Base Organization</a>, <a href="StructureDefinition-contact-purpose.html">Contact Purpose</a></td>
     <td>AU Base</td>
 </tr>
 <tr>
@@ -177,7 +183,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
-    <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a>, <a href="StructureDefinition-date-of-arrival.html">Date of Arrival</a></td>
+    <td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -192,9 +198,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a></td>
-    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>,
-      <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a>, 
-      <a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a></td>
+    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -203,8 +207,13 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="http://terminology.hl7.org/ValueSet/v3-GTIN">GTIN</a></td>
+    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td>
+    <td>HL7 Terminology (THO)</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a></td>
-    <td><a href="StructureDefinition-au-organization.html">AU Base Organisation</a></td>
+    <td><a href="StructureDefinition-au-organization.html">AU Base Organization</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -219,12 +228,12 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="ValueSet-au-v2-0443-extended.html">hl7VS-providerRole - AU Extended</a></td>
-    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
     <td>AU Base</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1">Imaging Anatomic Region Of Interest</a></td>
-    <td><a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>, <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a></td>
+    <td><a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -234,17 +243,17 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1">Immunisation Anatomical Site</a></td>
-    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1">Immunisation Route of Administration</a></td>
-    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a></td>
-    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
+    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -254,7 +263,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1">Individual Healthcare Identifier Status</a></td>
-    <td><a href="StructureDefinition-ihi-record-status.html">IHI Record Status</a></td>
+    <td><a href="StructureDefinition-ihi-status.html">IHI Status</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -274,7 +283,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a></td>
-    <td><a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+    <td><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -289,12 +298,12 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a></td>
-    <td><a href="StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a></td>
+    <td><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="ValueSet-mims.html">MIMS</a></td>
-    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td>
     <td>AU Base</td>
 </tr>
 <tr>
@@ -314,62 +323,72 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="ValueSet-pbs-item.html">PBS Item Codes</a></td>
-    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base Medication Dispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td>
     <td>AU Base</td>
 </tr>
 <tr>
+    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a></td>
+    <td><a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a></td>
-    <td><a href="StructureDefinition-au-procedure.html">AU Base Procedure</a></td>
+    <td><a href="StructureDefinition-au-procedure.html">AU Base Procedure</a>, <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a></td>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a></td>
+    <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a></td>
+    <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a></td>
+    <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a></td>
+    <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
     <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a></td>
-    <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a></td>
-    <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://www.healthterminologies.gov.au/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a></td>
-    <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
-    <td>NCTS</td>
-</tr>
-<tr>
-    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
-    <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
+    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason For Encounter</a></td>
+    <td><a href="StructureDefinition-au-encounter.html">AU Base Encounter</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a></td>
-    <td><a href="StructureDefinition-au-servicerequest.html">AU Base Service Request</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base Medication Request</a></td>
+    <td><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a></td>
-    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a></td>
-    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
-    <td><a href="StructureDefinition-au-relatedperson.html">AU Base Related Person</a></td>
+    <td><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1">Route of Administration</a></td>
-    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a>, <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base Medication Administration</a></td>
+    <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -379,18 +398,23 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a></td>
-    <td><a href="StructureDefinition-au-healthcareservice.html">AU Base Healthcare Service</a></td>
+    <td><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></td>
     <td>AU Base</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1">Service Type</a></td>
-    <td><a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>, <a href="StructureDefinition-au-healthcareservice.html">AU Base Healthcare Service</a></td>
+    <td><a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>, <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
     <td><a href="StructureDefinition-au-location.html">AU Base Location</a></td>
     <td>AU Base</td>
+</tr>
+<tr>
+    <td><a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
+    <td><a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a></td>
+    <td>HL7 Terminology (THO)</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1">Specimen Collection Procedure</a></td>
@@ -414,7 +438,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1">Vaccination Target Disease</a></td>
-    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+    <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
     <td>NCTS</td>
 </tr>
   </tbody>
@@ -446,7 +470,7 @@ The following code systems are referenced by the value sets listed above.
   <tbody>
     <tr>
       <td><a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a></td>
-      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>, <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
+      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>, <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a>, <a href="http://terminology.hl7.org/ValueSet/v3-GTIN">GTIN</a></td>
       <td>HL7 Terminology (THO)</td>
       <td>Health Level Seven International</td>
     </tr>
@@ -467,15 +491,9 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>
+    </tr>   
     <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/anzsic-2006-20130626">Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 2.0)</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/anzsic-1">Australian And New Zealand Standard Industrial Classification</a></td>
-        <td>NCTS</td>
-        <td>Australian Bureau of Statistics (ABS)</td>
-    </tr>
-    <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/australian-immunisation-register-vaccine-20221118">Australian Immunisation Register Vaccine</a></td>
+        <td><a href="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats">Australian Immunisation Register Vaccine</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
         <td>NCTS</td>
         <td>Services Australia</td>
@@ -488,7 +506,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1">Australian States and Territories</a></td>
-        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2">Australian States and Territories</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2">Australian States and Territories</a>, <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
     </tr>
@@ -511,10 +529,22 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/contactentity-type">Contact entity type</a></td>
+        <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
+    <tr>
         <td><a href="CodeSystem-contact-purpose.html">Contact Purpose</a></td>
         <td><a href="ValueSet-contact-purpose.html">Contact Purpose</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v2-0131">contactRole2</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3">Contact Relationship Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/coverage-selfpay">Coverage SelfPay Codes</a></td>
@@ -527,7 +557,8 @@ The following code systems are referenced by the value sets listed above.
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a>,
-          <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>
+          <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>,
+          <a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a>
         </td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
@@ -537,6 +568,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1">Date Accuracy Indicator</a></td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v2-0360">degreeLicenseCertificate</a></td>
+        <td><a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a></td>
@@ -549,7 +586,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
-    </tr>
+    </tr>   
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0203">IdentifierType</a></td>
         <td><a href="ValueSet-accession-number-type.html">Accession Number Type</a>, <a href="ValueSet-order-identifier-type.html">Order Identifier Type</a>, <a href="ValueSet-au-v2-0203-extended.html">hl7VS-identifierType - AU Extended</a></td>
@@ -605,15 +642,15 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/LOINC-2.77">LOINC</a></td>
+        <td><a href="https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc">LOINC</a></td>
         <td>
             <a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a>, 
-            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a>, 
-            <a href="https://www.healthterminologies.gov.au/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a>
+            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,  
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3">RCPA - SPIA Chemical Pathology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-haematology-refset-3">RCPA - SPIA Haematology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-immunopathology-refset-3">RCPA - SPIA Immunopathology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3">RCPA - SPIA Microbiology Serology Molecular Pathology Terminology Reference Set</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a>
         </td>
         <td>NCTS, HL7 Terminology (THO)</td>
         <td>Regenstrief Institute, Inc</td>
@@ -641,7 +678,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-name-context.html">Name Context</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>
+    </tr>   
     <tr>
         <td><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
         <td><a href="ValueSet-pbs-item.html">PBS Item Codes</a></td>
@@ -668,7 +705,13 @@ The following code systems are referenced by the value sets listed above.
         </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleCode">RoleCode</a></td>
-        <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a>, <a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleClass">RoleClass</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
     </tr>
@@ -684,6 +727,12 @@ The following code systems are referenced by the value sets listed above.
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
+     <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
+        <td><a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
     <tr>
         <td><a href="https://www.healthterminologies.gov.au/CodeSystem/32506021000036107-20240630">SNOMED Clinical Terms (Australian extension)</a></td>
         <td>
@@ -691,7 +740,8 @@ The following code systems are referenced by the value sets listed above.
             <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
-            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>,  
+            <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1">Body Site</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1">Body Site Relative Site Qualifier</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1">Clinical Condition</a>, 
@@ -701,7 +751,6 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">Encounter Type</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-program-participation-status-1">Health Program Participation Status</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1">Imaging Procedure</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1">Imaging Anatomic Region Of Interest</a>, 
@@ -711,9 +760,9 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/participation-in-health-program-1">Participation in Health Program</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-non-participation-health-program-1">Reason for Non Participation in Health Program</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet//reason-for-encounter-1">Reason for Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a>, 
@@ -727,6 +776,17 @@ The following code systems are referenced by the value sets listed above.
         </td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr><td><a href="http://unstats.un.org/unsd/methods/m49/m49.htm">Standard country or area codes for statistical use (M49)</a></td>
+        <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
+        <td>UNSD</td>
+        <td>United Nations Statistics Division</td>
+    </tr>
+    <tr>
+        <td><a href="https://terminology.hl7.org/CodeSystem-v3-ietf3066.html">Tags for the Identification of Languages</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="CodeSystem-task-business-status.html">Task Business Status</a></td>

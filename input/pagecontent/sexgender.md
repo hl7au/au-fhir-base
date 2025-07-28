@@ -8,57 +8,282 @@ The table below provides an overview of the sex and gender related concepts in A
 
 <img src="orange_checkmark.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but is not marked as *Must Support*.
 
-<img src="minus_symbol.png" width="20"/> **Not localised**: The sex or gender related concept is not localised for use in an Australian context.
+<img src="blue_checkmark.png" width="20"/> **Not Localised**: The sex or gender related concept is relevant and not yet localised for use in an Australian context.
+
+<img src="minus_symbol.png" width="20"/> **Not Applicable**: This sex or gender related concept is not relevant to use with this resource type.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">Sex and Gender Concept</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-patient.html">AU Base Patient</a></th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;"><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sexgender.html#administrative-gender-patientgender">Administrative Gender (Patient.gender)</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sexgender.html#name-to-use-ntu">Name to Use</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sexgender.html#pronouns">Pronouns</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sexgender.html#gender-identity-gi">Gender Identity</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sexgender.html#recorded-sex-or-gender">Recorded Sex or Gender</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="sexgender.html#sex-assigned-at-birth">Sex Assigned at Birth</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				Sex and<br/>Gender Concept
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#administrative-gender-patientgender">Administrative Gender</a>
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#name-to-use-ntu">Name to Use</a>
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#pronouns">Pronouns</a>
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#gender-identity-gi">Gender Identity</a>
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#recorded-sex-or-gender">
+					Recorded Sex <br/>or Gender
+				</a>
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#sex-assigned-at-birth">
+					Sex Assigned <br/>at Birth
+				</a>
+			</th>
+			<th style="width: 12%; text-align: center; vertical-align: middle;">
+				<a href="sexgender.html#sex-parameter-for-clinical-use-spcu">
+					Sex Parameter<br/>for Clinical Use<br/>(SPCU)
+				</a>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-patient.html">AU Base<br/>Patient</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-practitioner.html">AU Base <br/>Practitioner</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-relatedperson.html">AU Base<br/> RelatedPerson</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-imagingreport.html">AU Base <br/>Diagnostic Imaging <br/>Report</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+    <tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-diagnosticreport.html">AU Base<br/> DiagnosticReport</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+    <tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-medicationrequest.html">AU Base <br/>MedicationRequest</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-pathologyreport.html">AU Base <br/>Pathology Report</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-procedure.html">AU Base <br/>Procedure</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-servicerequest.html">AU Base<br/> ServiceRequest</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+	</tbody>
 </table>
-
 
 Notes:
 1. AU Base provides national level agreement on core localised concepts but does not force conformance, and therefore, no elements are marked as Must Support. Use case implementation guides may apply conformance requirements to sex and gender concepts, e.g. AU Core, and readers are advised to refer to the corresponding table in the applicable implementation guide for information.
@@ -453,3 +678,101 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
 }  
 ~~~
 
+### Sex Parameter for Clinical Use (SPCU)
+Sex Parameter for Clinical Use supports exchange of a physical sex category to inform clinical care where required.
+
+AU Base supports representation and exchange of Sex Parameter for Clinical Use (SPCU) information (as defined by the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) with the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension in:
+- [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html)
+- [AU Base DiagnosticReport](StructureDefinition-au-diagnosticreport.html)
+- [AU Base MedicationRequest](StructureDefinition-au-medicationrequest.html)
+- [AU Base Pathology Report](StructureDefinition-au-pathologyreport.html)
+- [AU Base Patient](StructureDefinition-au-patient.html)
+- [AU Base Procedure](StructureDefinition-au-procedure.html)
+- [AU Base ServiceRequest](StructureDefinition-au-servicerequest.html)
+
+When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
+<p class="stu-note">
+The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension in the September 2025 Ballot of the HL7 International FHIR Extensions Pack.
+</p>
+- It is recommended to include either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element to indicate the clinical context for the SPCU value.
+- A patient can have multiple SPCU values at any one time. These can have overlapping or non-overlapping periods and have different sex parameter values depending on the clinical context.
+  - When exchanging health information consider if consistency of SPCU values across AU Base resource instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element value "female-typical" while also referencing a Patient resource instance (in `MedicationRequest.subject`) which holds an SPCU value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that the SPCU value applies to all prescribed medications.
+- Implementers intending to only include the SPCU value in a Patient resource and not in other resources can consider using a reference to a contained `Patient` resource. For example, instead of including an SPCU value directly in a `MedicationRequest`, the `MedicationRequest.subject` element could reference a contained `Patient` resource that includes the SPCU value.
+
+Resource specific SPCU usage includes:
+- DiagnosticReport - Inclusion of SPCU values indicates that the sex parameter is relevant to the particular report.
+- MedicationRequest - Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. informs dosage or use when pregnant.
+- Patient - When exchanging SPCU values that do not directly link to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) elements are included to provide the clinical context and/or appropriate clinical uses for an SPCU value.
+- Procedure - Inclusion of SPCU values indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
+- ServiceRequest - Inclusion of SPCU values indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
+
+
+Example: Patient resource with Sex Parameter for Clinical Use
+~~~
+{
+   "resourceType":"Patient",
+   ...
+   "extension":[
+      {
+         "url":"http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse",
+         "extension":[
+            {
+               "url":"value",
+               "valueCodeableConcept":{
+                  "coding":[
+                     {
+                        "system":"http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+                        "code":"female-typical",
+                        "display":"Apply female-typical setting or reference range"
+                     }
+                  ]
+               }
+            },
+            {
+               "url":"period",
+               "valuePeriod":{
+                  "start":"2025-07-01"
+               }
+            },
+            {
+               "url":"comment",
+               "valueString":"Apply female-type setting for all radiology tests"
+            }
+         ]
+      }
+   ]
+   ...
+}
+~~~
+
+Example: ServiceRequest resource with Sex Parameter for Clinical Use
+~~~
+{
+   "resourceType":"ServiceRequest",
+   ...
+   "extension":[
+      {
+         "url":"http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse",
+         "extension":[
+            {
+               "url":"value",
+               "valueCodeableConcept":{
+                  "coding":[
+                     {
+                        "system":"http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+                        "code":"male-typical",
+                        "display":"Apply male-typical setting or reference range"
+                     }
+                  ]
+               }
+            },
+            {
+               "url":"comment",
+               "valueString":"Apply male-type setting for all pathology tests"
+            }
+         ]
+      }
+   ]
+   ...
+}
+~~~

@@ -92,7 +92,17 @@
             <display value="Devonport Family Medicine Clinic"/>
         </assigner>
     </identifier>
-	<name>
+    <name>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/name-context">
+			<valueCodeableConcept>
+				<coding>
+				<system value="http://terminology.hl7.org.au/CodeSystem/name-context"/>
+				<code value="ihi-validation"/>
+				<display value="IHI Validation"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<use value="official"/>
 		<family value="Franklin"/>
 		<given value="Stella"/>
 	</name>
