@@ -692,7 +692,7 @@ AU Base supports representation and exchange of Sex Parameter for Clinical Use (
 
 When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
 <p class="stu-note">
-The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension in the September 2025 ballot of the HL7 International FHIR Extensions Pack.
+The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension in the September 2025 Ballot of the HL7 International FHIR Extensions Pack.
 </p>
 - It is recommended to include either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element to indicate the clinical context for the SPCU value.
 - A patient can have multiple SPCU values at any one time. These can have overlapping or non-overlapping periods and have different sex parameter values depending on the clinical context.
