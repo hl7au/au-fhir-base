@@ -128,6 +128,32 @@ The table below provides an overview of the sex and gender related concepts in A
 		</tr>
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
+				<a href="StructureDefinition-au-imagingreport.html">AU Base <br/>Diagnostic Imaging <br/>Report</a>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="minus_symbol.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="blue_checkmark.png" width="20"/>
+			</td>
+		</tr>
+    <tr>
+			<td style=" text-align: center; vertical-align: middle;">
 				<a href="StructureDefinition-au-diagnosticreport.html">AU Base<br/> DiagnosticReport</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
@@ -152,9 +178,9 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="blue_checkmark.png" width="20"/>
 			</td>
 		</tr>
-		<tr>
+    <tr>
 			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-imagingreport.html">AU Base <br/>Diagnostic Imaging <br/>Report</a>
+				<a href="StructureDefinition-au-medicationrequest.html">AU Base <br/>MedicationRequest</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
@@ -181,32 +207,6 @@ The table below provides an overview of the sex and gender related concepts in A
 		<tr>
 			<td style=" text-align: center; vertical-align: middle;">
 				<a href="StructureDefinition-au-pathologyreport.html">AU Base <br/>Pathology Report</a>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
-			</td>
-		</tr>
-		<tr>
-			<td style=" text-align: center; vertical-align: middle;">
-				<a href="StructureDefinition-au-medicationrequest.html">AU Base <br/>MedicationRequest</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="minus_symbol.png" width="20"/>
