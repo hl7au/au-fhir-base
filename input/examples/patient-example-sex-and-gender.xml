@@ -140,6 +140,34 @@
             </valueCodeableConcept>
         </extension>
     </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+                    <code value="male-typical"/>
+                    <display value="Apply male-typical setting or reference range"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="value">
+            <valueString value="Apply male-type setting for all radiology tests"/>
+        </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+                    <code value="female-typical"/>
+                    <display value="Apply female-typical setting or reference range"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="value">
+            <valueString value="Apply female-type setting for Lipids, LFT, TSH, T4 pathology tests"/>
+        </extension>
+    </extension>
     <identifier>
         <use value="usual"/>
         <type>
