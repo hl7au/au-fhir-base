@@ -6,6 +6,6 @@ This ballot is opened during this cycle to solicit feedback and approval from th
 
 The ballot period is 11 August 2025 to 07 September 2025.
 
-Information on how to provide feedback for balloters is available on this Confluence page: [Guidance: Ballot Voting](https://confluence.hl7.org/display/HA/Guidance%3A+Ballot+Voting).
+Information on how to provide feedback for balloters is available on this Confluence page: [Guidance: Ballot Voting](https://confluence.hl7.org/x/HgV0DQ).
   
 </div><!-- note-to-balloters -->
