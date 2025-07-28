@@ -412,6 +412,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>AU Base</td>
 </tr>
 <tr>
+    <td><a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
+    <td><a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a></td>
+    <td>HL7 Terminology (THO)</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1">Specimen Collection Procedure</a></td>
     <td><a href="StructureDefinition-au-specimen.html">AU Base Specimen</a></td>
     <td>NCTS</td>
@@ -552,7 +557,8 @@ The following code systems are referenced by the value sets listed above.
         <td>
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>,
           <a href="https://healthterminologies.gov.au/fhir/ValueSet/biological-sex-1">Biological Sex</a>,
-          <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>
+          <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>,
+          <a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a>
         </td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
@@ -720,6 +726,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+     <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
+        <td><a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="https://www.healthterminologies.gov.au/CodeSystem/32506021000036107-20240630">SNOMED Clinical Terms (Australian extension)</a></td>
