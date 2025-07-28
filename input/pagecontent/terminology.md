@@ -672,6 +672,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-name-context.html">Name Context</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v3-ParticipationType">ParticipationType</a></td>
+        <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>   
     <tr>
         <td><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
