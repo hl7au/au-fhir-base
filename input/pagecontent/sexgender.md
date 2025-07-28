@@ -56,9 +56,6 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
@@ -71,7 +68,10 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -79,7 +79,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<a href="StructureDefinition-au-practitioner.html">AU Base <br/>Practitioner</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="blue_checkmark.png" width="20"/>
@@ -105,7 +105,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<a href="StructureDefinition-au-relatedperson.html">AU Base<br/> RelatedPerson</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="blue_checkmark.png" width="20"/>
@@ -149,7 +149,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
     <tr>
@@ -175,7 +175,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
     <tr>
@@ -201,7 +201,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -227,7 +227,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -253,7 +253,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -279,7 +279,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 	</tbody>
