@@ -42,7 +42,7 @@ Copyright © 2012+ HL7 Australia
 Intellectual property rights and trademarks are defined in full in the [HL7 Australia - Intellectual Property Policy](https://hl7.org.au/fhir/hl7a_ip_policy.pdf) document. 
 
 
-### Third-party artefacts and terminologies
+### Third-party Artefacts and Terminologies
 
 HL7 Australia FHIR Implementation Guides contain and reference intellectual property owned by third parties ("Third Party IP"). Acceptance of these License Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licences or authorisations to utilise Third Party IP in connection with the specification or otherwise.
 

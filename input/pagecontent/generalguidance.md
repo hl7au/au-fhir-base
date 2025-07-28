@@ -1,4 +1,4 @@
-### Intent of this Implementation Guide
+### Intent of This Implementation Guide
 This implementation guide does not attempt to constrain for specific use cases. 
 Instead it defines representations of how commonly needed concepts, in an Australian context, can be applied generally.
 
@@ -61,10 +61,10 @@ Official publication of a [Normative](https://hl7.org/fhir/R4/versions.html#std-
 
 ### SNOMED CT Australian Edition
 [SNOMED CT](https://snomed.info/sct) (Systematized Nomenclature of Medicine – Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information.
-In Australia SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT with local variations and customisation relevant to the Australian healthcare community.
+In Australia, SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT with local variations and customisation relevant to the Australian healthcare community.
 Many SNOMED CT-AU value sets have already been developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS). 
 These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability.
-The SNOMED CT Australian Edition is used extensively in AU Base for various clinical concepts including allergies, problems, and procedures. When using concepts from SNOMED CT in AU Base profile, implementers can use the default system URI referring to an unspecified edition/or version (as shown in option one) or when supporting validation on AU Edition-only concepts and preferred terms implementers provide the accompanying extension identifier (as per option two) and also describe a specific version of SNOMED CT-AU (as shown in option three). 
+SNOMED CT-AU is used extensively in AU Base for various clinical concepts including allergies, problems, and procedures. When using concepts from SNOMED CT in AU Base profile, implementers can use the default system URI referring to an unspecified edition/or version (as shown in option one) or when supporting validation on AU Edition-only concepts and preferred terms implementers provide the accompanying extension identifier (as per option two) and also describe a specific version of SNOMED CT-AU (as shown in option three). 
 
 #### SNOMED CT Version Options
 
@@ -268,6 +268,9 @@ Example: Patient resource with a medical record number (local identifier)
 
 
 ### Australian Health Practitioner Regulation Agency (Ahpra) Data Guidance
+
+<p class="stu-note">This section refers to deprecated material and is retained until the <a href="StructureDefinition-ahpraregistration-details.html">Ahpra Registration Details</a> and <a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> extensions are retired.</p>
+
 This guidance on the representation of Ahpra-sourced data is taken and adapted from Ahpra's practitioner information exchange (PIE) interoperability specification: Find registration.
 
 Ahpra data items should be exchanged using a Practitioner resource.
@@ -432,7 +435,7 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
     </tr>
 </table>
 
-### Representing communication preferences
+### Representing Communication Preferences
 
 The guidance below describes how to represent languages that may be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension:
 * When sent in a Patient resource, the information exchanged is about the languages that may be used to communicate with the patient about their health. 

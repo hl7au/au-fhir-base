@@ -8,7 +8,7 @@
 - When constructing an address:
   - an international address can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type
   - an Australian address can be represented using the [Australian Address](StructureDefinition-au-address.html) data type profile
-- See [Representing communication preferences](generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that may be used to communicate with the patient about their health including preferred language and if an interpreter is required.
+- See [Representing Communication Preferences](generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that may be used to communicate with the patient about their health including preferred language and if an interpreter is required.
 
 **Extensions under consideration:**
 * Patient: [Ethnicity](StructureDefinition-ethnicity.html)
