@@ -699,7 +699,7 @@ The guidance on this page is dependent on the availability of the <code class=" 
 
 Resource specific SPCU usage includes:
 - DiagnosticReport: Inclusion of SPCU values indicates that the sex parameter is relevant to the particular report.
-- MedicationRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. informs dosage or use when pregnant.
+- MedicationRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. informs dosage or use when the patient is pregnant.
 - Patient: When exchanging SPCU values that do not directly link to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the `comment` or `intendedClinicalUse` elements are included to provide the clinical context and/or appropriate clinical uses for an SPCU value.
 - Procedure: Inclusion of SPCU values indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
 - ServiceRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
