@@ -737,18 +737,6 @@ Example: Patient resource with Sex Parameter for Clinical Use
             {
                "url":"comment",
                "valueString":"Apply female-type setting for all radiology tests"
-            },
-            {
-               "url":"supportingInfo",
-               "valueReference":{
-                  "reference":"Observation/1"
-               }
-            },
-            {
-               "url":"supportingInfo",
-               "valueReference":{
-                  "reference":"MedicationStatement/2"
-               }
             }
          ]
       }
@@ -760,7 +748,7 @@ Example: Patient resource with Sex Parameter for Clinical Use
 Example: ServiceRequest resource with Sex Parameter for Clinical Use
 ~~~
 {
-   "resourceType":"ServiceRequest", TODO
+   "resourceType":"ServiceRequest",
    ...
    "extension":[
       {
@@ -772,33 +760,15 @@ Example: ServiceRequest resource with Sex Parameter for Clinical Use
                   "coding":[
                      {
                         "system":"http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
-                        "code":"female-typical",
-                        "display":"Apply female-typical setting or reference range"
+                        "code":"male-typical",
+                        "display":"Apply male-typical setting or reference range"
                      }
                   ]
                }
             },
             {
-               "url":"period",
-               "valuePeriod":{
-                  "start":"2025-07-01"
-               }
-            },
-            {
                "url":"comment",
-               "valueString":"Apply female-type setting for all radiology tests"
-            },
-            {
-               "url":"supportingInfo",
-               "valueReference":{
-                  "reference":"Observation/1"
-               }
-            },
-            {
-               "url":"supportingInfo",
-               "valueReference":{
-                  "reference":"MedicationStatement/2"
-               }
+               "valueString":"Apply male-type setting for all pathology tests"
             }
          ]
       }
