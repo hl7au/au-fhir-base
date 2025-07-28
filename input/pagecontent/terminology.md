@@ -414,7 +414,7 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use">Sex Parameter for Clinical Use</a></td>
     <td><a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Patient Sex Parameter For Clinical Use</a></td>
-    <td>NCTS</td>
+    <td>HL7 Terminology (THO)</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1">Specimen Collection Procedure</a></td>
