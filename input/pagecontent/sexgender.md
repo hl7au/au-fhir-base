@@ -8,7 +8,9 @@ The table below provides an overview of the sex and gender related concepts in A
 
 <img src="orange_checkmark.png" width="20"/> **Localised**: The sex or gender related concept is localised for use in an Australian context but is not marked as *Must Support*.
 
-<img src="minus_symbol.png" width="20"/> **Not localised**: The sex or gender related concept is not localised for use in an Australian context.
+<img src="blue_checkmark.png" width="20"/> **Not localised**: The sex or gender related concept is relevant an not yet localised for use in an Australian context.
+
+<img src="minus_symbol.png" width="20"/> **Not Applicable**: This sex or gender related concept is not relevant to use with this resource type.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
 	<thead>
@@ -17,9 +19,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				Sex and<br/>Gender Concept
 			</th>
 			<th style="width: 12%; text-align: center; vertical-align: middle;">
-				<a href="sexgender.html#administrative-gender-patientgender">
-					Administrative Gender<br/>(Patient.gender)
-				</a>
+				<a href="sexgender.html#administrative-gender-patientgender">Administrative Gender</a>
 			</th>
 			<th style="width: 12%; text-align: center; vertical-align: middle;">
 				<a href="sexgender.html#name-to-use-ntu">Name to Use</a>
@@ -79,7 +79,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<a href="StructureDefinition-au-practitioner.html">AU Base <br/>Practitioner</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
+				<img src="blue_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
@@ -105,7 +105,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<a href="StructureDefinition-au-relatedperson.html">AU Base<br/> RelatedPerson</a>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="minus_symbol.png" width="20"/>
+				<img src="blue_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
@@ -691,30 +691,76 @@ AU Base supports representation and exchange of Sex Parameter for Clinical Use (
 - [AU Base ServiceRequest](StructureDefinition-au-servicerequest.html)
 
 When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
-- The `value` sub-element is constrained to be [Sex Parameter for Clinical Use](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) ([required](http://hl7.org/fhir/R4/terminologies.html#required)).
-- It is recommended to include either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) sub-element to indicate the clinical context for the SPCU value.
-- A patient may have multiple SPCU values at any one time. These may have overlapping or non-overlapping periods and have different sex parameter values depending on the clinical context.
-- Care should be taken to ensure consistency of SPCU values across AU Base resource instances and any referenced resources. For example, an instance of AU `MedicationRequest` may hold an SPCU element with a value of "female-typical" while also referencing a Patient resource instance (in `MedicationRequest.subject`) which holds an SPCU value with a value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that the SPCU value applies to all prescribed medications.
-- Duplication of SPCU values across `Patient` and resources referencing `Patient` is possible. This duplication may be desirable (e.g. for increased visibility) or unnecessary, depending on the use case.
-- Implementers who wish to only include the SPCU value in a Patient resource and not in other resources may consider using a reference to a contained `Patient` resource. For example, instead of including an SPCU value directly in a `MedicationReques`t, the `MedicationRequest.subject` element could reference a contained `Patient` resource that includes the SPCU value.
-
-Specific SPCU usage with AU Base profiles includes:
-- AU Base DiagnosticReport, AU Base Diagnostic Imaging Report, AU Base Pathology Report - Inclusion of SPCU values in these instances indicates that the sex parameter is relevant to the particular report.
-- AU Base MedicationRequest - Inclusion of SPCU values in these instances indicates that the sex parameter is relevant to the medication request e.g. it informs dosage or use when pregnant.
-- AU Base Patient - When exchanging these instances that include SPCU values, but are not directly linked to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) sub-elements always be included and hold a value that provides the clinical context and/or appropriate clinical uses for the SPCU value.
-- AU Base Procedure - Inclusion of SPCU values in these instances indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
-- AU Base ServiceRequest - Inclusion of SPCU values in these instances indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
-
-<p class="stu-note">The FHIR Work Group is interested in feedback from adopters and implementers regarding their experiences with SPCU. In particular, feedback is sought regarding:<br/>
-&bull; If additional guidance or examples are required.<br/>
-&bull; If SPCU should explicitly be included in any other AU Base profiles in future releases of AU Base.<br/>
-The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> sub-element, added to the SPCU extension included in the September 2025 ballot of the HL7 International FHIR Extensions Pack.
+<p class="stu-note">
+The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension included in the September 2025 ballot of the HL7 International FHIR Extensions Pack.
 </p>
+- It is recommended to include either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element to indicate the clinical context for the SPCU value.
+- A patient can have multiple SPCU values at any one time. These can have overlapping or non-overlapping periods and have different sex parameter values depending on the clinical context.
+  - When exchanging health information consider if consistency of SPCU values across AU Base resource instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element with a value of "female-typical" while also referencing a Patient resource instance (in `MedicationRequest.subject`) which holds an SPCU value with a value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that the SPCU value applies to all prescribed medications.
+- Implementers intending to only include the SPCU value in a Patient resource and not in other resources can consider using a reference to a contained `Patient` resource. For example, instead of including an SPCU value directly in a `MedicationRequest`, the `MedicationRequest.subject` element could reference a contained `Patient` resource that includes the SPCU value.
+
+Resource specific SPCU usage includes:
+- DiagnosticReport - Inclusion of SPCU values indicates that the sex parameter is relevant to the particular report.
+- MedicationRequest - Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. it informs dosage or use when pregnant.
+- Patient - When exchanging SPCU value that do not directly link to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) elements are included that provides the clinical context and/or appropriate clinical uses for the SPCU value.
+- Procedure - Inclusion of SPCU values indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
+- ServiceRequest - Inclusion of SPCU values indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
+
 
 Example: Patient resource with Sex Parameter for Clinical Use
 ~~~
 {
    "resourceType":"Patient",
+   ...
+   "extension":[
+      {
+         "url":"http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse",
+         "extension":[
+            {
+               "url":"value",
+               "valueCodeableConcept":{
+                  "coding":[
+                     {
+                        "system":"http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use",
+                        "code":"female-typical",
+                        "display":"Apply female-typical setting or reference range"
+                     }
+                  ]
+               }
+            },
+            {
+               "url":"period",
+               "valuePeriod":{
+                  "start":"2025-07-01"
+               }
+            },
+            {
+               "url":"comment",
+               "valueString":"Apply female-type setting for all radiology tests"
+            },
+            {
+               "url":"supportingInfo",
+               "valueReference":{
+                  "reference":"Observation/1"
+               }
+            },
+            {
+               "url":"supportingInfo",
+               "valueReference":{
+                  "reference":"MedicationStatement/2"
+               }
+            }
+         ]
+      }
+   ]
+   ...
+}
+~~~
+
+Example: ServiceRequest resource with Sex Parameter for Clinical Use
+~~~
+{
+   "resourceType":"ServiceRequest", TODO
    ...
    "extension":[
       {
