@@ -174,7 +174,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
   <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
-  <li>Added sex and gender guidance on Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
+  <li>Added sex and gender guidance on Sex Parameter for Clinical Use to the Sex and Gender page (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
 </ul>
 
 ### Release 5.0.0
