@@ -10,5 +10,3 @@
   - an Australian address can be represented using the [Australian Address](StructureDefinition-au-address.html) data type profile
 - See [Representing Communication Preferences](generalguidance.html#representing-communication-preferences) for guidance on how to represent languages that may be used to communicate with the patient about their health including preferred language and if an interpreter is required.
 
-**Extensions under consideration:**
-* Patient: [Ethnicity](StructureDefinition-ethnicity.html)
