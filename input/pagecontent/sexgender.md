@@ -10,7 +10,7 @@ The table below provides an overview of the sex and gender related concepts in A
 
 <img src="blue_checkmark.png" width="20"/> **Not Localised**: The sex or gender related concept is relevant and not yet localised for use in an Australian context.
 
-<img src="minus_symbol.png" width="20"/> **Not Applicable**: This sex or gender related concept is not relevant to use with this resource type.
+<img src="minus_symbol.png" width="20"/> **Not Applicable**: This sex or gender related concept is not applicable for use with this resource type.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
 	<thead>
@@ -56,9 +56,6 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
-			</td>
-			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
@@ -71,7 +68,10 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
+			</td>
+			<td style=" text-align: center; vertical-align: middle;">
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -82,7 +82,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="blue_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
@@ -108,7 +108,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="blue_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
 				<img src="orange_checkmark.png" width="20"/>
@@ -149,7 +149,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
     <tr>
@@ -175,7 +175,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
     <tr>
@@ -201,7 +201,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -227,7 +227,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -253,7 +253,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 		<tr>
@@ -279,7 +279,7 @@ The table below provides an overview of the sex and gender related concepts in A
 				<img src="minus_symbol.png" width="20"/>
 			</td>
 			<td style=" text-align: center; vertical-align: middle;">
-				<img src="blue_checkmark.png" width="20"/>
+				<img src="orange_checkmark.png" width="20"/>
 			</td>
 		</tr>
 	</tbody>
@@ -679,9 +679,7 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
 ~~~
 
 ### Sex Parameter for Clinical Use (SPCU)
-Sex Parameter for Clinical Use supports exchange of a physical sex category to inform clinical care where required.
-
-AU Base supports representation and exchange of Sex Parameter for Clinical Use (SPCU) information (as defined by the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) with the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension in:
+AU Base supports representation and exchange of Sex Parameter for Clinical Use (SPCU) information (as defined by the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
 - [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html)
 - [AU Base DiagnosticReport](StructureDefinition-au-diagnosticreport.html)
 - [AU Base MedicationRequest](StructureDefinition-au-medicationrequest.html)
@@ -690,21 +688,21 @@ AU Base supports representation and exchange of Sex Parameter for Clinical Use (
 - [AU Base Procedure](StructureDefinition-au-procedure.html)
 - [AU Base ServiceRequest](StructureDefinition-au-servicerequest.html)
 
-When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
+ SPCU is represented with the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension. When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
 <p class="stu-note">
-The guidance on this page assumes the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension in the September 2025 Ballot of the HL7 International FHIR Extensions Pack.
+The guidance on this page is dependent on the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension in the September 2025 Ballot of the HL7 International FHIR Extensions Pack.
 </p>
-- It is recommended to include either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element to indicate the clinical context for the SPCU value.
-- A patient can have multiple SPCU values at any one time. These can have overlapping or non-overlapping periods and have different sex parameter values depending on the clinical context.
-  - When exchanging health information consider if consistency of SPCU values across AU Base resource instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element value "female-typical" while also referencing a Patient resource instance (in `MedicationRequest.subject`) which holds an SPCU value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that the SPCU value applies to all prescribed medications.
-- Implementers intending to only include the SPCU value in a Patient resource and not in other resources can consider using a reference to a contained `Patient` resource. For example, instead of including an SPCU value directly in a `MedicationRequest`, the `MedicationRequest.subject` element could reference a contained `Patient` resource that includes the SPCU value.
+- It is recommended that the clinical context for the SPCU value is provided (e.g. applies to all prescribed medications); clinical context can be included in either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element.
+- A patient record can have multiple SPCU values at any one time. These SPCU values can be different depending on the clinical context and can have overlapping or non-overlapping periods.
+  - When exchanging health information implementers need to consider if consistency of SPCU values across different resource types instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element value "female-typical" while referencing a `Patient` resource (in `MedicationRequest.subject`) that holds an SPCU value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that SPCU value applies to all prescribed medications.
+- Implementers intending to only include an SPCU value in the Patient resource and not in other resource types can consider using a reference to a contained `Patient` resource. For example, instead of including an SPCU value directly in a `MedicationRequest`, the `MedicationRequest.subject` element could reference a contained `Patient` resource that includes the SPCU value.
 
 Resource specific SPCU usage includes:
-- DiagnosticReport - Inclusion of SPCU values indicates that the sex parameter is relevant to the particular report.
-- MedicationRequest - Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. informs dosage or use when pregnant.
-- Patient - When exchanging SPCU values that do not directly link to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) elements are included to provide the clinical context and/or appropriate clinical uses for an SPCU value.
-- Procedure - Inclusion of SPCU values indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
-- ServiceRequest - Inclusion of SPCU values indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
+- DiagnosticReport: Inclusion of SPCU values indicates that the sex parameter is relevant to the particular report.
+- MedicationRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. informs dosage or use when the patient is pregnant.
+- Patient: When exchanging SPCU values that do not directly link to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the `comment` or `intendedClinicalUse` elements are included to provide the clinical context and/or appropriate clinical uses for an SPCU value.
+- Procedure: Inclusion of SPCU values indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
+- ServiceRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
 
 
 Example: Patient resource with Sex Parameter for Clinical Use
