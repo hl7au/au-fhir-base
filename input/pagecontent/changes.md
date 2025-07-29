@@ -11,7 +11,7 @@ To help implementers, only the more significant changes are listed here.
 **AU Base Changes Not Applied**
 
 The following approved AU Base changes are not yet applied:
-* Change AU Base AllergyIntolerance: AllergyIntolerance.reaction.manifestation to be bound to the values in the NCTS Clinical manifestation reference set. Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>
+* Change AU Base AllergyIntolerance: `AllergyIntolerance.reaction.manifestation` to be bound to the values in the NCTS Clinical manifestation reference set. Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>
 * AU Base value set <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> to be an NCTS managed value set. Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>
 </div>
 
