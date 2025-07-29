@@ -1,7 +1,9 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 6.0.0-ballot
+- Publication date: 2025-07-29
+- Publication status: Ballot
 - Based on FHIR version: 4.0.1
+
+The changes in this update are for ballot.
  
 To help implementers, only the more significant changes are listed here.
 
@@ -13,11 +15,11 @@ The following approved AU Base changes are not yet applied:
 * AU Base value set <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> to be an NCTS managed value set. Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>
 </div>
 
-#### Reinstated
-This version of current build reinstates profiles not included in the AU Base 5.0.0 release:
-  <ul>
-      <li>Ethnicity extension</li>
-  </ul>
+##### Not Included
+The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM <b>DRAFT 0</b> maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
+<ul>
+    <li>Ethnicity extension</li>
+</ul>
 
 ##### Breaking Changes <a name="breakingchanges"></a>
 <ul>
