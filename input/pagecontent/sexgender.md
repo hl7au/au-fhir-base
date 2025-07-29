@@ -293,7 +293,7 @@ Notes:
 AU Base supports representation and exchange of [Administrative Gender](https://hl7.org/fhir/R4/patient.html#gender),  i.e. the basic [Patient.gender](https://hl7.org/fhir/R4/patient-definitions.html#Patient.gender) property, in:
 - [AU Base Patient](StructureDefinition-au-patient.html)
 
-In AU Base, the `Patient.gender` value is regarded as a Recorded Sex or Gender. If assertions regarding the nature of the `Patient.gender` value are required, a single instance of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension can be included with these assertions and its `genderElementQualifier` subelement set to a value of "true".
+In AU Base, the `Patient.gender` value is regarded as a Recorded Sex or Gender. If assertions regarding the nature of the `Patient.gender` value are required, a single instance of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension can be included with these assertions and its `genderElementQualifier` element set to "true".
 
 Example: Patient resource with Patient.gender qualified with Person Recorded Sex or Gender extension
 ~~~
