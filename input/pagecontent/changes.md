@@ -24,7 +24,7 @@ This version of current build reinstates profiles not included in the AU Base 5.
 <ul>
   <li>New profiles:
     <ul>
-      <li><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
+      <li><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> (<a href="https://jira.hl7.org/browse/FHIR-46899">FHIR-46899</a>, <a href="https://jira.hl7.org/browse/FHIR-47190">FHIR-47190</a>, <a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
       <li><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>, <a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>)</li>
       <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
       <li><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a> (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>)</li>
