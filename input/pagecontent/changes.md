@@ -16,7 +16,7 @@ The following approved AU Base changes are not yet applied:
 </div>
 
 
-##### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes <a name="breakingchanges"></a>
 This release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
@@ -26,7 +26,7 @@ This release includes breaking changes to the following artefacts. Implementers 
   </li>
  </ul>
 
-##### Not Included
+#### Not Included
 The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM <b>DRAFT 0</b> maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
 <ul>
     <li>Ethnicity extension</li>
@@ -176,7 +176,7 @@ To help implementers, only the more significant changes are listed here.
 
 To help implementers, only the more significant changes are listed here.
 
-##### Breaking Changes
+#### Breaking Changes
 This release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
@@ -206,7 +206,7 @@ This release includes breaking changes to the following artefacts. Implementers 
   </li>
 </ul>
 
-##### Not Included
+#### Not Included
 The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM <b>DRAFT 0</b> maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
   <ul>
       <li>AU Base Service Request</li>
@@ -219,7 +219,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
       <li>Observation Category Codes AU code system</li>
   </ul>
 
-##### Changes in this version
+#### Changes in this version
 To help implementers, only the more significant changes are listed here.
 
 <ul>
@@ -475,7 +475,7 @@ To help implementers, only the more significant changes are listed here.
 
 To help implementers, only the more significant changes are listed here.
 
-**Changes in this version**
+#### Changes in this version
 <ul>
 <li>Changed the canonical URL to http://terminology.hl7.org.au and applied new OIDs to HL7 AU CodeSystems and ValueSets.</li>
 <li>Technical correction to extensions to remove slicing (refactoring).</li>
@@ -725,7 +725,7 @@ To help implementers, only the more significant changes are listed here.
 
 Rebuild of this guide to publish based on FHIR 3.0.2. To help implementers, only the more significant changes are listed here.
 
-**Changes in this version**
+#### Changes in this version
 <ul>
 <li>Added Maturity level (FMM) to profile and extension pages.</li>
 <li>New extensions
