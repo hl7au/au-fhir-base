@@ -1,11 +1,9 @@
 ### Release 6.0.0-ballot
 - Publication date: 2025-07-29
-- Publication status: Ballot
+- Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
 
-The changes in this update are for ballot.
- 
-To help implementers, only the more significant changes are listed here.
+This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html). The changes in this update are for ballot.
 
 <div class="note-to-balloters" markdown="1">
 **AU Base Changes Not Applied**
