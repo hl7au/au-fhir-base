@@ -5,24 +5,11 @@
  
 To help implementers, only the more significant changes are listed here.
 
-<div class="note-to-balloters" markdown="1">
-#### AU Base AllergyIntolerance: Upcoming NCTS ValueSet Availability
-
-Balloters should note that a request to NCTS to add a specific ValueSet with agreed changed terminology defined for binding to <code class=" highlighter-rouge language-plaintext">AllergyIntolerance.reaction.manifestation</code> is pending release.
-Consequently it is not available from NCTS at the time of publishing this ballot implementation guide. 
-
-Balloters should consider the content of the <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/sctau-reference-set-142341000036103">indicative reference set</a> available now that the new NCTS ValueSet will be based on.
-
-Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>.
-</div>
-<div class="note-to-balloters" markdown="1">
-#### AU Base Medication: Upcoming NCTS ValueSet Availability
-Balloters should note that a request to NCTS to add a specific ValueSet with agreed changed terminology defined for binding to <code class=" highlighter-rouge language-plaintext">Medication.ingredient.item[x]</code> is pending release.
-Consequently it is not available from NCTS at the time of publishing this ballot implementation guide. 
-
-Balloters should consider the content of the existing <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> available now that the new NCTS ValueSet will be based on.
-
-Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>.
+<div class="note-to-balloters">
+<b>AU Base Changes Not Applied</b>
+The following approved AU Base changes are not yet applied:
+&bull; Change AU Base AllergyIntolerance: AllergyIntolerance.reaction.manifestation to be bound to the values in the NCTS Clinical manifestation reference set. Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a><br/>
+&bull; AU Base value set AMT Medicinal Product and Substances to be an NCTS managed value set. Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a><br/>
 </div>
 
 #### Reinstated
