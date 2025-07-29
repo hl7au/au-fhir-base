@@ -3,7 +3,7 @@
 
 This ballot is opened during this cycle to solicit feedback and approval from the wider community. AU Base is balloting this cycle to enable completion of a milestone version that provides new material and supports the publication of dependent FHIR implementation guides. 
 
-Key updates and detailed changes between this and prior versions are available in the AU Base [Change Log](changes.html).
+Key updates and changes are shown in the the AU Base [Change Log](changes.html).
 
 The ballot period is 11 August 2025 to 07 September 2025.
 

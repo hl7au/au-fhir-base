@@ -1,5 +1,6 @@
 <div class="note-to-balloters" markdown="1">
 **Upcoming NCTS ValueSet Availability**
+
 Balloters should note that a request to NCTS to add a specific ValueSet with agreed changed terminology defined for binding to <code class="highlighter-rouge language-plaintext">AllergyIntolerance.reaction.manifestation</code> is pending release.
 Consequently it is not available in this guide at the time of publishing.
 
