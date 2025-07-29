@@ -1,10 +1,9 @@
 <div class="note-to-balloters" markdown="1">
 **Upcoming NCTS ValueSet Availability**
 
-Balloters should note that a request to NCTS to add a specific ValueSet with agreed terminology defined for binding to <code class="highlighter-rouge language-plaintext">Medication.ingredient.item[x]</code> is pending release.
-Consequently it is not available in this guide at the time of publishing.
-
-Balloters should consider the content of the existing <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> available now that will be published in NCTS when released.
+Balloters should note that a request has been submitted to NCTS to publish a new value set equivalent to the AU Base value set <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, for binding to <code class="highlighter-rouge language-plaintext">Medication.ingredient.item[x]</code>. At the time of publication, this NCTS value set is not yet available.
+ 
+In the interim, the AU Base value set remains in use and it is expected to be deprecated upon release of the NCTS value set. 
 
 Related JIRA issue with details is <a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>.
 </div>
