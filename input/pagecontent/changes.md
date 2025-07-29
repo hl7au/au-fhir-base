@@ -141,8 +141,8 @@ This version of current build reinstates profiles not included in the AU Base 5.
   </li>
     <li>Changes to <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
     <ul>
-      <li>Changed PractitionerRole.availableTime.availableStartTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
-      <li>Changed PractitionerRole.availableTime.availableEndTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+      <li>Changed PractitionerRole.availableTime.availableStartTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
+      <li>Changed PractitionerRole.availableTime.availableEndTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
     </ul>
   </li>
     <li>Changes to <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>:
