@@ -8,7 +8,6 @@ To help implementers, only the more significant changes are listed here.
 #### Reinstated
 This version of current build reinstates profiles not included in the AU Base 5.0.0 release:
   <ul>
-      <li>AU Base Coverage</li>
       <li>Ethnicity extension</li>
   </ul>
 
@@ -25,17 +24,13 @@ This version of current build reinstates profiles not included in the AU Base 5.
 <ul>
   <li>New profiles:
     <ul>
-      <li><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>)</li>
+      <li><a href="StructureDefinition-au-coverage.html">AU Base Coverage</a> (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
+      <li><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a> (<a href="https://jira.hl7.org/browse/FHIR-46714">FHIR-46714</a>, <a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>)</li>
       <li><a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a> (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>)</li>
       <li><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a> (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>)</li>
     </ul>
   </li>
-  <li>New search parameters:
-    <ul>
-        <li><a href="SearchParameter-servicerequest-supporting-info.html">ServiceRequestSupportingInfo</a> (<a href="https://jira.hl7.org/browse/FHIR-51437">FHIR-51437</a>)</li>
-    </ul>
-  </li>
-   <li>New extensions:
+  <li>New extensions:
     <ul>
         <li><a href="StructureDefinition-medication-strength.html">Medication Strength</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/41">au-fhir-base #41</a>, <a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>)</li>
         <li><a href="StructureDefinition-vaccine-serial-number.html">Vaccine Vial Serial Number</a> (<a href="https://github.com/hl7au/au-fhir-base/issues/712">au-fhir-base #712</a>)</li>
@@ -53,6 +48,11 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>)</li>
     </ul>
   </li>
+  <li>New search parameters:
+    <ul>
+        <li><a href="SearchParameter-servicerequest-supporting-info.html">ServiceRequestSupportingInfo</a> (<a href="https://jira.hl7.org/browse/FHIR-51437">FHIR-51437</a>)</li>
+    </ul>
+  </li>
   <li>Deprecated extensions:
     <ul>
       <li><a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>)</li>
@@ -61,6 +61,9 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-timezone.html">Australian Time Zone </a> (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>)</li>
     </ul>
   </li>
+  <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
+  <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
+  <li>Added sex and gender guidance on Sex Parameter for Clinical Use to the Sex and Gender page (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
   <li>Changes to implement AU FHIR artefact policy to retain FHIR resource spelling in profile name and title (<a href="https://jira.hl7.org/browse/FHIR-46685">FHIR-46685</a>):
     <ul>
       <li><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></li>
@@ -78,104 +81,78 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a></li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-coverage.html">AU Base Coverage</a>:
-    <ul>
-      <li>Changed Coverage.type binding to Coverage Type and Self-Pay Codes - AU Extended (preferred) (<a href="https://jira.hl7.org/browse/FHIR-51457">FHIR-51457</a>).</li>
-    </ul>
-  </li>
-  <li>Changes to <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
+  <li><a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
       <li>DiagnosticReport.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
-    <li>Changes to <a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>: 
+    <li><a href="StructureDefinition-au-diagnosticreport.html">AU Base Diagnostic Report</a>: 
     <ul>
       <li>DiagnosticReport.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
+  <li><a href="StructureDefinition-au-encounter.html">AU Base Encounter</a>:
     <ul>
       <li>Changed Encounter.reasonCode binding to Reason for Encounter (preferred)  (<a href="https://jira.hl7.org/browse/FHIR-50996">FHIR-50996</a>).</li>
       <li>Removed deprecated extension Associated Healthcare Service and added guidance on pre-adoption of FHIR R5 Encounter.participant.actor element  (<a href="https://jira.hl7.org/browse/FHIR-50538">FHIR-50538</a>).</li>
     </ul>
   </li>  
-  <li>Changes to <a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
+  <li><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
       <li>Changed HealthcareService.availableTime.availableStartTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
       <li>Changed HealthcareService.availableTime.availableEndTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-immunization.html">AU Base Immunization</a>:
+  <li><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a>:
     <ul>
       <li>Immunization.extension changed to add Vaccine Vial Serial Number  (<a href="https://jira.hl7.org/browse/FHIR-46317">FHIR-46317</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Updated guidance on use of medication strength representations using the Medication Strength extension and pre-adoption of the FHIR R5 Medication.ingredient.strength[x] element (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
     </ul>
   </li>
-    <li>Changes to <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
+    <li><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
     <ul>
       <li>MedicationRequest.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
- <li>Changes to <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
+ <li><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
       <li>DiagnosticReport.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+  <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Added AU Patient Internal Identifier as an allowed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
       <li>Patient.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
-   <li>Changes to <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
-    <ul>
-       <li>Removed codes (AUAHPRAProfession, AUAHPRARegistration) from value set as these concepts are deprecated (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
-       <li>Added code AHPRA to valueset (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
-	  </ul>
-  </li>
-    <li>Changes to <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
+  <li><a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a>:
     <ul>
       <li>Changed PractitionerRole.availableTime.availableStartTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
       <li>Changed PractitionerRole.availableTime.availableEndTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
     </ul>
-  </li>
-    <li>Changes to <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>:
-      <ul>
-      <li>ServiceRequest.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
-    </ul>
-  </li>
-    <li>Changes to <a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>:
+    <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>:
     <ul>
       <li>Deprecated codes (AUAHPRAProfession, AUAHPRARegistration) from code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
       <li>Added code AHPRA to code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
     </ul>
   </li>
-    <li>Changes to <a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a>:
+    <li><a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a>:
     <ul>
        <li>Removed codes (AUAHPRAProfession, AUAHPRARegistration) from value set as these concepts are deprecated (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
        <li>Added code AHPRA (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
     </ul>
   </li>
-  <li>Changes to <a href="StructureDefinition-medication-strength.html">Medication Strength</a>:
-    <ul>
-      <li>Added usage guidance (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
-    </ul>
-  </li>
-  <li>Changes to <a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a>:
+  <li><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a>:
     <ul>
         <li>Removed OID identifier from code system (<a href="https://jira.hl7.org/browse/FHIR-49933">FHIR-49933</a>).</li>
     </ul>    
   </li>
-  <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
-  <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
-  <li>Added sex and gender guidance on Sex Parameter for Clinical Use to the Sex and Gender page (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
-  <li>Deprecated general guidance on the use of the Ahpra Profession Details and Ahpra Registration Details extensions (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
 </ul>
 
 ### Release 5.0.0
