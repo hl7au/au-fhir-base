@@ -1,6 +1,6 @@
 <div class="note-to-balloters" markdown="1">
-#### Upcoming NCTS ValueSet Availability
-Balloters should note that a request to NCTS to add a specific ValueSet with agreed terminology defined for binding to <code class=" highlighter-rouge language-plaintext">Medication.ingredient.item[x]</code> is pending release.
+**Upcoming NCTS ValueSet Availability**
+Balloters should note that a request to NCTS to add a specific ValueSet with agreed terminology defined for binding to <code class="highlighter-rouge language-plaintext">Medication.ingredient.item[x]</code> is pending release.
 Consequently it is not available in this guide at the time of publishing.
 
 Balloters should consider the content of the existing <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> available now that will be published in NCTS when released.
