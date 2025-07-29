@@ -136,7 +136,8 @@ This version of current build reinstates profiles not included in the AU Base 5.
       <li>Changed PractitionerRole.availableTime.availableStartTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
       <li>Changed PractitionerRole.availableTime.availableEndTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
     </ul>
-    <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>:
+  </li>  
+  <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>:
     <ul>
       <li>Deprecated codes (AUAHPRAProfession, AUAHPRARegistration) from code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
       <li>Added code AHPRA to code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
