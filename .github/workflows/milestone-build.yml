@@ -6,6 +6,7 @@ on:
       - '!**-ballot'
       - '!**-preview'
       - '!**-snapshot'
+      - '!**-draft'
 
 
 permissions:
@@ -14,7 +15,6 @@ permissions:
   
 jobs:
   build:
-    #runs-on: ubuntu-latest
     runs-on: self-hosted
     # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
     container: 
@@ -90,13 +90,4 @@ jobs:
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
 
 
-    #- name: Configure AWS credentials from GitHub OIDC
-    #  uses: aws-actions/configure-aws-credentials@v4
-    #  with:
-    #    role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
-    #    aws-region: ap-southeast-2
-        
-    #- name: copy back to staging - background
-    #  run: |
-    #     aws s3 sync /webroot s3://action-runner-working --only-show-errors
          
