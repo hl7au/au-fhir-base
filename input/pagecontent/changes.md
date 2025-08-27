@@ -11,7 +11,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Ethnicity extension</li>
   </ul>
 
-  ### Release 6.0.0-ballot
+### Release 6.0.0-ballot
 - Publication date: 2025-07-29
 - Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
