@@ -284,7 +284,7 @@ The following value sets form part of localised requirements (i.e. are reference
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a></td>
     <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
-    <td>AU Base</td>
+    <td>NCTS</td>
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a></td>
