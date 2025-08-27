@@ -282,6 +282,11 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a></td>
+    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a></td>
     <td><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td>
     <td>NCTS</td>
@@ -764,6 +769,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1">Immunisation Route of Administration</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
