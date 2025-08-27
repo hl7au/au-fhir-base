@@ -27,7 +27,7 @@ This change log documents the significant updates and resolutions implemented fr
   </li>
  </ul>
 
- #### Not Included
+#### Not Included
 The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0.0-ballot/generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM DRAFT 0 maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) where these artefacts may be available if retained in the specification.
   <ul>
       <li>Ethnicity extension</li>
