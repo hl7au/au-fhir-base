@@ -74,6 +74,12 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
       <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-timezone.html">Australian Time Zone </a> (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>)</li>
     </ul>
   </li>
+  <li>Deprecated value sets:
+    <ul>
+      <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/ValueSet-au-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)
+      </li>
+    </ul>
+  </li>
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
   <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
   <li>Added sex and gender guidance on Sex Parameter for Clinical Use to the Sex and Gender page (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
@@ -125,6 +131,8 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Updated guidance on use of medication strength representations using the Medication Strength extension and pre-adoption of the FHIR R5 Medication.ingredient.strength[x] element (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
+      <li>Medication.ingredient binding changed to use NCTS Medication Ingredient value set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).
+      </li>
     </ul>
   </li>
     <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
