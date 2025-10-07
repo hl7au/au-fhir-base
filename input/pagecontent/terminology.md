@@ -67,6 +67,11 @@ The following value sets form part of localised requirements (i.e. are reference
         <td>AU Base</td>
     </tr>
     <tr>
+        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
       <td><a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a></td>
       <td>AU Base</td>
@@ -483,6 +488,12 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></td>
         <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-rsg-source.html">AU Recorded Sex or Gender Source</a></td>
+        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
