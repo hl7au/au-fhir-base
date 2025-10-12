@@ -13,7 +13,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
 
 #### Changes in This Version
 <ul>
-  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure and AU Base ServiceRequest to <a href="generalguidance.html">General Guidance</a> page (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
+  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest on the <a href="generalguidance.html">General Guidance</a> page (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
 </ul>  
 
 ### Release 6.0.0-ballot
