@@ -533,3 +533,145 @@ Example: Patient resource with interpreter required and language is known
   ]
 }
 ~~~
+
+### Representing Body Site, Which May Include Laterality
+The guidance below describes how to represent a primary finding/procedure/service code together with body site and, where applicable, laterality. This guidance applies to Condition, Procedure and ServiceRequest. 
+
+The guidance addresses the following scenarios:
+1. Primary finding/procedure/service code with body site and laterality as a pre-coordinated code.
+1. Primary finding/procedure/service code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+1. Coded body site with laterality and separate primary finding/procedure/service code.
+1. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure/service code.
+
+To support consistent representation the following is recommended for each case. This approach can be applied to Condition, Procedure, and ServiceRequest.
+
+1\. Primary finding/procedure/service `code` only (pre-coordinated code including body site and laterality)
+* For systems that have pre-coordinated coding describing a concept fully:
+  * use only the `code` element to contain information on body site with laterality.
+
+Example: Condition resource cellulitis of right knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "10633311000119108",
+        "display" : "Cellulitis of right knee"
+      },
+      "text" : "Cellulitis of right knee"
+    ]
+  }
+  ...
+}
+~~~
+
+2\. Primary finding/procedure/service `code` only (pre-coordinated code including body site without laterality and separate laterality qualifier)
+* For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept including body site (without laterality).
+    * `code.text` is used to describe concept fully, this can include information on recorded laterality e.g. ', Right'.
+  * in this case laterality is not expressed in coded form.
+
+
+Example: Condition resource showing coded condition that includes body site, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "13301002",
+        "display" : "Cellulitis of knee"
+      },
+      "text" : "Cellulitis of knee, Right"
+    ]
+  }
+  ...
+}
+~~~
+
+3\. Coded `body site` with laterality and separate primary finding/procedure/service `code`.
+* For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
+  * use the code element:
+    * `code.coding` contains the primary concept alone (no body site or laterality).
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element `bodySite` may be supplied containing the coded body site with laterality.
+
+
+Example: Condition resource showing coded condition, coded body site that includes laterality
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Right Knee"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "6757004",
+        "display" : "Structure of right knee region"
+      }],
+      "text" : "Right Knee"
+    }
+  ]
+  ...
+}
+~~~
+
+
+4\. Coded `body site` without laterality and separate coded laterality qualifier and a primary finding/procedure/service `code`.
+* For systems that have pre-coordinated coding describing primary concept without body site and a body site without laterality is as separate coded value, and laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept alone (no body site or laterality).
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element bodySite may be supplied containing:
+    * `bodySite.coding` contains the coded body site without laterality.
+    * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
+
+
+Example: Condition resource with coded condition, coded body site, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Knee, Right"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "72696002",
+        "display" : "Knee region structure"
+      }],
+      "text" : "Knee, Right"
+    }
+  ]
+  ...
+}
+~~~
