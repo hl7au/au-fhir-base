@@ -773,7 +773,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet//reason-for-encounter-1">Reason for Encounter</a>,
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason for Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a>, 
