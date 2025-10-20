@@ -18,6 +18,11 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>
     </ul>
   </li>
+  <li>Changes to all AU Base code systems and value sets:
+  <ul>
+    <li><a href="CodeSystem-task-business-status.html">Task Business Status</a>: multiple term changes to code, display and definition content.</li>
+  </ul>
+</li>
 </ul>
 
 ### Release 6.0.0-ballot
