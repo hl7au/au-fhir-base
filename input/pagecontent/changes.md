@@ -7,12 +7,18 @@ To help implementers, only the more significant changes are listed here.
 
 #### Reinstated
 This version of current build reinstates profiles not included in the AU Base 6.0.0-ballot release:
-  <ul>
-      <li>Ethnicity extension</li>
-  </ul>
+<ul>
+  <li>Ethnicity extension</li>
+</ul>
 
 #### Changes in this version
 <ul>
+  <li>Deprecated extensions:
+    <ul>
+      <li><a href="StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
+    </ul>
+  </li>
+
   <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
     <ul>
       <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>
