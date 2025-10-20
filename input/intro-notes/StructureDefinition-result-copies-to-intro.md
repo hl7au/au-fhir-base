@@ -1,3 +1,1 @@
-<div class="stu-note" markdown="1">
-Implementers are advised to take note that the use of this extension might be replaced by the use of the more comprehensive <a href="https://www.hl7.org/fhir/r4/communicationrequest.html">CommunicationRequest</a> resource type.
-</div>
+<p class="stu-note"  markdown="1">Implementers are advised to take note that it is recommended that the use of this extension can be replaced by the use of the more comprehensive <a href="https://www.hl7.org/fhir/r4/communicationrequest.html">CommunicationRequest</a> resource type. Specific profiles for CommunicationRequest for results copies to recipients are being developed in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project.</p>
