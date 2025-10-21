@@ -7,9 +7,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="deprecated">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
-      <valueMarkdown value="Implementers are recommended that the use of this extension can be replaced by the more comprehensive [AU CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type. Specific profiles on CommunicationRequest for results copies to recipients are being developed in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project."/>
-    </extension>
-  </valueCode>
+        <valueMarkdown value="This extension is deprecated in AU Base as it is preferred that the [CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type be used for copy-to recipient communication."/>
+      </extension>
+    </valueCode>
   </extension>
   <url value="http://hl7.org.au/fhir/StructureDefinition/result-copies-to" />
   <name value="ResultCopiesTo" />
@@ -29,7 +29,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Deprecated: Result copies to" />
-      <definition value="An additional recipient who is indicated on the service request to receive a copy of the result." />
+      <definition value="This extension is deprecated in AU Base as it is preferred that the [CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type be used for copy-to recipient communication. An additional recipient who is indicated on the service request to receive a copy of the result." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
