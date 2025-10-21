@@ -535,9 +535,8 @@ Example: Patient resource with interpreter required and language is known
 ~~~
 
 ### Representing Body Site, Which May Include Laterality
-The guidance below describes how to represent a primary finding/procedure/service code together with body site and, where applicable, laterality. This guidance applies to AU Base Condition, AU Base Procedure and AU Base ServiceRequest. 
+When exchanging Procedure, Condition, or ServiceRequest resources conformant to AU Base, there may be a need to represent a relevant body site and associated laterality using CodeableConcept elements. In FHIR, body site and associated laterality can be recorded in various ways, and implementers are encouraged to consider the guidance on the following scenarios when implementing:
 
-The guidance addresses the following scenarios:
 1. Primary finding/procedure/service code with body site and laterality as a pre-coordinated code.
 1. Primary finding/procedure/service code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
 1. Coded body site with laterality and separate primary finding/procedure/service code.
