@@ -47,6 +47,11 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>NCTS</td>
     </tr>
     <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a></td>
+      <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a></td>
       <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
       <td>AU Base</td>
@@ -139,7 +144,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">Clinical Finding</a></td>
       <td>
-        <a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>, 
         <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>,
@@ -747,7 +751,8 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="https://www.healthterminologies.gov.au/CodeSystem/32506021000036107-20240630">SNOMED Clinical Terms (Australian extension)</a></td>
         <td>
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>,
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>, 
             <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
@@ -774,7 +779,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet//reason-for-encounter-1">Reason for Encounter</a>,
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason for Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a>, 

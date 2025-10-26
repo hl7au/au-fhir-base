@@ -11,6 +11,16 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Ethnicity extension</li>
   </ul>
 
+#### Changes in This Version
+<ul>
+  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
+  <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
+    <ul>
+      <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>
+    </ul>
+  </li>
+</ul>
+
 ### Release 6.0.0-ballot
 - Publication date: 2025-07-29
 - Publication status: Ballot for Working Standard
@@ -18,7 +28,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
  
 This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html). The changes in this update are for ballot.
 
-##### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes <a name="breakingchanges"></a>
 <ul>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
@@ -99,7 +109,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
       <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></li>
       <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a></li>
     </ul>
-  </li>
+  </li>  
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
