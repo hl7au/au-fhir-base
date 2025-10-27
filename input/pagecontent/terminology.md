@@ -748,7 +748,6 @@ The following code systems are referenced by the value sets listed above.
         <td>
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>, 
-            <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>,  
