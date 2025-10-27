@@ -13,10 +13,22 @@ This version of current build reinstates profiles not included in the AU Base 6.
 
 #### Changes in This Version
 <ul>
+  <li>Deprecated value sets:
+    <ul>
+      <li><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)
+      </li>
+    </ul>
+  </li>
   <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
   <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
     <ul>
       <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>     
+      <li>Changed Medication.ingredient binding to Medication Ingredient (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).
+      </li>
     </ul>
   </li>
 </ul>
@@ -83,13 +95,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
       <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-associated-healthcareservice.html">Associated Healthcare Service</a> (<a href="https://jira.hl7.org/browse/FHIR-50538">FHIR-50538</a>)</li>
       <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-timezone.html">Australian Time Zone </a> (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>)</li>
     </ul>
-  </li>
-  <li>Deprecated value sets:
-    <ul>
-      <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/ValueSet-au-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)
-      </li>
-    </ul>
-  </li>
+  </li>  
   <li>Added general guidance on the use of SNOMED CT (<a href="https://jira.hl7.org/browse/FHIR-48307">FHIR-48307</a>).</li>
   <li>Added general guidance on representing communication preferences for a patient or related person (<a href="https://jira.hl7.org/browse/FHIR-50961">FHIR-50961</a>).</li>
   <li>Added sex and gender guidance on Sex Parameter for Clinical Use to the Sex and Gender page (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
@@ -140,9 +146,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
   </li>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Updated guidance on use of medication strength representations using the Medication Strength extension and pre-adoption of the FHIR R5 Medication.ingredient.strength[x] element (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>
-      <li>Medication.ingredient binding changed to use NCTS Medication Ingredient value set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).
-      </li>
+      <li>Updated guidance on use of medication strength representations using the Medication Strength extension and pre-adoption of the FHIR R5 Medication.ingredient.strength[x] element (<a href="https://jira.hl7.org/browse/FHIR-50945">FHIR-50945</a>).</li>     
     </ul>
   </li>
     <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:

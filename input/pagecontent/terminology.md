@@ -50,12 +50,7 @@ The following value sets form part of localised requirements (i.e. are reference
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a></td>
       <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
       <td>NCTS</td>
-    </tr>
-    <tr>
-      <td><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a></td>
-      <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
-      <td>AU Base</td>
-    </tr>
+    </tr>   
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a></td>
       <td><a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
