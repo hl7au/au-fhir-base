@@ -12,6 +12,9 @@ AU Core defines a set of conformance requirements that enforce a set of ‘minim
 
 {% include dependency-table.xhtml %}
 
+Terminology parameters used for publication are:
+{% include expansion-params.xhtml %}
+
 ### How to Read This Guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
