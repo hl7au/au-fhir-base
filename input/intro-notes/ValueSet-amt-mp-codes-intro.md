@@ -1,1 +1,1 @@
-<p class="stu-note">This ValueSet is deprecated in AU Base as it has been replaced by the NCTS <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a> ValueSet.</p>
+<p class="stu-note">This value set is deprecated in AU Base as it has been replaced by the NCTS <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a> value set for binding in the <a href="StructureDefinition-au-medication.html">AU Base Medication</a> profile at Medication.ingredient.item[x].</p>

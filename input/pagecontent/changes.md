@@ -27,7 +27,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
   </li>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>     
-      <li>Changed Medication.ingredient binding to Medication Ingredient (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).
+      <li>Changed Medication.ingredient binding to Medication.ingredient.item[x] (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).
       </li>
     </ul>
   </li>
