@@ -10,6 +10,6 @@
 - The [CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type is the preferred approach to implement copy-to recipients for results associated with a ServiceRequest.
 - See the [Representing Body Site, Which May Include Laterality](generalguidance.html#representing-body-site-which-may-include-laterality) section for guidance on representing a relevant body site and associated laterality.
 - Copy-to recipients for results associated with a ServiceRequest can be represented using the [CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type. 
-   - 'CommunicationRequest.about' references the specific ServiceRequest to copy results for.
-   - 'CommunicationRequest.recipient' references copy-to recipient details.
+   - `CommunicationRequest.about` references the specific ServiceRequest to copy results for.
+   - `CommunicationRequest.recipient` references copy-to recipient details.
 
