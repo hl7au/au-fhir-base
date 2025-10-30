@@ -8,3 +8,6 @@
 - This profile supports the sex, gender, and related concept of Sex Parameter for Clinical Use:
    - When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sexgender.html) and the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
 - The [CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type is the preferred approach to implement copy-to recipients for results associated with a ServiceRequest.
+- Copy-to recipients for results associated with a ServiceRequest can be represented using the [CommunicationRequest](https://www.hl7.org/fhir/r4/communicationrequest.html) resource type. 
+   - 'CommunicationRequest.about' references the specific ServiceRequest to copy results for.
+   - 'CommunicationRequest.recipient' references copy-to recipient details.
