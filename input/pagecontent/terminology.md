@@ -492,7 +492,7 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-rsg-source.html">AU Recorded Sex or Gender Source</a></td>
+        <td><a href="Codesystem-au-digital-health-service.html">AU Digital Health Service</a></td>
         <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>

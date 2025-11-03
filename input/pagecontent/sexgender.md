@@ -612,7 +612,7 @@ Example: Patient resource with recorded gender from the Healthcare Identifiers S
           "valueCodeableConcept" : {
             "coding" : [
               {
-                "system" : "http://terminology.hl7.org.au/CodeSystem/rsg-source",
+                "system" : "http://terminology.hl7.org.au/CodeSystem/au-digital-health-service",
                 "code" : "au-hi"
               }
             ]
