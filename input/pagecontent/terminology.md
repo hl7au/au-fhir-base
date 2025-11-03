@@ -47,10 +47,10 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>NCTS</td>
     </tr>
     <tr>
-      <td><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a></td>
-      <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
-      <td>AU Base</td>
-    </tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a></td>
+      <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
+      <td>NCTS</td>
+    </tr>   
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a></td>
       <td><a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
@@ -144,7 +144,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">Clinical Finding</a></td>
       <td>
-        <a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a>, 
         <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>,
@@ -283,6 +282,11 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a></td>
+    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
+    <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a></td>
     <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td>
     <td>NCTS</td>
 </tr>
@@ -753,8 +757,8 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="https://www.healthterminologies.gov.au/CodeSystem/32506021000036107-20240630">SNOMED Clinical Terms (Australian extension)</a></td>
         <td>
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>, 
-            <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>,
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>,  
@@ -775,11 +779,12 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1">Immunisation Route of Administration</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet//reason-for-encounter-1">Reason for Encounter</a>,
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason for Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3">Reason Vaccine Not Administered</a>, 

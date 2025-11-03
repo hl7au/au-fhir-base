@@ -137,7 +137,7 @@ Defined in this implementation guide are profiles for business identifiers for u
           
 Business identifiers will typically be a national identifier (ABN, Medicare Provider, IHI), registry / exchange service identifier (ETP, eRx), or local identifier (MRN, Placer Identifier).
 
-This guide publishes and maintains rules on how to exchange various business identifiers in Australia as a set of Identifier data type profiles, e.g. [AU PBS Prescriber Number](/StructureDefinition-au-pbsprescribernumber.html). 
+This guide publishes and maintains rules on how to exchange various business identifiers in Australia as a set of Identifier data type profiles, e.g. [AU PBS Prescriber Number](StructureDefinition-au-pbsprescribernumber.html). 
 
 While national and registry / exchange service identifiers will define the namespace to use when sending an identifier, a local identifier requires the organisation to define their own namespace when exchanging identifiers they manage.
 
@@ -531,5 +531,146 @@ Example: Patient resource with interpreter required and language is known
       "preferred" : true
     }
   ]
+}
+~~~
+
+### Representing Body Site, Which May Include Laterality
+When exchanging Procedure, Condition, or ServiceRequest resources conformant to AU Base, there may be a need to represent a relevant body site and associated laterality using CodeableConcept elements. In FHIR, body site and associated laterality can be recorded in various ways, and implementers are encouraged to consider the guidance on the following scenarios when implementing:
+
+1. Primary finding/procedure/service code with body site and laterality as a pre-coordinated code.
+1. Primary finding/procedure/service code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.
+1. Coded body site with laterality and separate primary finding/procedure/service code.
+1. Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure/service code.
+
+To support consistent representation the following is recommended for each case. This approach can be applied to Condition, Procedure, and ServiceRequest.
+
+1\. Primary finding/procedure/service `code` only (pre-coordinated code including body site and laterality)
+* For systems that have pre-coordinated coding describing a concept fully:
+  * use only the `code` element to contain information on body site with laterality.
+
+Example: Condition resource cellulitis of right knee
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "10633311000119108",
+        "display" : "Cellulitis of right knee"
+      },
+      "text" : "Cellulitis of right knee"
+    ]
+  }
+  ...
+}
+~~~
+
+2\. Primary finding/procedure/service `code` only (pre-coordinated code including body site without laterality and separate laterality qualifier)
+* For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept including body site (without laterality).
+    * `code.text` is used to describe concept fully, this can include information on recorded laterality e.g. ', Right'.
+  * in this case laterality is not expressed in coded form.
+
+
+Example: Condition resource showing coded condition that includes body site, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "13301002",
+        "display" : "Cellulitis of knee"
+      },
+      "text" : "Cellulitis of knee, Right"
+    ]
+  }
+  ...
+}
+~~~
+
+3\. Coded `body site` with laterality and separate primary finding/procedure/service `code`.
+* For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
+  * use the code element:
+    * `code.coding` contains the primary concept alone (no body site or laterality).
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element `bodySite` may be supplied containing the coded body site with laterality.
+
+
+Example: Condition resource showing coded condition, coded body site that includes laterality
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Right Knee"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "6757004",
+        "display" : "Structure of right knee region"
+      }],
+      "text" : "Right Knee"
+    }
+  ]
+  ...
+}
+~~~
+
+
+4\. Coded `body site` without laterality and separate coded laterality qualifier and a primary finding/procedure/service `code`.
+* For systems that have pre-coordinated coding describing primary concept without body site and a body site without laterality is as separate coded value, and laterality qualifier recorded separately e.g. left, right:
+  * use the `code` element:
+    * `code.coding` contains the primary concept alone (no body site or laterality).
+    * `code.text` describes the concept fully, this can include information on recorded body site and laterality as text.
+  * optionally, coded element bodySite may be supplied containing:
+    * `bodySite.coding` contains the coded body site without laterality.
+    * `bodySite.text` describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.
+
+
+Example: Condition resource with coded condition, coded body site, laterality as text only
+~~~
+{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Knee, Right"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "72696002",
+        "display" : "Knee region structure"
+      }],
+      "text" : "Knee, Right"
+    }
+  ]
+  ...
 }
 ~~~
