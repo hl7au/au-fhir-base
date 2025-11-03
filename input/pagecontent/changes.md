@@ -7,15 +7,31 @@ To help implementers, only the more significant changes are listed here.
 
 #### Reinstated
 This version of current build reinstates profiles not included in the AU Base 6.0.0-ballot release:
-  <ul>
-      <li>Ethnicity extension</li>
-  </ul>
-
-#### Changes in this version
 <ul>
+  <li>Ethnicity extension</li>
+</ul>
+
+#### Changes in This Version
+<ul>
+  <li>Deprecated extensions:
+    <ul>
+      <li><a href="StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
+    </ul>
+  </li>
+  <li>Deprecated value sets:
+    <ul>
+      <li><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)</li>
+    </ul>
+  </li>
+  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
   <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
     <ul>
       <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>     
+      <li>Changed Medication.ingredient.item[x] binding to Medication Ingredient (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-task-business-status.html">Task Business Status</a>: 
@@ -32,7 +48,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
  
 This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html). The changes in this update are for ballot.
 
-##### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes <a name="breakingchanges"></a>
 <ul>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>

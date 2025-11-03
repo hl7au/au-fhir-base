@@ -6,3 +6,5 @@
    - body site information is to be handled as a separate resource (e.g. to identify and track separately) instead of an inline coded element in `Procedure.bodySite`. 
 - This profile supports the sex, gender, and related concept of Sex Parameter for Clinical Use:
    - When exchanging concepts of sex or gender, refer to the guidance in [Sex and Gender](sexgender.html) and the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/).
+- See the [Representing Body Site, Which May Include Laterality](generalguidance.html#representing-body-site-which-may-include-laterality) section for guidance on representing a relevant body site and associated laterality.
+
