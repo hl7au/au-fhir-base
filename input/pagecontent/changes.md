@@ -36,7 +36,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
   </li>
   <li><a href="CodeSystem-task-business-status.html">Task Business Status</a>: 
     <ul>
-      <li>Updated codes, displays and definitions to make explicit whether a status applies to the task or the request (<a href="https://jira.hl7.org/browse/FHIR-51893">FHIR-51893</a>, <a href="https://jira.hl7.org/browse/FHIR-51894">FHIR-51894</a>).</li>
+      <li>Updated codes, displays and definitions in code system to make explicit whether a status applies to the task or the request (<a href="https://jira.hl7.org/browse/FHIR-51893">FHIR-51893</a>, <a href="https://jira.hl7.org/browse/FHIR-51894">FHIR-51894</a>).</li>
     </ul>
   </li>
 </ul>
