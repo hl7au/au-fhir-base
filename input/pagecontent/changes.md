@@ -23,6 +23,17 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)</li>
     </ul>
   </li>
+
+  <li>New code systems:
+      <ul>
+        <li><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
+      </ul>
+    </li>
+  <li>New value sets:
+    <ul>
+      <li><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
+    </ul>
+  </li>
   <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
   <li><a href="https://hl7.org.au/fhir/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
     <ul>
@@ -32,6 +43,24 @@ This version of current build reinstates profiles not included in the AU Base 6.
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>     
       <li>Changed Medication.ingredient.item[x] binding to Medication Ingredient (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).
+      </li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+    <ul>     
+      <li>Added invariant inv-pat-6 to RSG.source to bind AU Recorded Sex or Gender Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).
+      </li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
+    <ul>     
+      <li>Added invariant inv-pra-5 to RSG.source to bind AU Recorded Sex or Gender Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).
+      </li>
+    </ul>
+  </li>
+   <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
+    <ul>     
+      <li>Added invariant inv-relper-5 to RSG.source to bind AU Recorded Sex or Gender Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).
       </li>
     </ul>
   </li>
