@@ -17,10 +17,13 @@ This version of current build reinstates profiles not included in the AU Base 6.
     <ul>
       <li><a href="CodeSystem-communication-request-category.html">Communication Request Category</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
     </ul>
-  </li>
-  <li>Deprecated code systems:
     <ul>
-     <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+      <li><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
+    </ul>
+  </li>
+  <li>New value sets:
+    <ul>
+      <li><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
     </ul>
   </li>
   <li>Deprecated extensions:
@@ -28,20 +31,14 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li><a href="StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
     </ul>
   </li>
+  <li>Deprecated code systems:
+    <ul>
+     <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+    </ul>
+  </li>
   <li>Deprecated value sets:
     <ul>
       <li><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)</li>
-    </ul>
-  </li>
-
-  <li>New code systems:
-      <ul>
-        <li><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
-      </ul>
-    </li>
-  <li>New value sets:
-    <ul>
-      <li><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
     </ul>
   </li>
   <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
