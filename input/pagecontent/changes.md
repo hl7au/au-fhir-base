@@ -57,7 +57,6 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Applied technical correction to invariants inv-pat-1, inv-pat-2, inv-pat-3, inv-pat-4, and inv-pat-5 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
       <li>Added invariant inv-pat-6 to RSG.source to bind AU Recorded Sex or Gender Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
-    </ul>
   </li>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
