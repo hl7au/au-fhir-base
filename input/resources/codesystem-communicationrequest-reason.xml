@@ -7,11 +7,18 @@
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="deprecated">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
+        <valueMarkdown value="This code system is deprecated in AU Base as work undertaken in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project does no longer require these concepts for differentiating communication request reasons."/>
+      </extension>
+    </valueCode>
   </extension>  
   <url value="http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason"/>
   <name value="CommunicationRequestReason"/>
   <title value="Communication Request Reason"/>
-  <status value="active"/>
+  <status value="retired"/>
   <experimental value="false"/>
   <description value="The Communication Request Reason code system defines concepts that represent the reason codes for a communication request."/>
   <caseSensitive value="true"/>

@@ -13,6 +13,16 @@ This version of current build reinstates profiles not included in the AU Base 6.
 
 #### Changes in This Version
 <ul>
+  <li>New code systems:
+    <ul>
+      <li><a href="CodeSystem-communication-request-category.html">Communication Request Category</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+    </ul>
+  </li>
+  <li>Deprecated code systems:
+    <ul>
+     <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+    </ul>
+  </li>
   <li>Deprecated extensions:
     <ul>
       <li><a href="StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
