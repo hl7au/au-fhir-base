@@ -56,6 +56,11 @@ The following value sets form part of localised requirements (i.e. are reference
       <td><a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
       <td>NCTS</td>
     </tr>
+        <tr>
+        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
     <tr>
         <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
         <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
@@ -63,11 +68,6 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>
     <tr>
         <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
-        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
-        <td>AU Base</td>
-    </tr>
-    <tr>
-        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
         <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
         <td>AU Base</td>
     </tr>
@@ -490,14 +490,14 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></td>
-        <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
+        <td><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System</a></td>
+        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System</a></td>
-        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
+        <td><a href="CodeSystem-rsg-source-document-type.html">AU Recorded Sex or Gender Source Document Type</a></td>
+        <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
