@@ -495,6 +495,7 @@ AU Base supports representation and exchange of the Recorded Sex or Gender (RSG)
 
 RSG is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. In AU Base:
 - the type element is constrained to be [AU Recorded Sex or Gender Type](ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
+- the source element is constrained to be [AU Recorded Sex or Gender (RSG) Source](ValueSet-rsg-source.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 - the sourceDocument element is constrained to be [AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 - the jurisdiction element is constrained to be [Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
@@ -569,6 +570,73 @@ Example: Patient resource with recorded gender from a passport
   ...
 }  
 ~~~
+
+Example: Patient resource with recorded gender from the Healthcare Identifiers Service
+~~~
+{
+  "resourceType" : "Patient",
+    ...
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+      "extension" : [
+        {
+          "url" : "value",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://hl7.org/fhir/administrative-gender",
+                "code" : "female"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "type",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "46098-0"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "effectivePeriod",
+          "valuePeriod" : {
+            "start" : "2020-07-01"
+          }
+        },
+        {
+          "url" : "source",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org.au/CodeSystem/au-digital-health-source-system",
+                "code" : "au-hi"
+              }
+            ]
+          }
+        },
+        {
+          "url" : "jurisdiction",
+          "valueCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "urn:iso:std:iso:3166",
+                "code" : "AU",
+                "display" : "Australia"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  ...
+}  
+~~~
+
 
 ### Sex Assigned at Birth
 AU Base supports representation and exchange of the Sex Assigned at Birth data element (as defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)) in:
