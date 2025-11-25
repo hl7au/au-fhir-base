@@ -56,6 +56,11 @@ The following value sets form part of localised requirements (i.e. are reference
       <td><a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
       <td>NCTS</td>
     </tr>
+        <tr>
+        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
+        <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+        <td>AU Base</td>
+    </tr>
     <tr>
         <td><a href="ValueSet-rsg-source-document-type.html">AU Recorded Sex or Gender (RSG) Source Document Type</a></td>
         <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
@@ -481,6 +486,12 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-au-v3-ActCode.html">ActCode AU</a></td>
         <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>,  <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System</a></td>
+        <td><a href="ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
