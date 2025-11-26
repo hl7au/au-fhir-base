@@ -63,6 +63,7 @@ jobs:
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
+        mkdir ./webroot
         mv publish-setup.json ./webroot/
         curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
     
