@@ -1,4 +1,4 @@
-### Release 5.1.0-preview
+### Release 6.0.0-preview
 - Publication date: 26 November 2025
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
