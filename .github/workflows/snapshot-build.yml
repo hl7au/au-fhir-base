@@ -60,10 +60,13 @@ jobs:
         repository: hl7au/ig-registry
         path: ig-registry
 
+    - name: Create directories
+      run: |
+        mkdir -p webroot/fhir
+  
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
-        mkdir -p ./webroot
         mv publish-setup.json ./webroot/
         curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
     
@@ -75,10 +78,6 @@ jobs:
       run: |
           echo "Generating Publish for  Aubase IG..."
           java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
-
-    - name: Create directories
-      run: |
-        mkdir -p webroot/fhir
 
     - name: Download feeds
       run: |
