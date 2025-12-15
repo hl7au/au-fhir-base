@@ -1,0 +1,94 @@
+name: Milestone - Au base IG Profiles publish->go-publish
+
+on:
+  push:
+    tags:
+      - "**"
+      - '!**-ballot'
+      - '!**-preview'
+      - '!**-snapshot'
+      - '!**-draft'
+
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+  
+jobs:
+  build:
+    runs-on: self-hosted
+    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
+    container: 
+      image: hl7fhir/ig-publisher-base  
+      volumes:
+        - /webroot:/webroot
+            
+    steps:
+
+    # to save load time can build custom image with dependencies and push to docker hub
+    - name: install aws cli
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip -q awscliv2.zip
+        ./aws/install --update
+    
+    - name: Get the tag name
+      id: get_tag
+      run: echo "##[set-output name=tag;]${GITHUB_REF#refs/tags/}"
+
+    - name: Checkout Publications Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/publications
+        
+    - name: Download past versions
+      run: |
+        # aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
+        ln -s /webroot webroot   
+        mv publish-setup.json ./webroot/
+        
+    - name: Checkout AU base Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/au-fhir-base
+        path: hl7au/au-fhir-base
+        ref: ${{ steps.get_tag.outputs.tag }} # explicit, not usually since the default is to checkout the initiating commit
+
+    - name: Checkout IG History Template Repository
+      uses: actions/checkout@v4
+      with:
+        repository: HL7/fhir-ig-history-template
+        path: fhir-history
+    
+    - name: Checkout IG Registry Repository
+      uses: actions/checkout@v4
+      with:
+        repository: hl7au/ig-registry
+        path: ig-registry
+
+    - name: Update Publisher
+      run: |
+        echo "Updating Publisher"
+        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
+         
+    - name: Basic Publish for Aubase
+      run: |
+          echo "Generating Publish for  Aubase IG..."
+          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+      
+    - name: Download package-list.json
+      run: |
+        rm -rf hl7au/au-fhir-base/package-list.json
+        URL="https://hl7.org.au/fhir"
+        FULL_URL="$URL/package-list.json"
+        curl --output webroot/fhir/package-list.json --url $FULL_URL
+      
+    - name: Generate Package Registry
+      run: |
+        java -jar input-cache/publisher.jar -generate-package-registry webroot
+      
+    - name: Run Aubase Go Publisher build
+      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
+
+
+         

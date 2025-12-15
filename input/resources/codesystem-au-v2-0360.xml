@@ -21,26 +21,26 @@
 	<valueSet value="http://terminology.hl7.org.au/ValueSet/v2-0360" />
 	<compositional value="false" />
 	<versionNeeded value="true" />
-	<count value="2" />
+	<count value="3" />
 	<content value="complete" />
+	<property>
+		<code value="status" />
+		<uri value="http://hl7.org/fhir/concept-properties#status" />
+		<description value="A property that indicates the status of the concept. One of active, experimental,
+		deprecated, retired" />
+		<type value="code" />
+	</property>
+	<property>
+		<code value="deprecationDate" />
+		<uri value="http://hl7.org/fhir/concept-properties#deprecationDate" />
+		<description value="The date at which a concept was deprecated. Concepts that are deprecated but not
+		inactive can still be used, but their use is discouraged" />
+		<type value="dateTime" />
+	</property>
 	<concept>
-		<code value="AUAHPRAProfession" />
-		<display value="AHPRA Profession" />
-		<definition
-			value="An Australian Health Practitioner Regulation Authority (Ahpra) profession." />
-		<designation>
-			<use>
-				<system value="http://snomed.info/sct" />
-				<code value="900000000000013009" />
-			</use>
-			<value value="Ahpra Profession" />
-		</designation>
-	</concept>
-	<concept>
-		<code value="AUAHPRARegistration" />
-		<display value="AHPRA Registration" />
-		<definition
-			value="An Australian Health Practitioner Regulation Authority (Ahpra) registration." />
+		<code value="AHPRA" />
+		<display value="Ahpra Registration" />
+		<definition value="An Australian Health Practitioner Regulation Authority (Ahpra) Registration." />
 		<designation>
 			<use>
 				<system value="http://snomed.info/sct" />
@@ -48,5 +48,45 @@
 			</use>
 			<value value="Ahpra Registration" />
 		</designation>
+	</concept>
+	<concept>
+		<code value="AUAHPRAProfession" />
+		<display value="AHPRA Profession" />
+		<definition value="An Australian Health Practitioner Regulation Authority (Ahpra) profession. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Profession Details extension. Use the qualification type term AHPRA in association with an Ahpra registration." />
+		<designation>
+			<use>
+				<system value="http://snomed.info/sct" />
+				<code value="900000000000013009" />
+			</use>
+			<value value="Ahpra Profession" />
+		</designation>
+		<property>
+			<code value="status" />
+			<valueCode value="deprecated" />
+		</property>
+		<property>
+			<code value="deprecationDate" />
+			<valueDateTime value="2025-07-23" />
+		</property>
+	</concept>
+	<concept>
+		<code value="AUAHPRARegistration" />
+		<display value="AHPRA Registration" />
+		<definition value="An Australian Health Practitioner Regulation Authority (Ahpra) registration. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Registration Details extension. Use the qualification type term AHPRA in association with an Ahpra registration." />
+		<designation>
+			<use>
+				<system value="http://snomed.info/sct" />
+				<code value="900000000000013009" />
+			</use>
+			<value value="Ahpra Registration" />
+		</designation>
+		<property>
+			<code value="status" />
+			<valueCode value="deprecated" />
+		</property>
+		<property>
+			<code value="deprecationDate" />
+			<valueDateTime value="2025-07-23" />
+		</property>
 	</concept>
 </CodeSystem>

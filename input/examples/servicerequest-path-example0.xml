@@ -3,23 +3,19 @@
     <meta>
         <profile value="http://hl7.org.au/fhir/StructureDefinition/au-servicerequest"/>
     </meta>
-    <!-- Multiple "result copies to" with different resource type and a text only (display) entry-->    
-    <extension url="http://hl7.org.au/fhir/StructureDefinition/result-copies-to">
-        <valueReference>
-            <reference value="Practitioner/example4"/>
-            <display value="Dr Robert Smith"/>            
-        </valueReference>
-    </extension>
-    <extension url="http://hl7.org.au/fhir/StructureDefinition/result-copies-to">
-        <valueReference>
-            <reference value="Organization/example3"/>
-            <display value="Devonport Family Medicine Clinic"/>    
-        </valueReference>
-    </extension>  
-    <extension url="http://hl7.org.au/fhir/StructureDefinition/result-copies-to">
-        <valueReference>
-            <display value="Dr Jo Traveller, PO Box 123456, Port Douglas 4877, Qld."/>    
-        </valueReference>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+                    <code value="female-typical"/>
+                    <display value="Apply female-typical setting or reference range"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="comment">
+            <valueString value="Apply female-type setting for Haematology, Lipids, LFT, TSH, T4 pathology tests"/>
+        </extension>
     </extension>
     <identifier>
         <type>
@@ -47,7 +43,7 @@
         <text value="Full blood count"/>
     </code>
     <subject>
-        <reference value="Patient/example1"/>
+        <reference value="Patient/example-sex-and-gender"/>
     </subject>
     <authoredOn value="2022-04-02"/>
     <requester>

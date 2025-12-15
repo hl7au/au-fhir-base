@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Patient xmlns="http://hl7.org/fhir">
     <id value="example-sex-and-gender"/>
     <!--   This purpose of this example is to demonstrate the use of sex and gender elements:
@@ -138,6 +140,34 @@
                     <display value="Australia"/>
                 </coding>
             </valueCodeableConcept>
+        </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+                    <code value="male-typical"/>
+                    <display value="Apply male-typical setting or reference range"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="comment">
+            <valueString value="Apply male-type setting for all radiology tests"/>
+        </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse">
+        <extension url="value">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"/>
+                    <code value="female-typical"/>
+                    <display value="Apply female-typical setting or reference range"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="comment">
+            <valueString value="Apply female-type setting for Lipids, LFT, TSH, T4 pathology tests"/>
         </extension>
     </extension>
     <identifier>
