@@ -13,21 +13,24 @@ Australian realm IGs and implementers are expected to use an AU Base defined con
 
 HL7 AU Base, as the Australian extension of the base FHIR standard, defines:
 * Extensions for local concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
-* Terminology e.g communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
-* Search parameters to support Australian use concepts 
-* Australian address and Australian time zone profile 
-* Identifier profiles e.g. National patient and provider identifiers
-* Base resource profiles e.g. AU Base Patient
-* Generic use case profiles, where there is no existing project to undertake the work e.g. AU Medicines List, AU Base Diagnostic Imaging Result (definitional constraints; no conformance or support obligations)
-Example resource instances
+* Terminology for use in an Australian context
+  * concepts unique to Australia e.g communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
+  * usage localised to Australia e.g. nationally endorsed clinical reference sets represented as value sets
+* Search parameters to support Australian use concepts where there is no native FHIR search parameter
+* Profiles for use in an Australian context:
+  * Definitional data type profiles e.g. Australian address, Australian time zone, Identifier such as National patient and provider identifiers
+  * Base resource profiles e.g. AU Base Patient, AU Base MedicationStatement
+  * Generic use case profiles, where there is no existing project to undertake the work e.g. AU Medicines List, AU Base Diagnostic Imaging Result (definitional constraints; no conformance or support obligations)
 
-#### Profiling Approach
+#### Base Resource Profile Approach
 
-AU Base resource profiles are intentionally designed to
-* identify the nationally recognised concepts relevant for use in the Australian context - so there's a lot of extensions (add this 2nd class to the approach below)
-* aren't restrictive - don't enforce any particular use case's perspective of 'minimum'; this is a 'localised' version of the underlying FHIR resource, so it swaps out international for local (where they exist) and add in additional local concepts (where they exist)
+Base resource profiles are intentionally designed to *extend* the core FHIR specification resource to:
+* identify the nationally recognised concepts relevant for use for that FHIR resource in the Australian context, e.g. extentions, applicable identifiers, localised terminology
+
+Base resource profiles are not restrictive - these profiles do not enforce any particular use case's perspective of 'minimum' or 'desirable'; this is a 'localised' version of the underlying FHIR resource, e.g. where applicable the international terminology is replaced with the localised terminology (where it exists).
 
 This approach manifests as the following representation outcomes in this guide, as follows:
+* Extensions: TBD on when it is explicitly modelled, that where an existing extension is defined as part of the core FHIR specification it is used, that only where a local use concept does not have an applicable core FHIR extension is it defined 
 * Cardinality: most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
 * Must Support and Obligations: _Must Support_ flags or Obligation extensions are not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
 * Terminology Binding: where possible, elements are bound to the nationally recognised localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), use case projects that add in additional concepts identified as needed for use in implementation.
@@ -37,6 +40,8 @@ This approach manifests as the following representation outcomes in this guide, 
 * Extensions: .....
 * type choices: ... note the ignore warning to be triggered
 
+#### Generic Use Case Profiling Approach
+
 Generic use case profiles... then moved to the project when one exists. For example the Australian profiles for vitals were moved to AU Core, Diagnostic Request is moved to AU eRewuesting project.
 
 ##### Data Type Profiling Approach
@@ -44,6 +49,14 @@ TBD
 
 
 #### Extension Approach
+Acts like the AU extension pack, in that any extension intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
+
+Practically this means for example that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base.
+
+#### Search Parameter Approach
+Acts like the AU extension to the FHIR search registry, in that any search parameter intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
+
+Practically this means for example that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or extensions is to be done in AU Base, and the downstream IG will 'profile' the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
 
 
 ### Maturity Levels 
