@@ -1,4 +1,4 @@
-### Intent of this Implementation Guide
+### Approach of this Implementation Guide
 
 AU Base is designed to serve as a base layer within the broader context of FHIR implementations in an Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in particular use cases. It provides an additional set of localised options in addition to what is available in the FHIR standard including Australian extensions and Australian terminology. AU Base provides a source of truth for nationally agreed concepts in addition to the FHIR, such as Medicare card number or Australian Indigenous Status.
 
@@ -9,7 +9,7 @@ This becomes more useful as the number of specific use case implementation guide
 
 Australian realm IGs and implementers are expected to use an AU Base defined concept where one exists instead of redefining locally. For a directly implementable usage of AU Base for a general level of capability it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. AU Core introduces a required level of element support that give a core set of capability that can be implemented and assumed.
 
-#### Scope of AU Base
+#### Scope of AU Base FHIR Artefacts
 
 HL7 AU Base, as the Australian extension of the base FHIR standard, defines:
 * Extensions for local concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
@@ -37,7 +37,6 @@ This approach manifests as the following representation outcomes in this guide, 
   ** majority of bindings are preferred, only in two cases is extensible applied (the underlying binding is extensible and we can't relax, or )
   ** talk about additional bindings
 * Slice Constraints: in this guide, slicing is avoided as much as possible. Slicing limits downstream ...  choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
-* Extensions: .....
 * type choices: ... note the ignore warning to be triggered
 
 #### Generic Use Case Profiling Approach
@@ -57,7 +56,6 @@ Practically this means for example that AU Core will not define extensions - AU 
 Acts like the AU extension to the FHIR search registry, in that any search parameter intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
 
 Practically this means for example that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or extensions is to be done in AU Base, and the downstream IG will 'profile' the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
-
 
 ### Maturity Levels 
 These levels used for HL7 AU FHIR Implementation Guides are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
