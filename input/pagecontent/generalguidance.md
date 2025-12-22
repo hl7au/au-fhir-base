@@ -52,6 +52,9 @@ Acts like the AU extension pack, in that any extension intended for use in an Au
 
 Practically this means for example that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base.
 
+Any extension intended for use in a healthcare context that is not unique to Australia is to be defined in the core FHIR extension pack, fallback is AU Base if the submission is not accepted.
+
+
 #### Search Parameter Approach
 Acts like the AU extension to the FHIR search registry, in that any search parameter intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
 
