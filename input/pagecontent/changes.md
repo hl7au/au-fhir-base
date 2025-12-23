@@ -18,7 +18,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li><a href="CodeSystem-communication-request-category.html">Communication Request Category</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
     </ul>
     <ul>
-      <li><a href="CodeSystem-au-digital-health-source-system.html">AU Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
+      <li><a href="CodeSystem-au-digital-health-source-system.html">Australian Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
     </ul>
   </li>
   <li>New value sets:
