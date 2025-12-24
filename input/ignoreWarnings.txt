@@ -11,9 +11,16 @@ A definition could not be found for Canonical URL 'https://healthterminologies.g
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 
-# === Known CodeSystems published as draft ===
+# === Known CodeSystems published as draft/experimental ===
 Reference to draft CodeSystem https://www.iana.org/time-zones|20210124
 Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+Reference to experimental CodeSystem http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0|20130626
+
+# === Known ValueSet published as draft/experimental ===
+Reference to draft ValueSet http://hl7.org/fhir/ValueSet/additional-instruction-codes|4.0.1
+Reference to draft ValueSet http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1
+The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
+
 
 # === Implicit ValueSets not defined ===
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/location-physical-type'
@@ -40,6 +47,9 @@ A definition for CodeSystem 'https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0'
 A definition for CodeSystem 'https://example.com/labs' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated 
 
+# === Tooling error logged ===
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
 # === Known no namespace defined or not accessible === 
 No definition could be found for URL value 'Binary/f016'
 No definition could be found for URL value 'http://hl7.org.au/id/abn'
@@ -51,7 +61,6 @@ No definition could be found for URL value 'http://hl7.org.au/id/gnafidentifier'
 No definition could be found for URL value 'http://hl7.org.au/id/nata-accreditation'
 No definition could be found for URL value 'http://hl7.org.au/id/nata-site'
 No definition could be found for URL value 'http://hl7.org.au/id/npio'
-No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/centrelink-customer-reference-number'
@@ -75,3 +84,29 @@ No definition could be found for URL value 'http://ns.medical-objects.com.au/id/
 No definition could be found for URL value 'http://pbs.gov.au/identifier/manufacturer'
 No definition could be found for URL value 'https://uatsmd.connectingcare.com/cc.smd/SealedMessageDelivery.svc'
 No definition could be found for URL value 'urn:oid:1.2.36.146.595.217.0.1'
+
+# === Expected as PBS terminology is not published ===
+Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'
+Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
+
+# === Correct invariant warning
+Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply (extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value.all(memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')))' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+
+# === No canonical pinning ===
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure' to 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure|5.2.0'
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0'
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' to 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace|5.2.0'
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName' to 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName|5.2.0'
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired' to 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired|5.2.0'
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthTime'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthTime' to 'http://hl7.org/fhir/StructureDefinition/patient-birthTime|5.2.0'
+
+
+# === Future deprecation information ===
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
+
+# === Inherited information ===
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+
