@@ -2,14 +2,21 @@
 
 ### Approach of this Implementation Guide
 
-AU Base is designed to serve as a base layer within the broader context of FHIR implementations in an Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in particular use cases. It provides an additional set of localised options in addition to what is available in the FHIR standard including Australian extensions and Australian terminology. AU Base provides a source of truth for nationally agreed concepts in addition to the FHIR, such as Medicare card number or Australian Indigenous Status.
+AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in an Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in particular use cases. It defines an additional set of localised options in addition to what is available in the FHIR standard for use in Australia including extensions (and associated search parameters), terminology, and profiles. AU Base is the source of truth for nationally agreed local concepts such as Australian Medicare card number or Australian Indigenous Status.
 
-This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and agreed at a national-level without the need for a separate project. Implementers working with a common concept that has national usage are encouraged to submit for consideration for adoption into AU Base. AU Base supports national agreement of the definition of concepts in FHIR and does not require a new project, e.g. AU eRequesting or AU Patient Summary, to standardise a new concept for adoption in Australia.
+This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and agreed at a national-level without the need for a separate project or to specify conformance requirements for a particular use case (i.e. Must Support, Obligation, Actors). 
 
-This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration translation tasks.
-This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information into and out of multiple domains of interest is addressed.
+Implementers working with a common concept that has national usage are encouraged to submit for adoption into AU Base. AU Base supports national agreement of the definition of concepts in FHIR and does not require a new project, e.g. AU eRequesting or AU Patient Summary, to standardise a new concept for adoption in Australia.
 
-Australian realm IGs and implementers are expected to use an AU Base defined concept where one exists instead of redefining locally. For a directly implementable usage of AU Base for a general level of capability it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. AU Core introduces a required level of element support that give a core set of capability that can be implemented and assumed.
+This alignment allows general processing and simpler exchange of information from one implementation guide domain to another without the need for extensive integration translation tasks. This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information into and out of multiple domains of interest is addressed.
+
+For representation and use of local concepts, Australian realm IGs and implementers are expected to (in order of precedence):
+* use the core FHIR extension, search parameter, or operation where available, otherwise
+* use the AU Base defined extension, search parameter, or operation where available, otherwise
+* use the domain-specific IG defined extension, search parameter, or operation, otherwise
+* define locally, the necessary extensions, search parameters, and operations in an IG and make available
+
+For a directly implementable usage of AU Base for a general level of capability it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
 
 #### Scope of AU Base FHIR Artefacts
 
@@ -18,26 +25,24 @@ HL7 AU Base, as the Australian extension of the base FHIR standard, defines:
 * Terminology for use in an Australian context
   * concepts unique to Australia e.g communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
   * usage localised to Australia e.g. nationally endorsed clinical reference sets represented as value sets
-* Search parameters to support Australian use concepts where there is no native FHIR search parameter
+* Search parameters to support Australian use concepts, where there is no native FHIR search parameter
 * Profiles for use in an Australian context:
   * Definitional data type profiles e.g. Australian address, Australian time zone, Identifier such as National patient and provider identifiers
-  * Base resource profiles e.g. AU Base Patient, AU Base MedicationStatement
-  * Generic use case profiles, where there is no existing project to undertake the work e.g. AU Medicines List, AU Base Diagnostic Imaging Result (definitional constraints; no conformance or support obligations)
+  * Base resource profiles (e.g. AU Base Patient, AU Base MedicationStatement)
+  * Generic use case profiles (e.g. AU Medicines List, AU Base Diagnostic Imaging Result), where there is no existing project to undertake the work
 
- Actors or support requirements associated with specific actors are not defined in AU Base. This IG does not describe the usage or support requirements of specific resources for any particular use case. 
+ Actors or support requirements associated with actors are not defined in AU Base. This IG does not prescribe the usage or support requirements for any particular use case. 
 
 
 #### Extension Approach
-Any extension intended for use in a healthcare context that is not unique to Australia is to be defined in the core FHIR extension pack, the fallback is AU Base or other IG if that submission is not accepted.
-
-AU Base acts like an AU FHIR Extension pack. Any extension defined for use in an Australian healthcare context, that is not restricted to one IG, is defined in AU Base. 
- 
 Extensions are to be defined in AU Base when:
 * there is no available extension in the core FHIR extension pack
 * it is not suitable/achievable to define the extension in the core FHIR extension pack
 * the use is not specific to a single use case (i.e. specific to a single IG)
 
 This approach means, for example, that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base or the core FHIR extension pack.
+
+Any extension intended for use in a healthcare context that is not unique to Australia is to be defined in the core FHIR extension pack, the fallback is to define the extension in AU Base if the submission to the core FHIR extension pack is not accepted.
 
 Extensions defined in AU Base do not prescribe particular support requirements for specific actors, i.e. there is no usage of Must Support or Obligation. Extensions are modelled only to define the concept. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
