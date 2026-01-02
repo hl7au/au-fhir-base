@@ -53,10 +53,35 @@ AU Base acts like the AU extension to the FHIR search registry. Search parameter
 * there is no available search parameter in the core FHIR specification
 * the use is not specific to searching a downstream IG extension
 
+AU Base defined search parameters are definitional, and intend to be as expansive as possible to avoid limiting downstream use case decisions. For this reason, search parameters are defined as open and aspects such as chaining, modifiers, comparators are not specified (i.e. that means that these are MAY).
+
 This approach means for example that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or core FHIR extensions is to be done in AU Base, and the downstream IG profiles the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
 
 #### Terminology Approach
-TBD
+AU Base acts like the AU extension to the core FHIR terminology (including HL7 Terminology (THO)). Terminology is defined in AU Base when:
+* there is no available extension in the core FHIR extension pack
+* it is not suitable/achievable to define the extension in the core FHIR extension pack
+* the use is not specific to a single use case or domain (i.e. specific to a single IG)
+
+Value sets are defined in AU Base when:
+* there is no equal core FHIR value set (including in HL7 Terminology (THO)) available
+* the content of the value set is not predominantly SNOMED CT or LOINC*<sup>1</sup> 
+
+*<sup>1</sup>TBD note on how we do the work in the work group but publish via NCTS not AU Base*
+
+##### Terminology Selection
+Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined e.g. at least supplying the standardised LOINC coding for FHIR vitals observations or complying with extensible and required bindings defined for elements in the core FHIR specification.
+
+When selecting terminology for use in an Australia heathcare context some rules of thumb apply:
+* SNOMED CT-AU is to be treated as the default the preferred terminology for clinical concepts (e.g. AllergyIntolerance.reaction.manifestation) and should always be considered
+  * If a nationally agreed clinical reference set is available that should be considered as the starting position for the set of values if SNOMED CT-AU is agreed to be the terminology bound to in the HL7 AU specification
+* A peak body endorsed terminology may override the above point, e.g. RCPA endorsed pathology reporting terminology is LOINC
+  * The endorsed set of values, where available, should be considered as the starting position for the set of values e.g. for pathology reporting 
+* For Australian specific demographic concepts e.g. ADF Veteran Status or Australian Indigenous Status or Australian States and Territories, the Australian applicable standard is used. This often resulting in a ‘new’ FHIR code system to publish that terminology. That 'new' FHIR code system would be defined in AU Base. 
+  * Which standard is the applicable standard depends on the meaning and use of the element:
+    * If the driver is reporting then the ABS and/or AIHW concepts are typically preferred, and refer to current standard for Person and provider identification in healthcare
+    * For ‘other’ concepts (e.g. Not clinical and Not Australian specific demographics) the applicable standard is used where it is available preferencing the international and FHIR implemented terminology for that concept. Examples of this type of element would be the terminology for country codes or language codes or MIME types.
+* where reasonable use the widely implemented, international terminology and add to it to support new/changed needs. Only where a concept is Australian specific is the long term solution to create and manage an Australian code system.
 
 #### Base Resource Profile Approach
 
@@ -75,7 +100,7 @@ Therefore, when modelling AU Base resource profiles:
 * Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
 * Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR specification or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that dcontribute additional concepts as needed for use in implementation.
   ** by default, bindings specified in AU Base are [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to indicate the recommended AU terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context. 
-  ** talk about additional bindings
+  ** where multiple terminologies are recognised for use in the Australian healthcare context, the set of terminologies are described using the additional bindings extension, e.g. 
 * Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules and this is to be avoided at the AU Base level. Slicing, where present, is used to define a real world concept that cannot be meaningfully modelled using another profileing technique, and is left open to allow for flexibility.
 * type choices: ... note the ignore warning to be triggered
 
