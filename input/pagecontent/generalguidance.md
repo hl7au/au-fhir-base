@@ -58,16 +58,23 @@ AU Base defined search parameters are definitional, and intend to be as expansiv
 This approach means for example that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or core FHIR extensions is to be done in AU Base, and the downstream IG profiles the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
 
 #### Terminology Approach
-AU Base acts like the AU extension to the core FHIR terminology (including HL7 Terminology (THO)). Terminology is defined in AU Base when:
-* there is no available extension in the core FHIR extension pack
-* it is not suitable/achievable to define the extension in the core FHIR extension pack
-* the use is not specific to a single use case or domain (i.e. specific to a single IG)
+AU Base acts like the AU extension to the core FHIR terminology (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
+
+Code systems are defined in AU Base when:
+* the needed concepts cannot be added to an existing code system, including where no available code system is published
+  * it is not suitable/achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
+  * the use of the code system is not specific to a single use case or domain (i.e. specific to a single IG)
+
+Sometimes, only additional concepts are required rather than entirely new code systems. Where possible, individual concepts are:
+* added to an existing code system, and where possible
+  * submitted to the applicable international code systems if the concept is not Australian-specific
 
 Value sets are defined in AU Base when:
-* there is no equal core FHIR value set (including in HL7 Terminology (THO)) available
+* there is no available core FHIR value set (including in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)) that matches the set of values for usage agreed by the responsible work group
 * the content of the value set is not predominantly SNOMED CT or LOINC*<sup>1</sup> 
+* the use is not specific to a single use case or domain (i.e. specific to a single IG)
 
-*<sup>1</sup>TBD note on how we do the work in the work group but publish via NCTS not AU Base*
+*<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).*
 
 ##### Terminology Selection
 Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined e.g. at least supplying the standardised LOINC coding for FHIR vitals observations or complying with extensible and required bindings defined for elements in the core FHIR specification.
@@ -83,11 +90,18 @@ When selecting terminology for use in an Australia heathcare context some rules 
     * For ‘other’ concepts (e.g. Not clinical and Not Australian specific demographics) the applicable standard is used where it is available preferencing the international and FHIR implemented terminology for that concept. Examples of this type of element would be the terminology for country codes or language codes or MIME types.
 * where reasonable use the widely implemented, international terminology and add to it to support new/changed needs. Only where a concept is Australian specific is the long term solution to create and manage an Australian code system.
 
+##### Data Type Profiling Approach
+Data type profiles are definitional and used to describe a concept relevant for usage in the Australian healthcare context. It is preferred to use a Data Type profile over a new extension; this typically means the data type that is profiled is:
+* complex e.g. Dosage, Identifier, Address. 
+* includes a fixed distinguishing part e.g. Identifier.type or Address.country
+
+[Business Identifiers](generalguidance.html#business-identifiers) defined in AU Base are defined as well formed identifiers and include data quality requirements such as invariants, cardinality, and required terminology.
+
 #### Base Resource Profile Approach
 
 AU Base Resource Profiles define FHIR structures that localise core concepts, including terminology, for use in an Australian context. The purpose of each base resource profile is to provide national level agreement on core localised concepts. AU Base is intentionally designed to be a dependency for all AU implementation guides, and for the AU Base resource profiles to be derived from.
 
-These profiles:
+AU Base resource profiles:
 * do not force conformance to core localised concepts or prescribe usage in particular concepts
 * are only constrained (e.g. cardinality or terminology) where the constraint is agreed to applicable across national-level usage to avoid limiting downstream use case decisions
 
@@ -108,8 +122,6 @@ We don't profile Observation or Device because of modelling layers to derivation
 
 Intentionally modelled to encourage derivation as the profiling approach for downstream.
 
-
-
 #### Generic Use Case Profile Approach
 
 Generic use case profiles... then moved to the project when one exists. For example the Australian profiles for vitals were moved to AU Core, Diagnostic Request is moved to AU eRewuesting project.
@@ -118,9 +130,6 @@ definition of use case but not minimum support for the use case.
 
 Generic Use Case resource profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 
-##### Data Type Profiling Approach
-TBD
-Data type are definition, noting that Identifiers are also expected to include the well formed requirements. 
 
 ### Maturity Levels 
 These levels used for HL7 AU FHIR Implementation Guides are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
