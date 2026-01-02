@@ -16,16 +16,16 @@ For representation and use of local concepts, Australian realm IGs and implement
 * use the domain-specific IG defined extension, search parameter, or operation, otherwise
 * define locally, the necessary extensions, search parameters, and operations in an IG and make available
 
-For a directly implementable usage of AU Base for a general level of capability it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
+For a directly implementable usage of AU Base it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
 
 #### Scope of AU Base FHIR Artefacts
 
 HL7 AU Base, as the Australian extension of the base FHIR standard, defines:
 * Extensions for local concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
+* Search parameters to support Australian use concepts, where there is no native FHIR search parameter
 * Terminology for use in an Australian context
   * concepts unique to Australia e.g communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
   * usage localised to Australia e.g. nationally endorsed clinical reference sets represented as value sets
-* Search parameters to support Australian use concepts, where there is no native FHIR search parameter
 * Profiles for use in an Australian context:
   * Definitional data type profiles e.g. Australian address, Australian time zone, Identifier such as National patient and provider identifiers
   * Base resource profiles (e.g. AU Base Patient, AU Base MedicationStatement)
@@ -35,30 +35,28 @@ HL7 AU Base, as the Australian extension of the base FHIR standard, defines:
 
 
 #### Extension Approach
-Extensions are to be defined in AU Base when:
+AU Base acts like the AU extension to the core FHIR extension pack. Extensions are defined in AU Base when:
 * there is no available extension in the core FHIR extension pack
 * it is not suitable/achievable to define the extension in the core FHIR extension pack
-* the use is not specific to a single use case (i.e. specific to a single IG)
+* the use is not specific to a single use case or domain (i.e. specific to a single IG)
 
 This approach means, for example, that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base or the core FHIR extension pack.
 
 Any extension intended for use in a healthcare context that is not unique to Australia is to be defined in the core FHIR extension pack, the fallback is to define the extension in AU Base if the submission to the core FHIR extension pack is not accepted.
 
-Extensions defined in AU Base do not prescribe particular support requirements for specific actors, i.e. there is no usage of Must Support or Obligation. Extensions are modelled only to define the concept. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
+Extensions defined in AU Base do not prescribe particular support requirements or usage for specific actors, do not include Must Support or Obligation. Extensions are modelled only to define the concept,. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
-Typically, extensions in AU Base are defined as open, i.e. allowing additional elements to be defined via adding extensions into an extension which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
-
-#### Terminology Approach
-TBD
+Typically, extensions in AU Base are defined as open, i.e. allowing additional elements to be defined via adding extensions into an extension which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the extension is not closed, and applications have to decide how to handle the extension, and content not described by the extension.
 
 #### Search Parameter Approach
-AU Base acts like the AU extension to the FHIR search registry, in that any search parameter intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
-
-Extensions are to be defined in AU Base when:
+AU Base acts like the AU extension to the FHIR search registry. Search parameters are defined in AU Base when:
 * there is no available search parameter in the core FHIR specification
 * the use is not specific to searching a downstream IG extension
 
 This approach means for example that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or core FHIR extensions is to be done in AU Base, and the downstream IG profiles the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
+
+#### Terminology Approach
+TBD
 
 #### Base Resource Profile Approach
 
