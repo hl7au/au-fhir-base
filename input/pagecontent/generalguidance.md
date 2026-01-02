@@ -60,16 +60,21 @@ TBD
 
 #### Base Resource Profile Approach
 
-AU Base Resource Profiles define FHIR structures that localises core concepts, including terminology, for use in an Australian context. The purpose of each base resource profile is to provide national level agreement on core localised concepts. These profiles do not force conformance to core localised concepts or prescribe usage in particular concepts. 
+AU Base Resource Profiles define FHIR structures that localise core concepts, including terminology, for use in an Australian context. The purpose of each base resource profile is to provide national level agreement on core localised concepts. AU Base is intentionally designed to be a dependency for all AU implementation guides, and for the AU Base resource profiles to be derived from.
+
+These profiles:
+* do not force conformance to core localised concepts or prescribe usage in particular concepts
+* are only constrained (e.g. cardinality or terminology) where the constraint is agreed to applicable across national-level usage to avoid limiting downstream use case decisions
 
 This profile approach enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.
 
-AU Base is intentionally designed to be a dependency for all AU implementation guides, and for its base resource profiles to be defined from. Therefore, when modelling base resource profiles:
+Therefore, when modelling AU Base resource profiles:
+* Open: profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 * Extensions: exentensions are explicitly modelled in the profile to identify the nationally agreed extension to use for a particular concept relevant to the Australian healthcare context.
-* Cardinality: cardinality is only constrained where there is a universal agreement that for all use cases in the Australian healthcare context the cardinality restriction needs to be applied (e.g. legislative requirements). Otherwise elements will inherit the cardinality as defined in the core FHIR specification or extension pack to avoid limiting downstream use case decisions.
-* Must Support and Obligations: _Must Support_ or Obligation is not present; for similar reasons to cardinality there is no assertion of required support for any of the elements profiled in this guide.
-* Terminology Binding: elements either inherit the core FHIR specified terminology, or where possible, are bound to the nationally recognised localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), use case projects that add in additional concepts identified as needed for use in implementation.
-  ** majority of bindings are preferred, only in two cases is extensible applied (the underlying binding is extensible and we can't relax, or )
+* Cardinality: cardinality is only constrained where there is a universal agreement that for all use cases in the Australian healthcare context the cardinality restriction needs to be applied (e.g. legislative requirements).
+* Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
+* Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR specification or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that dcontribute additional concepts as needed for use in implementation.
+  ** by default, bindings specified in AU Base are [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to indicate the recommended AU terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context. 
   ** talk about additional bindings
 * Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules and this is to be avoided at the AU Base level. Slicing, where present, is used to define a real world concept that cannot be meaningfully modelled using another profileing technique, and is left open to allow for flexibility.
 * type choices: ... note the ignore warning to be triggered
@@ -78,7 +83,6 @@ We don't profile Observation or Device because of modelling layers to derivation
 
 Intentionally modelled to encourage derivation as the profiling approach for downstream.
 
-Base resource profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 
 
 #### Generic Use Case Profile Approach
