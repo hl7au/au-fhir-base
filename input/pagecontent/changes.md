@@ -205,7 +205,6 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
  <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a>:
     <ul>
       <li>Changed Observation.effective[x] type to remove type constraint (<a href="https://jira.hl7.org/browse/FHIR-49189">FHIR-49189</a>).</li>
-      <li>DiagnosticReport.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>: 
