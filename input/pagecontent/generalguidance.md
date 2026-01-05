@@ -9,6 +9,7 @@ AU Base defines an additional set of localised options in addition to what is av
 This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and agreed at a national-level without the need for a separate project or to specify conformance requirements for a particular use case. 
 
 For representation and use of local concepts, Australian realm IGs and implementers are expected to (in order of precedence):
+* comply with AU Base and AU Core
 * use the core FHIR extension, search parameter, or operation where available, otherwise
 * use the AU Base defined extension, search parameter, or operation where available, otherwise
 * use the domain-specific IG (e.g. AU Patient Summary or AU eRequesting) defined extension, search parameter, or operation, otherwise
@@ -114,12 +115,13 @@ Therefore, when modelling AU Base resource profiles:
 * Open: profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 * Extensions: exentensions are explicitly modelled in the profile to identify the nationally agreed extension to use for a particular concept relevant to the Australian healthcare context.
 * Cardinality: cardinality is only constrained where there is a universal agreement that for all use cases in the Australian healthcare context the cardinality restriction needs to be applied (e.g. legislative requirements).
-* Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
 * Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR specification or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that dcontribute additional concepts as needed for use in implementation.
   ** by default, bindings specified in AU Base are [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to indicate the recommended AU terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context. 
   ** where multiple terminologies are recognised for use in the Australian healthcare context, the set of terminologies are described using the additional bindings extension, e.g. 
 * Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules and this is to be avoided at the AU Base level. Slicing, where present, is used to define a real world concept that cannot be meaningfully modelled using another profileing technique, and is left open to allow for flexibility.
-* type choices: types are restricted only where there is national agreement for usage in Australia. Defined data type profiles suitable for usage in a particular element are added. Data type profiles are used instead of slicing where possible.
+* Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Additionally, AU Base data type profiles suitable for usage for that particular element are added. 
+* Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
+* References: references are not constrained to avoid limiting the opportunities for downstream IGs and applications to define their own business rules.
 
 Some FHIR resource types are not profiled in AU Base as Base Resource Profiles as they are too generic including Observation and Device. In this case AU Core or a downstream IG will profile the core FHIR resource directly.
 
