@@ -1,16 +1,17 @@
 == Suppressed Messages ==
-# === ERROR 01: Tooling error logged ===
-No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
-# === ERROR 02: Expected as PBS terminology is not published ===
+# === ERROR 01: Validation reports unknown PBS codes because PBS terminology is not published in FHIR format. These codes are expected and do not indicate an error. This error is accepted in AU Base 5.0.0. ===
 Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item
 
-# === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. These warnings were accepted in AU Base 5.0.0 ===
+# === ERROR 02: Tooling error logged. These warnings were accepted in AU Base 6.0.0. ===
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. These warnings were accepted in AU Base 5.0.0. ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# === WARNING 02: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Base. These warnings were accepted in AU Base 5.0.0 ===
+# === WARNING 02: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Base. These warnings were accepted in AU Base 5.0.0. ===
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -41,17 +42,23 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === WARNING 03: Information and warnings are present as the IG Publisher is unable to resolve National Clinical Terminology Service (NCTS) profiles. At this time no npm package for the NCTS IG is available and there is no timeline for resolution. ===
+# === WARNING 03: Warnings are present as the IG Publisher is unable to resolve National Clinical Terminology Service (NCTS) profiles. At this time no npm package for the NCTS IG is available and there is no timeline for resolution. These errors were accepted in AU Base 5.0.0. ===
 A definition could not be found for Canonical URL 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4'
 A definition could not be found for Canonical URL 'https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4'
 
-# === WARNING 04: Known ValueSet published as experimental === 
+# === WARNING 04: Known ValueSet published as experimental. These warnings were accepted in AU Base 5.0.0. === 
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3' which is experimental, but this structure is not labeled as experimental
 
-# === WARNING 05: Implicit ValueSets not defined ===
+# === WARNING 05: This warning was accepted in AU Base 5.0.0. ===
+Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
+
+# === WARNING 06: Correct invariant warning. These warnings were accepted in AU Base 5.0.0. === 
+Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply (extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value.all(memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')))' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
+
+# === WARNING 07: Implicit ValueSets not defined. These warnings were accepted in AU Base 6.0.0. ===
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/location-physical-type'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/au-digital-health-source-system'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/location-type'
@@ -66,7 +73,7 @@ A definition could not be found for Canonical URL 'http://terminology.hl7.org.au
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/au-recorded-sex-or-gender-type'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/task-business-status'
 
-# === WARNING 06: Known CodeSystem URLs without definitions ===
+# === WARNING 08: Known CodeSystem URLs without definitions. These warnings were accepted in AU Base 6.0.0. ===
 A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/smd-interfaces' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://example.com/generic-packages' could not be found, so the code cannot be validated
@@ -75,11 +82,10 @@ A definition for CodeSystem 'https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0'
 A definition for CodeSystem 'https://example.com/labs' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated 
 
-# === WARNING 07: ===
-Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
+# === WARNING 09: This warning was accepted in AU Base 6.0.0. ===
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0-ci-build' because the code system http://pbs.gov.au/code/item was not found
 
-# === WARNING 08: Known no namespace defined or not accessible === 
+# === WARNING 10: These warnings are expected due to canonical URLs having no definition. These warnings were accepted by FHIR WG. This information is accepted in AU Base 6.0.0. ===
 No definition could be found for URL value 'Binary/f016'
 No definition could be found for URL value 'http://hl7.org.au/id/abn'
 No definition could be found for URL value 'http://hl7.org.au/id/acn'
@@ -114,10 +120,7 @@ No definition could be found for URL value 'http://pbs.gov.au/identifier/manufac
 No definition could be found for URL value 'https://uatsmd.connectingcare.com/cc.smd/SealedMessageDelivery.svc'
 No definition could be found for URL value 'urn:oid:1.2.36.146.595.217.0.1'
 
-# === WARNING 09: Correct invariant warning ===
-Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply (extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value.all(memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')))' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
-
-# === WARNING 10: Known unpinned canonical references ===
+# === WARNING 11: Known unpinned canonical references. This information is accepted in AU Base 6.0.0. ===
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure' to 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' to 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace|5.2.0'
@@ -125,20 +128,21 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired' to 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthTime'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthTime' to 'http://hl7.org/fhir/StructureDefinition/patient-birthTime|5.2.0'
 
-# === INFORMATION 01: Known CodeSystems published as draft/experimental ===
+# === INFORMATION 01: Known CodeSystems published as draft/experimental. This information is accepted in AU Base 6.0.0. ===
 Reference to draft CodeSystem https://www.iana.org/time-zones|20210124
 Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
 Reference to experimental CodeSystem http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0|20130626
 
-# === INFORMATION 02: Known ValueSet published as draft ===
+# === INFORMATION 02: Known ValueSet published as draft. This information is accepted in AU Base 6.0.0. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/additional-instruction-codes|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1
 
-# === INFORMATION 03: Know FHIR future version deprecation ===
+# === INFORMATION 03: Known FHIR future version deprecation. This information is accepted in AU Base 6.0.0. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# === INFORMATION 04: Inherited from FHIR R4 definitions ===
+# === INFORMATION 04: Inherited from FHIR R4 definitions. This information is accepted in AU Base 6.0.0. ===
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
