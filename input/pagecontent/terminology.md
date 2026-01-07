@@ -544,7 +544,7 @@ The following code systems are referenced by the value sets listed above.
             <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-communication-request-category.html">Communication Request Reason</a></td>
+        <td><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a></td>
         <td>This code system is deprecated in AU Base as work undertaken in the <a href="https://build.fhir.org/ig/hl7au/au-fhir-erequesting/">AU eRequesting</a> project does no longer require these concepts for differentiating communication request reasons.</td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
