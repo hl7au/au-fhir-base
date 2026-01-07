@@ -1,5 +1,5 @@
 This page includes all terminology artefacts defined as part of AU Base and:
-- value sets that form part of localised requirements (i.e. referenced in an AU Base imposed constraint)
+- value sets that form part of localised requirements (i.e. referenced in AU Base imposed constraint)
 - code systems referenced by those value sets
 - concept maps unique to those value sets and not listed in the base FHIR specification
 
@@ -51,6 +51,11 @@ The following value sets form part of localised requirements (i.e. are reference
       <td><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a></td>
       <td>NCTS</td>
     </tr>   
+    <tr>
+      <td><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a></td>
+      <td>This value set is deprecated in AU Base and replaced by the NCTS <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a> value set for binding to Medication.ingredient.item[x] in the <a href="StructureDefinition-au-medication.html">AU Base Medication</a> profile.</td>
+      <td>NCTS</td>
+    </tr>
     <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a></td>
       <td><a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
@@ -123,6 +128,7 @@ The following value sets form part of localised requirements (i.e. are reference
         <a href="StructureDefinition-au-bodystructure.html">AU Base BodyStructure</a>, 
         <a href="StructureDefinition-au-condition.html">AU Base Condition</a>, 
         <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>, 
+        <a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a>, 
         <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>, 
         <a href="StructureDefinition-au-dosage.html">AU Base Dosage</a>, 
         <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, 
@@ -337,7 +343,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a></td>
-    <td><a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a></td>
+    <td><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a>, <a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -377,7 +383,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a></td>
-    <td><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a></td>
+    <td><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a>, <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -536,6 +542,12 @@ The following code systems are referenced by the value sets listed above.
             <td>This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</td>
             <td>AU Base</td>
             <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-communication-request-category.html">Communication Request Reason</a></td>
+        <td>This code system is deprecated in AU Base as work undertaken in the <a href="https://build.fhir.org/ig/hl7au/au-fhir-erequesting/">AU eRequesting</a> project does no longer require these concepts for differentiating communication request reasons.</td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
     </tr>
     <tr>
         <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1">Concurrent Supply Grounds</a></td>
@@ -758,7 +770,8 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="https://www.healthterminologies.gov.au/CodeSystem/32506021000036107-20240630">SNOMED Clinical Terms (Australian extension)</a></td>
         <td>
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>,
-            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>,
+            <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>,  
@@ -817,9 +830,9 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="https://terminology.hl7.org/CodeSystem-IANATimeZoneDatabase.html">Time Zones</a></td>
+        <td><a href="https://www.iana.org/time-zones">Time Zones</a></td>
         <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
-        <td>HL7 Terminology (THO)</td>
+        <td>Internet Assigned Numbers Authority (IANA)</td>
         <td>Internet Assigned Numbers Authority (IANA)</td>
     </tr>
   </tbody>
