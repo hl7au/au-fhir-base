@@ -6,7 +6,7 @@ AU Base is designed to serve as a [base layer](relationship.html) within the bro
 
 AU Base defines an additional set of localised options in addition to what is available in the FHIR standard for use in Australia including extensions (and associated search parameters), terminology, and profiles. AU Base is the source of truth for nationally agreed local concepts such as Australian Medicare card number or Australian Indigenous Status.
 
-This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and agreed at a national-level without the need for a separate project or to specify conformance requirements for a particular use case. 
+This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national-level without the need for a separate project or to specify conformance requirements for a particular use case. 
 
 For representation and use of local concepts, Australian realm IGs and implementers are expected to (in order of precedence):
 * comply with AU Base and AU Core
