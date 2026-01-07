@@ -1,18 +1,18 @@
 ### AU Base Yearly Updates
-AU Base will be published yearly. Yearly AU Base updates reflect changes from:
+AU Base will be published a least yearly. AU Base updates reflect changes supporting:
  - HL7 AU projects
    - AU Core
    - AU eRequesting
-   - AU Provider Directory
    - AU Patient Summary
- - requests from the AU FHIR community. 
+ - Australian FHIR Community Projects 
+ - Requests from the AU FHIR community. 
  
  The approach is outlined in the figure below:
 
  <div> 
-    <img src="yearlyupdate.png" alt="Yearly update of AU Base" style="width:90%"/>
+    <img src="yearlyupdate.png" alt="Update of AU Base" style="width:90%"/>
   </div>
-*Figure 1: Yearly update of AU Base*
+*Figure 1: Update of AU Base*
 <br/>
 
 ### Maturing the Baseline
@@ -34,4 +34,4 @@ The following items are under consideration to add to AU Base ([Link to Deferred
 - **AU Base Family Member History**: The inclusion of an AU Base Family Member History profile is under consideration to support localised, standard representation of family health history in an Australian healthcare context.
 - **AU Base Health Insurer Identifier**: The inclusion of an AU Base profile to define a health insurer identifier is under consideration to support consistent, standardised identification of health insurers, including private health insurers, in an Australian healthcare context.
 - **AU Base NDIS (National Disability Insurance Scheme) Number**: The inclusion of an AU Base profile to define the NDIS Number is under consideration for a future release of AU Base.
-- **AU Base profile policies and governance**: Future versions of AU Base will make reference to policies and conventions for HL7 AU FHIR artefacts. In particular for AU Base, there is interest in further defining the design conventions for AU Base use case profiles and AU Base non-use case profiles. Given the nature and scope of the work across all HL7 AU FHIR implementation guides, there is likely to be an HL7 AU project to develop the material and provide recommendations for enhancing HL7 AU Implementation Guides. This work will address related issues and ensure alignment with governance practices.
+- **AU Base HSP-O and HAE-O Identifiers**: The inclusion of AU Base datatype profiles to define representations of national identifiers (Australian Digital Health Agency) for Healthcare Support Service Provider Organisation (HSP-O) and Healthcare Administration Entity (HAE) Organsation.
