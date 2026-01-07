@@ -70,6 +70,36 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Added invariant inv-relper-5 to RSG.source to bind AU Recorded Sex or Gender Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
+  <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="CodeSystem-medication-type.html">Medication Type</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="CodeSystem-medicine-item-change.html">Medicine Item Change</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="CodeSystem-au-v2-0443.html">providerRole AU</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
   <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-task-business-status.html">Task Business Status</a>: 
     <ul>
       <li>Updated codes, displays and definitions in code system to make explicit whether a status applies to the task or the request (<a href="https://jira.hl7.org/browse/FHIR-51893">FHIR-51893</a>, <a href="https://jira.hl7.org/browse/FHIR-51894">FHIR-51894</a>).</li>
