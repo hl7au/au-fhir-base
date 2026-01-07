@@ -4,7 +4,7 @@ AU Base will be published a least yearly. AU Base updates reflect changes suppor
    - AU Core
    - AU eRequesting
    - AU Patient Summary
- - Australian FHIR Community Projects 
+ - Australian FHIR Community Process Projects 
  - Requests from the AU FHIR community. 
  
  The approach is outlined in the figure below:
