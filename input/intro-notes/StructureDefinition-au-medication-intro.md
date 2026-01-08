@@ -16,7 +16,7 @@
   - medication form in `Medication.form.text`
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
-  - individual ingredient strength, in [FHIR R5 pre-adoption extension](https://hl7.org/fhir/R5/versions.html#extensions) using [`Medication.ingredient.strength[x] as CodeableConcept`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient). Example of use is [Tadim](Medication-IngredientStrengthExtension0.html)
+  - individual ingredient strength in a [FHIR R5 pre-adoption extension](https://hl7.org/fhir/R5/versions.html#extensions) using [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient). For example [Tadim](Medication-IngredientStrengthExtension0.html)
 
 **Potentially useful extensions:**
 
