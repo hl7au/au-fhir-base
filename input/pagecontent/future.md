@@ -1,5 +1,5 @@
 ### AU Base Yearly Updates
-AU Base will be published a least yearly. AU Base updates reflect changes supporting:
+AU Base will be published at least yearly. AU Base updates reflect changes supporting:
  - HL7 AU projects
    - AU Core
    - AU eRequesting
