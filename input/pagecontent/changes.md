@@ -31,7 +31,6 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
   <li>Ethnicity extension</li>
 </ul>
 
-
 #### Changes in This Version
 <ul>
   <li>New code systems:
