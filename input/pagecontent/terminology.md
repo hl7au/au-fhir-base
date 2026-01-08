@@ -755,7 +755,7 @@ The following code systems are referenced by the value sets listed above.
         <td>Health Level Seven International</td>
     </tr>
     <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/32506021000036107-20240630">SNOMED Clinical Terms (Australian extension)</a></td>
+        <td><a href="https://www.healthterminologies.gov.au/access-clinical-terminology/access-snomed-ct-au/">SNOMED Clinical Terms (Australian extension)</a></td>
         <td>
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">Adverse Reaction Agent</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>, 
