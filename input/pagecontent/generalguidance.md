@@ -8,15 +8,15 @@ AU Base extends the core FHIR Standard to define nationally agreed localised FHI
 
 The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate project or to specify conformance requirements for a particular use case. Implementers working with a common concept, that has national usage, are encouraged to submit for adoption into AU Base. 
 
-Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to use extensions, search parameters or operations (in order of precedence):
-* from the FHIR standard i.e. FHIR Extensions Pack
-* from AU Base (this IG)
-* from a downstream domain specific IG (e.g. AU eRequesting or AU Patient Summary).
-* by defining locally only if necessary, and then making available in a local IG.
+Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
+* in the FHIR standard i.e. FHIR Extensions Pack
+* in AU Base (this IG)
+* in a downstream IG (e.g. AU eRequesting or AU Patient Summary)
+* in a local IG only if necessary
 
 #### Scope of AU Base FHIR Artefacts
 
-AU Base, as the Australian extension of the core FHIR standard (including extension pack and THO), defines:
+AU Base, as the Australian extension of the core FHIR standard (including [FHIR Extensions Pack](https://hl7.org/fhir/extensions/), [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html), and [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)), defines:
 * Extensions for local use concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
 * Search parameters for searching local use concepts
 * Terminology localised for use in an Australian context
@@ -44,13 +44,13 @@ Any extension intended for use in a healthcare context and that is not unique to
 AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
 #### Search Parameter Approach
-AU Base extends the set of search parameters available in the core FHIR standard (i.e. FHIR search registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
+AU Base extends the set of search parameters available in the core FHIR standard (i.e. FHIR Search Parameter Registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
 * there is no available search parameter in the FHIR standard
 * the use is not specific to searching an extension defined in a downstream IG
 
 AU Base defined search parameters are definitional, and intend to be as expansive as possible to avoid limiting downstream use case decisions. For this reason, search parameters are defined as open and aspects such as chaining, modifiers, comparators are not limited.
 
-This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, core FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to define the applicable support requirements e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
+This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, core FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to describe the applicable support requirements e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
 
 #### Terminology Approach
 AU Base defines terminology additional to that used in the core FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
@@ -116,22 +116,22 @@ Therefore, when modelling AU Base resource profiles:
 * Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
 * References: references are not constrained to avoid limiting the opportunities for downstream IGs and applications to define their own business rules.
 
-Some FHIR resource types are not profiled in AU Base as Base Resource Profiles as they are too generic including Observation and Device. In this case AU Core or a downstream IG will profile the core FHIR resource directly.
+Some FHIR resource types are not profiled in AU Base as it is too abstract to be support meaningful localisation across use cases in a base resource profile e.g. Basic, Observation, and Device. For these resource types, AU Core or a downstream use case IG can profile directly instead of inheriting from an AU Base profile. 
 
 #### Generic Use Case Profile Approach
 
-Generic use case profiles, profile a FHIR resource to define a particular usage but do not prescribe conformance for a particular actor or scenario. These profiles are always temporary, and are included where there is:
-* sufficient community need for national level agreement on the 'what'
-* there is no current project or expected to be project that covers this scope
+Generic use case profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
+* sufficient community need for national level agreement on the 'what' for a use case
+* sufficient community agreement on the 'what' for a use case
+* there is no current or coming soon IG project that covers the scope of the use case
 
-Generic Use Case resource profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
+Generic use case resource profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 
-Generic use case profiles are to remain definitional and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling choices.
+Generic use case profiles remain definitional, encourage derivation, and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling and implementation choices.
 
-When a project that covers the scope of an AU Base generic use case profile that profile is moved to that project and deprecated in AU Base. For example:
-* the AU Core vital signs profiles started in AU Base and were moved to AU Core 
-* AU eRequesting ServiceRequest profile started in AU Base as [AU Base DiagnosticRequest](StructureDefinition-au-diagnosticrequest.html) which is deprecated.
- 
+When an IG project is started that covers the scope of an AU Base generic use case profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:
+* the AU Core vital signs profiles started in AU Base and were subsequently moved to AU Core and then removed from AU Base
+* the AU eRequesting ServiceRequest profile started in AU Base and was subsequently moved to AU eRequesting and then deprecated in AU Base
 
 ### Maturity Levels 
 These levels used for HL7 AU FHIR Implementation Guides are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
