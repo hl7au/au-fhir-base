@@ -4,8 +4,8 @@ AU Base will be published at least yearly. AU Base updates reflect changes suppo
    - AU Core
    - AU eRequesting
    - AU Patient Summary
- - Australian FHIR Community Process Projects 
- - Requests from the AU FHIR community. 
+ - Australian FHIR Community Process (AFCP) projects 
+ - Requests from the Australian FHIR community. 
  
  The approach is outlined in the figure below:
 
@@ -34,4 +34,4 @@ The following items are under consideration to add to AU Base ([Link to Deferred
 - **AU Base Family Member History**: The inclusion of an AU Base Family Member History profile is under consideration to support localised, standard representation of family health history in an Australian healthcare context.
 - **AU Base Health Insurer Identifier**: The inclusion of an AU Base profile to define a health insurer identifier is under consideration to support consistent, standardised identification of health insurers, including private health insurers, in an Australian healthcare context.
 - **AU Base NDIS (National Disability Insurance Scheme) Number**: The inclusion of an AU Base profile to define the NDIS Number is under consideration for a future release of AU Base.
-- **AU Base HSP-O and HAE-O Identifiers**: The inclusion of AU Base datatype profiles to define representations of national identifiers (Australian Digital Health Agency) for Healthcare Support Service Provider (HSP) Organisation and Healthcare Administration Entity (HAE) Organsation.
+- **AU Base HSP-O and HAE-O Identifiers**: The inclusion of AU Base datatype profiles to define representations of national identifiers for Healthcare Support Service Provider Organisation (HSP-O) and Healthcare Administration Entity Organisation (HAE-O).
