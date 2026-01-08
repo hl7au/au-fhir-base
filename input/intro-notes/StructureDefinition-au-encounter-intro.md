@@ -6,3 +6,4 @@
 
 
   [FHIR R5 pre-adoption extension](https://hl7.org/fhir/R5/versions.html#extensions) using [`Medication.ingredient.strength[x] as CodeableConcept`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient). Example of use is [Tadim](Medication-IngredientStrengthExtension0.html)
+
