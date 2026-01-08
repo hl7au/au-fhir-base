@@ -830,7 +830,7 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="https://www.iana.org/time-zones">Time Zones</a></td>
+        <td><a href="https://terminology.hl7.org/ECS_MR-IANATimeZoneDatabase.html">Time Zones</a></td>
         <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
         <td>Internet Assigned Numbers Authority (IANA)</td>
         <td>Internet Assigned Numbers Authority (IANA)</td>
