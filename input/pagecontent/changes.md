@@ -3,9 +3,10 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version 6.0.0-ballot to TBD. 
+This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0-ballot/index.html">6.0.0-ballot</a> to TBD. 
 
 #### Breaking Changes <a name="breakingchanges"></a>
+This release introduces non-compatible changes to the artefacts listed below. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
@@ -74,16 +75,19 @@ This version of current build reinstates profiles not included in the AU Base 6.
   <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Applied technical correction to invariants inv-pat-1, inv-pat-2, inv-pat-3, inv-pat-4, and inv-pat-5 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
+      <li>Added invariant inv-pat-6 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
   <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
       <li>Applied technical correction to invariants inv-pra-0, inv-pra-1, inv-pra-2, inv-pra-3, and inv-pra-4 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
+      <li>Added invariant inv-pra-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
   <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
     <ul>
       <li>Applied technical correction to invariants inv-relper-0, inv-relper-1, inv-relper-2, inv-relper-3, and inv-relper-4 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
+      <li>Added invariant inv-relper-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>: 
@@ -131,10 +135,16 @@ This version of current build reinstates profiles not included in the AU Base 6.
 This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html). The changes in this update are for ballot.
 
 #### Breaking Changes <a name="breakingchanges"></a>
+This release introduces non-compatible changes to the artefacts listed below. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
     <ul>
       <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible) (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a>:
+    <ul>
+       <li>Removed codes (AUAHPRAProfession, AUAHPRARegistration) from value set as these concepts are deprecated (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
     </ul>
   </li>
  </ul>
@@ -231,6 +241,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
     <ul>
       <li>Changed HealthcareService.availableTime.availableStartTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
       <li>Changed HealthcareService.availableTime.availableEndTime to replace Australian Time Zone extension with the international Timezone Code extension (<a href="https://jira.hl7.org/browse/FHIR-46319">FHIR-46319</a>).</li>
+      <li>Added HealthcareService.communication binding to Common Languages in Australia (extensible) (<a href="https://jira.hl7.org/browse/FHIR-46322">FHIR-46322</a>).</li>
     </ul>
   </li>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-immunization.html">AU Base Immunization</a>:
@@ -383,6 +394,7 @@ To help implementers, only the more significant changes are listed here.
 <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a>:
   <ul>
       <li>Removed deprecated Encounter Description extension (<a href="https://jira.hl7.org/browse/FHIR-47121">FHIR-47121</a>).</li>
+      <li>Removed codes (PHONE, VIDEO, EMAIL and SMS) from <a href="https://hl7.org.au/fhir/5.0.0/ValueSet-au-v3-ActEncounterCode-extended.html" >ActEncounterCode - AU Extended</a> value set (<a href="https://jira.hl7.org/browse/FHIR-47120">FHIR-47120</a>) as these concepts are subsumed by the VR concept and cannot be used to populate the <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-encounter.html">AU Base Encounter</a> Encounter.class element in FHIR R4.</li>
   </ul>
 </li>
 <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
