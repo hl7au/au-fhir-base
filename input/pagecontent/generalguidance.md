@@ -6,13 +6,11 @@ AU Base is designed to serve as a [base layer](relationship.html) within the bro
 
 AU Base extends the core FHIR Standard to define nationally agreed localised FHIR structures for use in Australia. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
 
-This definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate project or to specify conformance requirements for a particular use case.
-
-Implementers working with a common concept, that has national usage, are encouraged to submit for adoption into AU Base. 
+The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate project or to specify conformance requirements for a particular use case. Implementers working with a common concept, that has national usage, are encouraged to submit for adoption into AU Base. 
 
 Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to use extensions, search parameters or operations (in order of precedence):
 * from the FHIR standard i.e. FHIR Extensions Pack
-* from AU Base 
+* from AU Base (this IG)
 * from a downstream domain specific IG (e.g. AU eRequesting or AU Patient Summary).
 * by defining locally only if necessary, and then making available in a local IG.
 
@@ -22,12 +20,12 @@ AU Base, as the Australian extension of the core FHIR standard (including extens
 * Extensions for local use concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
 * Search parameters for searching local use concepts
 * Terminology localised for use in an Australian context
-  * concepts unique to Australia e.g communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
+  * concepts unique to Australia e.g. communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
   * usage localised to Australia e.g. nationally endorsed clinical reference sets represented as value sets
 * Profiles describing the use of FHIR structure for use in an Australian context:
   * Definitional data type profiles e.g. Australian address, Australian time zone, Identifiers such as national patient and provider identifiers
-  * Base resource profiles (e.g. AU Base Patient, AU Base MedicationStatement)
-  * Generic use case profiles (e.g. AU Medicines List, AU Base Diagnostic Imaging Result), where there is no existing project to undertake the work
+  * Base resource profiles (e.g. [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
+  * Generic use case profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing project to undertake the work
 
 AU Base does not define actors (i.e. ActorDefinitions) or support requirements associated with actors (e.g. CapabilityStatements or apply Obligations). This IG does not prescribe the usage or support requirements for any particular use case. 
 
@@ -43,10 +41,10 @@ This approach means that AU Core will not define extensions - AU Core profiles a
 
 Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the core FHIR Extensions Pack, the fallback is to define the extension in AU Base if that submission to the core FHIR Extensions Pack is not accepted.
 
-AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](http://hl7.org.au/fhir/core/StructureDefinition/au-core-rsg-sexassignedab) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
+AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
 #### Search Parameter Approach
-AU Base extends the set of search parameters availalbe in the core FHIR standard (i.e. FHIR search registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
+AU Base extends the set of search parameters available in the core FHIR standard (i.e. FHIR search registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
 * there is no available search parameter in the FHIR standard
 * the use is not specific to searching an extension defined in a downstream IG
 
@@ -55,12 +53,12 @@ AU Base defined search parameters are definitional, and intend to be as expansiv
 This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, core FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to define the applicable support requirements e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
 
 #### Terminology Approach
-AU Base defines terminoogy additional to that used in the core FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
+AU Base defines terminology additional to that used in the core FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
 
 Code systems are defined in AU Base when:
 * it is not suitable/achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
 * it is not suitable/achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
-  * terminology can be defined termporarily in an AU Base code system to support development during a release while work on promoting the concepts to [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html) is progressing
+  * terminology can be defined temporarily in an AU Base code system to support development during a release while work on promoting the concepts to [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html) is progressing
 * the use of the code system is not specific to a single use case or domain (i.e. specific to a single IG)
 
 Sometimes, only additional concepts are required rather than a new code system. Where possible, individual concepts are added to an existing code system and promoted to the applicable international code systems, e.g. international edition of SNOMED CT, if the concept is not Australian-specific.
@@ -75,7 +73,7 @@ Value sets are defined in AU Base when:
 ##### Terminology Selection
 Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined e.g. supplying at least the standardised LOINC coding for vitals observations defined in the FHIR standard or complying with extensible and required bindings defined for elements in the FHIR standard.
 
-When selecting terminology for use in an Australia heathcare context some rules of thumb apply:
+When selecting terminology for use in an Australia healthcare context some rules of thumb apply:
 * SNOMED CT-AU is the default preferred terminology for clinical concepts (e.g. AllergyIntolerance.reaction.manifestation) and should always be considered
   * If a nationally agreed clinical reference set is available that should be considered as the starting position for the set of values if SNOMED CT-AU is agreed to be the terminology bound to in the HL7 AU specification
 * A peak body or other relevant national authority endorsed terminology may override the above point, e.g. RCPA endorsed pathology reporting terminology is LOINC
@@ -111,9 +109,9 @@ Therefore, when modelling AU Base resource profiles:
 * Extensions: extensions are only explicitly modelled in the profile to identify the nationally agreed extension to use for a particular concept.
 * Cardinality: cardinality is only constrained where there is national agreement that for all use cases in the Australian healthcare context the cardinality restriction needs to be applied (e.g. legislative requirements).
 * Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR standard or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that contribute additional concepts as needed for use in implementation.
-  ** by default, bindings specified in AU Base are [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to indicate the recommended local terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context across use cases. 
-  ** where multiple terminologies are recognised for use in the Australian healthcare context, the set of terminologies are described using the additional bindings extension, e.g. in [AU Base Medication](StructureDefinition-au-medication.html), `Medication.code` uses additional bindings to describe usage of Australian Medicines Terminology, PBS Item Codes, MIMS, and GTIN.
-* Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules and this is to be avoided at the AU Base level. Slicing, where present, is used to define a real world concept that cannot be meaningfully modelled using another profileing technique, and is left open to allow for flexibility.
+  * by default, bindings specified in AU Base are [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to indicate the recommended local terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context across use cases. 
+  * where multiple terminologies are recognised for use in the Australian healthcare context, the set of terminologies are described using the additional bindings extension, e.g. in [AU Base Medication](StructureDefinition-au-medication.html), `Medication.code` uses additional bindings to describe usage of Australian Medicines Terminology, PBS Item Codes, MIMS, and GTIN.
+* Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules and this is to be avoided at the AU Base level. Slicing, where present, is used to define a real world concept that cannot be meaningfully modelled using another profiling technique, and is left open to allow for flexibility.
 * Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Additionally, AU Base data type profiles suitable for usage for that particular element are added. 
 * Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
 * References: references are not constrained to avoid limiting the opportunities for downstream IGs and applications to define their own business rules.
@@ -128,11 +126,11 @@ Generic use case profiles, profile a FHIR resource to define a particular usage 
 
 Generic Use Case resource profiles are defined as open, i.e. allowing additional elements and rules which makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile. 
 
-Generic use case profiles are to remain definitional and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typicaly include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling choices.
+Generic use case profiles are to remain definitional and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling choices.
 
 When a project that covers the scope of an AU Base generic use case profile that profile is moved to that project and deprecated in AU Base. For example:
 * the AU Core vital signs profiles started in AU Base and were moved to AU Core 
-* AU eRequsting ServiceRequest profile started in AU Base as [AU Base DiagnosticRequest](StructureDefinition-au-diagnosticrequest.html) which is deprecated.
+* AU eRequesting ServiceRequest profile started in AU Base as [AU Base DiagnosticRequest](StructureDefinition-au-diagnosticrequest.html) which is deprecated.
  
 
 ### Maturity Levels 
