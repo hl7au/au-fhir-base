@@ -55,23 +55,22 @@ AU Base defined search parameters are definitional, and intend to be as expansiv
 This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of search parameters for native FHIR elements or core FHIR extensions is to be done in AU Base, and the downstream IG profiles the search parameter to describe additional constraints relevant for that context such as mandating support for chaining. 
 
 #### Terminology Approach
-AU Base acts like the AU extension to the core FHIR terminology (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
+AU Base defines terminoogy additional to that used in the core FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
 
 Code systems are defined in AU Base when:
-* the needed concepts cannot be added to an existing code system, including where no available code system is published
-  * it is not suitable/achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
-  * the use of the code system is not specific to a single use case or domain (i.e. specific to a single IG)
+* it is not suitable/achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
+* it is not suitable/achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
+  * terminology can be defined termporarily in an AU Base code system to support development during a release while work on promoting the concepts to [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html) is progressing
+* the use of the code system is not specific to a single use case or domain (i.e. specific to a single IG)
 
-Sometimes, only additional concepts are required rather than entirely new code systems. Where possible, individual concepts are:
-* added to an existing code system, and where possible
-  * submitted to the applicable international code systems if the concept is not Australian-specific
+Sometimes, only additional concepts are required rather than a new code system. Where possible, individual concepts are added to an existing code system and promoted to the applicable international code systems, e.g. international edition of SNOMED CT, if the concept is not Australian-specific.
 
 Value sets are defined in AU Base when:
 * there is no available core FHIR value set (including in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)) that matches the set of values for usage agreed by the responsible work group
 * the content of the value set is not predominantly SNOMED CT or LOINC*<sup>1</sup> 
 * the use is not specific to a single use case or domain (i.e. specific to a single IG)
 
-*<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).*
+*<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) directly rather than AU Base.*
 
 ##### Terminology Selection
 Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined e.g. at least supplying the standardised LOINC coding for FHIR vitals observations or complying with extensible and required bindings defined for elements in the core FHIR standard.
