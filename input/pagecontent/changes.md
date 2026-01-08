@@ -1,9 +1,9 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 6.0.0
+- Publication date: 2026-01-14
+- Publication status: Working Standard(Trial Use)
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0-ballot/index.html">6.0.0-ballot</a> to TBD. 
+This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0](https://hl7.org.au/fhir/6.0.0/index.html)
 
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.

@@ -1,5 +1,0 @@
-<p class="stu-note">There is concern on the appropriateness of the <a href="https://www.abs.gov.au/statistics/classifications/australian-standard-classification-cultural-and-ethnic-groups-ascceg/2019">Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG) 2019</a> and the more specific <a href="https://www.abs.gov.au/statistics/classifications/australian-standard-classification-cultural-and-ethnic-groups-ascceg/2019#index-for-coding-responses">ancestry coding index.</a> Feedback is sought on the suitability of these coding standards in supporting targeted provision of culturally appropriate healthcare services.</p>
-
-<p class="stu-note">This extension is not suitable for use when an ethnic identity is comprised of an unstructured string of potentially multiple composites (e.g. 'Of Malaysian and German descent but associates more as a Malay'). Feedback is sought on how to support an unstructured string, including the possibility of a string alternative to cater for narrative or composite text statements.</p>
-
-### Usage Notes
