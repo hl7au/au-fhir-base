@@ -1,5 +1,5 @@
 This page includes all terminology artefacts defined as part of AU Base and:
-- value sets that form part of localised requirements (i.e. referenced in AU Base imposed constraint)
+- value sets that form part of localised requirements (e.g. referenced in an AU Base imposed constraint)
 - code systems referenced by those value sets
 - concept maps unique to those value sets and not listed in the base FHIR specification
 
@@ -53,7 +53,7 @@ The following value sets form part of localised requirements (i.e. are reference
     </tr>   
     <tr>
       <td><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a></td>
-      <td>This value set is deprecated in AU Base and replaced by the NCTS <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a> value set for binding to Medication.ingredient.item[x] in the <a href="StructureDefinition-au-medication.html">AU Base Medication</a> profile.</td>
+      <td>This value set is not used here; it is deprecated and replaced by the NCTS <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a> value set.</td>
       <td>NCTS</td>
     </tr>
     <tr>
@@ -208,7 +208,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a></td>
-    <td><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
+    <td><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a>, <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -545,7 +545,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a></td>
-        <td>This code system is deprecated in AU Base as work undertaken in the <a href="https://build.fhir.org/ig/hl7au/au-fhir-erequesting/">AU eRequesting</a> project does no longer require these concepts for differentiating communication request reasons.</td>
+        <td>This CodeSystem is not used here; it is deprecated.</td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
@@ -832,7 +832,7 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="https://terminology.hl7.org/ECS_MR-IANATimeZoneDatabase.html">Time Zones</a></td>
         <td><a href="ValueSet-au-timezone.html">AU Time Zone</a></td>
-        <td>Internet Assigned Numbers Authority (IANA)</td>
+        <td>HL7 Terminology (THO)</td>
         <td>Internet Assigned Numbers Authority (IANA)</td>
     </tr>
   </tbody>
