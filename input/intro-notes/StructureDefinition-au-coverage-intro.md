@@ -4,7 +4,7 @@
 - See each Identifier profile page for guidance related to that identifier type.
 - When populating the type:
     - *Medicare* coverage **SHOULD** be represented by sending the ActCode code "PUBLICPOL"
-    - *Australian public hospital* coverage **SHOULD** be represented by sending the ActCode code "AUPUBHOSP"
+    - *Australian public hospital* coverage **SHOULD** be represented by sending the ActCode AU code "AUPUBHOSP"
     - *DVA* coverage **SHOULD** be represented by sending the ActCode code "VET"
     - *Private health insurance* coverage **SHOULD** be represented by sending the ActCode code "HIP"
     - *Workcover* coverage **SHOULD** be represented by sending the ActCode code "WCBPOL"
