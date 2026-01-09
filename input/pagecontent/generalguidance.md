@@ -4,7 +4,7 @@
 
 AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. For a directly implementable usage of AU Base it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
 
-AU Base extends the core FHIR Standard to define nationally agreed localised FHIR structures for use in Australia. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
+AU Base extends the FHIR standard to define nationally agreed localised FHIR structures for use in Australia. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
 
 The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate project or to specify conformance requirements for a particular use case. Implementers working with a common concept, that has national usage, are encouraged to submit for adoption into AU Base. 
 
@@ -16,7 +16,7 @@ Australian realm IGs and implementers are expected to comply with AU Base and AU
 
 #### Scope of AU Base FHIR Artefacts
 
-AU Base, as the Australian extension of the core FHIR standard (including [FHIR Extensions Pack](https://hl7.org/fhir/extensions/), [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html), and [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)), defines:
+AU Base, as the Australian extension of the FHIR standard (including [FHIR Extensions Pack](https://hl7.org/fhir/extensions/), [FHIR Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html), and [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)), defines:
 * Extensions for local use concepts e.g. Australian Indigenous Status, Subsidised Concurrent Supply
 * Search parameters for searching local use concepts
 * Terminology localised for use in an Australian context
@@ -31,7 +31,7 @@ AU Base does not define actors (i.e. ActorDefinitions) or support requirements a
 
 
 #### Extension Approach
-AU Base extends the set of extensions available in the core FHIR standard (i.e. FHIR Extensions Pack) for Australia. Extensions are defined in AU Base when:
+AU Base extends the set of extensions available in the FHIR standard (i.e. FHIR Extensions Pack) for Australia. Extensions are defined in AU Base when:
 * there is no native FHIR element that can be used
 * there is no available extension in the core FHIR Extensions Pack or through pre-adoption of a later version of FHIR
 * it is not suitable/achievable to define the extension in the core FHIR Extensions Pack
@@ -44,7 +44,7 @@ Any extension intended for use in a healthcare context and that is not unique to
 AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
 #### Search Parameter Approach
-AU Base extends the set of search parameters available in the core FHIR standard (i.e. FHIR Search Parameter Registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
+AU Base extends the set of search parameters available in the FHIR standard (i.e. FHIR Search Parameter Registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
 * there is no available search parameter in the FHIR standard
 * the use is not specific to searching an extension defined in a downstream IG
 
@@ -53,7 +53,7 @@ AU Base defined search parameters are definitional, and intend to be as expansiv
 This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, core FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to describe the applicable support requirements e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
 
 #### Terminology Approach
-AU Base defines terminology additional to that used in the core FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
+AU Base defines terminology additional to that used in the FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
 
 Code systems are defined in AU Base when:
 * it is not suitable/achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
