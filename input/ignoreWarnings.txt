@@ -1,14 +1,14 @@
 == Suppressed Messages ==
 
-# === ERROR 01: Validation reports unknown PBS codes because PBS terminology is not published in FHIR format. These codes are expected and do not indicate an error. This error is accepted in AU Base 5.0.0. ===
+# === ERROR 01: Expected error as the CodeSystem is defined without content included. ===
 Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'
 
-# === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. These warnings were accepted in AU Base 5.0.0. ===
+# === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# === WARNING 02: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Base. These warnings were accepted in AU Base 5.0.0. ===
+# === WARNING 02: Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU Base. ===
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpio, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-residentialagedcareserviceidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
@@ -39,22 +39,32 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === WARNING 03: Warnings are present as the IG Publisher is unable to resolve National Clinical Terminology Service (NCTS) profiles. At this time no npm package for the NCTS IG is available and there is no timeline for resolution. These errors were accepted in AU Base 5.0.0. ===
+# === WARNING 03: Warnings are present as the IG Publisher is unable to resolve National Clinical Terminology Service (NCTS) profiles. At this time no npm package for the NCTS IG is available and there is no timeline for resolution. ===
 A definition could not be found for Canonical URL 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4'
 A definition could not be found for Canonical URL 'https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4'
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 Profile reference 'https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 
-# === WARNING 04: Known ValueSet published as experimental. These warnings were accepted in AU Base 5.0.0. === 
+# === WARNING 04: Known ValueSet published as experimental. ===
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3' which is experimental, but this structure is not labeled as experimental
 
-# === WARNING 05: This warning was accepted in AU Base 5.0.0. ===
+# === WARNING 05: Expected warning as the CodeSystem is defined without content included. ===
 Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'; The provided code 'http://pbs.gov.au/code/item#11815W' was not found in the value set 'https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1|1.0.2'
 
-# === WARNING 06: Correct invariant warning. These warnings were accepted in AU Base 5.0.0. === 
+# === WARNING 06: This is a correct invariant warning. === 
 Constraint failed: inv-pat-1: 'Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply (extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value.all(memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1')))' (defined in http://hl7.org.au/fhir/StructureDefinition/au-patient)
 
+# === WARNING 07: Known artefacts without examples provided. ===
+The Implementation Guide contains no examples for this data type profile
 
+# === WARNING 08: Known CodeSystem URLs without definitions. ===
+A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/smd-interfaces' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.com/generic-packages' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://example.com/labs' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated 
