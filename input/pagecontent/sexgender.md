@@ -762,14 +762,14 @@ The guidance on this page is dependent on the availability of the <code class=" 
 </p>
 - It is recommended that the clinical context for the SPCU value is provided (e.g. applies to all prescribed medications); clinical context can be included in either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element.
 - A patient record can have multiple SPCU values at any one time. These SPCU values can be different depending on the clinical context and can have overlapping or non-overlapping periods.
-  - When exchanging health information implementers need to consider if consistency of SPCU values across different resource types instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element value "female-typical" while referencing a `Patient` resource (in `MedicationRequest.subject`) that holds an SPCU value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that SPCU value applies to all prescribed medications.
+  - When exchanging health information implementers need to consider if consistency of SPCU values across different resource type instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element value "female-typical" while referencing a `Patient` resource (in `MedicationRequest.subject`) that holds an SPCU value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that SPCU value applies to all prescribed medications.
 - Implementers intending to only include an SPCU value in the Patient resource and not in other resource types can consider using a reference to a contained `Patient` resource. For example, instead of including an SPCU value directly in a `MedicationRequest`, the `MedicationRequest.subject` element could reference a contained `Patient` resource that includes the SPCU value.
 
 Resource specific SPCU usage includes:
 - DiagnosticReport: Inclusion of SPCU values indicates that the sex parameter is relevant to the particular report.
 - MedicationRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the medication request e.g. informs dosage or use when the patient is pregnant.
 - Patient: When exchanging SPCU values that do not directly link to a clinical context or intended clinical use (e.g. a Patient Administration System), it is recommended that the `comment` or `intendedClinicalUse` elements are included to provide the clinical context and/or appropriate clinical uses for an SPCU value.
-- Procedure: Inclusion of SPCU values indicates that the sex parameter was relevant to the procedure e.g. consideration of typically male or female anatomy.
+- Procedure: Inclusion of SPCU values indicates that the sex parameter is relevant to the procedure e.g. consideration of typically male or female anatomy.
 - ServiceRequest: Inclusion of SPCU values indicates that the sex parameter is relevant to the service request e.g. flagging that checking for pregnancy may be required for a particular radiology test.
 
 
