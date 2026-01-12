@@ -43,8 +43,6 @@ The following AFMM levels are defined:
 
 **Normative** AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the [inter-version](https://hl7.org/fhir/versions.html#change) change rules and the artefact has passed HL7 AU normative ballot. This is synonymous with [Normative](https://hl7.org/fhir/versions.html#normative) standard status.
 
-Reference should also be made to [Version Management Policy](http://hl7.org/fhir/R4/versions.html).
-
 
 ### HL7 AU FHIR Artefact Release Publishing Policy
 Publishing requirements applied to HL7 AU FHIR implementation guides are applied based on the AFMM assessment of artefacts and govern whether artefacts may form part of a draft release, preview release, ballot release, or official publication of a standard.
@@ -437,7 +435,7 @@ This guidance matches Ahpra data items to the corresponding element in a Practit
 
 ### Representing Communication Preferences
 
-The guidance below describes how to represent languages that may be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension:
+The guidance below describes how to represent languages that can be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the [Interpreter Required](http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) extension:
 * When sent in a Patient resource, the information exchanged is about the languages that may be used to communicate with the patient about their health. 
 * When sent in a RelatedPerson resource, the information exchanged is about languages that may be used to communicate with the related person about the patient's health.
  
