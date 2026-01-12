@@ -145,7 +145,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
  
 This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html). The changes in this update are for ballot.
 
-#### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes
 This version introduces the following non-compatible changes.
 <ul>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
