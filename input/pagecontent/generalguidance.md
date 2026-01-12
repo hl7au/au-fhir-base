@@ -2,11 +2,11 @@
 
 ### Implementation Guide Approach
 
-AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. For a directly implementable usage of AU Base it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
+AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. Where a directly implementable usage of AU Base it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
 
 AU Base extends the FHIR standard to define nationally agreed localised FHIR structures for use in Australia. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
 
-The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate project or to specify conformance requirements for a particular use case. Implementers working with a common concept, that has national usage, are encouraged to submit for adoption into AU Base. 
+The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate project or to specify conformance requirements for a particular use case. Implementers working with a common concept that has national usage are encouraged to submit for adoption into AU Base. 
 
 Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
 * in the FHIR standard i.e. FHIR Extensions Pack
@@ -22,7 +22,7 @@ AU Base, as the Australian extension of the FHIR standard (including [FHIR Exten
 * Terminology localised for use in an Australian context
   * concepts unique to Australia e.g. communication languages unique to Australia, Australian Medicines Terminology (AMT), discharge disposition codes
   * usage localised to Australia e.g. nationally endorsed clinical reference sets represented as value sets
-* Profiles describing the use of FHIR structure for use in an Australian context:
+* Profiles defining FHIR structures for use in an Australian context:
   * Definitional data type profiles e.g. Australian address, Australian time zone, Identifiers such as national patient and provider identifiers
   * Base resource profiles (e.g. [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
   * Generic use case profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing project to undertake the work
@@ -33,40 +33,40 @@ AU Base does not define actors (i.e. ActorDefinitions) or support requirements a
 #### Extension Approach
 AU Base extends the set of extensions available in the FHIR standard (i.e. FHIR Extensions Pack) for Australia. Extensions are defined in AU Base when:
 * there is no native FHIR element that can be used
-* there is no available extension in the core FHIR Extensions Pack or through pre-adoption of a later version of FHIR
-* it is not suitable/achievable to define the extension in the core FHIR Extensions Pack
-* the use is not specific to a single use case or domain (i.e. specific to a single IG)
+* there is no available extension in the FHIR Extensions Pack or through pre-adoption of a later version of FHIR
+* it is not suitable or achievable to define the extension in the FHIR Extensions Pack
+* the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
-This approach means that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base or the core FHIR Extensions Pack.
+This approach means that AU Core will not define extensions - AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base or the FHIR Extensions Pack.
 
-Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the core FHIR Extensions Pack, the fallback is to define the extension in AU Base if that submission to the core FHIR Extensions Pack is not accepted.
+Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the FHIR Extensions Pack, the fallback is to define the extension in AU Base if that submission to the FHIR Extensions Pack is not accepted.
 
 AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements e.g. [AU Core Sex Assigned At Birth](https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
 #### Search Parameter Approach
-AU Base extends the set of search parameters available in the FHIR standard (i.e. FHIR Search Parameter Registry and FHIR Extensions pack). Search parameters are defined in AU Base when:
+AU Base extends the set of search parameters available in the FHIR standard (i.e. FHIR Search Parameter Registry and FHIR Extensions Pack). Search parameters are defined in AU Base when:
 * there is no available search parameter in the FHIR standard
 * the use is not specific to searching an extension defined in a downstream IG
 
-AU Base defined search parameters are definitional, and intend to be as expansive as possible to avoid limiting downstream use case decisions. For this reason, search parameters are defined as open and aspects such as chaining, modifiers, comparators are not limited.
+AU Base defined search parameters are definitional and are intended to be as expansive as possible to avoid limiting downstream use case decisions. For this reason, search parameters are defined as open and aspects such as chaining, modifiers, and comparators are not limited.
 
-This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, core FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to describe the applicable support requirements e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
+This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to describe the applicable support requirements e.g. [AU Core clinical-patient](https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html) that defines support for chained identifiers.
 
 #### Terminology Approach
 AU Base defines terminology additional to that used in the FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
 
 Code systems are defined in AU Base when:
-* it is not suitable/achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
-* it is not suitable/achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
+* it is not suitable or achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
+* it is not suitable or achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
   * terminology can be defined temporarily in an AU Base code system to support development during a release while work on promoting the concepts to [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html) is progressing
-* the use of the code system is not specific to a single use case or domain (i.e. specific to a single IG)
+* the use of the code system is not specific to a single use case or domain (i.e. not specific to a single IG)
 
 Sometimes, only additional concepts are required rather than a new code system. Where possible, individual concepts are added to an existing code system and promoted to the applicable international code systems, e.g. international edition of SNOMED CT, if the concept is not Australian-specific.
 
 Value sets are defined in AU Base when:
-* there is no available core FHIR value set (including in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)) that matches the set of values for usage agreed by the responsible work group
+* there is no available FHIR value set (including in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)) that matches the set of values for usage agreed by the responsible work group
 * the content of the value set is not predominantly SNOMED CT or LOINC*<sup>1</sup> 
-* the use is not specific to a single use case or domain (i.e. specific to a single IG)
+* the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
 *<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) directly rather than AU Base.*
 
