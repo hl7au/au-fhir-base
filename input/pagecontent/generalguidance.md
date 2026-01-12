@@ -34,7 +34,7 @@ AU Base does not define actors (i.e. ActorDefinitions) or support requirements a
 AU Base extends the set of extensions available in the FHIR standard (i.e.  [FHIR Extensions Pack](https://hl7.org/fhir/extensions/)) for Australia. Extensions are defined in AU Base when:
 * there is no native FHIR element that can be used
 * there is no available extension in the FHIR Extensions Pack or through pre-adoption of a later version of FHIR
-* it is not suitable or achievable to define the extension in the FHIR Extensions Pack
+* it is not suitable to define the extension in the FHIR Extensions Pack
 * the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
 This approach means that AU Core will not define extensions. AU Core profiles are intended for multiple use cases so all extensions for use in AU Core are defined in AU Base or the FHIR Extensions Pack.
@@ -55,11 +55,11 @@ This approach means that other HL7 AU IGs will not define search parameters unle
 #### Terminology Approach
 AU Base defines terminology additional to that used in the FHIR standard (including [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)). 
 
-Sometimes, only additional concepts are required rather than a new code system. Where possible, individual concepts are added to an existing code system and promoted to the applicable international code systems (e.g. international edition of SNOMED CT) if the concept is not Australian-specific.
+Sometimes, only additional concepts are required rather than a new code system. Where possible, individual concepts are added to an existing code system and promoted to an applicable international code system (e.g. international edition of SNOMED CT) if the concept is not Australian-specific.
 
 Code systems are defined in AU Base when:
 * it is not suitable or achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
-* it is not suitable or achievable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
+* it is not suitable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
   * terminology can be defined temporarily in an AU Base code system to support development during a release while work on promoting the concepts to [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html) is progressing
 * the use of the code system is not specific to a single use case or domain (i.e. not specific to a single IG)
 
@@ -71,12 +71,12 @@ Value sets are defined in AU Base when:
 *<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) directly rather than AU Base.*
 
 ##### Terminology Selection
-Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined for example supplying at least the standardised LOINC coding for vitals observations defined in the FHIR standard or complying with extensible and required bindings defined for elements in the FHIR standard.
+Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined for example supplying at least the standardised LOINC coding for vital signs observations defined in the FHIR standard or complying with extensible and required bindings defined for elements in the FHIR standard.
 
 When selecting terminology for use in an Australia healthcare context some rules of thumb apply:
 * SNOMED CT-AU is the default preferred terminology for clinical concepts (e.g. AllergyIntolerance.reaction.manifestation) and should always be considered
-  * If a nationally agreed clinical reference set is available that should be considered as the starting position for the set of values if SNOMED CT-AU is agreed to be the terminology bound to in the HL7 AU specification
-* A peak body or other relevant national authority endorsed terminology may override the above point (e.g. RCPA endorsed pathology reporting terminology is LOINC)
+  * Where availble, nationally agreed clinical reference set are considered as the starting position for the set of values if SNOMED CT-AU is agreed to be the terminology bound to in the HL7 AU specification
+* An alternative terminology endorsed by a peak body or relevant national authority may override the preference for SNOMED CT-AU (e.g. RCPA endorsed pathology reporting terminology is LOINC)
   * The endorsed set of values, where available, should be considered as the starting position for the set of values (e.g. for pathology reporting)
 * For Australian specific demographic concepts (e.g. ADF Veteran Status or Australian Indigenous Status or Australian States and Territories) the Australian applicable standard is used. This often resulting in a ‘new’ FHIR code system to publish that terminology. That 'new' FHIR code system would be defined in AU Base. 
   * Which standard is the applicable standard depends on the meaning and use of the element:
