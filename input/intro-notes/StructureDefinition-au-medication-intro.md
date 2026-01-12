@@ -16,7 +16,7 @@
   - medication form in `Medication.form.text`
   - item form and strength as part of medication definition in `Medication.code.text`
   - manufacturer in `Medication.manufacturer.display`
-  - individual ingredient strength implemented as [FHIR R5 element pre-adoption](https://hl7.org/fhir/R5/versions.html#extensions) of [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient). See example [Tadim](Medication-IngredientStrengthExtension0.html).
+  - individual ingredient strength included as [FHIR R5 element pre-adoption](https://hl7.org/fhir/R5/versions.html#extensions) of [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient). See example [Tadim](Medication-IngredientStrengthExtension0.html).
     - Use the element pre-adoption extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]).
     - Apply the pre-adoption extension on `Medication.ingredient`.
 
