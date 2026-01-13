@@ -1,6 +1,6 @@
 # AU Base FHIR Implementation Guide
 
-[AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. AU Base implementation presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification as base profiles that can be further constrained in a separate implementation guide for a particular usage.
+[AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. AU Base implementation presents Australian use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the FHIR R4 standard as base profiles that can be further constrained in a separate implementation guide for a particular usage.
 
 This guide alone does not constrain profiles sufficiently to ensure implementation use cases can be met.
 
