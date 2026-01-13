@@ -61,7 +61,8 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
       <li><a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)</li>
     </ul>
   </li>
-  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
+  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html#representing-body-site-which-may-include-laterality">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
+  <li>Added guidance on profiling approach, extension approach, terminology approach, and search parameter approach in the <a href="generalguidance.html#implementation-guide-approach">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52393">FHIR-52393</a>).</li> 
   <li><a href="StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
     <ul>
       <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>

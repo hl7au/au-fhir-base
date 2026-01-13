@@ -1,9 +1,9 @@
 This page includes all terminology artefacts defined as part of AU Base and:
 - value sets that form part of localised requirements (e.g. referenced in an AU Base imposed constraint)
 - code systems referenced by those value sets
-- concept maps unique to those value sets and not listed in the base FHIR specification
+- concept maps unique to those value sets and not listed in the FHIR standard
 
-Terminology artefacts used in AU Base are published in AU Base, the base FHIR specification, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
+Terminology artefacts used in AU Base are published in AU Base, the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
 
 <div class="stu-note">
 Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
@@ -11,7 +11,7 @@ Implementers are advised to take note that expansions of value sets visible in t
 
 ### Value Sets
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the base FHIR specification. 
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-valuesets.html) for a complete discussion on value sets and a list of value set names used in FHIR.  Many value sets used in this guide are defined in the FHIR standard. 
 
 The following value sets form part of localised requirements (i.e. are referenced in an AU Base imposed constraint).
 
@@ -461,7 +461,7 @@ The following value sets form part of localised requirements (i.e. are reference
 
 ### Code Systems
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification. 
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the FHIR standard. 
 
 The following code systems are referenced by the value sets listed above.
 
@@ -840,7 +840,7 @@ The following code systems are referenced by the value sets listed above.
 
 ### Concept Maps
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the base FHIR specification. The following Australian concept maps are unique to this guide and not listed in the base FHIR specification. These are relevant to value sets that are bound to AU Base profiles.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-conceptmaps.html) for a complete discussion on concept maps and a list of concept map names used in FHIR.  Most concept maps relevant to this guide are defined in the FHIR standard. The following Australian concept maps are unique to this guide and not listed in the FHIR standard. These are relevant to value sets that are bound to AU Base profiles.
 
 **Concept maps published in the NCTS**
 - [Australian States and Territories v1 to Australian States and Territories v2](https://healthterminologies.gov.au/fhir/ConceptMap/australian-states-territories-v1-to-v2-1)
