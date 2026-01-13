@@ -66,16 +66,16 @@ Code systems are defined in AU Base when:
 
 Value sets are defined in AU Base when:
 * there is no available FHIR value set (including in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)) that matches the set of values for usage agreed by the responsible work group
-* the content of the value set is not predominantly SNOMED CT or LOINC*<sup>1</sup> 
+* the content of the value set is not predominantly SNOMED CT or LOINC<sup>1</sup> 
 * the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
-*<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) directly rather than AU Base.*
+*<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are managed by the work group and published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) directly rather than AU Base.*
 
 ##### Terminology Selection
 Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined for example supplying at least the standardised LOINC coding for vital signs observations defined in the FHIR standard or complying with extensible and required bindings defined for elements in the FHIR standard.
 
 When selecting terminology for use in an Australia healthcare context some rules of thumb apply:
-* SNOMED CT-AU is the default preferred terminology for clinical concepts (e.g. AllergyIntolerance.reaction.manifestation) and should always be considered.
+* SNOMED CT-AU is the default preferred terminology for clinical concepts (e.g. `AllergyIntolerance.reaction.manifestation`) and should always be considered.
   * Where available, nationally agreed clinical reference set are considered as the starting position for the set of values when SNOMED CT-AU is agreed to be the terminology bound in the HL7 AU specification.
 * An alternative terminology endorsed by a peak body or relevant national authority may override the preference for SNOMED CT-AU (e.g. RCPA endorsed pathology reporting terminology is LOINC).
   * The endorsed set of values, where available, should be considered as the starting position for the set of values (e.g. the [RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3?ui:source=search)).
@@ -86,7 +86,7 @@ When selecting terminology for use in an Australia healthcare context some rules
 * Where possible, widely implemented international terminology is used with concepts added or enhanced rather than creating new competing code systems. Only where a set of concepts is semantically bounded and Australian specific is the preferred long term solution to create and manage an Australian jurisdictional terminology published in a FHIR code system.
 
 #### Data Type Profile Approach
-AU Base data type profiles are definitional and used to describe a concept relevant for usage in the Australian healthcare context. It is preferred to use a data type profile over a new extension or an inline slice in a base resource profile. Typically the data type that is profiled:
+In AU Base, data type profiles are definitional and used to describe a concept relevant for usage in the Australian healthcare context. It is preferred to use a data type profile over a new extension or an inline slice in a base resource profile. Typically the data type that is profiled:
 * is a complex data type e.g. Dosage, Identifier, Address, CodeableConcept. 
 * includes a fixed distinguishing part to identify the concept being represented e.g. Identifier.type or Address.country
 
@@ -97,7 +97,7 @@ Data type profiles that do not represent business identifiers do not follow the 
 
 #### Base Resource Profile Approach
 
-Base resource profiles inform a reader of which concepts are considered relevant to a particular resource type when used in an Australian context including extensions, terminology, and identifiers. 
+In AU Base, base resource profiles inform a reader of which concepts are considered relevant to a particular resource type when used in an Australian context including extensions, terminology, and identifiers. 
 
 AU Base is intentionally designed to be a dependency for all Australian implementation guides, and to encourage [derivation](http://hl7.org/fhir/profiling.html) from AU Base resource profiles. These base resource profiles:
 * do not force conformance to localised concepts or prescribe usage in particular scenarios
@@ -119,7 +119,7 @@ Some FHIR resource types are not profiled in AU Base as the resource type is too
 
 #### Generic Use Case Resource Profile Approach
 
-Generic use case resource profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
+In AU Base, generic use case resource profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
 * sufficient community need for national level agreement on the 'what' for a use case
 * sufficient community agreement on the 'what' for a use case
 * there is no upcoming IG project that covers the scope of the use case
