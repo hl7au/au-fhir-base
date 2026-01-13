@@ -25,7 +25,7 @@ AU Base, as the Australian extension of the FHIR standard (including [FHIR Exten
 * Profiles defining FHIR structures for use in an Australian context:
   * [Data type profiles](generalguidance.html#data-type-profile-approach) (e.g. [Australian Address])(StructureDefinition-au-address.html), [Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) such as national patient and provider identifiers
   * [Base resource profiles](generalguidance.html#base-resource-profile-approach) (e.g. [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
-  * [Generic use case profiles](generalguidance.html#generic-use-case-profile-approach) (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
+  * [Generic use case resource profiles](generalguidance.html#generic-use-case-profile-approach) (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
 
 AU Base does not define actors (i.e. ActorDefinitions) or support requirements associated with actors (e.g. CapabilityStatements or Obligations). This IG does not prescribe the usage or support requirements for any particular use case. 
 
@@ -37,9 +37,9 @@ AU Base extends the set of extensions available in the FHIR standard (i.e.  [FHI
 * it is not suitable to define the extension in the FHIR Extensions Pack
 * the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
-This approach means that AU Core will not define extensions. AU Core profiles are intended for multiple use cases, so all extensions used in AU Core are defined in AU Base or the core FHIR Extensions Pack.
-
 Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the core FHIR Extensions Pack. The fallback is to define the extension in AU Base if that submission to the core FHIR Extensions Pack is not accepted.
+
+This approach means that AU Core will not define extensions. AU Core profiles are intended for multiple use cases, so all extensions used in AU Core are defined in AU Base or the core FHIR Extensions Pack.
 
 AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements for example [AU Core Sex Assigned At Birth](https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
@@ -116,18 +116,18 @@ When modelling AU Base resource profiles:
 
 Some FHIR resource types are not profiled in AU Base as the resource type is too abstract to support meaningful localisation across use cases in a base resource profile (e.g. Basic, Observation, and Device). For these resource types, AU Core or a downstream use case IG can profile directly instead of inheriting from an AU Base profile. 
 
-#### Generic Use Case Profile Approach
+#### Generic Use Case Resource Profile Approach
 
-Generic use case profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
+Generic use case resource profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
 * sufficient community need for national level agreement on the 'what' for a use case
 * sufficient community agreement on the 'what' for a use case
 * there is no current or coming soon IG project that covers the scope of the use case
 
 Generic use case resource profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
 
-Generic use case profiles remain definitional, encourage derivation, and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling and implementation choices.
+Generic use case resource profiles remain definitional, encourage derivation, and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling and implementation choices.
 
-When an IG project is started that covers the scope of an AU Base generic use case profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:
+When an IG project is started that covers the scope of an AU Base generic use case resource profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:
 * the AU Core vital signs profiles started in AU Base and were subsequently moved to AU Core and then removed from AU Base
 * the AU eRequesting ServiceRequest profile started in AU Base and was subsequently moved to AU eRequesting and then deprecated in AU Base
 
