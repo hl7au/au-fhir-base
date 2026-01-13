@@ -8,7 +8,7 @@ This alignment allows general processing and simpler exchange of information fro
 This becomes more useful as the number of specific use case implementation guides expands and the potential issues of movement of information into and out of multiple domains of interest is addressed.
 
 This approach manifests as the following representation outcomes in this guide, as follows:
-* Cardinality: most representations described have a cardinality as defined in the core FHIR specification (which is general in nature) to avoid required content for use cases that do not need or support the content.
+* Cardinality: most representations described have a cardinality as defined in the FHIR standard (which is general in nature) to avoid required content for use cases that do not need or support the content.
 * Must Support: the FHIR profiling Must Support flags are not used in this guide; for similar reasons to the cardinality there is no assertion of required support for any of the elements profiled in this guide.
 * Terminology Binding: elements that can be bound to terminology are often sliced to offer one or more specific binding options that can be required in downstream guides; this also provides value sets that are common/suitable for the Australian context. 
 * Slice Constraints: in this guide choice or repeating elements are often sliced to define specific profiling options for that element, specific slices needed in downstream guides can be picked up and made required (cardinality), or must support as needed. Slicing on elements is left open to allow other slice profiles to be added as needed.
@@ -146,7 +146,7 @@ When an organisation has a need to create a stable identifier that is unique wit
    - a cloud provider assigning patient identifiers for multiple clients: `http://cloud-provider.com/identifiers/patient-id` 
    - an identifier assigned by a tenant within a multi-tenant application: `http://cloud-provider.com/identifiers/tenant-id/patient-id` 
 
-Additional guidance can be found in the [Identifiers](https://hl7.org/fhir/R4/datatypes.html#Identifier) section of the FHIR Specification.
+Additional guidance can be found in the [Identifiers](https://hl7.org/fhir/R4/datatypes.html#Identifier) section of the FHIR standard.
 
 **HPI-O scoped Identifiers**
 
