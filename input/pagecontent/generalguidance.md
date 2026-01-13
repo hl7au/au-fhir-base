@@ -27,7 +27,7 @@ AU Base, as the Australian extension of the FHIR standard (including [FHIR Exten
   * [Base resource profiles](generalguidance.html#base-resource-profile-approach) (e.g., [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
   * [Generic use case resource profiles](generalguidance.html#generic-use-case-resource-profile-approach) (e.g., [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
 
-AU Base does not define actors (i.e.,ActorDefinitions) or support requirements associated with actors (e.g., CapabilityStatements or Obligations). This IG does not prescribe the usage or support requirements for any particular use case. 
+AU Base does not define actors (i.e., ActorDefinitions) or support requirements associated with actors (e.g., CapabilityStatements or Obligations). This IG does not prescribe the usage or support requirements for any particular use case. 
 
 
 #### Extension Approach
@@ -36,7 +36,7 @@ AU Base extends the set of extensions available in the FHIR standard (i.e., [FHI
 * there is no available extension in the FHIR Extensions Pack 
 * there is no [future FHIR version resource element](https://hl7.org/fhir/R5/versions.html#extensions) that can be pre-adopted
 * it is not suitable to define the extension in the FHIR Extensions Pack
-* the use is not specific to a single use case or domain (i.e.,not specific to a single IG)
+* the use is not specific to a single use case or domain (i.e., not specific to a single IG)
 
 Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the FHIR Extensions Pack. The fallback is to define the extension in AU Base if that submission to the FHIR Extensions Pack is not accepted.
 
@@ -62,12 +62,12 @@ Code systems are defined in AU Base when:
 * it is not suitable or achievable to add the needed concepts to an existing published code system (e.g., some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)
 * it is not suitable to define the new code system in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)
   * terminology can be defined temporarily in an AU Base code system to support development during a release while work on promoting the concepts to [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html) is progressing
-* the use of the code system is not specific to a single use case or domain (i.e.,not specific to a single IG)
+* the use of the code system is not specific to a single use case or domain (i.e., not specific to a single IG)
 
 Value sets are defined in AU Base when:
 * there is no available FHIR value set (including in [HL7 Terminology (THO)](https://build.fhir.org/ig/HL7/UTG/documentation.html)) that matches the set of values for usage agreed by the responsible work group
 * the content of the value set is not predominantly SNOMED CT or LOINC<sup>1</sup> 
-* the use is not specific to a single use case or domain (i.e.,not specific to a single IG)
+* the use is not specific to a single use case or domain (i.e., not specific to a single IG)
 
 *<sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are managed by the work group and published via the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/) directly rather than AU Base.*
 
@@ -155,7 +155,7 @@ The following AFMM levels are defined:
 
 **AFMM 4** AFMM 3 PLUS the artefact is published in a formal publication (e.g., a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
 
-**AFMM 5** AFMM 4 PLUS the artefact has been published in two formal publication release cycles at AFMM1+ (i.e.,Trial Use level) and has been implemented in at least 5 independent production systems.
+**AFMM 5** AFMM 4 PLUS the artefact has been published in two formal publication release cycles at AFMM1+ (i.e., Trial Use level) and has been implemented in at least 5 independent production systems.
 
 **Normative** AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the [inter-version](https://hl7.org/fhir/versions.html#change) change rules and the artefact has passed HL7 AU normative ballot. This is synonymous with [Normative](https://hl7.org/fhir/versions.html#normative) standard status.
 
