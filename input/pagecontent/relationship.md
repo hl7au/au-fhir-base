@@ -10,7 +10,7 @@ In summary, AU Base:
 - does not recommend or mandate any particular resource, element, or interactions.
 
 The context of AU Base within the set of HL7 AU standards is shown in the figure below:
-- the **FHIR standard** is the foundation, which creates a common platform or foundation on which a variety of different solutions are implemented. References to the FHIR standard on this page include the HL7 International Core FHIR Specification, HL7 International Core Extensions FHIR Implementation Guide (Extensions Pack) and HL7 International HL7 Terminology (THO). 
+- the **FHIR standard** is the foundation, which creates a common platform or foundation on which a variety of different solutions are implemented. References to the FHIR standard on this page include the HL7 FHIR Specification, FHIR Extensions Pack and HL7 Terminology (THO). 
 - **AU Base** defines local concepts for use in an Australian context introducing relevant identifiers, terminology, extensions. 
 - **AU Core** defines a set of conformance requirements that enforce a set of ‘minimum requirements’ on the local concepts from AU Base, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
 - **Use case IGs** (AU eRequesting and AU Provider Directory) build on AU Core to address specific use cases, defining a set of conformance requirements on top of AU Core, using additional building blocks from AU Base as needed.
