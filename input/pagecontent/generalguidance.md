@@ -38,9 +38,9 @@ AU Base extends the set of extensions available in the FHIR standard (i.e.  [FHI
 * it is not suitable to define the extension in the FHIR Extensions Pack
 * the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
-Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the core FHIR Extensions Pack. The fallback is to define the extension in AU Base if that submission to the core FHIR Extensions Pack is not accepted.
+Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the FHIR Extensions Pack. The fallback is to define the extension in AU Base if that submission to the FHIR Extensions Pack is not accepted.
 
-This approach means that AU Core will not define extensions. AU Core profiles are intended for multiple use cases, so all extensions used in AU Core are defined in AU Base or the core FHIR Extensions Pack.
+This approach means that AU Core will not define extensions. AU Core profiles are intended for multiple use cases, so all extensions used in AU Core are defined in AU Base or the FHIR Extensions Pack.
 
 AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements for example [AU Core Sex Assigned At Birth](https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html) which profiles the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html).
 
