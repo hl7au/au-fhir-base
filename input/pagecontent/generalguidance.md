@@ -4,7 +4,7 @@
 
 AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. Where a directly implementable usage of AU Base it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
 
-AU Base extends the FHIR standard to define nationally agreed localised FHIR structures for use in Australia. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
+AU Base extends the FHIR standard to define nationally agreed localised FHIR structures suitable for usage across jurisdictions, organisations, and digital health initiatives nationwide. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
 
 The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate IG project or to specify conformance requirements for a particular use case. Implementers working with a common concept that has national usage are encouraged to submit for adoption into AU Base. 
 
@@ -25,7 +25,7 @@ AU Base, as the Australian extension of the FHIR standard (including [FHIR Exten
 * Profiles defining FHIR structures for use in an Australian context:
   * [Data type profiles](generalguidance.html#data-type-profile-approach) (e.g. [Australian Address])(StructureDefinition-au-address.html), [Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) such as national patient and provider identifiers
   * [Base resource profiles](generalguidance.html#base-resource-profile-approach) (e.g. [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
-  * [Generic use case resource profiles](generalguidance.html#generic-use-case-profile-approach) (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
+  * [Generic use case resource profiles](generalguidance.html#generic-use-case-resource-profile-approach) (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
 
 AU Base does not define actors (i.e. ActorDefinitions) or support requirements associated with actors (e.g. CapabilityStatements or Obligations). This IG does not prescribe the usage or support requirements for any particular use case. 
 
@@ -96,7 +96,7 @@ Data type profiles that do not represent business identifiers do not follow the 
 
 #### Base Resource Profile Approach
 
-AU Base resource profiles inform a reader of which concepts are considered relevant to a particular resource type when used in an Australian context including extensions, terminology, and identifiers. 
+Base resource profiles inform a reader of which concepts are considered relevant to a particular resource type when used in an Australian context including extensions, terminology, and identifiers. 
 
 AU Base is intentionally designed to be a dependency for all Australian implementation guides, and to encourage [derivation](http://hl7.org/fhir/profiling.html) from AU Base resource profiles. These base resource profiles:
 * do not force conformance to localised concepts or prescribe usage in particular scenarios
@@ -121,13 +121,13 @@ Some FHIR resource types are not profiled in AU Base as the resource type is too
 Generic use case resource profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
 * sufficient community need for national level agreement on the 'what' for a use case
 * sufficient community agreement on the 'what' for a use case
-* there is no current or coming soon IG project that covers the scope of the use case
+* there is no upcoming IG project that covers the scope of the use case
 
 Generic use case resource profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
 
 Generic use case resource profiles remain definitional, encourage derivation, and do not include _Must Support_ or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling and implementation choices.
 
-When an IG project is started that covers the scope of an AU Base generic use case resource profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:
+When an IG project starts that covers the scope of an AU Base generic use case resource profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:
 * the AU Core vital signs profiles started in AU Base and were subsequently moved to AU Core and then removed from AU Base
 * the AU eRequesting ServiceRequest profile started in AU Base and was subsequently moved to AU eRequesting and then deprecated in AU Base
 
