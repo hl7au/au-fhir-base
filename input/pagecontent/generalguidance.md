@@ -99,9 +99,7 @@ Data type profiles that do not represent business identifiers do not follow the 
 
 In AU Base, base resource profiles inform a reader of which concepts are considered relevant to a particular resource type when used in an Australian context including extensions, terminology, and identifiers. 
 
-AU Base is intentionally designed to be a dependency for all Australian implementation guides, and to encourage [derivation](http://hl7.org/fhir/profiling.html) from AU Base resource profiles. These base resource profiles:
-* do not force conformance to localised concepts or prescribe usage in particular scenarios
-* are only constrained (e.g., cardinality) where the constraint is agreed as applicable nation-wide and across use cases to avoid limiting options for downstream use case decisions and business rules
+AU Base is intentionally designed to be a dependency for all Australian implementation guides, and to encourage [derivation](http://hl7.org/fhir/profiling.html) from AU Base resource profiles. These base resource profiles do not force conformance to localised concepts or prescribe usage in particular scenarios.* 
 
 When modelling AU Base resource profiles:
 * Open: profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
