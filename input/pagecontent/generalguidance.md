@@ -2,7 +2,7 @@
 
 ### Implementation Guide Approach
 
-AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. Where a directly implementable usage of AU Base it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
+AU Base is designed to serve as a [base layer](relationship.html) within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. For a directly implementable usage of AU Base, it is recommended that [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) is adopted. 
 
 AU Base extends the FHIR standard to define nationally agreed localised FHIR structures suitable for usage across jurisdictions, organisations, and digital health initiatives nationwide. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as [Australian Medicare card number](StructureDefinition-au-medicarecardnumber.html) or [Australian Indigenous Status](StructureDefinition-indigenous-status.html).
 
@@ -23,7 +23,7 @@ AU Base, as the Australian extension of the FHIR standard (including [FHIR Exten
   * concepts unique to Australia (e.g. languages, Australian Medicines Terminology (AMT), discharge disposition codes)
   * usage localised to Australia (e.g. nationally endorsed clinical reference sets represented as value sets)
 * Profiles defining FHIR structures for use in an Australian context:
-  * [Data type profiles](generalguidance.html#data-type-profile-approach) (e.g. [Australian Address])(StructureDefinition-au-address.html), [Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) such as national patient and provider identifiers
+  * [Data type profiles](generalguidance.html#data-type-profile-approach) (e.g. [Australian Address](StructureDefinition-au-address.html), [Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) such as national patient and provider identifiers
   * [Base resource profiles](generalguidance.html#base-resource-profile-approach) (e.g. [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
   * [Generic use case resource profiles](generalguidance.html#generic-use-case-resource-profile-approach) (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
 
@@ -33,7 +33,8 @@ AU Base does not define actors (i.e. ActorDefinitions) or support requirements a
 #### Extension Approach
 AU Base extends the set of extensions available in the FHIR standard (i.e.  [FHIR Extensions Pack](https://hl7.org/fhir/extensions/)) for Australia. Extensions are defined in AU Base when:
 * there is no native FHIR element that can be used
-* there is no available extension in the FHIR Extensions Pack or through pre-adoption of a later version of FHIR
+* there is no available extension in the FHIR Extensions Pack 
+* there is no [future FHIR version resource element](https://hl7.org/fhir/R5/versions.html#extensions) that can be pre-adopted
 * it is not suitable to define the extension in the FHIR Extensions Pack
 * the use is not specific to a single use case or domain (i.e. not specific to a single IG)
 
@@ -80,9 +81,9 @@ When selecting terminology for use in an Australia healthcare context some rules
   * The endorsed set of values, where available, should be considered as the starting position for the set of values (e.g. the [RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3?ui:source=search)).
 * For Australian specific demographic concepts (e.g. Australian Defence Force veteran status or Australian indigenous status or Australian states and territories) the applicable national standard is used. This often resulting in a new FHIR code system, published in AU Base, to make that terminology available in FHIR:
   * The applicable standard depends on the meaning and use of the element:
-    * If the driver is reporting thenAustralian Bureau of Statistics and/or Australian Institute of Health and Welfare concepts are typically preferred, and refer to current standard for person and provider identification in healthcare.
+    * If the driver is reporting then Australian Bureau of Statistics and/or Australian Institute of Health and Welfare concepts are typically preferred and refer to current standard for person and provider identification in healthcare.
 * For other concepts (e.g. not clinical or Australian specific demographics) the applicable standard is used where it is available. Preference is given to the international and/or FHIR implemented terminology for that concept (e.g. the terminology for country codes or language codes or MIME types).
-* Where possible, widely-implemented international terminology is used with concepts added or enhanced rather than creating new competing code systems. Only where a set of concepts is semantically bounded and Australian specific is the preferred long term solution to create and manage an Australian jurisdictional terminology published in a FHIR code system.
+* Where possible, widely implemented international terminology is used with concepts added or enhanced rather than creating new competing code systems. Only where a set of concepts is semantically bounded and Australian specific is the preferred long term solution to create and manage an Australian jurisdictional terminology published in a FHIR code system.
 
 #### Data Type Profile Approach
 AU Base data type profiles are definitional and used to describe a concept relevant for usage in the Australian healthcare context. It is preferred to use a data type profile over a new extension or an inline slice in a base resource profile. Typically the data type that is profiled:
