@@ -23,7 +23,7 @@ AU Base, as the Australian extension of the FHIR standard (including [FHIR Exten
   * concepts unique to Australia (e.g. languages, Australian Medicines Terminology (AMT), discharge disposition codes)
   * usage localised to Australia (e.g. nationally endorsed clinical reference sets represented as value sets)
 * Profiles defining FHIR structures for use in an Australian context:
-  * [Data type profiles](generalguidance.html#data-type-profile-approach) (e.g. [Australian Address](StructureDefinition-au-address.html), [Australian Business Number](StructureDefinition-au-australianbusinessnumber.html) such as national patient and provider identifiers
+  * [Data type profiles](generalguidance.html#data-type-profile-approach) (e.g. [Australian Address](StructureDefinition-au-address.html), [Australian Business Number](StructureDefinition-au-australianbusinessnumber.html))
   * [Base resource profiles](generalguidance.html#base-resource-profile-approach) (e.g. [AU Base Patient](StructureDefinition-au-patient.html), [AU Base MedicationStatement](StructureDefinition-au-medicationstatement.html))
   * [Generic use case resource profiles](generalguidance.html#generic-use-case-resource-profile-approach) (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), where there is no existing IG project to undertake the work
 
@@ -74,14 +74,16 @@ Value sets are defined in AU Base when:
 ##### Terminology Selection
 Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined for example supplying at least the standardised LOINC coding for vital signs observations defined in the FHIR standard or complying with extensible and required bindings defined for elements in the FHIR standard.
 
-When selecting terminology for use in an Australia healthcare context some rules of thumb apply:
+Localisation of terminology occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that contribute additional concepts as needed for use in implementation.
+
+When selecting terminology for use in an Australian healthcare context some rules of thumb apply:
 * SNOMED CT-AU is the default preferred terminology for clinical concepts (e.g. `AllergyIntolerance.reaction.manifestation`) and should always be considered.
-  * Where available, nationally agreed clinical reference set are considered as the starting position for the set of values when SNOMED CT-AU is agreed to be the terminology bound in the HL7 AU specification.
+  * Where available, nationally agreed clinical reference sets are considered as the starting position for the set of values when SNOMED CT-AU is agreed to be the terminology bound in the HL7 AU specification.
 * An alternative terminology endorsed by a peak body or relevant national authority may override the preference for SNOMED CT-AU (e.g. RCPA endorsed pathology reporting terminology is LOINC).
   * The endorsed set of values, where available, should be considered as the starting position for the set of values (e.g. the [RCPA - SPIA Chemical Pathology Terminology Reference Set](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3?ui:source=search)).
 * For Australian-specific demographic concepts (e.g. Australian Defence Force veteran status or Australian indigenous status or Australian states and territories) the applicable national standard is used. This often results in a new FHIR code system, published in AU Base, to make that terminology available in FHIR:
   * The applicable standard depends on the meaning and use of the element:
-    * If the driver is reporting then Australian Bureau of Statistics and/or Australian Institute of Health and Welfare concepts are typically preferred and refer to the current standard for person and provider identification in healthcare.
+    * If the driver is reporting then Australian Bureau of Statistics and/or Australian Institute of Health and Welfare concepts are typically preferred. The current standard for person and provider identification in healthcare is also considered as a preferred source.
 * For other concepts (e.g. not clinical or Australian-specific demographics) the applicable standard is used where it is available. Preference is given to the international and/or FHIR implemented terminology for that concept (e.g. the terminology for country codes or language codes or MIME types).
 * Where possible, widely implemented international terminology is used with concepts added or enhanced rather than creating new competing code systems. Only where a set of concepts is semantically bounded and Australian-specific is the preferred long term solution to create and manage an Australian jurisdictional terminology published in a FHIR code system.
 
@@ -105,7 +107,7 @@ When modelling AU Base resource profiles:
 * Open: profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
 * Extensions: extensions are explicitly modelled in the profile to identify the nationally agreed extension to use for a particular concept.
 * Cardinality: cardinality is only constrained where there is national agreement that for all use cases in the Australian healthcare context the cardinality restriction needs to be applied (e.g. legislative requirements).
-* Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR standard or a localised value set. Localisation occurs through a number of mechanisms including nationally maintained clinical reference sets in the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/), terminology published by government agencies such as the [Australian Bureau of Statistics](https://www.abs.gov.au/), [Australian Institute of Health and Welfare](https://www.aihw.gov.au/), [Services Australia](https://www.servicesaustralia.gov.au/), and use case projects that contribute additional concepts as needed for use in implementation.
+* Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR standard or a localised value set.
   * By default, bindings specified in AU Base are [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) to indicate the recommended local terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context across use cases. 
   * Where multiple terminologies are recognised for use in the Australian healthcare context, the set of terminologies are described using [additional bindings](http://hl7.org/fhir/tools/StructureDefinition/additional-binding), for example [AU Base Medication](StructureDefinition-au-medication.html), `Medication.code` uses additional bindings to describe usage of Australian Medicines Terminology, PBS Item Codes, MIMS, and GTIN.
 * Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules. Slicing, where present, is used to either include an extension or to define a real world concept that cannot be meaningfully modelled using another profiling technique, and is left open to allow for flexibility.
@@ -117,7 +119,7 @@ Some FHIR resource types are not profiled in AU Base as the resource type is too
 
 #### Generic Use Case Resource Profile Approach
 
-In AU Base, generic use case resource profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
+In AU Base, generic use case resource profiles (e.g. [AU Medicine List](StructureDefinition-au-medlist.html), [AU Base Diagnostic Imaging Result](StructureDefinition-au-imagingresult.html)), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:
 * sufficient community need for national level agreement on the 'what' for a use case
 * sufficient community agreement on the 'what' for a use case
 * there is no upcoming IG project that covers the scope of the use case
