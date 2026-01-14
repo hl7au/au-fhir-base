@@ -3,7 +3,7 @@
 - Publication status: Working Standard (Trial Use)
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html) to [6.0.0](https://hl7.org.au/fhir/6.0.0/index.html)
+This change log documents the significant updates and resolutions implemented from version [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html) to [6.0.0](https://hl7.org.au/fhir/6.0.0/index.html).
 
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
