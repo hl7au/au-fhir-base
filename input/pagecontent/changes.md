@@ -53,7 +53,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
   </li>
   <li>Removed code systems:
     <ul>
-     <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+     <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
     </ul>
   </li>
   <li>Deprecated value sets:
