@@ -51,9 +51,9 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
       <li><a href="StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
     </ul>
   </li>
-  <li>Deprecated code systems:
+  <li>Removed code systems:
     <ul>
-     <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+     <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
     </ul>
   </li>
   <li>Deprecated value sets:
@@ -89,11 +89,6 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
     <ul>
       <li>Applied technical correction to invariants inv-relper-0, inv-relper-1, inv-relper-2, inv-relper-3, and inv-relper-4 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
       <li>Added invariant inv-relper-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
-    </ul>
-  </li>
-  <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a>: 
-    <ul>
-      <li>Added OID identifier to code system (<a href="https://jira.hl7.org/browse/FHIR-53836">FHIR-53836</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>: 

@@ -3,7 +3,7 @@
 # === ERROR 01: Expected error as the AU Base PBS CodeSystem is defined without content included. ===
 Unknown code '11815W' in the CodeSystem 'http://pbs.gov.au/code/item'
 
-# === ERROR 02 (TO APPROVE): This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build)  ===
+# === ERROR 02: This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build)  ===
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
 # === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
@@ -79,7 +79,7 @@ A definition for CodeSystem 'https://example.com/labs' could not be found, so th
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated 
 A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
 
-# === WARNING 12 (TO APPROVE): These AU Base CodeSystems have implicit ValueSets referenced, these have no published FHIR definition available. ===
+# === WARNING 12: These AU Base CodeSystems have implicit ValueSets referenced, these have no published FHIR definition available. ===
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/location-physical-type'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/au-digital-health-source-system'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/location-type'
@@ -88,13 +88,12 @@ A definition could not be found for Canonical URL 'http://terminology.hl7.org.au
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/v2-0443'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/v3-ActCode'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/communication-request-category'
-A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/communicationrequest-reason'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/resource-tag'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/au-recorded-sex-or-gender-source-document-type'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/au-recorded-sex-or-gender-type'
 A definition could not be found for Canonical URL 'http://terminology.hl7.org.au/ValueSet/task-business-status'
 
-# === WARNING 13 (TO APPROVE): The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
+# === WARNING 13: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
 No definition could be found for URL value 'http://hl7.org.au/id/abn'
 No definition could be found for URL value 'http://hl7.org.au/id/acn'
 No definition could be found for URL value 'http://hl7.org.au/id/ahpra-registration-number'
@@ -118,14 +117,14 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/centrelink-customer-reference-number'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/residential-aged-care-service-id'
 
-# === WARNING 14 (TO APPROVE): External example URLs that are not resolvable. ===
+# === WARNING 14: External example URLs that are not resolvable. ===
 No definition could be found for URL value 'http://ns.electronichealth.net.au/smd/target'
 No definition could be found for URL value 'http://ns.medical-objects.com.au/id/routing-id'
 No definition could be found for URL value 'Binary/f016'
 No definition could be found for URL value 'http://pbs.gov.au/identifier/manufacturer'
 No definition could be found for URL value 'https://uatsmd.connectingcare.com/cc.smd/SealedMessageDelivery.svc'
 
-# === WARNING 15 (TO APPROVE): Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
+# === WARNING 15: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824753556'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556'
@@ -133,7 +132,7 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003621566684455'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003621566684455'
 
-# === WARNING 16 (TO APPROVE): AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
+# === WARNING 16: AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure' to 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' to 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace|5.2.0'
@@ -141,39 +140,39 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired' to 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthTime'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthTime' to 'http://hl7.org/fhir/StructureDefinition/patient-birthTime|5.2.0'
 
-# === WARNING 17 (TO APPROVE): Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+# === WARNING 17: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://snomed.info/sct was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.0' because the code system http://pbs.gov.au/code/item was not found
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.0' because the code system http://snomed.info/sct was not found
 
-# === WARNING 18 (TO APPROVE): Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
+# === WARNING 18: Example codes from the code systems supplied are tested against an example binding terminology. IG publisher identifies this as '' (no ValueSet); and the code can not be validated.  ===
 Unable to check whether the code is in the value set '' because the code system http://pbs.gov.au/code/item was not found
 Unable to check whether the code is in the value set '' because the code system http://snomed.info/sct was not found
 
-# === INFORMATION 01 (TO APPROVE): Some FHIR standard ValueSets are published as draft. ===
+# === INFORMATION 01: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/additional-instruction-codes|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/bodystructure-code|4.0.1 
 
-# === INFORMATION 02 (TO APPROVE): Known NCTS published RCPA ValueSets published as experimental. ===
+# === INFORMATION 02: Known NCTS published RCPA ValueSets published as experimental. ===
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.20251231.0
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.20251231.0
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.20251231.0
 Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.20251231.0
 
-# === INFORMATION 03 (TO APPROVE): Some FHIR standard referenced CodeSystems are published as draft/experimental only. ===
+# === INFORMATION 03: Some FHIR standard referenced CodeSystems are published as draft/experimental only. ===
 Reference to draft CodeSystem https://www.iana.org/time-zones|20210124
 Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
 Reference to experimental CodeSystem http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0|20130626
 
-# === INFORMATION 04 (TO APPROVE): These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
+# === INFORMATION 04: These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
 
-# === INFORMATION 05 (TO APPROVE): This issue is inherited from FHIR R4 resource content included in profiles. ===
+# === INFORMATION 05: This issue is inherited from FHIR R4 resource content included in profiles. ===
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# === INFORMATION 06 (TO APPROVE): Generated when expanding large ValueSets e.g. those containing SNOMED-CT ===
-The value set expansion is too large, and only a subset has been displayed
+# === INFORMATION 06: Generated when expanding large ValueSets e.g. those containing SNOMED-CT ===
+The value set expansion is too large, and only a subset has been displayed                                                   
