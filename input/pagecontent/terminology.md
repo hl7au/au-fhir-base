@@ -812,7 +812,7 @@ The following code systems are referenced by the value sets listed above.
         <td>United Nations Statistics Division</td>
     </tr>
     <tr>
-        <td><a href="https://terminology.hl7.org/CodeSystem-v3-ietf3066.html">Tags for the Identification of Languages</a></td>
+        <td><a href="https://terminology.hl7.org/ECS_MR-v3-ietf3066.html">Tags for the Identification of Languages</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
