@@ -43,7 +43,7 @@ jobs:
         
     - name: Download past versions
       run: |
-        # aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
+        aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
         ln -s /webroot webroot   
         mv publish-setup.json ./webroot/
         
