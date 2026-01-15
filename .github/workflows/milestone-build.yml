@@ -16,7 +16,7 @@ permissions:
   
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Linux, X64]
     # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
     container: 
       image: hl7fhir/ig-publisher-base  
