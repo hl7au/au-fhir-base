@@ -3,30 +3,43 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0-ballot/index.html">6.0.0-ballot</a> to TBD. 
+This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0-ballot/index.html">6.0.0</a> to TBD. 
+
+#### Reinstated
+This version of current build reinstates profiles not included in the AU Base 6.0.0 release:
+<ul>
+  <li>Ethnicity extension</li>
+</ul>
+
+### Release 6.0.0
+- Publication date: 2026-01-14
+- Publication status: Working Standard (Trial Use)
+- Based on FHIR version: 4.0.1
+ 
+This change log documents the significant updates and resolutions implemented from version [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html) to [6.0.0](https://hl7.org.au/fhir/6.0.0/index.html).
 
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
-  <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Added invariant inv-pat-6 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
      <li>Added invariant inv-pra-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
     <ul>
       <li>Added invariant inv-relper-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
  </ul>
 
-#### Reinstated
-This version of current build reinstates profiles not included in the AU Base 6.0.0-ballot release:
+##### Not Included
+The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM <b>DRAFT 0</b> maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
 <ul>
   <li>Ethnicity extension</li>
 </ul>
@@ -35,103 +48,98 @@ This version of current build reinstates profiles not included in the AU Base 6.
 <ul>
   <li>New code systems:
     <ul>
-      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-communication-request-category.html">Communication Request Category</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-communication-request-category.html">Communication Request Category</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
     </ul>
     <ul>
-      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-digital-health-source-system.html">Australian Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-au-digital-health-source-system.html">Australian Digital Health Source System </a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
     </ul>
   </li>
   <li>New value sets:
     <ul>
-      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/6.0.0/ValueSet-rsg-source.html">AU Recorded Sex or Gender (RSG) Source</a> (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>)</li>
     </ul>
   </li>
   <li>Deprecated extensions:
     <ul>
-      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-result-copies-to.html">Result Copies To</a> (<a href="https://jira.hl7.org/browse/FHIR-51916">FHIR-51916</a>)</li>
     </ul>
   </li>
-  <li>Deprecated code systems:
+  <li>Removed code systems:
     <ul>
-     <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
+     <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/CodeSystem-communicationrequest-reason.html">Communication Request Reason</a> (<a href="https://jira.hl7.org/browse/FHIR-51889">FHIR-51889</a>, <a href="https://jira.hl7.org/browse/FHIR-51890">FHIR-51890</a>, <a href="https://jira.hl7.org/browse/FHIR-51891">FHIR-51891</a>)</li>
     </ul>
   </li>
   <li>Deprecated value sets:
     <ul>
-      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/6.0.0/ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a> (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>)</li>
     </ul>
   </li>
-  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="generalguidance.html#representing-body-site-which-may-include-laterality">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
-  <li>Added guidance on profiling approach, extension approach, terminology approach, and search parameter approach in the <a href="generalguidance.html#implementation-guide-approach">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52393">FHIR-52393</a>).</li> 
-  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
+  <li>Added guidance on representing body site and laterality for AU Base Condition, AU Base Procedure, and AU Base ServiceRequest to the <a href="https://hl7.org.au/fhir/6.0.0/generalguidance.html#representing-body-site-which-may-include-laterality">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52933">FHIR-52933</a>).</li> 
+  <li>Added guidance on profiling approach, extension approach, terminology approach, and search parameter approach in the <a href="https://hl7.org.au/fhir/6.0.0/generalguidance.html#implementation-guide-approach">General Guidance</a> page, incorporating content previously published in AU Core (<a href="https://jira.hl7.org/browse/FHIR-52393">FHIR-52393</a>).</li> 
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-allergyintolerance.html">AU Base AllergyIntolerance</a>: 
     <ul>
       <li>Changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) (<a href="https://jira.hl7.org/browse/FHIR-47076">FHIR-47076</a>).</li>
     </ul>
   </li>
-  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html">AU Base Medication</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>     
       <li>Changed Medication.ingredient.item[x] binding to Medication Ingredient (preferred) (<a href="https://jira.hl7.org/browse/FHIR-44781">FHIR-44781</a>).</li>
     </ul>
   </li>
-  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Applied technical correction to invariants inv-pat-1, inv-pat-2, inv-pat-3, inv-pat-4, and inv-pat-5 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
       <li>Added invariant inv-pat-6 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
-  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
       <li>Applied technical correction to invariants inv-pra-0, inv-pra-1, inv-pra-2, inv-pra-3, and inv-pra-4 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
       <li>Added invariant inv-pra-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
-  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
+  <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
     <ul>
       <li>Applied technical correction to invariants inv-relper-0, inv-relper-1, inv-relper-2, inv-relper-3, and inv-relper-4 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present (<a href="https://jira.hl7.org/browse/FHIR-53536">FHIR-53536</a>).</li>
       <li>Added invariant inv-relper-5 to RSG.source to bind AU Recorded Sex or Gender (RSG) Source (extensible) (<a href="https://jira.hl7.org/browse/FHIR-52016">FHIR-52016</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-communicationrequest-reason.html">Communication Request Reason</a>: 
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-au-v2-0203.html">IdentifierType AU</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-medication-type.html">Medication Type</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-medicine-item-change.html">Medicine Item Change</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-au-v2-0443.html">providerRole AU</a>: 
+    <ul>
+      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-resource-tag.html">Resource Tag</a>: 
     <ul>
       <li>Added OID identifier to code system (<a href="https://jira.hl7.org/browse/FHIR-53836">FHIR-53836</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>: 
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>: 
     <ul>
       <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>: 
-    <ul>
-      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
-    </ul>
-  </li>
-  <li><a href="CodeSystem-medication-type.html">Medication Type</a>: 
-    <ul>
-      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
-    </ul>
-  </li>
-  <li><a href="CodeSystem-medicine-item-change.html">Medicine Item Change</a>: 
-    <ul>
-      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
-    </ul>
-  </li>
-  <li><a href="CodeSystem-au-v2-0443.html">providerRole AU</a>: 
-    <ul>
-      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
-    </ul>
-  </li>
-  <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>: 
-    <ul>
-      <li>Added OID identifier to code system (<a href="https://jira.hl7.org/browse/FHIR-53836">FHIR-53836</a>).</li>
-    </ul>
-  </li>
-  <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>: 
-    <ul>
-      <li>Applied technical correction to set versionNeeded to false in code system, as concept permanence applies (<a href="https://jira.hl7.org/browse/FHIR-53818">FHIR-53818</a>).</li>
-    </ul>
-  </li>
-  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-task-business-status.html">Task Business Status</a>: 
+  <li><a href="https://hl7.org.au/fhir/6.0.0/CodeSystem-task-business-status.html">Task Business Status</a>: 
     <ul>
       <li>Updated codes, displays and definitions in code system to make explicit whether a status applies to the task or the request (<a href="https://jira.hl7.org/browse/FHIR-51893">FHIR-51893</a>, <a href="https://jira.hl7.org/browse/FHIR-51894">FHIR-51894</a>).</li>
       <li>Added OID identifier to code system (<a href="https://jira.hl7.org/browse/FHIR-53836">FHIR-53836</a>).</li>
