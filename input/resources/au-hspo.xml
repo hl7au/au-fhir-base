@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-hspo"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft">
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-hspo"/>
+  <name value="AUHSPO"/>
+  <title value="AU HSP-O"/>
+  <status value="draft"/>
+  <description value="This identifier profile defines a Healthcare Support Service Provider - Organisation (HSP-O) identifier in an Australian context (see [Australian Digital Health Agency](https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010) for further information). An HSP-O is assigned under the HI Service to an organisation that does not directly provide healthcare services but provides care and support services, such as in-home care support and personal care services.&#xA;&#xA;An organisation cannot be assigned both an HPI-O and an HSP-O; only one identifier is assigned by the HI Service."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <type value="Identifier"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Identifier">
+      <path value="Identifier"/>
+      <short value="Healthcare Support Service Provider - Organisation (HSP-O) identifier"/>
+      <definition value="Healthcare Support Service Provider - Organisation (HSP-O) identifier assigned under the HI Service to an organisation that does not directly provide healthcare services but provides care and support services, such as in-home care support and personal care services."/>
+      <constraint>
+        <key value="inv-hspo-0"/>
+        <severity value="error"/>
+        <human value="HSP-O shall be 16 digits"/>
+        <expression value="value.matches('^([0-9]{16})$')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hspo"/>
+      </constraint>
+      <constraint>
+        <key value="inv-hspo-1"/>
+        <severity value="error"/>
+        <human value="HSP-O prefix shall be 800364"/>
+        <expression value="value.startsWith('800364')"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hspo"/>
+      </constraint>
+      <constraint>
+        <key value="inv-hspo-2"/>
+        <severity value="error"/>
+        <human value="HSP-O shall pass the Luhn algorithm check"/>
+        <expression value="(((select(value.substring(0,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this&lt;5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)"/>
+        <source value="http://hl7.org.au/fhir/StructureDefinition/au-hspo"/>
+      </constraint>
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type"/>
+      <min value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+          <code value="NOI"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system"/>
+      <min value="1"/>
+      <fixedUri value="http://ns.electronichealth.net.au/id/hi/hspo/1.0"/>
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value"/>
+      <short value="HSP-O"/>
+      <min value="1"/>
+      <maxLength value="16"/>
+      <condition value="inv-hspo-0"/>
+      <condition value="inv-hspo-1"/>
+      <condition value="inv-hspo-2"/>
+      <condition value="inv-hspo-3"/>
+    </element>
+  </differential>
+</StructureDefinition>
