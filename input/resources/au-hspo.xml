@@ -12,7 +12,7 @@
   <name value="AUHSPO"/>
   <title value="AU HSP-O"/>
   <status value="draft"/>
-  <description value="This identifier profile defines a Healthcare Support Service Provider - Organisation (HSP-O) identifier in an Australian context (see [Australian Digital Health Agency: Healthcare Identifiers (HI) Service](https://developer.digitalhealth.gov.au/resources/services/healthcare-identifiers-service-hi) for further information). An HSP-O is assigned under the HI Service to an organisation that does not directly provide healthcare services but provides care and support services, such as in-home care support and personal care services.&#xA;&#xA;An organisation cannot be assigned both an HPI-O and an HSP-O; only one identifier is assigned by the HI Service."/>
+  <description value="This identifier profile defines a Healthcare Support Service Provider - Organisation (HSP-O) identifier in an Australian context (see [Australian Digital Health Agency: Healthcare Identifiers (HI) Service](https://developer.digitalhealth.gov.au/resources/services/healthcare-identifiers-service-hi) for further information). An HSP-O is assigned under the HI Service to an organisation that does not directly provide healthcare services but provides care and support services, such as in-home care support and personal care services.&#xA;&#xA;An organisation cannot be assigned both an HPI-O and an HSP-O; only one identifier is assigned by the HI Service.&#xA;&#xA;Note that currently there are no published example valid values for this identifier."/>
   <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -34,8 +34,8 @@
       <constraint>
         <key value="inv-hspo-1"/>
         <severity value="error"/>
-        <human value="HSP-O prefix shall be 800364"/>
-        <expression value="value.startsWith('800364')"/>
+        <human value="HSP-O prefix shall be 800364100[0-9]"/>
+        <expression value="value.matches('^800364100[0-9]{7}$')"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-hspo"/>
       </constraint>
       <constraint>
