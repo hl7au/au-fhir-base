@@ -23,11 +23,6 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Added AU HSP-O as a listed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
-  <li><a href="Organization-example7.html">Organization - with HSP-O</a>:
-    <ul>
-      <li>Added example Organization - with HSP-O (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
-    </ul>
-  </li>
 </ul>
 
 ### Release 6.0.0
