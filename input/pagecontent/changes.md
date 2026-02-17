@@ -23,11 +23,6 @@ This version of current build reinstates profiles not included in the AU Base 6.
       <li>Added AU HAE as a listed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
     </ul>
   </li>
-  <li><a href="Organization-example8.html">Organization - with HAE</a>:
-    <ul>
-      <li>Added example Organization - with HAE (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
-    </ul>
-  </li>
 </ul>
 
 ### Release 6.0.0
