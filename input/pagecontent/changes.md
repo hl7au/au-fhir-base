@@ -16,11 +16,13 @@ This version of current build reinstates profiles not included in the AU Base 6.
   <li>New profiles:
     <ul>
       <li><a href="StructureDefinition-au-hae.html">AU HAE</a> (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>)</li>
+      <li><a href="StructureDefinition-au-hspo.html">AU HSP-O</a> (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>)</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
     <ul>
       <li>Added AU HAE as a listed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
+      <li>Added AU HSP-O as a listed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
 </ul>
