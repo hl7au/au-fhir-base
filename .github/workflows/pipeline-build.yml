@@ -1,14 +1,9 @@
-name: Milestone - Au base IG Profiles publish->go-publish
+name: Au base IG Profiles publish->go-publish - all releases
 
 on:
   push:
     tags:
       - "**"
-      - '!**-ballot'
-      - '!**-preview'
-      - '!**-snapshot'
-      - '!**-draft'
-
 
 permissions:
   id-token: write # This is required for requesting the JWT
