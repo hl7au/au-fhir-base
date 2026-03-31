@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="smd-interfaces"/>
+  <meta>
+    <profile value="https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/CodeSystem/smd-interfaces"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:oid:2.16.840.1.113883.2.3.4.1.4.50" />
+  </identifier>
+  <name value="SMDInterfaces"/>
+  <title value="Australian Secure Message Service Interfaces"/>
+  <publisher value="HL7 Australia"/>
+  <copyright value="HL7 Australia. Licensed under Creative Commons No Rights Reserved (CC0)."/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <description value="Mimic of the HL7 AU PD SMD interfaces CodeSystem. Service interface types for secure messaging in Australia."/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org.au/fhir/ValueSet/smd-interfaces" />
+  <compositional value="false" />
+  <versionNeeded value="false" />
+  <count value="5" />
+  <content value="complete"/>
+  <concept>
+    <code value="http://ns.electronichealth.net.au/smd/intf/SealedImmediateMessageDelivery/TLS/2010"/>
+    <display value="Sealed Immediate Message Delivery"/>
+    <definition value="Service interface for secure message delivery (immediate mode)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.electronichealth.net.au/smd/intf/SealedMessageDelivery/TLS/2010"/>
+    <display value="Sealed Message Delivery"/>
+    <definition value="Service interface for secure message delivery (deferred mode)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.electronichealth.net.au/smd/intf/SealedMessageRetrieval/TLS/2010"/>
+    <display value="Sealed Message Retrieval"/>
+    <definition value="Service interface for secure message retrieval (deferred mode)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.electronichealth.net.au/smd/intf/TransportResponseDelivery/TLS/2010"/>
+    <display value="Transport Response Delivery"/>
+    <definition value="Service interface for secure message delivery (deliver acknowledgement)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.electronichealth.net.au/smd/intf/TransportResponseRetrieval/TLS/2010"/>
+    <display value="Transport Response Retrieval"/>
+    <definition value="Service interface for secure message delivery (retrieve acknowledgement)"/>
+  </concept>
+</CodeSystem>

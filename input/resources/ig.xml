@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<id value="hl7.fhir.au.base"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="trial-use"/>
+	</extension>
+	<url value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
+	<version value="6.0.1-ci-build"/>
+	<name value="AUBaseImplementationGuide"/>
+	<title value="AU Base Implementation Guide"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<publisher value="HL7 Australia"/>
+	<contact>
+		<name value="HL7 Australia FHIR Working Group"/>
+		<telecom>
+			<system value="url"/>
+			<value value="https://confluence.hl7.org/display/HAFWG"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="This implementation guide is provided to support the use of FHIR®© in an Australian context."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="AU"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+	<packageId value="hl7.fhir.au.base"/>
+	<license value="CC0-1.0"/>
+	<fhirVersion value="4.0.1"/>
+	<definition>
+		<resource>
+			<reference>
+				<reference value="SearchParameter/encounter-discharge-disposition"/>
+			</reference>
+			<name value="EncounterDischargeDisposition"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="SearchParameter/indigenous-status"/>
+			</reference>
+			<name value="AustralianIndigenousStatus"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="SearchParameter/gender-identity"/>
+			</reference>
+			<name value="GenderIdentity"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-condition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-coverage"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-norelevantfinding"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-receivingapplication"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-receivingfacility"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-assigningauthority"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/encryption-certificate-pem-x509"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/indigenous-status"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/dispense-number"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/medication-long-term"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/medication-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/medication-strength"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/medication-brand-name"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/medication-generic-name"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>		
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/ethnicity"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/closing-the-gap-registration"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/associated-healthcareservice"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/subsidised-concurrent-supply"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/encounter-description"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/change-description"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/author-related-person"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/no-fixed-address"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/identifier-routability"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/ihi-status"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/ihi-record-status"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/ihi-verified-date"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/date-accuracy-indicator"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/information-recipient"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/vaccine-serial-number"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/veteran-status"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/result-copies-to"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-patient"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-practitioner"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-practitionerrole"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-relatedperson"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-organization"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medication"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-encounter"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-address"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ihi"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-nationalprovideridentifieratorganisation"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicarecardnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicareprovidernumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-pbsprescribernumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicalrecordnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-hpii"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-dvanumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-hpio"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ahpraregistrationnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-australianbusinessnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-australianregistredbodynumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-paididentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-paioidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-careagencyemployeeidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-etpprescriptionidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-nataaccreditationnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-natasitenumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-locationspecificpracticenumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-employeenumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-cspregistrationnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-healthcarecardnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-australiancompanynumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-cwlthseniorshealthcardnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-pensionerconcessioncardnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-insurancemembernumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-localprescriptionidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-localdispenseidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medlist"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-composition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-immunization"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicationstatement"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicationadministration"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicationdispense"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-medicationrequest"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-dosage"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-location"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-healthcareservice"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-endpoint"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-allergyintolerance"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-bodystructure"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-diagnosticresult"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-pathologyresult"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-imagingresult"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-imagingreport"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-diagnosticreport"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-pathologyreport"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-specimen"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/contact-purpose"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-deliverypointidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-gnafidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/address-identifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-pharmacyapprovalnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/ahpraregistration-details"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/ahpraprofession-details"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-substance"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-pi"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/contact-purpose"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-v3-ActEncounterCode-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-v2-0203-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-v2-0360-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-v2-0443-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/service-provision-conditions"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/service-interfaces"/>
+			</reference>
+			<name value="Service Interfaces"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/smd-interfaces"/>
+			</reference>
+			<name value="SMD Interfaces CodeSystem"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/smd-interfaces"/>
+			</reference>
+			<name value="SMD Interfaces ValueSet"/>
+			<exampleBoolean value="false"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<reference value="CodeSystem/pbs-item-external"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/pbs-item"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/mims"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/mims-external"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/amt-mp-codes"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/medication-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/dva-entitlement"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/accession-number-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/order-identifier-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/medication-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/service-provision-conditions"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/contact-purpose"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-v3-ActCode"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-v2-0203"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-v2-0360"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-v2-0443"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-location-physical-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-location-physical-type-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-location-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/medicine-item-change"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/medicine-item-change"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-timezone"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/rsg-source-document-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/au-digital-health-source-system"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/rsg-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/resource-tag"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/task-business-status"/>
+				</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/communication-request-category"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/au-jurisdiction-extended"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/rsg-source-document-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/rsg-type"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-timezone"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-timezone-usage"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/name-context"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-procedure"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/specimen-hepatitis-b-serology"/>
+			</reference>
+			<name value="Observation - Measurement of Hepatitis B surface antibody"/>
+			<description value="Shows an example of a laboratory observation for the *AU Base Pathology Result* profile, demonstrating a final serology result for Hepatitis B surface antibody. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Specimen/serum"/>
+			</reference>
+			<name value="Specimen - Serum sample"/>
+			<description value="Shows an example of a serum sample specimen for the *AU Base Specimen* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-specimen"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/hepatitis-b-antibody"/>
+			</reference>
+			<name value="ServiceRequest - for Hepatitis B surface antibody measurement"/>
+			<description value="Shows an example of a completed request for Hepatitis B surface antibody measurement for the *AU Base ServiceRequest* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ServiceRequest/path-example0"/>
+			</reference>
+			<name value="ServiceRequest - full blood count, and sex parameter for clinical use"/>
+			<description value="Shows an example of an active request for a full blood count for the *AU Base ServiceRequest* profile with Sex Parameter for Clinical Use. Patient: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-servicerequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Condition/example0"/>
+			</reference>
+			<name value="Condition - with evidence and onset date-time"/>
+			<description value="Shows an example of a condition of Type 2 diabetes mellitus for the *AU Base Condition* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-condition"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Coverage/dva"/>
+			</reference>
+			<name value="Coverage - DVA Gold Card"/>
+			<description value="Shows an example of a coverage record for the *AU Base Coverage* profile, demonstrating a veteran health program under the Department of Veterans' Affairs. Beneficiary: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-coverage"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Coverage/private"/>
+			</reference>
+			<name value="Coverage - private health insurer"/>
+			<description value="Shows an example of a private health insurance coverage record for the *AU Base Coverage* profile, demonstrating a plan under the payor HCF PTY LTD. Beneficiary: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-coverage"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/example0"/>
+			</reference>
+			<name value="Immunization - Non-administration of varicella-zoster live vaccine due to refusal"/>
+			<description value="Shows an example of an immunisation record for the *AU Base Immunization* profile, where the administration of the varicella-zoster live vaccine was not completed due to patient objection. Patient: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/example1"/>
+			</reference>
+			<name value="Immunization - Administration of a vaccine - record compliant with Australian Immunisation Register (AIR)"/>
+			<description value="Shows an example of a completed immunisation record for the *AU Base Immunization* profile, demonstrating the administration of Infanrix-Hep B. The record is compliant with Australian Immunisation Register (AIR). Patient: Sally Grant."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/example2"/>
+			</reference>
+			<name value="Immunization - Administration of a vaccine with administering provider and protocol"/>
+			<description value="Shows an example of a completed immunisation record for the *AU Base Immunization* profile, demonstrating the administration of Infanrix Hexa. Patient: Sally Grant."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Immunization/example3"/>
+			</reference>
+			<name value="Immunization - Administration of Pfizer Comirnaty dose 1 for Sarah Simmons"/>
+			<description value="Shows an example of a completed immunisation record for the *AU Base Immunization* profile, demonstrating the administration of Pfizer Comirnaty for COVID-19. Patient: Sarah Simmons."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example1"/>
+			</reference>
+			<name value="Practitioner - as a Radiologist"/>
+			<description value="Shows an example of a Radiologist, Dr. Steve Smith, for the *AU Base Practitioner* profile, with an Ahpra Registration Number."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/example0"/>
+			</reference>
+			<name value="AllergyIntolerance - ibuprofen allergy"/>
+			<description value="Shows an example of an Ibuprofen allergy with the reaction manifestation as urticaria for the *AU Base AllergyIntolerance* profile. Patient: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/example1"/>
+			</reference>
+			<name value="AllergyIntolerance - self-reported allergy to eggs"/>
+			<description value="Shows an example of an allergy to egg protein with reaction manifestations of hives, nausea, and vomiting for the *AU Base AllergyIntolerance* profile. Patient: Sally Grant."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/example2"/>
+			</reference>
+			<name value="AllergyIntolerance - self-reported intolerance to lactose"/>
+			<description value="Shows an example of lactose intolerance with reaction manifestations of abdominal pain, abdominal bloating, and diarrhoea for the *AU Base AllergyIntolerance* profile. Patient: Suzanne Simmons."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="AllergyIntolerance/example3"/>
+			</reference>
+			<name value="AllergyIntolerance - no known allergy"/>
+			<description value="Shows an example of an AllergyIntolerance resource indicating the patient has no known allergies for the *AU Base AllergyIntolerance* profile. Patient: John Smith."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="BodyStructure/example0"/>
+			</reference>
+			<name value="BodyStructure - Bone tissue of left shoulder"/>
+			<description value="Shows an example of a body structure resource for the *AU Base BodyStructure* profile, representing bone tissue in the left shoulder region. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="BodyStructure/example1"/>
+			</reference>
+			<name value="BodyStructure - Blister of right foot"/>
+			<description value="Shows an example of a body structure for the *AU Base BodyStructure* profile, representing a blister on the right foot. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Device/example1"/>
+			</reference>
+			<name value="Device - as a registered repository service"/>
+			<description value="Shows an example of a Device resource representing a registered repository service. The resource includes the PAI-D identifier, device name, type and owner identifier (PAI-O)."/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Device"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example1"/>
+			</reference>
+			<name value="Location - of a Practitioner as a Radiologist"/>
+			<description value="Shows an example of a Location resource for the *AU Base Location* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example1"/>
+			</reference>
+			<name value="Organization - a typical Organisation the Radiologist belongs to"/>
+			<description value="Shows an example of an organisation, Albion Hospital, for the *AU Base Organization* profile, with an ABN identifier, type as Private Hospital, and contact details including phone numbers and email addresses."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example2"/>
+			</reference>
+			<name value="Organization - Holistic Medical Pty Ltd with ABN and HPI-O"/>
+			<description value="Shows an example of an organisation, Holistic Medical Pty Ltd as trustee for Smith Family Trust, for the *AU Base Organization* profile, with HPI-O and ABN identifiers, and contact details including a work email address and a physical address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/example1"/>
+			</reference>
+			<name value="PractitionerRole - a typical Practitioner Role as a Radiologist"/>
+			<description value="Shows an example of a Radiologist role for the *AU Base PractitionerRole* profile,  including a National Provider Identifier at Organisation (NPIO) identifier, contact details, references to the associated Practitioner, Organization, Location, and HealthcareService, as well as availability exceptions for public holidays."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/example1"/>
+			</reference>
+			<name value="HealthcareService - a typical Healthcare Service the Radiologist belongs to"/>
+			<description value="Shows an example of a radiology service, Albion Hospital Radiology Service, for the *AU Base HealthcareService* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example3"/>
+			</reference>
+			<name value="Practitioner - a typical Practitioner as a General Practitioner"/>
+			<description value="Shows an example of a practitioner,  Dr. Francis Fernando, with a HPI-I and Ahpra Registration Number for the *AU Base Practitioner* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example4"/>
+			</reference>
+			<name value="Practitioner - a typical Ahpra registered professional"/>
+			<description value="Shows an example of a practitioner, Dr. Robert Smith, with multiple identifiers (HPI-I and Ahpra Registration Number), qualifications and communication language for the *AU Base Practitioner* profile. "/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example-sex-and-gender"/>
+			</reference>
+			<name value="Practitioner - sex and gender"/>
+			<description value="Shows an example of a practitioner for the *AU Base Practitioner* profile that demonstrates the adopted extensions for sex and gender."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Endpoint/example0"/>
+			</reference>
+			<name value="Endpoint - a secure messaging endpoint example"/>
+			<description value="Shows an example of a secure messaging endpoint using the Endpoint resource."/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Endpoint"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example3"/>
+			</reference>
+			<name value="Location - of a Practitioner as a General Practitioner"/>
+			<description value="Shows an example of a location, Family Medicine Clinic, at which the General Practitioner provides care for the *AU Base Location* profile. "/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example3"/>
+			</reference>
+			<name value="Organization - a typical Organisation the General Practitioner belongs to"/>
+			<description value="Shows an example of an organisation, Devonport Family Medicine Clinic, to which the General Practitioner belongs for the *AU Base Organization* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/example3"/>
+			</reference>
+			<name value="PractitionerRole - a typical Practitioner Role as a General Practitioner"/>
+			<description value="Shows an example of a General Practitioner role for the *AU Base Practitioner* profile, including a Medicare Provider Number identifier, contact details, references to the associated Practitioner, Organization, Location, and HealthcareService, as well as availability on weekdays and unavailability on weekends."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/example3"/>
+			</reference>
+			<name value="HealthcareService - general practice"/>
+			<description value="Shows an example of a healthcare service, General Practitioner services, for the *AU Base HealthcareService* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example-sex-and-gender"/>
+			</reference>
+			<name value="Patient - as transgender person with sex and gender and sex parameter for clinical use"/>
+			<description value="Shows an example of a patient, Patricia Roth, for *AU Base Patient* profile that demonstrates the adopted extensions for sex and gender. This example is taken and adapted from the R5 Transgender Person Example."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example0"/>
+			</reference>
+			<name value="Patient - with IHI, Medicare Card Number, patient internal identifier and the extension for Indigenous Status"/>
+			<description value="Shows an example of a patient, Stella Franklin, for the *AU Base Patient* profile. The resource includes IHI, Medicare Card Number, Health Card Number, patient internal identifier and extensions for Australian Indigenous Status, IHI validation name context, and gender identity."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example1"/>
+			</reference>
+			<name value="Patient - with IHI, DVA Number (with specific card colour) and the extension for Indigenous Status"/>
+			<description value="Shows an example of a patient, Harry Dan, for the *AU Base Patient* profile. The resource includes IHI (expired) and DVA Gold Card Number, extension for Australian Veteran Status and Indigenous Status."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example2"/>
+			</reference>
+			<name value="Patient - with no birth date, and is eligible for Closing the Gap registration"/>
+			<description value="Shows an example of a patient, Sally Grant, for the *AU Base Patient* profile. The resource includes a Medicare Number, extensions for Australian Indigenous Status and Closing the Gap registration, with unknown date of birth."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example3"/>
+			</reference>
+			<name value="Patient - with birth date and birth time"/>
+			<description value="Shows an example of a patient, John Smith, for the *AU Base Patient* profile. The resource includes a name, email contact, birth details (date and time with an extension for date accuracy), and residential address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example4"/>
+			</reference>
+			<name value="Patient - as a child born in 2008"/>
+			<description value="Shows an example of a child patient, Suzanne Simmons, for the *AU Base Patient* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example5"/>
+			</reference>
+			<name value="Patient - as a mother for the patient in example 4"/>
+			<description value="Shows an example of a patient, Sarah Simmons, as the mother of Suzanne Simmons in example 4, for the *AU Base Patient* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example6"/>
+			</reference>
+			<name value="Patient - as a Culturally and linguistically diverse (CALD) patient 1"/>
+			<description value="Shows an example of a patient, William Rigny, who requires an interpreter for healthcare communication, with their preferred communication language specified, for the *AU Base Patient* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example7"/>
+			</reference>
+			<name value="Patient - as a Culturally and linguistically diverse (CALD) patient 2"/>
+			<description value="Shows an example of a patient, Alejandro Hernández, born in Mexico and requiring an interpreter for healthcare communication, for the *AU Base Patient* profile. The example also includes Alejandro's gender identity and their date of arrival in Australia."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example0"/>
+			</reference>
+			<name value="Practitioner - with HPI-I and Prescriber Number"/>
+			<description value="Shows an example of a practitioner, Dr. Helen Mayo, with multiple identifiers including HPI-I, Prescriber Number, Ahpra Registration Number, and Care Agency Employee Identifier and use of HPI-I validation name context extension for the *AU Base Practitioner* profile. "/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/example0"/>
+			</reference>
+			<name value="PractitionerRole - with Provider Number and ANZSCO coded role"/>
+			<description value="Shows an example of a Cardiologist role for the *AU Base PractitionerRole* profile,  including a Medicare Provider Number identifier, specialty in Cardiology, contact details for work and after-hours purposes, and references to the associated Practitioner, Organization, and Location."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example0"/>
+			</reference>
+			<name value="Organization - with HPI-O"/>
+			<description value="Shows an example of an organisation, Downunder Hospital, for the *AU Base Organization* profile, with a HPI-O, name, contact details, and address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example6"/>
+			</reference>
+			<name value="Organization - a Pathology organisation with NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O"/>
+			<description value="Shows an example of a pathology organisation, ACME Pathology, for the *AU Base Organization* profile, with multiple identifiers such as HPI-O, NATA Accreditation Number, ABN, ACN, and PAI-O, and a reference to its parent organisation."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example8"/>
+			</reference>
+			<name value="Organization - with HAE"/>
+			<description value="Shows an example of an organisation, Metro Health Administration Services, for the *AU Base Organization* profile, with a HAE, name, contact details, and address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>	
+				<reference value="Organization/example7"/>
+			</reference>
+			<name value="Organization - with HSP-O"/>
+			<description value="Shows an example of an organisation, Sunshine Home Care Services, for the *AU Base Organization* profile, with a HSP-O, name, contact details, and address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>		
+		<resource>
+			<reference>
+				<reference value="Organization/5-8631-1"/>
+			</reference>
+			<name value="Organization - a Pathology organisation with HPI-O and is a parent organization"/>
+			<description value="Shows an example of a parent pathology and diagnostic imaging organisation with a HPI-O identifier, Test Org - DigitalHealth 5, for the *AU Base Organization* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/example0"/>
+			</reference>
+			<name value="HealthcareService - with HPI-O with varied contact details"/>
+			<description value="Shows an example of a cardiothoracic surgery healthcare service for the *AU Base HealthcareService* profile, with a HPI-O, service name, specialty details, and multiple contact details."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example0"/>
+			</reference>
+			<name value="Location - a hospital location with managing organisation of example0"/>
+			<description value="Shows an example of a hospital location for the *AU Base Location* profile. The resource includes the location details and a reference to the managing organisation, Downunder Hospital."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/DateAccuracyIndicatorAAAexample0"/>
+			</reference>
+			<name value="Patient - with Birth Date Accuracy Indicator of AAA"/>
+			<description value="Shows an example of a patient for the *AU Base Patient* profile with Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/DateAccuracyIndicatorAAUexample1"/>
+			</reference>
+			<name value="Patient - with Birth Date Accuracy Indicator of AAU"/>
+			<description value="Shows an example of a patient for the *AU Base Patient* profile with Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/DateAccuracyIndicatorUAAexample2"/>
+			</reference>
+			<name value="Patient - with Birth Date Accuracy Indicator of UAA"/>
+			<description value="Shows an example of a patient for the *AU Base Patient* profile with Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/DateAccuracyIndicatorUEAexample3"/>
+			</reference>
+			<name value="Patient - with Birth Date Accuracy Indicator of UEA"/>
+			<description value="Shows an example of a patient for the *AU Base Patient* profile with Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/DateAccuracyIndicatorUUUexample4"/>
+			</reference>
+			<name value="Patient - with Birth Date Accuracy Indicator of UUU"/>
+			<description value="Shows an example of a patient for the *AU Base Patient* profile with Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example2"/>
+			</reference>
+			<name value="Location - of a Practitioner as a Pathologist"/>
+			<description value="Shows an example of a location at a specific level within a hospital for the *AU Base Location* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example4"/>
+			</reference>
+			<name value="Location - for services delivered by phone, video or online"/>
+			<description value="Shows an example of a virtual telehealth service location for the *AU Base Location* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example5"/>
+			</reference>
+			<name value="Location - for mobile services that can be delivered in a person's house, apartment, or unit"/>
+			<description value="Shows an example of a mobile, home-based service location for the *AU Base Location* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example6"/>
+			</reference>
+			<name value="Location - for mobile services that can be delivered in schools"/>
+			<description value="Shows an example of a mobile, school-based service location for the *AU Base Location* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example7"/>
+			</reference>
+			<name value="Location - for mobile services that can be delivered in residential care facilities"/>
+			<description value="Shows an example of a mobile, residential-care-based service location for the *AU Base Location* profile. "/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/example2"/>
+			</reference>
+			<name value="PractitionerRole - as a Pathologist"/>
+			<description value="Shows an example of a General pathologist role for the *AU Base PractitionerRole* profile, including an Employee Number identifier, specialty in General Pathology, contact details, references to the associated Practitioner, Organization, Location, and HealthcareService, as well as availability times."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/example2"/>
+			</reference>
+			<name value="HealthcareService - of a Pathologist"/>
+			<description value="Shows an example of a pathology service, Albion Hospital Pathology Service, for the *AU Base HealthcareService* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Practitioner/example2"/>
+			</reference>
+			<name value="Practitioner - as a Pathologist"/>
+			<description value="Shows an example of a Pathologist, Dr. Peter Winslow, for the *AU Base Practitioner* profile, with an Ahpra Registration Number."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="PractitionerRole/example4"/>
+			</reference>
+			<name value="PractitionerRole - with assigning authority"/>
+			<description value="Shows an example of a Cardiologist role for the *AU Base PractitionerRole* profile,  including identifiers for Medicare Provider Number and Vendor Directory, an active status, contact details, references to the associated Practitioner, Organization, Location, and an Endpoint for secure messaging."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example4"/>
+			</reference>
+			<name value="Organization - a hospital with an HPIO"/>
+			<description value="Shows an example of a hospital organisation, Downunder Hospital, for the *AU Base Organization* profile, with a HPI-O."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="RelatedPerson/example0"/>
+			</reference>
+			<name value="RelatedPerson - as attester party"/>
+			<description value="Shows an example of a related person, Benedicte du Marche, who is the next-of-kin for Stella Franklin, for the *AU Base RelatedPerson* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="RelatedPerson/example1"/>
+			</reference>
+			<name value="RelatedPerson - as a carer for an older patient"/>
+			<description value="Shows an example of a related person, Mary Smith, who is a caregiver for Harry Dan, for the *AU Base RelatedPerson* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="RelatedPerson/example2"/>
+			</reference>
+			<name value="RelatedPerson - as a mother for the patient in example 4"/>
+			<description value="Shows an example of a related person, Sarah Simmons, who is the mother of Suzanne Simmons, for the *AU Base RelatedPerson* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="RelatedPerson/example3"/>
+			</reference>
+			<name value="RelatedPerson - as father"/>
+			<description value="Shows an example of a related person, Bill Simmons, who is the father of Alejandro Hernández, for the *AU Base RelatedPerson* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="RelatedPerson/example-sex-and-gender"/>
+			</reference>
+			<name value="RelatedPerson - as family member with sex and gender"/>
+			<description value="Shows an example of a related person, Alex Baker, for the *AU Base RelatedPerson* profile, demonstrating the adopted extensions for sex and gender."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example8"/>
+			</reference>
+			<name value="Patient - male born in 1949 with address and contact details"/>
+			<description value="Shows an example of a patient, Nicholas Jones, for the *AU Base Patient* profile. The resource includes an IHI, Australian Indigenous Status extension, and contact details and address. "/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/norelevantfinding-example0"/>
+			</reference>
+			<name value="Observation - of no relevant finding of procedure"/>
+			<description value="Shows an example of an observation asserting no history of procedure for the *AU Assertion of No Relevant Finding* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/norelevantfinding-example1"/>
+			</reference>
+			<name value="Observation - of no relevant finding of immunisations"/>
+			<description value="Shows an example of an observation asserting no history of immunisation for the *AU Assertion of No Relevant Finding* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/norelevantfinding-example2"/>
+			</reference>
+			<name value="Observation - of no relevant finding of known history of conditions"/>
+			<description value="Shows an example of an observation asserting no known history of conditions for the *AU Assertion of No Relevant Finding* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/norelevantfinding-example3"/>
+			</reference>
+			<name value="Observation - of no relevant finding of patient taking any medications"/>
+			<description value="Shows an example of an observation asserting that the patient is not taking any medications for the *AU Assertion of No Relevant Finding* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/address-example0"/>
+			</reference>
+			<name value="Patient - structured Australian Address"/>
+			<description value="Shows an example of a patient with structured work addresses, including a postal address and a physical address, for the *AU Base Patient* profile."/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/address-example1"/>
+			</reference>
+			<name value="Patient - unstructured Australian Address"/>
+			<description value="Shows an example of a patient with an unstructured physical address for the *AU Base Patient* profile."/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/address-example2"/>
+			</reference>
+			<name value="Patient - Australian No Fixed Address"/>
+			<description value="Shows an example of an anonymous patient with no fixed address for the *AU Base Patient* profile, indicating a temporary address."/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/address-example3"/>
+			</reference>
+			<name value="Patient - Australian address with identifiers"/>
+			<description value="Shows an example of a patient address for the *AU Base Patient* profile, with identifiers"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/DoseBased"/>
+			</reference>
+			<name value="Medication - dose based"/>
+			<description value="Shows an example of a medication, Fluconazole-containing product, injection, 200 mg/100 mL, defined by dose, form, and strength for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/UnbrandedProduct0"/>
+			</reference>
+			<name value="Medication - Unbranded Product of clarithromycin 500mg tablet"/>
+			<description value="Shows an example of a medication, Clarithromycin 500mg tablet, defined by dose, form, and strength for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/UnbrandedProduct1"/>
+			</reference>
+			<name value="Medication - Unbranded Product of esomeprazole 20mg tablet"/>
+			<description value="Shows an example of an unbranded product, Esomeprazole 20mg tablet, defined by dose, form, and strength for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/UnbrandedProduct2"/>
+			</reference>
+			<name value="Medication - Unbranded product of amoxicillin 500mg capsule"/>
+			<description value="Shows an example of an unbranded product, Amoxicillin 500mg capsule, defined by dose, form, and strength for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/UncodedProduct0"/>
+			</reference>
+			<name value="Medication - uncoded medicinal product information"/>
+			<description value="Shows an example of a medication with uncoded medicinal product information, Crestor (Rosuvastatin) 20mg tablet in a 30-pack, defined by its brand and generic names, manufacturer, dose, form, and strength for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/BrandedPack1"/>
+			</reference>
+			<name value="Medication - branded pack"/>
+			<description value="Shows an example of a medication, Nexium Hp7 (14 x Nexium tablets, 28 x Amoxil capsules, 14 x Klacid tablets) in a single pack, defined by its branded and unbranded package information, manufacturer, and form for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/GenericPack0"/>
+			</reference>
+			<name value="Medication - Generic Pack of paracetamol 500mg (100)"/>
+			<description value="Shows an example of a medication, Paracetamol 500 mg tablet (100 tablets per pack), defined by its generic packaging, form, and coding for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/BrandedPack0"/>
+			</reference>
+			<name value="Medication - Branded Pack of Nexium HP7 20;500;500"/>
+			<description value="Shows an example of a medication, Nexium HP7 (14 esomeprazole 20 mg tablets, 28 amoxicillin 500 mg capsules, 14 clarithromycin 500 mg tablets, 1 pack), defined by its branded packaging, manufacturer, and form for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/BrandedPackSingleActiveIngredient0"/>
+			</reference>
+			<name value="Medication - Branded Pack With Single Active Ingredient"/>
+			<description value="Shows an example of a medication, Chlorsig (chloramphenicol 0.5%, eye drops), defined by its branded product, single active ingredient, strength, and form for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/TwoActiveIngredientsProduct0"/>
+			</reference>
+			<name value="Medication - with two active ingredients product"/>
+			<description value="Shows an example of a medication with two active ingredients, perindopril arginine (10 mg) and amlodipine (10 mg), defined as a tablet for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/FourOrMoreActiveIngredientsProduct0"/>
+			</reference>
+			<name value="Medication - with four or more active ingredients"/>
+			<description value="Shows an example of a branded medication, Stribild, containing four active ingredients and defined as a tablet for the *AU Base Medication* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/BrandProductwithBatchDetails0"/>
+			</reference>
+			<name value="Medication - Branded Pack with Batch Details"/>
+			<description value="Shows an example of a branded medication, Norvasc, containing the active ingredient amlodipine (10 mg) as a tablet, with batch details including lot number and expiration date, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/StrengthExtension0"/>
+			</reference>
+			<name value="Medication - with Generic Name and Medication Strength Extensions"/>
+			<description value="Shows an example of a medication, Panadeine, as a caplet, with the generic name and medication strength specified in extensions, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+				<resource>
+			<reference>
+				<reference value="Medication/StrengthExtension1"/>
+			</reference>
+			<name value="Medication - with Medication Strength Extension"/>
+			<description value="Shows an example of a medication, Zolgensma, as a solution for infusion, with the medication strength specified in an extension, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/IngredientStrengthExtension0"/>
+			</reference>
+			<name value="Medication - with backported R5 Ingredient Strength Element"/>
+			<description value="Shows an example of a medication, Tadim, containing the ingredient colistimethate (1 Million IU) as a powder, with ingredient strength specified using the preadopted R5 element strengthCodeableConcept, for the *AU Base Medication* profile"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Composition/multiple-information-recipients"/>
+			</reference>
+			<name value="Composition - with multiple information recipients"/>
+			<description value="Shows an example of a composition with multiple information recipients for the *AU Base Composition* profile. Patient: Stella Franklin. "/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Composition/different-authors"/>
+			</reference>
+			<name value="​Composition - with some sections having a different section author to the composition author" />
+			<description value="Shows an example of a composition with sections authored by different individuals for the *AU Base Composition* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Composition/example0"/>
+			</reference>
+			<name value="Composition - Patient’s preference upon death"/>
+			<description value="Shows an example of a composition representing patient goals, preferences, and priorities upon death, including a related person as the author and attester, for the *AU Base Composition* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/example0"/>
+			</reference>
+			<name value="MedicationStatement - of a record of a patient's use of medication"/>
+			<description value="Shows an example of a medication statement for the *AU Base MedicationStatement* profile, representing a patient's active use of a branded medication with specific timing and dosage details. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/example1"/>
+			</reference>
+			<name value="MedicationStatement - of a record of a patient's long-term use of medication"/>
+			<description value="Shows an example of a medication statement for the *AU Base MedicationStatement* profile, including informative record of a patient's long-term use of medication. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationStatement/example2"/>
+			</reference>
+			<name value="MedicationStatement - Practitioner reports patient has taken Diflucan in the past but is not taking it any more"/>
+			<description value="Shows an example of a medication statement for the *AU Base MedicationStatement* profile, representing a practitioner reporting that the patient has taken Diflucan in the past but is not taking it anymore. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationRequest/example0"/>
+			</reference>
+			<name value="MedicationRequest - a prescription for codeine with paracetamol"/>
+			<description value="Shows an example of a medication request for the *AU Base MedicationRequest* profile, representing a practitioner's order for a patient to take paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablets for pain management. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationRequest/example1"/>
+			</reference>
+			<name value="MedicationRequest - a prescription for Stribild tablet"/>
+			<description value="Shows an example of a medication request for the *AU Base MedicationRequest* profile, representing a practitioner's order for a patient to take Stribild daily for human immunodeficiency virus (HIV) infection, with all repeats supplied concurrently for overseas travel. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationRequest/example2"/>
+			</reference>
+			<name value="MedicationRequest - Prescription with brand and generic name extensions"/>
+			<description value="Shows an example of a medication request for the *AU Base MedicationRequest* profile, representing a practitioner's order for the patient to take Reaptan for pain management, with detailed dosage instructions and dispensing information. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Encounter/example0"/>
+			</reference>
+			<name value="Encounter - with description"/>
+			<description value="Shows an example of an encounter with an encounter description for the *AU Base Encounter* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Encounter/example1"/>
+			</reference>
+			<name value="Encounter - Annual check up"/>
+			<description value="Shows an example of an encounter for the *AU Base Encounter* profile, representing an annual check up encounter for [Observation-healthprogramparticipation-example0](https://build.fhir.org/ig/hl7au/au-fhir-base/Observation-healthprogramparticipation-example0.html). Patient: Suzanne Simmons."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="List/example0"/>
+			</reference>
+			<name value="List - Medicine list with referenced entries"/>
+			<description value="Shows an example of a medication list for the *AU Medicine List* profile, representing a snapshot of a patient's current medications. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="List/example1"/>
+			</reference>
+			<name value="List - Medicine list with no known current medicine"/>
+			<description value="Shows an example of a medication list with no current medications for the *AU Medicine List* profile. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Bundle/example0"/>
+			</reference>
+			<name value="Bundle - Medicine list in a bundle"/>
+			<description value="Shows an example of a FHIR Bundle containing resources related to the *AU Medicine List* profile. Patient: Nicholas Jones."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="List/example2"/>
+			</reference>
+			<name value="List - Medicine list with changes"/>
+			<description value="Shows an example of a medication list for the *AU Medicine List* profile, representing a snapshot of a patient's current, amended, and ceased medications. Patient: David Goodpatient."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="List/example3"/>
+			</reference>
+			<name value="List - Medicine list authored by a related person"/>
+			<description value="Shows an example of a medication list authored by a related person for the *AU Medicine List* profile. Patient: Suzanne Simmons"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-diagnosticrequest"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-servicerequest"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/date-of-arrival"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-localorderidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-localreportidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-accessionnumber"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/example0"/>
+			</reference>
+			<name value="MedicationDispense - First dispense for Reaptan"/>
+			<description value="Shows an example of a medication dispense for the *AU Base MedicationDispense* profile, representing the first dispensing of Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-residentialagedcareserviceidentifier"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/example4"/>
+			</reference>
+			<name value="HealthcareService - Leafy Grove Home for the Aged"/>
+			<description value="Shows an example of an aged care residential service, Leafy Grove Home for the Aged, for the *AU Base HealthcareService* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/example5"/>
+			</reference>
+			<name value="HealthcareService - Honourable Mark's Home For Aged Men"/>
+			<description value="Shows an example of an aged care residential service, Honourable Mark's Home For Aged Men, for the *AU Base HealthcareService* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example8"/>
+			</reference>
+			<name value="Location - Leafy Grove Home for the Aged"/>
+			<description value="Shows an example of a location for the *AU Base Location* profile, representing a nursing home 'Leafy Grove Home for the Aged' as a location."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Location/example9"/>
+			</reference>
+			<name value="Location - Leafy Grove Home for the Not Very Aged"/>
+			<description value="Shows an example of a location for the *AU Base Location* profile, representing a nursing home 'Honourable Mark's Home For Aged Men' as a location."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationDispense/example1"/>
+			</reference>
+			<name value="MedicationDispense - Second dispense for Reaptan"/>
+			<description value="Shows an example of a medication dispense for the *AU Base MedicationDispense* profile, representing the second dispensing of Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets. Patient: Stella Franklin."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/example5"/>
+			</reference>
+			<name value="Organization - The Corporation of the Council of the Ward of Nundah"/>
+			<description value="Shows an example of a religious institution, The Corporation of the Synod of the Diocese of Nundah, for the *AU Base Organization* profile, with an ABN, address and contact details."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<!-- AU Base Substance examples-->
+		<resource>
+			<reference>
+				<reference value="Substance/example0"/>
+			</reference>
+			<name value="Substance - body substance of epiglottic mucus"/>
+			<description value="Shows an example for a body substance of epiglottic mucus for the AU Base Substance profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-substance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Substance/example1"/>
+			</reference>
+			<name value="Substance - peanuts as an allergen"/>
+			<description value="Shows an example for an allergen substance of peanuts for the *AU Base Substance* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-substance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Substance/example2"/>
+			</reference>
+			<name value="Substance - medication substance with two active ingredients"/>
+			<description value="Shows an example for a medication substance with two active ingredients for the *AU Base Substance* profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-substance"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationAdministration/example0"/>
+			</reference>
+			<name value="MedicationAdministration - Administration of Chlorsig eye drops"/>
+			<description value="Shows an example of administration of Chlorsig to a patient for the *AU Base MedicationAdministration* profile, administered by a related person. Patient: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationadministration"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="MedicationAdministration/example1"/>
+			</reference>
+			<name value="MedicationAdministration - Self-administration of lantus 100 units/mL injection"/>
+			<description value="Shows an example of a medication administration that is a self-administration of lantus 100 units/mL injection for the *AU Base MedicationAdministration* profile. Patient: Sarah Simmons."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medicationadministration"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Procedure/example0"/>
+			</reference>
+			<name value="Procedure - Cryotherapy"/>
+			<description value="Shows an example of a completed cryotherapy procedure for the *AU Base Procedure* profile. Patient: William Rigny."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-procedure"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Procedure/example1"/>
+			</reference>
+			<name value="Procedure - Cardiac catheterisation"/>
+			<description value="Shows an example of a completed cardiac catheterisation procedure for the *AU Base Procedure* profile. Patient: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-procedure"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Procedure/example2"/>
+			</reference>
+			<name value="Procedure - Stent placement"/>
+			<description value="Shows an example of a completed procedure for the *AU Base Procedure* profile. Patient: Harry Dan."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-procedure"/>
+		</resource>
+		<page>
+			<nameUrl value="toc.html"/>
+			<title value="Table of Contents"/>
+			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="Home"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="guidance.html"/>
+				<title value="Guidance"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="generalguidance.html"/>
+					<title value="General Guidance"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="sexgender.html"/>
+					<title value="Sex and Gender"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="relationship.html"/>
+					<title value="Relationship with other IGs"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="future.html"/>
+					<title value="Future of AU Base"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+			<page>
+				<nameUrl value="fhirartefacts.html"/>
+				<title value="FHIR Artefacts"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artefacts Summary"/>
+					<generation value="html"/>
+				</page>
+				<page>
+					<nameUrl value="profiles-and-extensions.html"/>
+					<title value="Profiles and Extensions"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="search-parameters.html"/>
+					<title value="Search Parameters"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="terminology.html"/>
+					<title value="Terminology"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+			<!--
+			<page>
+				<nameUrl value="capability-statements.html"/>
+				<title value="Capability Statements"/>
+				<generation value="markdown"/>
+			</page>
+			-->
+			<page>
+				<nameUrl value="examples.html"/>
+				<title value="Examples"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="support.html"/>
+				<title value="Support"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="downloads.html"/>
+					<title value="Downloads"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="license.html"/>
+					<title value="License and Legal"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+			<page>
+				<nameUrl value="changes.html"/>
+				<title value="Change Log"/>
+				<generation value="markdown"/>
+			</page>
+		</page>
+		<!-- copyright year is a mandatory parameter -->
+		<parameter>
+			<code value="copyrightyear"/>
+			<value value="2017+"/>
+		</parameter>
+		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="fmm-definition"/>
+			<value value="generalguidance.html#maturity-levels"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input/resources"/>
+		</parameter>
+		<parameter>
+			<code value="shownav"/>
+			<value value="false"/>
+		</parameter>
+		<parameter>
+			<code value="apply-version"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="apply-jurisdiction"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="apply-publisher"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="show-inherited-invariants"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="excludemap"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-expansion-params"/>
+			<value value="../input/_resources/exp-params.json"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org/ValueSet/pronouns"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://hl7.org/fhir/StructureDefinition/individual-pronouns"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/service-provision-conditions"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/pbs-item"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/order-identifier-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/mims"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/medicine-item-change"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/medication-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/name-context"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/dva-entitlement"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/contact-purpose"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/v3-ActEncounterCode-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/v2-0443-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/v2-0360-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/v2-0203-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/au-timezone"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/observation-category-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/location-physical-type-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/amt-mp-codes"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/accession-number-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://pbs.gov.au/code/item"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://www.mims.com.au/codes"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/medicine-item-change"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/medication-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/name-context"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/contact-purpose"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/v3-ActCode"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/v2-0443"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/observation-category"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/location-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/location-physical-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/jurisdiction-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/rsg-source-document-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/rsg-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/rsg-type"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/au-coverage-type-extended"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/resource-tag"/>
+		</parameter>		
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/task-business-status"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/au-digital-health-source-system"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/ValueSet/rsg-source"/>
+		</parameter>
+		<parameter>
+			<code value="special-url"/>
+			<value value="http://terminology.hl7.org.au/CodeSystem/communication-request-category"/>
+		</parameter>
+		<parameter>
+			<code value="version-comparison-master"/>
+			<value value="5.0.0"/>
+		</parameter>
+	</definition>
+</ImplementationGuide>
