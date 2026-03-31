@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-environmenttype" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype" />
+  <name value="AUEnvironmentType" />
+  <title value="AU Environment Type" />
+  <status value="active" />
+  <description value="Indicates the type of environment(s) exposed at an endpoint (e.g. production, test, development)." />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Endpoint" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Environment Type" />
+      <definition value="Indicates the type of environment(s) exposed at an endpoint (e.g. production, test, development, staging)." />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="The type of environment." />
+        <valueSet value="http://hl7.org.au/fhir/ValueSet/au-endpoint-environment-type" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

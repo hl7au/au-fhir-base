@@ -30,11 +30,6 @@
 	<packageId value="hl7.fhir.au.base"/>
 	<license value="CC0-1.0"/>
 	<fhirVersion value="4.0.1"/>
-	<dependsOn>
-		<uri value="http://hl7.org/fhir/uv/xver-r5.r4" />
-		<packageId value="hl7.fhir.uv.xver-r5.r4" />
-		<version value="0.0.1-snapshot-2" />
-	</dependsOn>
 	<definition>
 		<resource>
 			<reference>
@@ -60,6 +55,12 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-condition"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ext-implementation-guide"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>

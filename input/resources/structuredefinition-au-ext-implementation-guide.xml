@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ext-implementation-guide" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/StructureDefinition/au-ext-implementation-guide" />
+  <name value="AUImplementationGuideSupported" />
+  <title value="AU Implementation Guide Supported" />
+  <status value="active" />
+  <description value="Indicates an Implementation Guide and optional metadata that this Endpoint supports" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Endpoint" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="AU Implementation Guide Supported" />
+      <definition value="Indicates that the endpoint supports a specific implementation guide, including URI, name, use-cases and optional metadata." />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:ig-uri">
+      <path value="Extension.extension" />
+      <sliceName value="ig-uri" />
+      <short value="Implementation Guide URI" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ig-uri.url">
+      <path value="Extension.extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="ig-uri" />
+    </element>
+    <element id="Extension.extension:ig-uri.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="canonical" />
+      </type>
+    </element>
+
+    <element id="Extension.extension:ig-name">
+      <path value="Extension.extension" />
+      <sliceName value="ig-name" />
+      <short value="Implementation Guide Name" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ig-name.url">
+      <path value="Extension.extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="ig-name" />
+    </element>
+    <element id="Extension.extension:ig-name.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+
+    <element id="Extension.extension:ig-usecase">
+      <path value="Extension.extension" />
+      <sliceName value="ig-usecase" />
+      <short value="Implementation Guide Use Case" />
+      <max value="*" />
+    </element>
+    <element id="Extension.extension:ig-usecase.url">
+      <path value="Extension.extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="ig-usecase" />
+    </element>
+    <element id="Extension.extension:ig-usecase.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+
+    <element id="Extension.extension:ig-version">
+      <path value="Extension.extension" />
+      <sliceName value="ig-version" />
+      <short value="Implementation Guide Version" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ig-version.url">
+      <path value="Extension.extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="ig-version" />
+    </element>
+    <element id="Extension.extension:ig-version.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+
+    <element id="Extension.extension:ig-actor">
+      <path value="Extension.extension" />
+      <sliceName value="ig-actor" />
+      <short value="Implementation Guide Actor" />
+      <max value="*" />
+    </element>
+    <element id="Extension.extension:ig-actor.url">
+      <path value="Extension.extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="ig-actor" />
+    </element>
+    <element id="Extension.extension:ig-actor.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+
+    <element id="Extension.extension:ig-option">
+      <path value="Extension.extension" />
+      <sliceName value="ig-option" />
+      <short value="Implementation Guide Option" />
+      <max value="*" />
+    </element>
+    <element id="Extension.extension:ig-option.url">
+      <path value="Extension.extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="ig-option" />
+    </element>
+    <element id="Extension.extension:ig-option.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org.au/fhir/StructureDefinition/au-ext-implementation-guide" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="0" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
