@@ -1,0 +1,168 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run SUSHI only",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "--no",
+                "fsh-sushi",
+                "."
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run IG Publisher (after SUSHI)",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "-Xmx8g",
+                "-Djava.awt.headless=true",
+                "-jar",
+                "input-cache/publisher.jar",
+                "-ig",
+                ".",
+                "-no-sushi"
+            ],
+            "group": "build",
+            "dependsOn": "Run SUSHI only",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Download latest IG Publisher",
+            "type": "shell",
+            "command": "/bin/bash",
+            "args": [
+                "_updatePublisher.sh"
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "HC: validate Organization.json instance",
+            "type": "shell",
+            "command": "java -jar C:/work/GIT/health-connect-external/validator_cli.jar -version 4.0.1 -ig /C:/work/GIT/health-connect-external/output/package.tgz -level errors -sct http://snomed.info/sct/32506021000036107  C:/work/GIT/health-connect-external/fsh-generated/resources/Organization-example-healthconnect-organization-1.json -html-output Test-Results/Results-`date +%Y%m%d-%H%M%S`.html",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "HC: validate Location.json instances",
+            "type": "shell",
+            "command": "java -jar C:/work/GIT/health-connect-external/validator_cli.jar -version 4.0.1 -ig /C:/work/GIT/health-connect-external/output/package.tgz -level errors -sct http://snomed.info/sct/32506021000036107  C:/work/GIT/health-connect-external/fsh-generated/resources/Location-example-healthconnect-mobile-healthcare-unit-1.json -html-output Test-Results/Results-`date +%Y%m%d-%H%M%S`.html",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "HC: validate HealthcareService.json instance",
+            "type": "shell",
+            "command": "java -jar C:/work/GIT/health-connect-external/validator_cli.jar -version 4.0.1 -ig /C:/work/GIT/health-connect-external/output/package.tgz -level errors -sct http://snomed.info/sct/32506021000036107  C:/work/GIT/health-connect-external/fsh-generated/resources/HealthcareService-example-healthconnect-healthcareservice-1.json -html-output Test-Results/Results-`date +%Y%m%d-%H%M%S`.html",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "HC: validate Practitioner.json instance",
+            "type": "shell",
+            "command": "java -jar C:/work/GIT/health-connect-external/validator_cli.jar -version 4.0.1 -ig /C:/work/GIT/health-connect-external/output/package.tgz -level errors -sct au  C:/work/GIT/health-connect-external/fsh-generated/resources/Practitioner-example-healthconnect-practitioner-1.json -html-output Test-Results/Results-`date +%Y%m%d-%H%M%S`.html",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "HC: validate PractitionerRole.json instance",
+            "type": "shell",
+            "command": "java -jar C:/work/GIT/health-connect-external/validator_cli.jar -version 4.0.1 -ig /C:/work/GIT/health-connect-external/output/package.tgz -level errors -sct au  C:/work/GIT/health-connect-external/fsh-generated/resources/Practitionerrole-example-healthconnect-practitionerrole-1.json -html-output Test-Results/Results-`date +%Y%m%d-%H%M%S`.html",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "HC: validate EndPoint.json instance",
+            "type": "shell",
+            "command": "java -jar C:/work/GIT/health-connect-external/validator_cli.jar -version 4.0.1 -ig /C:/work/GIT/health-connect-external/output/package.tgz -level errors -sct au  C:/work/GIT/health-connect-external/fsh-generated/resources/Endpoint-example-hcpd-endpoint-smd.json -html-output Test-Results/Results-`date +%Y%m%d-%H%M%S`.html",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "HC: validate Multiple JSON instances",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "-jar",
+                "C:/work/GIT/health-connect-external/validator_cli.jar",
+                "-version",
+                "4.0.1",
+                "-ig",
+                "/C:/work/GIT/health-connect-external/output/package.tgz",
+                "-level",
+                "errors",
+                "-sct",
+                "au",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Organization-example-healthconnect-organization-1.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Location-example-healthconnect-mobile-healthcare-unit-1.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Location-example-healthconnect-virtual-telehealth-service-1.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/HealthcareService-example-healthconnect-healthcareservice-1.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Practitioner-example-healthconnect-practitioner-1.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Practitioner-external-hcpd-practitioner-record.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/PractitionerRole-example-healthconnect-practitionerrole-1.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Provenance-provenance-practitioner-name-update.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Provenance-provenance-practitioner-phone-update.json",
+                "C:/work/GIT/health-connect-external/fsh-generated/resources/Endpoint-example-hcpd-endpoint-smd.json",
+                "-html-output",
+                "Test-Results/Results-Validate-Multiple.html"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "Run _genonce.sh",
+            "command": "export PATH=\"$(npm config get prefix)/bin:$(npm config get prefix):$PATH\" && bash _genonce.sh",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run auto-pub tool",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "npx publish"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            }
+        }
+    ]
+}
