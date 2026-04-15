@@ -11,70 +11,91 @@
   <url value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"/>
   <name value="AustralianEndpointPayloadTypes"/>
   <title value="Australian Endpoint Payload Types"/>
+  <description value="Enumeration of well known endpoint payload types"/>
   <status value="draft"/>
   <experimental value="false"/>
+  <date value="2026-04-01"/>
   <publisher value="HL7 Australia"/>
-    <contact>
-    <name value="HL7 Australia" />
+  <contact>
+    <name value="HL7 Australia"/>
     <telecom>
-      <system value="url" />
-      <value value="http://hl7.org.au" />
+      <system value="url"/>
+      <value value="http://hl7.org.au"/>
     </telecom>
   </contact>
-  <description value="Enumeration of well known endpoint payload types."/>
-    <jurisdiction>
+  <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166" />
-      <code value="AU" />
-      <display value="Australia" />
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+      <display value="Australia"/>
     </coding>
   </jurisdiction>
-  <copyright value="HL7 Australia© 2018+; Licensed under Creative Commons No Rights Reserved." />
+  <copyright value="HL7 Australia© 2018+; Licensed under Creative Commons No Rights Reserved."/>
   <caseSensitive value="true"/>
   <content value="complete"/>
   <concept>
     <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-REF-SIMPLIFIED-201706"/>
-    <display value="Simplified Profile for HL7 V2.4 REF message"/>
-    <definition value="Profile on HL7 V2.4 REF message Level 2 profile (HL7AUSD-DFC-OO-ADRM-2018.1 Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
+    <display value="HL7 V2.4 REF message (Level 2)"/>
+    <definition value="Simplified profile on HL7 V2.4 REF message Level 2 profile (HL7AUSD-STD-OO-ADRM-2018.1 Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
   </concept>
   <concept>
     <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-REF-SIMPLIFIED-201706-L1"/>
-    <display value="Simplified Profile for HL7 V2.4 REF message (Level 1)"/>
-    <definition value="Profile on HL7 V2.4 REF message Level 1 profile (HL7AUSD-DFC-OO-ADRM-2018.1 Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
+    <display value="HL7 V2.4 REF message (Level 1)"/>
+    <definition value="Simplified profile on HL7 V2.4 REF message Level 1 profile (HL7AUSD-STD-OO-ADRM-2018.1 Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
   </concept>
   <concept>
     <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-REF-SIMPLIFIED-201706/RRI"/>
-    <display value="Simplified Profile for HL7 V2.4 REF referral response message"/>
-    <definition value="Profile for ACK for Simplified Profile for HL7 2.4 REF"/>
+    <display value="HL7 V2.4 RRI message"/>
+    <definition value="Profile of referral response for the simplified profile for HL7 v2.4 REF message"/>
+  </concept>
+  <concept>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORU-201701"/>
+    <display value="HL7 V2.4 ORU message"/>
+    <definition value="Profile on HL7 V2.4 ORU report message (HL7AUSD-STD-OO-ADRM-2018.1) Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORM-201701"/>
+    <display value="HL7 V2.4 ORM message"/>
+    <definition value="Profile on HL7 V2.4 ORM order message (HL7AUSD-STD-OO-ADRM-2018.1) Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ORR-201701"/>
+    <display value="HL7 V2.4 ORR message"/>
+    <definition value="Profile on HL7 V2.4 ORR order response message (HL7AUSD-STD-OO-ADRM-2018.1) Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
+  </concept>
+  <concept>
+    <code value="http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-ACK-201701"/>
+    <display value="HL7 V2.4 ACK message"/>
+    <definition value="Profile on HL7 V2.4 ACK general acknowledgement message (HL7AUSD-STD-OO-ADRM-2018.1) Australian Diagnostics and Referral Messaging - Localisation of HL7 Version 2.4)"/>
   </concept>
   <concept>
     <code value="http://ns.electronichealth.net.au/ack/sc/deliver/hl7Ack/2012"/>
-    <display value="HL7 V2 Acknowledgment"/>
+    <display value="HL7 V2.3.1 Acknowledgement"/>
     <definition value="Profile for ACK"/>
   </concept>
   <concept>
     <code value="http://ns.electronichealth.net.au/ds/sc/deliver/hl7Mdm/2012"/>
-    <display value="HL7 V2 MDM Discharge Summary"/>
+    <display value="HL7 V2.3.1 MDM Discharge Summary"/>
     <definition value="Discharge Summary CDA contained in MDM message"/>
   </concept>
   <concept>
     <code value="http://ns.electronichealth.net.au/er/sc/deliver/hl7Mdm/2012"/>
-    <display value="HL7 V2 MDM eReferral"/>
+    <display value="HL7 V2.3.1 MDM eReferral"/>
     <definition value="eReferral CDA contained in MDM message"/>
   </concept>
   <concept>
     <code value="http://ns.electronichealth.net.au/es/sc/deliver/hl7Mdm/2012"/>
-    <display value="HL7 V2 MDM Event Summary"/>
+    <display value="HL7 V2.3.1 MDM Event Summary"/>
     <definition value="Event Summary CDA contained in MDM message"/>
   </concept>
   <concept>
     <code value="http://ns.electronichealth.net.au/shs/sc/deliver/hl7Mdm/2012"/>
-    <display value="HL7 V2 MDM Shared Health Summary"/>
+    <display value="HL7 V2.3.1 MDM Shared Health Summary"/>
     <definition value="Shared Health Summary CDA contained in MDM message"/>
   </concept>
   <concept>
     <code value="http://ns.electronichealth.net.au/sl/sc/deliver/hl7Mdm/2012"/>
-    <display value="HL7 V2 MDM Specialist Letter"/>
+    <display value="HL7 V2.3.1 MDM Specialist Letter"/>
     <definition value="Specialist Letter CDA contained in MDM message"/>
   </concept>
 </CodeSystem>

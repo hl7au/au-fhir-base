@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="example1"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <b>Downunder Hospital FHIR API</b>
+      <hr/>
+      <p><strong>Status:</strong> Active</p>
+      <p><strong>Connection Type:</strong> FHIR REST API</p>
+      <p><strong>Environment:</strong> Production</p>
+      <p><strong>Implementation Guide:</strong> Downunder Hospital FHIR Profiles v2.1.0</p>
+      <p><strong>Managing Organization:</strong> Downunder Hospital</p>
+      <p><strong>Contact:</strong> fhir.api@downunderhospital.com.au</p>
+      <p><strong>Address:</strong> https://fhir.downunderhospital.com.au/R4</p>
+    </div>
+  </text>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-environmenttype">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org.au/fhir/CodeSystem/au-endpoint-environment-type"/>
+        <code value="production"/>
+        <display value="Production"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/au-implementation-guide">
+    <extension url="ig-uri">
+      <valueCanonical value="http://downunderhospital.com.au/fhir/ig/hospital-profiles"/>
+    </extension>
+    <extension url="ig-name">
+      <valueString value="Downunder Hospital FHIR Profiles"/>
+    </extension>
+    <extension url="ig-version">
+      <valueString value="2.1.0"/>
+    </extension>
+    <extension url="ig-actor">
+      <valueString value="Hospital FHIR Server"/>
+    </extension>
+  </extension>
+  <identifier>
+    <system value="http://downunderhospital.com.au/fhir-endpoints"/>
+    <value value="DUH-FHIR-PROD-01"/>
+  </identifier>
+  <identifier>
+    <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+    <value value="8003621566684455"/>
+  </identifier>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7-fhir-rest"/>
+    <display value="HL7 FHIR"/>
+  </connectionType>
+  <name value="Downunder Hospital FHIR API"/>
+  <managingOrganization>
+    <reference value="Organization/example0"/>
+    <display value="Downunder Hospital"/>
+  </managingOrganization>
+  <contact>
+    <system value="email"/>
+    <value value="fhir.api@downunderhospital.com.au"/>
+    <use value="work"/>
+  </contact>
+  <contact>
+    <system value="phone"/>
+    <value value="+61 2 6270 8000"/>
+    <use value="work"/>
+  </contact>
+  <period>
+    <start value="2023-07-01"/>
+  </period>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Patient"/>
+    </coding>
+  </payloadType>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Practitioner"/>
+    </coding>
+  </payloadType>
+  <payloadType>
+    <coding>
+      <system value="http://hl7.org/fhir/resource-types"/>
+      <code value="Organization"/>
+    </coding>
+  </payloadType>
+  <payloadMimeType value="application/fhir+json"/>
+  <payloadMimeType value="application/fhir+xml"/>
+  <address value="https://fhir.downunderhospital.com.au/R4"/>
+</Endpoint>
