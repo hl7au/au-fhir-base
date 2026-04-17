@@ -37,28 +37,28 @@
   <caseSensitive value="true" />
   <content value="complete" />
   <concept>
-    <code value="production" />
+    <code value="prod" />
     <display value="Production" />
-    <definition value="Production environment - indicates this endpoint serves users in a live system" />
-  </concept>
-  <concept>
-    <code value="test" />
-    <display value="Test" />
-    <definition value="Test environment - indicates this endpoint is used for testing purposes" />
-  </concept>
-  <concept>
-    <code value="development" />
-    <display value="Development" />
-    <definition value="Development environment - indicates this endpoint is used during active development" />
+    <definition value="Production environment and is expected to contain real data and should be protected appropriately" />
   </concept>
   <concept>
     <code value="staging" />
     <display value="Staging" />
-    <definition value="Staging environment - indicates this endpoint is used for pre-production staging" />
+    <definition value="Staging environment typically used while preparing for a release to production" />
   </concept>
   <concept>
-    <code value="sandbox" />
-    <display value="Sandbox" />
-    <definition value="Sandbox environment - indicates this endpoint serves a public testing environment" />
+    <code value="dev" />
+    <display value="Development" />
+    <definition value="Development environment used while building systems" />
+  </concept>
+  <concept>
+    <code value="test" />
+    <display value="Test" />
+    <definition value="Test environment, it is not intended for production usage." />
+  </concept>
+  <concept>
+    <code value="train" />
+    <display value="Training" />
+    <definition value="Training environment, it is not intended for production usage and typically contains data specifically prepared for training usage." />
   </concept>
 </CodeSystem>
