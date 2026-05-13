@@ -11,6 +11,17 @@ This version of current build reinstates profiles not included in the AU Base 6.
   <li>Ethnicity extension</li>
 </ul>
 
+#### Breaking Changes
+This version introduces the following non-compatible changes.
+<ul>
+  <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
+    <ul>
+      <li>Narrowed the description of NOI so that the code applies to only HPI-O identifiers. (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Added PAIO as a value for PAI-O identifiers instead of using NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+    </ul>
+  </li>
+</ul>
+
 #### Changes in This Version
 <ul>
   <li>New profiles:
