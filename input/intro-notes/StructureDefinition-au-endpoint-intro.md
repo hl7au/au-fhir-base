@@ -2,6 +2,14 @@
 - To represent the environment type of an endpoint (e.g. production, staging, test), use the cross-version extension [extension-Endpoint.environmentType](http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType) from the [FHIR Cross-Version Extensions IG (xver-r5.r4)](https://hl7.org/fhir/uv/xver-r5.r4/0.1.0/index.html). This extension backports the R5 `Endpoint.environmentType` element for use in R4.
   - Values are drawn from the [endpoint-environment](http://hl7.org/fhir/endpoint-environment) code system (`prod`, `staging`, `dev`, `test`, `train`).
 
+#### Useful extensions
+The following extensions are defined in this IG and may be useful when implementing AU Base Endpoint:
+
+- [Receiving Facility](StructureDefinition-au-receivingfacility.html) (`au-receivingfacility`) — identifies the receiving facility for a message exchange.
+- [Receiving Application](StructureDefinition-au-receivingapplication.html) (`au-receivingapplication`) — identifies the receiving application for a message exchange.
+- [Implementation Guide Supported](StructureDefinition-au-implementation-guide.html) (`au-implementation-guide`) — identifies an implementation guide supported by the endpoint.
+- [Encryption Certificate PEM X509](StructureDefinition-encryption-certificate-pem-x509.html) (`encryption-certificate-pem-x509`) — provides a PEM-encoded X.509 certificate used for encrypting messages sent to the endpoint.
+
 #### AU-defined terminology
 - The following AU-defined terminology within this IG may be useful when populating `Endpoint.connectionType` and `Endpoint.payloadType`:
 - [Australian Service Interfaces](ValueSet-au-service-interfaces.html) — connection type codes for Australian messaging services, derived from [Australian Secure Message Service Interfaces](CodeSystem-smd-interfaces.html)
