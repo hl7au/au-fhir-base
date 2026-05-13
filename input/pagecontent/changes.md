@@ -37,6 +37,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
+      <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
