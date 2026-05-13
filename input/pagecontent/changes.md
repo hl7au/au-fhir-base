@@ -16,8 +16,8 @@ This version introduces the following non-compatible changes.
 <ul>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
-      <li>Narrowed the description of NOI so that the code applies to only HPI-O identifiers. (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
-      <li>Added PAIO as a value for PAI-O identifiers instead of using NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
 </ul>
@@ -32,8 +32,8 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
     <ul>
-      <li>Added AU HAE as a listed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
-      <li>Added AU HSP-O as a listed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
+      <li>Added AU HAE as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
+      <li>Added AU HSP-O as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
 </ul>
@@ -318,7 +318,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
   </li>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
-      <li>Added AU Patient Internal Identifier as an allowed type for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
+      <li>Added AU Patient Internal Identifier as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-48671">FHIR-48671</a>).</li>
       <li>Patient.extension changed to add Patient Sex Parameter For Clinical Use (<a href="https://jira.hl7.org/browse/FHIR-51408">FHIR-51408</a>).</li>
     </ul>
   </li>
@@ -336,7 +336,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/CodeSystem-au-v2-0360.html">DegreeLicenseCertificate AU</a>:
     <ul>
       <li>Deprecated codes (AUAHPRAProfession, AUAHPRARegistration) from code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
-      <li>Added code AHPRA to code system (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
+      <li>Added code AHPRA (<a href="https://jira.hl7.org/browse/FHIR-49121">FHIR-49121</a>).</li>
     </ul>
   </li>
     <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a>:
