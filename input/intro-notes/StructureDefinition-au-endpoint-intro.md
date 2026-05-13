@@ -7,7 +7,6 @@ The following extensions are defined in this IG and may be useful when implement
 
 - [Receiving Facility](StructureDefinition-au-receivingfacility.html) (`au-receivingfacility`) — identifies the receiving facility for a message exchange.
 - [Receiving Application](StructureDefinition-au-receivingapplication.html) (`au-receivingapplication`) — identifies the receiving application for a message exchange.
-- [Implementation Guide Supported](StructureDefinition-au-implementation-guide.html) (`au-implementation-guide`) — identifies an implementation guide supported by the endpoint.
 - [Encryption Certificate PEM X509](StructureDefinition-encryption-certificate-pem-x509.html) (`encryption-certificate-pem-x509`) — provides a PEM-encoded X.509 certificate used for encrypting messages sent to the endpoint.
 
 #### AU-defined terminology
