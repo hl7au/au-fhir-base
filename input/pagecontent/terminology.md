@@ -82,11 +82,6 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>AU Base</td>
     </tr>
     <tr>
-      <td><a href="ValueSet-au-endpoint-environment-type.html">AU Endpoint Environment Type</a></td>
-      <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
-      <td>AU Base</td>
-    </tr>
-    <tr>
       <td><a href="ValueSet-au-endpoint-payload-type.html">AU Endpoint Payload Type</a></td>
       <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
       <td>AU Base</td>
@@ -525,12 +520,6 @@ The following code systems are referenced by the value sets listed above.
     <tr>
         <td><a href="CodeSystem-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
         <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
-        <td>AU Base</td>
-        <td>HL7 Australia</td>
-    </tr>
-    <tr>
-        <td><a href="CodeSystem-au-endpoint-environment-type.html">AU Endpoint Environment Type</a></td>
-        <td><a href="ValueSet-au-endpoint-environment-type.html">AU Endpoint Environment Type</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
