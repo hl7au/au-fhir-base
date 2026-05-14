@@ -16,7 +16,7 @@ This version introduces the following non-compatible changes.
 <ul>
  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
-      <li>Identifier.type.coding fixed to PAIO(<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
@@ -42,7 +42,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
-      <li>Identifier.type.coding fixed to PAIO(<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
