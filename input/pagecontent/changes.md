@@ -14,6 +14,11 @@ This version of current build reinstates profiles not included in the AU Base 6.
 #### Breaking Changes
 This version introduces the following non-compatible changes.
 <ul>
+ <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to PAIO(<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+    </ul>
+  </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
@@ -33,6 +38,11 @@ This version introduces the following non-compatible changes.
     <ul>
       <li>Added AU HAE as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
       <li>Added AU HSP-O as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to PAIO(<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
