@@ -11,7 +11,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
   <li>Ethnicity extension</li>
 </ul>
 
-#### Breaking Changes
+#### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
@@ -52,12 +52,6 @@ This version introduces the following non-compatible changes.
       <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
-    <ul>
-      <li>Changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
-      <li>Added guidance for representing no known medications for a patient (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
-    </ul>
-  </li>
 </ul>
 
 ### Release 6.0.0
@@ -67,7 +61,7 @@ This version introduces the following non-compatible changes.
  
 This change log documents the significant updates and resolutions implemented from version [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html) to [6.0.0](https://hl7.org.au/fhir/6.0.0/index.html).
 
-#### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes
 This version introduces the following non-compatible changes.
 <ul>
   <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-patient.html">AU Base Patient</a>:
@@ -203,7 +197,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
  
 This change log documents the significant updates and resolutions implemented from version [5.0.0](https://hl7.org.au/fhir/5.0.0/index.html) to [6.0.0-ballot](https://hl7.org.au/fhir/6.0.0-ballot/index.html). The changes in this update are for ballot.
 
-#### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes
 This version introduces the following non-compatible changes.
 <ul>
   <li><a href="https://hl7.org.au/fhir/6.0.0-ballot/StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a>:
