@@ -39,6 +39,7 @@ This version introduces the following non-compatible changes.
     <ul>
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
     </ul>
   </li>
 </ul>
