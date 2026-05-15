@@ -102,6 +102,13 @@ The following value sets form part of localised requirements (i.e. are reference
       </td>
       <td>NCTS</td>
     </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1">Australian Medication Use</a></td>
+      <td>
+        <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>
+      </td>
+      <td>NCTS</td>
+    </tr>
      <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a></td>
       <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
@@ -768,6 +775,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="ValueSet-amt-mp-codes.html">AMT Medicinal Product and Substances</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, 
+            <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1">Australian Medication Use</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>,  
             <a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1">Body Site</a>, 
