@@ -36,8 +36,8 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
     <ul>
-      <li>Added AU HAE as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
-      <li>Added AU HSP-O as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
+      <li>Added AU HAE as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
+      <li>Added AU HSP-O as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
