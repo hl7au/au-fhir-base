@@ -40,6 +40,12 @@ This version introduces the following non-compatible changes.
       <li>Added AU HSP-O as an option for Patient.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
+    <ul>
+      <li>Changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
+      <li>Added guidance for representing no known medications for a patient (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
+    </ul>
+  </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
