@@ -9,7 +9,3 @@ The following extensions are defined in this IG and may be useful when implement
 - [Receiving Application](StructureDefinition-au-receivingapplication.html) (`au-receivingapplication`) — identifies the receiving application for a message exchange.
 - [Encryption Certificate PEM X509](StructureDefinition-encryption-certificate-pem-x509.html) (`encryption-certificate-pem-x509`) — provides a PEM-encoded X.509 certificate used for encrypting messages sent to the endpoint.
 
-#### AU-defined terminology
-- The following AU-defined terminology within this IG may be useful when populating `Endpoint.connectionType` and `Endpoint.payloadType`:
-- [Australian Service Interfaces](ValueSet-au-service-interfaces.html) — connection type codes for Australian messaging services, derived from [Australian Secure Message Service Interfaces](CodeSystem-smd-interfaces.html)
-- [AU Endpoint Payload Type](ValueSet-au-endpoint-payload-type.html) — payload type codes for Australian endpoints, derived from [Australian Endpoint Payload Types](CodeSystem-au-endpoint-payload-type.html)
