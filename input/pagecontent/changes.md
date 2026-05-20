@@ -51,11 +51,13 @@ This version introduces the following non-compatible changes.
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
+  <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
-      <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
-      <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
-      <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
+      <li>Added code BB, deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
+      <li>Added code MIX, deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
+      <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
+      <li>Technical correction/typo fix for code COP (<a href="https://jira.hl7.org/browse/FHIR-55579">FHIR-55579</a>).</li>      
     </ul>
   </li>
 </ul>
