@@ -19,6 +19,21 @@ This version introduces the following non-compatible changes.
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
+ <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+    </ul>
+  </li>
+ <li><a href="StructureDefinition-au-australiancompanynumber.html">AU Australian Company Number</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to ACN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+    </ul>
+  </li>
+ <li><a href="StructureDefinition-au-australianregistredbodynumber.html">AU Australian Registered Body Number</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+    </ul>
+  </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
@@ -56,6 +71,9 @@ This version introduces the following non-compatible changes.
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
+      <li>Added code ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+      <li>Added code ACN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+      <li>Added code ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
 </ul>
