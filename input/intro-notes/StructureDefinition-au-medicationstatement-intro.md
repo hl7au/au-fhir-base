@@ -9,6 +9,10 @@
   - [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 - If a medication is compounded and is a list of ingredients, `MedicationStatement.medicationCodeableConcept` is still present and may contain only the list of ingredients as text in `MedicationStatement.medicationCodeableConcept.text`.
 - Where additional medicinal product information is needed, `MedicationStatement.medicationReference` is preferred to `MedicationStatement.medicationCodeableConcept` and use of extensions, see guidance on [AU Base Medication](StructureDefinition-au-medication.html).
+- If representing that a patient is not currently taking any medications:
+  - `MedicationStatement.medicationCodeableConcept` can use the code SNOMED CT 787481004 &#124;No known medications&#124;
+  - `MedicationStatement.status` is active
+  - `MedicationStatement.effective[x]` is provided to indicate the date/time or period when the statement is known to be true
 
 **Potentially useful extensions:**
 * MedicationStatement: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
