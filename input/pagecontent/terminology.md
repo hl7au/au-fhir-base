@@ -519,7 +519,7 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-rsg-type.html">AU Recorded Sex or Gender Type</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-    </tr>   
+    </tr>
     <tr>
         <td><a href="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats">Australian Immunisation Register Vaccine</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
