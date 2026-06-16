@@ -72,10 +72,8 @@ This version introduces the following non-compatible changes.
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
-      <li>Added code ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
-      <li>Added code ACN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
-      <li>Added code ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
       <li>Added code HAE (<a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>).</li>
+      <li>Added codes ABN, ACN, ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
 </ul>
