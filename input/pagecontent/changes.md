@@ -57,6 +57,12 @@ This version introduces the following non-compatible changes.
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
+      <li>Added code HAE (<a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-hae.html">AU HAE Identifier</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to HAE (<a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>).</li>
     </ul>
   </li>
 </ul>
