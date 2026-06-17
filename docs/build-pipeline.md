@@ -62,6 +62,38 @@ JAVA_HOME=/path/to/jdk17 java -jar input-cache/publisher.jar -go-publish \
 ```
 Then `zip -r site.zip webroot/fhir` and open `webroot/fhir/<version>/index.html` + `webroot/fhir/history.html`.
 
+## The 15 GB, and the leanest milestone sync
+The bucket **co-hosts several IGs**, not just au-base. By prefix: `fhir/core` 4.0 GB/53k,
+`fhir/ps`+`fhir/ereq`+`fhir/rcpa`+`fhir/pd` ≈ 3.7 GB/41k (**sibling IGs ≈ 7.7 GB/94k**), and
+**au-base's own content ≈ 6.3 GB/121k**. By type it's mostly text: HTML 7.5 GB/73k files (each page
+is a big self-contained HTML), download zips 2.9 GB, json/xml/ttl ~1.9 GB, images 0.4 GB.
+
+An **au-base milestone only iterates au-base's package-list versions** — it never touches the sibling
+IGs. So the leanest sync:
+
+| scope | size | objects |
+|-------|------|---------|
+| whole bucket (today) | 15 GB | 216k |
+| au-base only (drop `fhir/{core,ps,ereq,rcpa,pd}`) | 6.3 GB | 121k |
+| + drop zips/images/ttl/misc (leanest) | **4.6 GB** | **88k** |
+
+```bash
+aws s3 sync s3://hl7au-fhir-ig ./mirror \
+  --exclude "fhir/core/*" --exclude "fhir/ps/*" --exclude "fhir/ereq/*" \
+  --exclude "fhir/rcpa/*" --exclude "fhir/pd/*" \
+  --exclude "*.zip" --exclude "archive.zip" --exclude "ig-build-zips/*" \
+  --exclude "*.png" --exclude "*.jpg" --exclude "*.gif" --exclude "*.svg" \
+  --exclude "*.ttl" --exclude "*.csv" --exclude "*.xlsx" --exclude "*.pptx" --exclude "*.db"
+```
+Keep the mirror **warm** (persistent EBS / local dir) so subsequent milestones sync only deltas.
+Verify go-publish tolerates the exclusions first: it edits HTML (publish-box) and reads
+`spec.internals`/`.json`/`.xml` for redirects — zips/images/ttl/bundles are not inputs, so excluding
+them is expected to be safe; confirm on a dry run.
+
+**Best long-term fix:** make the per-version publish-box banner version-agnostic (link to
+`/fhir/history.html` instead of naming "current is vY"), so a new milestone never needs to rewrite old
+versions at all — milestones then become as cheap as working builds. (Publisher/template change.)
+
 ## Open items
 - Confirm whether GitHub-hosted runners need sizing up for the publisher's RAM/disk (the only real
   reason working builds couldn't be GitHub-hosted).
