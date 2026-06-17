@@ -50,13 +50,50 @@ history"). No JS, but a minor UX loss. A2 is preferred since some readers want t
 Either way: change site is `PublishBoxStatementGenerator` (+ template asset for A2). Upstream-able
 (benefits all IGs). **This removes the milestone size/speed problem** — you don't touch old versions.
 
+### A3. Client-side source viewers — same "render from canonical source" pattern as A2
+**The biggest per-version bloat is duplication, not data.** Measured on `fhir/6.0.0` (289 MB total):
+
+| role | size | files |
+|------|------|-------|
+| real HTML pages (incl. ~29 MB comparison pages) | 94 MB | 1,717 |
+| **escaped-format viewer pages** (`.json.html`/`.xml.html`/`.ttl.html`) | **77 MB** | 822 |
+| download bundles (`full-ig.zip` etc.) + misc | ~69 MB | 971 |
+| raw data (`json`/`xml`/`ttl`) | 39 MB | 1,243 |
+| images + css/js | 7 MB | 627 |
+
+Each resource is materialised ~6× (raw json/xml/ttl **plus** a highlighted `.html` view of each). The
+`.json.html`/`.xml.html`/`.ttl.html` pages are **the same data as the raw files, just Prism-highlighted
+and wrapped in page chrome** — and **Prism.js is already shipped and loaded on every page**.
+
+**A3:** keep the "JSON/XML/Turtle" source tabs but **render them client-side from the existing raw file**
+instead of baking a duplicate HTML page. Two options:
+- a single shared **viewer shell** (`viewer.html?src=…&fmt=json`) that fetches the raw resource and
+  highlights it with Prism, or
+- render the source **inline in a tab** on the resource page (fetch raw on tab-click, highlight).
+
+Eliminates ~822 files / **~77 MB per version (27%)**, keeps the UX, and since those pages also carry the
+publish-box, it **also reduces milestone rewrites**. Same idea as A2 (render from canonical source —
+`package-list.json` for the banner, the raw `.json/.xml` for viewers). Change site:
+`PublisherGenerator` (stop emitting `*.json/xml/ttl.html`, change the tab links) + a small JS + the
+already-present Prism. Upstream-able.
+
 ### B. Shrink each version's artefacts (config and/or publisher) — smaller working & milestone
 - **Drop Turtle** (`.ttl` + `.ttl.html`) if RDF isn't needed (~9% of a version). IG/format config.
-- **Drop/trim the escaped-format viewer pages** (`.json.html`/`.xml.html`/`.ttl.html`) — the single
-  biggest per-resource cost; raw `.json/.xml` remain for download. Loses in-browser source tabs (UX).
+- **Source viewer pages** — see **A3** (the single biggest per-resource cost; ~77 MB/version).
+- **Comparison-to-previous-version pages** (~29 MB/version): a build-time structural diff, so not a pure
+  client-side render like A3 — but reducible: generate **lazily/on-demand**, **limit scope** to
+  current-vs-immediately-previous, or drop if low-value.
+- **Download bundles** (`full-ig.zip`/definitions/examples, ~48 MB): only offered on the **Downloads
+  page** (`downloads.html`), so a contained feature. Keep for prod if wanted; **exclude `*.zip` from the
+  review/preview zip** for an easy ~halving (they're ~half the 88 MB working zip and don't compress
+  further) — no publisher change.
 - **Drop numbered clones** (`.json1/.json2/.xml1/.xml2`, ~1 GB bucket-wide) — content-negotiation
   copies; with the CloudFront `fhir-canonical` function they may be unnecessary. (`clone-xml-json` is
   already `false` in publish-setup — worth confirming why they still exist.)
+
+> Note on "why a static site is this big": the stored/sync size is **uncompressed**; HTML/JSON compress
+> ~5–8× and CloudFront already serves gzip/brotli, so the *over-the-wire* size is a fraction. The 15 GB
+> is a storage/sync number, not a transfer one.
 
 ### C. Build speed (publisher)
 - **Double render:** go-publish requires a pre-built `output/` (the `-ig` step) **and then re-renders
@@ -76,9 +113,13 @@ Either way: change site is `PublishBoxStatementGenerator` (+ template asset for 
 1. **A2 — dynamic (JS) publish-box current-version** (upstream PR). Highest leverage: removes the
    milestone rewrite-all → milestone becomes a working-sized build, while **keeping** the "current is
    vY" banner. Solves size *and* speed at once.
-2. **C — go-publish `-reuse-build`** (upstream PR). Halves render time for every build.
-3. **B — artefact trimming** (config first to measure; viewer-HTML/clone trimming as follow-up).
+2. **A3 — client-side source viewers** (upstream PR). ~27% off every version + fewer milestone
+   rewrites; same client-side-render pattern as A2 (Prism is already shipped).
+3. **C — go-publish `-reuse-build`** (upstream PR). Halves render time for every build.
+4. **B — artefact trimming** (config first to measure: drop ttl, lazy/limit comparison pages, exclude
+   bundles from previews, confirm clones).
 
-Items 1–2 are the high-value publisher changes; 3 is incremental storage/size. Recommend prototyping A
-on a branch of the local publisher (we have it) and measuring milestone build size/time with it, before
-deciding custom-build vs upstream-only.
+A2/A3/C are the high-value publisher changes (all "render/compute on demand instead of bake duplicates");
+B is incremental. Recommend prototyping A2 first and measuring milestone build size/time (mind the
+**one-time migration**: the first A2/A3 build still rewrites old pages once; the *second* milestone is
+the cheap one — measure that). Then A3. Decide custom-build vs upstream from the numbers.
