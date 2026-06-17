@@ -30,13 +30,25 @@ rewritten** — that's why a milestone touches the whole tree.
 ## Levers (grouped by where the change lives)
 
 ### A. Eliminate the rewrite-all — biggest win (publisher/template)
-Make the publish-box banner **version-agnostic**: "this is vX — see the version history" linking to
-`/fhir/history.html`, **without naming the current version inline**. Then a new milestone **never
-rewrites old versions** → the milestone build only produces the new version (≈ working: ~88 MB, fast,
-fits GitHub Pages). The authoritative current/version list still lives on history.html.
-- Change site: `PublishBoxStatementGenerator` (+ history template). Upstream-able (benefits all IGs).
-- Minor UX loss (old pages don't name the latest inline) — decision for Brett.
-- **This alone removes the milestone size/speed problem** (you don't touch old versions at all).
+The publish-box hardcodes the current version into every page, e.g.
+`…supersedes this version is <a href="http://hl7.org.au/fhir">6.0.0</a>`. Cutting a milestone changes
+that literal, forcing a rewrite of every page of every version. Two ways to stop that:
+
+**A2 (preferred) — make the banner dynamic (client-side), keeping the "current is vY" text.**
+Emit a static placeholder + JS that fills the current version at page load:
+`…is <a class="fhir-current-version-link"><span class="fhir-current-version"></span></a>`, with a
+small `current-version.js` that fetches `/fhir/package-list.json` (already the source of truth, same
+origin, already parsed by `history.js`), finds the current milestone entry, and fills the span + link.
+- The injected publish-box is then **identical on every page regardless of milestone** → a new
+  milestone only updates `package-list.json` (one file) and every old page's banner updates itself →
+  **no rewrite of old versions.** Keeps the UX (names the current version). Pages already load jQuery.
+- Fallback when JS is off/fetch fails: show the static "see the version history" link.
+
+**A1 (simpler) — version-agnostic banner:** drop naming the current version inline ("this is vX — see
+history"). No JS, but a minor UX loss. A2 is preferred since some readers want the inline current version.
+
+Either way: change site is `PublishBoxStatementGenerator` (+ template asset for A2). Upstream-able
+(benefits all IGs). **This removes the milestone size/speed problem** — you don't touch old versions.
 
 ### B. Shrink each version's artefacts (config and/or publisher) — smaller working & milestone
 - **Drop Turtle** (`.ttl` + `.ttl.html`) if RDF isn't needed (~9% of a version). IG/format config.
@@ -61,8 +73,9 @@ fits GitHub Pages). The authoritative current/version list still lives on histor
   divergence cost — last resort.
 
 ## Suggested prioritisation for the proposal
-1. **A — version-agnostic publish-box** (upstream PR). Highest leverage: removes the milestone
-   rewrite-all → milestone becomes a working-sized build. Solves size *and* speed at once.
+1. **A2 — dynamic (JS) publish-box current-version** (upstream PR). Highest leverage: removes the
+   milestone rewrite-all → milestone becomes a working-sized build, while **keeping** the "current is
+   vY" banner. Solves size *and* speed at once.
 2. **C — go-publish `-reuse-build`** (upstream PR). Halves render time for every build.
 3. **B — artefact trimming** (config first to measure; viewer-HTML/clone trimming as follow-up).
 
