@@ -90,9 +90,58 @@ Verify go-publish tolerates the exclusions first: it edits HTML (publish-box) an
 `spec.internals`/`.json`/`.xml` for redirects — zips/images/ttl/bundles are not inputs, so excluding
 them is expected to be safe; confirm on a dry run.
 
-**Best long-term fix:** make the per-version publish-box banner version-agnostic (link to
-`/fhir/history.html` instead of naming "current is vY"), so a new milestone never needs to rewrite old
-versions at all — milestones then become as cheap as working builds. (Publisher/template change.)
+### Important: lean sync is asymmetric (download vs upload)
+The exclusions above apply to what we **download** to build the working mirror — old versions'
+immutable bundles aren't needed as *input* to the publish-box/redirect pass. They do **not** apply to
+the **upload**:
+- The **new version we build** produces its own `full-ig.zip`, `definitions`/`examples` downloads, and
+  **npm `package.tgz`** in its output dir — those **must be uploaded** with the new version folder.
+- So: `aws s3 sync` **in** with the `--exclude`s (lean), but `aws s3 sync` **out** with **no**
+  `--exclude` on the new version dir, and **never `--delete`** (old versions' zips/packages stay put).
+- The published **site still works without the old zips present locally** — the HTML pages link to
+  download bundles by URL, and those already exist in S3; we never remove them.
+
+This applies per IG repo when rolled out (each IG's build excludes the *other* IGs' folders + bundles
+on the way in, and uploads its own new version's bundles + tgz on the way out).
+
+### Making milestones cheap: version-agnostic publish box (discuss with Brett)
+The only reason a milestone must touch the full tree is to rewrite the in-page **publish-box banner**
+inside every past version to say *"the current version is vY"*. If that banner instead linked to
+`/fhir/history.html` **without naming the current version**, a new milestone would **never need to
+rewrite old versions** — so:
+
+**Benefits**
+- Milestones become as cheap/fast as working builds (no full-tree sync, no per-version rewrite).
+- Removes the slowest, most fragile step (the "milestone failing" history).
+- Old version pages stop churning on every release (stable, fewer S3 writes, cleaner diffs).
+- `history.html` already shows the authoritative current/version list, so the info isn't lost.
+
+**The slight loss of function (for Brett to weigh)**
+- Today, opening an old version's page shows an inline "current version is vY" pointer. Version-agnostic
+  banners would instead say "this is vX — see the version history" (one click to history.html) without
+  naming the latest inline. Minor UX change; the authoritative list still lives on history.html.
+- This is a **publisher/template change** (the publish-box statement generator / history template),
+  not just our pipeline — so it needs sign-off and likely an upstream change. **Decision for Brett.**
+
+## Previewing a build before it goes live
+There is **no staging environment today** (buckets: prod `hl7au-fhir-ig`, `…-history`, recordings,
+projects, tfstate; CloudFront only the prod `hl7.org.au`). Options, lowest to highest fidelity:
+
+1. **Zip artifact (in place now)** — both workflows upload a `site-<ref>.zip`; download and open
+   `<version>/index.html` + `history.html` locally. Zero infra. Caveat: local file:// browsing doesn't
+   exercise the CloudFront canonical-redirect function.
+2. **GitHub Pages** — push the new version (or whole site) to a Pages site for a real URL. Easy/free,
+   good for "does it look right", but no CloudFront function (canonical/`|version` redirects won't
+   behave like prod) and size limits (~1 GB) — fine for one version, not the full 15 GB.
+3. **Staging S3 + CloudFront (recommended for fidelity)** — a `hl7au-fhir-ig-staging` bucket + a
+   CloudFront distribution **reusing the same `fhir-canonical` function**, so canonical/versioned
+   redirects behave exactly like prod. New infra, managed in Terraform alongside the prod stack
+   (`terraform/cloudfront`). Build → `aws s3 sync` to staging → review at the staging URL → gated
+   promote to prod. This is the cleanest "preview then promote" and mirrors prod behaviour.
+
+Recommended flow: **build → deploy to staging (auto) → review live → gated promote to prod.** The
+workflows below include a `staging` job stub; wiring it requires the staging bucket+distribution
+(small Terraform addition — pending decision).
 
 ## Open items
 - Confirm whether GitHub-hosted runners need sizing up for the publisher's RAM/disk (the only real

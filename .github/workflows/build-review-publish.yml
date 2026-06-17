@@ -95,8 +95,38 @@ jobs:
           path: site-${{ inputs.ref }}.zip
           retention-days: 14
 
-  publish:
+  # Auto-deploy the built site to STAGING for live review (real URL, prod-like behaviour).
+  # Requires a staging bucket + CloudFront (reusing the fhir-canonical function) — see
+  # docs/build-pipeline.md "Previewing a build". The OIDC role's scoped S3 policy must include
+  # the staging bucket. Until that infra exists this job is a no-op placeholder.
+  deploy-staging:
     needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built site
+        uses: actions/download-artifact@v4
+        with:
+          name: site-${{ inputs.ref }}
+      - name: Configure AWS credentials from GitHub OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+          aws-region: ap-southeast-2
+      - name: Unzip + sync to staging
+        env:
+          STAGING_BUCKET: hl7au-fhir-ig-staging   # TODO: create + add to OIDC scoped policy
+        run: |
+          unzip -q site-${{ inputs.ref }}.zip -d out
+          if aws s3api head-bucket --bucket "$STAGING_BUCKET" 2>/dev/null; then
+            aws s3 sync out/fhir "s3://$STAGING_BUCKET/fhir" --only-show-errors
+            echo "Preview: https://<staging-distribution>/fhir/<version>/index.html"
+          else
+            echo "::warning::Staging bucket $STAGING_BUCKET not set up yet — skipping (review via the zip artifact)."
+          fi
+
+  # Promote to PROD — gated by the `production` environment (required reviewers).
+  publish:
+    needs: [build, deploy-staging]
     if: ${{ inputs.publish }}
     runs-on: ubuntu-latest
     environment: production   # configure required reviewers on this environment to gate the push
@@ -112,6 +142,8 @@ jobs:
           role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
           aws-region: ap-southeast-2
 
+      # additive: uploads the new version dir (incl. its full-ig.zip + npm package.tgz) and the
+      # regenerated root (history.html, registry, feeds). Never --delete (old versions stay put).
       - name: Unzip + sync to S3 (additive; no --delete)
         run: |
           unzip -q site-${{ inputs.ref }}.zip -d out

@@ -1,0 +1,110 @@
+name: AU Base MILESTONE build → review → gated publish
+
+# Milestone releases (the R-numbered trial-use "current": e.g. 6.1.0). Unlike working builds,
+# a milestone rewrites the in-page publish-box banner in EVERY past au-base version, so it needs
+# the au-base version tree present. We keep that tree WARM and LEAN (au-base folders only, minus
+# download bundles/images/ttl ≈ 4.6GB vs 15GB) so the sync is incremental, not a cold 15GB pull.
+#
+# Requires `publication-request.json` mode = "milestone". Runner: a self-hosted runner with a
+# persistent /mirror volume (kept warm). Alternative: an ephemeral EC2 runner started by the
+# workflow (machulav/ec2-github-runner) with an EBS volume from a warm snapshot.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Tag/branch of au-fhir-base to build (the milestone)"
+        required: true
+      publish:
+        description: "Run the gated prod publish after build + review"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: au-base-publish   # shared with the working pipeline — never publish two at once
+  cancel-in-progress: false
+
+env:
+  MIRROR: /mirror          # persistent warm mirror on the self-hosted runner
+
+jobs:
+  build:
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ inputs.ref }}", path: au-fhir-base }
+      - uses: actions/checkout@v4
+        with: { repository: hl7au/publications, path: publications }
+      - uses: actions/checkout@v4
+        with: { repository: HL7/fhir-ig-history-template, path: fhir-history }
+      - uses: actions/checkout@v4
+        with: { repository: hl7au/ig-registry, path: ig-registry }
+
+      - name: Configure AWS credentials from GitHub OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+          aws-region: ap-southeast-2
+
+      - name: Update IG Publisher + render the IG
+        working-directory: au-fhir-base
+        run: |
+          ./_updatePublisher.sh -f -y
+          java -jar input-cache/publisher.jar -ig . -tx https://tx.fhir.org
+
+      - name: Warm LEAN sync of the au-base tree (incremental; deltas only)
+        run: |
+          mkdir -p "$MIRROR/fhir"
+          # au-base folders only; drop sibling IGs + immutable bundles/images/ttl/misc
+          aws s3 sync s3://hl7au-fhir-ig "$MIRROR" --only-show-errors \
+            --exclude "fhir/core/*" --exclude "fhir/ps/*" --exclude "fhir/ereq/*" \
+            --exclude "fhir/rcpa/*" --exclude "fhir/pd/*" \
+            --exclude "*.zip" --exclude "archive.zip" --exclude "ig-build-zips/*" \
+            --exclude "*.png" --exclude "*.jpg" --exclude "*.gif" --exclude "*.svg" \
+            --exclude "*.ttl" --exclude "*.csv" --exclude "*.xlsx" --exclude "*.pptx" --exclude "*.db"
+          cp publications/publish-setup.json "$MIRROR/publish-setup.json"
+          rm -f au-fhir-base/package-list.json   # publisher requires source to NOT have it
+
+      - name: go-publish (milestone) into the warm mirror
+        run: |
+          java -jar au-fhir-base/input-cache/publisher.jar -go-publish \
+            -source ./au-fhir-base -web "$MIRROR" \
+            -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json \
+            -templates ./publications/templates -temp ./temp -tx https://tx.fhir.org
+
+      - name: Package changed site for review
+        run: |
+          # the new version dir + regenerated root + any rewritten version HTML
+          (cd "$MIRROR" && zip -qr "$GITHUB_WORKSPACE/site-${{ inputs.ref }}.zip" fhir)
+          echo "Zipped $(du -h site-${{ inputs.ref }}.zip | cut -f1)"
+
+      - name: Upload review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ inputs.ref }}
+          path: site-${{ inputs.ref }}.zip
+          retention-days: 14
+
+  publish:
+    needs: build
+    if: ${{ inputs.publish }}
+    runs-on: ubuntu-latest
+    environment: production   # required reviewers gate the push
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: "site-${{ inputs.ref }}" }
+      - name: Configure AWS credentials from GitHub OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+          aws-region: ap-southeast-2
+      # Uploads the new version (incl. full-ig.zip + npm package.tgz) AND the rewritten old-version
+      # HTML/redirects. Additive — never --delete (old download bundles/packages stay in S3).
+      - name: Unzip + sync to S3 (additive; no --delete)
+        run: |
+          unzip -q site-${{ inputs.ref }}.zip -d out
+          aws s3 sync out/fhir s3://hl7au-fhir-ig/fhir --only-show-errors
