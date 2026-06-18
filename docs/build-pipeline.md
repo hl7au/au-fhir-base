@@ -95,8 +95,9 @@ mirror). With `website.dynamic-publish-box: true` the banner + "Page versions" l
 from `package-list.json`, so every old version's pages are byte-identical regardless of which version is
 current — the publisher therefore **skips the past-version loop**, and a milestone touches only the new
 version + regenerated root. It now runs on the **same GitHub-hosted, root-files-only path as a working
-build** (`build-review-publish-milestone.yml`), just with `publication-request.json` mode = `milestone`
-and the tag-push trigger. No EC2, no warm EBS, no 15 GB sync. Same zip-for-review + gated promote.
+build** — in fact the **same workflow** (`build-review-publish.yml`) renders once and produces both a
+working and a milestone build from that one render; a `v*` tag (or dispatch `publish_milestone`) does
+the gated milestone promote. No EC2, no warm EBS, no 15 GB sync. Same zip-for-review + gated promote.
 
 ## Verifying the new method locally (no S3 writes)
 Build a lightweight `-web` (root files only) and run go-publish against an already-built `output/`:
@@ -157,7 +158,7 @@ version + the "Page versions" list. Because the emitted markup is then byte-iden
 every version, a milestone rewrites **0** old-version pages — and the publisher **skips the past-version
 loop and the `needFolder` copy altogether**, so the milestone needs **no local version tree**. Measured:
 2nd milestone rewrites 0/5,153 old-version files (see `publisher-A2-prototype-results.md`). This is what
-lets `build-review-publish-milestone.yml` run GitHub-hosted + lean. Off by default; opt-in per IG.
+lets the milestone path in `build-review-publish.yml` run GitHub-hosted + lean. Off by default; opt-in per IG.
 Combined into the custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`) with #1327,
 A3, and lever C until the upstream PRs merge.
 
@@ -209,11 +210,10 @@ environment with required reviewers gates the S3 sync).
 ## Workflow map (current)
 | workflow | trigger | runner | role |
 |----------|---------|--------|------|
-| `build-review-publish.yml` | push/PR to `master` + dispatch | GitHub-hosted, lean | WORKING releases; review zip + Pages preview; prod publish gated to dispatch+publish |
-| `build-review-publish-milestone.yml` | tag push + dispatch | GitHub-hosted, lean | MILESTONE releases (no version tree, thanks to `dynamic-publish-box`); gated by `production` env |
-| `pipeline-build.yml` | manual dispatch only | self-hosted (legacy) | LEGACY/reference — superseded by the two above; tag trigger moved to the milestone workflow |
+| `build-review-publish.yml` | push/PR to `master`, tag `v*`, dispatch | GitHub-hosted, lean | THE pipeline. Renders once → go-publish twice (working + milestone) → both deployed side-by-side to Pages (`previews/<slug>/{working,milestone}/fhir`). **Prod publish is milestone-only** (v* tag or dispatch `publish_milestone`), gated by the `production` env. No working→prod path. |
+| `pipeline-build.yml` | manual dispatch only | self-hosted (legacy) | LEGACY/reference — superseded by the above. |
 
-All three fetch the combined custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`:
+Both fetch the combined custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`:
 #1327 cloud redirects + A2 dynamic publish-box/page-versions + skip-version-tree + A3 source viewers +
 lever C `-reuse-build`) until the upstream PRs merge — then revert to `_updatePublisher.sh -f -y`.
 `publish-setup.json` (server=cloud + dynamic-publish-box) is sourced from `KyleOps/publications@au-pipeline-config`
