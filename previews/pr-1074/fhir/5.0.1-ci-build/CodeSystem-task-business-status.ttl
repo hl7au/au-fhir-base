@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/CodeSystem/task-business-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "task-business-status"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem task-business-status</b></p><a name=\"task-business-status\"> </a><a name=\"hctask-business-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/task-business-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">service-booked<a name=\"task-business-status-service-booked\"> </a></td><td>Service booked</td><td>Service has been booked.</td></tr><tr><td style=\"white-space:nowrap\">request-claimed<a name=\"task-business-status-request-claimed\"> </a></td><td>Request claimed</td><td>Task has been cancelled as the request has been claimed by another filler.</td></tr><tr><td style=\"white-space:nowrap\">request-cancelled-placer<a name=\"task-business-status-request-cancelled-placer\"> </a></td><td>Request cancelled by placer</td><td>Task has been cancelled as the request has been cancelled by the placer.</td></tr><tr><td style=\"white-space:nowrap\">cancel-handled<a name=\"task-business-status-cancel-handled\"> </a></td><td>Cancel handled</td><td>Cancelled task has been handled by the filler.</td></tr><tr><td style=\"white-space:nowrap\">request-data-issue<a name=\"task-business-status-request-data-issue\"> </a></td><td>Request rejected with data issue</td><td>Rejected fulfilment task due to an issue with the request data.</td></tr><tr><td style=\"white-space:nowrap\">preliminary-results<a name=\"task-business-status-preliminary-results\"> </a></td><td>Preliminary results</td><td>There are preliminary results.</td></tr><tr><td style=\"white-space:nowrap\">addendum-report-complete<a name=\"task-business-status-addendum-report-complete\"> </a></td><td>Addendum report complete</td><td>Addendum report is complete.</td></tr><tr><td style=\"white-space:nowrap\">specimen-collected<a name=\"task-business-status-specimen-collected\"> </a></td><td>Specimen collected</td><td>Specimen has been collected.</td></tr><tr><td style=\"white-space:nowrap\">pathology-in-lab<a name=\"task-business-status-pathology-in-lab\"> </a></td><td>Pathology specimen in lab</td><td>Specimen is in a pathology lab.</td></tr><tr><td style=\"white-space:nowrap\">image-acquired<a name=\"task-business-status-image-acquired\"> </a></td><td>Image acquired</td><td>Image acquisition complete.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/CodeSystem/task-business-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.1.4.39" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "TaskBusinessStatus"] ; # 
+  fhir:title [ fhir:v "Task Business Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T15:06:23+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Task Business Status code system defines concepts that represent business status values for a task."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://terminology.hl7.org.au/ValueSet/task-business-status"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org.au/ValueSet/task-business-status>
+  ] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:versionNeeded [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "service-booked" ] ;
+     fhir:display [ fhir:v "Service booked" ] ;
+     fhir:definition [ fhir:v "Service has been booked." ]
+  ] [
+     fhir:code [ fhir:v "request-claimed" ] ;
+     fhir:display [ fhir:v "Request claimed" ] ;
+     fhir:definition [ fhir:v "Task has been cancelled as the request has been claimed by another filler." ]
+  ] [
+     fhir:code [ fhir:v "request-cancelled-placer" ] ;
+     fhir:display [ fhir:v "Request cancelled by placer" ] ;
+     fhir:definition [ fhir:v "Task has been cancelled as the request has been cancelled by the placer." ]
+  ] [
+     fhir:code [ fhir:v "cancel-handled" ] ;
+     fhir:display [ fhir:v "Cancel handled" ] ;
+     fhir:definition [ fhir:v "Cancelled task has been handled by the filler." ]
+  ] [
+     fhir:code [ fhir:v "request-data-issue" ] ;
+     fhir:display [ fhir:v "Request rejected with data issue" ] ;
+     fhir:definition [ fhir:v "Rejected fulfilment task due to an issue with the request data." ]
+  ] [
+     fhir:code [ fhir:v "preliminary-results" ] ;
+     fhir:display [ fhir:v "Preliminary results" ] ;
+     fhir:definition [ fhir:v "There are preliminary results." ]
+  ] [
+     fhir:code [ fhir:v "addendum-report-complete" ] ;
+     fhir:display [ fhir:v "Addendum report complete" ] ;
+     fhir:definition [ fhir:v "Addendum report is complete." ]
+  ] [
+     fhir:code [ fhir:v "specimen-collected" ] ;
+     fhir:display [ fhir:v "Specimen collected" ] ;
+     fhir:definition [ fhir:v "Specimen has been collected." ]
+  ] [
+     fhir:code [ fhir:v "pathology-in-lab" ] ;
+     fhir:display [ fhir:v "Pathology specimen in lab" ] ;
+     fhir:definition [ fhir:v "Specimen is in a pathology lab." ]
+  ] [
+     fhir:code [ fhir:v "image-acquired" ] ;
+     fhir:display [ fhir:v "Image acquired" ] ;
+     fhir:definition [ fhir:v "Image acquisition complete." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

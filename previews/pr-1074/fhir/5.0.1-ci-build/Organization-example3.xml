@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="example3"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization example3</b></p><a name="example3"> </a><a name="hcexample3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-organization.html">AU Base Organization</a></p></div><p><b>identifier</b>: ABN/51824754455</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 288565001}">Medical centre</span></p><p><b>name</b>: Devonport Family Medicine Clinic</p><p><b>telecom</b>: <a href="mailto:reception@dfmc.example.com">reception@dfmc.example.com</a>, fax: (03) 5550 5557(Work), ph: (03) 5550 5556(Work)</p><p><b>address</b>: LPO Box 235 Strahan TAS 7468 AU </p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="ABN"/>
+        <display value="Australian Business Number"/>
+      </coding>
+      <text value="ABN"/>
+    </type>
+    <system value="http://hl7.org.au/id/abn"/>
+    <!--  Note: 51824754455 is an invalid ABN ie does not pass the ABN check digit algorithm  -->
+    <value value="51824754455"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="288565001"/>
+      <display value="Medical centre"/>
+    </coding>
+  </type>
+  <name value="Devonport Family Medicine Clinic"/>
+  <telecom>
+    <system value="email"/>
+    <value value="reception@dfmc.example.com"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="fax"/>
+    <value value="(03) 5550 5557"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="(03) 5550 5556"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <type value="postal"/>
+    <line value="LPO Box 235"/>
+    <city value="Strahan"/>
+    <state value="TAS"/>
+    <postalCode value="7468"/>
+    <country value="AU"/>
+  </address>
+</Organization>

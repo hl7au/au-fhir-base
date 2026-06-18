@@ -1,0 +1,56 @@
+{
+  "resourceType" : "Location",
+  "id" : "example2",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-location"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location example2</b></p><a name=\"example2\"> </a><a name=\"hcexample2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-location.html\">AU Base Location</a></p></div><p><b>identifier</b>: NATA Site Number/162899, LSPN/123333</p><p><b>status</b>: Active</p><p><b>address</b>: Level 1, Green Building, Albion Hospital, QLD</p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type lvl}\">Level</span></p><p><b>partOf</b>: <a href=\"Location-example1.html\">Location: status = active; physicalType = Site</a></p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "NATAS",
+        "display" : "NATA Site Number"
+      }],
+      "text" : "NATA Site Number"
+    },
+    "system" : "http://hl7.org.au/id/nata-site",
+    "value" : "162899"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "LSPN",
+        "display" : "Location Specific Practice Number"
+      }],
+      "text" : "LSPN"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/location-specific-practice-number",
+    "value" : "123333"
+  }],
+  "status" : "active",
+  "address" : {
+    "type" : "physical",
+    "text" : "Level 1, Green Building, Albion Hospital, QLD",
+    "line" : ["Level 1, Green Building",
+    "33 Slobodian Street"],
+    "city" : "Albion",
+    "state" : "QLD",
+    "postalCode" : "4010",
+    "country" : "AU"
+  },
+  "physicalType" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+      "code" : "lvl",
+      "display" : "Level"
+    }]
+  },
+  "partOf" : {
+    "reference" : "Location/example1"
+  }
+}

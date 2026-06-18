@@ -1,0 +1,43 @@
+{
+  "resourceType" : "Organization",
+  "id" : "example8",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization example8</b></p><a name=\"example8\"> </a><a name=\"hcexample8\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: HAE/8003641100000000</p><p><b>active</b>: true</p><p><b>name</b>: Metro Health Administration Services</p><p><b>telecom</b>: <a href=\"mailto:contact@metrohealthadmin.example.com\">contact@metrohealthadmin.example.com</a>, <a href=\"tel:+61255550456\">+61 2 5555 0456</a></p><p><b>address</b>: 456 Administration Avenue Sydney NSW 2000 AU (work)</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "HAE",
+        "display" : "Health Administration Entity"
+      }],
+      "text" : "HAE"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/hi/hae/1.0",
+    "value" : "8003641100000000"
+  }],
+  "active" : true,
+  "name" : "Metro Health Administration Services",
+  "telecom" : [{
+    "system" : "email",
+    "value" : "contact@metrohealthadmin.example.com",
+    "use" : "work"
+  },
+  {
+    "system" : "phone",
+    "value" : "+61 2 5555 0456",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "work",
+    "line" : ["456 Administration Avenue"],
+    "city" : "Sydney",
+    "state" : "NSW",
+    "postalCode" : "2000",
+    "country" : "AU"
+  }]
+}

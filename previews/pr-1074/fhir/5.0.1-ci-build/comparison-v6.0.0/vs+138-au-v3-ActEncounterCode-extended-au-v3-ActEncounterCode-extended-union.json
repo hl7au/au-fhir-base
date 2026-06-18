@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "c556d671-9afe-4b5c-bc9e-7bd447add7bb-407",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/c556d671-9afe-4b5c-bc9e-7bd447add7bb-407",
+  "name" : "UnionActEncounterCodeAUExtendedAndActEncounterCodeAUExtended",
+  "title" : "Union of ActEncounterCode - AU Extended And ActEncounterCode - AU Extended",
+  "status" : "active",
+  "date" : "2026-06-18T15:08:46+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "RACF"
+      }]
+    },
+    {
+      "valueSet" : ["http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"]
+    }]
+  }
+}

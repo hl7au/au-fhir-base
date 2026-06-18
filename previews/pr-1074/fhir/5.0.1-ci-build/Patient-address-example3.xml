@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="address-example3"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient address-example3</b></p><a name="address-example3"> </a><a name="hcaddress-example3"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Anonymous Patient (no stated gender), DoB Unknown</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>Northern Territory Office Department of Foreign Affairs and Trade GPO Box 1910 Darwin NT 0801 AU (work)</li><li>5th Floor, Northern Territory House, 22 Mitchell Street, Darwin, NT(work)</li></ul></td></tr></table></div>
+  </text>
+  <address>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/address-identifier">
+      <valueIdentifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+            <code value="DPID"/>
+            <display value="Australia Post Delivery Point Identifier"/>
+          </coding>
+          <text value="DPID"/>
+        </type>
+        <system value="http://hl7.org.au/id/dpid"/>
+        <!--  sample value DPID - does not correspond to the address information in this example  -->
+        <value value="34567890"/>
+      </valueIdentifier>
+    </extension>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/address-identifier">
+      <valueIdentifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+            <code value="GNAF"/>
+            <display value="Geocoded National Address File Identifier"/>
+          </coding>
+          <text value="G-NAF"/>
+        </type>
+        <system value="http://hl7.org.au/id/gnafidentifier"/>
+        <!--  sample value G-NAF Identifier - does not correspond to the address information in this example  -->
+        <value value="GAVIC411711441"/>
+      </valueIdentifier>
+    </extension>
+    <use value="work"/>
+    <type value="postal"/>
+    <line value="Northern Territory Office"/>
+    <line value="Department of Foreign Affairs and Trade"/>
+    <line value="GPO Box 1910"/>
+    <city value="Darwin"/>
+    <state value="NT"/>
+    <postalCode value="0801"/>
+    <country value="AU"/>
+    <period>
+      <start value="2013-06-08T10:57:34+01:00"/>
+    </period>
+  </address>
+  <address>
+    <use value="work"/>
+    <type value="physical"/>
+    <text value="5th Floor, Northern Territory House, 22 Mitchell Street, Darwin, NT"/>
+    <line value="5th Floor, Northern Territory House"/>
+    <line value="22 Mitchell Street"/>
+    <city value="Darwin"/>
+    <state value="NT"/>
+    <postalCode value="0800"/>
+    <country value="AU"/>
+  </address>
+</Patient>

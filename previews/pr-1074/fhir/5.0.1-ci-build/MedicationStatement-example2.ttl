@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/MedicationStatement/example2> a fhir:MedicationStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement example2</b></p><a name=\"example2\"> </a><a name=\"hcexample2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medicationstatement.html\">AU Base MedicationStatement</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 5232011000036102}\">Diflucan 200 mg/100 mL injection, 100 mL vial</span></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Franklin</a></p><p><b>effective</b>: 2018-06-25 --&gt; 2018-07-05</p><p><b>dateAsserted</b>: 2018-07-10</p><p><b>informationSource</b>: <a href=\"Practitioner-example0.html\">Doctor Mayo</a></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: Duration 30days , Once per 1-10 day</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 47625008}\">Intravenous route</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>200 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:5232011000036102 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPDSF" ] ;
+           fhir:display [ fhir:v "Branded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "5232011000036102" ] ;
+       fhir:display [ fhir:v "Diflucan 200 mg/100 mL injection, 100 mL vial" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ] ;
+     fhir:display [ fhir:v "Franklin" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2018-06-25"^^xsd:date ] ;
+     fhir:end [ fhir:v "2018-07-05"^^xsd:date ]
+  ] ; # 
+  fhir:dateAsserted [ fhir:v "2018-07-10"^^xsd:date] ; # 
+  fhir:informationSource [
+     fhir:link <http://hl7.org.au/fhir/Practitioner/example0> ;
+     fhir:reference [ fhir:v "Practitioner/example0" ] ;
+     fhir:display [ fhir:v "Doctor Mayo" ]
+  ] ; # 
+  fhir:dosage ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:duration [ fhir:v "30"^^xsd:decimal ] ;
+         fhir:durationUnit [ fhir:v "min" ] ;
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodMax [ fhir:v "10"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:timeOfDay ( [ fhir:v "10:00:00"^^xsd:time ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:47625008 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "47625008" ] ;
+         fhir:display [ fhir:v "Intravenous route" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "200"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

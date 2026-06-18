@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "c556d671-9afe-4b5c-bc9e-7bd447add7bb-383",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/c556d671-9afe-4b5c-bc9e-7bd447add7bb-383",
+  "name" : "UnionAMTMedicinalProductAndSubstancesAndAMTMedicinalProductAndSubstances",
+  "title" : "Union of AMT Medicinal Product and Substances And AMT Medicinal Product and Substances",
+  "status" : "retired",
+  "date" : "2026-06-18T15:08:46+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "in",
+        "value" : "929360061000036106"
+      }]
+    },
+    {
+      "valueSet" : ["https://healthterminologies.gov.au/fhir/ValueSet/substance-1"]
+    }]
+  }
+}

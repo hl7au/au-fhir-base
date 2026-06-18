@@ -1,0 +1,161 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "c556d671-9afe-4b5c-bc9e-7bd447add7bb-363",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c556d671-9afe-4b5c-bc9e-7bd447add7bb-363",
+  "name" : "IntersectionNameContextAndNameContext",
+  "title" : "Intersection of Name Context And Name Context",
+  "status" : "active",
+  "date" : "2026-06-18T15:08:46+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "snapshot" : {
+    "element" : [{
+      "path" : "Extension",
+      "short" : "Name Context",
+      "definition" : "A suitable context of use for a patient, person, practitioner or related person name can be indicated using this extension. \nThis includes an ability to provide a coded concept or text description of a suitable use of the associated name.\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate\nuse when referring to an individual e.g. deceased Aboriginal name, transgender deadname.",
+      "min" : 0,
+      "max" : "*",
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+        }],
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Extension.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Extension.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "0",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
+        }],
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Extension.url",
+      "representation" : ["xmlAttr"],
+      "short" : "identifies the meaning of the extension",
+      "definition" : "Source of the definition for the extension code - a logical name or a URL.",
+      "comment" : "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "uri"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Extension.value[x]",
+      "short" : "Name context",
+      "definition" : "Value of extension - must be one of a constrained set of the data types (see [Extensibility] for a list).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://terminology.hl7.org.au/ValueSet/name-context"
+      },
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    }]
+  }
+}

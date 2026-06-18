@@ -1,0 +1,109 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "task-business-status",
+  "meta" : {
+    "profile" : ["https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem task-business-status</b></p><a name=\"task-business-status\"> </a><a name=\"hctask-business-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/task-business-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">service-booked<a name=\"task-business-status-service-booked\"> </a></td><td>Service booked</td><td>Service has been booked.</td></tr><tr><td style=\"white-space:nowrap\">request-claimed<a name=\"task-business-status-request-claimed\"> </a></td><td>Request claimed</td><td>Task has been cancelled as the request has been claimed by another filler.</td></tr><tr><td style=\"white-space:nowrap\">request-cancelled-placer<a name=\"task-business-status-request-cancelled-placer\"> </a></td><td>Request cancelled by placer</td><td>Task has been cancelled as the request has been cancelled by the placer.</td></tr><tr><td style=\"white-space:nowrap\">cancel-handled<a name=\"task-business-status-cancel-handled\"> </a></td><td>Cancel handled</td><td>Cancelled task has been handled by the filler.</td></tr><tr><td style=\"white-space:nowrap\">request-data-issue<a name=\"task-business-status-request-data-issue\"> </a></td><td>Request rejected with data issue</td><td>Rejected fulfilment task due to an issue with the request data.</td></tr><tr><td style=\"white-space:nowrap\">preliminary-results<a name=\"task-business-status-preliminary-results\"> </a></td><td>Preliminary results</td><td>There are preliminary results.</td></tr><tr><td style=\"white-space:nowrap\">addendum-report-complete<a name=\"task-business-status-addendum-report-complete\"> </a></td><td>Addendum report complete</td><td>Addendum report is complete.</td></tr><tr><td style=\"white-space:nowrap\">specimen-collected<a name=\"task-business-status-specimen-collected\"> </a></td><td>Specimen collected</td><td>Specimen has been collected.</td></tr><tr><td style=\"white-space:nowrap\">pathology-in-lab<a name=\"task-business-status-pathology-in-lab\"> </a></td><td>Pathology specimen in lab</td><td>Specimen is in a pathology lab.</td></tr><tr><td style=\"white-space:nowrap\">image-acquired<a name=\"task-business-status-image-acquired\"> </a></td><td>Image acquired</td><td>Image acquisition complete.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"
+      }]
+    }
+  }],
+  "url" : "http://terminology.hl7.org.au/CodeSystem/task-business-status",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.2.3.4.1.4.39"
+  }],
+  "version" : "6.0.1-ci-build",
+  "name" : "TaskBusinessStatus",
+  "title" : "Task Business Status",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-06-18T15:06:23+00:00",
+  "publisher" : "HL7 Australia",
+  "contact" : [{
+    "name" : "HL7 Australia FHIR Working Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://confluence.hl7.org/display/HAFWG",
+      "use" : "work"
+    }]
+  }],
+  "description" : "The Task Business Status code system defines concepts that represent business status values for a task.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "copyright" : "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.",
+  "caseSensitive" : true,
+  "valueSet" : "http://terminology.hl7.org.au/ValueSet/task-business-status",
+  "compositional" : false,
+  "versionNeeded" : false,
+  "content" : "complete",
+  "count" : 10,
+  "concept" : [{
+    "code" : "service-booked",
+    "display" : "Service booked",
+    "definition" : "Service has been booked."
+  },
+  {
+    "code" : "request-claimed",
+    "display" : "Request claimed",
+    "definition" : "Task has been cancelled as the request has been claimed by another filler."
+  },
+  {
+    "code" : "request-cancelled-placer",
+    "display" : "Request cancelled by placer",
+    "definition" : "Task has been cancelled as the request has been cancelled by the placer."
+  },
+  {
+    "code" : "cancel-handled",
+    "display" : "Cancel handled",
+    "definition" : "Cancelled task has been handled by the filler."
+  },
+  {
+    "code" : "request-data-issue",
+    "display" : "Request rejected with data issue",
+    "definition" : "Rejected fulfilment task due to an issue with the request data."
+  },
+  {
+    "code" : "preliminary-results",
+    "display" : "Preliminary results",
+    "definition" : "There are preliminary results."
+  },
+  {
+    "code" : "addendum-report-complete",
+    "display" : "Addendum report complete",
+    "definition" : "Addendum report is complete."
+  },
+  {
+    "code" : "specimen-collected",
+    "display" : "Specimen collected",
+    "definition" : "Specimen has been collected."
+  },
+  {
+    "code" : "pathology-in-lab",
+    "display" : "Pathology specimen in lab",
+    "definition" : "Specimen is in a pathology lab."
+  },
+  {
+    "code" : "image-acquired",
+    "display" : "Image acquired",
+    "definition" : "Image acquisition complete."
+  }]
+}

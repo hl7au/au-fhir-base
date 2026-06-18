@@ -1,0 +1,51 @@
+{
+  "resourceType" : "AllergyIntolerance",
+  "id" : "example0",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-allergyintolerance.html\">AU Base AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmed</span></p><p><b>type</b>: Allergy</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 387207008}\">Ibuprofen</span></p><p><b>patient</b>: <a href=\"Patient-example1.html\">Harry DAN</a></p><p><b>onset</b>: 2016-03-07</p><p><b>recorder</b>: <a href=\"Practitioner-example0.html\">Dr Helen Mayo</a></p><h3>Reactions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Manifestation</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 126485001}\">Urticaria</span></td></tr></table></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+      "code" : "active",
+      "display" : "Active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+      "code" : "confirmed",
+      "display" : "Confirmed"
+    }]
+  },
+  "type" : "allergy",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "387207008",
+      "display" : "Ibuprofen"
+    }]
+  },
+  "patient" : {
+    "reference" : "Patient/example1",
+    "display" : "Harry DAN"
+  },
+  "onsetDateTime" : "2016-03-07",
+  "recorder" : {
+    "reference" : "Practitioner/example0",
+    "display" : "Dr Helen Mayo"
+  },
+  "reaction" : [{
+    "manifestation" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "126485001",
+        "display" : "Urticaria"
+      }]
+    }]
+  }]
+}

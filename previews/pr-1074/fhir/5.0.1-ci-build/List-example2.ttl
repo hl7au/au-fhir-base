@@ -1,0 +1,371 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/List/example2> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medlist"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medlist>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <h1>MEDICINE LIST</h1>\n\n            <h2>PATIENT</h2>\n            <table>\n                <tbody>\n                    <tr>\n                        <th>Name</th>\n                        <td>\n                            <p>David Goodpatient</p>\n                        </td>\n                    </tr>\n                    <tr>\n                        <th>DoB</th>\n                        <td>14 September 1953</td>\n                    </tr>\n                    <tr>\n                        <th>Gender</th>\n                        <td>Male</td>\n                    </tr>\n                    <tr>\n                        <th>Address</th>\n                        <td>2 Round Court, QLD 4113</td>\n                    </tr>\n                </tbody>\n            </table>\n\n            <h2>SOURCE OF MEDICINE LIST</h2>\n            <table>\n                <tbody>\n                    <tr>\n                        <th>Name</th>\n                        <td>\n                            <p>Iam Practitioner</p>\n                        </td>\n                    </tr>\n                    <tr>\n                        <th>HPI-I</th>\n                        <td>8003619900015717</td>\n                    </tr>\n                    <tr>\n                        <th>Phone</th>\n                        <td>0755501234</td>\n                    </tr>\n                    <tr>\n                        <th>Email</th>\n                        <td>iam.practitioner@example.com</td>\n                    </tr>\n                </tbody>\n            </table>\n\n            <h2>CONSULTATION DETAILS</h2>\n            <table>\n                <tbody>\n                    <tr>\n                        <th>Consultation date</th>\n                        <td>15 Mar 2019</td>\n                    </tr>\n                    <tr>\n                        <th>Consultation summary</th>\n                        <td>Patient presented with weakness over the last couple of days. No other\n                            symptoms. Revised patient's medications. Advised patient to see the\n                            usual GPs clinic for further consultation and review. </td>\n                    </tr>\n                </tbody>\n            </table>\n\n            <h3>CURRENT MEDICINES</h3>\n            <table border=\"1\">\n                <thead>\n                    <tr>\n                        <th>Medicine</th>\n                        <th>Direction</th>\n                        <th>Medicine Purpose</th>\n                        <th>Medicine Status</th>\n                        <th>Result of Action</th>\n                        <th>Special Instructions</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Multi-vitamins</td>\n                        <td>1 tablet daily</td>\n                        <td/>\n                        <td>New</td>\n                        <td/>\n                        <td/>\n                    </tr>\n                    <tr>\n                        <td>Spiriva (tiotropium bromide 18mg per inhalation) inhalant</td>\n                        <td>1 inhalation per day</td>\n                        <td>Chronic Obstructive Pulmonary Disease</td>\n                        <td>Amended</td>\n                        <td>Reduced to one inhalation a day</td>\n                        <td/>\n                    </tr>\n                    <tr>\n                        <td>paracetamol 665 mg modified release tablet</td>\n                        <td>Two tablets every 6-8 hours when required.</td>\n                        <td>Osteoarthritis, pain relief</td>\n                        <td>Unchanged</td>\n                        <td/>\n                        <td>No more than 6 tablets in 24hr</td>\n                    </tr>\n                    <tr>\n                        <td>cilostazol 100 mg tablet</td>\n                        <td>One a day at night time</td>\n                        <td>Blood thinning</td>\n                        <td>Amended</td>\n                        <td>Form change</td>\n                        <td/>\n                    </tr>\n                </tbody>\n            </table>\n\n            <h3>CEASED MEDICINES</h3>\n            <table border=\"1\">\n                <thead>\n                    <tr>\n                        <th>Medicine</th>\n                        <th>Reason</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Ibuprofen</td>\n                        <td>Allergic reaction</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:contained ( [
+     a fhir:MedicationStatement ;
+     fhir:id [ fhir:v "medicationstatement-456" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:medication [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Multi-vitamins" ]
+     ] ;
+     fhir:subject [
+       fhir:reference [ fhir:v "#patient-123" ]
+     ] ;
+     fhir:dateAsserted [ fhir:v "2019-03-15"^^xsd:date ] ;
+     fhir:dosage ( [
+       fhir:text [ fhir:v "1 tablet daily" ]
+     ] )
+  ] [
+     a fhir:MedicationStatement ;
+     fhir:id [ fhir:v "medicationstatement-678" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:medication [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Spiriva (tiotropium bromide 18mg per inhalation) inhalant" ]
+     ] ;
+     fhir:subject [
+       fhir:reference [ fhir:v "#patient-123" ]
+     ] ;
+     fhir:dateAsserted [ fhir:v "2019-03-15"^^xsd:date ] ;
+     fhir:reasonCode ( [
+       fhir:text [ fhir:v "COPD" ]
+     ] ) ;
+     fhir:dosage ( [
+       fhir:text [ fhir:v "1 inhalation per day" ]
+     ] )
+  ] [
+     a fhir:MedicationStatement ;
+     fhir:id [ fhir:v "medicationstatement-234" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:medication [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:22075011000036103 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "22075011000036103" ]
+       ] ) ;
+       fhir:text [ fhir:v "paracetamol 665 mg modified release tablet" ]
+     ] ;
+     fhir:subject [
+       fhir:reference [ fhir:v "#patient-123" ]
+     ] ;
+     fhir:reasonCode ( [
+       fhir:text [ fhir:v "Osteoarthritis, pain relief" ]
+     ] ) ;
+     fhir:dosage ( [
+       fhir:text [ fhir:v "Two tablets every 6-8 hours when required." ] ;
+       fhir:patientInstruction [ fhir:v "No more than 6 tablets in 24hr" ]
+     ] )
+  ] [
+     a fhir:MedicationStatement ;
+     fhir:id [ fhir:v "medicationstatement-890" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:medication [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:82923011000036103 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "82923011000036103" ]
+       ] ) ;
+       fhir:text [ fhir:v "cilostazol 100 mg tablet" ]
+     ] ;
+     fhir:subject [
+       fhir:reference [ fhir:v "#patient-123" ]
+     ] ;
+     fhir:reasonCode ( [
+       fhir:text [ fhir:v "Blood thinning" ]
+     ] ) ;
+     fhir:dosage ( [
+       fhir:text [ fhir:v "One a day at night time" ]
+     ] )
+  ] [
+     a fhir:MedicationStatement ;
+     fhir:id [ fhir:v "medicationstatement-246" ] ;
+     fhir:status [ fhir:v "stopped" ] ;
+     fhir:medication [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:38268001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "38268001" ]
+       ] ) ;
+       fhir:text [ fhir:v "Ibuprofen" ]
+     ] ;
+     fhir:subject [
+       fhir:reference [ fhir:v "#patient-123" ]
+     ] ;
+     fhir:reasonCode ( [
+       fhir:text [ fhir:v "Allergic reaction" ]
+     ] )
+  ] [
+     a fhir:Patient ;
+     fhir:id [ fhir:v "patient-123" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "9" ] ;
+         fhir:display [ fhir:v "Not stated/inadequately described" ]
+       ]
+     ] ) ;
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "NI" ] ;
+           fhir:display [ fhir:v "National unique individual identifier" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/ihi/1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "8003608666701594" ]
+     ] ) ;
+     fhir:name ( [
+       fhir:text [ fhir:v "David Goodpatient" ] ;
+       fhir:family [ fhir:v "Goodpatient" ] ;
+       fhir:given ( [ fhir:v "David" ] )
+     ] ) ;
+     fhir:gender [ fhir:v "male" ] ;
+     fhir:birthDate [ fhir:v "1953-09-14"^^xsd:date ] ;
+     fhir:address ( [
+       fhir:use [ fhir:v "home" ] ;
+       fhir:line ( [ fhir:v "2 Round Court" ] ) ;
+       fhir:state [ fhir:v "QLD" ] ;
+       fhir:postalCode [ fhir:v "4113" ] ;
+       fhir:country [ fhir:v "Australia" ]
+     ] ) ;
+     fhir:generalPractitioner ( [
+       fhir:reference [ fhir:v "#gp-13579" ]
+     ] ) ;
+     fhir:managingOrganization [
+       fhir:reference [ fhir:v "#org-24680" ]
+     ]
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "gp-13579" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Grey" ] ;
+       fhir:prefix ( [ fhir:v "Dr" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "dr-97531" ] ;
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "NPI" ] ;
+           fhir:display [ fhir:v "National provider identifier" ]
+         ] ) ;
+         fhir:text [ fhir:v "HPI-I" ]
+       ] ;
+       fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "8003619900015717" ]
+     ] ) ;
+     fhir:name ( [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:family [ fhir:v "Practitioner" ] ;
+       fhir:given ( [ fhir:v "Iam" ] ) ;
+       fhir:suffix ( [ fhir:v "M.D." ] )
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "0755501234" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "iam.practitioner@example.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] ) ;
+     fhir:qualification ( [
+       fhir:identifier ( [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AHPRA" ] ;
+             fhir:display [ fhir:v "Australian Health Practitioner Regulation Agency Registration Number" ]
+           ] ) ;
+           fhir:text [ fhir:v "Ahpra registration number" ]
+         ] ;
+         fhir:system [ fhir:v "http://hl7.org.au/id/ahpra-registration-number"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MED0000932850" ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "253111" ] ;
+           fhir:display [ fhir:v "General Medical Practitioner" ]
+         ] ) ;
+         fhir:text [ fhir:v "Ahpra qualification for General Practitioner" ]
+       ] ;
+       fhir:issuer [
+         fhir:display [ fhir:v "Ahpra" ]
+       ]
+     ] )
+  ] [
+     a fhir:Organization ;
+     fhir:id [ fhir:v "org-24680" ] ;
+     fhir:name [ fhir:v "Grey Medical Practice" ]
+  ] [
+     a fhir:Encounter ;
+     fhir:id [ fhir:v "enc-24680" ] ;
+     fhir:identifier ( [
+       fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "urn:uuid:5c48d068-4ffb-11e9-8647-d663bd873d93" ]
+     ] ) ;
+     fhir:status [ fhir:v "finished" ] ;
+     fhir:class [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ] ;
+       fhir:display [ fhir:v "ambulatory" ]
+     ] ;
+     fhir:type ( [
+       fhir:coding ( [
+         a loinc:34764-1 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34764-1" ]
+       ] )
+     ] ) ;
+     fhir:priority [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActPriority"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "R" ]
+       ] )
+     ] ;
+     fhir:subject [
+       fhir:reference [ fhir:v "#patient-123" ]
+     ] ;
+     fhir:participant ( [
+       fhir:type ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "PPRF" ]
+         ] )
+       ] ) ;
+       fhir:individual [
+         fhir:reference [ fhir:v "#dr-97531" ]
+       ]
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2019-03-15"^^xsd:date ] ;
+       fhir:end [ fhir:v "2019-03-15"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:7f8fb180-4ea8-11e9-8647-d663bd873d93" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "snapshot"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:10160-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "10160-0" ]
+     ] ) ;
+     fhir:text [ fhir:v "Medicine List" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "#patient-123" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "#enc-24680" ]
+  ] ; # 
+  fhir:date [ fhir:v "2019-03-15"^^xsd:date] ; # 
+  fhir:source [
+     fhir:reference [ fhir:v "#dr-97531" ]
+  ] ; # 
+  fhir:entry ( [
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medicine-item-change"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "new" ] ;
+         fhir:display [ fhir:v "New" ]
+       ] )
+     ] ;
+     fhir:item [
+       fhir:reference [ fhir:v "#medicationstatement-456" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/change-description"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Reduced to one inhalation a day"
+       ]
+     ] ) ;
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medicine-item-change"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "amended" ] ;
+         fhir:display [ fhir:v "Amended" ]
+       ] )
+     ] ;
+     fhir:item [
+       fhir:reference [ fhir:v "#medicationstatement-678" ]
+     ]
+  ] [
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medicine-item-change"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "nochange" ] ;
+         fhir:display [ fhir:v "Unchanged" ]
+       ] )
+     ] ;
+     fhir:item [
+       fhir:reference [ fhir:v "#medicationstatement-234" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/change-description"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Form change"
+       ]
+     ] ) ;
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medicine-item-change"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "amended" ] ;
+         fhir:display [ fhir:v "Amended" ]
+       ] )
+     ] ;
+     fhir:item [
+       fhir:reference [ fhir:v "#medicationstatement-890" ]
+     ]
+  ] [
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medicine-item-change"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ceased" ] ;
+         fhir:display [ fhir:v "Ceased" ]
+       ] )
+     ] ;
+     fhir:item [
+       fhir:reference [ fhir:v "#medicationstatement-246" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

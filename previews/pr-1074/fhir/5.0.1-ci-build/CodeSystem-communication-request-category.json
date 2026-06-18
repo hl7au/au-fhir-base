@@ -1,0 +1,74 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "communication-request-category",
+  "meta" : {
+    "profile" : ["https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem communication-request-category</b></p><a name=\"communication-request-category\"> </a><a name=\"hccommunication-request-category\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/communication-request-category</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">urgent-results<a name=\"communication-request-category-urgent-results\"> </a></td><td>Urgent Results</td><td>A request for results to be communicated urgently to the nominated recipient(s).</td></tr><tr><td style=\"white-space:nowrap\">patient-preference<a name=\"communication-request-category-patient-preference\"> </a></td><td>Patient Preference</td><td>A patient's preferences on communication to them from a service provider.</td></tr><tr><td style=\"white-space:nowrap\">copyto-reports<a name=\"communication-request-category-copyto-reports\"> </a></td><td>Copy To Reports</td><td>A request for reports to be copied to additional recipient(s).</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"
+      }]
+    }
+  }],
+  "url" : "http://terminology.hl7.org.au/CodeSystem/communication-request-category",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.2.3.4.1.4.37"
+  }],
+  "version" : "6.0.1-ci-build",
+  "name" : "CommunicationRequestCategory",
+  "title" : "Communication Request Category",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-06-18T15:06:23+00:00",
+  "publisher" : "HL7 Australia",
+  "contact" : [{
+    "name" : "HL7 Australia FHIR Working Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://confluence.hl7.org/display/HAFWG",
+      "use" : "work"
+    }]
+  }],
+  "description" : "The Communication Request Category code system defines concepts that represent the category for a communication request.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "copyright" : "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.",
+  "caseSensitive" : true,
+  "valueSet" : "http://terminology.hl7.org.au/ValueSet/communication-request-category",
+  "compositional" : false,
+  "versionNeeded" : false,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "urgent-results",
+    "display" : "Urgent Results",
+    "definition" : "A request for results to be communicated urgently to the nominated recipient(s)."
+  },
+  {
+    "code" : "patient-preference",
+    "display" : "Patient Preference",
+    "definition" : "A patient's preferences on communication to them from a service provider."
+  },
+  {
+    "code" : "copyto-reports",
+    "display" : "Copy To Reports",
+    "definition" : "A request for reports to be copied to additional recipient(s)."
+  }]
+}

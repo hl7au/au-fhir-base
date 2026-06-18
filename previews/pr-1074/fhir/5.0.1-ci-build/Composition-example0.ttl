@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Composition/example0> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-composition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-composition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-composition.html\">AU Base Composition</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 81337-8}\">Patient Goals, preferences, and priorities upon death</span></p><p><b>date</b>: 2018-03-04 12:30:02+0000</p><p><b>author</b>: <a href=\"RelatedPerson-example0.html\">Benedicte du Marche</a></p><p><b>title</b>: Stella's Final Wishes</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Personal</td><td>2018-03-04 12:30:02+0000</td><td><a href=\"RelatedPerson-example0.html\">RelatedPerson Benedicte du Marche </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:81337-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "81337-8" ] ;
+       fhir:display [ fhir:v "Patient Goals, preferences, and priorities upon death" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ] ;
+     fhir:display [ fhir:v "Stella Franklin" ]
+  ] ; # 
+  fhir:date [ fhir:v "2018-03-04T12:30:02Z"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <http://hl7.org.au/fhir/RelatedPerson/example0> ;
+     fhir:reference [ fhir:v "RelatedPerson/example0" ] ;
+     fhir:display [ fhir:v "Benedicte du Marche" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Stella's Final Wishes"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "personal" ] ;
+     fhir:time [ fhir:v "2018-03-04T12:30:02Z"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:link <http://hl7.org.au/fhir/RelatedPerson/example0> ;
+       fhir:reference [ fhir:v "RelatedPerson/example0" ]
+     ]
+  ] ) ; #  Related Person as Attester Party 
+  fhir:section ( [
+     fhir:title [ fhir:v "Patient goals and priorities upon death" ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>\n          <b>Additional Narrative</b>\n        </p>\n        <p><b>Goals, Preferences and Priorities</b>: The washing of the body should be carried out by someone of the same sex.</p>        \n      </div>"^^rdf:XMLLiteral ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

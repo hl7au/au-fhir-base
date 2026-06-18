@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Immunization",
+  "id" : "example2",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-immunization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization example2</b></p><a name=\"example2\"> </a><a name=\"hcexample2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-immunization.html\">AU Base Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats IFHX}\">Infanrix Hexa</span></p><p><b>patient</b>: <a href=\"Patient-example2.html\">Sally GRANT</a></p><p><b>occurrence</b>: 2017-05-21</p><p><b>primarySource</b>: true</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 AP}\">Administering Provider</span></td><td><a href=\"Practitioner-example0.html\">Dr Helen Mayo</a></td></tr></table><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 397430003}, {http://snomed.info/sct 76902006}, {http://snomed.info/sct 27836007}, {http://snomed.info/sct 66071002}, {http://snomed.info/sct 398102009}\">Diphtheria caused by Corynebacterium diphtheriae</span></td><td>1</td></tr></table></div>"
+  },
+  "status" : "completed",
+  "vaccineCode" : {
+    "coding" : [{
+      "system" : "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats",
+      "code" : "IFHX"
+    }],
+    "text" : "Infanrix Hexa"
+  },
+  "patient" : {
+    "reference" : "Patient/example2",
+    "display" : "Sally GRANT"
+  },
+  "occurrenceDateTime" : "2017-05-21",
+  "primarySource" : true,
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+        "code" : "AP",
+        "display" : "Administering Provider"
+      }],
+      "text" : "Administering Provider"
+    },
+    "actor" : {
+      "reference" : "Practitioner/example0",
+      "display" : "Dr Helen Mayo"
+    }
+  }],
+  "protocolApplied" : [{
+    "targetDisease" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "397430003"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "76902006"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "27836007"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "66071002"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "398102009"
+      }]
+    }],
+    "doseNumberPositiveInt" : 1
+  }]
+}

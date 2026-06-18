@@ -1,0 +1,65 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "c556d671-9afe-4b5c-bc9e-7bd447add7bb-57",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/c556d671-9afe-4b5c-bc9e-7bd447add7bb-57",
+  "name" : "IntersectionTaskBusinessStatusAndTaskBusinessStatus",
+  "title" : "Intersection of Task Business Status And Task Business Status",
+  "status" : "active",
+  "date" : "2026-06-18T15:08:46+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "concept" : [{
+    "code" : "service-booked",
+    "display" : "Service booked",
+    "definition" : "Service has been booked."
+  },
+  {
+    "code" : "request-claimed",
+    "display" : "Request claimed",
+    "definition" : "Task has been cancelled as the request has been claimed by another filler."
+  },
+  {
+    "code" : "request-cancelled-placer",
+    "display" : "Request cancelled by placer",
+    "definition" : "Task has been cancelled as the request has been cancelled by the placer."
+  },
+  {
+    "code" : "cancel-handled",
+    "display" : "Cancel handled",
+    "definition" : "Cancelled task has been handled by the filler."
+  },
+  {
+    "code" : "request-data-issue",
+    "display" : "Request rejected with data issue",
+    "definition" : "Rejected fulfilment task due to an issue with the request data."
+  },
+  {
+    "code" : "preliminary-results",
+    "display" : "Preliminary results",
+    "definition" : "There are preliminary results."
+  },
+  {
+    "code" : "addendum-report-complete",
+    "display" : "Addendum report complete",
+    "definition" : "Addendum report is complete."
+  },
+  {
+    "code" : "specimen-collected",
+    "display" : "Specimen collected",
+    "definition" : "Specimen has been collected."
+  },
+  {
+    "code" : "pathology-in-lab",
+    "display" : "Pathology specimen in lab",
+    "definition" : "Specimen is in a pathology lab."
+  },
+  {
+    "code" : "image-acquired",
+    "display" : "Image acquired",
+    "definition" : "Image acquisition complete."
+  }]
+}

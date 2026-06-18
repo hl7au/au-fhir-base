@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Practitioner/example-sex-and-gender> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-sex-and-gender"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-practitioner>
+     ] )
+  ] ; #    This purpose of this example is to demonstrate the use of sex and gender elements:
+#    - Gender Harmony Gender Identity (Individual Gender Identity extension)
+#    - Gender Harmony Pronouns (Individual Pronouns extension)
+#    - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
+#     
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner example-sex-and-gender</b></p><a name=\"example-sex-and-gender\"> </a><a name=\"hcexample-sex-and-gender\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-practitioner.html\">AU Base Practitioner</a></p></div><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 446151000124109}\">Identifies as male gender</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA29518-0}\">he/him/his/his/himself</span></li></ul></blockquote><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title=\"Codes:{http://hl7.org/fhir/administrative-gender male}\">Male</span></li><li>type: <span title=\"Codes:{http://terminology.hl7.org.au/CodeSystem/rsg-type sex-gender}\">Sex/Gender</span></li><li>acquisitionDate: 2020-05-11</li></ul></blockquote><p><b>identifier</b>: HPI-I/8003619900015717</p><p><b>name</b>: John Davies </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:446151000124109 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "446151000124109" ] ;
+           fhir:display [ fhir:v "Identifies as male gender" ]
+         ] )
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-pronouns"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA29518-0 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "LA29518-0" ] ;
+           fhir:display [ fhir:v "he/him/his/his/himself" ]
+         ] )
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "male" ] ;
+           fhir:display [ fhir:v "Male" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/rsg-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "sex-gender" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "acquisitionDate"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2020-05-11"^^xsd:date
+       ]
+     ] )
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003619900015717" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Davies" ] ;
+     fhir:given ( [ fhir:v "John" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

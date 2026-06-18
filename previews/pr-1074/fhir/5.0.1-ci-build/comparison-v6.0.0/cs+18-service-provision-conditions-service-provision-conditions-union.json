@@ -1,0 +1,88 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "c556d671-9afe-4b5c-bc9e-7bd447add7bb-53",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/c556d671-9afe-4b5c-bc9e-7bd447add7bb-53",
+  "name" : "UnionServiceProvisionConditionsAustralianConceptsAndServiceProvisionConditionsAustralianConcepts",
+  "title" : "Union of Service Provision Conditions Australian Concepts And Service Provision Conditions Australian Concepts",
+  "status" : "active",
+  "date" : "2026-06-18T15:08:46+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "property" : [{
+    "code" : "status",
+    "uri" : "http://hl7.org/fhir/concept-properties#status",
+    "description" : "A property that indicates the status of the concept. One of active, experimental, deprecated, retired",
+    "type" : "code"
+  },
+  {
+    "code" : "deprecationDate",
+    "uri" : "http://hl7.org/fhir/concept-properties#deprecationDate",
+    "description" : "The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged",
+    "type" : "dateTime"
+  }],
+  "concept" : [{
+    "code" : "NFE",
+    "display" : "No Fee",
+    "definition" : "All or some of the services provided are offered free of charge."
+  },
+  {
+    "code" : "NFM",
+    "display" : "No Fee (means tested)",
+    "definition" : "All or some of the services provided are offered free of charge, however the decision on the costs associated with the service or procedures offered will depend on a means test outcome."
+  },
+  {
+    "code" : "BBO",
+    "display" : "Bulk Billing Only",
+    "definition" : "Bulk Billing is offered under Medicare.",
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2026-05-20"
+    }]
+  },
+  {
+    "code" : "FAP",
+    "display" : "Fees Apply",
+    "definition" : "All or some of the services provided are offered at the Healthcare Service"
+  },
+  {
+    "code" : "DON",
+    "display" : "By Donation",
+    "definition" : "All or some of the services provided are offered on a donation basis. The expectation on the donation is not defined."
+  },
+  {
+    "code" : "COP",
+    "display" : "Co-payment",
+    "definition" : "All or some of the services provided are subject to a co-payment, which may be in combination with Private Insurance."
+  },
+  {
+    "code" : "FBB",
+    "display" : "Fees and Bulk Billing",
+    "definition" : "All or some of the services provided are offered subject to a payment in combination with Bulk Billing.",
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2026-05-20"
+    }]
+  },
+  {
+    "code" : "BB",
+    "display" : "Bulk Billing",
+    "definition" : "No fee for eligible services, with a Medicare card presented."
+  },
+  {
+    "code" : "MIX",
+    "display" : "Mixed Billing",
+    "definition" : "Bulk billing available with conditions, fees may apply."
+  }]
+}

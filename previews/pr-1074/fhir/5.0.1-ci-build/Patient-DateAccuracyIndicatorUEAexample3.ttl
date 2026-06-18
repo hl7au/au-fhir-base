@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Patient/DateAccuracyIndicatorUEAexample3> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DateAccuracyIndicatorUEAexample3"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "additional" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>This example demonstrates birth date and deceased date with unknown day, estimated month and accurate year.</p>\n            <p>Note that \"2004-06-00\" is NOT a valid FHIR date.</p>\n            <p>Details include:</p>\n            <ul>\n                <li>A valid FHIR date example for birth date and deceased date is \"2004-06-08” but not \"2004-06-00\".</li>\n                <li>A date accuracy indicator of \"UEA\" indicates that the day is unknown but month is an estimate and year is accurate.</li>\n                <li>When a code value contains \"U\", the corresponding date components (individual or combination) for birth or deceased dates must be ignored.</li>\n                <li>When a code value contains \"A\", the corresponding date components (individual or combination) for birth or deceased dates must be accurate.</li>\n            </ul>\n        </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:birthDate [
+     fhir:v "2004-06-08"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UEA" ] ;
+         fhir:display [ fhir:v "Day is unknown, month is estimated, year is accurate" ]
+       ] #  this part of the extension states that date of birth is partially accurate 
+     ] )
+  ] ; # 
+  fhir:deceased [
+     a fhir:dateTime ;
+     fhir:v "2004-06-08T13:42:00+10:00"^^xsd:dateTime ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UEA" ] ;
+         fhir:display [ fhir:v "Day is unknown, month is estimated, year is accurate" ]
+       ] #  this part of the extension states that deceased date is partially accurate 
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,2807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artefacts Summary - AU Base Implementation Guide v6.0.1-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3.1"}
+    h3,h4,h5,h6{--heading-prefix:"3.1.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Base Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">6.0.1-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="generalguidance.html">General Guidance</a></li>
+      <li><a href="sexgender.html">Sex and Gender</a></li>
+      <li><a href="relationship.html">Relationship with other IGs</a></li>
+      <li><a href="future.html">Future of AU Base</a></li>
+    </ul>
+  </li>  
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+	  <!--
+	  <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li>
+	  -->
+    </ul>
+  </li>
+  <!--<li>
+    <a href="security.html">Security</a>
+  </li>-->
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='fhirartefacts.html'><b>FHIR Artefacts</b></a></li><li><b>Artefacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Australian Base IG (v5.0.1-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="5.0.1-ci-build" data-pb-canonical="http://hl7.org.au/fhir"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var plUrl=pn(canonical);if(!plUrl)return;plUrl=plUrl+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="5.0.1-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>Artefacts Summary</h2>
+  
+  
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Data Type Profiles</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-indigenous-status.html"
+                  title="SearchParameter/indigenous-status">AustralianIndigenousStatus</a>
+            </td>
+            <td>
+<p>This search parameter returns patients with an Australian Indigenous Status extension matching the specified code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-encounter-discharge-disposition.html"
+                  title="SearchParameter/encounter-discharge-disposition">EncounterDischargeDisposition</a>
+            </td>
+            <td>
+<p>This search parameter returns encounters with a discharge-disposition matching the specified code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-gender-identity.html"
+                  title="SearchParameter/gender-identity">GenderIdentity</a>
+            </td>
+            <td>
+<p>This search parameter returns resources with the Individual Gender Identity extension matching the specified code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-servicerequest-supporting-info.html"
+                  title="SearchParameter/servicerequest-supporting-info">ServiceRequestSupportingInfo</a>
+            </td>
+            <td>
+<p>This search parameter returns service requests that reference the specified resource in ServiceRequest.supportingInfo.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-norelevantfinding.html"
+                  title="StructureDefinition/au-norelevantfinding">AU Assertion of No Relevant Finding</a>
+            </td>
+            <td>
+<p>This profile provides an observation information structure for asserting a clinical judgement that there are no items of specific interest, (e.g. no current medications or no history of vaccination), for a patient. An assertion of no relevant finding may be used in continuity of care or transfer or care related lists and composition sections.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-allergyintolerance.html"
+                  title="StructureDefinition/au-allergyintolerance">AU Base AllergyIntolerance</a>
+            </td>
+            <td>
+<p>This profile defines an allergy intolerance structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-bodystructure.html"
+                  title="StructureDefinition/au-bodystructure">AU Base BodyStructure</a>
+            </td>
+            <td>
+<p>This profile defines a body structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-composition.html"
+                  title="StructureDefinition/au-composition">AU Base Composition</a>
+            </td>
+            <td>
+<p>This profile defines a composition structure that localises core concepts for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-condition.html"
+                  title="StructureDefinition/au-condition">AU Base Condition</a>
+            </td>
+            <td>
+<p>This profile defines a condition structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-coverage.html"
+                  title="StructureDefinition/au-coverage">AU Base Coverage</a>
+            </td>
+            <td>
+<p>This profile defines a coverage structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-imagingreport.html"
+                  title="StructureDefinition/au-imagingreport">AU Base Diagnostic Imaging Report</a>
+            </td>
+            <td>
+<p>This profile defines a diagnostic report structure to represent a diagnostic imaging report issued by a diagnostic service provider in an Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-imagingresult.html"
+                  title="StructureDefinition/au-imagingresult">AU Base Diagnostic Imaging Result</a>
+            </td>
+            <td>
+<p>This profile defines an observation structure to represent a imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the conclusions of a diagnostic procedure such as Left retina Foveal thickness by OCT, or it may group the set of results produced by a multi-test study or panel such as Biophysical profile panel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-diagnosticrequest.html"
+                  title="StructureDefinition/au-diagnosticrequest">AU Base Diagnostic Request</a>
+            </td>
+            <td>
+<p>This profile defines a service request structure to represent a request for a diagnostic investigation in an Australian context. This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-diagnosticresult.html"
+                  title="StructureDefinition/au-diagnosticresult">AU Base Diagnostic Result</a>
+            </td>
+            <td>
+<p>This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. This profile may be used to represent a specialist or other diagnostic (not imaging or pathology) observation including results of audiology studies, sleep studies or speech pathology. The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-diagnosticreport.html"
+                  title="StructureDefinition/au-diagnosticreport">AU Base DiagnosticReport</a>
+            </td>
+            <td>
+<p>This profile defines a diagnostic report structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+
+<p>For specific reporting of pathology or imaging services the more specific <a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a> or <a href="StructureDefinition-au-imagingreport.html">AU Base Diagnostic Imaging Report</a> profiles would be preferred. This profile is suitable for any other diagnostic service reporting needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-encounter.html"
+                  title="StructureDefinition/au-encounter">AU Base Encounter</a>
+            </td>
+            <td>
+<p>This profile defines an encounter structure that localises core concepts, including terminology, for use in an Australian context. This profile is intended to be applicable for recording details of ambulatory and non-ambulatory patient encounters in an Australian healthcare context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-endpoint.html"
+                  title="StructureDefinition/au-endpoint">AU Base Endpoint</a>
+            </td>
+            <td>
+<p>This profile defines an endpoint structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-healthcareservice.html"
+                  title="StructureDefinition/au-healthcareservice">AU Base HealthcareService</a>
+            </td>
+            <td>
+<p>This profile defines a healthcare service structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-immunization.html"
+                  title="StructureDefinition/au-immunization">AU Base Immunization</a>
+            </td>
+            <td>
+<p>This profile defines an immunisation structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-location.html"
+                  title="StructureDefinition/au-location">AU Base Location</a>
+            </td>
+            <td>
+<p>This profile defines a location structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medication.html"
+                  title="StructureDefinition/au-medication">AU Base Medication</a>
+            </td>
+            <td>
+<p>This profile defines a medication structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicationadministration.html"
+                  title="StructureDefinition/au-medicationadministration">AU Base MedicationAdministration</a>
+            </td>
+            <td>
+<p>This profile defines a medication administration structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicationdispense.html"
+                  title="StructureDefinition/au-medicationdispense">AU Base MedicationDispense</a>
+            </td>
+            <td>
+<p>This profile defines a medication dispense structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicationrequest.html"
+                  title="StructureDefinition/au-medicationrequest">AU Base MedicationRequest</a>
+            </td>
+            <td>
+<p>This profile defines a medication request structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicationstatement.html"
+                  title="StructureDefinition/au-medicationstatement">AU Base MedicationStatement</a>
+            </td>
+            <td>
+<p>This profile defines a medication statement structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-organization.html"
+                  title="StructureDefinition/au-organization">AU Base Organization</a>
+            </td>
+            <td>
+<p>This profile defines an organisation structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-pathologyreport.html"
+                  title="StructureDefinition/au-pathologyreport">AU Base Pathology Report</a>
+            </td>
+            <td>
+<p>This profile defines a diagnostic report structure to represent a pathology report issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics.</p>
+
+<p>This profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example <a href="https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer">RCPA’s structured pathology reporting of cancer</a>); this is not in the scope of this implementation guide at this time.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-pathologyresult.html"
+                  title="StructureDefinition/au-pathologyresult">AU Base Pathology Result</a>
+            </td>
+            <td>
+<p>This profile defines an observation structure to represent a pathology test result issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics. The observation may represent the result of a simple test such as haemoglobin or it may group the set of results produced by a multi-test study or panel such as a full blood count, or urine specimen study.</p>
+
+<p>This profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example <a href="https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer">RCPA’s structured pathology reporting of cancer</a>); this is not in the scope of this implementation guide at this time.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-patient.html"
+                  title="StructureDefinition/au-patient">AU Base Patient</a>
+            </td>
+            <td>
+<p>This profile defines a patient structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-practitioner.html"
+                  title="StructureDefinition/au-practitioner">AU Base Practitioner</a>
+            </td>
+            <td>
+<p>This profile defines a practitioner structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-practitionerrole.html"
+                  title="StructureDefinition/au-practitionerrole">AU Base PractitionerRole</a>
+            </td>
+            <td>
+<p>This profile defines a practitioner role structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-procedure.html"
+                  title="StructureDefinition/au-procedure">AU Base Procedure</a>
+            </td>
+            <td>
+<p>This profile defines a procedure structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-relatedperson.html"
+                  title="StructureDefinition/au-relatedperson">AU Base RelatedPerson</a>
+            </td>
+            <td>
+<p>This profile defines a related person structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-servicerequest.html"
+                  title="StructureDefinition/au-servicerequest">AU Base ServiceRequest</a>
+            </td>
+            <td>
+<p>This profile defines a service request structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-specimen.html"
+                  title="StructureDefinition/au-specimen">AU Base Specimen</a>
+            </td>
+            <td>
+<p>This profile defines a specimen structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-substance.html"
+                  title="StructureDefinition/au-substance">AU Base Substance</a>
+            </td>
+            <td>
+<p>This profile defines a substance structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medlist.html"
+                  title="StructureDefinition/au-medlist">AU Medicine List</a>
+            </td>
+            <td>
+<p>This profile defines a list structure that localises core concepts for use as a medicines list in an Australian context. This profile is intended to offer a common structure and expectations for a list of medications associated with a patient in an Australian healthcare context.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Data Type Profiles </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-accessionnumber.html"
+                  title="StructureDefinition/au-accessionnumber">AU Accession Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an accession number in an Australian context. Accession numbers are typically assigned by a diagnostic imaging system or clinical laboratory system and depending on the domain an accession number may for example identify a specimen, imaging examination, or biological polymer sequence.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ahpraregistrationnumber.html"
+                  title="StructureDefinition/au-ahpraregistrationnumber">AU Ahpra Registration Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Australian Health Practitioner Regulation Agency (Ahpra) registration number in an Australian context (see <a href="https://www.ahpra.gov.au">Ahpra</a> for further information).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-australianbusinessnumber.html"
+                  title="StructureDefinition/au-australianbusinessnumber">AU Australian Business Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Australian Business Number (ABN) in an Australian context. An ABN is issued to all entities registered in the Australian Business Register (ABR).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-australiancompanynumber.html"
+                  title="StructureDefinition/au-australiancompanynumber">AU Australian Company Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Australian Company Number in an Australian context. An ACN is allocated by the Australian Securities and Investments Commission (ASIC) when a body becomes registered as a company under Corporations Law.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-australianregistredbodynumber.html"
+                  title="StructureDefinition/au-australianregistredbodynumber">AU Australian Registered Body Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Australian Registered Body Number (ARBN) in an Australian context. ARBNs are issued to registrable Australian bodies and foreign companies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-dosage.html"
+                  title="StructureDefinition/au-dosage">AU Base Dosage</a>
+            </td>
+            <td>
+<p>This profile defines a dosage structure that localises core concepts for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. <a href="http://hl7.org/fhir/profiling.html">profiling</a>, about how to support these concepts for specific implementation needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-cspregistrationnumber.html"
+                  title="StructureDefinition/au-cspregistrationnumber">AU CSP Registration Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Contracted Service Provider (CSP) registration number in an Australian context (see <a href="https://www.myhealthrecord.gov.au/for-healthcare-professionals/howtos/contracted-service-provider-registration">My Health Record</a> for further information). A CSP registration number may be issued to organisations who wish to participate in the My Health Record and/or the Healthcare Identifiers Service as a CSP.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-careagencyemployeeidentifier.html"
+                  title="StructureDefinition/au-careagencyemployeeidentifier">AU Care Agency Employee Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a care agency employee (CAE) identifier in an Australian context. A CAE identifier may be issued to an employee of, or person under contracted arrangement with, a care agency who wishes to participate in the My Health Record.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-cwlthseniorshealthcardnumber.html"
+                  title="StructureDefinition/au-cwlthseniorshealthcardnumber">AU Commonwealth Seniors Health Card Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Commonwealth Seniors Health Card number in an Australian context (see <a href="https://www.servicesaustralia.gov.au/individuals/services/centrelink/commonwealth-seniors-health-card">Services Australia</a> or <a href="https://www.dva.gov.au/health-and-treatment/veteran-healthcare-cards/commonwealth-seniors-health-card">Department of Veterans' Affairs</a> for further information).</p>
+
+<p>This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Commonwealth Seniors Health Card (see <a href="https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn">Services Australia</a> for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.</p>
+
+<p>A Commonwealth Seniors Health Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to retirees of age pension qualification age to assist with certain living costs by allowing access to specific goods and services at a concessional rate.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-dvanumber.html"
+                  title="StructureDefinition/au-dvanumber">AU DVA Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Department of Veterans' Affairs (DVA) number) in an Australian context. This definition supports sending an individual's state-based DVA file number as displayed on a <a href="https://www.dva.gov.au/health-and-treatment/veteran-healthcare-cards/veteran-card">Veteran Card</a>, i.e. a Gold, White, or Orange Card. A Veteran Card may be issued by DVA to eligible individuals to allowing access to specific goods and services at a concessional rate.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-deliverypointidentifier.html"
+                  title="StructureDefinition/au-deliverypointidentifier">AU Delivery Point Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Australia Post Delivery Point Identifier (DPID) in an Australian context (see <a href="https://auspost.com.au/content/dam/auspost_corp/media/documents/australia-post-data-guide.pdf">Australia Post</a> for further information). A DPID is a randomly generated, unique 8-digit number, allocated by Australia Post to an address. A DPID enables each delivery point in Australia to be uniquely identified.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-etpprescriptionidentifier.html"
+                  title="StructureDefinition/au-etpprescriptionidentifier">AU ETP Prescription Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Electronic Transfer of Prescription (ETP) prescription identifier in an Australian context. An ETP prescription identifier is assigned to a prescription by an ETP vendor, e.g. ERx or Medisecure, and is the assigned numeric value of the barcode on a prescription instance.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-employeenumber.html"
+                  title="StructureDefinition/au-employeenumber">AU Employee Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an employee number (sometimes referred to as an employee identifier (EI)) in an Australian context. An employee number is an organisation's identifier for an individual employed by that organisation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-gnafidentifier.html"
+                  title="StructureDefinition/au-gnafidentifier">AU G-NAF Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Geocoded National Address File (G-NAF) identifier in an Australian context. The <a href="https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf">PSMA G-NAF</a> is Australia’s authoritative, geocoded address file. A G-NAF identifier (sometimes referred to as G-NAF ID, or G-NAF PID, or GNAF ID, or address_detail_pid) identifies an address in the PSMA G-NAF.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-hae.html"
+                  title="StructureDefinition/au-hae">AU HAE</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Health Administration Entity (HAE) identifier in an Australian context (see <a href="https://www.health.gov.au/sites/default/files/2025-12/amendments-to-the-healthcare-identifiers-act-2010-frequently-asked-questions.pdf">Healthcare Identifiers Act 2010 legislative framework reforms Frequently Asked Questions</a>, the current version of <a href="https://www.legislation.gov.au/C2010A00072/latest/text">Health Identifiers Act 2010</a>, and <a href="https://developer.digitalhealth.gov.au/resources/services/healthcare-identifiers-service-hi">Australian Digital Health Agency: Healthcare Identifiers (HI) Service</a> for further information). An HAE is assigned under the HI Service to organisations that provide administrative support for health services and programs without delivering direct clinical care, for example a Primary Health Network.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-hpii.html"
+                  title="StructureDefinition/au-hpii">AU HPI-I</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Healthcare Provider Identifier - Individual (HPI-I) in an Australian context (see <a href="https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010">Australian Digital Health Agency</a> for further information). An HPI-I is assigned under the HI Service to healthcare providers involved in providing patient care.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-hpio.html"
+                  title="StructureDefinition/au-hpio">AU HPI-O</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Healthcare Provider Identifier – Organisation in an Australian context (see <a href="https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010">Australian Digital Health Agency</a> for further information). An HPI-O is assigned under the HI Service to an organisation (such as a hospital or medical clinic) where healthcare is provided.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-hspo.html"
+                  title="StructureDefinition/au-hspo">AU HSP-O</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Healthcare Support Service Provider - Organisation (HSP-O) identifier in an Australian context (see <a href="https://www.health.gov.au/sites/default/files/2025-12/amendments-to-the-healthcare-identifiers-act-2010-frequently-asked-questions.pdf">Healthcare Identifiers Act 2010 legislative framework reforms Frequently Asked Questions</a>, the current version of <a href="https://www.legislation.gov.au/C2010A00072/latest/text">Health Identifiers Act 2010</a>, and <a href="https://developer.digitalhealth.gov.au/resources/services/healthcare-identifiers-service-hi">Australian Digital Health Agency: Healthcare Identifiers (HI) Service</a> for further information). An HSP-O is assigned under the HI Service to an organisation that does not directly provide healthcare services but provides care and support services, such as in-home care support and personal care services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-healthcarecardnumber.html"
+                  title="StructureDefinition/au-healthcarecardnumber">AU Health Care Card Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines Health Care Card number in an Australian context (see <a href="https://www.servicesaustralia.gov.au/individuals/services/centrelink/health-care-card">Services Australia</a> for further information).</p>
+
+<p>This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Health Care Card (see <a href="https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn">Services Australia</a> for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.</p>
+
+<p>A Health Care Card is a concession card assigned by Services Australia to benefit recipients, low income earners and selected other groups (e.g. foster children) to assist with certain health costs, by allowing access to specific services at a concessional rate.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ihi.html"
+                  title="StructureDefinition/au-ihi">AU IHI</a>
+            </td>
+            <td>
+<p>This identifier profile defines an Individual Healthcare Identifier in an Australian context (see <a href="https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010">Australian Digital Health Agency</a> for further information). An IHI is assigned under the Healthcare Identifiers (HI) Service to a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-insurancemembernumber.html"
+                  title="StructureDefinition/au-insurancemembernumber">AU Insurance Member Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines an insurance member number in an Australian context. An insurance member number is the unique member number assigned to an individual by an insurer and is typically displayed on their insurance card. An individual will not have more than one member number per insurer.</p>
+
+<p>This definition supports the sending of an insurance member number that is relevant in a healthcare context and may be used to capture Australian and International health insurer issued member numbers. In Australia this will typically be a private health insurance member number. This identifier should not be confused with an insurance policy number.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-localdispenseidentifier.html"
+                  title="StructureDefinition/au-localdispenseidentifier">AU Local Dispense Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a local dispense identifier in an Australian context. A local dispense identifier is an organisation's identifier for a dispense record in that organisation's local system set of dispense records. A dispense record identifier is typically assigned by the dispensing system and allows linking of a dispensing record to the dispensing system's local identifier.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-localorderidentifier.html"
+                  title="StructureDefinition/au-localorderidentifier">AU Local Order Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a local order identifier in an Australian context. A local order identifier is an organisation's identifier for an order in that organisation's local system set of orders.</p>
+
+<p>Typically a local order identifier will be either a <a href="https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.2ORC-2Placerordernumber(EI)00216">placer identifier</a> or a <a href="https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.3ORC-3Fillerordernumber(EI)00217">filler identifier</a> (sometimes known as filler order number). A placer identifier is an identifier for a request or group of requests where the identifier is issued by the entity making the request. A filler identifier is an identifier for a request or group of requests where the identifier is issued by the entity that produces the observations or fulfills the request.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-localprescriptionidentifier.html"
+                  title="StructureDefinition/au-localprescriptionidentifier">AU Local Prescription Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a local prescription identifier (sometimes referred to as prescription number) in an Australian context. A local prescription identifier is an organisation's identifier for a prescription in that organisation's local system set of prescriptions. A local prescription identifier allows linking of a prescription to a system's local identifier.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-localreportidentifier.html"
+                  title="StructureDefinition/au-localreportidentifier">AU Local Report Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a local report identifier in an Australian context. A local report identifier is an organisation's identifier for a report in that organisation's local system set of reports. A report identifier must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems). In some laboratory systems, the report identifier may be a concatenation of a lab number and report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same lab number.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-locationspecificpracticenumber.html"
+                  title="StructureDefinition/au-locationspecificpracticenumber">AU Location Specific Practice Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Location Specific Practice Number (LSPN) in an Australian context (see <a href="https://www.servicesaustralia.gov.au/organisations/health-professionals/services/medicare/medicare-eligibility-provide-diagnostic-imaging-and-radiation-oncology-services#a2">Services Australia</a> and <a href="https://www1.health.gov.au/internet/main/publishing.nsf/Content/stage-two-diag-img-acc-scheme-loc-spec-prac-num-fact-sheet">Department of Health and Aged Care</a> for further information). An LSPN is an identifier assigned to a specific location by Services Australia under the Medicare program and identifies an accredited practice site that provides diagnostic imaging and radiation oncology services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicalrecordnumber.html"
+                  title="StructureDefinition/au-medicalrecordnumber">AU Medical Record Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a  (MRN) (sometimes referred to as unit record number (URN) or (UR)) in an Australian context. An MRN is an institution's identifier for a patient's record at that institution. A patient may have more than one MRN for a single institution due to organisational restructures.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicarecardnumber.html"
+                  title="StructureDefinition/au-medicarecardnumber">AU Medicare Card Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Medicare card number in an Australian context. A Medicare card is provided to individuals who are enrolled in <a href="https://www.servicesaustralia.gov.au/individuals/medicare">Medicare</a>. This definition supports sending either the 10 digit Medicare card number or the 11 digit number (includes the individual reference number (IRN)).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-medicareprovidernumber.html"
+                  title="StructureDefinition/au-medicareprovidernumber">AU Medicare Provider Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Medicare provider number assigned by Services Australia to practitioners who provide services covered by the Medicare Benefits Schedule (MBS) at a specific location. A practitioner may have more than one Medicare provider number if they deliver health services in different locations or are registered in multiple health professions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-nataaccreditationnumber.html"
+                  title="StructureDefinition/au-nataaccreditationnumber">AU NATA Accreditation Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a National Association of Testing Authorities (NATA) accreditation number in an Australian context (see <a href="https://www.nata.com.au/">NATA</a> for further information).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-natasitenumber.html"
+                  title="StructureDefinition/au-natasitenumber">AU NATA Site Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a National Association of Testing Authorities (NATA) site number in an Australian context (see <a href="https://www.nata.com.au/">NATA</a> for further information).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-nationalprovideridentifieratorganisation.html"
+                  title="StructureDefinition/au-nationalprovideridentifieratorganisation">AU National Provider Identifier At Organisation</a>
+            </td>
+            <td>
+<p>This identifier profile defines a National Provider Identifier at Organisation (NPIO) in an Australian context. An NPIO identifies an individual practitioner at an organisation using the practitioner's HPI-I and organisation's HPI-O to form the NPIO.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-paididentifier.html"
+                  title="StructureDefinition/au-paididentifier">AU PAI-D Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a My Health Record Assigned Identity - Device (PAI-D) identifier in an Australian context. A PAI-D is typically used to identify a device that plays a role, for example an authoring or observing, in the exchange of digital health data with the My Health Record system.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-paioidentifier.html"
+                  title="StructureDefinition/au-paioidentifier">AU PAI-O Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a My Health Record Assigned Identity - Organisation (PAI-O) identifier in an Australian context. A PAI-O may be issued to organisations who wish to participate in the My Health Record and who are not eligible for a Healthcare Provider Identifier - Organisation (HPI-O).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-pbsprescribernumber.html"
+                  title="StructureDefinition/au-pbsprescribernumber">AU PBS Prescriber Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Pharmaceutical Benefits Scheme (PBS) prescriber number in an Australian context (see <a href="https://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section_1_2_Explanatory_Notes">PBS</a> for further information). A PBS prescriber number, previously referred to as Medicare prescriber number in earlier versions of this implementation guide, is assigned by Services Australia under the Pharmaceutical Benefits Scheme to practitioners who are approved to prescribe PBS medicines under the National Health Act 1953.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-pi.html" title="StructureDefinition/au-pi">AU Patient Internal Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a patient internal identifier in an Australian context. A patient internal identifier is assigned to a patient by an application (e.g. practice management system or a cloud-based electronic medical record) to uniquely identify a patient within that application.</p>
+
+<p>While a patient internal identifier can be exchanged with other applications, its scope for sharing is limited and typically occurs for context-specific patient matching (e.g. a patient internal identifier included in a pathology request can be returned in the associated pathology report). This identifier is only unique within the assigning application and is not suitable for broader use as a persistent identifier, unlike a Medical Record Number (MRN), which is unique within an institution.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-pensionerconcessioncardnumber.html"
+                  title="StructureDefinition/au-pensionerconcessioncardnumber">AU Pensioner Concession Card Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a Pensioner Concession Card number in an Australian context (see <a href="https://www.servicesaustralia.gov.au/individuals/services/centrelink/pensioner-concession-card">Services Australia</a> or <a href="https://www.dva.gov.au/health-and-treatment/veteran-healthcare-cards/pensioner-concession-card">Department of Veterans' Affairs</a>).</p>
+
+<p>This definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Pensioner Concession Card (see <a href="https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn">Services Australia</a> for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.</p>
+
+<p>A Pensioner Concession Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to pensioners and selected benefit recipients to assist them with certain living costs, by allowing access to specific goods and services at a concessional rate.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-pharmacyapprovalnumber.html"
+                  title="StructureDefinition/au-pharmacyapprovalnumber">AU Pharmacy Approval Number</a>
+            </td>
+            <td>
+<p>This identifier profile defines a pharmacy approval number in an Australian context (see <a href="https://www1.health.gov.au/internet/main/publishing.nsf/Content/pharmaceutical-benefits-scheme-approved-supplier-administrative-functions">Department of Health and Aged Care</a> for further information). A pharmacy approval number, also known as a PBS approval number, is assigned by the Department of Health to pharmacies that are approved to supply pharmaceutical benefits at particular premises under the National Health Act 1953.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-residentialagedcareserviceidentifier.html"
+                  title="StructureDefinition/au-residentialagedcareserviceidentifier">AU Residential Aged Care Service Identifier</a>
+            </td>
+            <td>
+<p>This identifier profile defines a residential aged care service identifier (RACS ID) in an Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-address.html"
+                  title="StructureDefinition/au-address">Australian Address</a>
+            </td>
+            <td>
+<p>This profile defines an address structure that localises core concepts, including identifiers and terminology, for use in an Australian context, to specifically represent an Australian (location) address. The purpose of this profile is to provide best practice guidance on Australian address representation, where some constraint on content is desirable to guarantee the quality of an Australian address.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-address-identifier.html"
+                  title="StructureDefinition/address-identifier">Address Identifier</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a> data type and is used to represent an identifier for an address. An address identifier does not form part of the address itself, e.g. a street number. It is a unique identifier associated with a location address and may be used to look up an address, validate an address, or link to other data relating to an address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ahpraprofession-details.html"
+                  title="StructureDefinition/ahpraprofession-details">Ahpra Profession Details</a>
+            </td>
+            <td>
+<p>This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (Ahpra) profession details (see <a href="https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number">Ahpra</a> for further information). This extension supports the inclusion of the Ahpra profession code and information about conditions, undertakings, reprimands and cautions in a qualification element instance representing a practitioner’s Ahpra profession.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ahpraregistration-details.html"
+                  title="StructureDefinition/ahpraregistration-details">Ahpra Registration Details</a>
+            </td>
+            <td>
+<p>This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (Ahpra) registration details (see <a href="https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number">Ahpra</a> for further information). This extension supports the inclusion of the Ahpra profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s Ahpra registration.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-associated-healthcareservice.html"
+                  title="StructureDefinition/associated-healthcareservice">Associated Healthcare Service</a>
+            </td>
+            <td>
+<p>This extension applies to any resource and is used to represent a healthcare service relating to a resource, e.g. healthcare services under which the patient was managed during an encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-indigenous-status.html"
+                  title="StructureDefinition/indigenous-status">Australian Indigenous Status</a>
+            </td>
+            <td>
+<p>This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-timezone.html"
+                  title="StructureDefinition/au-timezone">Australian Time Zone</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/R4/datatypes.html#time">time</a> data type and is used to represent an Australian time zone.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-timezone-usage.html"
+                  title="StructureDefinition/au-timezone-usage">Australian Time Zone Usage</a>
+            </td>
+            <td>
+<p>This profile defines specific usage of Australian time zones (states and territories) with the FHIR <a href="https://hl7.org/fhir/extensions/StructureDefinition-timezone.html">Timezone Code extension</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-veteran-status.html"
+                  title="StructureDefinition/veteran-status">Australian Veteran Status</a>
+            </td>
+            <td>
+<p>This extension applies to the Patient resource and is used to indicate whether a person is serving, or has served, in the Australian Defence Force.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-author-related-person.html"
+                  title="StructureDefinition/author-related-person">Author as a RelatedPerson</a>
+            </td>
+            <td>
+<p>This extension applies to any resource and is used to represent an author who is a related person.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-change-description.html"
+                  title="StructureDefinition/change-description">Change Description</a>
+            </td>
+            <td>
+<p>This extension applies to the List resource and is used to represent a narrative description of the change to an item in a list entry. The narrative description may include the reason for the change to an item.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-closing-the-gap-registration.html"
+                  title="StructureDefinition/closing-the-gap-registration">Closing the Gap Registration</a>
+            </td>
+            <td>
+<p>This extension applies to the Patient resource and provides an indicator of whether the patient is eligible for a Closing the Gap (CTG) co-payment.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-contact-purpose.html"
+                  title="StructureDefinition/contact-purpose">Contact Purpose</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/datatypes.html#ContactPoint">ContactPoint</a> data type and is used to represent the purpose for which a contact can be reached, e.g. after hours or billing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-date-accuracy-indicator.html"
+                  title="StructureDefinition/date-accuracy-indicator">Date Accuracy Indicator</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a> and <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a> data types and is used to represent the accuracy of the associated date.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-date-of-arrival.html"
+                  title="StructureDefinition/date-of-arrival">Date of Arrival in Australia</a>
+            </td>
+            <td>
+<p>This extension applies to the Patient, RelatedPerson, and Practitioner resources and is used to represent a person's date of arrival in an Australian context (see <a href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument">Australian Bureau of Statistics</a> for further information). The date of arrival is when a person (born outside of Australia) first arrived in Australia, from another country, with the intention of living in Australia for one year or more. This date is recorded once for a person and is not subsequently updated with subsequent arrivals. This element is a part of Cultural and Linguistic Diversity (CALD) data set. It is an important indicator of cultural identity, and provides further information about a person's cultural values and practices which can be significant in determining service type, support required, and possible needs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-dispense-number.html"
+                  title="StructureDefinition/dispense-number">Dispense Number</a>
+            </td>
+            <td>
+<p>This extension applies to the MedicationDispense resource and is used to represent the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-encounter-description.html"
+                  title="StructureDefinition/encounter-description">Encounter Description</a>
+            </td>
+            <td>
+<p>This extension applies to the Encounter resource and is used to represent a narrative description of the healthcare event or encounter. The description may include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event. The description may capture text about the encounter that is not captured in other fields.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-encryption-certificate-pem-x509.html"
+                  title="StructureDefinition/encryption-certificate-pem-x509">Encryption Certificate PEM X509</a>
+            </td>
+            <td>
+<p>This extension applies to the Endpoint resource and is used to support encrypted certificate content for use with an endpoint. This extension allows an endpoint entry to define a suitable certificate for use in communications on the associated channel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ethnicity.html"
+                  title="StructureDefinition/ethnicity">Ethnicity</a>
+            </td>
+            <td>
+<p>This extension applies to the Patient resource and is used to represent ethnic identity (see <a href="https://www.abs.gov.au/statistics/classifications/australian-standard-classification-cultural-and-ethnic-groups-ascceg/2019">Australian Bureau of Statistics</a> for further information). This extension is to support the provision of healthcare services to patients with specific cultural identities. This extension provides further information about a person’s cultural values and practices which can be significant in determining service type, support required and possible needs.</p>
+
+<p>The words 'ethnicity' and 'ethnic' are associated with many different meanings, but for the purpose of this extension ethnicity refers to the shared identity or similarity of a group of people on the basis of one or more distinguishing sociological characteristics, such as language, shared history, religion, cultural traditions or geographic origin etc. This extension supports Australian Aboriginal and Torres Strait Islander peoples as well as ethnicities originating from outside of Australia.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-assigningauthority.html"
+                  title="StructureDefinition/au-assigningauthority">HL7 V2 Assigning Authority</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/datatypes.html#identifier">Identifier</a> data type and is used to represent HL7 V2 assigning authority details for HL7 V2 identification for routing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-receivingapplication.html"
+                  title="StructureDefinition/au-receivingapplication">HL7 V2 Receiving Application</a>
+            </td>
+            <td>
+<p>This extension applies to the Endpoint resource and is used to represent routing HL7 V2 message payload details associated with an endpoint. This content allows a sender using these endpoint details to include Receiving Application (MSH-5) information in HL7 V2 messages sent via this channel which allow correct delivery within the receiving system.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-receivingfacility.html"
+                  title="StructureDefinition/au-receivingfacility">HL7 V2 Receiving Facility</a>
+            </td>
+            <td>
+<p>This extension applies to the Endpoint resource and is used to represent HL7 V2 receiving facility details for HL7 V2 routing purposes associated with an endpoint. This content allows a sender using these endpoint details to include Receiving Facility (MSH-6) information in HL7 V2 messages sent via this channel which allow correct delivery within the receiving system.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ihi-record-status.html"
+                  title="StructureDefinition/ihi-record-status">IHI Record Status</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/datatypes.html#identifier">Identifier</a> data type and is used to indicate whether verification of the Individual Healthcare Identifier (IHI) has occurred and is based on the evidence available for a person’s identity.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ihi-status.html"
+                  title="StructureDefinition/ihi-status">IHI Status</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/datatypes.html#identifier">Identifier</a> data type and is used to represent the status of the associated Individual Healthcare Identifier (IHI) and indicates whether the status of the IHI is active or otherwise.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ihi-verified-date.html"
+                  title="StructureDefinition/ihi-verified-date">IHI Verification Date</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/datatypes.html#identifier">Identifier</a> data type and is used to represent the date, and optionally time, that the IHI was verified with HI Services. This is not the date that it was created by the HI Services, but when it was checked. This is often required to know how recently the identifier was checked, and if it must be re-verified before using it.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-identifier-routability.html"
+                  title="StructureDefinition/identifier-routability">Identifier Routability</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/datatypes.html#identifier">Identifier</a> data type. Identifier routability preferences for an asserter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-information-recipient.html"
+                  title="StructureDefinition/information-recipient">Information Recipient</a>
+            </td>
+            <td>
+<p>This extension applies to the Composition resource and is used to represent an intended recipient of the composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medication-long-term.html"
+                  title="StructureDefinition/medication-long-term">Long Term</a>
+            </td>
+            <td>
+<p>This extension applies to the MedicationStatement resource and is used to indicate long term use of a medication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medication-brand-name.html"
+                  title="StructureDefinition/medication-brand-name">Medication Brand Name</a>
+            </td>
+            <td>
+<p>This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and is used to represent the brand name of a medication. This extension is not to be the sole representation of the medication concept; it shall not be used as a substitute for medication code (e.g. Medication.code or MedicationStatement.medicationCodeableConcept).</p>
+
+<p>If a system can only supply branded product information in text form, that information will be supplied in the text portion of that code e.g. code.text or medicationCodeableConcept.text. This extension only supports the name portion of a medication concept, not the branded product or product pack information. It is available for use for where a system needs to separate out the brand name string for handling or other processing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medication-generic-name.html"
+                  title="StructureDefinition/medication-generic-name">Medication Generic Drug Name</a>
+            </td>
+            <td>
+<p>This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and is used to represent the generic name of a medication. The generic medication text name may not be the same as the subject medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept. This extension is not to be the sole representation of the medication concept; it shall not be used as a substitute for medication code (e.g. Medication.code or MedicationStatement.medicationCodeableConcept).</p>
+
+<p>If a system can only supply generic product information, and only in text form, that information will be supplied in the text portion of that code e.g. code.text or medicationCodeableConcept.text. This extension only supports the name portion of a medication concept, not the generic product or product pack information. It is available for use for where a system needs to separate out the generic name string for handling or other processing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medication-strength.html"
+                  title="StructureDefinition/medication-strength">Medication Strength</a>
+            </td>
+            <td>
+<p>This extension applies to the Medication resource and is used to represent the strength of a medication as text. Use this extension for text representation of a medication strength as a whole. Coded representation of medication strength as a whole uses <code class="language-plaintext highlighter-rouge">Medication.code</code>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medication-type.html"
+                  title="StructureDefinition/medication-type">Medication Type</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a> data type and is used to indicate the type of information covered by the code e.g. branded product with no strength or form. This is useful when there are multiple codings from the same coding system at different levels/classifications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-name-context.html"
+                  title="StructureDefinition/name-context">Name Context</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName">HumanName</a> data type, in the context of Patient, Person, Practitioner or RelatedPerson resources and is used to indicate a suitable use of the associated name.
+The usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate use when referring to an individual e.g. deceased Aboriginal name, transgender deadname.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-no-fixed-address.html"
+                  title="StructureDefinition/no-fixed-address">No Fixed Address</a>
+            </td>
+            <td>
+<p>This extension applies to the <a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a> data type and is used to indicate that a location address is not a fixed address for an individual.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-result-copies-to.html"
+                  title="StructureDefinition/result-copies-to">Result Copies To</a>
+            </td>
+            <td>
+<p>This extension applies to the ServiceRequest resource and is used to indicate an additional recipient to whom a copy of the outcome of the request (i.e. the results) should be sent. The service requester will typically receive a result as part of the normal processing from the filler of the request and this extension is only relevant for any additional result copy recipients indicated on the request.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-subsidised-concurrent-supply.html"
+                  title="StructureDefinition/subsidised-concurrent-supply">Subsidised Concurrent Supply</a>
+            </td>
+            <td>
+<p>This extension applies to the MedicationRequest or MedicationDispense resources and is used to represent the grounds (e.g. <a href="https://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section_1_2_Explanatory_Notes#Regulation-49">Regulation 49</a>) that authorise a PBS or RPBS subsidy for the concurrent supply of an item specified in a prescription and all of its repeats (see <a href="https://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section-1-3-Explanatory-Notes">PBS</a> for further information).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-vaccine-serial-number.html"
+                  title="StructureDefinition/vaccine-serial-number">Vaccine Vial Serial Number</a>
+            </td>
+            <td>
+<p>This extension applies to the Immunization resource and is used to represent the serial number of the vial of vaccine. Vial serial number is part of the <a href="https://www.legislation.gov.au/Latest/F2021C00234">Australian Immunisation Register Rule 2015</a> data elements to report for COVID-19 vaccines.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-amt-mp-codes.html" title="ValueSet/amt-mp-codes">AMT Medicinal Product and Substances</a>
+            </td>
+            <td>
+<p>The AMT Medicinal Product and Substances value set includes values that may be used to identify a substance or a medicinal product that is an ingredient of a medication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-rsg-source.html" title="ValueSet/rsg-source">AU Recorded Sex or Gender (RSG) Source</a>
+            </td>
+            <td>
+<p>The AU Recorded Sex or Gender (RSG) Source value set includes codes that can be used to represent the non-document source where the sex or gender value is recorded.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-rsg-source-document-type.html"
+                  title="ValueSet/rsg-source-document-type">AU Recorded Sex or Gender (RSG) Source Document Type</a>
+            </td>
+            <td>
+<p>The AU Recorded Sex or Gender (RSG) Source Document Type value set includes codes that can be used to represent the type of document where this sex or gender value is recorded.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-rsg-type.html" title="ValueSet/rsg-type">AU Recorded Sex or Gender Type</a>
+            </td>
+            <td>
+<p>The AU Recorded Sex or Gender Type value set includes codes that can be used to represent the type or category of sex or gender that is recorded.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-timezone.html" title="ValueSet/au-timezone">AU Time Zone</a>
+            </td>
+            <td>
+<p>Australian time zones.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-accession-number-type.html"
+                  title="ValueSet/accession-number-type">Accession Number Type</a>
+            </td>
+            <td>
+<p>Identifier types that may be associated with an accession number in an Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-v3-ActEncounterCode-extended.html"
+                  title="ValueSet/au-v3-ActEncounterCode-extended">ActEncounterCode - AU Extended</a>
+            </td>
+            <td>
+<p>v3 Act Encounter Code extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-contact-purpose.html" title="ValueSet/contact-purpose">Contact Purpose</a>
+            </td>
+            <td>
+<p>The purpose for which an associated contact can be reached.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-coverage-type-extended.html"
+                  title="ValueSet/au-coverage-type-extended">Coverage Type and Self-Pay Codes - AU Extended</a>
+            </td>
+            <td>
+<p>Coverage type codes extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-dva-entitlement.html" title="ValueSet/dva-entitlement">DVA Entitlement</a>
+            </td>
+            <td>
+<p>Entitlement types that may be associated with an individual's Department of Veterans’ Affairs (DVA) File Number on a DVA issued health card in an Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-jurisdiction-extended.html"
+                  title="ValueSet/au-jurisdiction-extended">Jurisdiction ValueSet - AU Extended</a>
+            </td>
+            <td>
+<p>Jurisdiction ValueSet extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-location-physical-type-extended.html"
+                  title="ValueSet/au-location-physical-type-extended">Location Type (Physical) - AU Extended</a>
+            </td>
+            <td>
+<p>Location type (physical) extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mims.html" title="ValueSet/mims">MIMS</a>
+            </td>
+            <td>
+<p>The MIMS value set includes all values from the Monthly Index of Medical Specialties (MIMS) published by MIMS Australia. Further details can be found at https://www.mims.com.au/.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medication-type.html" title="ValueSet/medication-type">Medication Type</a>
+            </td>
+            <td>
+<p>The Medication Type value set may be used to classify the nature of properties defined by the code e.g. branded product with no strength or form. This allows the distinction between codes provided containing container, pack, strength and form explicitly especially where terminologies supplied are unknown or terminology services are unavailable.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medicine-item-change.html"
+                  title="ValueSet/medicine-item-change">Medicine Item Change</a>
+            </td>
+            <td>
+<p>The Medicine Item Change value set includes values that may be used to identify that a change that has been made, or is recommended to be made, to a medicine item.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-name-context.html" title="ValueSet/name-context">Name Context</a>
+            </td>
+            <td>
+<p>The Name Context value set may be used to classify suitable uses or purposes of names.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-order-identifier-type.html"
+                  title="ValueSet/order-identifier-type">Order Identifier Type</a>
+            </td>
+            <td>
+<p>Identifier types that may be associated with an order identifier in an Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pbs-item.html" title="ValueSet/pbs-item">PBS Item Codes</a>
+            </td>
+            <td>
+<p>The PBS Item Codes value set includes all values from Australian Pharmaceutical Benefits Scheme (PBS) schedule published by the Department of Health. Further details can be found at https://www.pbs.gov.au/pbs/.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-service-provision-conditions.html"
+                  title="ValueSet/service-provision-conditions">Service Provision Conditions Australian Concepts</a>
+            </td>
+            <td>
+<p>The Service Provision Conditions Australian Concepts value set includes values that may be used to identify the type of service provision conditions in an Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html"
+                  title="ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended">ServiceDeliveryLocationRoleType - AU Extended</a>
+            </td>
+            <td>
+<p>ServiceDeliveryLocationRoleType extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-v2-0360-extended.html"
+                  title="ValueSet/au-v2-0360-extended">hl7VS-degreeLicenseCertificate - AU Extended</a>
+            </td>
+            <td>
+<p>hl7VS-degreeLicenseCertificate extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-v2-0203-extended.html"
+                  title="ValueSet/au-v2-0203-extended">hl7VS-identifierType - AU Extended</a>
+            </td>
+            <td>
+<p>Extended value set of identifier types for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set. NOTE: codes contained LACN Laboratory Accession ID and ACN Accession ID are exclusive concepts and not consider related in this terminology.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-au-v2-0443-extended.html"
+                  title="ValueSet/au-v2-0443-extended">hl7VS-providerRole - AU Extended</a>
+            </td>
+            <td>
+<p>hl7VS-providerRole extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-rsg-source-document-type.html"
+                  title="CodeSystem/rsg-source-document-type">AU Recorded Sex or Gender Source Document Type</a>
+            </td>
+            <td>
+<p>The AU Recorded Sex or Gender Source Document Type code system defines concepts that represent the type of document where this sex or gender value is recorded.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-rsg-type.html" title="CodeSystem/rsg-type">AU Recorded Sex or Gender Type</a>
+            </td>
+            <td>
+<p>The AU Recorded Sex or Gender Type code system defines concepts that represent the type or category of sex or gender that is recorded.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-v3-ActCode.html" title="CodeSystem/au-v3-ActCode">ActCode AU</a>
+            </td>
+            <td>
+<p>Additional concept codes for act coding defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-digital-health-source-system.html"
+                  title="CodeSystem/au-digital-health-source-system">Australian Digital Health Source System</a>
+            </td>
+            <td>
+<p>The Australian Digital Health Source System code system defines concepts that represent Australian digital health sources. These concepts may be used to represent which system clinical and/or administrative information is sourced.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-communication-request-category.html"
+                  title="CodeSystem/communication-request-category">Communication Request Category</a>
+            </td>
+            <td>
+<p>The Communication Request Category code system defines concepts that represent the category for a communication request.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-contact-purpose.html"
+                  title="CodeSystem/contact-purpose">Contact Purpose</a>
+            </td>
+            <td>
+<p>Purpose for associated contact information.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-v2-0360.html" title="CodeSystem/au-v2-0360">DegreeLicenseCertificate AU</a>
+            </td>
+            <td>
+<p>Additional concept codes for qualification defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-v2-0203.html" title="CodeSystem/au-v2-0203">IdentifierType AU</a>
+            </td>
+            <td>
+<p>Additional concept codes for identifier type defined for use in an Australian context. These are additional identifier type codes to the HL7 International code set and suitable for use with Australian identifiers and may be used in HL7 V2.x identifier representations.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-location-physical-type.html"
+                  title="CodeSystem/au-location-physical-type">Location Type (Physical) AU</a>
+            </td>
+            <td>
+<p>Additional concept codes for location physical type defined for use in Australian context. These codes are used as extensions to the HL7 International code set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-location-type.html"
+                  title="CodeSystem/au-location-type">Location Type AU</a>
+            </td>
+            <td>
+<p>Additional concept codes for location type defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-medication-type.html"
+                  title="CodeSystem/medication-type">Medication Type</a>
+            </td>
+            <td>
+<p>The Medication Type code system defines concepts in a classification scheme for medication coding. The classification scheme defines the nature of the properties defined by the code e.g. branded product with no strength or form. This allows the distinction between codes provided containing container, pack, strength and form explicitly especially where terminologies supplied are unknown or terminology services are unavailable.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-medicine-item-change.html"
+                  title="CodeSystem/medicine-item-change">Medicine Item Change</a>
+            </td>
+            <td>
+<p>The Medicine Item Change code system defines concepts that identify a change that has been made, or is recommended to be made, to a medicine item.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mims-external.html" title="CodeSystem/mims-external">Monthly Index of Medical Specialties (MIMS)</a>
+            </td>
+            <td>
+<p>This CodeSystem resource represents the Monthly Index of Medical Specialties (MIMS) code system published by MIMS Australia. The intended use of MIMS data is to fully specify the product as a combination of product code, form code, and pack code. For example, when providing a MIMS Code within a Clinical Document Architecture (CDA) document, the MIMS code will be a minimum of 5 digits (in most cases, will be 8 digits).This is not the canonical publication of this code system nor it is intended to be publication on behalf of the MIMS Australia. For the complete content of the code system contact the publisher.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-name-context.html" title="CodeSystem/name-context">Name Context</a>
+            </td>
+            <td>
+<p>The Name Context code system defines concepts describing usage of names. This provides well known concepts that can be used to indicate usage to achieve an associated purpose e.g. identifier validation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-pbs-item-external.html"
+                  title="CodeSystem/pbs-item-external">PBS Item Codes</a>
+            </td>
+            <td>
+<p>This CodeSystem resource represents the items listed on the Australian Pharmaceutical Benefits Scheme (PBS) schedule published by the Department of Health. Codes are represented as five or six characters in format (n)nnnna and the display is the PBS prescribing rule preferred term. This is not the canonical publication of this code system nor it is intended to be publication on behalf of the Department of Health. For the complete content of the code system contact the publisher.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-resource-tag.html" title="CodeSystem/resource-tag">Resource Tag</a>
+            </td>
+            <td>
+<p>The Resource Tag code system defines concepts that represent tag values for labelling resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-service-provision-conditions.html"
+                  title="CodeSystem/service-provision-conditions">Service Provision Conditions Australian Concepts</a>
+            </td>
+            <td>
+<p>The Service Provision Conditions Australian Concepts code system defines concepts that identify the conditions under which a healthcare service is available/offered.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-task-business-status.html"
+                  title="CodeSystem/task-business-status">Task Business Status</a>
+            </td>
+            <td>
+<p>The Task Business Status code system defines concepts that represent business status values for a task.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-au-v2-0443.html" title="CodeSystem/au-v2-0443">providerRole AU</a>
+            </td>
+            <td>
+<p>Additional concept codes for specifying the functional involvement with the activity being transmitted (e.g., Case Manager, Evaluator, Transcriber, Nurse Care Practitioner, Midwife, Physician Assistant, etc.) defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-example0.html"
+                  title="AllergyIntolerance/example0">AllergyIntolerance - ibuprofen allergy</a>
+            </td>
+            <td>
+<p>Shows an example of an Ibuprofen allergy with the reaction manifestation as urticaria for the <em>AU Base AllergyIntolerance</em> profile. Patient: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-example3.html"
+                  title="AllergyIntolerance/example3">AllergyIntolerance - no known allergy</a>
+            </td>
+            <td>
+<p>Shows an example of an AllergyIntolerance resource indicating the patient has no known allergies for the <em>AU Base AllergyIntolerance</em> profile. Patient: John Smith.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-example1.html"
+                  title="AllergyIntolerance/example1">AllergyIntolerance - self-reported allergy to eggs</a>
+            </td>
+            <td>
+<p>Shows an example of an allergy to egg protein with reaction manifestations of hives, nausea, and vomiting for the <em>AU Base AllergyIntolerance</em> profile. Patient: Sally Grant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-example2.html"
+                  title="AllergyIntolerance/example2">AllergyIntolerance - self-reported intolerance to lactose</a>
+            </td>
+            <td>
+<p>Shows an example of lactose intolerance with reaction manifestations of abdominal pain, abdominal bloating, and diarrhoea for the <em>AU Base AllergyIntolerance</em> profile. Patient: Suzanne Simmons.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="BodyStructure-example1.html" title="BodyStructure/example1">BodyStructure - Blister of right foot</a>
+            </td>
+            <td>
+<p>Shows an example of a body structure for the <em>AU Base BodyStructure</em> profile, representing a blister on the right foot. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="BodyStructure-example0.html" title="BodyStructure/example0">BodyStructure - Bone tissue of left shoulder</a>
+            </td>
+            <td>
+<p>Shows an example of a body structure resource for the <em>AU Base BodyStructure</em> profile, representing bone tissue in the left shoulder region. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-example0.html" title="Bundle/example0">Bundle - Medicine list in a bundle</a>
+            </td>
+            <td>
+<p>Shows an example of a FHIR Bundle containing resources related to the <em>AU Medicine List</em> profile. Patient: Nicholas Jones.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-example0.html" title="Composition/example0">Composition - Patient’s preference upon death</a>
+            </td>
+            <td>
+<p>Shows an example of a composition representing patient goals, preferences, and priorities upon death, including a related person as the author and attester, for the <em>AU Base Composition</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-multiple-information-recipients.html"
+                  title="Composition/multiple-information-recipients">Composition - with multiple information recipients</a>
+            </td>
+            <td>
+<p>Shows an example of a composition with multiple information recipients for the <em>AU Base Composition</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-example0.html" title="Condition/example0">Condition - with evidence and onset date-time</a>
+            </td>
+            <td>
+<p>Shows an example of a condition of Type 2 diabetes mellitus for the <em>AU Base Condition</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-dva.html" title="Coverage/dva">Coverage - DVA Gold Card</a>
+            </td>
+            <td>
+<p>Shows an example of a coverage record for the <em>AU Base Coverage</em> profile, demonstrating a veteran health program under the Department of Veterans' Affairs. Beneficiary: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-private.html" title="Coverage/private">Coverage - private health insurer</a>
+            </td>
+            <td>
+<p>Shows an example of a private health insurance coverage record for the <em>AU Base Coverage</em> profile, demonstrating a plan under the payor HCF PTY LTD. Beneficiary: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-example1.html" title="Device/example1">Device - as a registered repository service</a>
+            </td>
+            <td>
+<p>Shows an example of a Device resource representing a registered repository service. The resource includes the PAI-D identifier, device name, type and owner identifier (PAI-O).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Endpoint-example1.html" title="Endpoint/example1">Downunder Hospital FHIR API</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-example1.html" title="Encounter/example1">Encounter - Annual check up</a>
+            </td>
+            <td>
+<p>Shows an example of an encounter for the <em>AU Base Encounter</em> profile, representing an annual check up encounter for <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/Observation-healthprogramparticipation-example0.html">Observation-healthprogramparticipation-example0</a>. Patient: Suzanne Simmons.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-example0.html" title="Encounter/example0">Encounter - with description</a>
+            </td>
+            <td>
+<p>Shows an example of an encounter with an encounter description for the <em>AU Base Encounter</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Endpoint-example0.html" title="Endpoint/example0">Endpoint - a secure messaging endpoint example</a>
+            </td>
+            <td>
+<p>Shows an example of a secure messaging endpoint using the Endpoint resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-example5.html"
+                  title="HealthcareService/example5">HealthcareService - Honourable Mark's Home For Aged Men</a>
+            </td>
+            <td>
+<p>Shows an example of an aged care residential service, Honourable Mark's Home For Aged Men, for the <em>AU Base HealthcareService</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-example4.html"
+                  title="HealthcareService/example4">HealthcareService - Leafy Grove Home for the Aged</a>
+            </td>
+            <td>
+<p>Shows an example of an aged care residential service, Leafy Grove Home for the Aged, for the <em>AU Base HealthcareService</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-example1.html"
+                  title="HealthcareService/example1">HealthcareService - a typical Healthcare Service the Radiologist belongs to</a>
+            </td>
+            <td>
+<p>Shows an example of a radiology service, Albion Hospital Radiology Service, for the <em>AU Base HealthcareService</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-example3.html"
+                  title="HealthcareService/example3">HealthcareService - general practice</a>
+            </td>
+            <td>
+<p>Shows an example of a healthcare service, General Practitioner services, for the <em>AU Base HealthcareService</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-example2.html"
+                  title="HealthcareService/example2">HealthcareService - of a Pathologist</a>
+            </td>
+            <td>
+<p>Shows an example of a pathology service, Albion Hospital Pathology Service, for the <em>AU Base HealthcareService</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-example0.html"
+                  title="HealthcareService/example0">HealthcareService - with HPI-O with varied contact details</a>
+            </td>
+            <td>
+<p>Shows an example of a cardiothoracic surgery healthcare service for the <em>AU Base HealthcareService</em> profile, with a HPI-O, service name, specialty details, and multiple contact details.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-example3.html" title="Immunization/example3">Immunization - Administration of Pfizer Comirnaty dose 1 for Sarah Simmons</a>
+            </td>
+            <td>
+<p>Shows an example of a completed immunisation record for the <em>AU Base Immunization</em> profile, demonstrating the administration of Pfizer Comirnaty for COVID-19. Patient: Sarah Simmons.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-example1.html" title="Immunization/example1">Immunization - Administration of a vaccine - record compliant with Australian Immunisation Register (AIR)</a>
+            </td>
+            <td>
+<p>Shows an example of a completed immunisation record for the <em>AU Base Immunization</em> profile, demonstrating the administration of Infanrix-Hep B. The record is compliant with Australian Immunisation Register (AIR). Patient: Sally Grant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-example2.html" title="Immunization/example2">Immunization - Administration of a vaccine with administering provider and protocol</a>
+            </td>
+            <td>
+<p>Shows an example of a completed immunisation record for the <em>AU Base Immunization</em> profile, demonstrating the administration of Infanrix Hexa. Patient: Sally Grant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-example0.html" title="Immunization/example0">Immunization - Non-administration of varicella-zoster live vaccine due to refusal</a>
+            </td>
+            <td>
+<p>Shows an example of an immunisation record for the <em>AU Base Immunization</em> profile, where the administration of the varicella-zoster live vaccine was not completed due to patient objection. Patient: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="List-example3.html" title="List/example3">List - Medicine list authored by a related person</a>
+            </td>
+            <td>
+<p>Shows an example of a medication list authored by a related person for the <em>AU Medicine List</em> profile. Patient: Suzanne Simmons</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="List-example2.html" title="List/example2">List - Medicine list with changes</a>
+            </td>
+            <td>
+<p>Shows an example of a medication list for the <em>AU Medicine List</em> profile, representing a snapshot of a patient's current, amended, and ceased medications. Patient: David Goodpatient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="List-example1.html" title="List/example1">List - Medicine list with no known current medicine</a>
+            </td>
+            <td>
+<p>Shows an example of a medication list with no current medications for the <em>AU Medicine List</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="List-example0.html" title="List/example0">List - Medicine list with referenced entries</a>
+            </td>
+            <td>
+<p>Shows an example of a medication list for the <em>AU Medicine List</em> profile, representing a snapshot of a patient's current medications. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example8.html" title="Location/example8">Location - Leafy Grove Home for the Aged</a>
+            </td>
+            <td>
+<p>Shows an example of a location for the <em>AU Base Location</em> profile, representing a nursing home 'Leafy Grove Home for the Aged' as a location.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example9.html" title="Location/example9">Location - Leafy Grove Home for the Not Very Aged</a>
+            </td>
+            <td>
+<p>Shows an example of a location for the <em>AU Base Location</em> profile, representing a nursing home 'Honourable Mark's Home For Aged Men' as a location.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example0.html" title="Location/example0">Location - a hospital location with managing organisation of example0</a>
+            </td>
+            <td>
+<p>Shows an example of a hospital location for the <em>AU Base Location</em> profile. The resource includes the location details and a reference to the managing organisation, Downunder Hospital.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example5.html" title="Location/example5">Location - for mobile services that can be delivered in a person's house, apartment, or unit</a>
+            </td>
+            <td>
+<p>Shows an example of a mobile, home-based service location for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example7.html" title="Location/example7">Location - for mobile services that can be delivered in residential care facilities</a>
+            </td>
+            <td>
+<p>Shows an example of a mobile, residential-care-based service location for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example6.html" title="Location/example6">Location - for mobile services that can be delivered in schools</a>
+            </td>
+            <td>
+<p>Shows an example of a mobile, school-based service location for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example4.html" title="Location/example4">Location - for services delivered by phone, video or online</a>
+            </td>
+            <td>
+<p>Shows an example of a virtual telehealth service location for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example3.html" title="Location/example3">Location - of a Practitioner as a General Practitioner</a>
+            </td>
+            <td>
+<p>Shows an example of a location, Family Medicine Clinic, at which the General Practitioner provides care for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example2.html" title="Location/example2">Location - of a Practitioner as a Pathologist</a>
+            </td>
+            <td>
+<p>Shows an example of a location at a specific level within a hospital for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-example1.html" title="Location/example1">Location - of a Practitioner as a Radiologist</a>
+            </td>
+            <td>
+<p>Shows an example of a Location resource for the <em>AU Base Location</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-BrandedPackSingleActiveIngredient0.html"
+                  title="Medication/BrandedPackSingleActiveIngredient0">Medication - Branded Pack With Single Active Ingredient</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Chlorsig (chloramphenicol 0.5%, eye drops), defined by its branded product, single active ingredient, strength, and form for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-BrandedPack0.html" title="Medication/BrandedPack0">Medication - Branded Pack of Nexium HP7 20;500;500</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Nexium HP7 (14 esomeprazole 20 mg tablets, 28 amoxicillin 500 mg capsules, 14 clarithromycin 500 mg tablets, 1 pack), defined by its branded packaging, manufacturer, and form for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-BrandProductwithBatchDetails0.html"
+                  title="Medication/BrandProductwithBatchDetails0">Medication - Branded Pack with Batch Details</a>
+            </td>
+            <td>
+<p>Shows an example of a branded medication, Norvasc, containing the active ingredient amlodipine (10 mg) as a tablet, with batch details including lot number and expiration date, for the <em>AU Base Medication</em> profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-GenericPack0.html" title="Medication/GenericPack0">Medication - Generic Pack of paracetamol 500mg (100)</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Paracetamol 500 mg tablet (100 tablets per pack), defined by its generic packaging, form, and coding for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-UnbrandedProduct0.html"
+                  title="Medication/UnbrandedProduct0">Medication - Unbranded Product of clarithromycin 500mg tablet</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Clarithromycin 500mg tablet, defined by dose, form, and strength for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-UnbrandedProduct1.html"
+                  title="Medication/UnbrandedProduct1">Medication - Unbranded Product of esomeprazole 20mg tablet</a>
+            </td>
+            <td>
+<p>Shows an example of an unbranded product, Esomeprazole 20mg tablet, defined by dose, form, and strength for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-UnbrandedProduct2.html"
+                  title="Medication/UnbrandedProduct2">Medication - Unbranded product of amoxicillin 500mg capsule</a>
+            </td>
+            <td>
+<p>Shows an example of an unbranded product, Amoxicillin 500mg capsule, defined by dose, form, and strength for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-BrandedPack1.html" title="Medication/BrandedPack1">Medication - branded pack</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Nexium Hp7 (14 x Nexium tablets, 28 x Amoxil capsules, 14 x Klacid tablets) in a single pack, defined by its branded and unbranded package information, manufacturer, and form for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-DoseBased.html" title="Medication/DoseBased">Medication - dose based</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Fluconazole-containing product, injection, 200 mg/100 mL, defined by dose, form, and strength for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-UncodedProduct0.html"
+                  title="Medication/UncodedProduct0">Medication - uncoded medicinal product information</a>
+            </td>
+            <td>
+<p>Shows an example of a medication with uncoded medicinal product information, Crestor (Rosuvastatin) 20mg tablet in a 30-pack, defined by its brand and generic names, manufacturer, dose, form, and strength for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-StrengthExtension0.html"
+                  title="Medication/StrengthExtension0">Medication - with Generic Name and Medication Strength Extensions</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Panadeine, as a caplet, with the generic name and medication strength specified in extensions, for the <em>AU Base Medication</em> profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-StrengthExtension1.html"
+                  title="Medication/StrengthExtension1">Medication - with Medication Strength Extension</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Zolgensma, as a solution for infusion, with the medication strength specified in an extension, for the <em>AU Base Medication</em> profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-IngredientStrengthExtension0.html"
+                  title="Medication/IngredientStrengthExtension0">Medication - with backported R5 Ingredient Strength Element</a>
+            </td>
+            <td>
+<p>Shows an example of a medication, Tadim, containing the ingredient colistimethate (1 Million IU) as a powder, with ingredient strength specified using the preadopted R5 element strengthCodeableConcept, for the <em>AU Base Medication</em> profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-FourOrMoreActiveIngredientsProduct0.html"
+                  title="Medication/FourOrMoreActiveIngredientsProduct0">Medication - with four or more active ingredients</a>
+            </td>
+            <td>
+<p>Shows an example of a branded medication, Stribild, containing four active ingredients and defined as a tablet for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-TwoActiveIngredientsProduct0.html"
+                  title="Medication/TwoActiveIngredientsProduct0">Medication - with two active ingredients product</a>
+            </td>
+            <td>
+<p>Shows an example of a medication with two active ingredients, perindopril arginine (10 mg) and amlodipine (10 mg), defined as a tablet for the <em>AU Base Medication</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-example0.html"
+                  title="MedicationAdministration/example0">MedicationAdministration - Administration of Chlorsig eye drops</a>
+            </td>
+            <td>
+<p>Shows an example of administration of Chlorsig to a patient for the <em>AU Base MedicationAdministration</em> profile, administered by a related person. Patient: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-example1.html"
+                  title="MedicationAdministration/example1">MedicationAdministration - Self-administration of lantus 100 units/mL injection</a>
+            </td>
+            <td>
+<p>Shows an example of a medication administration that is a self-administration of lantus 100 units/mL injection for the <em>AU Base MedicationAdministration</em> profile. Patient: Sarah Simmons.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-example0.html"
+                  title="MedicationDispense/example0">MedicationDispense - First dispense for Reaptan</a>
+            </td>
+            <td>
+<p>Shows an example of a medication dispense for the <em>AU Base MedicationDispense</em> profile, representing the first dispensing of Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-example1.html"
+                  title="MedicationDispense/example1">MedicationDispense - Second dispense for Reaptan</a>
+            </td>
+            <td>
+<p>Shows an example of a medication dispense for the <em>AU Base MedicationDispense</em> profile, representing the second dispensing of Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablets. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-example2.html"
+                  title="MedicationRequest/example2">MedicationRequest - Prescription with brand and generic name extensions</a>
+            </td>
+            <td>
+<p>Shows an example of a medication request for the <em>AU Base MedicationRequest</em> profile, representing a practitioner's order for the patient to take Reaptan for pain management, with detailed dosage instructions and dispensing information. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-example1.html"
+                  title="MedicationRequest/example1">MedicationRequest - a prescription for Stribild tablet</a>
+            </td>
+            <td>
+<p>Shows an example of a medication request for the <em>AU Base MedicationRequest</em> profile, representing a practitioner's order for a patient to take Stribild daily for human immunodeficiency virus (HIV) infection, with all repeats supplied concurrently for overseas travel. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-example0.html"
+                  title="MedicationRequest/example0">MedicationRequest - a prescription for codeine with paracetamol</a>
+            </td>
+            <td>
+<p>Shows an example of a medication request for the <em>AU Base MedicationRequest</em> profile, representing a practitioner's order for a patient to take paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablets for pain management. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationStatement-example2.html"
+                  title="MedicationStatement/example2">MedicationStatement - Practitioner reports patient has taken Diflucan in the past but is not taking it any more</a>
+            </td>
+            <td>
+<p>Shows an example of a medication statement for the <em>AU Base MedicationStatement</em> profile, representing a practitioner reporting that the patient has taken Diflucan in the past but is not taking it anymore. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationStatement-example1.html"
+                  title="MedicationStatement/example1">MedicationStatement - of a record of a patient's long-term use of medication</a>
+            </td>
+            <td>
+<p>Shows an example of a medication statement for the <em>AU Base MedicationStatement</em> profile, including informative record of a patient's long-term use of medication. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationStatement-example0.html"
+                  title="MedicationStatement/example0">MedicationStatement - of a record of a patient's use of medication</a>
+            </td>
+            <td>
+<p>Shows an example of a medication statement for the <em>AU Base MedicationStatement</em> profile, representing a patient's active use of a branded medication with specific timing and dosage details. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-specimen-hepatitis-b-serology.html"
+                  title="Observation/specimen-hepatitis-b-serology">Observation - Measurement of Hepatitis B surface antibody</a>
+            </td>
+            <td>
+<p>Shows an example of a laboratory observation for the <em>AU Base Pathology Result</em> profile, demonstrating a final serology result for Hepatitis B surface antibody. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-norelevantfinding-example1.html"
+                  title="Observation/norelevantfinding-example1">Observation - of no relevant finding of immunisations</a>
+            </td>
+            <td>
+<p>Shows an example of an observation asserting no history of immunisation for the <em>AU Assertion of No Relevant Finding</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-norelevantfinding-example2.html"
+                  title="Observation/norelevantfinding-example2">Observation - of no relevant finding of known history of conditions</a>
+            </td>
+            <td>
+<p>Shows an example of an observation asserting no known history of conditions for the <em>AU Assertion of No Relevant Finding</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-norelevantfinding-example3.html"
+                  title="Observation/norelevantfinding-example3">Observation - of no relevant finding of patient taking any medications</a>
+            </td>
+            <td>
+<p>Shows an example of an observation asserting that the patient is not taking any medications for the <em>AU Assertion of No Relevant Finding</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-norelevantfinding-example0.html"
+                  title="Observation/norelevantfinding-example0">Observation - of no relevant finding of procedure</a>
+            </td>
+            <td>
+<p>Shows an example of an observation asserting no history of procedure for the <em>AU Assertion of No Relevant Finding</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example2.html" title="Organization/example2">Organization - Holistic Medical Pty Ltd with ABN and HPI-O</a>
+            </td>
+            <td>
+<p>Shows an example of an organisation, Holistic Medical Pty Ltd as trustee for Smith Family Trust, for the <em>AU Base Organization</em> profile, with HPI-O and ABN identifiers, and contact details including a work email address and a physical address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example5.html" title="Organization/example5">Organization - The Corporation of the Council of the Ward of Nundah</a>
+            </td>
+            <td>
+<p>Shows an example of a religious institution, The Corporation of the Synod of the Diocese of Nundah, for the <em>AU Base Organization</em> profile, with an ABN, address and contact details.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-5-8631-1.html" title="Organization/5-8631-1">Organization - a Pathology organisation with HPI-O and is a parent organization</a>
+            </td>
+            <td>
+<p>Shows an example of a parent pathology and diagnostic imaging organisation with a HPI-O identifier, Test Org - DigitalHealth 5, for the <em>AU Base Organization</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example6.html" title="Organization/example6">Organization - a Pathology organisation with NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O</a>
+            </td>
+            <td>
+<p>Shows an example of a pathology organisation, ACME Pathology, for the <em>AU Base Organization</em> profile, with multiple identifiers such as HPI-O, NATA Accreditation Number, ABN, ACN, and PAI-O, and a reference to its parent organisation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example4.html" title="Organization/example4">Organization - a hospital with an HPIO</a>
+            </td>
+            <td>
+<p>Shows an example of a hospital organisation, Downunder Hospital, for the <em>AU Base Organization</em> profile, with a HPI-O.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example3.html" title="Organization/example3">Organization - a typical Organisation the General Practitioner belongs to</a>
+            </td>
+            <td>
+<p>Shows an example of an organisation, Devonport Family Medicine Clinic, to which the General Practitioner belongs for the <em>AU Base Organization</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example1.html" title="Organization/example1">Organization - a typical Organisation the Radiologist belongs to</a>
+            </td>
+            <td>
+<p>Shows an example of an organisation, Albion Hospital, for the <em>AU Base Organization</em> profile, with an ABN identifier, type as Private Hospital, and contact details including phone numbers and email addresses.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example8.html" title="Organization/example8">Organization - with HAE</a>
+            </td>
+            <td>
+<p>Shows an example of an organisation, Metro Health Administration Services, for the <em>AU Base Organization</em> profile, with a HAE, name, contact details, and address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example0.html" title="Organization/example0">Organization - with HPI-O</a>
+            </td>
+            <td>
+<p>Shows an example of an organisation, Downunder Hospital, for the <em>AU Base Organization</em> profile, with a HPI-O, name, contact details, and address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-example7.html" title="Organization/example7">Organization - with HSP-O</a>
+            </td>
+            <td>
+<p>Shows an example of an organisation, Sunshine Home Care Services, for the <em>AU Base Organization</em> profile, with a HSP-O, name, contact details, and address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-address-example2.html" title="Patient/address-example2">Patient - Australian No Fixed Address</a>
+            </td>
+            <td>
+<p>Shows an example of an anonymous patient with no fixed address for the <em>AU Base Patient</em> profile, indicating a temporary address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-address-example3.html" title="Patient/address-example3">Patient - Australian address with identifiers</a>
+            </td>
+            <td>
+<p>Shows an example of a patient address for the <em>AU Base Patient</em> profile, with identifiers</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example6.html" title="Patient/example6">Patient - as a Culturally and linguistically diverse (CALD) patient 1</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, William Rigny, who requires an interpreter for healthcare communication, with their preferred communication language specified, for the <em>AU Base Patient</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example7.html" title="Patient/example7">Patient - as a Culturally and linguistically diverse (CALD) patient 2</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Alejandro Hernández, born in Mexico and requiring an interpreter for healthcare communication, for the <em>AU Base Patient</em> profile. The example also includes Alejandro's gender identity and their date of arrival in Australia.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example4.html" title="Patient/example4">Patient - as a child born in 2008</a>
+            </td>
+            <td>
+<p>Shows an example of a child patient, Suzanne Simmons, for the <em>AU Base Patient</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example5.html" title="Patient/example5">Patient - as a mother for the patient in example 4</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Sarah Simmons, as the mother of Suzanne Simmons in example 4, for the <em>AU Base Patient</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example-sex-and-gender.html"
+                  title="Patient/example-sex-and-gender">Patient - as transgender person with sex and gender and sex parameter for clinical use</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Patricia Roth, for <em>AU Base Patient</em> profile that demonstrates the adopted extensions for sex and gender. This example is taken and adapted from the R5 Transgender Person Example.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example8.html" title="Patient/example8">Patient - male born in 1949 with address and contact details</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Nicholas Jones, for the <em>AU Base Patient</em> profile. The resource includes an IHI, Australian Indigenous Status extension, and contact details and address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-address-example0.html" title="Patient/address-example0">Patient - structured Australian Address</a>
+            </td>
+            <td>
+<p>Shows an example of a patient with structured work addresses, including a postal address and a physical address, for the <em>AU Base Patient</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-address-example1.html" title="Patient/address-example1">Patient - unstructured Australian Address</a>
+            </td>
+            <td>
+<p>Shows an example of a patient with an unstructured physical address for the <em>AU Base Patient</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-DateAccuracyIndicatorAAAexample0.html"
+                  title="Patient/DateAccuracyIndicatorAAAexample0">Patient - with Birth Date Accuracy Indicator of AAA</a>
+            </td>
+            <td>
+<p>Shows an example of a patient for the <em>AU Base Patient</em> profile with Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-DateAccuracyIndicatorAAUexample1.html"
+                  title="Patient/DateAccuracyIndicatorAAUexample1">Patient - with Birth Date Accuracy Indicator of AAU</a>
+            </td>
+            <td>
+<p>Shows an example of a patient for the <em>AU Base Patient</em> profile with Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-DateAccuracyIndicatorUAAexample2.html"
+                  title="Patient/DateAccuracyIndicatorUAAexample2">Patient - with Birth Date Accuracy Indicator of UAA</a>
+            </td>
+            <td>
+<p>Shows an example of a patient for the <em>AU Base Patient</em> profile with Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-DateAccuracyIndicatorUEAexample3.html"
+                  title="Patient/DateAccuracyIndicatorUEAexample3">Patient - with Birth Date Accuracy Indicator of UEA</a>
+            </td>
+            <td>
+<p>Shows an example of a patient for the <em>AU Base Patient</em> profile with Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-DateAccuracyIndicatorUUUexample4.html"
+                  title="Patient/DateAccuracyIndicatorUUUexample4">Patient - with Birth Date Accuracy Indicator of UUU</a>
+            </td>
+            <td>
+<p>Shows an example of a patient for the <em>AU Base Patient</em> profile with Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example1.html" title="Patient/example1">Patient - with IHI, DVA Number (with specific card colour) and the extension for Indigenous Status</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Harry Dan, for the <em>AU Base Patient</em> profile. The resource includes IHI (expired) and DVA Gold Card Number, extension for Australian Veteran Status and Indigenous Status.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example0.html" title="Patient/example0">Patient - with IHI, Medicare Card Number, patient internal identifier and the extension for Indigenous Status</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Stella Franklin, for the <em>AU Base Patient</em> profile. The resource includes IHI, Medicare Card Number, Health Card Number, patient internal identifier and extensions for Australian Indigenous Status, IHI validation name context, and gender identity.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example3.html" title="Patient/example3">Patient - with birth date and birth time</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, John Smith, for the <em>AU Base Patient</em> profile. The resource includes a name, email contact, birth details (date and time with an extension for date accuracy), and residential address.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example2.html" title="Patient/example2">Patient - with no birth date, and is eligible for Closing the Gap registration</a>
+            </td>
+            <td>
+<p>Shows an example of a patient, Sally Grant, for the <em>AU Base Patient</em> profile. The resource includes a Medicare Number, extensions for Australian Indigenous Status and Closing the Gap registration, with unknown date of birth.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example4.html" title="Practitioner/example4">Practitioner - a typical Ahpra registered professional</a>
+            </td>
+            <td>
+<p>Shows an example of a practitioner, Dr. Robert Smith, with multiple identifiers (HPI-I and Ahpra Registration Number), qualifications and communication language for the <em>AU Base Practitioner</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example3.html" title="Practitioner/example3">Practitioner - a typical Practitioner as a General Practitioner</a>
+            </td>
+            <td>
+<p>Shows an example of a practitioner,  Dr. Francis Fernando, with a HPI-I and Ahpra Registration Number for the <em>AU Base Practitioner</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example2.html" title="Practitioner/example2">Practitioner - as a Pathologist</a>
+            </td>
+            <td>
+<p>Shows an example of a Pathologist, Dr. Peter Winslow, for the <em>AU Base Practitioner</em> profile, with an Ahpra Registration Number.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example1.html" title="Practitioner/example1">Practitioner - as a Radiologist</a>
+            </td>
+            <td>
+<p>Shows an example of a Radiologist, Dr. Steve Smith, for the <em>AU Base Practitioner</em> profile, with an Ahpra Registration Number.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example-sex-and-gender.html"
+                  title="Practitioner/example-sex-and-gender">Practitioner - sex and gender</a>
+            </td>
+            <td>
+<p>Shows an example of a practitioner for the <em>AU Base Practitioner</em> profile that demonstrates the adopted extensions for sex and gender.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example0.html" title="Practitioner/example0">Practitioner - with HPI-I and Prescriber Number</a>
+            </td>
+            <td>
+<p>Shows an example of a practitioner, Dr. Helen Mayo, with multiple identifiers including HPI-I, Prescriber Number, Ahpra Registration Number, and Care Agency Employee Identifier and use of HPI-I validation name context extension for the <em>AU Base Practitioner</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-example3.html" title="PractitionerRole/example3">PractitionerRole - a typical Practitioner Role as a General Practitioner</a>
+            </td>
+            <td>
+<p>Shows an example of a General Practitioner role for the <em>AU Base Practitioner</em> profile, including a Medicare Provider Number identifier, contact details, references to the associated Practitioner, Organization, Location, and HealthcareService, as well as availability on weekdays and unavailability on weekends.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-example1.html" title="PractitionerRole/example1">PractitionerRole - a typical Practitioner Role as a Radiologist</a>
+            </td>
+            <td>
+<p>Shows an example of a Radiologist role for the <em>AU Base PractitionerRole</em> profile,  including a National Provider Identifier at Organisation (NPIO) identifier, contact details, references to the associated Practitioner, Organization, Location, and HealthcareService, as well as availability exceptions for public holidays.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-example2.html" title="PractitionerRole/example2">PractitionerRole - as a Pathologist</a>
+            </td>
+            <td>
+<p>Shows an example of a General pathologist role for the <em>AU Base PractitionerRole</em> profile, including an Employee Number identifier, specialty in General Pathology, contact details, references to the associated Practitioner, Organization, Location, and HealthcareService, as well as availability times.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-example0.html" title="PractitionerRole/example0">PractitionerRole - with Provider Number and ANZSCO coded role</a>
+            </td>
+            <td>
+<p>Shows an example of a Cardiologist role for the <em>AU Base PractitionerRole</em> profile,  including a Medicare Provider Number identifier, specialty in Cardiology, contact details for work and after-hours purposes, and references to the associated Practitioner, Organization, and Location.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-example4.html" title="PractitionerRole/example4">PractitionerRole - with assigning authority</a>
+            </td>
+            <td>
+<p>Shows an example of a Cardiologist role for the <em>AU Base PractitionerRole</em> profile,  including identifiers for Medicare Provider Number and Vendor Directory, an active status, contact details, references to the associated Practitioner, Organization, Location, and an Endpoint for secure messaging.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-example1.html" title="Procedure/example1">Procedure - Cardiac catheterisation</a>
+            </td>
+            <td>
+<p>Shows an example of a completed cardiac catheterisation procedure for the <em>AU Base Procedure</em> profile. Patient: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-example0.html" title="Procedure/example0">Procedure - Cryotherapy</a>
+            </td>
+            <td>
+<p>Shows an example of a completed cryotherapy procedure for the <em>AU Base Procedure</em> profile. Patient: William Rigny.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-example2.html" title="Procedure/example2">Procedure - Stent placement</a>
+            </td>
+            <td>
+<p>Shows an example of a completed procedure for the <em>AU Base Procedure</em> profile. Patient: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-example1.html" title="RelatedPerson/example1">RelatedPerson - as a carer for an older patient</a>
+            </td>
+            <td>
+<p>Shows an example of a related person, Mary Smith, who is a caregiver for Harry Dan, for the <em>AU Base RelatedPerson</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-example2.html" title="RelatedPerson/example2">RelatedPerson - as a mother for the patient in example 4</a>
+            </td>
+            <td>
+<p>Shows an example of a related person, Sarah Simmons, who is the mother of Suzanne Simmons, for the <em>AU Base RelatedPerson</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-example0.html" title="RelatedPerson/example0">RelatedPerson - as attester party</a>
+            </td>
+            <td>
+<p>Shows an example of a related person, Benedicte du Marche, who is the next-of-kin for Stella Franklin, for the <em>AU Base RelatedPerson</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-example-sex-and-gender.html"
+                  title="RelatedPerson/example-sex-and-gender">RelatedPerson - as family member with sex and gender</a>
+            </td>
+            <td>
+<p>Shows an example of a related person, Alex Baker, for the <em>AU Base RelatedPerson</em> profile, demonstrating the adopted extensions for sex and gender.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-example3.html" title="RelatedPerson/example3">RelatedPerson - as father</a>
+            </td>
+            <td>
+<p>Shows an example of a related person, Bill Simmons, who is the father of Alejandro Hernández, for the <em>AU Base RelatedPerson</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-hepatitis-b-antibody.html"
+                  title="ServiceRequest/hepatitis-b-antibody">ServiceRequest - for Hepatitis B surface antibody measurement</a>
+            </td>
+            <td>
+<p>Shows an example of a completed request for Hepatitis B surface antibody measurement for the <em>AU Base ServiceRequest</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-path-example0.html"
+                  title="ServiceRequest/path-example0">ServiceRequest - full blood count, and sex parameter for clinical use</a>
+            </td>
+            <td>
+<p>Shows an example of an active request for a full blood count for the <em>AU Base ServiceRequest</em> profile with Sex Parameter for Clinical Use. Patient: Harry Dan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-serum.html" title="Specimen/serum">Specimen - Serum sample</a>
+            </td>
+            <td>
+<p>Shows an example of a serum sample specimen for the <em>AU Base Specimen</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-example0.html" title="Substance/example0">Substance - body substance of epiglottic mucus</a>
+            </td>
+            <td>
+<p>Shows an example for a body substance of epiglottic mucus for the AU Base Substance profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-example1.html" title="Substance/example1">Substance - peanuts as an allergen</a>
+            </td>
+            <td>
+<p>Shows an example for an allergen substance of peanuts for the <em>AU Base Substance</em> profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-different-authors.html"
+                  title="Composition/different-authors">​Composition - with some sections having a different section author to the composition author</a>
+            </td>
+            <td>
+<p>Shows an example of a composition with sections authored by different individuals for the <em>AU Base Composition</em> profile. Patient: Stella Franklin.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2017+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.base#6.0.1-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 15:06+0000">2026-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

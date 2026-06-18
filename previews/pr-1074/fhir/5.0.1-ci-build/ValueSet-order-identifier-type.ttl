@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/ValueSet/order-identifier-type> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "order-identifier-type"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet order-identifier-type</b></p><a name=\"order-identifier-type\"> </a><a name=\"hcorder-identifier-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4</code></p></div><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0203</code></a><span title=\"Version is explicitly stated to be 5.0.0\"> version ?5.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html#v2-0203-FGN\">FGN</a></td><td style=\"color: #cccccc\">Filler Group Number</td><td>Unique identifier assigned to a group of orders by the filler application.</td></tr><tr><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html#v2-0203-FILL\">FILL</a></td><td style=\"color: #cccccc\">Filler Identifier</td><td>An identifier for a request where the identifier is issued by the person, or service, that produces the observations or fulfills the request.</td></tr><tr><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html#v2-0203-PGN\">PGN</a></td><td style=\"color: #cccccc\">Placer Group Number</td><td>Unique identifier assigned to a group of orders by the placer application.</td></tr><tr><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html#v2-0203-PLAC\">PLAC</a></td><td style=\"color: #cccccc\">Placer Identifier</td><td>An identifier for a request where the identifier is issued by the person or service making the request.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/ValueSet/order-identifier-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.2.4.24" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "OrderIdentifierType"] ; # 
+  fhir:title [ fhir:v "Order Identifier Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T15:06:23+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Identifier types that may be associated with an order identifier in an Australian context."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "FGN" ]
+       ] [
+         fhir:code [ fhir:v "FILL" ]
+       ] [
+         fhir:code [ fhir:v "PGN" ]
+       ] [
+         fhir:code [ fhir:v "PLAC" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

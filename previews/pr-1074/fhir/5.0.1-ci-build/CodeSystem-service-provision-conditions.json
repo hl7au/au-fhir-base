@@ -1,0 +1,132 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "service-provision-conditions",
+  "meta" : {
+    "profile" : ["https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem service-provision-conditions</b></p><a name=\"service-provision-conditions\"> </a><a name=\"hcservice-provision-conditions\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>status</td><td>status</td><td>http://hl7.org/fhir/concept-properties#status</td><td>code</td><td>A property that indicates the status of the concept. One of active, experimental, deprecated, retired</td></tr><tr><td>deprecationDate</td><td>deprecationDate</td><td>http://hl7.org/fhir/concept-properties#deprecationDate</td><td>dateTime</td><td>The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/service-provision-conditions</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Deprecated</b></td><td><b>status</b></td><td><b>deprecationDate</b></td></tr><tr><td style=\"white-space:nowrap\">NFE<a name=\"service-provision-conditions-NFE\"> </a></td><td>No Fee</td><td>A free service where no payment or Medicare card is required.</td><td/><td/><td/></tr><tr><td style=\"white-space:nowrap\">NFM<a name=\"service-provision-conditions-NFM\"> </a></td><td>No Fee (means tested)</td><td>All or some of the services provided are offered free of charge, however the decision on the costs associated with the service or procedures offered will depend on a means test outcome.</td><td/><td/><td/></tr><tr><td style=\"white-space:nowrap\">BB<a name=\"service-provision-conditions-BB\"> </a></td><td>Bulk Billing</td><td>No fee for eligible services, with a Medicare card presented.</td><td/><td/><td/></tr><tr><td style=\"white-space:nowrap\">FAP<a name=\"service-provision-conditions-FAP\"> </a></td><td>Fees Apply</td><td>Fees apply for services provided.</td><td/><td/><td/></tr><tr><td style=\"white-space:nowrap\">DON<a name=\"service-provision-conditions-DON\"> </a></td><td>By Donation</td><td>All or some of the services provided are offered on a donation basis. The expectation on the donation is not defined.</td><td/><td/><td/></tr><tr><td style=\"white-space:nowrap\">COP<a name=\"service-provision-conditions-COP\"> </a></td><td>Co-payment</td><td>All or some of the services provided are subject to a co-payment, which may be in combination with private insurance.</td><td/><td/><td/></tr><tr><td style=\"white-space:nowrap\">MIX<a name=\"service-provision-conditions-MIX\"> </a></td><td>Mixed Billing</td><td>Bulk billing available with conditions, fees may apply.</td><td/><td/><td/></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">BBO<a name=\"service-provision-conditions-BBO\"> </a></td><td>Bulk Billing Only</td><td>Bulk Billing is offered under Medicare. ***Deprecation Comment:*** This code has been deprecated as it has been replaced by BB - Bulk Billing.</td><td>Deprecated</td><td>deprecated</td><td>2026-05-20</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">FBB<a name=\"service-provision-conditions-FBB\"> </a></td><td>Fees and Bulk Billing</td><td>All or some of the services provided are offered subject to a payment in combination with Bulk Billing. ***Deprecation Comment:*** This code has been deprecated as it has been replaced by MIX - Mixed Billing.</td><td>Deprecated</td><td>deprecated</td><td>2026-05-20</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"
+      }]
+    }
+  }],
+  "url" : "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.2.3.4.1.4.2"
+  }],
+  "version" : "6.0.1-ci-build",
+  "name" : "ServiceProvisionConditionsAustralianConcepts",
+  "title" : "Service Provision Conditions Australian Concepts",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-06-18T15:06:23+00:00",
+  "publisher" : "HL7 Australia",
+  "contact" : [{
+    "name" : "HL7 Australia FHIR Working Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://confluence.hl7.org/display/HAFWG",
+      "use" : "work"
+    }]
+  }],
+  "description" : "The Service Provision Conditions Australian Concepts code system defines concepts that identify the conditions under which a healthcare service is available/offered.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "copyright" : "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.",
+  "caseSensitive" : true,
+  "valueSet" : "http://terminology.hl7.org.au/ValueSet/service-provision-conditions",
+  "compositional" : false,
+  "versionNeeded" : false,
+  "content" : "complete",
+  "count" : 9,
+  "property" : [{
+    "code" : "status",
+    "uri" : "http://hl7.org/fhir/concept-properties#status",
+    "description" : "A property that indicates the status of the concept. One of active, experimental, deprecated, retired",
+    "type" : "code"
+  },
+  {
+    "code" : "deprecationDate",
+    "uri" : "http://hl7.org/fhir/concept-properties#deprecationDate",
+    "description" : "The date at which a concept was deprecated. Concepts that are deprecated but not inactive can still be used, but their use is discouraged",
+    "type" : "dateTime"
+  }],
+  "concept" : [{
+    "code" : "NFE",
+    "display" : "No Fee",
+    "definition" : "A free service where no payment or Medicare card is required."
+  },
+  {
+    "code" : "NFM",
+    "display" : "No Fee (means tested)",
+    "definition" : "All or some of the services provided are offered free of charge, however the decision on the costs associated with the service or procedures offered will depend on a means test outcome."
+  },
+  {
+    "code" : "BB",
+    "display" : "Bulk Billing",
+    "definition" : "No fee for eligible services, with a Medicare card presented."
+  },
+  {
+    "code" : "FAP",
+    "display" : "Fees Apply",
+    "definition" : "Fees apply for services provided."
+  },
+  {
+    "code" : "DON",
+    "display" : "By Donation",
+    "definition" : "All or some of the services provided are offered on a donation basis. The expectation on the donation is not defined."
+  },
+  {
+    "code" : "COP",
+    "display" : "Co-payment",
+    "definition" : "All or some of the services provided are subject to a co-payment, which may be in combination with private insurance."
+  },
+  {
+    "code" : "MIX",
+    "display" : "Mixed Billing",
+    "definition" : "Bulk billing available with conditions, fees may apply."
+  },
+  {
+    "code" : "BBO",
+    "display" : "Bulk Billing Only",
+    "definition" : "Bulk Billing is offered under Medicare. ***Deprecation Comment:*** This code has been deprecated as it has been replaced by BB - Bulk Billing.",
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2026-05-20"
+    }]
+  },
+  {
+    "code" : "FBB",
+    "display" : "Fees and Bulk Billing",
+    "definition" : "All or some of the services provided are offered subject to a payment in combination with Bulk Billing. ***Deprecation Comment:*** This code has been deprecated as it has been replaced by MIX - Mixed Billing.",
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2026-05-20"
+    }]
+  }]
+}
