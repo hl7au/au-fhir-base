@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="multiple-information-recipients"/>
+  <meta>
+    <lastUpdated value="2013-05-28T22:12:21Z"/>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition multiple-information-recipients</b></p><a name="multiple-information-recipients"> </a><a name="hcmultiple-information-recipients"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2013-05-28 22:12:21+0000</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-composition.html">AU Base Composition</a></p></div><p><b>Information Recipient</b>: <a href="Patient-example0.html">Franklin</a></p><p><b>Information Recipient</b>: <a href="Practitioner-example0.html">Doctor Mayo</a></p><p><b>Information Recipient</b>: <a href="Organization-example0.html">Downunder Hospital</a></p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 18842-5}">Discharge Summarization Note</span></p><p><b>date</b>: 2018-06-03 12:30:02+0000</p><p><b>author</b>: <a href="PractitionerRole-example0.html">Doctor Mayo</a></p><p><b>title</b>: Discharge Summary</p></div>
+  </text>
+  <!-- Multiple information-recipients of different resource type -->
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/information-recipient">
+    <valueReference>
+      <reference value="Patient/example0"/>
+      <display value="Franklin"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/information-recipient">
+    <valueReference>
+      <reference value="Practitioner/example0"/>
+      <display value="Doctor Mayo"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/information-recipient">
+    <valueReference>
+      <reference value="Organization/example0"/>
+      <display value="Downunder Hospital"/>
+    </valueReference>
+  </extension>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18842-5"/>
+    </coding>
+    <text value="Discharge Summarization Note"/>
+  </type>
+  <subject>
+    <reference value="Patient/example0"/>
+    <display value="Franklin"/>
+  </subject>
+  <date value="2018-06-03T12:30:02Z"/>
+  <author>
+    <reference value="PractitionerRole/example0"/>
+    <display value="Doctor Mayo"/>
+  </author>
+  <title value="Discharge Summary"/>
+</Composition>

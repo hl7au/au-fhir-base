@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/PractitionerRole/example4> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole example4</b></p><a name=\"example4\"> </a><a name=\"hcexample4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-practitionerrole.html\">AU Base PractitionerRole</a></p></div><p><b>identifier</b>: Medicare Provider Number/1234561A, Vendor Directory Identifier/BD6000000X9</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-example0.html\">Practitioner Helen Mayo </a></p><p><b>organization</b>: <a href=\"Organization-example0.html\">Organization Downunder Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 17561000}\">Cardiologist</span></p><p><b>location</b>: <a href=\"Location-example0.html\">Location Downunder Hospital Blacktown</a></p><p><b>telecom</b>: ph: 0255503333(Work)</p><p><b>endpoint</b>: <a href=\"Endpoint-example0.html\">Endpoint Telstra Health Secure Messaging Endpoint</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UPIN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Medicare Provider Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/medicare-provider-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1234561A" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-assigningauthority"^^xsd:anyURI ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "namespace-id"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medical-Objects"
+         ]
+       ] [
+         fhir:url [ fhir:v "universal-id"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "33443682-91F6-11D2-8F2C-444553540123"
+         ]
+       ] [
+         fhir:url [ fhir:v "universal-id-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "GUID"
+         ]
+       ] )
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "VDI" ] ;
+         fhir:display [ fhir:v "Vendor Directory Identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "Vendor Directory Identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.medical-objects.com.au/id/routing-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "BD6000000X9" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Medical-Objects" ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:link <http://hl7.org.au/fhir/Practitioner/example0> ;
+     fhir:reference [ fhir:v "Practitioner/example0" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <http://hl7.org.au/fhir/Organization/example0> ;
+     fhir:reference [ fhir:v "Organization/example0" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       a sct:17561000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "17561000" ] ;
+       fhir:display [ fhir:v "Cardiologist" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <http://hl7.org.au/fhir/Location/example0> ;
+     fhir:reference [ fhir:v "Location/example0" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0255503333" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:endpoint ( [
+     fhir:link <http://hl7.org.au/fhir/Endpoint/example0> ;
+     fhir:reference [ fhir:v "Endpoint/example0" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

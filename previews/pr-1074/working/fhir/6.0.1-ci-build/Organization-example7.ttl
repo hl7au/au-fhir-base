@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Organization/example7> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example7"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization example7</b></p><a name=\"example7\"> </a><a name=\"hcexample7\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: HSP-O/8003641000000000</p><p><b>active</b>: true</p><p><b>name</b>: Sunshine Home Care Services</p><p><b>telecom</b>: <a href=\"mailto:admin@sunshinehomecare.example.com\">admin@sunshinehomecare.example.com</a>, <a href=\"tel:+61355550123\">+61 3 5555 0123</a></p><p><b>address</b>: 125 Care Street Melbourne VIC 3000 AU (work)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "HSPO" ] ;
+         fhir:display [ fhir:v "Healthcare Support Service Provider - Organisation" ]
+       ] ) ;
+       fhir:text [ fhir:v "HSP-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hspo/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003641000000000" ] #   The value of 8003641000000000 should be replaced with a registered example value when one becomes available.  
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "Sunshine Home Care Services"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "admin@sunshinehomecare.example.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+61 3 5555 0123" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "125 Care Street" ] ) ;
+     fhir:city [ fhir:v "Melbourne" ] ;
+     fhir:state [ fhir:v "VIC" ] ;
+     fhir:postalCode [ fhir:v "3000" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

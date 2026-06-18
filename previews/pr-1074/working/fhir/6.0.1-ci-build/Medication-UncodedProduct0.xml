@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="UncodedProduct0"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication UncodedProduct0</b></p><a name="UncodedProduct0"> </a><a name="hcUncodedProduct0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-medication.html">AU Base Medication</a></p></div><p><b>Medication Generic Drug Name</b>: Rosuvastatin</p><p><b>Medication Brand Name</b>: Crestor</p><p><b>code</b>: <span title="Codes:">Cresor 20mg tablet, 30 pack</span></p><p><b>manufacturer</b>: A. Menarini Australia Pty Ltd</p><p><b>form</b>: <span title="Codes:">Tablet</span></p><h3>Ingredients</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Rosuvastatin</span></td><td>20 mg/1 unit</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name">
+    <valueString value="Rosuvastatin"/>
+  </extension>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
+    <valueString value="Crestor"/>
+  </extension>
+  <code>
+    <text value="Cresor 20mg tablet, 30 pack"/>
+  </code>
+  <manufacturer>
+    <display value="A. Menarini Australia Pty Ltd"/>
+  </manufacturer>
+  <form>
+    <text value="Tablet"/>
+  </form>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Rosuvastatin"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="20"/>
+        <unit value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <unit value="unit"/>
+      </denominator>
+    </strength>
+  </ingredient>
+</Medication>

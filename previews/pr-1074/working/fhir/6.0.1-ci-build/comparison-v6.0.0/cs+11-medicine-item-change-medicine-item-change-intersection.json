@@ -1,0 +1,160 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "c5a34d3d-ec13-4916-a8bb-201f6ceb4393-33",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/c5a34d3d-ec13-4916-a8bb-201f6ceb4393-33",
+  "name" : "IntersectionMedicineItemChangeAndMedicineItemChange",
+  "title" : "Intersection of Medicine Item Change And Medicine Item Change",
+  "status" : "active",
+  "date" : "2026-06-18T16:33:11+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "concept" : [{
+    "code" : "nochange",
+    "display" : "Unchanged",
+    "definition" : "No change has been made to this medicine."
+  },
+  {
+    "code" : "changed",
+    "display" : "Change occurred",
+    "definition" : "A change has been made to this medicine; for example, new medicine prescribed or dosage change.",
+    "concept" : [{
+      "code" : "new",
+      "display" : "New",
+      "definition" : "A new medicine item is introduced.",
+      "concept" : [{
+        "code" : "prescribed",
+        "display" : "New prescription",
+        "definition" : "A new medicine item has been prescribed."
+      }]
+    },
+    {
+      "code" : "ceased",
+      "display" : "Ceased",
+      "definition" : "A medicine that was previously taken by the individual may actually be ceased as it required immediate attention. This cessation is anticipated to be permanent. Example uses: the medicine in question is considered ineffective or has caused serious adverse effects."
+    },
+    {
+      "code" : "suspended",
+      "display" : "Suspended",
+      "definition" : "A medicine that was previously taken by the individual may be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure."
+    },
+    {
+      "code" : "cancelled",
+      "display" : "Cancelled",
+      "definition" : "The prescription for this medicine item was cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition."
+    },
+    {
+      "code" : "amended",
+      "display" : "Amended",
+      "definition" : "The current medicine item has been changed in some way, e.g. dose, form, route, frequency change."
+    },
+    {
+      "code" : "new",
+      "display" : "New",
+      "definition" : "A new medicine item is introduced.",
+      "concept" : [{
+        "code" : "prescribed",
+        "display" : "New prescription",
+        "definition" : "A new medicine item has been prescribed."
+      },
+      {
+        "code" : "prescribed",
+        "display" : "New prescription",
+        "definition" : "A new medicine item has been prescribed."
+      }]
+    },
+    {
+      "code" : "ceased",
+      "display" : "Ceased",
+      "definition" : "A medicine that was previously taken by the individual may actually be ceased as it required immediate attention. This cessation is anticipated to be permanent. Example uses: the medicine in question is considered ineffective or has caused serious adverse effects."
+    },
+    {
+      "code" : "suspended",
+      "display" : "Suspended",
+      "definition" : "A medicine that was previously taken by the individual may be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure."
+    },
+    {
+      "code" : "cancelled",
+      "display" : "Cancelled",
+      "definition" : "The prescription for this medicine item was cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition."
+    },
+    {
+      "code" : "amended",
+      "display" : "Amended",
+      "definition" : "The current medicine item has been changed in some way, e.g. dose, form, route, frequency change."
+    }]
+  },
+  {
+    "code" : "recommended",
+    "display" : "Change was recommended",
+    "definition" : "A change has been recommended to this medicine but may not have occurred yet, e.g. medicine recommended to be stopped.",
+    "concept" : [{
+      "code" : "new-recommended",
+      "display" : "New recommended medicine",
+      "definition" : "A new medicine item is recommended.",
+      "concept" : [{
+        "code" : "prescription-recommended",
+        "display" : "Prescription recommended",
+        "definition" : "It may be recommended that the usual GP prescribe a new medicine to be taken by the individual. The addition may not be urgent or there may be an arrangement that all medicine changes are to be enacted by the GP as the coordinator of the individual‘s overall care."
+      }]
+    },
+    {
+      "code" : "review-recommended",
+      "display" : "Review recommended",
+      "definition" : "It may be recommended to the usual GP that a medicine that was previously taken by the individual be reviewed. The outcome of the review may be that the medicine is amended or stopped."
+    },
+    {
+      "code" : "cessation-recommended",
+      "display" : "Cessation recommended",
+      "definition" : "It may be recommended to the usual GP that a medicine that was previously taken by the individual be ceased."
+    },
+    {
+      "code" : "suspension-recommended",
+      "display" : "Suspension recommended",
+      "definition" : "It may be recommended to the usual GP that a medicine item that was previously taken by the individual be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure."
+    },
+    {
+      "code" : "cancellation-recommended",
+      "display" : "Cancellation recommended",
+      "definition" : "The prescription for this medicine item is recommended to be cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition."
+    },
+    {
+      "code" : "new-recommended",
+      "display" : "New recommended medicine",
+      "definition" : "A new medicine item is recommended.",
+      "concept" : [{
+        "code" : "prescription-recommended",
+        "display" : "Prescription recommended",
+        "definition" : "It may be recommended that the usual GP prescribe a new medicine to be taken by the individual. The addition may not be urgent or there may be an arrangement that all medicine changes are to be enacted by the GP as the coordinator of the individual‘s overall care."
+      },
+      {
+        "code" : "prescription-recommended",
+        "display" : "Prescription recommended",
+        "definition" : "It may be recommended that the usual GP prescribe a new medicine to be taken by the individual. The addition may not be urgent or there may be an arrangement that all medicine changes are to be enacted by the GP as the coordinator of the individual‘s overall care."
+      }]
+    },
+    {
+      "code" : "review-recommended",
+      "display" : "Review recommended",
+      "definition" : "It may be recommended to the usual GP that a medicine that was previously taken by the individual be reviewed. The outcome of the review may be that the medicine is amended or stopped."
+    },
+    {
+      "code" : "cessation-recommended",
+      "display" : "Cessation recommended",
+      "definition" : "It may be recommended to the usual GP that a medicine that was previously taken by the individual be ceased."
+    },
+    {
+      "code" : "suspension-recommended",
+      "display" : "Suspension recommended",
+      "definition" : "It may be recommended to the usual GP that a medicine item that was previously taken by the individual be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure."
+    },
+    {
+      "code" : "cancellation-recommended",
+      "display" : "Cancellation recommended",
+      "definition" : "The prescription for this medicine item is recommended to be cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition."
+    }]
+  }]
+}

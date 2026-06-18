@@ -1,0 +1,80 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "example-sex-and-gender",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-practitioner"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner example-sex-and-gender</b></p><a name=\"example-sex-and-gender\"> </a><a name=\"hcexample-sex-and-gender\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-practitioner.html\">AU Base Practitioner</a></p></div><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 446151000124109}\">Identifies as male gender</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA29518-0}\">he/him/his/his/himself</span></li></ul></blockquote><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title=\"Codes:{http://hl7.org/fhir/administrative-gender male}\">Male</span></li><li>type: <span title=\"Codes:{http://terminology.hl7.org.au/CodeSystem/rsg-type sex-gender}\">Sex/Gender</span></li><li>acquisitionDate: 2020-05-11</li></ul></blockquote><p><b>identifier</b>: HPI-I/8003619900015717</p><p><b>name</b>: John Davies </p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "446151000124109",
+          "display" : "Identifies as male gender"
+        }]
+      }
+    }]
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-pronouns",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA29518-0",
+          "display" : "he/him/his/his/himself"
+        }]
+      }
+    }]
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "code" : "male",
+          "display" : "Male"
+        }]
+      }
+    },
+    {
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org.au/CodeSystem/rsg-type",
+          "code" : "sex-gender"
+        }]
+      }
+    },
+    {
+      "url" : "acquisitionDate",
+      "valueDateTime" : "2020-05-11"
+    }]
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NPI",
+        "display" : "National provider identifier"
+      }],
+      "text" : "HPI-I"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+    "value" : "8003619900015717"
+  }],
+  "name" : [{
+    "family" : "Davies",
+    "given" : ["John"],
+    "prefix" : ["Dr"]
+  }]
+}

@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Patient/address-example3> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "address-example3"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient address-example3</b></p><a name=\"address-example3\"> </a><a name=\"hcaddress-example3\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>Northern Territory Office Department of Foreign Affairs and Trade GPO Box 1910 Darwin NT 0801 AU (work)</li><li>5th Floor, Northern Territory House, 22 Mitchell Street, Darwin, NT(work)</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/address-identifier"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "DPID" ] ;
+             fhir:display [ fhir:v "Australia Post Delivery Point Identifier" ]
+           ] ) ;
+           fhir:text [ fhir:v "DPID" ]
+         ] ;
+         fhir:system [ fhir:v "http://hl7.org.au/id/dpid"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "34567890" ] #  sample value DPID - does not correspond to the address information in this example 
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/address-identifier"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "GNAF" ] ;
+             fhir:display [ fhir:v "Geocoded National Address File Identifier" ]
+           ] ) ;
+           fhir:text [ fhir:v "G-NAF" ]
+         ] ;
+         fhir:system [ fhir:v "http://hl7.org.au/id/gnafidentifier"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "GAVIC411711441" ] #  sample value G-NAF Identifier - does not correspond to the address information in this example 
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "Northern Territory Office" ] [ fhir:v "Department of Foreign Affairs and Trade" ] [ fhir:v "GPO Box 1910" ] ) ;
+     fhir:city [ fhir:v "Darwin" ] ;
+     fhir:state [ fhir:v "NT" ] ;
+     fhir:postalCode [ fhir:v "0801" ] ;
+     fhir:country [ fhir:v "AU" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2013-06-08T10:57:34+01:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:text [ fhir:v "5th Floor, Northern Territory House, 22 Mitchell Street, Darwin, NT" ] ;
+     fhir:line ( [ fhir:v "5th Floor, Northern Territory House" ] [ fhir:v "22 Mitchell Street" ] ) ;
+     fhir:city [ fhir:v "Darwin" ] ;
+     fhir:state [ fhir:v "NT" ] ;
+     fhir:postalCode [ fhir:v "0800" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

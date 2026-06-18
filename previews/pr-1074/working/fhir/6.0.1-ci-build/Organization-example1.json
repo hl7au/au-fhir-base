@@ -1,0 +1,75 @@
+{
+  "resourceType" : "Organization",
+  "id" : "example1",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: ABN/51824753556</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 309895006}\">Private hospital</span></p><p><b>name</b>: Albion Hospital</p><blockquote><p><b>contact</b></p><p><b>purpose</b>: <span title=\"Codes:{http://terminology.hl7.org.au/CodeSystem/contact-purpose medical-record}\">Medical Record</span></p><p><b>telecom</b>: ph: (07) 5550 5556</p></blockquote><blockquote><p><b>contact</b></p><p><b>purpose</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type PRESS}\">Media enquiries</span></p><p><b>telecom</b>: <a href=\"mailto:press@albionhospital.example.com\">press@albionhospital.example.com</a>, ph: (07) 5550 5557</p></blockquote><blockquote><p><b>contact</b></p><p><b>purpose</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type HR}\">Human Resources</span></p><p><b>telecom</b>: <a href=\"mailto:hr@albionhospital.example.com\">hr@albionhospital.example.com</a></p></blockquote></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "ABN",
+        "display" : "Australian Business Number"
+      }],
+      "text" : "ABN"
+    },
+    "system" : "http://hl7.org.au/id/abn",
+    "value" : "51824753556"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "309895006",
+      "display" : "Private hospital"
+    }]
+  }],
+  "name" : "Albion Hospital",
+  "contact" : [{
+    "purpose" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+        "code" : "medical-record",
+        "display" : "Medical Record"
+      }]
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "(07) 5550 5556"
+    }]
+  },
+  {
+    "purpose" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
+        "code" : "PRESS",
+        "display" : "Press"
+      }],
+      "text" : "Media enquiries"
+    },
+    "telecom" : [{
+      "system" : "email",
+      "value" : "press@albionhospital.example.com"
+    },
+    {
+      "system" : "phone",
+      "value" : "(07) 5550 5557"
+    }]
+  },
+  {
+    "purpose" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
+        "code" : "HR"
+      }],
+      "text" : "Human Resources"
+    },
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hr@albionhospital.example.com"
+    }]
+  }]
+}

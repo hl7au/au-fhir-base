@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Medication",
+  "id" : "DoseBased",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-medication"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication DoseBased</b></p><a name=\"DoseBased\"> </a><a name=\"hcDoseBased\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medication.html\">AU Base Medication</a></p></div><p><b>form</b>: <span title=\"Codes:{http://snomed.info/sct 129011000036109}\">Injection</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>IsActive</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 31865003}\">Fluconazole</span></td><td>true</td><td>200 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span>/100 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></td></tr></table></div>"
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "129011000036109",
+      "display" : "Injection"
+    }]
+  },
+  "ingredient" : [{
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "extension" : [{
+          "url" : "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+          "valueCoding" : {
+            "system" : "http://terminology.hl7.org.au/CodeSystem/medication-type",
+            "code" : "UPD",
+            "display" : "Unbranded product with no strengths or form"
+          }
+        }],
+        "system" : "http://snomed.info/sct",
+        "code" : "31865003",
+        "display" : "Fluconazole"
+      }]
+    },
+    "isActive" : true,
+    "strength" : {
+      "numerator" : {
+        "value" : 200,
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      },
+      "denominator" : {
+        "value" : 100,
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mL"
+      }
+    }
+  }]
+}

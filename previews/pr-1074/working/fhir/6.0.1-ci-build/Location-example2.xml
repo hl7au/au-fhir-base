@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="example2"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-location"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Location example2</b></p><a name="example2"> </a><a name="hcexample2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-location.html">AU Base Location</a></p></div><p><b>identifier</b>: NATA Site Number/162899, LSPN/123333</p><p><b>status</b>: Active</p><p><b>address</b>: Level 1, Green Building, Albion Hospital, QLD</p><p><b>physicalType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type lvl}">Level</span></p><p><b>partOf</b>: <a href="Location-example1.html">Location: status = active; physicalType = Site</a></p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="NATAS"/>
+        <display value="NATA Site Number"/>
+      </coding>
+      <text value="NATA Site Number"/>
+    </type>
+    <system value="http://hl7.org.au/id/nata-site"/>
+    <!-- In Australia NATA numbers are an
+        incremental number that have been incremented to 5 digits, this example uses a fictional
+        NATA number from 100,000 + to ensure no conflict with real world values -->
+    <value value="162899"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="LSPN"/>
+        <display value="Location Specific Practice Number"/>
+      </coding>
+      <text value="LSPN"/>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/location-specific-practice-number"/>
+    <!-- In Australia LSPNs are an
+        incremental number that have been incremented to 5 digits, this example uses a fictional
+        LSPN from 100,000 + to ensure no conflict with real world values -->
+    <value value="123333"/>
+  </identifier>
+  <status value="active"/>
+  <address>
+    <type value="physical"/>
+    <text value="Level 1, Green Building, Albion Hospital, QLD"/>
+    <line value="Level 1, Green Building"/>
+    <line value="33 Slobodian Street"/>
+    <city value="Albion"/>
+    <state value="QLD"/>
+    <postalCode value="4010"/>
+    <country value="AU"/>
+  </address>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="lvl"/>
+      <display value="Level"/>
+    </coding>
+  </physicalType>
+  <partOf>
+    <reference value="Location/example1"/>
+  </partOf>
+</Location>

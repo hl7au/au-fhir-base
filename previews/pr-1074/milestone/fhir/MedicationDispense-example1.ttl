@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/MedicationDispense/example1> a fhir:MedicationDispense ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationDispense example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medicationdispense.html\">AU Base MedicationDispense</a></p></div><p><b>Dispense Number</b>: 2</p><p><b>identifier</b>: Local Dispense Identifier/776984994</p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 926213011000036100}\">Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10</span></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-example1.html\">Organization Albion Hospital</a></td></tr></table><p><b>authorizingPrescription</b>: <a href=\"MedicationRequest-example2.html\">MedicationRequest: identifier = Local Prescription Number: 53720010; status = active; intent = order; medication[x] = Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10; authoredOn = 2018-07-15; reasonCode = ; note = Patient requires an administration aid.</a></p><p><b>quantity</b>: 20 TAB</p><p><b>daysSupply</b>: 10 days</p><p><b>whenPrepared</b>: 2018-07-25 12:30:00+1000</p><p><b>whenHandedOver</b>: 2018-07-25 13:45:00+1000</p><p><b>receiver</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>note</b>: </p><blockquote><div><p>Patient administration aid is not accepted by patient.</p>\n</div></blockquote><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>1-2 tablets orally every 4-6 hours as needed for pain</td></tr></table><h3>Substitutions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>WasSubstituted</b></td></tr><tr><td style=\"display: none\">*</td><td>false</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/dispense-number"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LDI" ] ;
+         fhir:display [ fhir:v "Local Dispense Identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://albionhospital.example.com/pharmacy/dispenses"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "776984994" ] ;
+     fhir:assigner [
+       fhir:link <http://hl7.org.au/fhir/Organization/example1> ;
+       fhir:reference [ fhir:v "Organization/example1" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:926213011000036100 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "926213011000036100" ] ;
+       fhir:display [ fhir:v "Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <http://hl7.org.au/fhir/Organization/example1> ;
+       fhir:reference [ fhir:v "Organization/example1" ]
+     ]
+  ] ) ; # 
+  fhir:authorizingPrescription ( [
+     fhir:link <http://hl7.org.au/fhir/MedicationRequest/example2> ;
+     fhir:reference [ fhir:v "MedicationRequest/example2" ]
+  ] ) ; # 
+  fhir:quantity [
+     fhir:value [ fhir:v "20"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "TAB" ]
+  ] ; # 
+  fhir:daysSupply [
+     fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "days" ]
+  ] ; # 
+  fhir:whenPrepared [ fhir:v "2018-07-25T12:30:00+10:00"^^xsd:dateTime] ; # 
+  fhir:whenHandedOver [ fhir:v "2018-07-25T13:45:00+10:00"^^xsd:dateTime] ; # 
+  fhir:receiver ( [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient administration aid is not accepted by patient." ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "1-2 tablets orally every 4-6 hours as needed for pain" ]
+  ] ) ; # 
+  fhir:substitution [
+     fhir:wasSubstituted [ fhir:v false ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

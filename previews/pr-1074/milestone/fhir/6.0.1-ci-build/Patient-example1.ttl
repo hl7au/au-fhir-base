@@ -1,0 +1,106 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Patient/example1> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-patient.html\">AU Base Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Harry Dan  Male, DoB: 1939-08-25 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">DVA Number (Gold)/NBUR9080</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:hdan@amail.example.com\">hdan@amail.example.com</a></li><li>29 Gadsby Street Blacktown NSW 2148 Australia (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient resource and is used to indicate whether a person is serving, or has served, in the Australian Defence Force.\"><a href=\"StructureDefinition-veteran-status.html\">Australian Veteran Status</a></td><td colspan=\"3\">australian-veteran-status-1: 3 (Previous regular service)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.\"><a href=\"StructureDefinition-indigenous-status.html\">Australian Indigenous Status</a></td><td colspan=\"3\">australian-indigenous-status-1: 3 (Both Aboriginal and Torres Strait Islander origin)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3" ] ;
+       fhir:display [ fhir:v "Both Aboriginal and Torres Strait Islander origin" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/veteran-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-veteran-status-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3" ] ;
+       fhir:display [ fhir:v "Previous regular service" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "expired" ] ;
+         fhir:display [ fhir:v "expired" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "unverified" ] ;
+         fhir:display [ fhir:v "unverified" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-verified-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2021-08-18"^^xsd:date
+       ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NI" ] ;
+         fhir:display [ fhir:v "National unique individual identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "IHI" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/ihi/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003608833357361" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DVG" ] ;
+         fhir:display [ fhir:v "DVA Number (Gold Card)" ]
+       ] ) ;
+       fhir:text [ fhir:v "DVA Number (Gold)" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/dva"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "NBUR9080" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Dan" ] ;
+     fhir:given ( [ fhir:v "Harry" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "hdan@amail.example.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1939-08-25"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "29 Gadsby Street" ] ) ;
+     fhir:city [ fhir:v "Blacktown" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2148" ] ;
+     fhir:country [ fhir:v "Australia" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

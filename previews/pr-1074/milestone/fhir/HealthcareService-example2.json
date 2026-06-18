@@ -1,0 +1,36 @@
+{
+  "resourceType" : "HealthcareService",
+  "id" : "example2",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: HealthcareService example2</b></p><a name=\"example2\"> </a><a name=\"hcexample2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-healthcareservice.html\">AU Base HealthcareService</a></p></div><p><b>active</b>: true</p><p><b>providedBy</b>: <a href=\"Organization-example1.html\">Albion Hospital</a></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 394915009}\">General pathology (specialty)</span></p><p><b>location</b>: <a href=\"Location-example2.html\">Location: identifier = NATA Site Number:\u00a0162899,LSPN:\u00a0123333; status = active; physicalType = Level</a></p><p><b>name</b>: Albion Hospital Pathology Service</p><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday, Friday</p><p><b>availableStartTime</b>: 08:30:00</p><p><b>availableEndTime</b>: 17:30:00</p></blockquote></div>"
+  },
+  "active" : true,
+  "providedBy" : {
+    "reference" : "Organization/example1",
+    "display" : "Albion Hospital"
+  },
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394915009",
+      "display" : "General pathology (specialty)"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/example2"
+  }],
+  "name" : "Albion Hospital Pathology Service",
+  "availableTime" : [{
+    "daysOfWeek" : ["mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"],
+    "availableStartTime" : "08:30:00",
+    "availableEndTime" : "17:30:00"
+  }]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="example1"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationStatement example1</b></p><a name="example1"> </a><a name="hcexample1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></p></div><p><b>Long Term</b>: true</p><p><b>status</b>: Active</p><p><b>medication</b>: <span title="Codes:{http://snomed.info/sct 3559011000036109}">Zoloft</span></p><p><b>subject</b>: <a href="Patient-example0.html">Franklin</a></p><p><b>dateAsserted</b>: 2018-07-25</p><p><b>note</b>: </p><blockquote><div><p>The patient is not sure when exactly started taking the medication but is certain it's been over a year</p>
+</div></blockquote></div>
+  </text>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-long-term">
+    <valueBoolean value="true"/>
+  </extension>
+  <status value="active"/>
+  <medicationCodeableConcept>
+    <coding>
+      <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+        <valueCoding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/medication-type"/>
+          <code value="BPD"/>
+          <display value="Branded product with no strengths or form"/>
+        </valueCoding>
+      </extension>
+      <system value="http://snomed.info/sct"/>
+      <code value="3559011000036109"/>
+      <display value="Zoloft"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example0"/>
+    <display value="Franklin"/>
+  </subject>
+  <dateAsserted value="2018-07-25"/>
+  <note>
+    <text value="The patient is not sure when exactly started taking the medication but is certain it's been over a year"/>
+  </note>
+</MedicationStatement>

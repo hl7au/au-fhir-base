@@ -1,0 +1,147 @@
+{
+  "resourceType" : "RelatedPerson",
+  "id" : "example-sex-and-gender",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson example-sex-and-gender</b></p><a name=\"example-sex-and-gender\"> </a><a name=\"hcexample-sex-and-gender\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-relatedperson.html\">AU Base RelatedPerson</a></p></div><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 446151000124109}\">Male</span></li><li>period: 2018-01-01 --&gt; 2021-12-23</li><li>comment: Identified as male during this period. Began exploring gender identity more deeply towards the end of this period.</li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 33791000087105}\">Non-binary</span></li><li>period: 2022-05-06 --&gt; (ongoing)</li><li>comment: Currently identifies as non-binary and uses 'they/them' pronouns. Open to exploring further gender fluidity.</li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA29520-6}\">they/them/their/theirs/themselves</span></li></ul></blockquote><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 248153007}\">Male</span></li><li>type: <span title=\"Codes:{http://snomed.info/sct 1515311000168102}\">Biological sex at birth</span></li><li>acquisitionDate: 2019-11-01</li><li>sourceDocument: <span title=\"Codes:{http://loinc.org 71230-7}\">Birth certificate</span></li><li>sourceField: Sex</li><li>jurisdiction: <span title=\"Codes:{https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1 VIC}\">Victoria</span></li></ul></blockquote><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI:\u00a0Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0131 N}, {http://terminology.hl7.org/CodeSystem/v3-RoleCode FAMMEMB}\">Next-of-Kin</span></p><p><b>name</b>: Alex Baker </p><p><b>telecom</b>: ph: (02) 5550 6767</p><p><b>gender</b>: Other</p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "446151000124109",
+          "display" : "Identifies as male gender"
+        }],
+        "text" : "Male"
+      }
+    },
+    {
+      "url" : "period",
+      "valuePeriod" : {
+        "start" : "2018-01-01",
+        "end" : "2021-12-23"
+      }
+    },
+    {
+      "url" : "comment",
+      "valueString" : "Identified as male during this period. Began exploring gender identity more deeply towards the end of this period."
+    }]
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "33791000087105",
+          "display" : "Identifies as nonbinary gender"
+        }],
+        "text" : "Non-binary"
+      }
+    },
+    {
+      "url" : "period",
+      "valuePeriod" : {
+        "start" : "2022-05-06"
+      }
+    },
+    {
+      "url" : "comment",
+      "valueString" : "Currently identifies as non-binary and uses 'they/them' pronouns. Open to exploring further gender fluidity."
+    }]
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-pronouns",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA29520-6",
+          "display" : "they/them/their/theirs/themselves"
+        }]
+      }
+    }]
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "248153007",
+          "display" : "Male"
+        }]
+      }
+    },
+    {
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1515311000168102",
+          "display" : "Biological sex at birth"
+        }]
+      }
+    },
+    {
+      "url" : "acquisitionDate",
+      "valueDateTime" : "2019-11-01"
+    },
+    {
+      "url" : "sourceDocument",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "71230-7",
+          "display" : "Birth certificate"
+        }]
+      }
+    },
+    {
+      "url" : "sourceField",
+      "valueString" : "Sex"
+    },
+    {
+      "url" : "jurisdiction",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
+          "code" : "VIC"
+        }]
+      }
+    }]
+  }],
+  "active" : true,
+  "patient" : {
+    "reference" : "Patient/example0"
+  },
+  "relationship" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+      "code" : "N"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code" : "FAMMEMB"
+    }]
+  }],
+  "name" : [{
+    "use" : "usual",
+    "family" : "Baker",
+    "given" : ["Alex"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "(02) 5550 6767"
+  }],
+  "gender" : "other"
+}

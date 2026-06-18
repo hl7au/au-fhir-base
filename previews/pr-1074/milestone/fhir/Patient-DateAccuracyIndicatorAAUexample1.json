@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Patient",
+  "id" : "DateAccuracyIndicatorAAUexample1",
+  "text" : {
+    "status" : "additional",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>This example demonstrates birth date and deceased date with an accurate day, month and unknown year.</p>\n            <p>Note that &quot;0000-08-23&quot; is a NOT a valid FHIR date.</p>\n            <p>Details include:</p>\n            <ul>\n                <li>A valid FHIR date example for birth date and deceased date is &quot;2004-08-23” but not &quot;0000-08-23&quot;.</li>\n                <li>A date accuracy indicator of &quot;AAU&quot; indicates that day and month are accurate but year is unknown.</li>\n                <li>When a code value contains &quot;A&quot;, the corresponding date components (individual or combination) for birth or deceased dates must be accurate.</li>\n                <li>When a code value contains &quot;U&quot;, the corresponding date components (individual or combination) for birth or deceased dates must be ignored.</li>\n            </ul>\n        </div>"
+  },
+  "birthDate" : "2004-08-23",
+  "_birthDate" : {
+    "extension" : [{
+      "url" : "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+      "valueCoding" : {
+        "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+        "code" : "AAU",
+        "display" : "Day and month are accurate, year is unknown"
+      }
+    }]
+  },
+  "deceasedDateTime" : "2004-08-23T13:42:00+10:00",
+  "_deceasedDateTime" : {
+    "extension" : [{
+      "url" : "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+      "valueCoding" : {
+        "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+        "code" : "AAU",
+        "display" : "Day and month are accurate, year is unknown"
+      }
+    }]
+  }
+}

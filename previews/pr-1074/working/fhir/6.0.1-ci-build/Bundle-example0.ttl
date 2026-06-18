@@ -1,0 +1,978 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Bundle/example0> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example0"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2014-08-18T01:43:33Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "https://tools.ietf.org/html/rfc4122"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "4989a6a4-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:e229b450-4e9c-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e229b450-4e9c-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:9024d4a6-4ea0-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9024d4a6-4ea0-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93> )
+  ] ) . # 
+
+<urn:uuid:e229b450-4e9c-11e9-8647-d663bd873d93> a fhir:List ;
+  fhir:id [ fhir:v "e229b450-4e9c-11e9-8647-d663bd873d93"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medlist"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medlist>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_e229b450-4e9c-11e9-8647-d663bd873d93\"> </a>\n            <h1>Current Medication on Discharge</h1>\n\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n\n            <h2>Provider details</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Hospital name</th>\n                  <td>Downunder Hospital</td>\n                </tr>\n                <tr>\n                  <th>Hospital address</th>\n                  <td>3 McGregor Street, Blacktown, NSW 2148, Australia</td>\n                </tr>\n                <tr>\n                  <th>Telephone number</th>\n                  <td>(02)5550 3333</td>\n                </tr>\n                <tr>\n                  <th>Doctor</th>\n                  <td>Dr Helen Mayo, Cardiologist</td>\n                </tr>\n                <tr>\n                  <th>HPI-I</th>\n                  <td>8003619900015717</td>\n                </tr>\n                <tr>\n                  <th>Prescriber Number</th>\n                  <td>453221</td>\n                </tr>\n              </tbody>\n            </table>\n\n            <h2>Current Medicines List on Discharge at 19/03/2019</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>FLUOXETINE 20mg TABLETS</td>\n                  <td>LOVAN, PROZAC, ZACTIN</td>\n                  <td>Take HALF a tablet dispersed in water in the MORNING.</td>\n                  <td>0.5</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>For depression.</td>\n                  <td/>\n                </tr>\n                <tr>\n                  <td>ASPIRIN 100mg EC TABLET</td>\n                  <td>CARTIA</td>\n                  <td>Swallow whole ONE tablet in the MORNING WITH FOOD.</td>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>To thin the blood to prevent heart attack or stroke.</td>\n                  <td>Swallow whole after food. If develop swollen ankles, difficulty in breathing,\n                    black stools or vomit that looks like coffee grounds, stop taking the medicine\n                    and contact the doctor without delay. It may be advisable to stop taking aspirin\n                    7 days before planed surgery and some dental procedure; discuss with your doctor\n                    or dentist.</td>\n                </tr>\n                <tr>\n                  <td>TICAGRELOR 90mg TABLETS</td>\n                  <td>BRILINTA</td>\n                  <td>Take ONE tablet TWICE a day.</td>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td>For angina or to keep the blood thin.</td>\n                  <td>Do not take more than one aspirin tablet or capsule each day while being\n                    treated with this medicine.</td>\n                </tr>\n                <tr>\n                  <td>OMEGA-3-ACID ETHYL ESTERS 1000mg CAPSULES</td>\n                  <td>OMACOR</td>\n                  <td>Take ONE capsule at NIGHT.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                </tr>\n                <tr>\n                  <td>NIFEDIPINE 30mg CONTROLLED RELEASE TABLETS</td>\n                  <td>ADEFIN XL 30, ADALAT OROS, ADEFIN OROS, ADDOS XR 30, APO-NIFEDIPINE XR</td>\n                  <td>Swallow whole ONE tablet at NIGHT.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td/>\n                  <td>Swallow whole with a glass of fluid, do not crush or chew the tablets. Take\n                    regularly and do not miss doses. Do not stop taking suddenly unless advised by\n                    your doctor. This medicine may affect mental alertness and/or operate machinery.\n                    If affected do not drive or operate machinery. Avoid eating grapefruit or\n                    drinking grapefruit juice while being treated with this medicine.</td>\n                </tr>\n                <tr>\n                  <td>GLYCERIL TRINITRATE 600mcg (30) SUBLINGUAL TABLETS</td>\n                  <td>ANGININE</td>\n                  <td>Place ONE tablet under the tongue and allow to dissolve when needed for chest\n                    pain. DISCARD CONTENTS THREE MONTHS AFTER OPENING.</td>\n                  <td>When necessary.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>To relieve chest pain associated with angina.</td>\n                  <td>Sit or lie down before use as it may cause dizziness. Get up gradually from\n                    sitting or lying to minimise this effect. Place half to one tablet under the\n                    tongue. Do not swallow it. After the pain has been relieved, spit out what is\n                    left of the tablet to avoid adverse effects such as headache. It is important to\n                    store these tablets properly or they may not work as well. Keep them in the\n                    original glass bottle away from moisture, heat and light. Do not carry them\n                    close to your body. Write the date on the bottle when you open it and discard\n                    any unused tablets 3 months later (after that time, they will not be reliably\n                    effective).</td>\n                </tr>\n                <tr>\n                  <td>ATORVASTATIN 80mg TABLETS</td>\n                  <td>APO-ATORVASTATIN, LIPITOR, LORSTAT</td>\n                  <td>Take ONE tablet at NIGHT.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td>To lower cholesterol levels in the blood.</td>\n                  <td>Avoid eating grapefruit or drinking grapefruit juice while being treated with\n                    this medicine as this could increase the chances of side-effects occurring. Seek\n                    medical advice promptly if your urine is dark (brown) or you have any muscle\n                    pain, tenderness or weakness.</td>\n                </tr>\n                <tr>\n                  <td>METOPROLOL 50mg TABLETS</td>\n                  <td>MINAX 50, BETALOC</td>\n                  <td>Take ONE tablet TWICE a day (Relabelled Medication).</td>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td>For reducing blood pressure, angina or disturbances of heart rhythm.</td>\n                  <td/>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "snapshot"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:8654-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8654-6" ]
+     ] ) ;
+     fhir:text [ fhir:v "Current Medicine on Discharge" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:date [ fhir:v "2019-03-19"^^xsd:date] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:reference [ fhir:v "urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93> a fhir:Patient ;
+  fhir:id [ fhir:v "f12d073e-4e99-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_f12d073e-4e99-11e9-8647-d663bd873d93\"> </a>\n            <p>\n              <b>Generated Narrative with Details</b>\n            </p>\n            <p><b>id</b>: f12d073e-4e99-11e9-8647-d663bd873d93</p>\n            <p><b>meta</b>: </p>\n            <p><b>identifier</b>: IHI = 8003608833357361</p>\n            <p><b>name</b>: Nicholas Jones </p>\n            <p><b>telecom</b>: nick.jones@amail.example.com(HOME), ph: (0491) 570 006(MOBILE)</p>\n            <p><b>gender</b>: male</p>\n            <p><b>birthDate</b>: 08/01/1949</p>\n            <p><b>address</b>: 4 Brisbane Street Brisbane QLD 4112 Australia (HOME)</p>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "4" ] ;
+       fhir:display [ fhir:v "Neither Aboriginal nor Torres Strait Islander origin" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active" ] ;
+         fhir:display [ fhir:v "active" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Verified" ] ;
+         fhir:display [ fhir:v "Verified" ]
+       ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NI" ] ;
+         fhir:display [ fhir:v "National unique individual identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/ihi/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003608833357361" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Jones" ] ;
+     fhir:given ( [ fhir:v "Nicholas" ] ) ;
+     fhir:prefix ( [ fhir:v "Mr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "nick.jones@amail.example.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(0491) 570 006" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1949-01-08"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "4 Brisbane Street" ] ) ;
+     fhir:city [ fhir:v "Brisbane" ] ;
+     fhir:state [ fhir:v "QLD" ] ;
+     fhir:postalCode [ fhir:v "4112" ] ;
+     fhir:country [ fhir:v "Australia" ]
+  ] ) . # 
+
+<urn:uuid:9024d4a6-4ea0-11e9-8647-d663bd873d93> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "9024d4a6-4ea0-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_9024d4a6-4ea0-11e9-8647-d663bd873d93\"> </a>\n            <p>\n              <b>Generated Narrative with Details</b>\n            </p>\n            <p><b>id</b>: 9024d4a6-4ea0-11e9-8647-d663bd873d93</p>\n            <p><b>identifier</b>: Medicare Provider Number = 2426621B</p>\n            <p><b>active</b>: true</p>\n            <p><b>practitioner</b>: <a href=\"Practitioner-example0.html\">Generated Summary: id:\n              example0; HPI-I = 8003619900015717, Prescriber Number = 453221; active; Helen Mayo ;\n                helen.mayo@downunderhospital.example.com(WORK)</a></p>\n            <p><b>organization</b>: <a href=\"Organization-example0.html\">Generated Summary: id:\n              example0; HPI-O = 8003621566684455; active; name: Downunder Hospital;\n                helen.mayo@downunderhospital.exanple.com(WORK)</a></p>\n            <p><b>specialty</b>: Cardiologist <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '17561000' = 'Cardiologist', given as\n                'Cardiologist'})</span></p>\n            <p><b>location</b>: <a href=\"Location-example0.html\">Generated Summary: id: example0;\n                status: active; name: Downunder Hospital Blacktown; ph: 025553555(WORK)</a></p>\n            <p><b>telecom</b>: ph: 0255503333(WORK)</p>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UPIN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/provider-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2426621B" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:organization [
+     fhir:reference [ fhir:v "urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:17561000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "17561000" ] ;
+       fhir:display [ fhir:v "Cardiologist" ]
+     ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "025553333" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93> a fhir:Practitioner ;
+  fhir:id [ fhir:v "9024d118-4ea0-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_9024d118-4ea0-11e9-8647-d663bd873d93\"> </a>\n            <p>\n              <b>Generated Narrative with Details</b>\n            </p>\n            <p><b>id</b>: 9024d118-4ea0-11e9-8647-d663bd873d93</p>\n            <p><b>identifier</b>: HPI-I = 8003619900015717, Prescriber Number = 453221</p>\n            <p><b>active</b>: true</p>\n            <p><b>name</b>: Helen Mayo </p>\n            <p><b>telecom</b>: helen.mayo@downunderhospital.example.com(WORK)</p>\n            <p><b>address</b>: 3 McGregor Street Blacktown NSW 2148 Australia (WORK)</p>\n            <h3>Qualifications</h3>\n            <table class=\"grid\">\n              <tr>\n                <td>-</td>\n                <td>\n                  <b>Identifier</b>\n                </td>\n                <td>\n                  <b>Code</b>\n                </td>\n                <td>\n                  <b>Issuer</b>\n                </td>\n              </tr>\n              <tr>\n                <td>*</td>\n                <td>Ahpra Registration Number = MED0000932945</td>\n                <td>General Practitioner <span style=\"background: LightGoldenRodYellow\">(Details :\n                    {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111',\n                    given as 'General Practitioner'})</span></td>\n                <td>Ahpra</td>\n              </tr>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003610833334085" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PRES" ] ;
+         fhir:display [ fhir:v "Prescriber Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/medicare-prescriber-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "453221" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Mayo" ] ;
+     fhir:given ( [ fhir:v "Helen" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "helen.mayo@downunderhospital.example.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "3 McGregor Street" ] ) ;
+     fhir:city [ fhir:v "Blacktown" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2148" ] ;
+     fhir:country [ fhir:v "Australia" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "AHPRA" ] ;
+           fhir:display [ fhir:v "Australian Health Practitioner Regulation Agency Registration Number" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "http://hl7.org.au/id/ahpra-registration-number"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "MED0000932945" ]
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "253111" ] ;
+         fhir:display [ fhir:v "General Practitioner" ]
+       ] ) ;
+       fhir:text [ fhir:v "General Practitioner" ]
+     ] ;
+     fhir:issuer [
+       fhir:display [ fhir:v "Ahpra" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93> a fhir:Organization ;
+  fhir:id [ fhir:v "b377cc18-4ea2-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_b377cc18-4ea2-11e9-8647-d663bd873d93\"> </a>\n            <p>\n              <b>Generated Narrative with Details</b>\n            </p>\n            <p><b>id</b>: b377c682-4ea2-11e9-8647-d663bd873d93</p>\n            <p><b>identifier</b>: HPI-O = 8003621566684455</p>\n            <p><b>active</b>: true</p>\n            <p><b>name</b>: Downunder Hospital</p>\n            <p><b>address</b>: 3 McGregor Street Blacktown NSW 2148 Australia</p>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ] ;
+         fhir:display [ fhir:v "National Organisation Identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003621566684455" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "Downunder Hospital"] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "3 McGregor Street" ] ) ;
+     fhir:city [ fhir:v "Blacktown" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2148" ] ;
+     fhir:country [ fhir:v "Australia" ]
+  ] ) . # 
+
+<urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "e36cef42-4ea3-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_e36cef42-4ea3-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>FLUOXETINE 20mg TABLETS</td>\n                  <td>LOVAN, PROZAC, ZACTIN</td>\n                  <td>Take HALF a tablet dispersed in water in the MORNING.</td>\n                  <td>0.5</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>For depression.</td>\n                  <td/>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:844301000168106 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "844301000168106" ] ;
+       fhir:display [ fhir:v "Fluoxetine 20 mg tablet" ]
+     ] [
+       a sct:2938011000036102 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2938011000036102" ]
+     ] [
+       a sct:2954011000036108 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2954011000036108" ]
+     ] [
+       a sct:2952011000036104 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2952011000036104" ]
+     ] ) ;
+     fhir:text [ fhir:v "FLUOXETINE 20mg TABLETS, LOVAN,PROZAC,ZACTIN" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "Depression." ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Take HALF a tablet dispersed in water in the MORNING." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "MORN" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v 0.5 ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "fbc87b14-4ea4-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_fbc87b14-4ea4-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>ASPIRIN 100mg EC TABLET</td>\n                  <td>CARTIA</td>\n                  <td>Swallow whole ONE tablet in the MORNING WITH FOOD.</td>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>To thin the blood to prevent heart attack or stroke.</td>\n                  <td>Swallow whole after food. If develop swollen ankles, difficulty in breathing,\n                    black stools or vomit that looks like coffee grounds, stop taking the medicine\n                    and contact the doctor without delay. It may be advisable to stop taking aspirin\n                    7 days before planed surgery and some dental procedure; discuss with your doctor\n                    or dentist.\"</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:75561000036109 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "75561000036109" ] ;
+       fhir:display [ fhir:v "Aspirin 100 mg enteric tablet" ]
+     ] [
+       a sct:3338011000036100 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3338011000036100" ] ;
+       fhir:display [ fhir:v "Cartia" ]
+     ] ) ;
+     fhir:text [ fhir:v "ASPIRIN 100mg EC TABLET, CARTIA" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "To thin the blood to prevent heart attack or stroke." ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Swallow whole ONE tablet in the MORNING WITH FOOD." ] ;
+     fhir:patientInstruction [ fhir:v "Swallow whole after food. If develop swollen ankles, difficulty in breathing, black stools or vomit that looks like coffee grounds, stop taking the medicine and contact the doctor without delay. It may be advisable to stop taking aspirin 7 days before planed surgery and some dental procedure; discuss with your doctor or dentist." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "MORN" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "9b6194f8-4ea5-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_9b6194f8-4ea5-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>TICAGRELOR 90mg TABLETS</td>\n                  <td>BRILINTA</td>\n                  <td>Take ONE tablet TWICE a day.</td>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td>For angina or to keep the blood thin.</td>\n                  <td>Do not take more than one aspirin tablet or capsule each day while being\n                    treated with this medicine.</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:32641000036100 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "32641000036100" ] ;
+       fhir:display [ fhir:v "Ticagrelor 90 mg tablet" ]
+     ] [
+       a sct:32101000036105 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "32101000036105" ] ;
+       fhir:display [ fhir:v "Brilinta" ]
+     ] ) ;
+     fhir:text [ fhir:v "TICAGRELOR 90mg TABLETS, BRILINTA" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "For angina or to keep the blood thin." ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Take ONE tablet TWICE a day." ] ;
+     fhir:patientInstruction [ fhir:v "Do not take more than one aspirin tablet or capsule each day while being treated with this medicine." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "2"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "MORN" ] [ fhir:v "HS" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "cede882c-4ea5-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_cede882c-4ea5-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>OMEGA-3-ACID ETHYL ESTERS 1000mg CAPSULES</td>\n                  <td>OMACOR</td>\n                  <td>Take ONE capsule at NIGHT.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:931840011000036108 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "931840011000036108" ] ;
+       fhir:display [ fhir:v "Omega-3-acid ethyl esters-90 1 g capsule" ]
+     ] [
+       a sct:929850011000036100 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "929850011000036100" ] ;
+       fhir:display [ fhir:v "Omacor" ]
+     ] ) ;
+     fhir:text [ fhir:v "OMEGA-3-ACID ETHYL ESTERS 1000mg CAPSULES, OMACOR" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Take ONE capsule at NIGHT." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "HS" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "CAP" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "CAP" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "f0a81ae0-4ea5-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_f0a81ae0-4ea5-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>NIFEDIPINE 30mg CONTROLLED RELEASE TABLETS</td>\n                  <td>ADEFIN XL 30, ADALAT OROS, ADEFIN OROS, ADDOS XR 30, APO-NIFEDIPINE XR</td>\n                  <td>Swallow whole ONE tablet at NIGHT.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td/>\n                  <td>Swallow whole with a glass of fluid, do not crush or chew the tablets. advised\n                    by your doctor. This medicine may affect mental alertness and/or operate\n                    machinery. Take regularly and do not miss doses. Do not stop taking suddenly\n                    unless If affected do not drive or operate machinery. Avoid eating grapefruit or\n                    drinking grapefruit juice while being treated with this medicine.</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:23369011000036100 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "23369011000036100" ] ;
+       fhir:display [ fhir:v "Nifedipine 30 mg modified release tablet" ]
+     ] [
+       a sct:7270011000036102 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPDSF" ] ;
+           fhir:display [ fhir:v "Branded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7270011000036102" ] ;
+       fhir:display [ fhir:v "Adefin XL 30 mg modified release tablet" ]
+     ] [
+       a sct:28961000168100 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "28961000168100" ] ;
+       fhir:display [ fhir:v "Adalat Oros" ]
+     ] [
+       a sct:30671000168101 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "30671000168101" ] ;
+       fhir:display [ fhir:v "Addos XR" ]
+     ] [
+       a sct:501000168108 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "501000168108" ] ;
+       fhir:display [ fhir:v "Nifedipine XR (Apo)" ]
+     ] ) ;
+     fhir:text [ fhir:v "NIFEDIPINE 30mg CONTROLLED RELEASE TABLETS, ADEFIN XL 30, ADALAT OROS, ADEFIN OROS, ADDOS XR 30, APO-NIFEDIPINE XR" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Swallow whole ONE tablet at NIGHT." ] ;
+     fhir:patientInstruction [ fhir:v "Swallow whole with a glass of fluid, do not crush or chew the tablets. Take regularly and do not miss doses. Do not stop taking suddenly unless advised by your doctor. This medicine may affect mental alertness and/or operate machinery. If affected do not drive or operate machinery. Avoid eating grapefruit or drinking grapefruit juice while being treated with this medicine." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "HS" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "2450a7ea-4ea6-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_2450a7ea-4ea6-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>GLYCERIL TRINITRATE 600mcg (30) SUBLINGUAL TABLETS</td>\n                  <td>ANGININE</td>\n                  <td>Place ONE tablet under the tongue and allow to dissolve when needed for chest\n                    pain. DISCARD CONTENTS THREE MONTHS AFTER OPENING.</td>\n                  <td>When necessary.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>To relieve chest pain associated with angina.</td>\n                  <td>Sit or lie down before use as it may cause dizziness. Get up gradually from\n                    sitting or lying to minimise this effect. Place half to one tablet under the\n                    tongue. Do not swallow it. After the pain has been relieved, spit out what is\n                    left of the tablet to avoid adverse effects such as headache. It is important to\n                    store these tablets properly or they may not work as well. Keep them in the\n                    original glass bottle away from moisture, heat and light. Do not carry them\n                    close to your body. Write the date on the bottle when you open it and discard\n                    any unused tablets 3 months later (after that time, they will not be reliably\n                    effective).</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "not-taken"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:82521011000036105 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPG" ] ;
+           fhir:display [ fhir:v "Unbranded package with no container" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "82521011000036105" ] ;
+       fhir:display [ fhir:v "Glyceryl trinitrate 600 microgram sublingual tablet, 30" ]
+     ] [
+       a sct:3935011000036104 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3935011000036104" ] ;
+       fhir:display [ fhir:v "Anginine" ]
+     ] ) ;
+     fhir:text [ fhir:v "GLYCERIL TRINITRATE 600mcg (30) SUBLINGUAL TABLETS, ANGININE" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "To relieve chest pain associated with angina." ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Place ONE tablet under the tongue and allow to dissolve when needed for chest pain. DISCARD CONTENTS THREE MONTHS AFTER OPENING." ] ;
+     fhir:patientInstruction [ fhir:v "Sit or lie down before use as it may cause dizziness. Get up gradually from sitting or lying to minimise this effect. Place half to one tablet under the tongue. Do not swallow it. After the pain has been relieved, spit out what is left of the tablet to avoid adverse effects such as headache. It is important to store these tablets properly or they may not work as well. Keep them in the original glass bottle away from moisture, heat and light. Do not carry them close to your body. Write the date on the bottle when you open it and discard any unused tablets 3 months later (after that time, they will not be reliably effective)." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:asNeeded [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] ) . # 
+
+<urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "613a96e8-4ea6-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_613a96e8-4ea6-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>ATORVASTATIN 80mg TABLETS</td>\n                  <td>APO-ATORVASTATIN, LIPITOR, LORSTAT</td>\n                  <td>Take ONE tablet at NIGHT.</td>\n                  <td/>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td>To lower cholesterol levels in the blood.</td>\n                  <td>Avoid eating grapefruit or drinking grapefruit juice while being treated with\n                    this medicine as this could increase the chances of side-effects occurring. Seek\n                    medical advice promptly if your urine is dark (brown) or you have any muscle\n                    pain, tenderness or weakness.</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:23165011000036107 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "23165011000036107" ] ;
+       fhir:display [ fhir:v "Atorvastatin 80 mg tablet" ]
+     ] [
+       a sct:8071000168101 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8071000168101" ] ;
+       fhir:display [ fhir:v "Atorvastatin (Apo)" ]
+     ] [
+       a sct:3877011000036101 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3877011000036101" ] ;
+       fhir:display [ fhir:v "Lipitor" ]
+     ] [
+       a sct:3877011000036101 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3877011000036101" ] ;
+       fhir:display [ fhir:v "Lipitor" ]
+     ] [
+       a sct:19751000036109 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "19751000036109" ] ;
+       fhir:display [ fhir:v "Lorstat" ]
+     ] ) ;
+     fhir:text [ fhir:v "ATORVASTATIN 80mg TABLETS, APO-ATORVASTATIN, LIPITOR, LORSTAT" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "To relieve chest pain associated with angina." ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Take ONE tablet at NIGHT." ] ;
+     fhir:patientInstruction [ fhir:v "Avoid eating grapefruit or drinking grapefruit juice while being treated with this medicine as this could increase the chances of side-effects occurring. Seek medical advice promptly if your urine is dark (brown) or you have any muscle pain, tenderness or weakness." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "HS" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "91296398-4ea6-11e9-8647-d663bd873d93"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_91296398-4ea6-11e9-8647-d663bd873d93\"> </a>\n            <h2>Patient</h2>\n            <table>\n              <tbody>\n                <tr>\n                  <th>Name</th>\n                  <td>Mr Nicholas Jones </td>\n                </tr>\n                <tr>\n                  <th>DoB</th>\n                  <td>8 January 1949 (70)</td>\n                </tr>\n                <tr>\n                  <th>Gender</th>\n                  <td>Male</td>\n                </tr>\n                <tr>\n                  <th>Indigenous status</th>\n                  <td>Neither Aboriginal nor Torres Strait Islander origin</td>\n                </tr>\n                <tr>\n                  <th>IHI</th>\n                  <td>8003608833357361</td>\n                </tr>\n                <tr>\n                  <th>Address</th>\n                  <td>4 Brisbane Street, Brisbane, QLD 4112, Australia</td>\n                </tr>\n              </tbody>\n            </table>\n            <h2>Medication</h2>\n            <table border=\"1\">\n              <thead>\n                <tr>\n                  <th>Medicine</th>\n                  <th>Brand name</th>\n                  <th>Directions</th>\n                  <th>Morn</th>\n                  <th>Mid</th>\n                  <th>Eve</th>\n                  <th>Bed</th>\n                  <th>Medicine purpose</th>\n                  <th>Special instructions</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td>METOPROLOL 50mg TABLETS</td>\n                  <td>MINAX 50, BETALOC</td>\n                  <td>Take ONE tablet TWICE a day (Relabelled Medication).</td>\n                  <td>1</td>\n                  <td/>\n                  <td/>\n                  <td>1</td>\n                  <td>For reducing blood pressure, angina or disturbances of heart rhythm.</td>\n                  <td/>\n                </tr>\n              </tbody>\n            </table>\n          </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:23221011000036102 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "23221011000036102" ] ;
+       fhir:display [ fhir:v "Metoprolol tartrate 50 mg tablet" ]
+     ] [
+       a sct:4275011000036101 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "4275011000036101" ] ;
+       fhir:display [ fhir:v "Minax" ]
+     ] [
+       a sct:3906011000036103 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPD" ] ;
+           fhir:display [ fhir:v "Branded product with no strengths or form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3906011000036103" ] ;
+       fhir:display [ fhir:v "Betaloc" ]
+     ] ) ;
+     fhir:text [ fhir:v "METOPROLOL 50mg TABLETS, MINAX 50, BETALOC" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "For reducing blood pressure, angina or disturbances of heart rhythm." ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Take ONE tablet TWICE a day." ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "2"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:when ( [ fhir:v "MORN" ] [ fhir:v "HS" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="accession-number-type"/>
+  <meta>
+    <profile value="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet accession-number-type</b></p><a name="accession-number-type"> </a><a name="hcaccession-number-type"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4</code></p></div><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html"><code>http://terminology.hl7.org/CodeSystem/v2-0203</code></a><span title="Version is explicitly stated to be 5.0.0"> version &#x1F4CD;5.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html#v2-0203-ACSN">ACSN</a></td><td style="color: #cccccc">Accession ID</td><td>Accession Identifier</td></tr><tr><td><a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html#v2-0203-LACSN">LACSN</a></td><td style="color: #cccccc">Laboratory Accession ID</td><td>A laboratory accession id is used in the laboratory domain.</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://terminology.hl7.org.au/ValueSet/accession-number-type"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.23"/>
+  </identifier>
+  <version value="6.0.1-ci-build"/>
+  <name value="AccessionNumberType"/>
+  <title value="Accession Number Type"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-06-18T16:30:51+00:00"/>
+  <publisher value="HL7 Australia"/>
+  <contact>
+    <name value="HL7 Australia FHIR Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7.org/display/HAFWG"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Identifier types that may be associated with an accession number in an Australian context."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+      <version value="5.0.0"/>
+      <concept>
+        <code value="ACSN"/>
+      </concept>
+      <concept>
+        <code value="LACSN"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

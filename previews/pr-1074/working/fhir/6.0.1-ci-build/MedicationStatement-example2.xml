@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="example2"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationStatement example2</b></p><a name="example2"> </a><a name="hcexample2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://snomed.info/sct 5232011000036102}">Diflucan 200 mg/100 mL injection, 100 mL vial</span></p><p><b>subject</b>: <a href="Patient-example0.html">Franklin</a></p><p><b>effective</b>: 2018-06-25 --&gt; 2018-07-05</p><p><b>dateAsserted</b>: 2018-07-10</p><p><b>informationSource</b>: <a href="Practitioner-example0.html">Doctor Mayo</a></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: Duration 30days , Once per 1-10 day</p><p><b>route</b>: <span title="Codes:{http://snomed.info/sct 47625008}">Intravenous route</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>200 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>
+  </text>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
+        <valueCoding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/medication-type"/>
+          <code value="BPDSF"/>
+          <display value="Branded product with strengths and form"/>
+        </valueCoding>
+      </extension>
+      <system value="http://snomed.info/sct"/>
+      <code value="5232011000036102"/>
+      <display value="Diflucan 200 mg/100 mL injection, 100 mL vial"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example0"/>
+    <display value="Franklin"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2018-06-25"/>
+    <end value="2018-07-05"/>
+  </effectivePeriod>
+  <dateAsserted value="2018-07-10"/>
+  <informationSource>
+    <reference value="Practitioner/example0"/>
+    <display value="Doctor Mayo"/>
+  </informationSource>
+  <dosage>
+    <timing>
+      <repeat>
+        <duration value="30"/>
+        <durationUnit value="min"/>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodMax value="10"/>
+        <periodUnit value="d"/>
+        <timeOfDay value="10:00:00"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="Intravenous route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="200"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+</MedicationStatement>

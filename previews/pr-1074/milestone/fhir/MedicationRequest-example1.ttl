@@ -1,0 +1,149 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/MedicationRequest/example1> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medicationrequest.html\">AU Base MedicationRequest</a></p></div><p><b>Subsidised Concurrent Supply</b>: concurrent-supply-grounds-1: 1 (Pursuant to Regulation 24)</p><p><b>identifier</b>: Local Prescription Number/53640005</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href=\"Medication-FourOrMoreActiveIngredientsProduct0.html\">Medication Stribild</a></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Stella Franklin</a></p><p><b>authoredOn</b>: 2018-08-25</p><p><b>requester</b>: <a href=\"PractitionerRole-example0.html\">PractitionerRole: identifier = Medicare Provider Number: 1234561A; specialty = Cardiology; telecom = ph: 0255507777(Work),ph: 0255508888</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 86406008}\">HIV infection</span></p><p><b>note</b>: </p><blockquote><div><p>Patient is going overseas and will need all repeats supplied at once.</p>\n</div></blockquote><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: One tablet orally, once daily</p><p><b>additionalInstruction</b>: <span title=\"Codes:{http://snomed.info/sct 311504000}\">With or after food</span>, <span title=\"Codes:{http://snomed.info/sct 418849000}\">Warning. Follow the printed instructions you have been given with this medicine</span></p><p><b>timing</b>: Once per 1 day</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 26643006}\">Oral route</span></p><p><b>method</b>: <span title=\"Codes:{http://snomed.info/sct 421521009}\">Swallow</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 TAB<span style=\"background: LightGoldenRodYellow\"> (Details: Orderable Drug Form  codeTAB = 'Tablet')</span></td></tr></table></blockquote><blockquote><p><b>dispenseRequest</b></p><p><b>numberOfRepeatsAllowed</b>: 5</p><p><b>quantity</b>: 30 TAB<span style=\"background: LightGoldenRodYellow\"> (Details: Orderable Drug Form  codeTAB = 'Tablet')</span></p><h3>ExpectedSupplyDurations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Unit</b></td><td><b>System</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>30</td><td>days</td><td><a href=\"http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html\">http://unitsofmeasure.org</a></td><td>d</td></tr></table></blockquote><h3>Substitutions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Allowed[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>false</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/subsidised-concurrent-supply"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "Pursuant to Regulation 24" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LPN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Local Prescription Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003621566684455"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "53640005" ] ;
+     fhir:assigner [
+       fhir:link <http://hl7.org.au/fhir/Organization/example0> ;
+       fhir:reference [ fhir:v "Organization/example0" ] ;
+       fhir:display [ fhir:v "Downunder Hospital" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <http://hl7.org.au/fhir/Medication/FourOrMoreActiveIngredientsProduct0> ;
+     fhir:reference [ fhir:v "Medication/FourOrMoreActiveIngredientsProduct0" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ] ;
+     fhir:display [ fhir:v "Stella Franklin" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2018-08-25"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:link <http://hl7.org.au/fhir/PractitionerRole/example0> ;
+     fhir:reference [ fhir:v "PractitionerRole/example0" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:86406008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "86406008" ] ;
+       fhir:display [ fhir:v "HIV infection" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient is going overseas and will need all repeats supplied at once." ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "One tablet orally, once daily" ] ;
+     fhir:additionalInstruction ( [
+       fhir:coding ( [
+         a sct:311504000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "311504000" ] ;
+         fhir:display [ fhir:v "With or after food" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         a sct:418849000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "418849000" ] ;
+         fhir:display [ fhir:v "Warning. Follow the printed instructions you have been given with this medicine" ]
+       ] )
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ] ;
+         fhir:display [ fhir:v "Oral route" ]
+       ] )
+     ] ;
+     fhir:method [
+       fhir:coding ( [
+         a sct:421521009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "421521009" ] ;
+         fhir:display [ fhir:v "Swallow" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "TAB" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TAB" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:numberOfRepeatsAllowed [ fhir:v "5"^^xsd:nonNegativeInteger ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "TAB" ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "TAB" ]
+     ] ;
+     fhir:expectedSupplyDuration [
+       fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "days" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "d" ]
+     ]
+  ] ; # 
+  fhir:substitution [
+     fhir:allowed [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

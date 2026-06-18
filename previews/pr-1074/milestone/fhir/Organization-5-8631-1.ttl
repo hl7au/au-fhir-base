@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Organization/5-8631-1> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "5-8631-1"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "Version-2" ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization 5-8631-1</b></p><a name=\"5-8631-1\"> </a><a name=\"hc5-8631-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: Version-2</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: HPI-O/8003621566684455</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8520}\">Pathology and Diagnostic Imaging Services</span></p><p><b>name</b>: Test Org -DigitalHealth 5</p><p><b>alias</b>: Digital Health 5, Digital Health Five</p><p><b>address</b>: 23 Marcus Cres KEMPSEY NSW 2440 AU </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003621566684455" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8520" ] ;
+       fhir:display [ fhir:v "Pathology and Diagnostic Imaging Services" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Test Org -DigitalHealth 5"] ; # 
+  fhir:alias ( [ fhir:v "Digital Health 5"] [ fhir:v "Digital Health Five"] ) ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "23 Marcus Cres" ] ) ;
+     fhir:city [ fhir:v "KEMPSEY" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2440" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

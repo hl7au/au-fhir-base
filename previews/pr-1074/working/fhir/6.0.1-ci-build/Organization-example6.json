@@ -1,0 +1,133 @@
+{
+  "resourceType" : "Organization",
+  "id" : "example6",
+  "meta" : {
+    "versionId" : "11.007",
+    "lastUpdated" : "2019-11-15T13:28:17.239+10:00",
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-organization"]
+  },
+  "language" : "en-AU",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\"><p class=\"res-header-id\"><b>Generated Narrative: Organization example6</b></p><a name=\"example6\"> </a><a name=\"hcexample6\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 11.007; Last updated: 2019-11-15 13:28:17+1000; Language: en-AU</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: NATA Accreditation Number/200001, ARBN/123456789, ABN/12345678901, ACN/518247535, HPI-O/8003621566684455, PAI-O/8003640011000059, CSP/8003639900027009</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8520}\">Pathology and Diagnostic Imaging Services</span></p><p><b>name</b>: ACME Pathology</p><p><b>alias</b>: Tests R Us Pathology</p><p><b>telecom</b>: <a href=\"mailto:enquiries@acmepathology.example.com\">enquiries@acmepathology.example.com</a>, <a href=\"https://acmepathology.example.com\">https://acmepathology.example.com</a>, ph: (03) 5550 1234(Work)</p><p><b>address</b>: 7002 Little Collins Street Melbourne VIC 3000 AU </p><p><b>partOf</b>: <a href=\"Organization-5-8631-1.html\">Organization Test Org -DigitalHealth 5</a></p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "NATAA",
+        "display" : "NATA Accreditation Number"
+      }],
+      "text" : "NATA Accreditation Number"
+    },
+    "system" : "http://hl7.org.au/id/nata-accreditation",
+    "value" : "200001"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "ARBN",
+        "display" : "Australian Registered Body Number"
+      }],
+      "text" : "ARBN"
+    },
+    "system" : "http://hl7.org.au/id/arbn",
+    "value" : "123456789"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "ABN",
+        "display" : "Australian Business Number"
+      }],
+      "text" : "ABN"
+    },
+    "system" : "http://hl7.org.au/id/abn",
+    "value" : "12345678901"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "ACN",
+        "display" : "Australian Company Number"
+      }],
+      "text" : "ACN"
+    },
+    "system" : "http://hl7.org.au/id/acn",
+    "value" : "518247535"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "NOI",
+        "display" : "National Organisation Identifier"
+      }],
+      "text" : "HPI-O"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/hi/hpio/1.0",
+    "value" : "8003621566684455"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "PAIO",
+        "display" : "My Health Record (PCEHR) Assigned Identity for Organisations"
+      }],
+      "text" : "PAI-O"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/pcehr/paio/1.0",
+    "value" : "8003640011000059"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "CSPRN",
+        "display" : "Contracted Service Provider Registration Number"
+      }],
+      "text" : "CSP"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/hi/csp/1.0",
+    "value" : "8003639900027009"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0",
+      "code" : "8520",
+      "display" : "Pathology and Diagnostic Imaging Services"
+    }]
+  }],
+  "name" : "ACME Pathology",
+  "alias" : ["Tests R Us Pathology"],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "enquiries@acmepathology.example.com",
+    "use" : "work"
+  },
+  {
+    "system" : "url",
+    "value" : "https://acmepathology.example.com",
+    "use" : "work"
+  },
+  {
+    "system" : "phone",
+    "value" : "(03) 5550 1234",
+    "use" : "work"
+  }],
+  "address" : [{
+    "type" : "both",
+    "line" : ["7002 Little Collins Street"],
+    "city" : "Melbourne",
+    "state" : "VIC",
+    "postalCode" : "3000",
+    "country" : "AU"
+  }],
+  "partOf" : {
+    "reference" : "Organization/5-8631-1"
+  }
+}

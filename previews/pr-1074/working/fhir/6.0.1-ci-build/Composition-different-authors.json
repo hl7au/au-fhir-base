@@ -1,0 +1,66 @@
+{
+  "resourceType" : "Composition",
+  "id" : "different-authors",
+  "meta" : {
+    "lastUpdated" : "2013-05-28T22:12:21Z",
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-composition"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition different-authors</b></p><a name=\"different-authors\"> </a><a name=\"hcdifferent-authors\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2013-05-28 22:12:21+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-composition.html\">AU Base Composition</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 18842-5}\">Discharge Summarization Note</span></p><p><b>date</b>: 2018-06-03 12:30:02+0000</p><p><b>author</b>: <a href=\"Practitioner-example0.html\">Doctor Mayo</a></p><p><b>title</b>: Discharge Summary</p></div>"
+  },
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "18842-5"
+    }],
+    "text" : "Discharge Summarization Note"
+  },
+  "subject" : {
+    "reference" : "Patient/example0",
+    "display" : "Franklin"
+  },
+  "date" : "2018-06-03T12:30:02Z",
+  "author" : [{
+    "reference" : "Practitioner/example0",
+    "display" : "Doctor Mayo"
+  }],
+  "title" : "Discharge Summary",
+  "section" : [{
+    "title" : "Reason for admission",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "29299-5",
+        "display" : "Reason for visit Narrative"
+      }]
+    },
+    "author" : [{
+      "reference" : "Practitioner/example0",
+      "display" : "Doctor Mayo"
+    }],
+    "text" : {
+      "status" : "extensions",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p> This section content has been authored by practitioner:<a href=\"Practitioner-example0.html\">Dr. Mayo</a>\n                </p>\n            </div>"
+    }
+  },
+  {
+    "title" : "Medications on Discharge",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "10183-2",
+        "display" : "Hospital discharge medications Narrative"
+      }]
+    },
+    "author" : [{
+      "reference" : "PractitionerRole/example0",
+      "display" : "Cardiologist"
+    }],
+    "text" : {
+      "status" : "extensions",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p> This section content has been authored by practitionerRole:<a href=\"PractitionerRole-example0.html\">Cardiologist</a>\n                </p>\n            </div>"
+    }
+  }]
+}

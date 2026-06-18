@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Medication/TwoActiveIngredientsProduct0> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TwoActiveIngredientsProduct0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medication"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p><b>perindopril arginine</b> 10 mg + <b>amLODIPIne</b> 10 mg – tablet </p>\n        </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:form [
+     fhir:coding ( [
+       a sct:385055001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet" ]
+     ] )
+  ] ; # 
+  fhir:amount [
+     fhir:numerator [
+       fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ]
+     ] ;
+     fhir:denominator [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "unit" ]
+     ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:2460011000036108 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "2460011000036108" ] ;
+         fhir:display [ fhir:v "perindopril arginine" ]
+       ] )
+     ] ;
+     fhir:isActive [ fhir:v true ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "unit" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:1792011000036100 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1792011000036100" ] ;
+         fhir:display [ fhir:v "amlodipine" ]
+       ] )
+     ] ;
+     fhir:isActive [ fhir:v true ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

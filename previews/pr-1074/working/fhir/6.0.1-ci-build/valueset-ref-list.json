@@ -1,0 +1,1299 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/additional-instruction-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTAdditionalDosageInstructions",
+    "title" : "SNOMED CT Additional Dosage Instructions",
+    "description" : "This value set includes all SNOMED CT Additional Dosage Instructions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.95"],
+    "sources" : ["2.16.840.1.113883.4.642.3.95"],
+    "uses" : {
+    },
+    "StructureDefinition-au-dosage.html" : "AU Base Dosage"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTAdministrationMethodCodes",
+    "title" : "SNOMED CT Administration Method Codes",
+    "description" : "This value set includes some method codes from SNOMED CT - provided as an exemplar",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.97"],
+    "sources" : ["2.16.840.1.113883.4.642.3.97"],
+    "uses" : {
+    },
+    "StructureDefinition-au-dosage.html" : "AU Base Dosage"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/bodystructure-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTMorphologicAbnormalities",
+    "title" : "SNOMED CT Morphologic Abnormalities",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.142"],
+    "sources" : ["2.16.840.1.113883.4.642.3.142"],
+    "uses" : {
+    },
+    "StructureDefinition-au-bodystructure.html" : "AU Base BodyStructure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DiagnosticServiceSectionCodes",
+    "title" : "Diagnostic Service Section Codes",
+    "description" : "This value set includes all the codes in HL7 V2 table 0074.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+    "oids" : ["2.16.840.1.113883.4.642.3.234"],
+    "sources" : ["2.16.840.1.113883.4.642.3.234"],
+    "uses" : {
+    },
+    "StructureDefinition-au-diagnosticreport.html" : "AU Base DiagnosticReport",
+    "StructureDefinition-au-diagnosticresult.html" : "AU Base Diagnostic Result"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/accession-number-type",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "AccessionNumberType",
+    "title" : "Accession Number Type",
+    "description" : "Identifier types that may be associated with an accession number in an Australian context.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.23"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.23"],
+    "uses" : {
+    },
+    "StructureDefinition-au-accessionnumber.html" : "AU Accession Number"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/amt-mp-codes",
+    "version" : "6.0.1-ci-build",
+    "status" : "retired",
+    "name" : "AMTMedicinalProductAndSubstances",
+    "title" : "AMT Medicinal Product and Substances",
+    "description" : "The AMT Medicinal Product and Substances value set includes values that may be used to identify a substance or a medicinal product that is an ingredient of a medication.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.16"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.16"]
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/au-coverage-type-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "CoverageTypeandSelfPayCodesAUExtended",
+    "title" : "Coverage Type and Self-Pay Codes - AU Extended",
+    "description" : "Coverage type codes extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.40"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.40"],
+    "uses" : {
+    },
+    "StructureDefinition-au-coverage.html" : "AU Base Coverage"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/au-timezone",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "AUTimeZone",
+    "title" : "AU Time Zone",
+    "description" : "Australian time zones.",
+    "systems" : ["https://www.iana.org/time-zones"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.27"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.27"],
+    "uses" : {
+    },
+    "StructureDefinition-au-timezone.html" : "Australian Time Zone",
+    "StructureDefinition-au-timezone-usage.html" : "Australian Time Zone Usage"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/contact-purpose",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "ContactPurpose",
+    "title" : "Contact Purpose",
+    "description" : "The purpose for which an associated contact can be reached.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type",
+    "http://terminology.hl7.org.au/CodeSystem/contact-purpose"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.19"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.19"],
+    "uses" : {
+    },
+    "StructureDefinition-contact-purpose.html" : "Contact Purpose",
+    "StructureDefinition-au-organization.html" : "AU Base Organization"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/dva-entitlement",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "DVAEntitlement",
+    "title" : "DVA Entitlement",
+    "description" : "Entitlement types that may be associated with an individual's Department of Veterans’ Affairs (DVA) File Number on a DVA issued health card in an Australian context.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.22"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.22"],
+    "uses" : {
+    },
+    "StructureDefinition-au-dvanumber.html" : "AU DVA Number"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/jurisdiction-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "JurisdictionValueSetAUExtended",
+    "title" : "Jurisdiction ValueSet - AU Extended",
+    "description" : "Jurisdiction ValueSet extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "urn:iso:std:iso:3166",
+    "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
+    "urn:iso:std:iso:3166:-2"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.33"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.33"]
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/location-physical-type-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "LocationPhysicalTypeAUExtended",
+    "title" : "Location Type (Physical) - AU Extended",
+    "description" : "Location type (physical) extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/location-physical-type",
+    "http://terminology.hl7.org.au/CodeSystem/location-physical-type"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.25"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.25"],
+    "uses" : {
+    },
+    "StructureDefinition-au-location.html" : "AU Base Location"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/medication-type",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "MedicationType",
+    "title" : "Medication Type",
+    "description" : "The Medication Type value set may be used to classify the nature of properties defined by the code e.g. branded product with no strength or form. This allows the distinction between codes provided containing container, pack, strength and form explicitly especially where terminologies supplied are unknown or terminology services are unavailable.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/medication-type"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.1"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.1"],
+    "uses" : {
+    },
+    "StructureDefinition-medication-type.html" : "Medication Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/medicine-item-change",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "MedicineItemChange",
+    "title" : "Medicine Item Change",
+    "description" : "The Medicine Item Change value set includes values that may be used to identify that a change that has been made, or is recommended to be made, to a medicine item.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/medicine-item-change"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.6"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.6"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medlist.html" : "AU Medicine List"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/mims",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "MIMS",
+    "title" : "MIMS",
+    "description" : "The MIMS value set includes all values from the Monthly Index of Medical Specialties (MIMS) published by MIMS Australia. Further details can be found at https://www.mims.com.au/.",
+    "systems" : ["http://www.mims.com.au/codes"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.7"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.7"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationstatement.html" : "AU Base MedicationStatement",
+    "StructureDefinition-au-medicationdispense.html" : "AU Base MedicationDispense",
+    "StructureDefinition-au-medicationadministration.html" : "AU Base MedicationAdministration",
+    "StructureDefinition-au-medicationrequest.html" : "AU Base MedicationRequest",
+    "StructureDefinition-au-medication.html" : "AU Base Medication"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/name-context",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "NameContext",
+    "title" : "Name Context",
+    "description" : "The Name Context value set may be used to classify suitable uses or purposes of names.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/name-context"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.34"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.34"],
+    "uses" : {
+    },
+    "StructureDefinition-name-context.html" : "Name Context"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/order-identifier-type",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "OrderIdentifierType",
+    "title" : "Order Identifier Type",
+    "description" : "Identifier types that may be associated with an order identifier in an Australian context.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.24"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.24"],
+    "uses" : {
+    },
+    "StructureDefinition-au-localorderidentifier.html" : "AU Local Order Identifier"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/pbs-item",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "PBSItemCodes",
+    "title" : "PBS Item Codes",
+    "description" : "The PBS Item Codes value set includes all values from Australian Pharmaceutical Benefits Scheme (PBS) schedule published by the Department of Health. Further details can be found at https://www.pbs.gov.au/pbs/.",
+    "systems" : ["http://pbs.gov.au/code/item"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.8"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.8"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationstatement.html" : "AU Base MedicationStatement",
+    "StructureDefinition-au-medicationdispense.html" : "AU Base MedicationDispense",
+    "StructureDefinition-au-medicationadministration.html" : "AU Base MedicationAdministration",
+    "StructureDefinition-au-medicationrequest.html" : "AU Base MedicationRequest",
+    "StructureDefinition-au-medication.html" : "AU Base Medication"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/rsg-source",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "AURecordedSexOrGenderSource",
+    "title" : "AU Recorded Sex or Gender (RSG) Source",
+    "description" : "The AU Recorded Sex or Gender (RSG) Source value set includes codes that can be used to represent the non-document source where the sex or gender value is recorded.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/au-digital-health-source-system"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.42"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.42"]
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/rsg-source-document-type",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "AURecordedSexOrGenderSourceDocumentType",
+    "title" : "AU Recorded Sex or Gender (RSG) Source Document Type",
+    "description" : "The AU Recorded Sex or Gender (RSG) Source Document Type value set includes codes that can be used to represent the type of document where this sex or gender value is recorded.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type",
+    "http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.32"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.32"]
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/rsg-type",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "AURecordedSexOrGenderType",
+    "title" : "AU Recorded Sex or Gender Type",
+    "description" : "The AU Recorded Sex or Gender Type value set includes codes that can be used to represent the type or category of sex or gender that is recorded.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/rsg-type",
+    "http://loinc.org",
+    "http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.31"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.31"]
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/service-provision-conditions",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "ServiceProvisionConditionsAustralianConcepts",
+    "title" : "Service Provision Conditions Australian Concepts",
+    "description" : "The Service Provision Conditions Australian Concepts value set includes values that may be used to identify the type of service provision conditions in an Australian context.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.2"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.2"],
+    "uses" : {
+    },
+    "StructureDefinition-au-healthcareservice.html" : "AU Base HealthcareService"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v2-0203-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "Hl7VSIdentifierTypeAUExtended",
+    "title" : "hl7VS-identifierType - AU Extended",
+    "description" : "Extended value set of identifier types for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set. NOTE: codes contained LACN Laboratory Accession ID and ACN Accession ID are exclusive concepts and not consider related in this terminology.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v2-0203",
+    "http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.3.203"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.3.203"]
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v2-0360-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "Hl7VSDegreeLicenseCertificateAUExtended",
+    "title" : "hl7VS-degreeLicenseCertificate - AU Extended",
+    "description" : "hl7VS-degreeLicenseCertificate extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v2-0360",
+    "http://terminology.hl7.org/CodeSystem/v2-0360"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.3.360"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.3.360"],
+    "uses" : {
+    },
+    "StructureDefinition-au-practitioner.html" : "AU Base Practitioner"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v2-0443-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "Hl7VSProviderRoleAUExtended",
+    "title" : "hl7VS-providerRole - AU Extended",
+    "description" : "hl7VS-providerRole extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v2-0443",
+    "http://terminology.hl7.org/CodeSystem/v2-0443"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.3.443"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.3.443"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v3-ActEncounterCode-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "ActEncounterCodeAUExtended",
+    "title" : "ActEncounterCode - AU Extended",
+    "description" : "v3 Act Encounter Code extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.20"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.20"],
+    "uses" : {
+    },
+    "StructureDefinition-au-encounter.html" : "AU Base Encounter"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended",
+    "version" : "6.0.1-ci-build",
+    "status" : "active",
+    "name" : "ServiceDeliveryLocationRoleTypeAUExtended",
+    "title" : "ServiceDeliveryLocationRoleType - AU Extended",
+    "description" : "ServiceDeliveryLocationRoleType extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org.au/CodeSystem/location-type"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.26"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.26"],
+    "uses" : {
+    },
+    "StructureDefinition-au-location.html" : "AU Base Location"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/contactentity-type",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ContactEntityType",
+    "title" : "Contact entity type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.416"],
+    "sources" : ["2.16.840.1.113883.4.642.3.416"],
+    "uses" : {
+    },
+    "ValueSet-contact-purpose.html" : "Contact Purpose"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/jurisdiction",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "JurisdictionValueSet",
+    "title" : "Jurisdiction ValueSet",
+    "description" : "This value set defines a base set of codes for country, country subdivision and region    for indicating where a resource is intended to be used.   \r\n   \r\n   Note: The codes for countries and country subdivisions are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)    while the codes for \"supra-national\" regions are from    [UN Standard country or area codes for statistical use (M49)](http://unstats.un.org/unsd/methods/m49/m49.htm).",
+    "systems" : ["http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "urn:iso:std:iso:3166",
+    "urn:iso:std:iso:3166:-2"],
+    "oids" : ["2.16.840.1.113883.11.21029"],
+    "sources" : ["2.16.840.1.113883.11.21029"],
+    "uses" : {
+    },
+    "ValueSet-au-jurisdiction-extended.html" : "Jurisdiction ValueSet - AU Extended"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/location-physical-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "LocationType",
+    "title" : "Location type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/location-physical-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.328"],
+    "sources" : ["2.16.840.1.113883.4.642.3.328"],
+    "uses" : {
+    },
+    "ValueSet-au-location-physical-type-extended.html" : "Location Type (Physical) - AU Extended"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0360",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSDegreeLicenseCertificate",
+    "title" : "hl7VS-degreeLicenseCertificate",
+    "description" : "Concepts specifying an educational degree (e.g., MD).  Used in the CNN datatype (names and identifiers of clinicians) in Version 2 messaging.  Used in Version 2 messaging; note that in releases of HL7 prior to 2.3.1, was also used in person names (XPN), but this use was deprecated, then withdrawn in 2.7.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360"],
+    "oids" : ["2.16.840.1.113883.21.236"],
+    "sources" : ["2.16.840.1.113883.21.236"],
+    "uses" : {
+    },
+    "ValueSet-au-v2-0360-extended.html" : "hl7VS-degreeLicenseCertificate - AU Extended"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActCoverageTypeCode",
+    "title" : "ActCoverageTypeCode",
+    "description" : "**Definition:** Set of codes indicating the type of insurance policy or program that pays for the cost of benefits provided to covered parties.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.19855"],
+    "sources" : ["2.16.840.1.113883.1.11.19855"],
+    "uses" : {
+    },
+    "ValueSet-au-coverage-type-extended.html" : "Coverage Type and Self-Pay Codes - AU Extended"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActEncounterCode",
+    "title" : "ActEncounterCode",
+    "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.13955"],
+    "sources" : ["2.16.840.1.113883.1.11.13955"],
+    "uses" : {
+    },
+    "ValueSet-au-v3-ActEncounterCode-extended.html" : "ActEncounterCode - AU Extended"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-GTIN",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "GTIN",
+    "title" : "GTIN",
+    "description" : "**Description:**Global Trade Item Number is an identifier for trade items developed by GS1 (comprising the former EAN International and Uniform Code Council).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.19885"],
+    "sources" : ["2.16.840.1.113883.1.11.19885"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationstatement.html" : "AU Base MedicationStatement",
+    "StructureDefinition-au-medicationdispense.html" : "AU Base MedicationDispense",
+    "StructureDefinition-au-medicationadministration.html" : "AU Base MedicationAdministration",
+    "StructureDefinition-au-medicationrequest.html" : "AU Base MedicationRequest",
+    "StructureDefinition-au-medication.html" : "AU Base Medication"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ServiceDeliveryLocationRoleType",
+    "title" : "ServiceDeliveryLocationRoleType",
+    "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+    "oids" : ["2.16.840.1.113883.1.11.17660"],
+    "sources" : ["2.16.840.1.113883.1.11.17660"],
+    "uses" : {
+    },
+    "ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html" : "ServiceDeliveryLocationRoleType - AU Extended"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "AdverseReactionAgent",
+    "title" : "Adverse Reaction Agent",
+    "description" : "The Adverse Reaction Agent value set includes values that support the recording of agents that may be responsible for causing adverse reactions. It is a broad set encompassing medicinal and non-medicinal agents.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10036"],
+    "sources" : ["1.2.36.1.2001.1004.201.10036"],
+    "uses" : {
+    },
+    "StructureDefinition-au-allergyintolerance.html" : "AU Base AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AdverseReactionClinicalManifestation",
+    "title" : "Adverse Reaction Clinical Manifestation",
+    "description" : "The Adverse Reaction Clinical Manifestation value set supports the recording of clinical manifestations of adverse reactions (including allergies and intolerances).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10296"],
+    "sources" : ["1.2.36.1.2001.1004.201.10296"],
+    "uses" : {
+    },
+    "StructureDefinition-au-allergyintolerance.html" : "AU Base AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianMedicinesTerminologyVaccine",
+    "title" : "Australian Medicines Terminology Vaccine",
+    "description" : "The Australian Medicines Terminology (AMT) Vaccine value set includes AMT product concepts that may be used to record a vaccine product.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10042"],
+    "sources" : ["1.2.36.1.2001.1004.201.10042"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "AssertionOfAbsence",
+    "title" : "Assertion Of Absence",
+    "description" : "The Assertion Of Absence value set includes values to represent clinical statements that broadly assert a procedure has not been done or the absence of a finding.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10065"],
+    "sources" : ["1.2.36.1.2001.1004.201.10065"],
+    "uses" : {
+    },
+    "StructureDefinition-au-norelevantfinding.html" : "AU Assertion of No Relevant Finding"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianImmunisationRegisterVaccine",
+    "title" : "Australian Immunisation Register Vaccine",
+    "description" : "The Australian Immunisation Register Vaccine value set includes values that may be used to represent a vaccine product according to the Australian Immunisation Register vaccine code formats.",
+    "systems" : ["https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"],
+    "oids" : ["1.2.36.1.2001.1004.201.10043"],
+    "sources" : ["1.2.36.1.2001.1004.201.10043"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianIndigenousStatus",
+    "title" : "Australian Indigenous Status",
+    "description" : "The Australian Indigenous Status value set includes values to support the representation of a person's Indigenous status. That is, whether a person identifies as being of Aboriginal or Torres Strait Islander origin. The values are those concepts defined in the Australian Indigenous Status code system (https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1).",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10001"],
+    "sources" : ["1.2.36.1.2001.1004.201.10001"],
+    "uses" : {
+    },
+    "StructureDefinition-indigenous-status.html" : "Australian Indigenous Status"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianMedication",
+    "title" : "Australian Medication",
+    "description" : "The Australian Medication value set includes all Australian Medicines Terminology (AMT) product concepts that may be used for the identification of a medicine, vaccine or other therapeutic good. This is suitable for the recording of a product which may be ordered for, administered to, or used by an individual.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10003"],
+    "sources" : ["1.2.36.1.2001.1004.201.10003"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationstatement.html" : "AU Base MedicationStatement",
+    "StructureDefinition-au-medicationdispense.html" : "AU Base MedicationDispense",
+    "StructureDefinition-au-medicationadministration.html" : "AU Base MedicationAdministration",
+    "StructureDefinition-au-medicationrequest.html" : "AU Base MedicationRequest",
+    "StructureDefinition-au-medication.html" : "AU Base Medication"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AustralianMedicationUse",
+    "title" : "Australian Medication Use",
+    "description" : "The Australian Medication Use value set extends the NCTS Australian Medication value set by including all Australian Medicines Terminology (AMT) product concepts that may be used for the identification of a medicine, vaccine or other therapeutic good, together with the concept 787481004 |No known medications| (SNOMED CT). This value set is suitable for recording the medication or asserting the absence of known medications in a Medication Statement.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10303"],
+    "sources" : ["1.2.36.1.2001.1004.201.10303"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationstatement.html" : "AU Base MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2",
+    "version" : "2.0.2",
+    "status" : "active",
+    "name" : "AustralianStatesAndTerritories",
+    "title" : "Australian States and Territories",
+    "description" : "The Australian States and Territories value set includes values that represent the Australian states and territories.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10026"],
+    "sources" : ["1.2.36.1.2001.1004.201.10026"],
+    "uses" : {
+    },
+    "StructureDefinition-au-address.html" : "Australian Address"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AustralianVeteranStatus",
+    "title" : "Australian Veteran Status",
+    "description" : "The Australian Veteran Status value set includes values to support the representation of a person's veteran status in the Australian Defence Force. The values are those concepts defined in the Australian Veteran Status code system (https://healthterminologies.gov.au/fhir/CodeSystem/australian-veteran-status-1).",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/australian-veteran-status-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10282"],
+    "sources" : ["1.2.36.1.2001.1004.201.10282"],
+    "uses" : {
+    },
+    "StructureDefinition-veteran-status.html" : "Australian Veteran Status"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/body-site-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "BodySite",
+    "title" : "Body Site",
+    "description" : "The Body Site value set includes values that cover a broad range of anatomical and acquired body structures suitable for identifying a body site.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10031"],
+    "sources" : ["1.2.36.1.2001.1004.201.10031"],
+    "uses" : {
+    },
+    "StructureDefinition-au-diagnosticrequest.html" : "AU Base Diagnostic Request",
+    "StructureDefinition-au-imagingresult.html" : "AU Base Diagnostic Imaging Result",
+    "StructureDefinition-au-specimen.html" : "AU Base Specimen",
+    "StructureDefinition-au-dosage.html" : "AU Base Dosage",
+    "StructureDefinition-au-procedure.html" : "AU Base Procedure",
+    "StructureDefinition-au-bodystructure.html" : "AU Base BodyStructure",
+    "StructureDefinition-au-condition.html" : "AU Base Condition",
+    "StructureDefinition-au-medicationadministration.html" : "AU Base MedicationAdministration",
+    "StructureDefinition-au-servicerequest.html" : "AU Base ServiceRequest"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/body-site-relative-site-qualifier-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "BodySiteRelativeSiteQualifier",
+    "title" : "Body Site Relative Site Qualifier",
+    "description" : "The Body Site Relative Site Qualifier value set includes values that may be used to represent a relative body site when qualifying an anatomical location.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10238"],
+    "sources" : ["1.2.36.1.2001.1004.201.10238"],
+    "uses" : {
+    },
+    "StructureDefinition-au-bodystructure.html" : "AU Base BodyStructure"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ClinicalCondition",
+    "title" : "Clinical Condition",
+    "description" : "The Clinical Condition value set includes values that cover a broad range of clinical concepts to support the representation of conditions, including problems, diagnoses and disorders.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10035"],
+    "sources" : ["1.2.36.1.2001.1004.201.10035"],
+    "uses" : {
+    },
+    "StructureDefinition-au-condition.html" : "AU Base Condition"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ClinicalFinding",
+    "title" : "Clinical Finding",
+    "description" : "The Clinical Finding value set includes a broad range of values that support the recording of disorders and clinical findings, including observations, judgments or assessments about subjects of care.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10037"],
+    "sources" : ["1.2.36.1.2001.1004.201.10037"],
+    "uses" : {
+    },
+    "StructureDefinition-au-dosage.html" : "AU Base Dosage",
+    "StructureDefinition-au-imagingreport.html" : "AU Base Diagnostic Imaging Report",
+    "StructureDefinition-au-diagnosticreport.html" : "AU Base DiagnosticReport",
+    "StructureDefinition-au-pathologyreport.html" : "AU Base Pathology Report",
+    "StructureDefinition-au-condition.html" : "AU Base Condition"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "ClinicalSpecialty",
+    "title" : "Clinical Specialty",
+    "description" : "The Clinical Specialty value set includes values that may be used to describe a clinical specialty performed by an entity.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10186"],
+    "sources" : ["1.2.36.1.2001.1004.201.10186"],
+    "uses" : {
+    },
+    "StructureDefinition-au-healthcareservice.html" : "AU Base HealthcareService",
+    "StructureDefinition-au-practitionerrole.html" : "AU Base PractitionerRole"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2",
+    "version" : "2.2.1",
+    "status" : "active",
+    "name" : "CommonLanguagesInAustralia",
+    "title" : "Common Languages in Australia",
+    "description" : "The Common Languages in Australia value set includes languages that are commonly encountered in Australia, including a comprehensive set of Australian Indigenous languages.",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["1.2.36.1.2001.1004.201.10069"],
+    "sources" : ["1.2.36.1.2001.1004.201.10069"],
+    "uses" : {
+    },
+    "StructureDefinition-au-practitioner.html" : "AU Base Practitioner",
+    "StructureDefinition-au-healthcareservice.html" : "AU Base HealthcareService",
+    "StructureDefinition-au-patient.html" : "AU Base Patient",
+    "StructureDefinition-au-relatedperson.html" : "AU Base RelatedPerson"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/concurrent-supply-grounds-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ConcurrentSupplyGrounds",
+    "title" : "Concurrent Supply Grounds",
+    "description" : "The Concurrent Supply Grounds value set includes values that may be used for the grounds that authorise a subsidy for the concurrent supply of an item specified in a prescription and all of its repeats.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/concurrent-supply-grounds-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10245"],
+    "sources" : ["1.2.36.1.2001.1004.201.10245"],
+    "uses" : {
+    },
+    "StructureDefinition-subsidised-concurrent-supply.html" : "Subsidised Concurrent Supply"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3",
+    "version" : "3.1.0",
+    "status" : "active",
+    "name" : "ContactRelationshipType",
+    "title" : "Contact Relationship Type",
+    "description" : "The Contact Relationship Type value set includes values that may be used to describe the nature of the relationship between the subject and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10187"],
+    "sources" : ["1.2.36.1.2001.1004.201.10187"],
+    "uses" : {
+    },
+    "StructureDefinition-au-patient.html" : "AU Base Patient"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "DateAccuracyIndicator",
+    "title" : "Date Accuracy Indicator",
+    "description" : "The Date Accuracy Indicator value set includes values that indicate the accuracy of components of a reported date.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10004"],
+    "sources" : ["1.2.36.1.2001.1004.201.10004"],
+    "uses" : {
+    },
+    "StructureDefinition-date-accuracy-indicator.html" : "Date Accuracy Indicator"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "EncounterType",
+    "title" : "Encounter Type",
+    "description" : "The Encounter Type value set includes values that can be used to represent types of healthcare interactions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10086"],
+    "sources" : ["1.2.36.1.2001.1004.201.10086"],
+    "uses" : {
+    },
+    "StructureDefinition-au-encounter.html" : "AU Base Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "EvaluationProcedure",
+    "title" : "Evaluation Procedure",
+    "description" : "The Evaluation Procedure value set includes values that cover a broad range of procedures including specialist investigations, imaging procedures, pathology procedures, and other diagnostic investigations.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10182"],
+    "sources" : ["1.2.36.1.2001.1004.201.10182"],
+    "uses" : {
+    },
+    "StructureDefinition-au-diagnosticrequest.html" : "AU Base Diagnostic Request",
+    "StructureDefinition-au-diagnosticreport.html" : "AU Base DiagnosticReport",
+    "StructureDefinition-au-diagnosticresult.html" : "AU Base Diagnostic Result"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "HealthcareOrganisationRoleType",
+    "title" : "Healthcare Organisation Role Type",
+    "description" : "The Healthcare Organisation Role Type value set includes values that can represent the role, use or function of a healthcare related organisation or facility.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10112"],
+    "sources" : ["1.2.36.1.2001.1004.201.10112"],
+    "uses" : {
+    },
+    "StructureDefinition-au-organization.html" : "AU Base Organization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "IndividualHealthcareIdentifierRecordStatus",
+    "title" : "Individual Healthcare Identifier Record Status",
+    "description" : "The Individual Healthcare Identifier Record Status value set includes values that may be used to describe the classification status of a record of an Individual Healthcare Identifier.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10022"],
+    "sources" : ["1.2.36.1.2001.1004.201.10022"],
+    "uses" : {
+    },
+    "StructureDefinition-ihi-record-status.html" : "IHI Record Status"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "IndividualHealthcareIdentifierStatus",
+    "title" : "Individual Healthcare Identifier Status",
+    "description" : "The Individual Healthcare Identifier Status value set includes values that may be used to describe the classification status of an Individual Healthcare Identifier.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10021"],
+    "sources" : ["1.2.36.1.2001.1004.201.10021"],
+    "uses" : {
+    },
+    "StructureDefinition-ihi-status.html" : "IHI Status"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/imaging-anatomic-region-of-interest-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ImagingAnatomicRegionOfInterest",
+    "title" : "Imaging Anatomic Region Of Interest",
+    "description" : "The Imaging Anatomic Region of Interest value set includes values that may be used to represent the anatomic area of interest of a diagnostic imaging procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10239"],
+    "sources" : ["1.2.36.1.2001.1004.201.10239"],
+    "uses" : {
+    },
+    "StructureDefinition-au-imagingresult.html" : "AU Base Diagnostic Imaging Result"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ImagingProcedure",
+    "title" : "Imaging Procedure",
+    "description" : "The Imaging Procedure value set includes values that support the representation of medical imaging procedures.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10034"],
+    "sources" : ["1.2.36.1.2001.1004.201.10034"],
+    "uses" : {
+    },
+    "StructureDefinition-au-imagingresult.html" : "AU Base Diagnostic Imaging Result",
+    "StructureDefinition-au-imagingreport.html" : "AU Base Diagnostic Imaging Report"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ImmunisationAnatomicalSite",
+    "title" : "Immunisation Anatomical Site",
+    "description" : "The Immunisation Anatomical Site value set includes values that can be used to describe the anatomical site where an immunisation may be administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10045"],
+    "sources" : ["1.2.36.1.2001.1004.201.10045"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ImmunisationRouteOfAdministration",
+    "title" : "Immunisation Route of Administration",
+    "description" : "The Immunisation Route of Administration value set includes values that can be used to describe the route by which a vaccine is administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10050"],
+    "sources" : ["1.2.36.1.2001.1004.201.10050"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "IndicatorOfHypersensitivityOrIntoleranceToSubstance",
+    "title" : "Indicator of Hypersensitivity or Intolerance to Substance",
+    "description" : "The Indicator of Hypersensitivity or Intolerance to Substance value set includes values that may be used to indicate or state a propensity to adverse reaction to a substance. The values represent a range of concept types such as substances, medicines, clinical findings and negated allergy findings.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10087"],
+    "sources" : ["1.2.36.1.2001.1004.201.10087"],
+    "uses" : {
+    },
+    "StructureDefinition-au-allergyintolerance.html" : "AU Base AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "MedicationForm",
+    "title" : "Medication Form",
+    "description" : "The Medication Form value set includes values that represent the dose form of a medication.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10046"],
+    "sources" : ["1.2.36.1.2001.1004.201.10046"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medication.html" : "AU Base Medication"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "MedicationIngredient",
+    "title" : "Medication Ingredient",
+    "description" : "The Medication Ingredient value set includes values that may be used to identify a substance or a medicinal product that is an ingredient of a medication.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10295"],
+    "sources" : ["1.2.36.1.2001.1004.201.10295"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medication.html" : "AU Base Medication"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "MedicationReasonTaken",
+    "title" : "Medication Reason Taken",
+    "description" : "The Medication Reason Taken value set includes values that identify a reason why a medication has been or is being taken.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10048"],
+    "sources" : ["1.2.36.1.2001.1004.201.10048"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationstatement.html" : "AU Base MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicineSubstitutionReason",
+    "title" : "Medicine Substitution Reason",
+    "description" : "The Medicine Substitution Reason value set includes values that may be used to record the reason for medicine substitution.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10067"],
+    "sources" : ["1.2.36.1.2001.1004.201.10067"],
+    "uses" : {
+    },
+    "StructureDefinition-au-medicationdispense.html" : "AU Base MedicationDispense",
+    "StructureDefinition-au-medicationrequest.html" : "AU Base MedicationRequest"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "PathologyDiagnosticServiceCategory",
+    "title" : "Pathology Diagnostic Service Category",
+    "description" : "The Pathology Diagnostic Service Category value set includes values that may be used to indicate the diagnostic service where a pathology observation was performed.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+    "oids" : ["1.2.36.1.2001.1004.201.10180"],
+    "sources" : ["1.2.36.1.2001.1004.201.10180"],
+    "uses" : {
+    },
+    "StructureDefinition-au-pathologyresult.html" : "AU Base Pathology Result",
+    "StructureDefinition-au-pathologyreport.html" : "AU Base Pathology Report"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "PractitionerRole",
+    "title" : "Practitioner Role",
+    "description" : "The Practitioner Role value set includes values that describe the role that a practitioner is authorised to perform within an organisation.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10028"],
+    "sources" : ["1.2.36.1.2001.1004.201.10028"],
+    "uses" : {
+    },
+    "StructureDefinition-au-diagnosticrequest.html" : "AU Base Diagnostic Request",
+    "StructureDefinition-au-practitionerrole.html" : "AU Base PractitionerRole"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/procedure-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "Procedure",
+    "title" : "Procedure",
+    "description" : "The Procedure value set includes values that cover a broad range of procedures and clinical interventions that can be associated with a subject of care.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10033"],
+    "sources" : ["1.2.36.1.2001.1004.201.10033"],
+    "uses" : {
+    },
+    "StructureDefinition-au-procedure.html" : "AU Base Procedure",
+    "StructureDefinition-au-servicerequest.html" : "AU Base ServiceRequest"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ReasonForEncounter",
+    "title" : "Reason For Encounter",
+    "description" : "The Reason For Encounter value set includes values that can be used to represent the reason an encounter takes place.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10210"],
+    "sources" : ["1.2.36.1.2001.1004.201.10210"],
+    "uses" : {
+    },
+    "StructureDefinition-au-encounter.html" : "AU Base Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ReasonForRequest",
+    "title" : "Reason for Request",
+    "description" : "The Reason for Request value set includes values that can be used to indicate the rationale for a request. For example, this may include the reason for requesting a service or diagnostic procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10078"],
+    "sources" : ["1.2.36.1.2001.1004.201.10078"],
+    "uses" : {
+    },
+    "StructureDefinition-au-diagnosticrequest.html" : "AU Base Diagnostic Request",
+    "StructureDefinition-au-medicationrequest.html" : "AU Base MedicationRequest",
+    "StructureDefinition-au-servicerequest.html" : "AU Base ServiceRequest"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ReasonVaccineAdministered",
+    "title" : "Reason Vaccine Administered",
+    "description" : "The Reason Vaccine Administered value set includes values that describe why a vaccine may be administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10058"],
+    "sources" : ["1.2.36.1.2001.1004.201.10058"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ReasonVaccineNotAdministered",
+    "title" : "Reason Vaccine Not Administered",
+    "description" : "The Reason Vaccine Not Administered value set includes values that describe why a vaccine was not administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10269"],
+    "sources" : ["1.2.36.1.2001.1004.201.10269"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1",
+    "version" : "1.2.2",
+    "status" : "active",
+    "name" : "RelatedPersonRelationshipType",
+    "title" : "Related Person Relationship Type",
+    "description" : "The Related Person Relationship Type value set includes values that may be used to describe the nature of the relationship between the subject and the related person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10016"],
+    "sources" : ["1.2.36.1.2001.1004.201.10016"],
+    "uses" : {
+    },
+    "StructureDefinition-au-relatedperson.html" : "AU Base RelatedPerson"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "RouteOfAdministration",
+    "title" : "Route of Administration",
+    "description" : "The Route of Administration value set includes values that describe the route by which a medicine may be administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10041"],
+    "sources" : ["1.2.36.1.2001.1004.201.10041"],
+    "uses" : {
+    },
+    "StructureDefinition-au-dosage.html" : "AU Base Dosage",
+    "StructureDefinition-au-allergyintolerance.html" : "AU Base AllergyIntolerance",
+    "StructureDefinition-au-medicationadministration.html" : "AU Base MedicationAdministration"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SeparationMode",
+    "title" : "Separation Mode",
+    "description" : "The Separation Mode value set includes values that can be used to indicate the category of discharge of a patient. Separation refers to the process by which an episode of care for an admitted patient ceases.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10070"],
+    "sources" : ["1.2.36.1.2001.1004.201.10070"],
+    "uses" : {
+    },
+    "StructureDefinition-au-encounter.html" : "AU Base Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/service-type-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ServiceType",
+    "title" : "Service Type",
+    "description" : "The Service Type value set includes values that describe a broad range of service types.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10184"],
+    "sources" : ["1.2.36.1.2001.1004.201.10184"],
+    "uses" : {
+    },
+    "StructureDefinition-au-healthcareservice.html" : "AU Base HealthcareService",
+    "StructureDefinition-au-encounter.html" : "AU Base Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/specimen-collection-procedure-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "SpecimenCollectionProcedure",
+    "title" : "Specimen Collection Procedure",
+    "description" : "The Specimen Collection Procedure value set includes values to represent the method by which a specimen was collected.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10053"],
+    "sources" : ["1.2.36.1.2001.1004.201.10053"],
+    "uses" : {
+    },
+    "StructureDefinition-au-specimen.html" : "AU Base Specimen"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/specimen-container-type-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "SpecimenContainerType",
+    "title" : "Specimen Container Type",
+    "description" : "The Specimen Container Type value set includes values to support the recording of containers which may hold specimens or specimen containers.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10044"],
+    "sources" : ["1.2.36.1.2001.1004.201.10044"],
+    "uses" : {
+    },
+    "StructureDefinition-au-specimen.html" : "AU Base Specimen"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/specimen-type-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "SpecimenType",
+    "title" : "Specimen Type",
+    "description" : "The Specimen Type value set includes values to represent a specimen collected or tested in a pathological investigation.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10054"],
+    "sources" : ["1.2.36.1.2001.1004.201.10054"],
+    "uses" : {
+    },
+    "StructureDefinition-au-specimen.html" : "AU Base Specimen"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "RCPASPIAPathologyReporting",
+    "title" : "RCPA SPIA Pathology Reporting",
+    "description" : "The RCPA SPIA Pathology Reporting value set includes standard codes for use in reporting chemical pathology, haematology, immunopathology and microbiology serology results in Australia. The values represent the observables against which results are reported. It combines several Royal College of Pathologists of Australasia (RCPA) Standards for Pathology Informatics in Australia (SPIA) value sets. The composition of this value set, in referencing other value sets, does not transiently include the designations and displays defined in the referenced value sets.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.201.10214"],
+    "sources" : ["1.2.36.1.2001.1004.201.10214"],
+    "uses" : {
+    },
+    "StructureDefinition-au-pathologyresult.html" : "AU Base Pathology Result",
+    "StructureDefinition-au-pathologyreport.html" : "AU Base Pathology Report"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/substance-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "Substance",
+    "title" : "Substance",
+    "description" : "The Substance value set includes values that support the representation of a broad range of substances. Included are the broadest range of substance values typically available in SNOMED CT along with the medicinal substances from the Australian Medicines Terminology.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10090"],
+    "sources" : ["1.2.36.1.2001.1004.201.10090"],
+    "uses" : {
+    },
+    "ValueSet-amt-mp-codes.html" : "AMT Medicinal Product and Substances",
+    "StructureDefinition-au-substance.html" : "AU Base Substance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "VaccinationTargetDisease",
+    "title" : "Vaccination Target Disease",
+    "description" : "The Vaccination Target Disease value set includes values that can represent vaccine preventable diseases. The content coverage includes diseases caused by a microorganism or bacterial toxin.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10059"],
+    "sources" : ["1.2.36.1.2001.1004.201.10059"],
+    "uses" : {
+    },
+    "StructureDefinition-au-immunization.html" : "AU Base Immunization"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3",
+    "version" : "3.20260228.0",
+    "status" : "active",
+    "name" : "spia-chemical-pathology-refset",
+    "title" : "RCPA - SPIA Chemical Pathology Value Set",
+    "description" : "Standard codes for use in reporting chemical pathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1001"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1001"],
+    "uses" : {
+    },
+    "StructureDefinition-au-pathologyresult.html" : "AU Base Pathology Result"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3",
+    "version" : "3.20260531.0",
+    "status" : "active",
+    "name" : "spia-haematology-refset",
+    "title" : "RCPA - SPIA Haematology Value Set",
+    "description" : "Standard codes for use in reporting haematology pathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1007"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1007"],
+    "uses" : {
+    },
+    "StructureDefinition-au-pathologyresult.html" : "AU Base Pathology Result"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3",
+    "version" : "3.20251231.1",
+    "status" : "active",
+    "name" : "spia-immunopathology-refset",
+    "title" : "RCPA - SPIA Immunopathology Value Set",
+    "description" : "Standard codes for use in reporting immunopathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1009"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1009"],
+    "uses" : {
+    },
+    "StructureDefinition-au-pathologyresult.html" : "AU Base Pathology Result"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3",
+    "version" : "3.20251231.1",
+    "status" : "active",
+    "name" : "spia-microbiology-serology-molecular-refset",
+    "title" : "RCPA - SPIA Microbiology Serology Molecular Pathology Value Set",
+    "description" : "Standard codes for use in reporting microbiology pathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1004"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1004"],
+    "uses" : {
+    },
+    "StructureDefinition-au-pathologyresult.html" : "AU Base Pathology Result"
+  }]
+}

@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/CodeSystem/au-v3-ActCode> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "au-v3-ActCode"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem au-v3-ActCode</b></p><a name=\"au-v3-ActCode\"> </a><a name=\"hcau-v3-ActCode\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/v3-ActCode</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">PHONE<a name=\"au-v3-ActCode-PHONE\"> </a></td><td>Telephone Consultation</td><td>Encounter by telephone communication.</td></tr><tr><td style=\"white-space:nowrap\">VIDEO<a name=\"au-v3-ActCode-VIDEO\"> </a></td><td>Video Conferencing</td><td>Encounter by video conferencing.</td></tr><tr><td style=\"white-space:nowrap\">RACF<a name=\"au-v3-ActCode-RACF\"> </a></td><td>Residential Aged Care Facility</td><td>Encounter in a residential aged care facility setting.</td></tr><tr><td style=\"white-space:nowrap\">EMAIL<a name=\"au-v3-ActCode-EMAIL\"> </a></td><td>E-mail Correspondence</td><td>Encounter by e-mail correspondence.</td></tr><tr><td style=\"white-space:nowrap\">SMS<a name=\"au-v3-ActCode-SMS\"> </a></td><td>SMS</td><td>Encounter by SMS (short message service).</td></tr><tr><td style=\"white-space:nowrap\">AUPUBHOSP<a name=\"au-v3-ActCode-AUPUBHOSP\"> </a></td><td>Australian Public Hospital Scheme</td><td>An insurance scheme funded for Australian Public Hospital coverage.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v3-ActCode"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.1.4.20" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "ActCodeAU"] ; # 
+  fhir:title [ fhir:v "ActCode AU"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T16:30:51+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Additional concept codes for act coding defined for use in an Australian context. These codes are used as extensions to the HL7 International code set."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://terminology.hl7.org.au/ValueSet/v3-ActCode"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org.au/ValueSet/v3-ActCode>
+  ] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:versionNeeded [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "6"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "PHONE" ] ;
+     fhir:display [ fhir:v "Telephone Consultation" ] ;
+     fhir:definition [ fhir:v "Encounter by telephone communication." ]
+  ] [
+     fhir:code [ fhir:v "VIDEO" ] ;
+     fhir:display [ fhir:v "Video Conferencing" ] ;
+     fhir:definition [ fhir:v "Encounter by video conferencing." ]
+  ] [
+     fhir:code [ fhir:v "RACF" ] ;
+     fhir:display [ fhir:v "Residential Aged Care Facility" ] ;
+     fhir:definition [ fhir:v "Encounter in a residential aged care facility setting." ]
+  ] [
+     fhir:code [ fhir:v "EMAIL" ] ;
+     fhir:display [ fhir:v "E-mail Correspondence" ] ;
+     fhir:definition [ fhir:v "Encounter by e-mail correspondence." ]
+  ] [
+     fhir:code [ fhir:v "SMS" ] ;
+     fhir:display [ fhir:v "SMS" ] ;
+     fhir:definition [ fhir:v "Encounter by SMS (short message service)." ]
+  ] [
+     fhir:code [ fhir:v "AUPUBHOSP" ] ;
+     fhir:display [ fhir:v "Australian Public Hospital Scheme" ] ;
+     fhir:definition [ fhir:v "An insurance scheme funded for Australian Public Hospital coverage." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

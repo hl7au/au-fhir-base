@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="encounter-discharge-disposition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: SearchParameter encounter-discharge-disposition</b></p><a name="encounter-discharge-disposition"> </a><a name="hcencounter-discharge-disposition"> </a><h2>EncounterDischargeDisposition</h2><p>Parameter <code>discharge-disposition</code>:<code>token</code></p><div><p>This search parameter returns encounters with a discharge-disposition matching the specified code.</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td></tr><tr><td>Expression</td><td><code>Encounter.hospitalization.dischargeDisposition</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org.au/fhir/SearchParameter/encounter-discharge-disposition"/>
+  <version value="6.0.1-ci-build"/>
+  <name value="EncounterDischargeDisposition"/>
+  <status value="active"/>
+  <date value="2026-06-18T16:30:51+00:00"/>
+  <publisher value="HL7 Australia"/>
+  <contact>
+    <name value="HL7 Australia FHIR Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7.org/display/HAFWG"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="This search parameter returns encounters with a discharge-disposition matching the specified code."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <code value="discharge-disposition"/>
+  <base value="Encounter"/>
+  <type value="token"/>
+  <expression value="Encounter.hospitalization.dischargeDisposition"/>
+  <multipleOr value="true">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="MAY"/>
+    </extension>
+  </multipleOr>
+  <multipleAnd value="true">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="MAY"/>
+    </extension>
+  </multipleAnd>
+</SearchParameter>

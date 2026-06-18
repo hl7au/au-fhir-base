@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/HealthcareService/example5> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example5"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: HealthcareService example5</b></p><a name=\"example5\"> </a><a name=\"hcexample5\"> </a><p><b>identifier</b>: RACS ID/0011</p><p><b>active</b>: true</p><p><b>providedBy</b>: <a href=\"Organization-example5.html\">Organization The Corporation of the Synod of the Diocese of Nundah</a></p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1120991000168102}\">Aged care residential service</span></p><p><b>location</b>: <a href=\"Location-example9.html\">Location: status = active; type = Nursing or custodial care facility; physicalType = Site</a></p><p><b>name</b>: Honourable Mark's Home For Aged Men</p><p><b>telecom</b>: ph: (07) 8543 5956(Work)</p><p><b>serviceProvisionCode</b>: <span title=\"Codes:{http://terminology.hl7.org.au/CodeSystem/service-provision-conditions FAP}\">Fees Apply</span>, <span title=\"Codes:{http://terminology.hl7.org.au/CodeSystem/service-provision-conditions COP}\">Co-payment</span>, <span title=\"Codes:{http://terminology.hl7.org.au/CodeSystem/service-provision-conditions MIX}\">Mixed Billing</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RACSI" ]
+       ] ) ;
+       fhir:text [ fhir:v "RACS ID" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/residential-aged-care-service-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0011" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:providedBy [
+     fhir:link <http://hl7.org.au/fhir/Organization/example5> ;
+     fhir:reference [ fhir:v "Organization/example5" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:1120991000168102 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1120991000168102" ]
+     ] ) ;
+     fhir:text [ fhir:v "Aged care residential service" ]
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <http://hl7.org.au/fhir/Location/example9> ;
+     fhir:reference [ fhir:v "Location/example9" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Honourable Mark's Home For Aged Men"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(07) 8543 5956" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:serviceProvisionCode ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FAP" ]
+     ] ) ;
+     fhir:text [ fhir:v "Fees Apply" ]
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "COP" ]
+     ] ) ;
+     fhir:text [ fhir:v "Co-payment" ]
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "MIX" ]
+     ] ) ;
+     fhir:text [ fhir:v "Mixed Billing" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

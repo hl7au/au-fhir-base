@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Endpoint/example0> a fhir:Endpoint ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-endpoint"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-endpoint>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <b>Telstra Health Secure Messaging Endpoint</b>\n      <hr/>\n      <span style=\"color: gray;\">Work - Email:</span> cib@argus.example.net\n            <br/>\n      <span style=\"color: gray;\">identifier:</span> Argus SupportUnknownL\n            <br/>\n      <span style=\"color: gray;\">identifier:</span> http://ns.argusdca.com.au/smd/id/hostname/ACC5959010000000\n        </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-receivingfacility"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "namespace-id"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "CIB"
+       ]
+     ] [
+       fhir:url [ fhir:v "universal-id"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "877F9695-1298-4E6A-B432-0FDD46AD80B8"
+       ]
+     ] [
+       fhir:url [ fhir:v "universal-id-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "GUID"
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-receivingapplication"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "namespace-id"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Argus"
+       ]
+     ] [
+       fhir:url [ fhir:v "universal-id"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Argus:7.6.0"
+       ]
+     ] [
+       fhir:url [ fhir:v "universal-id-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "L"
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/encryption-certificate-pem-x509"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "-----BEGIN CERTIFICATE-----\r\nMIIEUjCCAzqgAwIBAgIGBWtwrJyAMA0GCSqGSIb3DQEBBQUAMFwxCzAJBgNVBAYTAkFVMRwwGgYDVQQKDBNBcmd1c0Nvbm5lY3RpbmdDYXJlMQ4wDAYDVQQLDAVBcmd1czEfMB0GA1UEAwwWQXJndXNDb25uZWN0aW5nQ2FyZU9DQTAeFw0xMDAyMDEwMTAwMDBaFw0yMDAyMDEwMTAwMDBaMFIxCzAJBgNVBAYTAkFVMRUwEwYDVQQKDAxBcmd1c0Nvbm5lY3QxLDAqBgNVBAMMI0FDQzU5NTkwMTAwMDAwMDAuaWQuYXJndXNkY2EuY29tLmF1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwp4wmpAF6HG//gJeqqDHoHDkT6mzkh2bJpyZ7lNvS7DTMZifS7kXBeMhfkYyoaE/LOefDo/nOvcDUrxWcIwDmrePxtih6a2+kYpacZbf6Xf01k9ROlv6mNeisaZQKX9osjtOGwk/vdVEr/i9PODX1lqX0l1FXKP9U21/zBV78YvO3/3XYrwU4EKDiDiHV94LN4pV4SPC+Qw9CgLYz0PxuMuzlEmTXpBlrHitrA8hI6QzPSEuuGbWCoPOKgG+CWP+HmMoCzkGrz/d94b9X+vrOp06BvezXgKHwYhGpLKc3H5c4S9pwc1se22uub5S0q1bZzoeQ22yOAvR/rRx6TmqQIDAQABo4IBIjCCAR4wagYDVR0RBGMwYYIjQUNDNTk1OTAxMDAwMDAwMC5pZC5hcmd1c2RjYS5jb20uYXWGOmh0dHA6Ly9ucy5hcmd1c2RjYS5jb20uYXUvc21kL2lkL2hvc3RuYW1lL0FDQzU5NTkwMTAwMDAwMDAwHwYDVR0jBBgwFoAUvLowVU1USjwCNjvruRZ9LgUSSPwwHQYDVR0OBBYEFIOhOzyPRAuzPkXA+8vQ0lQbykPsMAwGA1UdEwEB/wQCMAAwGQYDVR0gBBIwEDAOBgwqJAGPUYdqAQEBBAMwNwYDVR0lBDAwLgYEVR0lAAYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQwDgYDVR0PAQH/BAQDAgM4MA0GCSqGSIb3DQEBBQUAA4IBAQBmp734Rx5FbpeJuh+BDkymhY2+CgRmgSxX40Dz36QuynX+lwCH7cNa/oAKz/v6McsyNApjXJIdbbJDL0P2nFQXRIE4pO0VSCmeFesQXLeASpd7Zkp/8NQWKYH/X/XNeTCEhuuYupktL/nIcq0fTyTUx5JYKoljgq3wofKMu1iR2lGD9JQXKW//v9jQgwJUgp1sc6Tc59zLYE7ZRigU9g65Pc3Fuk0r1l1oOLQBEg7Y61GoyQhv5ih0BBilgZD7m2K7ZaUD4fY5PnaQujxpkkYWEBBvInBaRZ1yMhfSCQMaGNQ77qEEezjR6uGIqVisJpbDE0W+MMWlNiYbkmnQk5/X\r\n-----END CERTIFICATE-----"
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.org/enpoint-identifier"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Argus SupportUnknownL" ]
+  ] [
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/smd/target"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "http://ns.argusdca.com.au/smd/id/hostname/ACC5959010000000" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:connectionType [
+     fhir:system [ fhir:v "http://hl7.org.au/fhir/CodeSystem/smd-interfaces"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "http://ns.electronichealth.net.au/smd/intf/SealedMessageDelivery/TLS/2010" ] ;
+     fhir:display [ fhir:v "Sealed Message Delivery" ]
+  ] ; # 
+  fhir:name [ fhir:v "Telstra Health Secure Messaging Endpoint"] ; # 
+  fhir:managingOrganization [
+     fhir:display [ fhir:v "Telstra Health" ]
+  ] ; # 
+  fhir:contact ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "cib@argus.example.net" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2017-08-18"^^xsd:date ]
+  ] ; # 
+  fhir:payloadType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-REF-SIMPLIFIED-201706" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "http://ns.electronichealth.net.au/ds/sc/deliver/hl7Mdm/2012" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "http://ns.electronichealth.net.au/ack/sc/deliver/hl7Ack/2012" ]
+     ] )
+  ] ) ; # 
+  fhir:payloadMimeType ( [ fhir:v "application/hl7-v2"] ) ; # 
+  fhir:address [ fhir:v "https://uatsmd.connectingcare.com/cc.smd/SealedMessageDelivery.svc"^^xsd:anyURI] . # 
+
+# -------------------------------------------------------------------------------------
+

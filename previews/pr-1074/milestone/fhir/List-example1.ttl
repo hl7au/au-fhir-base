@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/List/example1> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medlist"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medlist>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: List example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medlist.html\">AU Medicine List</a></p></div><table class=\"clstu\"><tr><td>Date: 2018-10-24 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: Current Medicine </td></tr><tr><td>Subject: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a>Source: </td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Items</b></td></tr><tr><td><a href=\"Observation-norelevantfinding-example3.html\">Observation Assertion</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:2793d1c8-4e99-11e9-8647-d663bd873d93" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "working"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "101.32009" ] ;
+       fhir:display [ fhir:v "Current Medicine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ]
+  ] ; # 
+  fhir:date [ fhir:v "2018-10-24"^^xsd:date] ; # 
+  fhir:source [
+     fhir:link <http://hl7.org.au/fhir/Practitioner/example1> ;
+     fhir:reference [ fhir:v "Practitioner/example1" ]
+  ] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:link <http://hl7.org.au/fhir/Observation/norelevantfinding-example3> ;
+       fhir:reference [ fhir:v "Observation/norelevantfinding-example3" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
