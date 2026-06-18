@@ -37,7 +37,7 @@ name: AU Base build → working+milestone previews → gated MILESTONE publish
 
 on:
   push:
-    branches: [master]
+    branches: [master, canonical-redirects-preview]
     tags: ['v*']
   pull_request:
     branches: [master]
@@ -60,7 +60,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  PUBLISHER_JAR_URL: https://github.com/KyleOps/fhir-ig-publisher/releases/download/au-pipeline-combined/publisher.jar
+  PUBLISHER_JAR_URL: https://github.com/KyleOps/fhir-ig-publisher/releases/download/au-pipeline-combined-canonical/publisher.jar
   PUBLICATIONS_REPO: KyleOps/publications        # TEMP: revert to hl7au/publications once merged
   PUBLICATIONS_REF: au-pipeline-config           # TEMP: revert to (default branch) once merged
   TX_SERVER: https://tx.fhir.org
