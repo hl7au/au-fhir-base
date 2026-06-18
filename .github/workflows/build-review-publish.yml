@@ -59,6 +59,7 @@ jobs:
     container: hl7fhir/ig-publisher-base
     outputs:
       slug: ${{ steps.meta.outputs.slug }}
+      ver: ${{ steps.render.outputs.ver }}
     steps:
       - name: Compute a filesystem-safe label for this build (branch / pr-N / dispatch ref)
         id: meta
@@ -109,6 +110,7 @@ jobs:
           echo "publisher.jar: $(du -h input-cache/publisher.jar | cut -f1)"
 
       - name: Render the IG (PUBLICATION mode → go-publish -reuse-build adopts it, lever C)
+        id: render
         working-directory: au-fhir-base
         run: |
           # Render directly to the final publish path so the output is publishable and go-publish
@@ -116,6 +118,7 @@ jobs:
           # -reuse-build simply re-renders.
           PUBPATH=$(grep -o '"path"[^,}]*' publication-request.json | head -1 | sed 's/.*:[[:space:]]*"\([^"]*\)".*/\1/')
           echo "Publication path: $PUBPATH"
+          echo "ver=${PUBPATH##*/}" >> "$GITHUB_OUTPUT"   # version folder name, for the preview deep-link
           java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" -tx "$TX_SERVER"
 
       - name: Build lightweight -web (ROOT FILES ONLY — no 15GB sync)
@@ -166,8 +169,17 @@ jobs:
       - name: Download built site
         uses: actions/download-artifact@v4
         with: { name: "site-${{ needs.build.outputs.slug }}" }
-      - name: Unpack
-        run: mkdir -p preview && tar -xzf "site-${{ needs.build.outputs.slug }}.tar.gz" -C preview
+      - name: Unpack + add a preview-only root redirect
+        run: |
+          mkdir -p preview && tar -xzf "site-${{ needs.build.outputs.slug }}.tar.gz" -C preview
+          # The lean build produces /fhir/<version>/ + /fhir/history.html but NOT /fhir/index.html
+          # (that's prod's current-version landing, not built here). Add a preview-only redirect so
+          # the bare …/fhir/ URL lands on this build's new version instead of 404ing.
+          if [ ! -f preview/fhir/index.html ]; then
+            printf '<!doctype html><meta http-equiv="refresh" content="0; url=%s/index.html"><a href="%s/index.html">%s</a>\n' \
+              "${{ needs.build.outputs.ver }}" "${{ needs.build.outputs.ver }}" "${{ needs.build.outputs.ver }}" \
+              > preview/fhir/index.html
+          fi
       - name: Deploy preview to gh-pages/previews/<slug>
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -178,7 +190,13 @@ jobs:
           commit_message: "preview: ${{ needs.build.outputs.slug }} (${{ github.sha }})"
       - name: Preview URL
         run: |
-          echo "Preview: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/${{ needs.build.outputs.slug }}/fhir/" >> "$GITHUB_STEP_SUMMARY"
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/${{ needs.build.outputs.slug }}/fhir"
+          {
+            echo "### Preview (requires GitHub Pages enabled, source = gh-pages branch)";
+            echo "- new version: $base/${{ needs.build.outputs.ver }}/index.html";
+            echo "- directory of versions: $base/history.html";
+            echo "- (bare $base/ redirects to the new version)";
+          } >> "$GITHUB_STEP_SUMMARY"
 
   # Promote to PROD — gated by the `production` environment (required reviewers). Only on an
   # explicit manual dispatch with publish=true; push/PR builds never publish.
