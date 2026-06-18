@@ -156,7 +156,7 @@ jobs:
   # Promote to PROD — gated by the `production` environment (required reviewers). Runs on a tag push
   # (awaiting approval) or a manual dispatch with publish=true.
   publish:
-    needs: [build, preview-pages]
+    needs: build   # not preview-pages: a Pages-deploy hiccup must not block prod; the production env is the gate
     if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish) }}
     runs-on: ubuntu-latest
     environment: production
