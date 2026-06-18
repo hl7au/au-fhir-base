@@ -3,8 +3,11 @@
 ## TL;DR
 - `history.html` is generated **entirely from `package-list.json`** — backlinks to `/fhir/<version>`
   work because those version folders are immutable and already in S3.
-- Routine releases are **`working`** mode and only need a few **root** files locally; only **milestone**
-  releases (the R-numbered `trial-use` "current": 4.0.0=R3 … 6.0.0=R6) need the full 15 GB tree.
+- Routine releases are **`working`** mode and only need a few **root** files locally. Milestone
+  releases (the R-numbered `trial-use` "current") *used* to need the full 15 GB tree to rewrite every
+  past version's publish box — but with `dynamic-publish-box` (below) the publisher renders that box
+  client-side and **skips the past-version loop entirely**, so a milestone now needs only root files
+  too. **Both modes are GitHub-hosted and lean; the self-hosted EC2 is gone.**
 - The current pipeline syncs the whole bucket every run on a hand-started EC2 runner, then leaves
   output for a manual S3 copy. That full sync is unnecessary for working builds — the cause of the
   ~35 min builds and the manual steps.
@@ -27,6 +30,44 @@ version into the existing web tree and regenerates the cross-version artifacts.
   - **`milestone`** (e.g. 6.0.0): additionally rewrites the in-page "publish box" banner inside
     **every** past version → needs the full tree.
 
+## Per-repo independent publish vs the publications back-to-back script
+There are two ways to publish the AU IGs (core + base):
+- **publications repo `go-publish.sh`** — one script clones both IGs, builds both, and runs go-publish
+  for each, **sequentially into one shared `webroot`**. (Largely unused now; pinned branches, always
+  republishes both.)
+- **per-repo, independent** — each IG's own workflow publishes just itself into the shared S3 mirror
+  (what `build-review-publish*.yml` here do). This is the direction we're going.
+
+**Independent publishing produces the same combined site, with no extra orchestration.** What go-publish
+touches splits cleanly:
+- **Per-IG, never shared:** the version folder `/fhir[/core]/<ver>/`, that IG's own `package-list.json`,
+  its `history.html`, its publish-box. Each IG only ever writes its own — no interaction.
+- **Shared root files:** `package-registry.json`, `package-feed.xml`, `publication-feed.xml`, and the
+  realm index. go-publish **read-modify-writes** each — it loads the existing file from `-web`, inserts
+  this IG's new version entry, and writes it back (`updateFeed` does `fileToString` → insert →
+  `stringToFile`; `PackageRegistryBuilder.update` likewise). So a sibling IG's entries **survive** an
+  independent publish, *as long as `-web` was seeded with the live shared files* — which the lean
+  workflows already do (`curl https://hl7.org.au/fhir/package-feed.xml` etc.) and they never
+  `--delete` on upload.
+
+So the publications script's only real advantage was **serialization** (core-then-base in one run, so
+base sees core's just-written entries). Independent runs lose that *only* in a concurrency race: if core
+and base publish at the exact same time, both read the shared file before the other's entry exists, both
+write back, and the later S3 upload silently drops the earlier's new entry.
+
+**That race is negligible here: AU releases happen ~once every couple of months and are operator-driven,
+so two IGs publishing within the same minutes-long window is vanishingly unlikely.** No cross-repo
+concurrency lock is warranted. (If publishing ever became frequent/automated, a shared
+`concurrency.group` across the workflows — or an occasional full `-generate-package-registry` rebuild —
+would close it.)
+
+Two things to keep regardless: always seed `-web` from the **live** shared root files (already done),
+and when both IGs change together, publish **base before core** (au-core depends on au-base).
+
+**Recommendation: per-repo independent.** It only republishes what changed, lives with the source, and
+the shared registry/feeds stay correct via read-modify-write. The publications back-to-back script gave
+orchestration convenience, not extra output, so retiring it is sound.
+
 ## Current pipeline (`.github/workflows/pipeline-build.yml`)
 Self-hosted EC2 runner (`runs-on: [self-hosted, Linux, X64]`, `/webroot` volume) →
 `aws s3 sync s3://hl7au-fhir-ig /webroot` (≈216k objects / 15 GB) → `-go-publish` → **no upload step**
@@ -47,11 +88,15 @@ took too long doing the full sync.
 
 Result: minutes instead of ~35; correct history + backlinks; zero risk to live until the gated promote.
 
-### Milestone builds (rare) — full-tree regenerate
-Needs the whole tree (cross-version banner refresh). Make it painless rather than manual:
-- Ephemeral EC2 runner the workflow **starts/stops itself** (e.g. `machulav/ec2-github-runner`),
-  backed by a **warm EBS volume** so `s3 sync` pulls only deltas.
-- Same zip-for-review + gated promote.
+### Milestone builds (rare) — now identical to working (no full tree)
+**Superseded by the `dynamic-publish-box` skip-loop (implemented this cycle).** A milestone used to
+rewrite the publish-box banner in every past version (hence the full tree + self-hosted EC2 + warm
+mirror). With `website.dynamic-publish-box: true` the banner + "Page versions" list render client-side
+from `package-list.json`, so every old version's pages are byte-identical regardless of which version is
+current — the publisher therefore **skips the past-version loop**, and a milestone touches only the new
+version + regenerated root. It now runs on the **same GitHub-hosted, root-files-only path as a working
+build** (`build-review-publish-milestone.yml`), just with `publication-request.json` mode = `milestone`
+and the tag-push trigger. No EC2, no warm EBS, no 15 GB sync. Same zip-for-review + gated promote.
 
 ## Verifying the new method locally (no S3 writes)
 Build a lightweight `-web` (root files only) and run go-publish against an already-built `output/`:
@@ -104,11 +149,20 @@ the **upload**:
 This applies per IG repo when rolled out (each IG's build excludes the *other* IGs' folders + bundles
 on the way in, and uploads its own new version's bundles + tgz on the way out).
 
-### Making milestones cheap: version-agnostic publish box (discuss with Brett)
-The only reason a milestone must touch the full tree is to rewrite the in-page **publish-box banner**
-inside every past version to say *"the current version is vY"*. If that banner instead linked to
-`/fhir/history.html` **without naming the current version**, a new milestone would **never need to
-rewrite old versions** — so:
+### Making milestones cheap: dynamic publish box — IMPLEMENTED (`dynamic-publish-box`)
+**Done.** Rather than the version-agnostic approach below (which dropped the inline "current is vY"),
+we kept that wording but fill it **client-side**: under `website.dynamic-publish-box: true` the publisher
+emits a placeholder + small script that reads `package-list.json` at page load and fills the current
+version + the "Page versions" list. Because the emitted markup is then byte-identical on every page of
+every version, a milestone rewrites **0** old-version pages — and the publisher **skips the past-version
+loop and the `needFolder` copy altogether**, so the milestone needs **no local version tree**. Measured:
+2nd milestone rewrites 0/5,153 old-version files (see `publisher-A2-prototype-results.md`). This is what
+lets `build-review-publish-milestone.yml` run GitHub-hosted + lean. Off by default; opt-in per IG.
+Combined into the custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`) with #1327,
+A3, and lever C until the upstream PRs merge.
+
+The original version-agnostic idea (kept for the record / as a fallback if the JS approach is rejected
+upstream):
 
 **Benefits**
 - Milestones become as cheap/fast as working builds (no full-tree sync, no per-version rewrite).
@@ -139,14 +193,37 @@ projects, tfstate; CloudFront only the prod `hl7.org.au`). Options, lowest to hi
    (`terraform/cloudfront`). Build → `aws s3 sync` to staging → review at the staging URL → gated
    promote to prod. This is the cleanest "preview then promote" and mirrors prod behaviour.
 
-Recommended flow: **build → deploy to staging (auto) → review live → gated promote to prod.** The
-workflows below include a `staging` job stub; wiring it requires the staging bucket+distribution
-(small Terraform addition — pending decision).
+**Implemented: per-branch/per-PR GitHub Pages preview.** Both `build-review-publish*.yml` deploy the
+built site to the repo's `gh-pages` branch under `previews/<slug>/` (slug = branch / `pr-N` / tag), so
+each branch's preview gets a stable URL and they coexist:
+`https://<owner>.github.io/<repo>/previews/<slug>/fhir/<version>/index.html`. One-time setup: enable
+GitHub Pages with source = `gh-pages` branch. **Caveat (option 2 above):** pages bake absolute
+`hl7.org.au` canonical URLs and Pages doesn't run the CloudFront `fhir-canonical` function, so
+cross-page/version links resolve to **prod**, not the preview — good for "does the new version render",
+not for exercising canonical/version redirects. For full-fidelity preview, the staging S3+CloudFront
+option (option 3) remains the upgrade path (Terraform addition — pending decision).
+
+Flow now: **build → review zip + live Pages preview → gated promote to prod** (the `production`
+environment with required reviewers gates the S3 sync).
+
+## Workflow map (current)
+| workflow | trigger | runner | role |
+|----------|---------|--------|------|
+| `build-review-publish.yml` | push/PR to `master` + dispatch | GitHub-hosted, lean | WORKING releases; review zip + Pages preview; prod publish gated to dispatch+publish |
+| `build-review-publish-milestone.yml` | tag push + dispatch | GitHub-hosted, lean | MILESTONE releases (no version tree, thanks to `dynamic-publish-box`); gated by `production` env |
+| `pipeline-build.yml` | manual dispatch only | self-hosted (legacy) | LEGACY/reference — superseded by the two above; tag trigger moved to the milestone workflow |
+
+All three fetch the combined custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`:
+#1327 cloud redirects + A2 dynamic publish-box/page-versions + skip-version-tree + A3 source viewers +
+lever C `-reuse-build`) until the upstream PRs merge — then revert to `_updatePublisher.sh -f -y`.
+`publish-setup.json` (server=cloud + dynamic-publish-box) is sourced from `KyleOps/publications@au-pipeline-config`
+until merged to `hl7au/publications`.
 
 ## Open items
-- Confirm whether GitHub-hosted runners need sizing up for the publisher's RAM/disk (the only real
-  reason working builds couldn't be GitHub-hosted).
-- Old versions' in-page banners refresh only on milestone builds (the publisher's own behaviour);
-  `history.html` stays correct regardless.
-- Milestone publishing via the pipeline has historically been flaky ("milestone failing" commits) —
-  treat the milestone path as the one needing the most care/testing.
+- **One-time setup:** enable GitHub Pages (source = `gh-pages` branch) for the previews; configure the
+  `production` environment's required reviewers (gates every S3 sync).
+- **Revert-when-merged:** once the 5 publisher changes ship in a released jar and the config lands in
+  `hl7au/publications`, switch the workflows back to `_updatePublisher.sh -f -y` + `hl7au/publications`.
+- Confirm whether GitHub-hosted runners need sizing up for the publisher's RAM/disk.
+- Milestone publishing was historically flaky ("milestone failing" commits); it's now the same lean
+  path as working, but still warrants a milestone dry-run before the first production milestone.
