@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="hepatitis-b-antibody"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-servicerequest"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest hepatitis-b-antibody</b></p><a name="hepatitis-b-antibody"> </a><a name="hchepatitis-b-antibody"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a></p></div><p><b>identifier</b>: Placer Identifier/1122334455</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 65911000}">Hepatitis B surface antibody</span></p><p><b>subject</b>: <a href="Patient-example0.html">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>authoredOn</b>: 2019-09-23</p><p><b>requester</b>: <a href="PractitionerRole-example3.html">PractitionerRole General practitioner</a></p><p><b>reasonCode</b>: <span title="Codes:">Hepatitis B surface antibody status</span></p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PLAC"/>
+        <display value="Placer Identifier"/>
+      </coding>
+    </type>
+    <system value="https://dfmc.example.com/labs/order-identifier"/>
+    <value value="1122334455"/>
+    <assigner>
+      <reference value="Organization/example3"/>
+      <display value="Devonport Family Medicine Clinic"/>
+    </assigner>
+  </identifier>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="65911000"/>
+      <display value="Hepatitis B surface antibody measurement"/>
+    </coding>
+    <text value="Hepatitis B surface antibody"/>
+  </code>
+  <subject>
+    <reference value="Patient/example0"/>
+  </subject>
+  <authoredOn value="2019-09-23"/>
+  <requester>
+    <reference value="PractitionerRole/example3"/>
+  </requester>
+  <reasonCode>
+    <text value="Hepatitis B surface antibody status"/>
+  </reasonCode>
+</ServiceRequest>

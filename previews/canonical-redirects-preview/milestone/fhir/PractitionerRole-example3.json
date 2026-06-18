@@ -1,0 +1,65 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "example3",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole example3</b></p><a name=\"example3\"> </a><a name=\"hcexample3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-practitionerrole.html\">AU Base PractitionerRole</a></p></div><p><b>identifier</b>: Medicare Provider Number/1234561A</p><p><b>practitioner</b>: <a href=\"Practitioner-example3.html\">Practitioner Francis Fernando </a></p><p><b>organization</b>: <a href=\"Organization-example3.html\">Organization Devonport Family Medicine Clinic</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 62247001}\">General practitioner</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 394814009}\">General practice (specialty)</span></p><p><b>location</b>: <a href=\"Location-example3.html\">Location: status = active; type = Family medicine clinic; physicalType = Building</a></p><p><b>healthcareService</b>: <a href=\"HealthcareService-example3.html\">HealthcareService General Practitioner services</a></p><p><b>telecom</b>: <a href=\"mailto:francis.fernando@alphamail.example.com\">francis.fernando@alphamail.example.com</a></p><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday, Friday</p><p><b>availableStartTime</b>: 08:00:00</p><p><b>availableEndTime</b>: 20:00:00</p></blockquote><h3>NotAvailables</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td></tr><tr><td style=\"display: none\">*</td><td>Weekends</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "UPIN"
+      }],
+      "text" : "Medicare Provider Number"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/medicare-provider-number",
+    "value" : "1234561A"
+  }],
+  "practitioner" : {
+    "reference" : "Practitioner/example3"
+  },
+  "organization" : {
+    "reference" : "Organization/example3"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "62247001",
+      "display" : "General practitioner"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394814009",
+      "display" : "General practice (specialty)"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/example3"
+  }],
+  "healthcareService" : [{
+    "reference" : "HealthcareService/example3"
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "francis.fernando@alphamail.example.com",
+    "use" : "work"
+  }],
+  "availableTime" : [{
+    "daysOfWeek" : ["mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"],
+    "availableStartTime" : "08:00:00",
+    "availableEndTime" : "20:00:00"
+  }],
+  "notAvailable" : [{
+    "description" : "Weekends"
+  }]
+}

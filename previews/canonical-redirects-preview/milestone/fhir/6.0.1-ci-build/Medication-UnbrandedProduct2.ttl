@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Medication/UnbrandedProduct2> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "UnbrandedProduct2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medication"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication UnbrandedProduct2</b></p><a name=\"UnbrandedProduct2\"> </a><a name=\"hcUnbrandedProduct2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medication.html\">AU Base Medication</a></p></div><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 23551011000036108}\">Amoxicillin 500mg Capsule</span></p><p><b>form</b>: <span title=\"Codes:\">Capsule</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 21415011000036100}\">Amoxicillin</span></td><td>500 mg/1 unit</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:23551011000036108 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UPDSF" ] ;
+           fhir:display [ fhir:v "Unbranded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "23551011000036108" ] ;
+       fhir:display [ fhir:v "Amoxicillin 500 mg capsule" ]
+     ] ) ;
+     fhir:text [ fhir:v "Amoxicillin 500mg Capsule" ]
+  ] ; # 
+  fhir:form [
+     fhir:text [ fhir:v "Capsule" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:21415011000036100 ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:Coding ;
+             fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "UPD" ] ;
+             fhir:display [ fhir:v "Unbranded product with no strengths or form" ]
+           ]
+         ] ) ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "21415011000036100" ] ;
+         fhir:display [ fhir:v "amoxicillin" ]
+       ] ) ;
+       fhir:text [ fhir:v "Amoxicillin" ]
+     ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "unit" ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

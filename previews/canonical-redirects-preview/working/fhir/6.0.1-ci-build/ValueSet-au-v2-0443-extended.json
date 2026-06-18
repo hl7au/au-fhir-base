@@ -1,0 +1,62 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "au-v2-0443-extended",
+  "meta" : {
+    "profile" : ["https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet au-v2-0443-extended</b></p><a name=\"au-v2-0443-extended\"> </a><a name=\"hcau-v2-0443-extended\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4</code></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></a><span title=\"Version is explicitly stated to be 3.0.0\"> version &#x1F4CD;3.0.0</span></li><li>Include all codes defined in <a href=\"CodeSystem-au-v2-0443.html\"><code>http://terminology.hl7.org.au/CodeSystem/v2-0443</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;6.0.1-ci-build</span></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"
+      }]
+    }
+  }],
+  "url" : "http://terminology.hl7.org.au/ValueSet/v2-0443-extended",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.2.3.4.2.3.443"
+  }],
+  "version" : "6.0.1-ci-build",
+  "name" : "Hl7VSProviderRoleAUExtended",
+  "title" : "hl7VS-providerRole - AU Extended",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-06-18T23:22:00+00:00",
+  "publisher" : "HL7 Australia",
+  "contact" : [{
+    "name" : "HL7 Australia FHIR Working Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://confluence.hl7.org/display/HAFWG",
+      "use" : "work"
+    }]
+  }],
+  "description" : "hl7VS-providerRole extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "copyright" : "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+      "version" : "3.0.0"
+    },
+    {
+      "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0443"
+    }]
+  }
+}

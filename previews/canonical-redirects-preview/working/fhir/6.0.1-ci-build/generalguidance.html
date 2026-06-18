@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>General Guidance - AU Base Implementation Guide v6.0.1-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.1"}
+    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Base Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">6.0.1-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="generalguidance.html">General Guidance</a></li>
+      <li><a href="sexgender.html">Sex and Gender</a></li>
+      <li><a href="relationship.html">Relationship with other IGs</a></li>
+      <li><a href="future.html">Future of AU Base</a></li>
+    </ul>
+  </li>  
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+	  <!--
+	  <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li>
+	  -->
+    </ul>
+  </li>
+  <!--<li>
+    <a href="security.html">Security</a>
+  </li>-->
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='guidance.html'><b>Guidance</b></a></li><li><b>General Guidance</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Australian Base IG (v6.0.1-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="6.0.1-ci-build" data-pb-canonical="http://hl7.org.au/fhir"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="6.0.1-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>General Guidance</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#implementation-guide-approach" id="markdown-toc-implementation-guide-approach">Implementation Guide Approach</a>    <ul>
+      <li><a href="#scope-of-au-base-fhir-artefacts" id="markdown-toc-scope-of-au-base-fhir-artefacts">Scope of AU Base FHIR Artefacts</a></li>
+      <li><a href="#extension-approach" id="markdown-toc-extension-approach">Extension Approach</a></li>
+      <li><a href="#search-parameter-approach" id="markdown-toc-search-parameter-approach">Search Parameter Approach</a></li>
+      <li><a href="#terminology-approach" id="markdown-toc-terminology-approach">Terminology Approach</a></li>
+      <li><a href="#data-type-profile-approach" id="markdown-toc-data-type-profile-approach">Data Type Profile Approach</a></li>
+      <li><a href="#base-resource-profile-approach" id="markdown-toc-base-resource-profile-approach">Base Resource Profile Approach</a></li>
+      <li><a href="#generic-use-case-resource-profile-approach" id="markdown-toc-generic-use-case-resource-profile-approach">Generic Use Case Resource Profile Approach</a></li>
+    </ul>
+  </li>
+  <li><a href="#maturity-levels" id="markdown-toc-maturity-levels">Maturity Levels</a></li>
+  <li><a href="#hl7-au-fhir-artefact-release-publishing-policy" id="markdown-toc-hl7-au-fhir-artefact-release-publishing-policy">HL7 AU FHIR Artefact Release Publishing Policy</a></li>
+  <li><a href="#snomed-ct-australian-edition" id="markdown-toc-snomed-ct-australian-edition">SNOMED CT Australian Edition</a>    <ul>
+      <li><a href="#snomed-ct-version-options" id="markdown-toc-snomed-ct-version-options">SNOMED CT Version Options</a></li>
+    </ul>
+  </li>
+  <li><a href="#business-identifiers" id="markdown-toc-business-identifiers">Business Identifiers</a></li>
+  <li><a href="#australian-health-practitioner-regulation-agency-ahpra-data-guidance" id="markdown-toc-australian-health-practitioner-regulation-agency-ahpra-data-guidance">Australian Health Practitioner Regulation Agency (Ahpra) Data Guidance</a>    <ul>
+      <li><a href="#ahpra-person-data" id="markdown-toc-ahpra-person-data">Ahpra Person Data</a></li>
+      <li><a href="#ahpra-qualification-data" id="markdown-toc-ahpra-qualification-data">Ahpra Qualification Data</a></li>
+      <li><a href="#ahpra-profession-data" id="markdown-toc-ahpra-profession-data">Ahpra Profession Data</a></li>
+      <li><a href="#ahpra-registration-data" id="markdown-toc-ahpra-registration-data">Ahpra Registration Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#representing-communication-preferences" id="markdown-toc-representing-communication-preferences">Representing Communication Preferences</a></li>
+  <li><a href="#representing-body-site-which-may-include-laterality" id="markdown-toc-representing-body-site-which-may-include-laterality">Representing Body Site, Which May Include Laterality</a></li>
+</ul>
+
+</div>
+
+<h3 id="implementation-guide-approach">Implementation Guide Approach</h3>
+
+<p>AU Base is designed to serve as a <a href="relationship.html">base layer</a> within the broader context of FHIR implementations in the Australian healthcare environment. AU Base is definitional in nature and not intended for standalone implementation or to provide direction on what to do in a particular use case. For a directly implementable usage of AU Base, it is recommended that <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/">AU Core</a> is adopted.</p>
+
+<p>AU Base extends the FHIR standard to define nationally agreed localised FHIR structures suitable for usage across jurisdictions, organisations, and digital health initiatives nationwide. AU Base is the source of truth for the nationally agreed FHIR representation of Australian concepts such as <a href="StructureDefinition-au-medicarecardnumber.html">Australian Medicare card number</a> or <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a>.</p>
+
+<p>The definitional approach allows for individual concepts, agnostic to a specific domain or use case, to be defined and shared at a national level without the need for a separate IG project or to specify conformance requirements for a particular use case. Implementers working with a common concept that has national usage are encouraged to submit for adoption into AU Base.</p>
+
+<p>Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):</p>
+<ul>
+  <li>in the FHIR standard (incl. FHIR Extensions Pack)</li>
+  <li>in AU Base (this IG)</li>
+  <li>in a downstream IG (e.g. AU eRequesting or AU Patient Summary)</li>
+  <li>in a local IG only if necessary</li>
+</ul>
+
+<h4 id="scope-of-au-base-fhir-artefacts">Scope of AU Base FHIR Artefacts</h4>
+
+<p>AU Base, as the Australian extension of the FHIR standard (including <a href="https://hl7.org/fhir/extensions/">FHIR Extensions Pack</a>, <a href="https://hl7.org/fhir/R4/searchparameter-registry.html">FHIR Search Parameter Registry</a>, and <a href="https://build.fhir.org/ig/HL7/UTG/documentation.html">HL7 Terminology (THO)</a>), defines:</p>
+<ul>
+  <li><a href="generalguidance.html#extension-approach">Extensions</a> for local use concepts (e.g. <a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a>, <a href="StructureDefinition-subsidised-concurrent-supply.html">Subsidised Concurrent Supply</a>)</li>
+  <li><a href="generalguidance.html#search-parameter-approach">Search parameters</a> for searching local use concepts</li>
+  <li><a href="generalguidance.html#terminology-approach">Terminology</a> localised for use in an Australian context:
+    <ul>
+      <li>concepts unique to Australia (e.g. languages, Australian Medicines Terminology (AMT), discharge disposition codes)</li>
+      <li>usage localised to Australia (e.g. nationally endorsed clinical reference sets represented as value sets)</li>
+    </ul>
+  </li>
+  <li>Profiles defining FHIR structures for use in an Australian context:
+    <ul>
+      <li><a href="generalguidance.html#data-type-profile-approach">Data type profiles</a> (e.g. <a href="StructureDefinition-au-address.html">Australian Address</a>, <a href="StructureDefinition-au-australianbusinessnumber.html">Australian Business Number</a>)</li>
+      <li><a href="generalguidance.html#base-resource-profile-approach">Base resource profiles</a> (e.g. <a href="StructureDefinition-au-patient.html">AU Base Patient</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>)</li>
+      <li><a href="generalguidance.html#generic-use-case-resource-profile-approach">Generic use case resource profiles</a> (e.g. <a href="StructureDefinition-au-medlist.html">AU Medicine List</a>, <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>), where there is no existing IG project to undertake the work</li>
+    </ul>
+  </li>
+</ul>
+
+<p>AU Base does not define actors (i.e. ActorDefinitions) or support requirements associated with actors (e.g. CapabilityStatements or Obligations). This IG does not prescribe the usage or support requirements for any particular use case.</p>
+
+<h4 id="extension-approach">Extension Approach</h4>
+<p>AU Base extends the set of extensions available in the FHIR standard (i.e. <a href="https://hl7.org/fhir/extensions/">FHIR Extensions Pack</a>) for Australia. Extensions are defined in AU Base when:</p>
+<ul>
+  <li>there is no native FHIR element that can be used</li>
+  <li>there is no available extension in the FHIR Extensions Pack</li>
+  <li>there is no <a href="https://hl7.org/fhir/R5/versions.html#extensions">future FHIR version resource element</a> that can be pre-adopted</li>
+  <li>it is not suitable to define the extension in the FHIR Extensions Pack</li>
+  <li>the use is not specific to a single use case or domain (i.e. not specific to a single IG)</li>
+</ul>
+
+<p>Any extension intended for use in a healthcare context and that is not unique to Australia is to be defined in the FHIR Extensions Pack. The fallback is to define the extension in AU Base if that submission to the FHIR Extensions Pack is not accepted.</p>
+
+<p>This approach means that AU Core will not define extensions. AU Core profiles are intended for multiple use cases, so all extensions used in AU Core are defined in AU Base or the FHIR Extensions Pack.</p>
+
+<p>AU Base extensions are modelled only to define the concept and not to prescribe particular support requirements or usage for specific actors. Downstream IGs, such as AU Core, profile extensions as needed to define the applicable support requirements for example <a href="https://hl7.org.au/fhir/core/StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth</a> which profiles the <a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex or Gender extension</a>.</p>
+
+<h4 id="search-parameter-approach">Search Parameter Approach</h4>
+<p>AU Base extends the set of search parameters available in the FHIR standard (<a href="https://hl7.org/fhir/R4/searchparameter-registry.html">FHIR Search Parameter Registry</a> and <a href="https://hl7.org/fhir/extensions/">FHIR Extensions Pack</a>). Search parameters are defined in AU Base when:</p>
+<ul>
+  <li>there is no available search parameter in the FHIR standard</li>
+  <li>the use is not specific to searching an extension defined in a downstream IG</li>
+</ul>
+
+<p>AU Base defined search parameters are definitional and are intended to be as expansive as possible to avoid limiting downstream use case decisions. For this reason, search parameters are defined as open and aspects such as chaining, modifiers, and comparators are not limited.</p>
+
+<p>This approach means that other HL7 AU IGs will not define search parameters unless they are for IG specific extensions. Definition of new search parameters for native FHIR elements, FHIR extensions, or AU Base extensions is to be done in AU Base. Downstream IGs, such as AU Core, profile search parameters as needed to describe the applicable support requirements for example the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/SearchParameter-au-core-clinical-patient.html">AU Core profile of clinical-patient</a> that defines support for chained identifiers.</p>
+
+<h4 id="terminology-approach">Terminology Approach</h4>
+<p>AU Base defines terminology additional to that used in the FHIR standard (including <a href="https://build.fhir.org/ig/HL7/UTG/documentation.html">HL7 Terminology (THO)</a>).</p>
+
+<p>Sometimes, only additional concepts are needed rather than a new code system. Where possible, individual concepts are added to an existing code system and promoted to an applicable international code system (e.g. international edition of SNOMED CT) if the concept is not Australian-specific.</p>
+
+<p>Code systems are defined in AU Base when:</p>
+<ul>
+  <li>it is not suitable or achievable to add the needed concepts to an existing published code system (e.g. some Australian Bureau of Statistics terminology is not yet available as a FHIR code system)</li>
+  <li>it is not suitable to define the new code system in <a href="https://build.fhir.org/ig/HL7/UTG/documentation.html">HL7 Terminology (THO)</a>
+    <ul>
+      <li>terminology can be defined temporarily in an AU Base code system to support development during a release while work on promoting the concepts to <a href="https://build.fhir.org/ig/HL7/UTG/documentation.html">HL7 Terminology (THO)</a> is progressing</li>
+    </ul>
+  </li>
+  <li>the use of the code system is not specific to a single use case or domain (i.e. not specific to a single IG)</li>
+</ul>
+
+<p>Value sets are defined in AU Base when:</p>
+<ul>
+  <li>there is no available FHIR value set (including in <a href="https://build.fhir.org/ig/HL7/UTG/documentation.html">HL7 Terminology (THO)</a>) that matches the set of values for usage agreed by the responsible work group</li>
+  <li>the content of the value set is not predominantly SNOMED CT or LOINC<sup>1</sup></li>
+  <li>the use is not specific to a single use case or domain (i.e. not specific to a single IG)</li>
+</ul>
+
+<p><em><sup>1</sup>Value sets defined for usage in HL7 AU IGs that are SNOMED CT or LOINC predominant are managed by the work group and published via the <a href="https://www.healthterminologies.gov.au/">National Clinical Terminology Service (NCTS)</a> directly rather than AU Base.</em></p>
+
+<h5 id="terminology-selection">Terminology Selection</h5>
+<p>Compliance with the FHIR standard is mandatory. This can mean that some terminology rules are pre-determined for example supplying at least the standardised LOINC coding for vital signs observations defined in the FHIR standard or complying with extensible and required bindings defined for elements in the FHIR standard.</p>
+
+<p>Localisation of terminology occurs through a number of mechanisms including nationally maintained clinical reference sets in the <a href="https://www.healthterminologies.gov.au/">National Clinical Terminology Service (NCTS)</a>, terminology published by government agencies such as the <a href="https://www.abs.gov.au/">Australian Bureau of Statistics</a>, <a href="https://www.aihw.gov.au/">Australian Institute of Health and Welfare</a>, <a href="https://www.servicesaustralia.gov.au/">Services Australia</a>, and use case projects that contribute additional concepts as needed for use in implementation.</p>
+
+<p>When selecting terminology for use in an Australian healthcare context some rules of thumb apply:</p>
+<ul>
+  <li>SNOMED CT-AU is the default preferred terminology for clinical concepts (e.g. <code class="language-plaintext highlighter-rouge">AllergyIntolerance.reaction.manifestation</code>) and should always be considered.
+    <ul>
+      <li>Where available, nationally agreed clinical reference sets are considered as the starting position for the set of values when SNOMED CT-AU is agreed to be the terminology bound in the HL7 AU specification.</li>
+    </ul>
+  </li>
+  <li>An alternative terminology endorsed by a peak body or relevant national authority may override the preference for SNOMED CT-AU (e.g. RCPA endorsed pathology reporting terminology is LOINC).
+    <ul>
+      <li>The endorsed set of values, where available, should be considered as the starting position for the set of values (e.g. the <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-chemical-pathology-refset-3?ui:source=search">RCPA - SPIA Chemical Pathology Terminology Reference Set</a>).</li>
+    </ul>
+  </li>
+  <li>For Australian-specific demographic concepts (e.g. Australian Defence Force veteran status or Australian indigenous status or Australian states and territories) the applicable national standard is used. This often results in a new FHIR code system, published in AU Base, to make that terminology available in FHIR:
+    <ul>
+      <li>The applicable standard depends on the meaning and use of the element:
+        <ul>
+          <li>If the driver is reporting then Australian Bureau of Statistics and/or Australian Institute of Health and Welfare concepts are typically preferred. The current standard for person and provider identification in healthcare is also considered as a preferred source.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>For other concepts (e.g. not clinical or Australian-specific demographics) the applicable standard is used where it is available. Preference is given to the international and/or FHIR implemented terminology for that concept (e.g. the terminology for country codes or language codes or MIME types).</li>
+  <li>Where possible, widely implemented international terminology is used with concepts added or enhanced rather than creating new competing code systems. Only where a set of concepts is semantically bounded and Australian-specific is the preferred long term solution to create and manage an Australian jurisdictional terminology published in a FHIR code system.</li>
+</ul>
+
+<h4 id="data-type-profile-approach">Data Type Profile Approach</h4>
+<p>In AU Base, data type profiles are definitional and used to describe a concept relevant for usage in the Australian healthcare context. It is preferred to use a data type profile over a new extension or an inline slice in a base resource profile. Typically the data type that is profiled:</p>
+<ul>
+  <li>is a complex data type (e.g. Dosage, Identifier, Address, CodeableConcept)</li>
+  <li>includes a fixed distinguishing part to identify the concept being represented (e.g. <code class="language-plaintext highlighter-rouge">Identifier.type</code> or <code class="language-plaintext highlighter-rouge">Address.country</code>)</li>
+</ul>
+
+<p><a href="generalguidance.html#business-identifiers">Business Identifiers</a> represented in AU Base are defined as well formed identifiers (not inline slices in resource profiles) and include data quality requirements using invariants, cardinality constraints, extensions, and terminology. For detail on why identifiers are defined as data type profiles and not slices, refer to <a href="https://github.com/hl7au/au-fhir-base/issues/429">Identifier data type profiles - define the mechanism for reference / inclusion in AU Base profiles of resources #429</a>.</p>
+
+<p>Data type profiles that do not represent business identifiers do not follow the same approach and are definitional rather than describing well formed instances. These data type profiles are conservative in including data quality rules, similar to the <a href="generalguidance.html#base-resource-profile-approach">approach to modelling base resource profiles</a> below.</p>
+
+<h4 id="base-resource-profile-approach">Base Resource Profile Approach</h4>
+
+<p>In AU Base, base resource profiles inform a reader of which concepts are considered relevant to a particular resource type when used in an Australian context including extensions, terminology, and identifiers.</p>
+
+<p>AU Base is intentionally designed to be a dependency for all Australian implementation guides, and to encourage <a href="http://hl7.org/fhir/profiling.html">derivation</a> from AU Base resource profiles. These base resource profiles do not force conformance to localised concepts or prescribe usage in particular scenarios.</p>
+
+<p>When modelling AU Base resource profiles:</p>
+<ul>
+  <li>Open: profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.</li>
+  <li>Extensions: extensions are explicitly modelled in the profile to identify the nationally agreed extension to use for a particular concept.</li>
+  <li>Cardinality: cardinality is only constrained where there is national agreement that for all use cases in the Australian healthcare context the cardinality restriction needs to be applied (e.g. legislative requirements).</li>
+  <li>Terminology Binding: where possible, elements are bound to the nationally recognised value set which is either inherited from the FHIR standard or a localised value set.
+    <ul>
+      <li>By default, bindings specified in AU Base are <a href="https://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> to indicate the recommended local terminology. The binding can be stronger where either binding inherited by the FHIR standard is stronger (and therefore cannot be relaxed) or where there is strong national agreement on the terminology for use in an Australian healthcare context across use cases.</li>
+      <li>Where multiple terminologies are recognised for use in the Australian healthcare context, the set of terminologies are described using <a href="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">additional bindings</a>, for example <a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <code class="language-plaintext highlighter-rouge">Medication.code</code> uses additional bindings to describe usage of Australian Medicines Terminology, PBS Item Codes, MIMS, and GTIN.</li>
+    </ul>
+  </li>
+  <li>Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules. Slicing, where present, is used to either include an extension or to define a real world concept that cannot be meaningfully modelled using another profiling technique, and is left open to allow for flexibility.</li>
+  <li>References (target resources or profiles): references are not constrained to avoid limiting the opportunities for downstream IGs and applications to define their own business rules.</li>
+  <li>Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Additionally, AU Base data type profiles suitable for usage for that particular element are added to the set of type choices (e.g. <a href="StructureDefinition-au-ihi.html">AU IHI</a> in the <code class="language-plaintext highlighter-rouge">Patient.identifier</code> element in <a href="StructureDefinition-au-patient.html">AU Base Patient</a>).</li>
+  <li>Must Support and Obligations: <em>Must Support</em> or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.</li>
+</ul>
+
+<p>Some FHIR resource types are not profiled in AU Base as the resource type is too abstract to support meaningful localisation across use cases in a base resource profile (e.g. Basic, Observation, and Device). For these resource types, AU Core or a downstream use case IG can profile directly instead of inheriting from an AU Base profile.</p>
+
+<h4 id="generic-use-case-resource-profile-approach">Generic Use Case Resource Profile Approach</h4>
+
+<p>In AU Base, generic use case resource profiles (e.g. <a href="StructureDefinition-au-medlist.html">AU Medicine List</a>, <a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a>), profile a FHIR resource to define structures relevant to a particular use case but do not prescribe conformance for a particular actor or scenario. These profiles are intended to be temporary, and are included in AU Base where there is:</p>
+<ul>
+  <li>sufficient community need for national level agreement on the 'what' for a use case</li>
+  <li>sufficient community agreement on the 'what' for a use case</li>
+  <li>there is no upcoming IG project that covers the scope of the use case</li>
+</ul>
+
+<p>Generic use case resource profiles are defined as open, allowing additional elements and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.</p>
+
+<p>Generic use case resource profiles remain definitional, encourage derivation, and do not include <em>Must Support</em> or Obligation. Constraints are limited to defining the particular scope and typically include some type of fixed value or terminology constraint to describe the kind of concept. Constraints are still minimal to avoid limiting downstream IG modelling and implementation choices.</p>
+
+<p>When an IG project starts that covers the scope of an AU Base generic use case resource profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:</p>
+<ul>
+  <li>the AU Core vital signs profiles started in AU Base and were subsequently moved to AU Core and then removed from AU Base</li>
+  <li>the AU eRequesting ServiceRequest profile started in AU Base and was subsequently moved to AU eRequesting and then deprecated in AU Base</li>
+</ul>
+
+<h3 id="maturity-levels">Maturity Levels</h3>
+<p>These levels used for HL7 AU FHIR Implementation Guides are associated with the <a href="http://hl7.org/fhir/R4/versions.html#maturity">FHIR Maturity Model</a> and adjusted for local use.</p>
+
+<p>The content of this release has been subject to significant review through ballot and other HL7 AU processes and many aspects of it have been implemented and 
+subjected to interoperability testing through Connectathons and early adoption. However, the degree of testing has varied. Some resources have been well tested 
+in a variety of environments. Others have received relatively little real-world exercise. In general, the infrastructure should be considered to be more stable 
+than the resources themselves. Guidance from early implementation will help address these areas.</p>
+
+<p>All artefacts in this specification are assigned a "Maturity Level", known as AFMM (after the well-known CMM grades) - Australian FHIR Maturity Model. The AFMM level can be used by implementers to judge how advanced - and therefore stable - an artefact is.</p>
+
+<p>The following AFMM levels are defined:</p>
+
+<p start="0"><strong>DRAFT 0</strong> The resource or profile (artefact) has been published on the current build. Artefacts with this level must have a standards status of Draft.</p>
+
+<p><strong>AFMM 1</strong> DRAFT 0 PLUS the artefact produces no warnings or errors during the build process that have not been accepted by the responsible WG; and the responsible WG has indicated that they consider the artefact substantially complete and ready for implementation.</p>
+
+<p><strong>AFMM 2</strong> AFMM 1 PLUS the artefact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using appropriate data and scenarios based on at least one of the declared scopes of the artefact (e.g. at a Connectathon). These interoperability results must have been reported to and accepted by the FHIRWG.</p>
+
+<p><strong>AFMM 3</strong> AFMM 2 PLUS the artefact has been verified by the work group as meeting the <a href="https://confluence.hl7.org/display/FHIR/Conformance+QA+Criteria">Conformance Resource Quality Guidelines</a>; has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organisations resulting in at least one substantive change.</p>
+
+<p><strong>AFMM 4</strong> AFMM 3 PLUS the artefact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artefact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.</p>
+
+<p><strong>AFMM 5</strong> AFMM 4 PLUS the artefact has been published in two formal publication release cycles at AFMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.</p>
+
+<p><strong>Normative</strong> AFMM 5 PLUS the responsible work group and the FHIRWG agree the material is ready to lock down according to the <a href="https://hl7.org/fhir/versions.html#change">inter-version</a> change rules and the artefact has passed HL7 AU normative ballot. This is synonymous with <a href="https://hl7.org/fhir/versions.html#normative">Normative</a> standard status.</p>
+
+<h3 id="hl7-au-fhir-artefact-release-publishing-policy">HL7 AU FHIR Artefact Release Publishing Policy</h3>
+<p>Publishing requirements applied to HL7 AU FHIR implementation guides are applied based on the AFMM assessment of artefacts and govern whether artefacts may form part of a draft release, preview release, ballot release, or official publication of a standard.</p>
+
+<p><strong>DRAFT 0</strong> maturity level artefacts are considered not substantially complete by the responsible work group and not necessarily ready for implementation. Subsequently any artefact content remaining at this level will not be published in official publication of <a href="https://hl7.org/fhir/R4/versions.html#std-process">Trial-Use or Normative</a> specifications.</p>
+
+<p><strong>DRAFT 0</strong> maturity level artefacts may be included in any releases provided as <strong>draft</strong>, <strong>preview</strong> or <strong>ballot</strong> snapshots. This allows feedback to be sought on this material through Connectathons, testing and ballot activities. <strong>DRAFT 0</strong> level artefacts, by committee consensus, may achieve <strong>AFMM 1</strong> between ballot and official publication allowing them to be included in the official publication of a <a href="https://hl7.org/fhir/R4/versions.html#std-process">Trial-Use or Normative</a> specification.</p>
+
+<p>The editorial removal of <strong>DRAFT 0</strong> maturity level artefacts that are available in the main continuous integration (CI) branch of a specifications for official publication releases may result in differences to the narrative, summary and profile content to exclude description of, and reference to, these artefacts. Any <strong>DRAFT 0</strong> maturity level artefacts that are removed in this way will be mentioned in the specification change log.</p>
+
+<p><strong>AFMM 1+</strong> maturity level artefacts are eligible for inclusion in all official <a href="https://hl7.org/fhir/R4/versions.html#std-process">Trial-Use or Normative</a> publications and also <strong>draft</strong>, <strong>preview</strong> or <strong>ballot</strong> snapshots. Artefact AFMM levels may be revised from time to time using the Australian FHIR Maturity Model level assessment criteria to progress material towards assertion of <a href="https://hl7.org/fhir/R4/versions.html#std-process">Normative</a> status.</p>
+
+<p>Official publication of a <a href="https://hl7.org/fhir/R4/versions.html#std-process">Normative</a> specification will have one or more artefacts confirmed at <strong>AFMM 5</strong> or <strong>Normative</strong> maturity level.</p>
+
+<h3 id="snomed-ct-australian-edition">SNOMED CT Australian Edition</h3>
+<p><a href="https://snomed.info/sct">SNOMED CT</a> (Systematized Nomenclature of Medicine – Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information.
+In Australia, SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT with local variations and customisation relevant to the Australian healthcare community.
+Many SNOMED CT-AU value sets have already been developed and published by the <a href="https://www.healthterminologies.gov.au">National Clinical Terminology Service</a> (NCTS). 
+These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability.
+SNOMED CT-AU is used extensively in AU Base for various clinical concepts including allergies, problems, and procedures. When using concepts from SNOMED CT in AU Base profile, implementers can use the default system URI referring to an unspecified edition/or version (as shown in option one) or when supporting validation on AU Edition-only concepts and preferred terms implementers provide the accompanying extension identifier (as per option two) and also describe a specific version of SNOMED CT-AU (as shown in option three).</p>
+
+<h4 id="snomed-ct-version-options">SNOMED CT Version Options</h4>
+
+<ol>
+  <li>
+    <p>Using only the system <code class="language-plaintext highlighter-rouge">http://snomed.info/sct</code> refers to an unspecified edition and version of SNOMED CT. This default method leaves it to the server to select the SNOMED CT edition and version to validate against. For example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "code": {
+         "coding": [
+             {
+                 "system": "http://snomed.info/sct,
+                 "code": "322236009",
+                 "display": "Paracetamol 500 mg oral tablet"
+             }
+         ],
+         "text": "paracetamol 500 mg tablet"
+     }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Using the system <em>plus</em> the AU extension identifier <code class="language-plaintext highlighter-rouge">http://snomed.info/sct/32506021000036107</code> denotes using an unspecified version of the Australian edition of SNOMED CT (SNOMED CT-AU). This can be used to specify the Australian Edition for the purposes of validation of an Australian Medicinal Product code. For example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "code": {
+         "coding": [
+             {
+                 "system": "http://snomed.info/sct,
+                 "version": "http://snomed.info/sct/32506021000036107",
+                 "code": "	23628011000036109",
+                 "display": "Paracetamol 500 mg tablet"
+             }
+         ],
+         "text": "paracetamol 500 mg tablet"
+     }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Using the system <em>plus</em> the AU extension identifier, <em>plus</em> a version denotes using a specific version of SNOMED CT-AU <code class="language-plaintext highlighter-rouge">http://snomed.info/sct/32506021000036107/version/20240531</code>. This might be used for validating a Medicinal Product Unit of Use code from a previous version of SNOMED CT-AU. For example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "code": {
+         "coding": [
+             {
+                 "system": "http://snomed.info/sct,
+                 "version": "http://snomed.info/sct/32506021000036107/version/20240531",
+                 "code": "23628011000036109",
+                 "display": "paracetamol 500 mg tablet"
+             }
+         ],
+         "text": "paracetamol 500 mg tablet"
+     }
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="business-identifiers">Business Identifiers</h3>
+
+<p><a href="http://hl7.org/fhir/R4/resource.html#identifiers">"Business" identifiers</a> are used extensively to consistently identify real world entities across systems, contexts of use, and other formats (e.g. HL7 v2 , CDA , XDS, and many more).</p>
+
+<p>Defined in this implementation guide are profiles for business identifiers for use in populating the following data elements:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Device.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DiagnosticReport.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">HealthcareService.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Location.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MedicationDispense.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MedicationRequest.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Organization.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Patient.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RelatedPerson.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Practitioner.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Practitioner.qualification.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PractitionerRole.identifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ServiceRequest.identifier</code></li>
+</ul>
+
+<p>Business identifiers will typically be a national identifier (ABN, Medicare Provider, IHI), registry / exchange service identifier (ETP, eRx), or local identifier (MRN, Placer Identifier).</p>
+
+<p>This guide publishes and maintains rules on how to exchange various business identifiers in Australia as a set of Identifier data type profiles (e.g. <a href="StructureDefinition-au-pbsprescribernumber.html">AU PBS Prescriber Number</a>).</p>
+
+<p>While national and registry / exchange service identifiers will define the namespace to use when sending an identifier, a local identifier requires the organisation to define their own namespace when exchanging identifiers they manage.</p>
+
+<p>When constructing a local identifier it is preferable that an organisation uses their own local system identifier namespace (e.g. "https://local organisation domain/identifier type") but if that is not available then an organisation can use their HPI-O or ABN to construct a legal, globally unique identifier system for some local identifiers.</p>
+
+<p>When an organisation has a need to create a stable identifier that is unique within an application, (e.g. <a href="StructureDefinition-au-pi.html">AU Patient Internal Identifier</a>), it can do this by including aspects such as software provider, system instance, instance identifier and identifier type when constructing with <code class="language-plaintext highlighter-rouge">Identifier.system</code> and <code class="language-plaintext highlighter-rouge">Identifier.value</code>. For example:</p>
+<ul>
+  <li>a single instance of an application assigning patient identifiers: <code class="language-plaintext highlighter-rouge">http://software-provider.com/system-instance/identifiers/patient-id</code></li>
+  <li>a cloud provider assigning patient identifiers for multiple clients: <code class="language-plaintext highlighter-rouge">http://cloud-provider.com/identifiers/patient-id</code></li>
+  <li>an identifier assigned by a tenant within a multi-tenant application: <code class="language-plaintext highlighter-rouge">http://cloud-provider.com/identifiers/tenant-id/patient-id</code></li>
+</ul>
+
+<p>Additional guidance can be found in the <a href="https://hl7.org/fhir/R4/datatypes.html#Identifier">Identifiers</a> section of the FHIR standard.</p>
+
+<p><strong>HPI-O scoped Identifiers</strong></p>
+
+<p>HPI-O scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record or a pathology report by combining a dedicated Australian Digital Health Agency published namespace and their HPI-O to construct a legal, globally unique identifier system for their local identifiers.</p>
+
+<p>The full list of available identifier namespaces can be found by browsing the <a href="https://developer.digitalhealth.gov.au/namespaces/browse-identifiers.html">ns.electronichealth.net.au identifier namespaces</a>; there are several HPI-O scoped identifier namespaces available:</p>
+<ul>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/accessionnumber/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/dispense/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/order/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/report/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0</li>
+</ul>
+
+<p>There are four parts to using a HPI-O scoped identifier in FHIR: system, value, assigner and depending on the identifier profile requirements, a coded type.</p>
+
+<p>The system value is constructed in the format of [baseURL]/HPI-O, e.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"system" : "http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003621566684455"
+</code></pre></div></div>
+
+<p>The value contains the local identifier, e.g.:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"value" : "3235209"
+</code></pre></div></div>
+
+<p>The assigner contains the name of the organisation that issues or manages the identifier, e.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"assigner" : {
+    "display" : "Devonport Family Medicine Clinic"
+}
+</code></pre></div></div>
+
+<p>Example: PractitionerRole resource with an employee number (local identifier)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "PractitionerRole",
+    ...
+    "identifier" : [
+      {
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code" : "EI",
+              "display" : "Employee number"
+              }
+            ],
+          "text" : "Employee Number"
+      },
+      "system" : "http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003621566684455",
+      "value" : "3235209",
+      "assigner" : {
+        "display" : "Devonport Family Medicine Clinic"
+    },
+  ...
+}  
+</code></pre></div></div>
+
+<p><strong>ABN scoped Identifiers</strong></p>
+
+<p>ABN scoped identifiers enable exchange of an organisation's local identifiers for items such as a patient medical record by combining a dedicated Australian Digital Health Agency published namespace and their ABN to construct a legal, globally unique identifier system for their local identifiers.</p>
+
+<p>The full list of available identifier namespaces can be found by browsing the <a href="https://developer.digitalhealth.gov.au/namespaces/browse-identifiers.html">ns.electronichealth.net.au identifier namespaces</a>; there are two ABN-scoped identifier namespaces available:</p>
+<ul>
+  <li>http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0</li>
+  <li>http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0</li>
+</ul>
+
+<p>There are four parts to using an ABN scoped identifier in FHIR: system, value, assigner and depending on the identifier profile requirements, a coded type.</p>
+
+<p>The system value is constructed in the format of [baseURL]/ABN, e.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"system" : "http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455"
+</code></pre></div></div>
+
+<p>The value contains the local identifier, e.g.:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"value" : "12345446"
+</code></pre></div></div>
+
+<p>The assigner contains the name of the organisation that issues or manages the identifier, e.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"assigner" : {
+    "display" : "Test Hospital Org"
+}
+</code></pre></div></div>
+
+<p>Example: Patient resource with a medical record number (local identifier)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Patient",
+    ...
+      "identifier" : [
+        {
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                     "code" : "MR",
+                     "display" : "Medical record number"
+                   }
+                 ],
+          "text" : "Medical Record Number"
+        },
+        "system" : "http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455",
+        "value" : "12344456",
+        "assigner" : {
+          "display" : "Test Hospital Org"
+    },
+  ...
+}
+</code></pre></div></div>
+
+<h3 id="australian-health-practitioner-regulation-agency-ahpra-data-guidance">Australian Health Practitioner Regulation Agency (Ahpra) Data Guidance</h3>
+
+<p class="stu-note">This section refers to deprecated material and is retained until the <a href="StructureDefinition-ahpraregistration-details.html">Ahpra Registration Details</a> and <a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> extensions are retired.</p>
+
+<p>This guidance on the representation of Ahpra-sourced data is taken and adapted from Ahpra's practitioner information exchange (PIE) interoperability specification: Find registration.</p>
+
+<p>Ahpra data items should be exchanged using a Practitioner resource.</p>
+
+<p>This guidance matches Ahpra data items to the corresponding element in a Practitioner resource, making use of extensions <a href="StructureDefinition-ahpraprofession-details.html">Ahpra Profession Details</a> and <a href="StructureDefinition-ahpraregistration-details.html">Ahpra Registration Details</a> as needed.</p>
+
+<h4 id="ahpra-person-data">Ahpra Person Data</h4>
+
+<table class="list" width="100%">
+    <tr>
+    <th>Ahpra data element</th>
+    <th>Element in <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></th>
+    </tr>
+    <tr>
+        <td>Name Edit Date</td>
+        <td>Practitioner.name.period.start</td>
+    </tr>
+    <tr>
+        <td>Name Title</td>
+        <td>Practitioner.name.prefix</td>
+    </tr>
+    <tr>
+        <td>Family Name</td>
+        <td>Practitioner.name.family</td>
+    </tr>
+    <tr>
+        <td>Given Name</td>
+        <td>Practitioner.name.given</td>
+    </tr>
+    <tr>
+        <td>Middle Name</td>
+        <td>Practitioner.name.given</td>
+    </tr>
+    <tr>
+        <td>Profession Number</td>
+        <td>Practitioner.identifier</td>
+    </tr>
+</table>
+
+<h4 id="ahpra-qualification-data">Ahpra Qualification Data</h4>
+
+<table class="list" width="100%">
+    <tr>
+    <th>Ahpra data element</th>
+    <th>Element in <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></th>
+    </tr>
+    <tr>
+        <td>Qualification Title</td>
+        <td>Practitioner.qualification.code.text</td>
+    </tr>
+    <tr>
+        <td>Awarding Institution</td>
+        <td>Practitioner.qualification.issuer.resolve().name</td>
+    </tr>
+    <tr>
+        <td>Country Qualification Obtained</td>
+        <td>Practitioner.qualification.issuer.resolve().address.country</td>
+    </tr>
+    <tr>
+        <td>Year of Qualification</td>
+        <td>Practitioner.qualification.period.start</td>
+    </tr>
+</table>
+
+<h4 id="ahpra-profession-data">Ahpra Profession Data</h4>
+
+<table class="list" width="100%">
+    <tr>
+    <th>Ahpra data element</th>
+    <th>Element in <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></th>
+    </tr>
+    <tr>
+        <td>Profession Number</td>
+        <td>Practitioner.qualification.identifier</td>
+    </tr>
+    <tr>
+        <td>Profession</td>
+        <td>Practitioner.qualification.extension:ahpraprofession-details.ahpraProfession.text</td>
+    </tr>
+    <tr>
+        <td>Profession Start Date</td>
+        <td>Practitioner.qualification.period.start</td>
+    </tr>
+    <tr>
+        <td>Conditions</td>
+        <td>Practitioner.qualification.extension:ahpraprofession-details.ahpraCondition</td>
+    </tr>
+    <tr>
+        <td>Undertakings</td>
+        <td>Practitioner.qualification.extension:ahpraprofession-details.ahpraUndertaking</td>
+    </tr>
+    <tr>
+        <td>Reprimands</td>
+        <td>Practitioner.qualification.extension:ahpraprofession-details.ahpraReprimand</td>
+    </tr>
+    <tr>
+        <td>Cautions</td>
+        <td>Practitioner.qualification.extension:ahpraprofession-details.ahpraCaution</td>
+    </tr>
+</table>
+
+<h4 id="ahpra-registration-data">Ahpra Registration Data</h4>
+
+<table class="list" width="100%">
+    <tr>
+    <th>Ahpra data element</th>
+    <th>Element in <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></th>
+    </tr>
+    <tr>
+        <td>Profession Number</td>
+        <td>Practitioner.qualification.identifier</td>
+    </tr>
+    <tr>
+        <td>Profession</td>
+        <td>Practitioner.qualification.extension:ahpraprofession-details.ahpraProfession.text</td>
+    </tr>
+    <tr>
+        <td>Registration Record Number</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraRegistrationRecordNumber</td>
+    </tr>
+    <tr>
+        <td>Division</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpradivision.text</td>
+    </tr>
+    <tr>
+        <td>Registration Type</td>
+        <td>Practitioner.	qualification.extension:ahpraregistration-details.ahpraregistrationtype.text</td>
+    </tr>
+    <tr>
+        <td>Registration Sub-Type</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraregistrationsubtype.text</td>
+    </tr>
+    <tr>
+        <td>Registration Status</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraregistrationstatus.text</td>
+    </tr>
+    <tr>
+        <td>Registration Expiry</td>
+        <td>Practitioner.qualification.period.end</td>
+    </tr>
+    <tr>
+        <td>Specialty</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraspecialty.text</td>
+    </tr>
+    <tr>
+        <td>Field of Specialty Practice</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahprafieldofspecialtypractice.text</td>
+    </tr>
+    <tr>
+        <td>Initial Registration Date</td>
+        <td>Practitioner.qualification.period.start</td>
+    </tr>
+    <tr>
+        <td>Endorsements</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraEndorsement</td>
+    </tr>
+    <tr>
+        <td>Notations</td>
+        <td>Practitioner.qualification.extension:ahpraregistration-details.ahpraNotation</td>
+    </tr>
+</table>
+
+<h3 id="representing-communication-preferences">Representing Communication Preferences</h3>
+
+<p>The guidance below describes how to represent languages that can be used to communicate about a patient's health including preferred language and if an interpreter is required. This guidance applies to AU Base Patient and AU Base RelatedPerson, and uses the <a href="http://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html">Interpreter Required</a> extension:</p>
+<ul>
+  <li>When sent in a Patient resource, the information exchanged is about the languages that may be used to communicate with the patient about their health.</li>
+  <li>When sent in a RelatedPerson resource, the information exchanged is about languages that may be used to communicate with the related person about the patient's health.</li>
+</ul>
+
+<p>The table below is divided into different scenarios. Blank cells indicate that the given element is absent from the resource in that scenario.</p>
+
+<table class="list" style="width:100%">
+    <colgroup>
+       <col span="1" style="width: 20%;" />
+       <col span="1" style="width: 18%;" />
+       <col span="1" style="width: 18%;" />
+       <col span="1" style="width: 20%;" />
+       <col span="1" style="width: 24%;" />
+    </colgroup>
+	<tbody>
+      <tr>
+        <th>Scenario</th>
+        <th>communication.language</th>
+        <th>communication.preferred</th>
+        <th>extension:interpreterRequired</th>
+		<th>Notes</th>
+      </tr>
+      <tr>
+        <td>Preferred language is English</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>No element sent, as per the guidance in the Comments of <a href="http://hl7.org/fhir/patient-definitions.html#Patient.communication">Patient.communication</a> and <a href="https://hl7.org/fhir/relatedperson-definitions.html#RelatedPerson.communication">RelatedPerson.communication</a>.</td>
+      </tr>
+      <tr>
+        <td>Preferred language is other than English</td>
+        <td>language.coding</td>
+        <td>'true'</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreter required, language is known</td>
+        <td>language.coding</td>
+        <td>'true'</td>
+        <td>'true'</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreter required, language is not known</td>
+        <td></td>
+        <td></td>
+        <td>'true'</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreter is not required</td>
+        <td></td>
+        <td></td>
+        <td>'false'</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Communicates with multiple languages</td>
+        <td>language.coding</td>
+        <td></td>
+        <td></td>
+        <td>Each language instantiated in separate communication nodes; communication.preferred and extension:interpreterRequired may be sent as needed.</td>
+      </tr>
+    </tbody>
+</table>
+
+<p>Example: Patient resource with interpreter required and language is known</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Patient",
+    ...
+      "extension" : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired",
+          "valueBoolean" : true
+        }          
+       ]
+    },
+    ...
+    "communication" : [
+    {
+      "language" : {
+        "coding" : [
+          {
+            "system" : "urn:ietf:bcp:47",
+            "code" : "yue"
+          }
+        ],
+        "text" : "Cantonese"
+      },
+      "preferred" : true
+    }
+  ]
+}
+</code></pre></div></div>
+
+<h3 id="representing-body-site-which-may-include-laterality">Representing Body Site, Which May Include Laterality</h3>
+<p>When exchanging Procedure, Condition, or ServiceRequest resources conformant to AU Base, there may be a need to represent a relevant body site and associated laterality using CodeableConcept elements. In FHIR, body site and associated laterality can be recorded in various ways, and implementers are encouraged to consider the guidance on the following scenarios when implementing:</p>
+
+<ol>
+  <li>Primary finding/procedure/service code with body site and laterality as a pre-coordinated code.</li>
+  <li>Primary finding/procedure/service code with body site (without laterality) as a pre-coordinated code, and a separate laterality coded qualifier.</li>
+  <li>Coded body site with laterality and separate primary finding/procedure/service code.</li>
+  <li>Coded body site without laterality and separate coded laterality qualifier and a primary finding/procedure/service code.</li>
+</ol>
+
+<p>To support consistent representation the following is recommended for each case. This approach can be applied to Condition, Procedure, and ServiceRequest.</p>
+
+<p>1. Primary finding/procedure/service <code class="language-plaintext highlighter-rouge">code</code> only (pre-coordinated code including body site and laterality)</p>
+<ul>
+  <li>For systems that have pre-coordinated coding describing a concept fully:
+    <ul>
+      <li>use only the <code class="language-plaintext highlighter-rouge">code</code> element to contain information on body site with laterality.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example: Condition resource cellulitis of right knee</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "10633311000119108",
+        "display" : "Cellulitis of right knee"
+      },
+      "text" : "Cellulitis of right knee"
+    ]
+  }
+  ...
+}
+</code></pre></div></div>
+
+<p>2. Primary finding/procedure/service <code class="language-plaintext highlighter-rouge">code</code> only (pre-coordinated code including body site without laterality and separate laterality qualifier)</p>
+<ul>
+  <li>For systems that have pre-coordinated coding describing a concept including body site without laterality, and have a laterality qualifier recorded separately e.g. left, right:
+    <ul>
+      <li>use the <code class="language-plaintext highlighter-rouge">code</code> element:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">code.coding</code> contains the primary concept including body site (without laterality).</li>
+          <li><code class="language-plaintext highlighter-rouge">code.text</code> is used to describe concept fully, this can include information on recorded laterality e.g. ', Right'.</li>
+        </ul>
+      </li>
+      <li>in this case laterality is not expressed in coded form.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example: Condition resource showing coded condition that includes body site, laterality as text only</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "13301002",
+        "display" : "Cellulitis of knee"
+      },
+      "text" : "Cellulitis of knee, Right"
+    ]
+  }
+  ...
+}
+</code></pre></div></div>
+
+<p>3. Coded <code class="language-plaintext highlighter-rouge">body site</code> with laterality and separate primary finding/procedure/service <code class="language-plaintext highlighter-rouge">code</code>.</p>
+<ul>
+  <li>For systems that have pre-coordinated coding describing primary concept without body site and separate body site with laterality recorded as coded value:
+    <ul>
+      <li>use the code element:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">code.coding</code> contains the primary concept alone (no body site or laterality).</li>
+          <li><code class="language-plaintext highlighter-rouge">code.text</code> describes the concept fully, this can include information on recorded body site and laterality as text.</li>
+        </ul>
+      </li>
+      <li>optionally, coded element <code class="language-plaintext highlighter-rouge">bodySite</code> may be supplied containing the coded body site with laterality.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example: Condition resource showing coded condition, coded body site that includes laterality</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Right Knee"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "6757004",
+        "display" : "Structure of right knee region"
+      }],
+      "text" : "Right Knee"
+    }
+  ]
+  ...
+}
+</code></pre></div></div>
+
+<p>4. Coded <code class="language-plaintext highlighter-rouge">body site</code> without laterality and separate coded laterality qualifier and a primary finding/procedure/service <code class="language-plaintext highlighter-rouge">code</code>.</p>
+<ul>
+  <li>For systems that have pre-coordinated coding describing primary concept without body site and a body site without laterality is as separate coded value, and laterality qualifier recorded separately e.g. left, right:
+    <ul>
+      <li>use the <code class="language-plaintext highlighter-rouge">code</code> element:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">code.coding</code> contains the primary concept alone (no body site or laterality).</li>
+          <li><code class="language-plaintext highlighter-rouge">code.text</code> describes the concept fully, this can include information on recorded body site and laterality as text.</li>
+        </ul>
+      </li>
+      <li>optionally, coded element bodySite may be supplied containing:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">bodySite.coding</code> contains the coded body site without laterality.</li>
+          <li><code class="language-plaintext highlighter-rouge">bodySite.text</code> describes the body site concept fully, this can include information on recorded laterality as text e.g. ', Right'.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example: Condition resource with coded condition, coded body site, laterality as text only</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType" : "Condition",
+  "id" : "cellulitis",
+  ...
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "128045006",
+        "display" : "Cellulitis"
+      },
+      "text" : "Cellulitis, Knee, Right"
+    ]
+  },
+  "bodySite" : [
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "72696002",
+        "display" : "Knee region structure"
+      }],
+      "text" : "Knee, Right"
+    }
+  ]
+  ...
+}
+</code></pre></div></div>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2017+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.base#6.0.1-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 23:22+0000">2026-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

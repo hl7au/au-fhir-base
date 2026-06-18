@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/HealthcareService/example0> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>Narrative</b>\n			</p>\n			<p><b>id</b>: example0</p>\n			<p><b>name</b>: Cardiothoracic Services</p>\n			<p><b>meta</b>: </p>\n			<p><b>identifier</b>: HPI-O: 8003621566684455</p>\n			<p><b>active</b>: true</p>\n			<p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 394603008}\">Cardiothoracic surgery</span></p>\n			<p><b>telecom</b>: ph: 0255503333(WORK), ph: 0255504444(WORK - Medical Record), ph: 0255505555(WORK - After Hours)</p>\n		</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ] ;
+         fhir:display [ fhir:v "National Organisation Identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003621566684455" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394603008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394603008" ] ;
+       fhir:display [ fhir:v "Cardiothoracic surgery" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Cardiothoracic Services"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0255503333" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/contact-purpose"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/contact-purpose"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "medical-record" ] ;
+           fhir:display [ fhir:v "Medical Record" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0255504444" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/contact-purpose"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/contact-purpose"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "after-hours" ] ;
+           fhir:display [ fhir:v "After Hours" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0255505555" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

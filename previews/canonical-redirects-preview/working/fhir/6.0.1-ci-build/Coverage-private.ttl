@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Coverage/private> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "private"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-coverage"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-coverage>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage private</b></p><a name=\"private\"> </a><a name=\"hcprivate\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-coverage.html\">AU Base Coverage</a></p></div><p><b>identifier</b>: Member Number/9999115</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span></p><p><b>beneficiary</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/subscriber-relationship self}\">Self</span></p><p><b>period</b>: 2020-12-19 --&gt; (ongoing)</p><p><b>payor</b>: HCF PTY LTD</p><h3>Classes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-class plan}\">Plan</span></td><td>Bronze</td><td>HCF Hospital Bronze Plus</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MB" ] ;
+         fhir:display [ fhir:v "Member Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hcf.example.com/member/memberid"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9999115" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "HCF PTY LTD" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "EHCPOL" ] ;
+       fhir:display [ fhir:v "extended healthcare" ]
+     ] )
+  ] ; # 
+  fhir:beneficiary [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/subscriber-relationship"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "self" ]
+     ] ) ;
+     fhir:text [ fhir:v "Self" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2020-12-19"^^xsd:date ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:display [ fhir:v "HCF PTY LTD" ]
+  ] ) ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "plan" ] ;
+         fhir:display [ fhir:v "Plan" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "Bronze" ] ;
+     fhir:name [ fhir:v "HCF Hospital Bronze Plus" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

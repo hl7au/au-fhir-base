@@ -1,0 +1,60 @@
+{
+  "resourceType" : "Coverage",
+  "id" : "private",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-coverage"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage private</b></p><a name=\"private\"> </a><a name=\"hcprivate\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-coverage.html\">AU Base Coverage</a></p></div><p><b>identifier</b>: Member Number/9999115</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span></p><p><b>beneficiary</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI:\u00a0Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/subscriber-relationship self}\">Self</span></p><p><b>period</b>: 2020-12-19 --&gt; (ongoing)</p><p><b>payor</b>: HCF PTY LTD</p><h3>Classes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-class plan}\">Plan</span></td><td>Bronze</td><td>HCF Hospital Bronze Plus</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "MB",
+        "display" : "Member Number"
+      }]
+    },
+    "system" : "http://hcf.example.com/member/memberid",
+    "value" : "9999115",
+    "assigner" : {
+      "display" : "HCF PTY LTD"
+    }
+  }],
+  "status" : "active",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "EHCPOL",
+      "display" : "extended healthcare"
+    }]
+  },
+  "beneficiary" : {
+    "reference" : "Patient/example0"
+  },
+  "relationship" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+      "code" : "self"
+    }],
+    "text" : "Self"
+  },
+  "period" : {
+    "start" : "2020-12-19"
+  },
+  "payor" : [{
+    "display" : "HCF PTY LTD"
+  }],
+  "class" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/coverage-class",
+        "code" : "plan",
+        "display" : "Plan"
+      }]
+    },
+    "value" : "Bronze",
+    "name" : "HCF Hospital Bronze Plus"
+  }]
+}

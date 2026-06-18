@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Device/example1> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><p><b>identifier</b>: PAI-D/8003640013000057</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>Some registered repository service</td><td>other</td></tr></table><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 462240000}\">National patient health record repository</span></p><p><b>owner</b>: Identifier: PAI-O/8003640011000059</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NDI" ] ;
+         fhir:display [ fhir:v "National Device Identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "PAI-D" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/pcehr/paid/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003640013000057" ]
+  ] ) ; # 
+  fhir:deviceName ( [
+     fhir:name [ fhir:v "Some registered repository service" ] ;
+     fhir:type [ fhir:v "other" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:462240000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "462240000" ] ;
+       fhir:display [ fhir:v "Patient health record information system" ]
+     ] ) ;
+     fhir:text [ fhir:v "National patient health record repository" ]
+  ] ; # 
+  fhir:owner [
+     fhir:identifier [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "NOI" ] ;
+           fhir:display [ fhir:v "National Organisation Identifier" ]
+         ] ) ;
+         fhir:text [ fhir:v "PAI-O" ]
+       ] ;
+       fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/pcehr/paio/1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "8003640011000059" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

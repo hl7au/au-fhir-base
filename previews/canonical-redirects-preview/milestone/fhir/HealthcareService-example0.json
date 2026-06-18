@@ -1,0 +1,67 @@
+{
+  "resourceType" : "HealthcareService",
+  "id" : "example0",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Narrative</b>\n\t\t\t</p>\n\t\t\t<p><b>id</b>: example0</p>\n\t\t\t<p><b>name</b>: Cardiothoracic Services</p>\n\t\t\t<p><b>meta</b>: </p>\n\t\t\t<p><b>identifier</b>: HPI-O: 8003621566684455</p>\n\t\t\t<p><b>active</b>: true</p>\n\t\t\t<p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 394603008}\">Cardiothoracic surgery</span></p>\n\t\t\t<p><b>telecom</b>: ph: 0255503333(WORK), ph: 0255504444(WORK - Medical Record), ph: 0255505555(WORK - After Hours)</p>\n\t\t</div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "NOI",
+        "display" : "National Organisation Identifier"
+      }],
+      "text" : "HPI-O"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/hi/hpio/1.0",
+    "value" : "8003621566684455"
+  }],
+  "active" : true,
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394603008",
+      "display" : "Cardiothoracic surgery"
+    }]
+  }],
+  "name" : "Cardiothoracic Services",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "0255503333",
+    "use" : "work"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+          "code" : "medical-record",
+          "display" : "Medical Record"
+        }]
+      }
+    }],
+    "system" : "phone",
+    "value" : "0255504444",
+    "use" : "work"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+          "code" : "after-hours",
+          "display" : "After Hours"
+        }]
+      }
+    }],
+    "system" : "phone",
+    "value" : "0255505555",
+    "use" : "work"
+  }]
+}

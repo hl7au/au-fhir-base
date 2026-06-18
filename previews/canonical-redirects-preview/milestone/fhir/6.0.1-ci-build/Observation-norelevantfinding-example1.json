@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Observation",
+  "id" : "norelevantfinding-example1",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation norelevantfinding-example1</b></p><a name=\"norelevantfinding-example1\"> </a><a name=\"hcnorelevantfinding-example1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-norelevantfinding.html\">AU Assertion of No Relevant Finding</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode ASSERTION}\">Assertion</span></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI:\u00a0Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>effective</b>: 2016-03-28</p><p><b>performer</b>: <a href=\"PractitionerRole-example3.html\">PractitionerRole General practitioner</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 1234401000168109}\">No H/O: vaccination</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "ASSERTION",
+      "display" : "Assertion"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example0"
+  },
+  "effectiveDateTime" : "2016-03-28",
+  "performer" : [{
+    "reference" : "PractitionerRole/example3"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1234401000168109",
+      "display" : "No H/O: vaccination"
+    }]
+  }
+}

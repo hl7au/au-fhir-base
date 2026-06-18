@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="example4"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner example4</b></p><a name="example4"> </a><a name="hcexample4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></p></div><p><b>identifier</b>: HPI-I/8003619900015717, Ahpra Registration Number/MED0000123456, Ahpra Registration Number/PHY0001234567</p><p><b>name</b>: Robert Smith </p><blockquote><p><b>qualification</b></p><p><b>code</b>: <span title="Codes:">Bachelor of Medicine/Bachelor of Surgery</span></p><p><b>period</b>: 2003 --&gt; (ongoing)</p><p><b>issuer</b>: <a href="#hcexample4/org-5678">Organization University of Sydney</a></p></blockquote><blockquote><p><b>qualification</b></p><p><b>code</b>: <span title="Codes:">Bachelor of Applied Science (Physiotherapy)</span></p><p><b>period</b>: 1995 --&gt; (ongoing)</p><p><b>issuer</b>: <a href="#hcexample4/org-5678">Organization University of Sydney</a></p></blockquote><blockquote><p><b>qualification</b></p><p><b>code</b>: <span title="Codes:">Fellowship of the Royal Australian College of General Practitioners</span></p><p><b>period</b>: 2006 --&gt; (ongoing)</p><p><b>issuer</b>: <a href="#hcexample4/org-1234">Organization The Royal Australian College of General Practitioners</a></p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: Ahpra Registration Number/PHY0001234567</p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org.au/CodeSystem/v2-0360 AHPRA}">Ahpra Physiotherapy</span></p><p><b>period</b>: 1996-02-08 --&gt; (ongoing)</p><p><b>issuer</b>: Australian Health Practitioner Regulation Agency</p></blockquote><p><b>communication</b>: <span title="Codes:">Arabic</span></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Organization #org-5678</b></p><a name="example4/org-5678"> </a><a name="hcexample4/org-5678"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-organization.html">AU Base Organization</a></p></div><p><b>name</b>: University of Sydney</p><p><b>address</b>: AU </p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Organization #org-1234</b></p><a name="example4/org-1234"> </a><a name="hcexample4/org-1234"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-organization.html">AU Base Organization</a></p></div><p><b>name</b>: The Royal Australian College of General Practitioners</p><p><b>address</b>: AU </p></blockquote></div>
+  </text>
+  <contained>
+    <Organization>
+      <id value="org-5678"/>
+      <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+      </meta>
+      <name value="University of Sydney"/>
+      <address>
+        <country value="AU"/>
+      </address>
+    </Organization>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="org-1234"/>
+      <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+      </meta>
+      <name value="The Royal Australian College of General Practitioners"/>
+      <address>
+        <country value="AU"/>
+      </address>
+    </Organization>
+  </contained>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NPI"/>
+        <display value="National provider identifier"/>
+      </coding>
+      <text value="HPI-I"/>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+    <value value="8003619900015717"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="AHPRA"/>
+        <display value="Australian Health Practitioner Regulation Agency Registration Number"/>
+      </coding>
+      <text value="Ahpra Registration Number"/>
+    </type>
+    <system value="http://hl7.org.au/id/ahpra-registration-number"/>
+    <value value="MED0000123456"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="AHPRA"/>
+        <display value="Australian Health Practitioner Regulation Agency Registration Number"/>
+      </coding>
+      <text value="Ahpra Registration Number"/>
+    </type>
+    <system value="http://hl7.org.au/id/ahpra-registration-number"/>
+    <value value="PHY0001234567"/>
+  </identifier>
+  <name>
+    <family value="Smith"/>
+    <given value="Robert"/>
+    <prefix value="Dr"/>
+  </name>
+  <!--  Qualification - Bachelor of Medicine / Bachelor of Surgery  -->
+  <qualification>
+    <code>
+      <text value="Bachelor of Medicine/Bachelor of Surgery"/>
+    </code>
+    <period>
+      <start value="2003"/>
+    </period>
+    <issuer>
+      <reference value="#org-5678"/>
+    </issuer>
+  </qualification>
+  <!--  Qualification - Bachelor of Applied Science (Physiotherapy)  -->
+  <qualification>
+    <code>
+      <text value="Bachelor of Applied Science (Physiotherapy)"/>
+    </code>
+    <period>
+      <start value="1995"/>
+    </period>
+    <issuer>
+      <reference value="#org-5678"/>
+    </issuer>
+  </qualification>
+  <!--  Qualification - General Practitioner  -->
+  <qualification>
+    <code>
+      <text value="Fellowship of the Royal Australian College of General Practitioners"/>
+    </code>
+    <period>
+      <start value="2006"/>
+    </period>
+    <issuer>
+      <reference value="#org-1234"/>
+    </issuer>
+  </qualification>
+  <!--  AhpraProfession - Physiotherapist  -->
+  <qualification>
+    <!-- identifier:AhpraRegistrationNumber -->
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+          <code value="AHPRA"/>
+          <display value="Australian Health Practitioner Regulation Agency Registration Number"/>
+        </coding>
+        <text value="Ahpra Registration Number"/>
+      </type>
+      <system value="http://hl7.org.au/id/ahpra-registration-number"/>
+      <value value="PHY0001234567"/>
+    </identifier>
+    <!-- code:Ahpra Registration -->
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0360"/>
+        <code value="AHPRA"/>
+        <display value="Ahpra Registration"/>
+      </coding>
+      <text value="Ahpra Physiotherapy"/>
+    </code>
+    <!-- period: Ahpra Registration Expiry  -->
+    <period>
+      <start value="1996-02-08"/>
+    </period>
+    <issuer>
+      <display value="Australian Health Practitioner Regulation Agency"/>
+    </issuer>
+  </qualification>
+  <communication>
+    <text value="Arabic"/>
+  </communication>
+</Practitioner>

@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Location/example3> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-location"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location example3</b></p><a name=\"example3\"> </a><a name=\"hcexample3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-location.html\">AU Base Location</a></p></div><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode FMC}\">Family medicine clinic</span></p><p><b>address</b>: 55 Sandy Bay Road Strahan TAS 7468 AU </p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type bu}\">Building</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FMC" ] ;
+       fhir:display [ fhir:v "Family medicine clinic" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "55 Sandy Bay Road" ] ) ;
+     fhir:city [ fhir:v "Strahan" ] ;
+     fhir:state [ fhir:v "TAS" ] ;
+     fhir:postalCode [ fhir:v "7468" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ; # 
+  fhir:physicalType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "bu" ] ;
+       fhir:display [ fhir:v "Building" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

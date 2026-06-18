@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mims"/>
+  <meta>
+    <profile value="https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet mims</b></p><a name="mims"> </a><a name="hcmims"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4</code></p></div><ul><li>Include all codes defined in <a href="CodeSystem-mims-external.html"><code>http://www.mims.com.au/codes</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://terminology.hl7.org.au/ValueSet/mims"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.3.4.2.4.7"/>
+  </identifier>
+  <version value="6.0.1-ci-build"/>
+  <name value="MIMS"/>
+  <title value="MIMS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-06-18T23:22:00+00:00"/>
+  <publisher value="HL7 Australia"/>
+  <contact>
+    <name value="HL7 Australia FHIR Working Group"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7.org/display/HAFWG"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="The MIMS value set includes all values from the Monthly Index of Medical Specialties (MIMS) published by MIMS Australia. Further details can be found at https://www.mims.com.au/."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="AU"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."/>
+  <compose>
+    <include>
+      <system value="http://www.mims.com.au/codes"/>
+    </include>
+  </compose>
+</ValueSet>

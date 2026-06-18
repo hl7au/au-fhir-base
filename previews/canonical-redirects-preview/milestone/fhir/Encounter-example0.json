@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "example0",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-encounter"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-encounter.html\">AU Base Encounter</a></p></div><p><b>status</b>: In Progress</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-ACUTE\">ActCode: ACUTE</a> (inpatient acute)</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table></div>"
+  },
+  "status" : "in-progress",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "ACUTE",
+    "display" : "inpatient acute"
+  },
+  "participant" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.participant.actor",
+      "valueReference" : {
+        "reference" : "HealthcareService/example1"
+      }
+    }]
+  }]
+}

@@ -1,0 +1,215 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/CodeSystem/au-v2-0203> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "au-v2-0203"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem au-v2-0203</b></p><a name=\"au-v2-0203\"> </a><a name=\"hcau-v2-0203\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/v2-0203</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ABN<a name=\"au-v2-0203-ABN\"> </a></td><td>Australian Business Number</td><td>An identifier issued by the Australian Securities and Investments Commission (ASIC) to an entity registered in the Australian Business Register.</td></tr><tr><td style=\"white-space:nowrap\">ACN<a name=\"au-v2-0203-ACN\"> </a></td><td>Australian Company Number</td><td>An identifier issued by the Australian Securities and Investments Commission (ASIC) when a body becomes registered as a company under Corporations Law.</td></tr><tr><td style=\"white-space:nowrap\">AHPRA<a name=\"au-v2-0203-AHPRA\"> </a></td><td>Australian Health Practitioner Regulation Agency Registration Number</td><td>An Australian Health Practitioner Regulation Authority (Ahpra) registration number assigned to a practitioner for each profession in which they are registered. Practitioners registered in more than one profession have one registration number for each profession.</td></tr><tr><td style=\"white-space:nowrap\">ARBN<a name=\"au-v2-0203-ARBN\"> </a></td><td>Australian Registered Body Number</td><td>An identifier issued by the Australian Securities and Investments Commission (ASIC) to a registerable Australian body or foreign company.</td></tr><tr><td style=\"white-space:nowrap\">CAEI<a name=\"au-v2-0203-CAEI\"> </a></td><td>Care Agency Employee Identifier</td><td>A My Health Record assigned Care Agency Employee Identifier is issued to an employee of, or person under contracted arrangement with, a Care Agency that participates in the My Health Record.</td></tr><tr><td style=\"white-space:nowrap\">CSPRN<a name=\"au-v2-0203-CSPRN\"> </a></td><td>Contracted Service Provider Registration Number</td><td>A Contracted Service Provider (CSP) Registration Number is issued to organisations that participate in the My Health Record and/or the Healthcare Identifiers Service as a CSP.</td></tr><tr><td style=\"white-space:nowrap\">DPID<a name=\"au-v2-0203-DPID\"> </a></td><td>Australia Post Delivery Point Identifier</td><td>An Australia Post Delivery Point Identifier (DPID) allocated to an address. A DPID enables each delivery point in Australia to be uniquely identified.</td></tr><tr><td style=\"white-space:nowrap\">DVAU<a name=\"au-v2-0203-DVAU\"> </a></td><td>DVA Number</td><td>An individual's state-based Department of Veterans’ Affairs (DVA) File number. Entitlement is not specified with the use of this code.</td></tr><tr><td style=\"white-space:nowrap\">DVG<a name=\"au-v2-0203-DVG\"> </a></td><td>DVA Number (Gold Card)</td><td>An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran Gold Card (the new name for a DVA Gold card). A Veteran Gold Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card.</td></tr><tr><td style=\"white-space:nowrap\">DVL<a name=\"au-v2-0203-DVL\"> </a></td><td>DVA Number (Lilac Card)</td><td>An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a DVA Lilac card). DVA Lilac Cards are no longer in use and were issued by Department of Veterans’ Affairs (DVA) to eligible individuals 1987-1996.</td></tr><tr><td style=\"white-space:nowrap\">DVO<a name=\"au-v2-0203-DVO\"> </a></td><td>DVA Number (Orange Card)</td><td>An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran Orange Card (the new name for a DVA Orange card). A Veteran Orange Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card.</td></tr><tr><td style=\"white-space:nowrap\">DVW<a name=\"au-v2-0203-DVW\"> </a></td><td>DVA Number (White Card)</td><td>An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran White Card (the new name for a DVA White card). A Veteran White Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card.</td></tr><tr><td style=\"white-space:nowrap\">ETP<a name=\"au-v2-0203-ETP\"> </a></td><td>Electronic Transfer of Prescription Identifier</td><td>An identifier allocated by an Electronic Transfer of Prescription (ETP) supplier, sometimes related to a barcode.</td></tr><tr><td style=\"white-space:nowrap\">GNAF<a name=\"au-v2-0203-GNAF\"> </a></td><td>Geocoded National Address File Identifier</td><td>A Geocoded National Address File (G-NAF) Identifier assigned to a location address in the G-NAF. The PSMA G-NAF is Australia’s authoritative, geocoded address file.</td></tr><tr><td style=\"white-space:nowrap\">HAE<a name=\"au-v2-0203-HAE\"> </a></td><td>Health Administration Entity</td><td>An identifier assigned by the Australian Healthcare Identifiers Service to a health administration entity: a Health Administration Entity number (HAE).</td></tr><tr><td style=\"white-space:nowrap\">HSPO<a name=\"au-v2-0203-HSPO\"> </a></td><td>Healthcare Support Service Provider - Organisation</td><td>An identifier assigned by the Australian Healthcare Identifiers Service to a healthcare support service provider organisation:  a Healthcare Support Service Provider - Organisation identifier (HSP-O).</td></tr><tr><td style=\"white-space:nowrap\">LDI<a name=\"au-v2-0203-LDI\"> </a></td><td>Local Dispense Identifier</td><td>An identifier unique to a dispense within the local system set of dispense records.</td></tr><tr><td style=\"white-space:nowrap\">LPN<a name=\"au-v2-0203-LPN\"> </a></td><td>Local Prescription Number</td><td>An identifier unique to a prescription within the local system set of prescriptions.</td></tr><tr><td style=\"white-space:nowrap\">LRI<a name=\"au-v2-0203-LRI\"> </a></td><td>Local Report Identifier</td><td>An identifier unique to a report within the local system set of reports.</td></tr><tr><td style=\"white-space:nowrap\">LSPN<a name=\"au-v2-0203-LSPN\"> </a></td><td>Location Specific Practice Number</td><td>An identifier assigned under the Medicare program to uniquely identify practice sites that provide diagnostic imaging and radiation oncology services.</td></tr><tr><td style=\"white-space:nowrap\">NATAA<a name=\"au-v2-0203-NATAA\"> </a></td><td>NATA Accreditation Number</td><td>A National Association of Testing Authorities (NATA) accreditation number associated with an accredited facility. A NATA accreditation number is associated with an organisation.</td></tr><tr><td style=\"white-space:nowrap\">NATAS<a name=\"au-v2-0203-NATAS\"> </a></td><td>NATA Site Number</td><td>A National Association of Testing Authorities (NATA) site number associated with an accredited facility. A NATA site number represents a specific location associated with an accredited facility, i.e. an organisation with a NATA accreditation number.</td></tr><tr><td style=\"white-space:nowrap\">NDI<a name=\"au-v2-0203-NDI\"> </a></td><td>National Device Identifier</td><td>An identifier unique to a device assigned by an identifier scheme managed at a national level, this is commonly a My Health Record Assigned Identity - Device (PAI-D) identifier.</td></tr><tr><td style=\"white-space:nowrap\">NOI<a name=\"au-v2-0203-NOI\"> </a></td><td>National Organisation Identifier</td><td>An identifier assigned by the Australian Healthcare Identifiers Service to a healthcare provider organisation: a Healthcare Provider Identifier - Organisation (HPI-O).</td></tr><tr><td style=\"white-space:nowrap\">NPIO<a name=\"au-v2-0203-NPIO\"> </a></td><td>National provider at organisation identifier</td><td>A National Provider Identifier at Organisation (NPIO) uniquely identifies an individual practitioner at an organisation using the practitioner’s HPI-I and organisation’s HPI-O to form the NPIO.</td></tr><tr><td style=\"white-space:nowrap\">NRI<a name=\"au-v2-0203-NRI\"> </a></td><td>National Repository Identifier</td><td>An identifier unique to a repository assigned by an identifier scheme managed at a national level, this is commonly a My Health Record Assigned Identity - Repository (PAI-R) identifier.</td></tr><tr><td style=\"white-space:nowrap\">PAN<a name=\"au-v2-0203-PAN\"> </a></td><td>Pharmacy Approval Number</td><td>An identifier unique to a pharmacy that is approved to supply pharmaceutical benefits at particular premises under the the National Health Act 1953.</td></tr><tr><td style=\"white-space:nowrap\">PAIO<a name=\"au-v2-0203-PAIO\"> </a></td><td>My Health Record (PCEHR) Assigned Identity for Organisations</td><td>An identifier assigned by the Australian Healthcare Identifiers Service to an organisation to support their participation in the My Health Record system. These organisations are not eligible for another type of Australian Healthcare Identifiers Service identifier (e.g. a HPI-O). For example, the My Health Record System Operator, and the My Health Record National Consumer Portal.</td></tr><tr><td style=\"white-space:nowrap\">PRES<a name=\"au-v2-0203-PRES\"> </a></td><td>Prescriber Number</td><td>A Pharmaceutical Benefits Scheme (PBS) prescriber identifier assigned to an individual that identifies the right to act as a prescriber under that scheme.</td></tr><tr><td style=\"white-space:nowrap\">RACSI<a name=\"au-v2-0203-RACSI\"> </a></td><td>Residential Aged Care Service Identifier</td><td>A residential aged care service identifier, commonly known as RACS ID or RACF ID, assigned by the Department of Health to a residential aged care service subsidised by the Australian Government. An organisation may provide more than one residential aged care service.</td></tr><tr><td style=\"white-space:nowrap\">SEN<a name=\"au-v2-0203-SEN\"> </a></td><td>Commonwealth Seniors Health Card</td><td>An identifier unique to an individual, used to confirm concessions by most government agencies and utility providers, as displayed on a Commonwealth Seniors Healthcare Card. A Commonwealth Seniors Healthcare Card may be issued by Services Australia or Department of Veterans’ Affairs (DVA) to an eligible individual to provide access to certain benefits.</td></tr><tr><td style=\"white-space:nowrap\">UPIN<a name=\"au-v2-0203-UPIN\"> </a></td><td>Medicare Provider Number</td><td>A Medicare provider number, assigned by Services Australia under the Medicare program, to practitioners who provide services that are eligible for a Medicare benefit. This is a location-specific identifier, a practitioner may hold more than one.</td></tr><tr><td style=\"white-space:nowrap\">VDI<a name=\"au-v2-0203-VDI\"> </a></td><td>Vendor Directory Identifier</td><td>A unique vendor identifier allocated to a provider directory entry (PractitionerRole or HealthcareService).</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.1.3.203" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "IdentifierTypeAU"] ; # 
+  fhir:title [ fhir:v "IdentifierType AU"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T23:22:00+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Additional concept codes for identifier type defined for use in an Australian context. These are additional identifier type codes to the HL7 International code set and suitable for use with Australian identifiers and may be used in HL7 V2.x identifier representations."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://terminology.hl7.org.au/ValueSet/v2-0203"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org.au/ValueSet/v2-0203>
+  ] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:versionNeeded [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "33"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "ABN" ] ;
+     fhir:display [ fhir:v "Australian Business Number" ] ;
+     fhir:definition [ fhir:v "An identifier issued by the Australian Securities and Investments Commission (ASIC) to an entity registered in the Australian Business Register." ]
+  ] [
+     fhir:code [ fhir:v "ACN" ] ;
+     fhir:display [ fhir:v "Australian Company Number" ] ;
+     fhir:definition [ fhir:v "An identifier issued by the Australian Securities and Investments Commission (ASIC) when a body becomes registered as a company under Corporations Law." ]
+  ] [
+     fhir:code [ fhir:v "AHPRA" ] ;
+     fhir:display [ fhir:v "Australian Health Practitioner Regulation Agency Registration Number" ] ;
+     fhir:definition [ fhir:v "An Australian Health Practitioner Regulation Authority (Ahpra) registration number assigned to a practitioner for each profession in which they are registered. Practitioners registered in more than one profession have one registration number for each profession." ]
+  ] [
+     fhir:code [ fhir:v "ARBN" ] ;
+     fhir:display [ fhir:v "Australian Registered Body Number" ] ;
+     fhir:definition [ fhir:v "An identifier issued by the Australian Securities and Investments Commission (ASIC) to a registerable Australian body or foreign company." ]
+  ] [
+     fhir:code [ fhir:v "CAEI" ] ;
+     fhir:display [ fhir:v "Care Agency Employee Identifier" ] ;
+     fhir:definition [ fhir:v "A My Health Record assigned Care Agency Employee Identifier is issued to an employee of, or person under contracted arrangement with, a Care Agency that participates in the My Health Record." ]
+  ] [
+     fhir:code [ fhir:v "CSPRN" ] ;
+     fhir:display [ fhir:v "Contracted Service Provider Registration Number" ] ;
+     fhir:definition [ fhir:v "A Contracted Service Provider (CSP) Registration Number is issued to organisations that participate in the My Health Record and/or the Healthcare Identifiers Service as a CSP." ]
+  ] [
+     fhir:code [ fhir:v "DPID" ] ;
+     fhir:display [ fhir:v "Australia Post Delivery Point Identifier" ] ;
+     fhir:definition [ fhir:v "An Australia Post Delivery Point Identifier (DPID) allocated to an address. A DPID enables each delivery point in Australia to be uniquely identified." ]
+  ] [
+     fhir:code [ fhir:v "DVAU" ] ;
+     fhir:display [ fhir:v "DVA Number" ] ;
+     fhir:definition [ fhir:v "An individual's state-based Department of Veterans’ Affairs (DVA) File number. Entitlement is not specified with the use of this code." ]
+  ] [
+     fhir:code [ fhir:v "DVG" ] ;
+     fhir:display [ fhir:v "DVA Number (Gold Card)" ] ;
+     fhir:definition [ fhir:v "An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran Gold Card (the new name for a DVA Gold card). A Veteran Gold Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card." ]
+  ] [
+     fhir:code [ fhir:v "DVL" ] ;
+     fhir:display [ fhir:v "DVA Number (Lilac Card)" ] ;
+     fhir:definition [ fhir:v "An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a DVA Lilac card). DVA Lilac Cards are no longer in use and were issued by Department of Veterans’ Affairs (DVA) to eligible individuals 1987-1996." ]
+  ] [
+     fhir:code [ fhir:v "DVO" ] ;
+     fhir:display [ fhir:v "DVA Number (Orange Card)" ] ;
+     fhir:definition [ fhir:v "An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran Orange Card (the new name for a DVA Orange card). A Veteran Orange Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card." ]
+  ] [
+     fhir:code [ fhir:v "DVW" ] ;
+     fhir:display [ fhir:v "DVA Number (White Card)" ] ;
+     fhir:definition [ fhir:v "An individual's state-based Department of Veterans’ Affairs (DVA) File number as displayed on a Veteran White Card (the new name for a DVA White card). A Veteran White Card issued by Department of Veterans’ Affairs (DVA) to an eligible individual provides access to benefits associated with that card." ]
+  ] [
+     fhir:code [ fhir:v "ETP" ] ;
+     fhir:display [ fhir:v "Electronic Transfer of Prescription Identifier" ] ;
+     fhir:definition [ fhir:v "An identifier allocated by an Electronic Transfer of Prescription (ETP) supplier, sometimes related to a barcode." ]
+  ] [
+     fhir:code [ fhir:v "GNAF" ] ;
+     fhir:display [ fhir:v "Geocoded National Address File Identifier" ] ;
+     fhir:definition [ fhir:v "A Geocoded National Address File (G-NAF) Identifier assigned to a location address in the G-NAF. The PSMA G-NAF is Australia’s authoritative, geocoded address file." ]
+  ] [
+     fhir:code [ fhir:v "HAE" ] ;
+     fhir:display [ fhir:v "Health Administration Entity" ] ;
+     fhir:definition [ fhir:v "An identifier assigned by the Australian Healthcare Identifiers Service to a health administration entity: a Health Administration Entity number (HAE)." ]
+  ] [
+     fhir:code [ fhir:v "HSPO" ] ;
+     fhir:display [ fhir:v "Healthcare Support Service Provider - Organisation" ] ;
+     fhir:definition [ fhir:v "An identifier assigned by the Australian Healthcare Identifiers Service to a healthcare support service provider organisation:  a Healthcare Support Service Provider - Organisation identifier (HSP-O)." ]
+  ] [
+     fhir:code [ fhir:v "LDI" ] ;
+     fhir:display [ fhir:v "Local Dispense Identifier" ] ;
+     fhir:definition [ fhir:v "An identifier unique to a dispense within the local system set of dispense records." ]
+  ] [
+     fhir:code [ fhir:v "LPN" ] ;
+     fhir:display [ fhir:v "Local Prescription Number" ] ;
+     fhir:definition [ fhir:v "An identifier unique to a prescription within the local system set of prescriptions." ]
+  ] [
+     fhir:code [ fhir:v "LRI" ] ;
+     fhir:display [ fhir:v "Local Report Identifier" ] ;
+     fhir:definition [ fhir:v "An identifier unique to a report within the local system set of reports." ]
+  ] [
+     fhir:code [ fhir:v "LSPN" ] ;
+     fhir:display [ fhir:v "Location Specific Practice Number" ] ;
+     fhir:definition [ fhir:v "An identifier assigned under the Medicare program to uniquely identify practice sites that provide diagnostic imaging and radiation oncology services." ]
+  ] [
+     fhir:code [ fhir:v "NATAA" ] ;
+     fhir:display [ fhir:v "NATA Accreditation Number" ] ;
+     fhir:definition [ fhir:v "A National Association of Testing Authorities (NATA) accreditation number associated with an accredited facility. A NATA accreditation number is associated with an organisation." ]
+  ] [
+     fhir:code [ fhir:v "NATAS" ] ;
+     fhir:display [ fhir:v "NATA Site Number" ] ;
+     fhir:definition [ fhir:v "A National Association of Testing Authorities (NATA) site number associated with an accredited facility. A NATA site number represents a specific location associated with an accredited facility, i.e. an organisation with a NATA accreditation number." ]
+  ] [
+     fhir:code [ fhir:v "NDI" ] ;
+     fhir:display [ fhir:v "National Device Identifier" ] ;
+     fhir:definition [ fhir:v "An identifier unique to a device assigned by an identifier scheme managed at a national level, this is commonly a My Health Record Assigned Identity - Device (PAI-D) identifier." ]
+  ] [
+     fhir:code [ fhir:v "NOI" ] ;
+     fhir:display [ fhir:v "National Organisation Identifier" ] ;
+     fhir:definition [ fhir:v "An identifier assigned by the Australian Healthcare Identifiers Service to a healthcare provider organisation: a Healthcare Provider Identifier - Organisation (HPI-O)." ]
+  ] [
+     fhir:code [ fhir:v "NPIO" ] ;
+     fhir:display [ fhir:v "National provider at organisation identifier" ] ;
+     fhir:definition [ fhir:v "A National Provider Identifier at Organisation (NPIO) uniquely identifies an individual practitioner at an organisation using the practitioner’s HPI-I and organisation’s HPI-O to form the NPIO." ]
+  ] [
+     fhir:code [ fhir:v "NRI" ] ;
+     fhir:display [ fhir:v "National Repository Identifier" ] ;
+     fhir:definition [ fhir:v "An identifier unique to a repository assigned by an identifier scheme managed at a national level, this is commonly a My Health Record Assigned Identity - Repository (PAI-R) identifier." ]
+  ] [
+     fhir:code [ fhir:v "PAN" ] ;
+     fhir:display [ fhir:v "Pharmacy Approval Number" ] ;
+     fhir:definition [ fhir:v "An identifier unique to a pharmacy that is approved to supply pharmaceutical benefits at particular premises under the the National Health Act 1953." ]
+  ] [
+     fhir:code [ fhir:v "PAIO" ] ;
+     fhir:display [ fhir:v "My Health Record (PCEHR) Assigned Identity for Organisations" ] ;
+     fhir:definition [ fhir:v "An identifier assigned by the Australian Healthcare Identifiers Service to an organisation to support their participation in the My Health Record system. These organisations are not eligible for another type of Australian Healthcare Identifiers Service identifier (e.g. a HPI-O). For example, the My Health Record System Operator, and the My Health Record National Consumer Portal." ]
+  ] [
+     fhir:code [ fhir:v "PRES" ] ;
+     fhir:display [ fhir:v "Prescriber Number" ] ;
+     fhir:definition [ fhir:v "A Pharmaceutical Benefits Scheme (PBS) prescriber identifier assigned to an individual that identifies the right to act as a prescriber under that scheme." ]
+  ] [
+     fhir:code [ fhir:v "RACSI" ] ;
+     fhir:display [ fhir:v "Residential Aged Care Service Identifier" ] ;
+     fhir:definition [ fhir:v "A residential aged care service identifier, commonly known as RACS ID or RACF ID, assigned by the Department of Health to a residential aged care service subsidised by the Australian Government. An organisation may provide more than one residential aged care service." ]
+  ] [
+     fhir:code [ fhir:v "SEN" ] ;
+     fhir:display [ fhir:v "Commonwealth Seniors Health Card" ] ;
+     fhir:definition [ fhir:v "An identifier unique to an individual, used to confirm concessions by most government agencies and utility providers, as displayed on a Commonwealth Seniors Healthcare Card. A Commonwealth Seniors Healthcare Card may be issued by Services Australia or Department of Veterans’ Affairs (DVA) to an eligible individual to provide access to certain benefits." ]
+  ] [
+     fhir:code [ fhir:v "UPIN" ] ;
+     fhir:display [ fhir:v "Medicare Provider Number" ] ;
+     fhir:definition [ fhir:v "A Medicare provider number, assigned by Services Australia under the Medicare program, to practitioners who provide services that are eligible for a Medicare benefit. This is a location-specific identifier, a practitioner may hold more than one." ]
+  ] [
+     fhir:code [ fhir:v "VDI" ] ;
+     fhir:display [ fhir:v "Vendor Directory Identifier" ] ;
+     fhir:definition [ fhir:v "A unique vendor identifier allocated to a provider directory entry (PractitionerRole or HealthcareService)." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

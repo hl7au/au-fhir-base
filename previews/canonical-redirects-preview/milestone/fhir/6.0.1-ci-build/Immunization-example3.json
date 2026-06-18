@@ -1,0 +1,91 @@
+{
+  "resourceType" : "Immunization",
+  "id" : "example3",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-immunization"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization example3</b></p><a name=\"example3\"> </a><a name=\"hcexample3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-immunization.html\">AU Base Immunization</a></p></div><p><b>Vaccine Vial Serial Number</b>: vNo1111</p><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats COMIRN}, {http://snomed.info/sct 1525011000168107}\">Pfizer Comirnaty</span></p><p><b>patient</b>: <a href=\"Patient-example5.html\">Sarah Simmons  Female, DoB: 1977-09-07 ( Medicare Number:\u00a022968184811\u00a0(,\u00a0period:\u00a0(?) --&gt; 2022-12))</a></p><p><b>occurrence</b>: 2021-11-17</p><p><b>recorded</b>: 2021-11-17</p><p><b>primarySource</b>: true</p><p><b>location</b>: <a href=\"Location-example3.html\">Location: status = active; type = Family medicine clinic; physicalType = Building</a></p><p><b>manufacturer</b>: Pfizer Australia Ltd</p><p><b>lotNumber</b>: 500000000P</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 AP}\">Administering Provider</span></td><td><a href=\"PractitionerRole-example3.html\">PractitionerRole General practitioner</a></td></tr></table><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 840539006}\">COVID-19</span></td><td>1</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number",
+    "valueString" : "vNo1111"
+  }],
+  "status" : "completed",
+  "vaccineCode" : {
+    "coding" : [{
+      "system" : "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats",
+      "code" : "COMIRN"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1525011000168107",
+      "display" : "Comirnaty"
+    }],
+    "text" : "Pfizer Comirnaty"
+  },
+  "patient" : {
+    "reference" : "Patient/example5",
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "code" : "MC",
+          "display" : "Patient's Medicare number"
+        }],
+        "text" : "Medicare Number"
+      },
+      "system" : "http://ns.electronichealth.net.au/id/medicare-number",
+      "value" : "22968184811",
+      "period" : {
+        "end" : "2022-12"
+      }
+    }
+  },
+  "occurrenceDateTime" : "2021-11-17",
+  "recorded" : "2021-11-17",
+  "primarySource" : true,
+  "location" : {
+    "reference" : "Location/example3"
+  },
+  "manufacturer" : {
+    "display" : "Pfizer Australia Ltd"
+  },
+  "lotNumber" : "500000000P",
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+        "code" : "AP",
+        "display" : "Administering Provider"
+      }],
+      "text" : "Administering Provider"
+    },
+    "actor" : {
+      "reference" : "PractitionerRole/example3",
+      "identifier" : {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+            "code" : "UPIN"
+          }],
+          "text" : "Medicare Provider Number"
+        },
+        "system" : "http://ns.electronichealth.net.au/id/medicare-provider-number",
+        "value" : "1234561A"
+      }
+    }
+  }],
+  "protocolApplied" : [{
+    "targetDisease" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "840539006",
+        "display" : "COVID-19"
+      }],
+      "text" : "COVID-19"
+    }],
+    "doseNumberPositiveInt" : 1
+  }]
+}

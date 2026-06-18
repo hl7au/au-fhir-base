@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "example0",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-procedure"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-procedure.html\">AU Base Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 26782000}\">Cryotherapy</span></p><p><b>subject</b>: <a href=\"Patient-example6.html\">William Rigny  Male, DoB: 1965-03-09 ( Medical record number)</a></p><p><b>performed</b>: 2021-12-10 10:30:00+1100 --&gt; 2021-12-10 10:50:00+1100</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"PractitionerRole-example3.html\">PractitionerRole General practitioner</a></td></tr></table><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 201101007}\">Actinic keratosis</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 73897004}\">Skin structure of face</span></p></div>"
+  },
+  "status" : "completed",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "26782000",
+      "display" : "Cryotherapy"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example6"
+  },
+  "performedPeriod" : {
+    "start" : "2021-12-10T10:30:00+11:00",
+    "end" : "2021-12-10T10:50:00+11:00"
+  },
+  "performer" : [{
+    "actor" : {
+      "reference" : "PractitionerRole/example3"
+    }
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "201101007",
+      "display" : "Actinic keratosis"
+    }]
+  }],
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "73897004",
+      "display" : "Skin structure of face"
+    }]
+  }]
+}

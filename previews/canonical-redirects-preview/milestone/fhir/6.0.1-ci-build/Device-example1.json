@@ -1,0 +1,46 @@
+{
+  "resourceType" : "Device",
+  "id" : "example1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><p><b>identifier</b>: PAI-D/8003640013000057</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>Some registered repository service</td><td>other</td></tr></table><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 462240000}\">National patient health record repository</span></p><p><b>owner</b>: Identifier: PAI-O/8003640011000059</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "NDI",
+        "display" : "National Device Identifier"
+      }],
+      "text" : "PAI-D"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/pcehr/paid/1.0",
+    "value" : "8003640013000057"
+  }],
+  "deviceName" : [{
+    "name" : "Some registered repository service",
+    "type" : "other"
+  }],
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "462240000",
+      "display" : "Patient health record information system"
+    }],
+    "text" : "National patient health record repository"
+  },
+  "owner" : {
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+          "code" : "NOI",
+          "display" : "National Organisation Identifier"
+        }],
+        "text" : "PAI-O"
+      },
+      "system" : "http://ns.electronichealth.net.au/id/pcehr/paio/1.0",
+      "value" : "8003640011000059"
+    }
+  }
+}

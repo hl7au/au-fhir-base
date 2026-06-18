@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/HealthcareService/example2> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: HealthcareService example2</b></p><a name=\"example2\"> </a><a name=\"hcexample2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-healthcareservice.html\">AU Base HealthcareService</a></p></div><p><b>active</b>: true</p><p><b>providedBy</b>: <a href=\"Organization-example1.html\">Albion Hospital</a></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 394915009}\">General pathology (specialty)</span></p><p><b>location</b>: <a href=\"Location-example2.html\">Location: identifier = NATA Site Number: 162899,LSPN: 123333; status = active; physicalType = Level</a></p><p><b>name</b>: Albion Hospital Pathology Service</p><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday, Friday</p><p><b>availableStartTime</b>: 08:30:00</p><p><b>availableEndTime</b>: 17:30:00</p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:providedBy [
+     fhir:link <http://hl7.org.au/fhir/Organization/example1> ;
+     fhir:reference [ fhir:v "Organization/example1" ] ;
+     fhir:display [ fhir:v "Albion Hospital" ]
+  ] ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394915009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394915009" ] ;
+       fhir:display [ fhir:v "General pathology (specialty)" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <http://hl7.org.au/fhir/Location/example2> ;
+     fhir:reference [ fhir:v "Location/example2" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Albion Hospital Pathology Service"] ; # 
+  fhir:availableTime ( [
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] ) ;
+     fhir:availableStartTime [ fhir:v "08:30:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "17:30:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

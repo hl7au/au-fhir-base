@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Immunization/example0> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-immunization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-immunization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-immunization.html\">AU Base Immunization</a></p></div><p><b>status</b>: Not Done</p><p><b>statusReason</b>: <span title=\"Codes:{http://snomed.info/sct 1620681000168106}\">Patient objection</span></p><p><b>vaccineCode</b>: <span title=\"Codes:{http://snomed.info/sct 830851000168105}\">Varicella-zoster live vaccine</span></p><p><b>patient</b>: <a href=\"Patient-example1.html\">Harry DAN</a></p><p><b>occurrence</b>: 2017-08-15</p><p><b>primarySource</b>: true</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 AP}\">Administering Provider</span></td><td><a href=\"Practitioner-example0.html\">Dr Helen Mayo</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Patient refused administration of Zostavax</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "not-done"] ; # 
+  fhir:statusReason [
+     fhir:coding ( [
+       a sct:1620681000168106 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1620681000168106" ] ;
+       fhir:display [ fhir:v "Patient objection" ]
+     ] )
+  ] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       a sct:830851000168105 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "830851000168105" ] ;
+       fhir:display [ fhir:v "Varicella-zoster live vaccine" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org.au/fhir/Patient/example1> ;
+     fhir:reference [ fhir:v "Patient/example1" ] ;
+     fhir:display [ fhir:v "Harry DAN" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2017-08-15"^^xsd:date
+  ] ; # 
+  fhir:primarySource [ fhir:v true] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0443"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AP" ] ;
+         fhir:display [ fhir:v "Administering Provider" ]
+       ] ) ;
+       fhir:text [ fhir:v "Administering Provider" ]
+     ] ;
+     fhir:actor [
+       fhir:link <http://hl7.org.au/fhir/Practitioner/example0> ;
+       fhir:reference [ fhir:v "Practitioner/example0" ] ;
+       fhir:display [ fhir:v "Dr Helen Mayo" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient refused administration of Zostavax" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

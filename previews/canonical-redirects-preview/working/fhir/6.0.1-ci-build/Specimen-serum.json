@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "serum",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-specimen"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen serum</b></p><a name=\"serum\"> </a><a name=\"hcserum\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-specimen.html\">AU Base Specimen</a></p></div><p><b>accessionIdentifier</b>: <code>https://example.com/labs/accession-ids</code>/1978881817</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119364003}\">Serum specimen</span></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI:\u00a0Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-example0.html\">Practitioner Helen Mayo </a></td><td>2019-09-25 08:20:00+0000</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://example.com/labs SST}\">Serum Separator Tube</span></td></tr></table></div>"
+  },
+  "accessionIdentifier" : {
+    "system" : "https://example.com/labs/accession-ids",
+    "value" : "1978881817"
+  },
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119364003",
+      "display" : "Serum specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example0"
+  },
+  "collection" : {
+    "collector" : {
+      "reference" : "Practitioner/example0"
+    },
+    "collectedDateTime" : "2019-09-25T08:20:00Z"
+  },
+  "container" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://example.com/labs",
+        "code" : "SST",
+        "display" : "Serum Separator Tube"
+      }]
+    }
+  }]
+}

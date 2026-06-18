@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/MedicationStatement/example0> a fhir:MedicationStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-medicationstatement.html\">AU Base MedicationStatement</a></p></div><p><b>status</b>: Active</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 6166011000036106}\">Roferon-A 9 million units (33.333 microgram)/0.5 mL injection, 0.5 mL syringe</span></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Franklin</a></p><p><b>effective</b>: 2018-06-25 --&gt; (ongoing)</p><p><b>dateAsserted</b>: 2018-07-25</p><p><b>informationSource</b>: <a href=\"Practitioner-example0.html\">Doctor Mayo</a></p><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Timing</b></td></tr><tr><td style=\"display: none\">*</td><td>3 per 1 week</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:6166011000036106 ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medication-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "BPDSF" ] ;
+           fhir:display [ fhir:v "Branded product with strengths and form" ]
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "6166011000036106" ] ;
+       fhir:display [ fhir:v "Roferon-A 9 million units (33.333 microgram)/0.5 mL injection, 0.5 mL syringe" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ] ;
+     fhir:display [ fhir:v "Franklin" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2018-06-25"^^xsd:date ]
+  ] ; # 
+  fhir:dateAsserted [ fhir:v "2018-07-25"^^xsd:date] ; # 
+  fhir:informationSource [
+     fhir:link <http://hl7.org.au/fhir/Practitioner/example0> ;
+     fhir:reference [ fhir:v "Practitioner/example0" ] ;
+     fhir:display [ fhir:v "Doctor Mayo" ]
+  ] ; # 
+  fhir:dosage ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "3"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "wk" ] ;
+         fhir:dayOfWeek ( [ fhir:v "mon" ] [ fhir:v "wed" ] [ fhir:v "sat" ] )
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

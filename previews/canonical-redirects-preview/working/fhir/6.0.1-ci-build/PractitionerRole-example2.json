@@ -1,0 +1,78 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "example2",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>identifier</b>: Employee Number: peterwinslow44</p><p><b>practitioner</b>: <a href=\"Practitioner-example2.html\">Generated Summary: Peter Winslow </a></p><p><b>organization</b>: <a href=\"Organization-example1.html\">Generated Summary: ABN: 51824753556; <span title=\"Codes: {http://snomed.info/sct 309895006}\">Private hospital</span>; name: Albion Hospital</a></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 85733003}\">General pathologist</span></p><p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 394915009}\">General pathology (specialty)</span></p><p><b>location</b>: <a href=\"Location-example2.html\">Generated Summary: NATA Site Number: 162899, LSPN: 123333; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type lvl}\">Level</span></a></p><p><b>healthcareService</b>: <a href=\"HealthcareService-example2.html\">Generated Summary: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/service-category 26}\">Specialist Clinical Pathology</span>; <span title=\"Codes: {http://snomed.info/sct 394915009}\">General pathology (specialty)</span>; name: Albion Hospital Pathology Service</a></p><p><b>telecom</b>: <a href=\"mailto:peter.winslow@amail.example.com\">peter.winslow@amail.example.com</a></p><h3>AvailableTimes</h3><table class=\"grid\"><tr><td>-</td><td><b>DaysOfWeek</b></td><td><b>AvailableStartTime</b></td><td><b>AvailableEndTime</b></td></tr><tr><td>*</td><td>mon, tue, wed, thu, fri</td><td>08:30:00 (Brisbane)</td><td>17:30:00 (Brisbane)</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "EI",
+        "display" : "Employee number"
+      }],
+      "text" : "Employee Number"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556",
+    "value" : "peterwinslow44",
+    "assigner" : {
+      "display" : "Albion Hospital"
+    }
+  }],
+  "practitioner" : {
+    "reference" : "Practitioner/example2"
+  },
+  "organization" : {
+    "reference" : "Organization/example1"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "85733003",
+      "display" : "General pathologist"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394915009",
+      "display" : "General pathology (specialty)"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/example2"
+  }],
+  "healthcareService" : [{
+    "reference" : "HealthcareService/example2"
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "peter.winslow@amail.example.com",
+    "use" : "work"
+  }],
+  "availableTime" : [{
+    "daysOfWeek" : ["mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"],
+    "availableStartTime" : "08:30:00",
+    "_availableStartTime" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/timezone",
+        "valueCode" : "Australia/Brisbane"
+      }]
+    },
+    "availableEndTime" : "17:30:00",
+    "_availableEndTime" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/timezone",
+        "valueCode" : "Australia/Brisbane"
+      }]
+    }
+  }]
+}

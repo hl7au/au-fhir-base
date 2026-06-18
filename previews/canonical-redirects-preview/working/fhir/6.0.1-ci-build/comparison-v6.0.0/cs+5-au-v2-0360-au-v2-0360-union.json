@@ -1,0 +1,107 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "329f3cb3-6f19-4005-99ed-2a3a05d891de-14",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/329f3cb3-6f19-4005-99ed-2a3a05d891de-14",
+  "name" : "UnionDegreeLicenseCertificateAUAndDegreeLicenseCertificateAU",
+  "title" : "Union of DegreeLicenseCertificate AU And DegreeLicenseCertificate AU",
+  "status" : "active",
+  "date" : "2026-06-18T23:24:50+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "property" : [{
+    "code" : "status",
+    "uri" : "http://hl7.org/fhir/concept-properties#status",
+    "description" : "A property that indicates the status of the concept. One of active, experimental,   deprecated, retired",
+    "type" : "code"
+  },
+  {
+    "code" : "deprecationDate",
+    "uri" : "http://hl7.org/fhir/concept-properties#deprecationDate",
+    "description" : "The date at which a concept was deprecated. Concepts that are deprecated but not   inactive can still be used, but their use is discouraged",
+    "type" : "dateTime"
+  },
+  {
+    "code" : "status",
+    "uri" : "http://hl7.org/fhir/concept-properties#status",
+    "description" : "A property that indicates the status of the concept. One of active, experimental,   deprecated, retired",
+    "type" : "code"
+  },
+  {
+    "code" : "deprecationDate",
+    "uri" : "http://hl7.org/fhir/concept-properties#deprecationDate",
+    "description" : "The date at which a concept was deprecated. Concepts that are deprecated but not   inactive can still be used, but their use is discouraged",
+    "type" : "dateTime"
+  }],
+  "concept" : [{
+    "code" : "AHPRA",
+    "display" : "Ahpra Registration",
+    "definition" : "An Australian Health Practitioner Regulation Authority (Ahpra) Registration.",
+    "designation" : [{
+      "use" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009"
+      },
+      "value" : "Ahpra Registration"
+    }]
+  },
+  {
+    "code" : "AUAHPRAProfession",
+    "display" : "AHPRA Profession",
+    "definition" : "An Australian Health Practitioner Regulation Authority (Ahpra) profession. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Profession Details extension. Use the qualification type term AHPRA in association with an Ahpra registration.",
+    "designation" : [{
+      "use" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009"
+      },
+      "value" : "Ahpra Profession"
+    }],
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2025-07-23"
+    },
+    {
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2025-07-23"
+    }]
+  },
+  {
+    "code" : "AUAHPRARegistration",
+    "display" : "AHPRA Registration",
+    "definition" : "An Australian Health Practitioner Regulation Authority (Ahpra) registration. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Registration Details extension. Use the qualification type term AHPRA in association with an Ahpra registration.",
+    "designation" : [{
+      "use" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "900000000000013009"
+      },
+      "value" : "Ahpra Registration"
+    }],
+    "property" : [{
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2025-07-23"
+    },
+    {
+      "code" : "status",
+      "valueCode" : "deprecated"
+    },
+    {
+      "code" : "deprecationDate",
+      "valueDateTime" : "2025-07-23"
+    }]
+  }]
+}

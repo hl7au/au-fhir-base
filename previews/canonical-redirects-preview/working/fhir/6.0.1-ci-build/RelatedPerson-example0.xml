@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example0"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: RelatedPerson example0</b></p><a name="example0"> </a><a name="hcexample0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></p></div><p><b>identifier</b>: Medical record number/767767765FRD</p><p><b>active</b>: true</p><p><b>patient</b>: <a href="Patient-example0.html">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0131 N}, {http://terminology.hl7.org/CodeSystem/v3-RoleCode WIFE}">Next-of-Kin</span></p><p><b>name</b>: Benedicte du Marche </p><p><b>telecom</b>: <a href="tel:+33(237)998327">+33 (237) 998327</a></p><p><b>gender</b>: Female</p><p><b>address</b>: 43, Place du Marche Sainte Catherine Paris 75004 FRA </p><h3>Photos</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td>image/jpeg</td><td>Binary/f016</td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003621566684455"/>
+    <value value="767767765FRD"/>
+    <assigner>
+      <reference value="Organization/example0"/>
+      <display value="Downunder Hospital"/>
+    </assigner>
+  </identifier>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/example0"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+      <code value="N"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="WIFE"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="du Marche">
+      <!--     the "du" part is a family name prefix (VV in iso 21090)     -->
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="VV"/>
+      </extension>
+    </family>
+    <given value="Benedicte"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33 (237) 998327"/>
+  </telecom>
+  <gender value="female"/>
+  <address>
+    <line value="43, Place du Marche Sainte Catherine"/>
+    <city value="Paris"/>
+    <postalCode value="75004"/>
+    <country value="FRA"/>
+  </address>
+  <photo>
+    <contentType value="image/jpeg"/>
+    <url value="Binary/f016"/>
+  </photo>
+</RelatedPerson>

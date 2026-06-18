@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationDispense xmlns="http://hl7.org/fhir">
+  <id value="example1"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationDispense example1</b></p><a name="example1"> </a><a name="hcexample1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a></p></div><p><b>Dispense Number</b>: 2</p><p><b>identifier</b>: Local Dispense Identifier/776984994</p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://snomed.info/sct 926213011000036100}">Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10</span></p><p><b>subject</b>: <a href="Patient-example0.html">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Organization-example1.html">Organization Albion Hospital</a></td></tr></table><p><b>authorizingPrescription</b>: <a href="MedicationRequest-example2.html">MedicationRequest: identifier = Local Prescription Number: 53720010; status = active; intent = order; medication[x] = Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10; authoredOn = 2018-07-15; reasonCode = ; note = Patient requires an administration aid.</a></p><p><b>quantity</b>: 20 TAB</p><p><b>daysSupply</b>: 10 days</p><p><b>whenPrepared</b>: 2018-07-25 12:30:00+1000</p><p><b>whenHandedOver</b>: 2018-07-25 13:45:00+1000</p><p><b>receiver</b>: <a href="Patient-example0.html">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>note</b>: </p><blockquote><div><p>Patient administration aid is not accepted by patient.</p>
+</div></blockquote><h3>DosageInstructions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td>1-2 tablets orally every 4-6 hours as needed for pain</td></tr></table><h3>Substitutions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>WasSubstituted</b></td></tr><tr><td style="display: none">*</td><td>false</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/dispense-number">
+    <valueInteger value="2"/>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+        <code value="LDI"/>
+        <display value="Local Dispense Identifier"/>
+      </coding>
+    </type>
+    <system value="http://albionhospital.example.com/pharmacy/dispenses"/>
+    <value value="776984994"/>
+    <assigner>
+      <reference value="Organization/example1"/>
+    </assigner>
+  </identifier>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="926213011000036100"/>
+      <display value="Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example0"/>
+  </subject>
+  <performer>
+    <actor>
+      <reference value="Organization/example1"/>
+    </actor>
+  </performer>
+  <authorizingPrescription>
+    <reference value="MedicationRequest/example2"/>
+  </authorizingPrescription>
+  <quantity>
+    <value value="20"/>
+    <unit value="TAB"/>
+  </quantity>
+  <daysSupply>
+    <value value="10"/>
+    <unit value="days"/>
+  </daysSupply>
+  <whenPrepared value="2018-07-25T12:30:00+10:00"/>
+  <whenHandedOver value="2018-07-25T13:45:00+10:00"/>
+  <receiver>
+    <reference value="Patient/example0"/>
+  </receiver>
+  <note>
+    <text value="Patient administration aid is not accepted by patient."/>
+  </note>
+  <dosageInstruction>
+    <text value="1-2 tablets orally every 4-6 hours as needed for pain"/>
+  </dosageInstruction>
+  <substitution>
+    <wasSubstituted value="false"/>
+  </substitution>
+</MedicationDispense>

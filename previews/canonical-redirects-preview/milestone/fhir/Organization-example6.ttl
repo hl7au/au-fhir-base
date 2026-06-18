@@ -1,0 +1,139 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Organization/example6> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example6"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "11.007" ] ;
+     fhir:lastUpdated [ fhir:v "2019-11-15T13:28:17.239+10:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-organization>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en-AU"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\"><p class=\"res-header-id\"><b>Generated Narrative: Organization example6</b></p><a name=\"example6\"> </a><a name=\"hcexample6\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 11.007; Last updated: 2019-11-15 13:28:17+1000; Language: en-AU</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: NATA Accreditation Number/200001, ARBN/123456789, ABN/12345678901, ACN/518247535, HPI-O/8003621566684455, PAI-O/8003640011000059, CSP/8003639900027009</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8520}\">Pathology and Diagnostic Imaging Services</span></p><p><b>name</b>: ACME Pathology</p><p><b>alias</b>: Tests R Us Pathology</p><p><b>telecom</b>: <a href=\"mailto:enquiries@acmepathology.example.com\">enquiries@acmepathology.example.com</a>, <a href=\"https://acmepathology.example.com\">https://acmepathology.example.com</a>, ph: (03) 5550 1234(Work)</p><p><b>address</b>: 7002 Little Collins Street Melbourne VIC 3000 AU </p><p><b>partOf</b>: <a href=\"Organization-5-8631-1.html\">Organization Test Org -DigitalHealth 5</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NATAA" ] ;
+         fhir:display [ fhir:v "NATA Accreditation Number" ]
+       ] ) ;
+       fhir:text [ fhir:v "NATA Accreditation Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/nata-accreditation"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "200001" ] # In Australia NATA numbers are an\n        incremental number that have been incremented to 5 digits, this example uses a fictional\n        NATA number from 100,000 + to ensure no conflict with real world values
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ARBN" ] ;
+         fhir:display [ fhir:v "Australian Registered Body Number" ]
+       ] ) ;
+       fhir:text [ fhir:v "ARBN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/arbn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123456789" ] #  Note: 123456789 is an invalid ARBN ie does not pass the ARBN check digit algorithm 
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ABN" ] ;
+         fhir:display [ fhir:v "Australian Business Number" ]
+       ] ) ;
+       fhir:text [ fhir:v "ABN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/abn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "12345678901" ] #  Note: 12345678901 is an invalid ABN ie does not pass the ABN check digit algorithm 
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACN" ] ;
+         fhir:display [ fhir:v "Australian Company Number" ]
+       ] ) ;
+       fhir:text [ fhir:v "ACN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/acn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "518247535" ] #  Note: 518247535 is an invalid ACN ie does not pass the ACN check digit algorithm 
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ] ;
+         fhir:display [ fhir:v "National Organisation Identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003621566684455" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PAIO" ] ;
+         fhir:display [ fhir:v "My Health Record (PCEHR) Assigned Identity for Organisations" ]
+       ] ) ;
+       fhir:text [ fhir:v "PAI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/pcehr/paio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003640011000059" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "CSPRN" ] ;
+         fhir:display [ fhir:v "Contracted Service Provider Registration Number" ]
+       ] ) ;
+       fhir:text [ fhir:v "CSP" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/csp/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003639900027009" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8520" ] ;
+       fhir:display [ fhir:v "Pathology and Diagnostic Imaging Services" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "ACME Pathology"] ; # 
+  fhir:alias ( [ fhir:v "Tests R Us Pathology"] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "enquiries@acmepathology.example.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "url" ] ;
+     fhir:value [ fhir:v "https://acmepathology.example.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(03) 5550 1234" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "7002 Little Collins Street" ] ) ;
+     fhir:city [ fhir:v "Melbourne" ] ;
+     fhir:state [ fhir:v "VIC" ] ;
+     fhir:postalCode [ fhir:v "3000" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) ; # 
+  fhir:partOf [
+     fhir:link <http://hl7.org.au/fhir/Organization/5-8631-1> ;
+     fhir:reference [ fhir:v "Organization/5-8631-1" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

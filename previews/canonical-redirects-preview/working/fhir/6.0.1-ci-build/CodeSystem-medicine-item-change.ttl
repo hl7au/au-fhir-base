@@ -1,0 +1,148 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/CodeSystem/medicine-item-change> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicine-item-change"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem medicine-item-change</b></p><a name=\"medicine-item-change\"> </a><a name=\"hcmedicine-item-change\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/medicine-item-change</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">nochange<a name=\"medicine-item-change-nochange\"> </a></td><td>Unchanged</td><td>No change has been made to this medicine.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">changed<a name=\"medicine-item-change-changed\"> </a></td><td>Change occurred</td><td>A change has been made to this medicine; for example, new medicine prescribed or dosage change.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  new<a name=\"medicine-item-change-new\"> </a></td><td>New</td><td>A new medicine item is introduced.</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    prescribed<a name=\"medicine-item-change-prescribed\"> </a></td><td>New prescription</td><td>A new medicine item has been prescribed.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ceased<a name=\"medicine-item-change-ceased\"> </a></td><td>Ceased</td><td>A medicine that was previously taken by the individual may actually be ceased as it required immediate attention. This cessation is anticipated to be permanent. Example uses: the medicine in question is considered ineffective or has caused serious adverse effects.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  suspended<a name=\"medicine-item-change-suspended\"> </a></td><td>Suspended</td><td>A medicine that was previously taken by the individual may be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  cancelled<a name=\"medicine-item-change-cancelled\"> </a></td><td>Cancelled</td><td>The prescription for this medicine item was cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  amended<a name=\"medicine-item-change-amended\"> </a></td><td>Amended</td><td>The current medicine item has been changed in some way, e.g. dose, form, route, frequency change.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">recommended<a name=\"medicine-item-change-recommended\"> </a></td><td>Change was recommended</td><td>A change has been recommended to this medicine but may not have occurred yet, e.g. medicine recommended to be stopped.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  new-recommended<a name=\"medicine-item-change-new-recommended\"> </a></td><td>New recommended medicine</td><td>A new medicine item is recommended.</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    prescription-recommended<a name=\"medicine-item-change-prescription-recommended\"> </a></td><td>Prescription recommended</td><td>It may be recommended that the usual GP prescribe a new medicine to be taken by the individual. The addition may not be urgent or there may be an arrangement that all medicine changes are to be enacted by the GP as the coordinator of the individual‘s overall care.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  review-recommended<a name=\"medicine-item-change-review-recommended\"> </a></td><td>Review recommended</td><td>It may be recommended to the usual GP that a medicine that was previously taken by the individual be reviewed. The outcome of the review may be that the medicine is amended or stopped.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  cessation-recommended<a name=\"medicine-item-change-cessation-recommended\"> </a></td><td>Cessation recommended</td><td>It may be recommended to the usual GP that a medicine that was previously taken by the individual be ceased.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  suspension-recommended<a name=\"medicine-item-change-suspension-recommended\"> </a></td><td>Suspension recommended</td><td>It may be recommended to the usual GP that a medicine item that was previously taken by the individual be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  cancellation-recommended<a name=\"medicine-item-change-cancellation-recommended\"> </a></td><td>Cancellation recommended</td><td>The prescription for this medicine item is recommended to be cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/CodeSystem/medicine-item-change"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.1.4.6" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "MedicineItemChange"] ; # 
+  fhir:title [ fhir:v "Medicine Item Change"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T23:22:00+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Medicine Item Change code system defines concepts that identify a change that has been made, or is recommended to be made, to a medicine item."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://terminology.hl7.org.au/ValueSet/medicine-item-change"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org.au/ValueSet/medicine-item-change>
+  ] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:versionNeeded [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "15"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "nochange" ] ;
+     fhir:display [ fhir:v "Unchanged" ] ;
+     fhir:definition [ fhir:v "No change has been made to this medicine." ]
+  ] [
+     fhir:code [ fhir:v "changed" ] ;
+     fhir:display [ fhir:v "Change occurred" ] ;
+     fhir:definition [ fhir:v "A change has been made to this medicine; for example, new medicine prescribed or dosage change." ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "new" ] ;
+       fhir:display [ fhir:v "New" ] ;
+       fhir:definition [ fhir:v "A new medicine item is introduced." ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "prescribed" ] ;
+         fhir:display [ fhir:v "New prescription" ] ;
+         fhir:definition [ fhir:v "A new medicine item has been prescribed." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "ceased" ] ;
+       fhir:display [ fhir:v "Ceased" ] ;
+       fhir:definition [ fhir:v "A medicine that was previously taken by the individual may actually be ceased as it required immediate attention. This cessation is anticipated to be permanent. Example uses: the medicine in question is considered ineffective or has caused serious adverse effects." ]
+     ] [
+       fhir:code [ fhir:v "suspended" ] ;
+       fhir:display [ fhir:v "Suspended" ] ;
+       fhir:definition [ fhir:v "A medicine that was previously taken by the individual may be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure." ]
+     ] [
+       fhir:code [ fhir:v "cancelled" ] ;
+       fhir:display [ fhir:v "Cancelled" ] ;
+       fhir:definition [ fhir:v "The prescription for this medicine item was cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition." ]
+     ] [
+       fhir:code [ fhir:v "amended" ] ;
+       fhir:display [ fhir:v "Amended" ] ;
+       fhir:definition [ fhir:v "The current medicine item has been changed in some way, e.g. dose, form, route, frequency change." ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "recommended" ] ;
+     fhir:display [ fhir:v "Change was recommended" ] ;
+     fhir:definition [ fhir:v "A change has been recommended to this medicine but may not have occurred yet, e.g. medicine recommended to be stopped." ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "new-recommended" ] ;
+       fhir:display [ fhir:v "New recommended medicine" ] ;
+       fhir:definition [ fhir:v "A new medicine item is recommended." ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "prescription-recommended" ] ;
+         fhir:display [ fhir:v "Prescription recommended" ] ;
+         fhir:definition [ fhir:v "It may be recommended that the usual GP prescribe a new medicine to be taken by the individual. The addition may not be urgent or there may be an arrangement that all medicine changes are to be enacted by the GP as the coordinator of the individual‘s overall care." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "review-recommended" ] ;
+       fhir:display [ fhir:v "Review recommended" ] ;
+       fhir:definition [ fhir:v "It may be recommended to the usual GP that a medicine that was previously taken by the individual be reviewed. The outcome of the review may be that the medicine is amended or stopped." ]
+     ] [
+       fhir:code [ fhir:v "cessation-recommended" ] ;
+       fhir:display [ fhir:v "Cessation recommended" ] ;
+       fhir:definition [ fhir:v "It may be recommended to the usual GP that a medicine that was previously taken by the individual be ceased." ]
+     ] [
+       fhir:code [ fhir:v "suspension-recommended" ] ;
+       fhir:display [ fhir:v "Suspension recommended" ] ;
+       fhir:definition [ fhir:v "It may be recommended to the usual GP that a medicine item that was previously taken by the individual be temporarily stopped. Example uses: medication in question may reach toxicity blood level, or suspected to have caused some undesirable effects; or needs to be suspended before a surgical/diagnostic procedure." ]
+     ] [
+       fhir:code [ fhir:v "cancellation-recommended" ] ;
+       fhir:display [ fhir:v "Cancellation recommended" ] ;
+       fhir:definition [ fhir:v "The prescription for this medicine item is recommended to be cancelled. The patient may be advised to complete the course of the prescribed medicine. This advice is a clinical decision made based on assessment of the patients clinical condition." ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

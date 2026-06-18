@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="norelevantfinding-example0"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation norelevantfinding-example0</b></p><a name="norelevantfinding-example0"> </a><a name="hcnorelevantfinding-example0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode ASSERTION}">Assertion</span></p><p><b>subject</b>: <a href="Patient-example0.html">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>effective</b>: 2018-10-23</p><p><b>performer</b>: <a href="PractitionerRole-example3.html">PractitionerRole General practitioner</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 416128008}">No history of procedure</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="ASSERTION"/>
+      <display value="Assertion"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example0"/>
+  </subject>
+  <effectiveDateTime value="2018-10-23"/>
+  <performer>
+    <reference value="PractitionerRole/example3"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="416128008"/>
+      <display value="No H/O: procedure"/>
+    </coding>
+    <text value="No history of procedure"/>
+  </valueCodeableConcept>
+</Observation>

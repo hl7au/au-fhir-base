@@ -1,0 +1,43 @@
+{
+  "resourceType" : "Organization",
+  "id" : "example7",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization example7</b></p><a name=\"example7\"> </a><a name=\"hcexample7\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-organization.html\">AU Base Organization</a></p></div><p><b>identifier</b>: HSP-O/8003641000000000</p><p><b>active</b>: true</p><p><b>name</b>: Sunshine Home Care Services</p><p><b>telecom</b>: <a href=\"mailto:admin@sunshinehomecare.example.com\">admin@sunshinehomecare.example.com</a>, <a href=\"tel:+61355550123\">+61 3 5555 0123</a></p><p><b>address</b>: 125 Care Street Melbourne VIC 3000 AU (work)</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "HSPO",
+        "display" : "Healthcare Support Service Provider - Organisation"
+      }],
+      "text" : "HSP-O"
+    },
+    "system" : "http://ns.electronichealth.net.au/id/hi/hspo/1.0",
+    "value" : "8003641000000000"
+  }],
+  "active" : true,
+  "name" : "Sunshine Home Care Services",
+  "telecom" : [{
+    "system" : "email",
+    "value" : "admin@sunshinehomecare.example.com",
+    "use" : "work"
+  },
+  {
+    "system" : "phone",
+    "value" : "+61 3 5555 0123",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "work",
+    "line" : ["125 Care Street"],
+    "city" : "Melbourne",
+    "state" : "VIC",
+    "postalCode" : "3000",
+    "country" : "AU"
+  }]
+}

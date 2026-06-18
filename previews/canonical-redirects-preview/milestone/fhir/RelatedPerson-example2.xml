@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="example2"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: RelatedPerson example2</b></p><a name="example2"> </a><a name="hcexample2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></p></div><p><b>identifier</b>: Medicare Number/22968184811 (, period: (?) --&gt; 2022-12)</p><p><b>patient</b>: <a href="Patient-example4.html">Suzanne Simmons  Female, DoB: 2008-08-08 ( Medical record number)</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}">mother</span></p><p><b>name</b>: Sarah Simmons </p><p><b>telecom</b>: <a href="mailto:ssimmons@amail.example.com">ssimmons@amail.example.com</a>, ph: (03) 5550 6677(Home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1977-09-07</p><p><b>address</b>: 55 Sarah Street Strahan TAS 7468 AU </p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MC"/>
+        <display value="Patient's Medicare number"/>
+      </coding>
+      <text value="Medicare Number"/>
+    </type>
+    <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+    <value value="22968184811"/>
+    <period>
+      <end value="2022-12"/>
+    </period>
+  </identifier>
+  <patient>
+    <reference value="Patient/example4"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="MTH"/>
+      <display value="mother"/>
+    </coding>
+  </relationship>
+  <name>
+    <family value="Simmons"/>
+    <given value="Sarah"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="ssimmons@amail.example.com"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="(03) 5550 6677"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1977-09-07"/>
+  <address>
+    <line value="55 Sarah Street"/>
+    <city value="Strahan"/>
+    <state value="TAS"/>
+    <postalCode value="7468"/>
+    <country value="AU"/>
+  </address>
+</RelatedPerson>

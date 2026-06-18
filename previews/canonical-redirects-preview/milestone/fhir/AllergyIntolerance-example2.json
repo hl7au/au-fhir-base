@@ -1,0 +1,79 @@
+{
+  "resourceType" : "AllergyIntolerance",
+  "id" : "example2",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance example2</b></p><a name=\"example2\"> </a><a name=\"hcexample2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-allergyintolerance.html\">AU Base AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmed</span></p><p><b>type</b>: Intolerance</p><p><b>category</b>: Food</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 782415009}\">Intolerance to lactose</span></p><p><b>patient</b>: <a href=\"Patient-example4.html\">Suzanne Simmons</a></p><p><b>onset</b>: 1 year<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codea = 'a')</span></p><p><b>recordedDate</b>: 2009-10-09</p><p><b>asserter</b>: <a href=\"Practitioner-example3.html\">Francis Fernando</a></p><blockquote><p><b>reaction</b></p><p><b>substance</b>: <span title=\"Codes:{http://snomed.info/sct 47703008}\">Lactose</span></p><p><b>manifestation</b>: <span title=\"Codes:{http://snomed.info/sct 21522001}\">Abdominal pain</span>, <span title=\"Codes:{http://snomed.info/sct 116289008}\">Abdominal bloating</span>, <span title=\"Codes:{http://snomed.info/sct 62315008}\">Diarrhoea</span></p></blockquote></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+      "code" : "active",
+      "display" : "Active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+      "code" : "confirmed",
+      "display" : "Confirmed"
+    }]
+  },
+  "type" : "intolerance",
+  "category" : ["food"],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "782415009",
+      "display" : "Intolerance to lactose"
+    }]
+  },
+  "patient" : {
+    "reference" : "Patient/example4",
+    "display" : "Suzanne Simmons"
+  },
+  "onsetAge" : {
+    "value" : 1,
+    "unit" : "year",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "a"
+  },
+  "recordedDate" : "2009-10-09",
+  "asserter" : {
+    "reference" : "Practitioner/example3",
+    "display" : "Francis Fernando"
+  },
+  "reaction" : [{
+    "substance" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "47703008",
+        "display" : "Lactose"
+      }]
+    },
+    "manifestation" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "21522001",
+        "display" : "Abdominal pain"
+      }]
+    },
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "116289008",
+        "display" : "Abdominal bloating"
+      }]
+    },
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "62315008",
+        "display" : "Diarrhoea"
+      }]
+    }]
+  }]
+}

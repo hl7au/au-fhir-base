@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Observation/specimen-hepatitis-b-serology> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "specimen-hepatitis-b-serology"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation specimen-hepatitis-b-serology</b></p><a name=\"specimen-hepatitis-b-serology\"> </a><a name=\"hcspecimen-hepatitis-b-serology\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-pathologyresult.html\">AU Base Pathology Result</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-hepatitis-b-antibody.html\">ServiceRequest Hepatitis B surface antibody measurement</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 SR}\">Serology</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 16935-9}\">Hepatitis B surface Ab</span></p><p><b>subject</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>effective</b>: 2019-09-25 08:20:00+0000</p><p><b>performer</b>: <a href=\"Organization-example6.html\">Organization ACME Pathology</a></p><p><b>value</b>: &gt;10 IU/L</p><p><b>specimen</b>: <a href=\"Specimen-serum.html\">Specimen: accessionIdentifier = https://example.com/labs/accession-ids#1978881817; type = Serum specimen</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td></tr><tr><td style=\"display: none\">*</td><td>10 IU/L</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:basedOn ( [
+     fhir:link <http://hl7.org.au/fhir/ServiceRequest/hepatitis-b-antibody> ;
+     fhir:reference [ fhir:v "ServiceRequest/hepatitis-b-antibody" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SR" ] ;
+       fhir:display [ fhir:v "Serology" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:16935-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "16935-9" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hepatitis B surface Ab" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2019-09-25T08:20:00Z"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org.au/fhir/Organization/example6> ;
+     fhir:reference [ fhir:v "Organization/example6" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">" ] ;
+     fhir:unit [ fhir:v "IU/L" ]
+  ] ; # 
+  fhir:specimen [
+     fhir:link <http://hl7.org.au/fhir/Specimen/serum> ;
+     fhir:reference [ fhir:v "Specimen/serum" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IU/L" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

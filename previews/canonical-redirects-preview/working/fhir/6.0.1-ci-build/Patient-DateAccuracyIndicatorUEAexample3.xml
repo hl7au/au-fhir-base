@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="DateAccuracyIndicatorUEAexample3"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This example demonstrates birth date and deceased date with unknown day, estimated month and accurate year.</p>
+            <p>Note that &quot;2004-06-00&quot; is NOT a valid FHIR date.</p>
+            <p>Details include:</p>
+            <ul>
+                <li>A valid FHIR date example for birth date and deceased date is &quot;2004-06-08” but not &quot;2004-06-00&quot;.</li>
+                <li>A date accuracy indicator of &quot;UEA&quot; indicates that the day is unknown but month is an estimate and year is accurate.</li>
+                <li>When a code value contains &quot;U&quot;, the corresponding date components (individual or combination) for birth or deceased dates must be ignored.</li>
+                <li>When a code value contains &quot;A&quot;, the corresponding date components (individual or combination) for birth or deceased dates must be accurate.</li>
+            </ul>
+        </div>
+  </text>
+  <birthDate value="2004-06-08">
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">
+      <!--  this part of the extension states that date of birth is partially accurate  -->
+      <valueCoding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"/>
+        <code value="UEA"/>
+        <display value="Day is unknown, month is estimated, year is accurate"/>
+      </valueCoding>
+    </extension>
+  </birthDate>
+  <deceasedDateTime value="2004-06-08T13:42:00+10:00">
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">
+      <!--  this part of the extension states that deceased date is partially accurate  -->
+      <valueCoding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"/>
+        <code value="UEA"/>
+        <display value="Day is unknown, month is estimated, year is accurate"/>
+      </valueCoding>
+    </extension>
+  </deceasedDateTime>
+</Patient>

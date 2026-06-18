@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="address-example2"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient address-example2</b></p><a name="address-example2"> </a><a name="hcaddress-example2"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Anonymous Patient (no stated gender), DoB Unknown</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3">NO FIXED ADDRESS Melbourne, VIC(temp)</td></tr></table></div>
+  </text>
+  <address>
+    <!--  this part of the extension states that address is no fixed address  -->
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/no-fixed-address">
+      <valueBoolean value="true"/>
+    </extension>
+    <use value="temp"/>
+    <type value="physical"/>
+    <text value="NO FIXED ADDRESS Melbourne, VIC"/>
+    <state value="VIC"/>
+    <country value="AU"/>
+  </address>
+</Patient>

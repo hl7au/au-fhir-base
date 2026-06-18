@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/PractitionerRole/example3> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole example3</b></p><a name=\"example3\"> </a><a name=\"hcexample3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-practitionerrole.html\">AU Base PractitionerRole</a></p></div><p><b>identifier</b>: Medicare Provider Number/1234561A</p><p><b>practitioner</b>: <a href=\"Practitioner-example3.html\">Practitioner Francis Fernando </a></p><p><b>organization</b>: <a href=\"Organization-example3.html\">Organization Devonport Family Medicine Clinic</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 62247001}\">General practitioner</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 394814009}\">General practice (specialty)</span></p><p><b>location</b>: <a href=\"Location-example3.html\">Location: status = active; type = Family medicine clinic; physicalType = Building</a></p><p><b>healthcareService</b>: <a href=\"HealthcareService-example3.html\">HealthcareService General Practitioner services</a></p><p><b>telecom</b>: <a href=\"mailto:francis.fernando@alphamail.example.com\">francis.fernando@alphamail.example.com</a></p><blockquote><p><b>availableTime</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday, Friday</p><p><b>availableStartTime</b>: 08:00:00</p><p><b>availableEndTime</b>: 20:00:00</p></blockquote><h3>NotAvailables</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td></tr><tr><td style=\"display: none\">*</td><td>Weekends</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UPIN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Medicare Provider Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/medicare-provider-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1234561A" ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:link <http://hl7.org.au/fhir/Practitioner/example3> ;
+     fhir:reference [ fhir:v "Practitioner/example3" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <http://hl7.org.au/fhir/Organization/example3> ;
+     fhir:reference [ fhir:v "Organization/example3" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       a sct:62247001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "62247001" ] ;
+       fhir:display [ fhir:v "General practitioner" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394814009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394814009" ] ;
+       fhir:display [ fhir:v "General practice (specialty)" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <http://hl7.org.au/fhir/Location/example3> ;
+     fhir:reference [ fhir:v "Location/example3" ]
+  ] ) ; # 
+  fhir:healthcareService ( [
+     fhir:link <http://hl7.org.au/fhir/HealthcareService/example3> ;
+     fhir:reference [ fhir:v "HealthcareService/example3" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "francis.fernando@alphamail.example.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:availableTime ( [
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] ) ;
+     fhir:availableStartTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "20:00:00"^^xsd:time ]
+  ] ) ; # 
+  fhir:notAvailable ( [
+     fhir:description [ fhir:v "Weekends" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

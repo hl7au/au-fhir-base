@@ -1,0 +1,182 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/RelatedPerson/example-sex-and-gender> a fhir:RelatedPerson ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-sex-and-gender"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-relatedperson>
+     ] )
+  ] ; #    This purpose of this example is to demonstrate the use of sex and gender elements:
+#    - Gender Harmony Gender Identity (Individual Gender Identity extension)
+#    - Gender Harmony Pronouns (Individual Pronouns extension)
+#    - Gender Harmony Recorded Sex or Gender (Person Recorded Sex Or Gender extension)
+#    - Gender Harmony Sex Assigned at Birth (Person Recorded Sex Or Gender extension)
+#    
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson example-sex-and-gender</b></p><a name=\"example-sex-and-gender\"> </a><a name=\"hcexample-sex-and-gender\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-relatedperson.html\">AU Base RelatedPerson</a></p></div><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 446151000124109}\">Male</span></li><li>period: 2018-01-01 --&gt; 2021-12-23</li><li>comment: Identified as male during this period. Began exploring gender identity more deeply towards the end of this period.</li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 33791000087105}\">Non-binary</span></li><li>period: 2022-05-06 --&gt; (ongoing)</li><li>comment: Currently identifies as non-binary and uses 'they/them' pronouns. Open to exploring further gender fluidity.</li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA29520-6}\">they/them/their/theirs/themselves</span></li></ul></blockquote><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 248153007}\">Male</span></li><li>type: <span title=\"Codes:{http://snomed.info/sct 1515311000168102}\">Biological sex at birth</span></li><li>acquisitionDate: 2019-11-01</li><li>sourceDocument: <span title=\"Codes:{http://loinc.org 71230-7}\">Birth certificate</span></li><li>sourceField: Sex</li><li>jurisdiction: <span title=\"Codes:{https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1 VIC}\">Victoria</span></li></ul></blockquote><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-example0.html\">Stella Franklin (official) Female, DoB: 1985-10-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608833357361)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0131 N}, {http://terminology.hl7.org/CodeSystem/v3-RoleCode FAMMEMB}\">Next-of-Kin</span></p><p><b>name</b>: Alex Baker </p><p><b>telecom</b>: ph: (02) 5550 6767</p><p><b>gender</b>: Other</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:446151000124109 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "446151000124109" ] ;
+           fhir:display [ fhir:v "Identifies as male gender" ]
+         ] ) ;
+         fhir:text [ fhir:v "Male" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "period"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2018-01-01"^^xsd:date ] ;
+         fhir:end [ fhir:v "2021-12-23"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Identified as male during this period. Began exploring gender identity more deeply towards the end of this period."
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:33791000087105 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "33791000087105" ] ;
+           fhir:display [ fhir:v "Identifies as nonbinary gender" ]
+         ] ) ;
+         fhir:text [ fhir:v "Non-binary" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "period"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2022-05-06"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Currently identifies as non-binary and uses 'they/them' pronouns. Open to exploring further gender fluidity."
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-pronouns"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA29520-6 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "LA29520-6" ] ;
+           fhir:display [ fhir:v "they/them/their/theirs/themselves" ]
+         ] )
+       ]
+     ] )
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:248153007 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "248153007" ] ;
+           fhir:display [ fhir:v "Male" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:1515311000168102 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1515311000168102" ] ;
+           fhir:display [ fhir:v "Biological sex at birth" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "acquisitionDate"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2019-11-01"^^xsd:date
+       ]
+     ] [
+       fhir:url [ fhir:v "sourceDocument"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:71230-7 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "71230-7" ] ;
+           fhir:display [ fhir:v "Birth certificate" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "sourceField"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Sex"
+       ]
+     ] [
+       fhir:url [ fhir:v "jurisdiction"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "VIC" ]
+         ] )
+       ]
+     ] )
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N" ]
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FAMMEMB" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "Baker" ] ;
+     fhir:given ( [ fhir:v "Alex" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(02) 5550 6767" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "other"] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Immunization",
+  "id" : "example0",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-immunization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization example0</b></p><a name=\"example0\"> </a><a name=\"hcexample0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-immunization.html\">AU Base Immunization</a></p></div><p><b>status</b>: Not Done</p><p><b>statusReason</b>: <span title=\"Codes:{http://snomed.info/sct 1620681000168106}\">Patient objection</span></p><p><b>vaccineCode</b>: <span title=\"Codes:{http://snomed.info/sct 830851000168105}\">Varicella-zoster live vaccine</span></p><p><b>patient</b>: <a href=\"Patient-example1.html\">Harry DAN</a></p><p><b>occurrence</b>: 2017-08-15</p><p><b>primarySource</b>: true</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 AP}\">Administering Provider</span></td><td><a href=\"Practitioner-example0.html\">Dr Helen Mayo</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Patient refused administration of Zostavax</p>\n</div></blockquote></div>"
+  },
+  "status" : "not-done",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1620681000168106",
+      "display" : "Patient objection"
+    }]
+  },
+  "vaccineCode" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "830851000168105",
+      "display" : "Varicella-zoster live vaccine"
+    }]
+  },
+  "patient" : {
+    "reference" : "Patient/example1",
+    "display" : "Harry DAN"
+  },
+  "occurrenceDateTime" : "2017-08-15",
+  "primarySource" : true,
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+        "code" : "AP",
+        "display" : "Administering Provider"
+      }],
+      "text" : "Administering Provider"
+    },
+    "actor" : {
+      "reference" : "Practitioner/example0",
+      "display" : "Dr Helen Mayo"
+    }
+  }],
+  "note" : [{
+    "text" : "Patient refused administration of Zostavax"
+  }]
+}
