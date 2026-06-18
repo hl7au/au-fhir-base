@@ -1,28 +1,34 @@
-name: AU Base build → review → working+milestone preview → gated working publish
+name: AU Base build → working+milestone previews → gated MILESTONE publish
 
-# Routine WORKING releases (previews / ballots / drafts). Fast, GitHub-hosted, lean — no full
-# S3 sync, no self-hosted runner.
+# ONE pipeline for both release shapes. Renders the IG ONCE (publication mode), then runs go-publish
+# TWICE off that single render (-reuse-build → the 2nd is ~100s, not another render) to produce BOTH:
+#   - a WORKING preview  (the new version as a non-current snapshot)
+#   - a MILESTONE preview (the same version promoted to current; dynamic-publish-box ⇒ old versions
+#                          untouched, no version tree needed)
+# Both deploy side-by-side to GitHub Pages (previews/<slug>/{working,milestone}/fhir) so reviewers can
+# compare them on a feature branch / PR with ZERO prod writes.
 #
-# Renders the IG ONCE (publication mode), then runs go-publish TWICE off that single render
-# (-reuse-build, so the 2nd is ~100s not another render) to produce BOTH a working and a milestone
-# preview, deployed side-by-side on GitHub Pages (previews/<slug>/working|milestone/fhir). This lets
-# reviewers compare "as a working preview" vs "as a milestone (promoted to current)" before merging,
-# with zero prod writes. The gated publish promotes the WORKING build only; real milestone publishes
-# go through build-review-publish-milestone.yml.
+# PROD PUBLISH IS MILESTONE-ONLY. There is deliberately no "publish working to prod" path — working
+# builds exist only as Pages previews. The gated S3 sync promotes the MILESTONE build, and only on:
+#   - a version tag push (refs/tags/v*), or
+#   - a manual workflow_dispatch with publish_milestone=true.
+# Either way it is gated by the `production` GitHub environment (required reviewers).
 #
 # TRIGGERS
-#   - push to master / PR to master  → build + working & milestone Pages previews (NO prod publish)
-#   - manual workflow_dispatch        → same, and (with publish=true) the gated prod WORKING publish
+#   - push to master / PR to master   → render once + both Pages previews (NO publish)
+#   - push a tag  v*                  → both previews + gated MILESTONE publish to prod S3
+#   - workflow_dispatch               → both previews; publish_milestone=true → gated MILESTONE publish
 #
-# INPUTS this build consumes, and what each provides (kept deliberately minimal):
-#   - au-fhir-base (this repo)      : the IG source — ig.ini/ig.xml, input/, _updatePublisher.sh,
-#                                     and publication-request.json (mode + the publish path).
-#   - KyleOps/publications@au-pipeline-config  → publish-setup.json (website/feeds/layout config,
-#                                     incl. server=cloud + dynamic-publish-box) + templates/
-#                                     (header/preamble/postamble page chrome). NOTHING else is used.
-#                                     TEMP fork+branch: revert to hl7au/publications once the config
-#                                     + custom jar are merged. Sparse-checked-out to just those paths.
-#   - HL7/fhir-ig-history-template  : history.html / history.js template for go-publish -history.
+# For a real milestone release: set publication-request.json version/path to the milestone version,
+# commit, then tag v<version> (or dispatch with publish_milestone=true). The milestone build forces
+# mode=milestone + status=trial-use (AU milestones are the R-numbered trial-use "current").
+#
+# INPUTS this build consumes (kept deliberately minimal):
+#   - au-fhir-base (this repo)      : the IG source (ig.ini/ig.xml, input/, publication-request.json).
+#   - KyleOps/publications@au-pipeline-config → publish-setup.json (server=cloud + dynamic-publish-box)
+#                                     + templates/ (page chrome). TEMP fork/branch; revert to
+#                                     hl7au/publications once config + custom jar are merged. Sparse.
+#   - HL7/fhir-ig-history-template  : history template for go-publish -history.
 #   - hl7au/ig-registry             : fhir-ig-list.json for go-publish -registry.
 #   - combined custom publisher.jar : KyleOps/fhir-ig-publisher release (5 opt-in, unmerged features:
 #                                     #1327 cloud redirects, A2 dynamic publish-box + page-versions,
@@ -32,6 +38,7 @@ name: AU Base build → review → working+milestone preview → gated working p
 on:
   push:
     branches: [master]
+    tags: ['v*']
   pull_request:
     branches: [master]
   workflow_dispatch:
@@ -39,18 +46,17 @@ on:
       ref:
         description: "Tag/branch of au-fhir-base to build"
         default: master
-      publish:
-        description: "Run the gated prod publish after build + review"
+      publish_milestone:
+        description: "Promote the MILESTONE build to prod S3 (gated by the production environment)"
         type: boolean
         default: false
 
 permissions:
-  id-token: write   # OIDC → AWS (publish job only)
-  contents: write   # push the preview to the gh-pages branch
-  pull-requests: write
+  id-token: write   # OIDC → AWS (milestone publish job only)
+  contents: write   # push the previews to the gh-pages branch
 
 concurrency:
-  group: au-base-publish   # shared with the milestone pipeline — never publish two at once
+  group: au-base-publish   # never publish/deploy two au-base runs at once
   cancel-in-progress: false
 
 env:
@@ -67,7 +73,7 @@ jobs:
       slug: ${{ steps.meta.outputs.slug }}
       ver: ${{ steps.render.outputs.ver }}
     steps:
-      - name: Compute build label (branch / pr-N / dispatch ref)
+      - name: Compute build label (branch / pr-N / tag / dispatch ref)
         id: meta
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -128,17 +134,17 @@ jobs:
           key: fhir-pkgcache-v1-${{ hashFiles('au-fhir-base/input/ig.xml', 'au-fhir-base/ig.ini') }}
           restore-keys: fhir-pkgcache-v1-
 
-      - name: Render IG in publication mode (reused by go-publish via -reuse-build, lever C)
+      - name: Render IG in publication mode (reused by both go-publish runs via -reuse-build, lever C)
         id: render
         working-directory: au-fhir-base
         run: |
-          # Render directly to the final publish path so the output is publishable and go-publish
-          # can reuse it (no second render). Backward compatible: an old jar that ignores
-          # -reuse-build simply re-renders.
+          # Render once, to the final publish path, so the output is publishable and BOTH go-publish
+          # runs below can adopt it (no re-render). Path (not mode) drives the reuse match, so flipping
+          # mode for each preview below still reuses this one render.
           mkdir -p "$GITHUB_WORKSPACE/.fhir-cache"
           PUBPATH=$(grep -o '"path"[^,}]*' publication-request.json | head -1 | sed 's/.*:[[:space:]]*"\([^"]*\)".*/\1/')
           echo "Publication path: $PUBPATH"
-          echo "ver=${PUBPATH##*/}" >> "$GITHUB_OUTPUT"   # version folder name, for the preview deep-link
+          echo "ver=${PUBPATH##*/}" >> "$GITHUB_OUTPUT"   # version folder name, for preview deep-links
           java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" \
             -package-cache-folder "$GITHUB_WORKSPACE/.fhir-cache" -tx "$TX_SERVER"
 
@@ -153,11 +159,13 @@ jobs:
           # publisher requires the source to NOT contain package-list.json
           rm -f au-fhir-base/package-list.json
 
-      # Both previews ADOPT the single publication-mode render above (-reuse-build → no re-render), so
-      # the second go-publish is ~100s, not another full render. ABSOLUTE paths required
-      # (IGReleaseRedirectionBuilder substrings the web-root prefix off the version dest folder).
-      - name: Build WORKING preview (go-publish, working mode, -reuse-build)
+      # Both previews ADOPT the single render above (-reuse-build → no re-render), so each go-publish is
+      # ~100s. The publication-request mode is forced per run so the previews are consistent regardless
+      # of what's committed. ABSOLUTE paths required (IGReleaseRedirectionBuilder substrings the
+      # web-root prefix off the version dest folder; a relative path throws StringIndexOutOfBounds).
+      - name: Build WORKING preview (go-publish, mode=working, -reuse-build)
         run: |
+          node -e 'const fs=require("fs");const p="au-fhir-base/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.mode="working";fs.writeFileSync(p,JSON.stringify(d,null,2));'
           cp -a web-seed webroot-working
           java -jar "$GITHUB_WORKSPACE/au-fhir-base/input-cache/publisher.jar" -go-publish -reuse-build \
             -source "$GITHUB_WORKSPACE/au-fhir-base" -web "$GITHUB_WORKSPACE/webroot-working" \
@@ -166,13 +174,11 @@ jobs:
             -tx "$TX_SERVER"
           mkdir -p preview/working && mv webroot-working/fhir preview/working/fhir
 
-      - name: Build MILESTONE preview (go-publish, milestone mode, -reuse-build)
-        continue-on-error: true   # review aid only — must not block the working build/publish
+      - name: Build MILESTONE preview (go-publish, mode=milestone, -reuse-build)
+        continue-on-error: true   # review aid — a hiccup here must not block previews or the publish
         run: |
-          # Flip mode→milestone for THIS run only (the committed file stays 'working'); same publish
-          # path, so -reuse-build still adopts the one render. Demonstrates the milestone publish: the
-          # new version is promoted to current, and dynamic-publish-box means old versions are untouched
-          # (no version tree needed). Throwaway -web, so it affects nothing.
+          # Force milestone + trial-use (AU milestones are the R-numbered trial-use "current"). Same
+          # publish path → -reuse-build still adopts the one render. Throwaway -web; affects nothing.
           node -e 'const fs=require("fs");const p="au-fhir-base/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.mode="milestone";d.status="trial-use";fs.writeFileSync(p,JSON.stringify(d,null,2));'
           cp -a web-seed webroot-milestone
           java -jar "$GITHUB_WORKSPACE/au-fhir-base/input-cache/publisher.jar" -go-publish -reuse-build \
@@ -184,7 +190,7 @@ jobs:
 
       - name: Package previews (working + milestone) as tar.gz
         run: |
-          # No preview-only redirect is added here — this same artifact feeds the prod publish, which
+          # No preview-only redirect added here — this same artifact feeds the milestone publish, which
           # must NOT carry a fabricated /fhir/index.html. The redirect is added in the preview job only.
           tar -czf "$GITHUB_WORKSPACE/preview-${{ steps.meta.outputs.slug }}.tar.gz" -C preview .
           echo "Archived $(du -h "$GITHUB_WORKSPACE/preview-${{ steps.meta.outputs.slug }}.tar.gz" | cut -f1)"
@@ -241,17 +247,18 @@ jobs:
             echo "| **working** | $base/working/fhir/$ver/index.html | $base/working/fhir/history.html |";
             echo "| **milestone** | $base/milestone/fhir/$ver/index.html | $base/milestone/fhir/history.html |";
             echo "";
-            echo "_Working = the new version as a preview (not current). Milestone = the same version promoted to";
+            echo "_Working = the new version as a non-current preview. Milestone = the same version promoted to";
             echo "current (publish box reads 'this is the current version'; old versions untouched via dynamic-publish-box)._";
             echo "_Goes live ~1–2 min after this job — GitHub publishes the gh-pages update via a separate";
             echo "'pages build and deployment' run; this job only pushes to gh-pages, it doesn't wait._";
           } >> "$GITHUB_STEP_SUMMARY"
 
-  # Promote to PROD — gated by the `production` environment (required reviewers). Only on an
-  # explicit manual dispatch with publish=true; push/PR builds never publish.
-  publish:
-    needs: build   # not preview-pages: a Pages-deploy hiccup must not block prod; the production env is the gate
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish }}
+  # Promote the MILESTONE build to PROD — gated by the `production` environment (required reviewers).
+  # Runs ONLY on a version-tag push or an explicit dispatch with publish_milestone=true. There is no
+  # path that publishes a WORKING build to prod.
+  publish-milestone:
+    needs: build   # not preview-pages: a Pages hiccup must not block prod; the production env is the gate
+    if: ${{ (github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')) || (github.event_name == 'workflow_dispatch' && inputs.publish_milestone) }}
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -263,10 +270,11 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
           aws-region: ap-southeast-2
-      # Publishes the WORKING build ONLY (the milestone tree in the artifact is review-only; real
-      # milestone publishes go through build-review-publish-milestone.yml). Additive — uploads the new
-      # version dir (incl. full-ig.zip + npm package.tgz) + regenerated root; never --delete.
-      - name: Publish WORKING build to prod S3 (additive — no --delete)
+      # MILESTONE build only. Additive — uploads the new (now-current) version dir (incl. full-ig.zip +
+      # npm package.tgz) + the regenerated root (history.html, registry, feeds, redirects). With
+      # dynamic-publish-box there are NO rewritten old-version files. Never --delete.
+      - name: Publish MILESTONE build to prod S3 (additive — no --delete)
         run: |
           mkdir -p out && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C out
-          aws s3 sync out/working/fhir s3://hl7au-fhir-ig/fhir --only-show-errors
+          test -d out/milestone/fhir || { echo "::error::milestone build missing (the milestone step failed) — not publishing"; exit 1; }
+          aws s3 sync out/milestone/fhir s3://hl7au-fhir-ig/fhir --only-show-errors
