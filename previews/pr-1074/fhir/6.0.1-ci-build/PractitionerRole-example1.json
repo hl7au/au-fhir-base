@@ -1,0 +1,48 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "example1",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-practitionerrole.html\">AU Base PractitionerRole</a></p></div><p><b>identifier</b>: NPIO/8003619900015717@8003621566684455</p><p><b>practitioner</b>: <a href=\"Practitioner-example1.html\">Practitioner Steve Smith </a></p><p><b>organization</b>: <a href=\"Organization-example1.html\">Organization Albion Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 66862007}\">Radiologist</span></p><p><b>location</b>: <a href=\"Location-example1.html\">Location: status = active; physicalType = Site</a></p><p><b>healthcareService</b>: <a href=\"HealthcareService-example1.html\">HealthcareService Albion Hospital Radiology Service</a></p><p><b>telecom</b>: <a href=\"mailto:steve.smith@albionhospital.example.com\">steve.smith@albionhospital.example.com</a></p><p><b>availabilityExceptions</b>: Availability on public holidays may vary, please contact the hospital directly to confirm.</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+        "code" : "NPIO",
+        "display" : "National provider at organisation identifier"
+      }],
+      "text" : "NPIO"
+    },
+    "system" : "http://hl7.org.au/id/npio",
+    "value" : "8003619900015717@8003621566684455"
+  }],
+  "practitioner" : {
+    "reference" : "Practitioner/example1"
+  },
+  "organization" : {
+    "reference" : "Organization/example1"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "66862007",
+      "display" : "Radiologist"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/example1"
+  }],
+  "healthcareService" : [{
+    "reference" : "HealthcareService/example1"
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "steve.smith@albionhospital.example.com",
+    "use" : "work"
+  }],
+  "availabilityExceptions" : "Availability on public holidays may vary, please contact the hospital directly to confirm."
+}

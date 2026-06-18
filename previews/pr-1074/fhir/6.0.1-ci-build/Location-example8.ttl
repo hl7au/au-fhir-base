@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Location/example8> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example8"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location example8</b></p><a name=\"example8\"> </a><a name=\"hcexample8\"> </a><p><b>status</b>: Active</p><p><b>name</b>: Leafy Grove</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode NCCF}\">Nursing home</span></p><p><b>address</b>: 700 Church Road Zillmere QLD 4034 AU </p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type si}\">Site</span></p><p><b>managingOrganization</b>: <a href=\"Organization-example5.html\">Organization The Corporation of the Synod of the Diocese of Nundah</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "Leafy Grove"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NCCF" ]
+     ] ) ;
+     fhir:text [ fhir:v "Nursing home" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "700 Church Road" ] ) ;
+     fhir:city [ fhir:v "Zillmere" ] ;
+     fhir:state [ fhir:v "QLD" ] ;
+     fhir:postalCode [ fhir:v "4034" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ; # 
+  fhir:physicalType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "si" ]
+     ] ) ;
+     fhir:text [ fhir:v "Site" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <http://hl7.org.au/fhir/Organization/example5> ;
+     fhir:reference [ fhir:v "Organization/example5" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

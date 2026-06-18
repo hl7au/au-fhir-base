@@ -1,0 +1,118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/ValueSet/au-timezone> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "au-timezone"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet au-timezone</b></p><a name=\"au-timezone\"> </a><a name=\"hcau-timezone\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4</code></p></div><ul><li>Include these codes as defined in <a href=\"http://tx.fhir.org/r4\"><code>https://www.iana.org/time-zones</code></a><span style=\"opacity: 0.5\" title=\"Version is not explicitly stated. When building this specification, the most recent version 20210124 has been used\"> version ⏿20210124</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Adelaide\">Australia/Adelaide</a></td><td>Australia/Adelaide</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Brisbane\">Australia/Brisbane</a></td><td>Australia/Brisbane</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Broken_Hill\">Australia/Broken_Hill</a></td><td>Australia/Broken_Hill</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Darwin\">Australia/Darwin</a></td><td>Australia/Darwin</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Eucla\">Australia/Eucla</a></td><td>Australia/Eucla</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Hobart\">Australia/Hobart</a></td><td>Australia/Hobart</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Lord_Howe\">Australia/Lord_Howe</a></td><td>Australia/Lord_Howe</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Melbourne\">Australia/Melbourne</a></td><td>Australia/Melbourne</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Perth\">Australia/Perth</a></td><td>Australia/Perth</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Australia.47Sydney\">Australia/Sydney</a></td><td>Australia/Sydney</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Pacific.47Norfolk\">Pacific/Norfolk</a></td><td>Pacific/Norfolk</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Indian.47Christmas\">Indian/Christmas</a></td><td>Indian/Christmas</td></tr><tr><td><a href=\"http://tx.fhir.org/r4/ValueSet/time-zones#time-zones-Indian.47Cocos\">Indian/Cocos</a></td><td>Indian/Cocos</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/ValueSet/au-timezone"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.2.4.27" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "AUTimeZone"] ; # 
+  fhir:title [ fhir:v "AU Time Zone"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T15:40:18+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Australian time zones."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://www.iana.org/time-zones"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "Australia/Adelaide" ] ;
+         fhir:display [ fhir:v "Australia/Adelaide" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Brisbane" ] ;
+         fhir:display [ fhir:v "Australia/Brisbane" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Broken_Hill" ] ;
+         fhir:display [ fhir:v "Australia/Broken_Hill" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Darwin" ] ;
+         fhir:display [ fhir:v "Australia/Darwin" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Eucla" ] ;
+         fhir:display [ fhir:v "Australia/Eucla" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Hobart" ] ;
+         fhir:display [ fhir:v "Australia/Hobart" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Lord_Howe" ] ;
+         fhir:display [ fhir:v "Australia/Lord_Howe" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Melbourne" ] ;
+         fhir:display [ fhir:v "Australia/Melbourne" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Perth" ] ;
+         fhir:display [ fhir:v "Australia/Perth" ]
+       ] [
+         fhir:code [ fhir:v "Australia/Sydney" ] ;
+         fhir:display [ fhir:v "Australia/Sydney" ]
+       ] [
+         fhir:code [ fhir:v "Pacific/Norfolk" ] ;
+         fhir:display [ fhir:v "Pacific/Norfolk" ]
+       ] [
+         fhir:code [ fhir:v "Indian/Christmas" ] ;
+         fhir:display [ fhir:v "Indian/Christmas" ]
+       ] [
+         fhir:code [ fhir:v "Indian/Cocos" ] ;
+         fhir:display [ fhir:v "Indian/Cocos" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

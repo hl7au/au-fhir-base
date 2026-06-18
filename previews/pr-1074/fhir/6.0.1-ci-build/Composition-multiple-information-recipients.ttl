@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/Composition/multiple-information-recipients> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "multiple-information-recipients"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2013-05-28T22:12:21Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-composition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-composition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition multiple-information-recipients</b></p><a name=\"multiple-information-recipients\"> </a><a name=\"hcmultiple-information-recipients\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2013-05-28 22:12:21+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-composition.html\">AU Base Composition</a></p></div><p><b>Information Recipient</b>: <a href=\"Patient-example0.html\">Franklin</a></p><p><b>Information Recipient</b>: <a href=\"Practitioner-example0.html\">Doctor Mayo</a></p><p><b>Information Recipient</b>: <a href=\"Organization-example0.html\">Downunder Hospital</a></p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 18842-5}\">Discharge Summarization Note</span></p><p><b>date</b>: 2018-06-03 12:30:02+0000</p><p><b>author</b>: <a href=\"PractitionerRole-example0.html\">Doctor Mayo</a></p><p><b>title</b>: Discharge Summary</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/information-recipient"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+       fhir:reference [ fhir:v "Patient/example0" ] ;
+       fhir:display [ fhir:v "Franklin" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/information-recipient"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hl7.org.au/fhir/Practitioner/example0> ;
+       fhir:reference [ fhir:v "Practitioner/example0" ] ;
+       fhir:display [ fhir:v "Doctor Mayo" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/information-recipient"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hl7.org.au/fhir/Organization/example0> ;
+       fhir:reference [ fhir:v "Organization/example0" ] ;
+       fhir:display [ fhir:v "Downunder Hospital" ]
+     ]
+  ] ) ; # Multiple information-recipients of different resource type
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:18842-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18842-5" ]
+     ] ) ;
+     fhir:text [ fhir:v "Discharge Summarization Note" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example0> ;
+     fhir:reference [ fhir:v "Patient/example0" ] ;
+     fhir:display [ fhir:v "Franklin" ]
+  ] ; # 
+  fhir:date [ fhir:v "2018-06-03T12:30:02Z"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <http://hl7.org.au/fhir/PractitionerRole/example0> ;
+     fhir:reference [ fhir:v "PractitionerRole/example0" ] ;
+     fhir:display [ fhir:v "Doctor Mayo" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Discharge Summary"] . # 
+
+# -------------------------------------------------------------------------------------
+

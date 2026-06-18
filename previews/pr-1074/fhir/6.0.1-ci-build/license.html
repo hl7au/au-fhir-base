@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>License and Legal - AU Base Implementation Guide v6.0.1-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.2"}
+    h3,h4,h5,h6{--heading-prefix:"5.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Base Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">6.0.1-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="generalguidance.html">General Guidance</a></li>
+      <li><a href="sexgender.html">Sex and Gender</a></li>
+      <li><a href="relationship.html">Relationship with other IGs</a></li>
+      <li><a href="future.html">Future of AU Base</a></li>
+    </ul>
+  </li>  
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+	  <!--
+	  <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li>
+	  -->
+    </ul>
+  </li>
+  <!--<li>
+    <a href="security.html">Security</a>
+  </li>-->
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='support.html'><b>Support</b></a></li><li><b>License and Legal</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Australian Base IG (v6.0.1-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="6.0.1-ci-build" data-pb-canonical="http://hl7.org.au/fhir"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var plUrl=pn(canonical);if(!plUrl)return;plUrl=plUrl+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="6.0.1-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>License and Legal</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#hl7-australia-intellectual-property-policy" id="markdown-toc-hl7-australia-intellectual-property-policy">HL7 Australia Intellectual Property Policy</a></li>
+  <li><a href="#disclaimer-and-warning-of-use" id="markdown-toc-disclaimer-and-warning-of-use">Disclaimer and Warning of Use</a></li>
+  <li><a href="#fhir-licensing-and-trademarks" id="markdown-toc-fhir-licensing-and-trademarks">FHIR Licensing and Trademarks</a></li>
+  <li><a href="#third-party-artefacts-and-terminologies" id="markdown-toc-third-party-artefacts-and-terminologies">Third-party Artefacts and Terminologies</a></li>
+</ul>
+
+</div>
+<h3 id="hl7-australia-intellectual-property-policy">HL7 Australia Intellectual Property Policy</h3>
+<p>HL7 Australia has an overarching intellectual property policy in place. The <a href="https://hl7.org.au/fhir/hl7a_ip_policy.pdf">HL7 Australia - Intellectual Property Policy</a> document defines the HL7 Australia organisation position on many aspects related to the copyright, licensing, liabilities and usage of HL7 Australia FHIR Implementation Guides. This also includes how the HL7 Australia FHIR Implementation Guides referencing other underlying material from HL7 International and 3rd parties shall be considered when using HL7 Australia published material. This policy document is maintained with the current official position of HL7 Australia with respect to these considerations.</p>
+
+<p>HL7 FHIR® <a href="https://hl7.org/fhir/license.html">Licensing and Legal Terms</a> should also be referenced as the underlying standards published terms on which HL7 Australia FHIR Implementation Guides depend.</p>
+
+<p>A number of key considerations are included here to support HL7 Australia FHIR Implementation Guide usage.</p>
+
+<h3 id="disclaimer-and-warning-of-use">Disclaimer and Warning of Use</h3>
+
+<p>HL7 Australia provides HL7 Australia content for informational and reference purposes. While HL7 Australia and the broader HL7 community endeavour to ensure the accuracy and reliability of HL7 Australia content, to the extent permitted by law, HL7 Australia:</p>
+
+<p>  (a) makes no warranties, express or implied:
+<br />    (i) that HL7 Australia content will not infringe upon any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets; or
+<br />    (ii) that HL7 Australia content is suitable, complete or applicable for any particular purpose or use contemplated by the User, and
+<br />  (b) shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use or reliance on HL7 Australia content.</p>
+
+<p>By accessing or using HL7 Australia content, Users agree to indemnify and hold harmless HL7 Australia, its officers, directors, employees, agents, and contributors of HL7 Australia content from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or in connection with the User’s use of or reliance on HL7 Australia content.</p>
+
+<h3 id="fhir-licensing-and-trademarks">FHIR Licensing and Trademarks</h3>
+
+<h4 id="hl7-international-licensing">HL7 International Licensing</h4>
+<p>HL7 International Protocol Specifications Copyright © 2011+ HL7.</p>
+
+<p>This specification (including downloadable content) is based on HL7 Protocol Specifications produced by HL7 International under the terms of <a href="https://www.hl7.org/documentcenter/public/membership/HL7_Governance_and_Operations_Manual.pdf">HL7® Governance and Operations Manual</a> relating to Intellectual Property (Section 09, at the time this specification was published), specifically its copyright, trademark and patent provisions.</p>
+
+<p>HL7 International has and will continue to enforce the copyrights it holds in the HL7 Protocol Specifications.</p>
+
+<p>Most trademarks used in conjunction with HL7® products, services and activities are registered and/or owned by HL7 International, rather than by HL7 Australia, and their use is subject to the associated HL7 International IP policies and licensing terms.</p>
+
+<p>HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR logo are trademarks owned by Health Level Seven International, registered with the United States Patent and Trademark Office.</p>
+
+<h4 id="hl7-australia-licensing">HL7 Australia Licensing</h4>
+
+<p>HL7 Australia licenses use of some HL7 Australia content under Creative Commons license. Users may only rely on the terms of a Creative Commons licence where HL7 Australia has explicitly licensed the use of an Artefact under a Creative Commons licence and shall not presume that a Creative Commons licence applies to any other HL7 Australia content not explicitly covered by a Creative Commons licence.</p>
+
+<p><strong>HL7 Australia use of this specification is licensed under Creative Commons "No Rights Reserved" (<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0</a>).</strong></p>
+
+<p>Copyright © 2012+ HL7 Australia</p>
+
+<p>Intellectual property rights and trademarks are defined in full in the <a href="https://hl7.org.au/fhir/hl7a_ip_policy.pdf">HL7 Australia - Intellectual Property Policy</a> document.</p>
+
+<h3 id="third-party-artefacts-and-terminologies">Third-party Artefacts and Terminologies</h3>
+
+<p>HL7 Australia FHIR Implementation Guides contain and reference intellectual property owned by third parties ("Third Party IP"). Acceptance of these License Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licences or authorisations to utilise Third Party IP in connection with the specification or otherwise.</p>
+
+<p>Following is a non-exhaustive list of third-party artefacts and terminologies that may require a separate licence:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Artefact / Terminology</td>
+      <td>Statement</td>
+    </tr>
+    <tr>
+      <td>SNOMED CT</td>
+      <td>International Healthcare Terminology Standards Developing Organization (<a href="http://snomed.org">IHTSDO</a>). Where this specification includes or references content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO) it is distributed by agreement between IHTSDO and HL7, or the Australian Digital Health Agency via NCTS terms. Implementer use of SNOMED CT is not covered by this agreement</td>
+    </tr>
+    <tr>
+      <td>DICOM</td>
+      <td>National Electrical Manufacturers Association (<a href="http://dicom.nema.org/">NEMA</a>).  This specification may reference content from DICOM, which is copyright NEMA, and distributed by agreement between NEMA/DICOM and HL7. Implementer use of DICOM is not covered by this agreement</td>
+    </tr>
+    <tr>
+      <td>Logical Observation Identifiers Names &amp; Codes (LOINC)</td>
+      <td>This material contains content from LOINC (<a href="http://loinc.org">http://loinc.org</a>). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at <a href="http://loinc.org/license">http://loinc.org/license</a>. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.</td>
+    </tr>
+    <tr>
+      <td>National Clinical Terminology Services (<a href="https://www.healthterminologies.gov.au/">NCTS</a>)</td>
+      <td>This material contains references to National Clinical Terminology Service artefacts these are Copyright © 2024 Australian Digital Health Agency, implementer user of this content are advised of the NCTS <a href="https://www.healthterminologies.gov.au/ncts-website-terms-of-use/">Terms of Use</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2017+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.base#6.0.1-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 15:40+0000">2026-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

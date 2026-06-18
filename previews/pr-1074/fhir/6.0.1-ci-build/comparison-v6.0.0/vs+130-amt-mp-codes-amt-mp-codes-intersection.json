@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "13997e3f-c83a-4d72-8593-b437b4f55b9c-384",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/13997e3f-c83a-4d72-8593-b437b4f55b9c-384",
+  "name" : "IntersectionAMTMedicinalProductAndSubstancesAndAMTMedicinalProductAndSubstances",
+  "title" : "Intersection of AMT Medicinal Product and Substances And AMT Medicinal Product and Substances",
+  "status" : "retired",
+  "date" : "2026-06-18T15:42:59+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "AU"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "in",
+        "value" : "929360061000036106"
+      }]
+    },
+    {
+      "valueSet" : ["https://healthterminologies.gov.au/fhir/ValueSet/substance-1"]
+    }]
+  }
+}

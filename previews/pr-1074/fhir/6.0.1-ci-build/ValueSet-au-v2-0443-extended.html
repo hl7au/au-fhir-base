@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>hl7VS-providerRole - AU Extended - AU Base Implementation Guide v6.0.1-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3.1.118"}
+    h3,h4,h5,h6{--heading-prefix:"3.1.118"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Base Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">6.0.1-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="generalguidance.html">General Guidance</a></li>
+      <li><a href="sexgender.html">Sex and Gender</a></li>
+      <li><a href="relationship.html">Relationship with other IGs</a></li>
+      <li><a href="future.html">Future of AU Base</a></li>
+    </ul>
+  </li>  
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+	  <!--
+	  <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li>
+	  -->
+    </ul>
+  </li>
+  <!--<li>
+    <a href="security.html">Security</a>
+  </li>-->
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='fhirartefacts.html'><b>FHIR Artefacts</b></a></li><li><a href='artifacts.html'><b>Artefacts Summary</b></a></li><li><b>hl7VS-providerRole - AU Extended</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Australian Base IG (v6.0.1-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="6.0.1-ci-build" data-pb-canonical="http://hl7.org.au/fhir"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var plUrl=pn(canonical);if(!plUrl)return;plUrl=plUrl+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="6.0.1-ci-build"></span></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-au-v2-0443-extended.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-au-v2-0443-extended.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-au-v2-0443-extended.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: hl7VS-providerRole - AU Extended
+
+  </h2>
+  <table class="colstu">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://terminology.hl7.org.au/ValueSet/v2-0443-extended<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org.au/ValueSet/v2-0443-extended"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">6.0.1-ci-build<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org.au/ValueSet/v2-0443-extended|6.0.1-ci-build"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="3">
+        
+          <i>
+            
+            Standards status:
+          </i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Trial-use</a>
+          
+          
+        
+      </td>
+
+      <td>
+        <a href="generalguidance.html#maturity-levels">Maturity Level</a>: 1
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">Hl7VSProviderRoleAUExtended</span></td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        <i>Other Identifiers:</i> OID:2.16.840.1.113883.2.3.4.2.3.443
+      </td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved.</p>
+</td>
+    </tr>
+
+  </table>
+
+<p>
+<p>hl7VS-providerRole extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></li>
+</ul>
+<div style="background-color: #fff2ff; border-left: solid 3px #ffa0ff; margin: 4px; padding: 4px">
+<p><b>Changes since version 6.0.0:</b></p>
+<li>No changes</li>
+</div>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="au-v2-0443-extended"> </a><a name="hcau-v2-0443-extended"> </a>
+<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4</code></p></div><p>This value set includes codes based on the following rules:</p>
+<ul><li>Include all codes defined in <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html"><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></a><span title="Version is explicitly stated to be 3.0.0"> version &#x1F4CD;3.0.0</span></li>
+<li>Include all codes defined in <a href="CodeSystem-au-v2-0443.html"><code>http://terminology.hl7.org.au/CodeSystem/v2-0443</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;6.0.1-ci-build</span></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px"><p>Expansion performed internally based on:</p><ul><li><a href="CodeSystem-au-v2-0443.html">codesystem providerRole AU v6.0.1-ci-build (CodeSystem)</a><span class="copy-text-inline"><button data-clipboard-text="http://terminology.hl7.org.au/CodeSystem/v2-0443|6.0.1-ci-build" title="Click to Copy URL" class="btn-copy"> </button></span></li><li><a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html">codesystem providerRole v3.0.0 (CodeSystem)</a><span class="copy-text-inline"><button data-clipboard-text="http://terminology.hl7.org/CodeSystem/v2-0443|3.0.0" title="Click to Copy URL" class="btn-copy"> </button></span></li></ul></div><p>This value set contains 24 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-AD"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-AD">AD</a></td><td>Admitting</td><td>Admitting</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;AD&quot;, &quot;display&quot;: &quot;Admitting&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;AD&quot;&gt;&lt;display value=&quot;Admitting&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-AP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-AP">AP</a></td><td>Administering Provider</td><td>Administering Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;AP&quot;, &quot;display&quot;: &quot;Administering Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;AP&quot;&gt;&lt;display value=&quot;Administering Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-AT"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-AT">AT</a></td><td>Attending</td><td>Attending</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;AT&quot;, &quot;display&quot;: &quot;Attending&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;AT&quot;&gt;&lt;display value=&quot;Attending&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-CLP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-CLP">CLP</a></td><td>Collecting Provider</td><td>Collecting Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;CLP&quot;, &quot;display&quot;: &quot;Collecting Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;CLP&quot;&gt;&lt;display value=&quot;Collecting Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-CP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-CP">CP</a></td><td>Consulting Provider</td><td>Consulting Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;CP&quot;, &quot;display&quot;: &quot;Consulting Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;CP&quot;&gt;&lt;display value=&quot;Consulting Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-DP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-DP">DP</a></td><td>Dispensing Provider</td><td>Dispensing Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;DP&quot;, &quot;display&quot;: &quot;Dispensing Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;DP&quot;&gt;&lt;display value=&quot;Dispensing Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-EP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-EP">EP</a></td><td>Entering Provider (probably not the same as transcriptionist?)</td><td>Entering Provider (probably not the same as transcriptionist?)</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;EP&quot;, &quot;display&quot;: &quot;Entering Provider (probably not the same as transcriptionist?)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;EP&quot;&gt;&lt;display value=&quot;Entering Provider (probably not the same as transcriptionist?)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-FHCP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-FHCP">FHCP</a></td><td>Family Health Care Professional</td><td>Family Health Care Professional</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;FHCP&quot;, &quot;display&quot;: &quot;Family Health Care Professional&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;FHCP&quot;&gt;&lt;display value=&quot;Family Health Care Professional&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-IP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-IP">IP</a></td><td>Initiating Provider (as in action by)</td><td>Initiating Provider (as in action by)</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;IP&quot;, &quot;display&quot;: &quot;Initiating Provider (as in action by)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;IP&quot;&gt;&lt;display value=&quot;Initiating Provider (as in action by)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-MDIR"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-MDIR">MDIR</a></td><td>Medical Director</td><td>Medical Director</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;MDIR&quot;, &quot;display&quot;: &quot;Medical Director&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;MDIR&quot;&gt;&lt;display value=&quot;Medical Director&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-OP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-OP">OP</a></td><td>Ordering Provider</td><td>Ordering Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;OP&quot;, &quot;display&quot;: &quot;Ordering Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;OP&quot;&gt;&lt;display value=&quot;Ordering Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-PH"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-PH">PH</a></td><td>Pharmacist   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)</td><td>Pharmacist   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;PH&quot;, &quot;display&quot;: &quot;Pharmacist   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;PH&quot;&gt;&lt;display value=&quot;Pharmacist   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-PP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-PP">PP</a></td><td>Primary Care Provider</td><td>Primary Care Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;PP&quot;, &quot;display&quot;: &quot;Primary Care Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;PP&quot;&gt;&lt;display value=&quot;Primary Care Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-RO"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-RO">RO</a></td><td>Responsible Observer</td><td>Responsible Observer</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;RO&quot;, &quot;display&quot;: &quot;Responsible Observer&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;RO&quot;&gt;&lt;display value=&quot;Responsible Observer&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-RP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-RP">RP</a></td><td>Referring Provider</td><td>Referring Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;RP&quot;, &quot;display&quot;: &quot;Referring Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;RP&quot;&gt;&lt;display value=&quot;Referring Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-RT"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-RT">RT</a></td><td>Referred to Provider</td><td>Referred to Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;RT&quot;, &quot;display&quot;: &quot;Referred to Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;RT&quot;&gt;&lt;display value=&quot;Referred to Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-TR"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-TR">TR</a></td><td>Transcriptionist</td><td>Transcriptionist</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;TR&quot;, &quot;display&quot;: &quot;Transcriptionist&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;TR&quot;&gt;&lt;display value=&quot;Transcriptionist&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-PI"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-PI">PI</a></td><td>Primary Interpreter</td><td>Primary Interpreter</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;PI&quot;, &quot;display&quot;: &quot;Primary Interpreter&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;PI&quot;&gt;&lt;display value=&quot;Primary Interpreter&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-AI"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-AI">AI</a></td><td>Assistant/Alternate Interpreter</td><td>Assistant/Alternate Interpreter</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;AI&quot;, &quot;display&quot;: &quot;Assistant/Alternate Interpreter&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;AI&quot;&gt;&lt;display value=&quot;Assistant/Alternate Interpreter&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-TN"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-TN">TN</a></td><td>Technician</td><td>Technician</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;TN&quot;, &quot;display&quot;: &quot;Technician&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;TN&quot;&gt;&lt;display value=&quot;Technician&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-VP"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-VP">VP</a></td><td>Verifying Provider</td><td>Verifying Provider</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;VP&quot;, &quot;display&quot;: &quot;Verifying Provider&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;VP&quot;&gt;&lt;display value=&quot;Verifying Provider&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-VPS"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-VPS">VPS</a></td><td>Verifying Pharmaceutical Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)</td><td>Verifying Pharmaceutical Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;VPS&quot;, &quot;display&quot;: &quot;Verifying Pharmaceutical Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;VPS&quot;&gt;&lt;display value=&quot;Verifying Pharmaceutical Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org/CodeSystem/v2-0443-VTS"> </a><code>http://terminology.hl7.org/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0443.html#v2-0443-VTS">VTS</a></td><td>Verifying Treatment Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)</td><td>Verifying Treatment Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;3.0.0&quot;, &quot;code&quot;: &quot;VTS&quot;, &quot;display&quot;: &quot;Verifying Treatment Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;3.0.0&quot;&gt;&lt;code value=&quot;VTS&quot;&gt;&lt;display value=&quot;Verifying Treatment Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://terminology.hl7.org.au/CodeSystem/v2-0443-WIT"> </a><code>http://terminology.hl7.org.au/CodeSystem/v2-0443</code></td><td style="white-space:nowrap">  <a href="CodeSystem-au-v2-0443.html#au-v2-0443-WIT">WIT</a></td><td>Witness</td><td>Witness to a procedure or medication administration</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org.au/CodeSystem/v2-0443&quot;, &quot;version&quot;: &quot;6.0.1-ci-build&quot;, &quot;code&quot;: &quot;WIT&quot;, &quot;display&quot;: &quot;Witness&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org.au/CodeSystem/v2-0443&quot;&gt;&lt;version value=&quot;6.0.1-ci-build&quot;&gt;&lt;code value=&quot;WIT&quot;&gt;&lt;display value=&quot;Witness&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2017+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.base#6.0.1-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 15:40+0000">2026-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

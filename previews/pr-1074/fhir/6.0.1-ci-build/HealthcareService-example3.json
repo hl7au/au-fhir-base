@@ -1,0 +1,91 @@
+{
+  "resourceType" : "HealthcareService",
+  "id" : "example3",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Narrative</b>\n\t\t\t</p>\n\t\t\t<p><b>id</b>: example3</p>\n\t\t\t<p><b>meta</b>: </p>\n\t\t\t<p><b>providedBy</b>: <a href=\"Organization-example3.html\">Devonport Family Medicine Clinic. Generated Summary: id: example3; ABN: 51824754455; <span title=\"Codes: {http://snomed.info/sct 288565001}\">Medical centre</span>; name: Devonport Family Medicine Clinic; reception@dfmc.example.com(WORK), fax: (03) 5550 5557(WORK),\n\t\t\t\tph: (03) 5550 5556(WORK)</a></p>\n\t\t\t<p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/service-category 17}\">General Practice</span></p>\n\t\t\t<p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 408443003}\">General medical practice</span>, <span title=\"Codes: {http://snomed.info/sct 23961000087102}\">Opioid dependency\n\t\t\t\tmanagement specialty</span></p>\n\t\t\t<p><b>location</b>: <a href=\"Location-example3.html\">Generated Summary: id: example3; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode FMC}\">Family\n\t\t\t\tmedicine clinic</span>; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type bu}\">Building</span></a></p>\n\t\t\t<p><b>name</b>: General Practitioner services</p>\n\t\t\t<p><b>telecom</b>: ph: (03) 8543 5555(WORK), ph: (03) 8543 5558(WORK - Legal)</p>\n\t\t\t<p><b>serviceProvisionCode</b>: <span title=\"Codes: {http://hl7.org.au/fhir/CodeSystem/service-provision-conditions MIX}\">Mixed Billing</span></p>\n\t\t\t<p><b>communication</b>: <span title=\"Codes: {urn:ietf:bcp:47 de}\">German</span>, <span title=\"Codes: {urn:ietf:bcp:47 en}\">English</span></p>\n\t\t\t<blockquote>\n\t\t\t\t<p>\n\t\t\t\t\t<b>availableTime</b>\n\t\t\t\t</p>\n\t\t\t\t<p><b>daysOfWeek</b>: mon, tue, wed, thu, fri</p>\n\t\t\t\t<p><b>availableStartTime</b>: </p>\n\t\t\t\t<p><b>availableEndTime</b>: </p>\n\t\t\t</blockquote>\n\t\t\t<blockquote>\n\t\t\t\t<p>\n\t\t\t\t\t<b>availableTime</b>\n\t\t\t\t</p>\n\t\t\t\t<p><b>daysOfWeek</b>: sat, sun</p>\n\t\t\t\t<p><b>availableStartTime</b>: </p>\n\t\t\t\t<p><b>availableEndTime</b>: </p>\n\t\t\t</blockquote>\n\t\t</div>"
+  },
+  "providedBy" : {
+    "reference" : "Organization/example3",
+    "display" : "Devonport Family Medicine Clinic"
+  },
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "408443003",
+      "display" : "General medical practice"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "23961000087102",
+      "display" : "Opioid dependency management specialty"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/example3"
+  }],
+  "name" : "General Practitioner services",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "(03) 8543 5555",
+    "use" : "work"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+          "code" : "legal",
+          "display" : "Legal"
+        }]
+      }
+    }],
+    "system" : "phone",
+    "value" : "(03) 8543 5558",
+    "use" : "work"
+  }],
+  "serviceProvisionCode" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions",
+      "code" : "MIX",
+      "display" : "Mixed Billing"
+    }]
+  }],
+  "communication" : [{
+    "coding" : [{
+      "system" : "urn:ietf:bcp:47",
+      "code" : "de",
+      "display" : "German"
+    }],
+    "text" : "German"
+  },
+  {
+    "coding" : [{
+      "system" : "urn:ietf:bcp:47",
+      "code" : "en",
+      "display" : "English"
+    }],
+    "text" : "English"
+  }],
+  "availableTime" : [{
+    "daysOfWeek" : ["mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"],
+    "availableStartTime" : "08:00:00",
+    "availableEndTime" : "20:00:00"
+  },
+  {
+    "daysOfWeek" : ["sat",
+    "sun"],
+    "availableStartTime" : "10:00:00",
+    "availableEndTime" : "16:00:00"
+  }]
+}

@@ -1,0 +1,77 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "example1",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-encounter"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter example1</b></p><a name=\"example1\"> </a><a name=\"hcexample1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-encounter.html\">AU Base Encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 866149003}\">Annual visit</span></p><p><b>serviceType</b>: <span title=\"Codes:{http://snomed.info/sct 788007007}\">General practice service</span></p><p><b>subject</b>: <a href=\"Patient-example4.html\">Suzanne Simmons  Female, DoB: 2008-08-08 ( Medical record number)</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PPRF}\">primary performer</span></td><td>Identifier: Employee Number/8223TAS</td></tr></table><p><b>period</b>: 2022-02-10 09:20:00+1000 --&gt; 2022-02-10 09:35:00+1000</p></div>"
+  },
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "866149003",
+      "display" : "Annual visit"
+    }]
+  }],
+  "serviceType" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "788007007",
+      "display" : "General practice service"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example4",
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "code" : "MR"
+        }]
+      },
+      "system" : "http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455",
+      "value" : "22446688",
+      "assigner" : {
+        "display" : "TAS GP Medical Center TAS"
+      }
+    }
+  },
+  "participant" : [{
+    "type" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "PPRF",
+        "display" : "primary performer"
+      }]
+    }],
+    "individual" : {
+      "identifier" : {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "EI",
+            "display" : "Employee number"
+          }],
+          "text" : "Employee Number"
+        },
+        "system" : "http://tasmedicalcenter.example.com/providers",
+        "value" : "8223TAS",
+        "assigner" : {
+          "display" : "TAS GP Medical Center TAS"
+        }
+      }
+    }
+  }],
+  "period" : {
+    "start" : "2022-02-10T09:20:00+10:00",
+    "end" : "2022-02-10T09:35:00+10:00"
+  }
+}

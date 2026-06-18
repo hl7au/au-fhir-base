@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/ServiceRequest/path-example0> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "path-example0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-servicerequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-servicerequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest path-example0</b></p><a name=\"path-example0\"> </a><a name=\"hcpath-example0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-servicerequest.html\">AU Base ServiceRequest</a></p></div><blockquote><p><b>Patient Sex Parameter For Clinical Use</b></p><ul><li>value: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use female-typical}\">Apply female-typical setting or reference range</span></li><li>comment: Apply female-type setting for Haematology, Lipids, LFT, TSH, T4 pathology tests</li></ul></blockquote><p><b>identifier</b>: Placer Identifier/789012345</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 26604007}\">Full blood count</span></p><p><b>subject</b>: <a href=\"Patient-example-sex-and-gender.html\">Patricia Roth  Male, DoB: 1974-12-25 ( Medical record number (use: usual, ))</a></p><p><b>authoredOn</b>: 2022-04-02</p><p><b>requester</b>: <a href=\"PractitionerRole-example3.html\">PractitionerRole General practitioner</a></p><p><b>performer</b>: <a href=\"Organization-example6.html\">Organization ACME Pathology</a></p><p><b>reasonCode</b>: <span title=\"Codes:\">Past history lymphoma</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "female-typical" ] ;
+           fhir:display [ fhir:v "Apply female-typical setting or reference range" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Apply female-type setting for Haematology, Lipids, LFT, TSH, T4 pathology tests"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PLAC" ] ;
+         fhir:display [ fhir:v "Placer Identifier" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://albionhospital.example.com/labs/order-identifier"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "789012345" ] ;
+     fhir:assigner [
+       fhir:link <http://hl7.org.au/fhir/Organization/example1> ;
+       fhir:reference [ fhir:v "Organization/example1" ] ;
+       fhir:display [ fhir:v "Albion Hospital" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:26604007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "26604007" ] ;
+       fhir:display [ fhir:v "Full blood count" ]
+     ] ) ;
+     fhir:text [ fhir:v "Full blood count" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org.au/fhir/Patient/example-sex-and-gender> ;
+     fhir:reference [ fhir:v "Patient/example-sex-and-gender" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2022-04-02"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:link <http://hl7.org.au/fhir/PractitionerRole/example3> ;
+     fhir:reference [ fhir:v "PractitionerRole/example3" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org.au/fhir/Organization/example6> ;
+     fhir:reference [ fhir:v "Organization/example6" ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "Past history lymphoma" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/HealthcareService/example3> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>Narrative</b>\n			</p>\n			<p><b>id</b>: example3</p>\n			<p><b>meta</b>: </p>\n			<p><b>providedBy</b>: <a href=\"Organization-example3.html\">Devonport Family Medicine Clinic. Generated Summary: id: example3; ABN: 51824754455; <span title=\"Codes: {http://snomed.info/sct 288565001}\">Medical centre</span>; name: Devonport Family Medicine Clinic; reception@dfmc.example.com(WORK), fax: (03) 5550 5557(WORK),\n				ph: (03) 5550 5556(WORK)</a></p>\n			<p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/service-category 17}\">General Practice</span></p>\n			<p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 408443003}\">General medical practice</span>, <span title=\"Codes: {http://snomed.info/sct 23961000087102}\">Opioid dependency\n				management specialty</span></p>\n			<p><b>location</b>: <a href=\"Location-example3.html\">Generated Summary: id: example3; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode FMC}\">Family\n				medicine clinic</span>; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type bu}\">Building</span></a></p>\n			<p><b>name</b>: General Practitioner services</p>\n			<p><b>telecom</b>: ph: (03) 8543 5555(WORK), ph: (03) 8543 5558(WORK - Legal)</p>\n			<p><b>serviceProvisionCode</b>: <span title=\"Codes: {http://hl7.org.au/fhir/CodeSystem/service-provision-conditions MIX}\">Mixed Billing</span></p>\n			<p><b>communication</b>: <span title=\"Codes: {urn:ietf:bcp:47 de}\">German</span>, <span title=\"Codes: {urn:ietf:bcp:47 en}\">English</span></p>\n			<blockquote>\n				<p>\n					<b>availableTime</b>\n				</p>\n				<p><b>daysOfWeek</b>: mon, tue, wed, thu, fri</p>\n				<p><b>availableStartTime</b>: </p>\n				<p><b>availableEndTime</b>: </p>\n			</blockquote>\n			<blockquote>\n				<p>\n					<b>availableTime</b>\n				</p>\n				<p><b>daysOfWeek</b>: sat, sun</p>\n				<p><b>availableStartTime</b>: </p>\n				<p><b>availableEndTime</b>: </p>\n			</blockquote>\n		</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:providedBy [
+     fhir:link <http://hl7.org.au/fhir/Organization/example3> ;
+     fhir:reference [ fhir:v "Organization/example3" ] ;
+     fhir:display [ fhir:v "Devonport Family Medicine Clinic" ]
+  ] ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:408443003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "408443003" ] ;
+       fhir:display [ fhir:v "General medical practice" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a sct:23961000087102 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "23961000087102" ] ;
+       fhir:display [ fhir:v "Opioid dependency management specialty" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <http://hl7.org.au/fhir/Location/example3> ;
+     fhir:reference [ fhir:v "Location/example3" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "General Practitioner services"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(03) 8543 5555" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/contact-purpose"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/contact-purpose"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "legal" ] ;
+           fhir:display [ fhir:v "Legal" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(03) 8543 5558" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:serviceProvisionCode ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "MIX" ] ;
+       fhir:display [ fhir:v "Mixed Billing" ]
+     ] )
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "de" ] ;
+       fhir:display [ fhir:v "German" ]
+     ] ) ;
+     fhir:text [ fhir:v "German" ]
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "en" ] ;
+       fhir:display [ fhir:v "English" ]
+     ] ) ;
+     fhir:text [ fhir:v "English" ]
+  ] ) ; # 
+  fhir:availableTime ( [
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] ) ;
+     fhir:availableStartTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "20:00:00"^^xsd:time ]
+  ] [
+     fhir:daysOfWeek ( [ fhir:v "sat" ] [ fhir:v "sun" ] ) ;
+     fhir:availableStartTime [ fhir:v "10:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "16:00:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

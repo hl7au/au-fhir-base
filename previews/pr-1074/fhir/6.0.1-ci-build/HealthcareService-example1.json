@@ -1,0 +1,55 @@
+{
+  "resourceType" : "HealthcareService",
+  "id" : "example1",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Narrative</b>\n\t\t\t</p>\n\t\t\t<p><b>active</b>: true</p>\n\t\t\t<p><b>providedBy</b>: <a href=\"Organization-example1.html\">Albion Hospital. Generated\n\t\t\t\t\tSummary: ABN: 51824753556; <span title=\"Codes: {http://snomed.info/sct 309895006}\">Private hospital</span>;\n\t\t\t\t\tname: Albion Hospital</a></p>\n\t\t\t<p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/service-category 30}\">Specialist Radiology/Imaging</span></p>\n\t\t\t<p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 419815003}\">Radiation\n\t\t\t\t\toncology</span>, <span title=\"Codes: {http://snomed.info/sct 408455009}\">Interventional radiology - speciality</span></p>\n\t\t\t<p><b>location</b>: <a href=\"Location-example1.html\">Generated Summary: status: active;\n\t\t\t\t\t\t<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type si}\">Site</span></a></p>\n\t\t\t<p><b>name</b>: Albion Hospital Radiology Service</p>\n\t\t\t<h3>AvailableTimes</h3>\n\t\t\t<table class=\"grid\">\n\t\t\t\t<tr>\n\t\t\t\t\t<td>-</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>DaysOfWeek</b>\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>AvailableStartTime</b>\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>AvailableEndTime</b>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>*</td>\n\t\t\t\t\t<td>mon, tue, wed, thu, fri</td>\n\t\t\t\t\t<td>08:30:00 (Brisbane)</td>\n\t\t\t\t\t<td>17:30:00 (Brisbane)</td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t</div>"
+  },
+  "active" : true,
+  "providedBy" : {
+    "reference" : "Organization/example1",
+    "display" : "Albion Hospital"
+  },
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "419815003",
+      "display" : "Radiation oncology"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "408455009",
+      "display" : "Interventional radiology - speciality"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/example1"
+  }],
+  "name" : "Albion Hospital Radiology Service",
+  "availableTime" : [{
+    "daysOfWeek" : ["mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"],
+    "availableStartTime" : "08:30:00",
+    "_availableStartTime" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/timezone",
+        "valueCode" : "Australia/Brisbane"
+      }]
+    },
+    "availableEndTime" : "17:30:00",
+    "_availableEndTime" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/timezone",
+        "valueCode" : "Australia/Brisbane"
+      }]
+    }
+  }]
+}

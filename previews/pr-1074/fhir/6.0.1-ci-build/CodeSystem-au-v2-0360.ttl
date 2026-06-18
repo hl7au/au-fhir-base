@@ -1,0 +1,157 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/CodeSystem/au-v2-0360> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "au-v2-0360"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"^^xsd:anyURI ;
+       fhir:link <https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem au-v2-0360</b></p><a name=\"au-v2-0360\"> </a><a name=\"hcau-v2-0360\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4</code></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>status</td><td>status</td><td>http://hl7.org/fhir/concept-properties#status</td><td>code</td><td>A property that indicates the status of the concept. One of active, experimental,   deprecated, retired</td></tr><tr><td>deprecationDate</td><td>deprecationDate</td><td>http://hl7.org/fhir/concept-properties#deprecationDate</td><td>dateTime</td><td>The date at which a concept was deprecated. Concepts that are deprecated but not   inactive can still be used, but their use is discouraged</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>http://terminology.hl7.org.au/CodeSystem/v2-0360</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Deprecated</b></td><td><b>status</b></td><td><b>deprecationDate</b></td></tr><tr><td style=\"white-space:nowrap\">AHPRA<a name=\"au-v2-0360-AHPRA\"> </a></td><td>Ahpra Registration</td><td>An Australian Health Practitioner Regulation Authority (Ahpra) Registration.</td><td/><td/><td/></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">AUAHPRAProfession<a name=\"au-v2-0360-AUAHPRAProfession\"> </a></td><td>AHPRA Profession</td><td>An Australian Health Practitioner Regulation Authority (Ahpra) profession. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Profession Details extension. Use the qualification type term AHPRA in association with an Ahpra registration.</td><td>Deprecated</td><td>deprecated</td><td>2025-07-23</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">AUAHPRARegistration<a name=\"au-v2-0360-AUAHPRARegistration\"> </a></td><td>AHPRA Registration</td><td>An Australian Health Practitioner Regulation Authority (Ahpra) registration. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Registration Details extension. Use the qualification type term AHPRA in association with an Ahpra registration.</td><td>Deprecated</td><td>deprecated</td><td>2025-07-23</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"^^xsd:anyURI ;
+           fhir:link <http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0360"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.3.4.1.3.360" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.1-ci-build"] ; # 
+  fhir:name [ fhir:v "DegreeLicenseCertificateAU"] ; # 
+  fhir:title [ fhir:v "DegreeLicenseCertificate AU"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-18T15:40:18+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Australia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Australia FHIR Working Group" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://confluence.hl7.org/display/HAFWG" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Additional concept codes for qualification defined for use in an Australian context. These codes are used as extensions to the HL7 International code set."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AU" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "HL7 Australia© 2018+; Licensed Under Creative Commons No Rights Reserved."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://terminology.hl7.org.au/ValueSet/v2-0360"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org.au/ValueSet/v2-0360>
+  ] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:versionNeeded [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "status" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/concept-properties#status"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "A property that indicates the status of the concept. One of active, experimental,   deprecated, retired" ] ;
+     fhir:type [ fhir:v "code" ]
+  ] [
+     fhir:code [ fhir:v "deprecationDate" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/concept-properties#deprecationDate"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "The date at which a concept was deprecated. Concepts that are deprecated but not   inactive can still be used, but their use is discouraged" ] ;
+     fhir:type [ fhir:v "dateTime" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "AHPRA" ] ;
+     fhir:display [ fhir:v "Ahpra Registration" ] ;
+     fhir:definition [ fhir:v "An Australian Health Practitioner Regulation Authority (Ahpra) Registration." ] ;
+     fhir:designation ( [
+       fhir:use [
+         a sct:900000000000013009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "900000000000013009" ]
+       ] ;
+       fhir:value [ fhir:v "Ahpra Registration" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "AUAHPRAProfession" ] ;
+     fhir:display [ fhir:v "AHPRA Profession" ] ;
+     fhir:definition [ fhir:v "An Australian Health Practitioner Regulation Authority (Ahpra) profession. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Profession Details extension. Use the qualification type term AHPRA in association with an Ahpra registration." ] ;
+     fhir:designation ( [
+       fhir:use [
+         a sct:900000000000013009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "900000000000013009" ]
+       ] ;
+       fhir:value [ fhir:v "Ahpra Profession" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "status" ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "deprecated"
+       ]
+     ] [
+       fhir:code [ fhir:v "deprecationDate" ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2025-07-23"^^xsd:date
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "AUAHPRARegistration" ] ;
+     fhir:display [ fhir:v "AHPRA Registration" ] ;
+     fhir:definition [ fhir:v "An Australian Health Practitioner Regulation Authority (Ahpra) registration. ***Deprecation Comment:*** This code has been deprecated along with the corresponding AU Base Ahpra Registration Details extension. Use the qualification type term AHPRA in association with an Ahpra registration." ] ;
+     fhir:designation ( [
+       fhir:use [
+         a sct:900000000000013009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "900000000000013009" ]
+       ] ;
+       fhir:value [ fhir:v "Ahpra Registration" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "status" ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "deprecated"
+       ]
+     ] [
+       fhir:code [ fhir:v "deprecationDate" ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2025-07-23"^^xsd:date
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Patient",
+  "id" : "example3",
+  "meta" : {
+    "profile" : ["http://hl7.org.au/fhir/StructureDefinition/au-patient"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>id</b>: example3</p>\n      <p><b>name</b>: John Smith </p>\n      <p><b>telecom</b>: jsmith@amail.com.au</p>\n      <p><b>birthDate</b>: 1956-08-23</p>\n      <p><b>birthTime</b>: 14:35:45-05:00</p>\n      <p><b>address</b>: 10 Smith Street Neutral Bay NSW 2055 Australia</p>\n    </div>"
+  },
+  "name" : [{
+    "family" : "Smith",
+    "given" : ["John"]
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "jsmith@amail.example.com"
+  }],
+  "birthDate" : "1956-08-23",
+  "_birthDate" : {
+    "extension" : [{
+      "url" : "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+      "valueCoding" : {
+        "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+        "code" : "AAA",
+        "display" : "Day, month and year are accurate"
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+      "valueDateTime" : "1956-08-23T14:35:45-05:00"
+    }]
+  },
+  "address" : [{
+    "line" : ["10 Smith Street"],
+    "city" : "Neutral Bay",
+    "state" : "NSW",
+    "postalCode" : "2055",
+    "country" : "Australia"
+  }]
+}
