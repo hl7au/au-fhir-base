@@ -137,16 +137,16 @@ jobs:
             -templates ./publications/templates -temp ./temp \
             -tx "$TX_SERVER"
 
-      - name: Package site for review
+      - name: Package site for review (tar — the ig-publisher-base container has no zip)
         run: |
-          cd webroot && zip -qr "$GITHUB_WORKSPACE/site-${{ steps.meta.outputs.slug }}.zip" fhir
-          echo "Zipped $(du -h "$GITHUB_WORKSPACE/site-${{ steps.meta.outputs.slug }}.zip" | cut -f1)"
+          tar -czf "$GITHUB_WORKSPACE/site-${{ steps.meta.outputs.slug }}.tar.gz" -C webroot fhir
+          echo "Archived $(du -h "$GITHUB_WORKSPACE/site-${{ steps.meta.outputs.slug }}.tar.gz" | cut -f1)"
 
       - name: Upload review artifact
         uses: actions/upload-artifact@v4
         with:
           name: site-${{ steps.meta.outputs.slug }}
-          path: site-${{ steps.meta.outputs.slug }}.zip
+          path: site-${{ steps.meta.outputs.slug }}.tar.gz
           retention-days: 14
 
   # Per-branch / per-PR live PREVIEW on GitHub Pages (a real URL per build).
@@ -163,8 +163,8 @@ jobs:
       - name: Download built site
         uses: actions/download-artifact@v4
         with: { name: "site-${{ needs.build.outputs.slug }}" }
-      - name: Unzip
-        run: unzip -q "site-${{ needs.build.outputs.slug }}.zip" -d preview
+      - name: Unpack
+        run: mkdir -p preview && tar -xzf "site-${{ needs.build.outputs.slug }}.tar.gz" -C preview
       - name: Deploy preview to gh-pages/previews/<slug>
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -195,7 +195,7 @@ jobs:
           aws-region: ap-southeast-2
       # additive: uploads the new version dir (incl. its full-ig.zip + npm package.tgz) and the
       # regenerated root (history.html, registry, feeds). Never --delete (old versions stay put).
-      - name: Unzip + sync to S3 (additive; no --delete)
+      - name: Unpack + sync to S3 (additive; no --delete)
         run: |
-          unzip -q "site-${{ needs.build.outputs.slug }}.zip" -d out
+          mkdir -p out && tar -xzf "site-${{ needs.build.outputs.slug }}.tar.gz" -C out
           aws s3 sync out/fhir s3://hl7au-fhir-ig/fhir --only-show-errors
