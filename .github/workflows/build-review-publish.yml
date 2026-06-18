@@ -131,10 +131,13 @@ jobs:
 
       - name: go-publish (working) into -web
         run: |
-          java -jar au-fhir-base/input-cache/publisher.jar -go-publish -reuse-build \
-            -source ./au-fhir-base -web ./webroot \
-            -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json \
-            -templates ./publications/templates -temp ./temp \
+          # ABSOLUTE paths are required: IGReleaseRedirectionBuilder strips the (always-absolutized)
+          # web-root prefix off the version dest folder via substring, so a RELATIVE dest path throws
+          # StringIndexOutOfBounds (Range [59,48)). Passing absolute paths keeps dest + root co-rooted.
+          java -jar "$GITHUB_WORKSPACE/au-fhir-base/input-cache/publisher.jar" -go-publish -reuse-build \
+            -source "$GITHUB_WORKSPACE/au-fhir-base" -web "$GITHUB_WORKSPACE/webroot" \
+            -history "$GITHUB_WORKSPACE/fhir-history" -registry "$GITHUB_WORKSPACE/ig-registry/fhir-ig-list.json" \
+            -templates "$GITHUB_WORKSPACE/publications/templates" -temp "$GITHUB_WORKSPACE/temp" \
             -tx "$TX_SERVER"
 
       - name: Package site for review (tar — the ig-publisher-base container has no zip)

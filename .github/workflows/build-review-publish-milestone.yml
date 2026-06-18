@@ -115,10 +115,12 @@ jobs:
         run: |
           # dynamic-publish-box (in publish-setup.json) makes the publisher skip the per-past-version
           # rewrite — so this milestone touches only the new version + root, no version tree required.
-          java -jar au-fhir-base/input-cache/publisher.jar -go-publish -reuse-build \
-            -source ./au-fhir-base -web ./webroot \
-            -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json \
-            -templates ./publications/templates -temp ./temp -tx "$TX_SERVER"
+          # ABSOLUTE paths required (see build-review-publish.yml): a relative dest folder crashes
+          # IGReleaseRedirectionBuilder's substring (Range [59,48)).
+          java -jar "$GITHUB_WORKSPACE/au-fhir-base/input-cache/publisher.jar" -go-publish -reuse-build \
+            -source "$GITHUB_WORKSPACE/au-fhir-base" -web "$GITHUB_WORKSPACE/webroot" \
+            -history "$GITHUB_WORKSPACE/fhir-history" -registry "$GITHUB_WORKSPACE/ig-registry/fhir-ig-list.json" \
+            -templates "$GITHUB_WORKSPACE/publications/templates" -temp "$GITHUB_WORKSPACE/temp" -tx "$TX_SERVER"
 
       - name: Package site for review (tar — the ig-publisher-base container has no zip)
         run: |
