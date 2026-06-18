@@ -1,16 +1,15 @@
 name: (LEGACY) Au base IG Profiles publish->go-publish - all releases
 
-# LEGACY / reference only — SUPERSEDED by:
-#   - build-review-publish.yml            (WORKING releases: GitHub-hosted, lean, review + gated publish)
-#   - build-review-publish-milestone.yml  (MILESTONE releases: now also lean; owns the tag trigger)
-# This is the original self-hosted-EC2 + full 15GB S3 sync pipeline. The tag-push trigger has moved to
-# the milestone workflow, so this is manual-dispatch only now (kept for emergency/reference). It still
+# LEGACY / reference only — SUPERSEDED by build-review-publish.yml (the single pipeline: renders once,
+# produces working + milestone Pages previews, and does the gated milestone-only prod publish).
+# This is the original self-hosted-EC2 + full 15GB S3 sync pipeline. Tag releases now run
+# build-review-publish.yml, so this is manual-dispatch only (kept for emergency/reference). It still
 # fetches the combined custom jar so it behaves consistently if ever run.
 # INPUTS (see build-review-publish.yml for per-input notes): hl7au/au-fhir-base (IG src) ·
 # KyleOps/publications (publish-setup.json + templates) · HL7/fhir-ig-history-template · hl7au/ig-registry.
 
 on:
-  workflow_dispatch: {}   # was: push tags '**' — tag releases now run build-review-publish-milestone.yml
+  workflow_dispatch: {}   # was: push tags '**' — tag releases now run build-review-publish.yml
 
 permissions:
   id-token: write # This is required for requesting the JWT
