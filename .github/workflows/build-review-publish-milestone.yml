@@ -3,12 +3,13 @@ name: AU Base MILESTONE build → review → preview → gated publish
 # Milestone releases (the R-numbered trial-use "current": e.g. 6.1.0). Requires the IG's
 # publication-request.json mode = "milestone".
 #
-# Historically a milestone rewrote the in-page publish-box banner in EVERY past version, so it
-# needed the whole version tree present (hence the self-hosted runner + warm /mirror). With
-# website.dynamic-publish-box enabled (resolves the banner + "Page versions" list client-side from
-# package-list.json), every old version's pages are byte-identical regardless of which version is
-# current — so the combined jar SKIPS the past-version loop entirely and a milestone no longer needs
-# the tree. It is now exactly as lean as a working build: GitHub-hosted, root-files-only -web, no EC2.
+# NOTE: this pipeline no longer uses a warm /mirror, a self-hosted runner, or any full S3 sync.
+# It once did: a milestone rewrote the publish-box banner in EVERY past version, so the whole
+# version tree had to be present locally. With website.dynamic-publish-box enabled the banner +
+# "Page versions" list render client-side from package-list.json, so every old version's pages are
+# byte-identical regardless of which version is current — the combined jar therefore SKIPS the
+# past-version loop entirely and a milestone touches only the new version + root. It is now exactly
+# as lean as a working build: GitHub-hosted, root-files-only ./webroot, no mirror, no EC2.
 #
 # TRIGGERS
 #   - push of a tag                   → build + review zip + per-tag GitHub Pages preview, then the
