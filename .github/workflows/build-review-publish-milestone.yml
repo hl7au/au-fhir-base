@@ -95,14 +95,24 @@ jobs:
           curl -sSL -o input-cache/publisher.jar "$PUBLISHER_JAR_URL"
           echo "publisher.jar: $(du -h input-cache/publisher.jar | cut -f1)"
 
+      # Persist the FHIR package cache across runs (see build-review-publish.yml for the rationale).
+      - name: Cache the FHIR package cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.fhir-cache
+          key: fhir-pkgcache-v1-${{ hashFiles('au-fhir-base/input/ig.xml', 'au-fhir-base/ig.ini') }}
+          restore-keys: fhir-pkgcache-v1-
+
       - name: Render the IG (PUBLICATION mode → go-publish -reuse-build adopts it, lever C)
         id: render
         working-directory: au-fhir-base
         run: |
+          mkdir -p "$GITHUB_WORKSPACE/.fhir-cache"
           PUBPATH=$(grep -o '"path"[^,}]*' publication-request.json | head -1 | sed 's/.*:[[:space:]]*"\([^"]*\)".*/\1/')
           echo "Publication path: $PUBPATH"
           echo "ver=${PUBPATH##*/}" >> "$GITHUB_OUTPUT"   # version folder name, for the preview deep-link
-          java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" -tx "$TX_SERVER"
+          java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" \
+            -package-cache-folder "$GITHUB_WORKSPACE/.fhir-cache" -tx "$TX_SERVER"
 
       - name: Build lightweight -web (ROOT FILES ONLY — dynamic-publish-box ⇒ no version tree needed)
         run: |

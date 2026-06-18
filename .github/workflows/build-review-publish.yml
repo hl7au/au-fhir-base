@@ -109,6 +109,19 @@ jobs:
           curl -sSL -o input-cache/publisher.jar "$PUBLISHER_JAR_URL"
           echo "publisher.jar: $(du -h input-cache/publisher.jar | cut -f1)"
 
+      # Persist the FHIR package cache across runs so the render doesn't re-download packages each time.
+      # Keyed on the IG's dependency declarations (ig.xml dependsOn + ig.ini); restore-keys falls back
+      # to the latest cache and the render just adds anything new. Pinned via -package-cache-folder so
+      # the path is deterministic (the publisher otherwise uses $HOME/.fhir, and GitHub overrides $HOME
+      # for container jobs). NOTE: only the -ig render honors -package-cache-folder; go-publish ignores
+      # it, but -reuse-build makes go-publish skip the render so its package use is negligible.
+      - name: Cache the FHIR package cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.fhir-cache
+          key: fhir-pkgcache-v1-${{ hashFiles('au-fhir-base/input/ig.xml', 'au-fhir-base/ig.ini') }}
+          restore-keys: fhir-pkgcache-v1-
+
       - name: Render the IG (PUBLICATION mode → go-publish -reuse-build adopts it, lever C)
         id: render
         working-directory: au-fhir-base
@@ -116,10 +129,12 @@ jobs:
           # Render directly to the final publish path so the output is publishable and go-publish
           # can reuse it (no second render). Backward compatible: an old jar that ignores
           # -reuse-build simply re-renders.
+          mkdir -p "$GITHUB_WORKSPACE/.fhir-cache"
           PUBPATH=$(grep -o '"path"[^,}]*' publication-request.json | head -1 | sed 's/.*:[[:space:]]*"\([^"]*\)".*/\1/')
           echo "Publication path: $PUBPATH"
           echo "ver=${PUBPATH##*/}" >> "$GITHUB_OUTPUT"   # version folder name, for the preview deep-link
-          java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" -tx "$TX_SERVER"
+          java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" \
+            -package-cache-folder "$GITHUB_WORKSPACE/.fhir-cache" -tx "$TX_SERVER"
 
       - name: Build lightweight -web (ROOT FILES ONLY — no 15GB sync)
         run: |
