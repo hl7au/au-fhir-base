@@ -243,6 +243,13 @@ jobs:
             cp -a fhir-history/history.js fhir-history/history-cm.js fhir-history/history.css \
                   fhir-history/fhir.css fhir-history/jquery-ui.css fhir-history/jquery-ui.js \
                   fhir-history/cc0.png "$d/" 2>/dev/null || true
+            # Root pages (history.html, via the publications chrome) also reference assets/images|css|js
+            # = /fhir/assets/ — the CURRENT version's assets, which only a milestone copies to the root.
+            # Copy the built version's own assets up so those resolve (mirrors a milestone; the logos
+            # fhir-logo-www.png / hl7-logo.png live there). Self-contained — from this build, not prod.
+            if [ -d "$d/$ver/assets" ] && [ ! -d "$d/assets" ]; then
+              cp -a "$d/$ver/assets" "$d/assets"
+            fi
             # The lean build has no /fhir/index.html (prod's current-version landing isn't built here).
             # Add a PREVIEW-ONLY redirect per mode so the bare …/fhir/ URL lands on the new version.
             if [ ! -f "$d/index.html" ]; then
