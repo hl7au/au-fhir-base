@@ -79,7 +79,7 @@ Coverage type codes extended for use in an Australian context. Includes HL7 inte
   "title" : "Coverage Type and Self-Pay Codes - AU Extended",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-19T01:46:09+00:00",
+  "date" : "2026-06-19T03:25:57+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Working Group",

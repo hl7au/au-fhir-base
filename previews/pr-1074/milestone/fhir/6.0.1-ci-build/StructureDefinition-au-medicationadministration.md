@@ -75,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-au-medicationadminis
   "name" : "AUBaseMedicationAdministration",
   "title" : "AU Base MedicationAdministration",
   "status" : "active",
-  "date" : "2026-06-19T01:46:09+00:00",
+  "date" : "2026-06-19T03:25:57+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Working Group",
