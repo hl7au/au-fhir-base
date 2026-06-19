@@ -82,7 +82,7 @@ Primary Editors: Brett Esler, Danielle Tavares-Rixon.
   "title" : "AU Base Implementation Guide",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-18T16:30:51+00:00",
+  "date" : "2026-06-19T01:46:09+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Working Group",
