@@ -1,0 +1,45 @@
+/* Generic settings common to all HL7 AU IGs */
+:root {
+	--stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
+	--stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+	--contributors-note-background-color: #f2f2ff; /* 21. (Contributors) Note box border color */
+	--contributors-note-border-left-color: #a0a0ff; /* 21. (Contributors) Note box border color */
+  }
+  
+
+   .request-for-feedback::before {
+	  white-space: pre;
+	  content: "Request For Feedback\A";
+	  background: yellow;
+	  color: red;
+	  font-weight: bold;
+	}
+
+   .request-for-feedback {
+	  margin: 5px;
+	  padding: 10px;
+	  border-left-style: solid;
+	  background-color: var(--stu-note-background-color);
+	  border-left-color: var(--stu-note-border-left-color);
+  }
+
+  .note-to-contributors::before {
+	  white-space: pre;
+	  content: "Contributors\A";
+	  background: yellow;
+	  color: red;
+	  font-weight: bold;
+	}
+ 
+ .note-to-contributors {
+	  margin: 5px;
+	  padding: 10px;
+	  border-left-style: solid;
+	  background-color: var(--contributors-note-background-color);
+	  border-left-color: var(--contributors-note-border-left-color);
+  }
+
+
+
+
+  

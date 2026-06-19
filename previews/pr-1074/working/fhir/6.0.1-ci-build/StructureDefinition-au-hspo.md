@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-au-hspo.csv), [Excel
   "name" : "AUHSPO",
   "title" : "AU HSP-O",
   "status" : "draft",
-  "date" : "2026-06-19T03:25:57+00:00",
+  "date" : "2026-06-19T08:07:27+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Working Group",

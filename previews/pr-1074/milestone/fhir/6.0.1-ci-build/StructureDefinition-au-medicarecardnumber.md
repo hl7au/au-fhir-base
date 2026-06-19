@@ -69,7 +69,7 @@ Other representations of profile: [CSV](StructureDefinition-au-medicarecardnumbe
   "name" : "AUMedicareCardNumber",
   "title" : "AU Medicare Card Number",
   "status" : "active",
-  "date" : "2026-06-19T03:25:57+00:00",
+  "date" : "2026-06-19T08:07:27+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Working Group",

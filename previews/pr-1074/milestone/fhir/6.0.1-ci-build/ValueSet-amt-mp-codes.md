@@ -83,7 +83,7 @@ Expansions are not generated for retired value sets
   "title" : "AMT Medicinal Product and Substances",
   "status" : "retired",
   "experimental" : false,
-  "date" : "2026-06-19T03:25:57+00:00",
+  "date" : "2026-06-19T08:07:27+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Working Group",
