@@ -7,7 +7,8 @@
   releases (the R-numbered `trial-use` "current") *used* to need the full 15 GB tree to rewrite every
   past version's publish box — but with `dynamic-publish-box` (below) the publisher renders that box
   client-side and **skips the past-version loop entirely**, so a milestone now needs only root files
-  too. **Both modes are GitHub-hosted and lean; the self-hosted EC2 is gone.**
+  too. **Both modes are GitHub-hosted and lean; the self-hosted EC2 is gone.** Both also have a gated
+  prod-publish path (working = the common cadence at a versioned URL; milestone = promoted to "current").
 - The current pipeline syncs the whole bucket every run on a hand-started EC2 runner, then leaves
   output for a manual S3 copy. That full sync is unnecessary for working builds — the cause of the
   ~35 min builds and the manual steps.
@@ -28,7 +29,29 @@ version into the existing web tree and regenerates the cross-version artifacts.
     index json, `publish-setup.json`) + it renders/writes the **new version** and regenerates the
     root (history, registry, feeds, redirects). Old version folders are **not** touched.
   - **`milestone`** (e.g. 6.0.0): additionally rewrites the in-page "publish box" banner inside
-    **every** past version → needs the full tree.
+    **every** past version → needs the full tree. *(With `dynamic-publish-box` — which AU uses — this
+    rewrite is a no-op and the publisher skips the past-version loop, so a milestone needs **no** tree;
+    see "Making milestones cheap" below.)*
+
+### Which mode for which release (and what reaches prod)
+The `mode` is **not** auto-derived from status — it's whatever `publication-request.json` says (the
+pipeline forces it per build; see "Workflow map"). The HL7 rule
+([IG Publication Request doc](https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation),
+[how-to-publish](https://www.argentixinfo.com/ig/howtopub/publication.html)):
+
+| `mode` | meaning | use for | becomes "current"? |
+|--------|---------|---------|--------------------|
+| `working` | "publish at `path`, but don't update which publication is current" | **`-preview` / `-ballot` / `-draft` snapshots** (the common cadence) | no |
+| `milestone` | "publish at `path` **and** at the canonical, making this the current release" | the R-numbered **trial-use "current"** release (rare, ~annual) | yes |
+| `technical-correction` | replace content in place (and the canonical if it's current) | fixing an already-published version | n/a |
+| `withdrawal` | withdraw a published version | retiring a version | n/a |
+
+**Both `working` and `milestone` publish to prod** — that's the point of `mode=working` ("publish at
+`path`"). AU's live `package-list.json` carries 15+ working snapshots (`6.0.0-preview`, `6.0.0-ballot`,
+`6.0.0-draft`, `5.1.0-preview`, …) at their versioned URLs. The difference is only whether the release
+becomes "current" (milestone) or stays a versioned snapshot (working). The pipeline therefore has a
+**gated prod path for each** (working = `workflow_dispatch publish_working`; milestone = `v*` tag or
+`publish_milestone`) — see "Workflow map".
 
 ## Per-repo independent publish vs the publications back-to-back script
 There are two ways to publish the AU IGs (core + base):
@@ -162,6 +185,17 @@ lets the milestone path in `build-review-publish.yml` run GitHub-hosted + lean. 
 Combined into the custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`) with #1327,
 A3, and lever C until the upstream PRs merge.
 
+**One-time migration (required once, before relying on skip-loop in prod).** The dynamic banner only
+self-updates on pages that contain the client-side **placeholder**. Existing prod pages still have the
+old **baked** banner (and `skip-loop` means a milestone never rewrites them) — so until they're migrated
+they keep a static, increasingly-stale "supersedes vY" and won't reflect new milestones. The fix is a
+**single** pass over the existing tree that rewrites every old page to the placeholder form (e.g. a
+one-off `-publish-update` run with the dynamic jar over a full mirror — `-publish-update` does *not*
+skip the loop, so it migrates). After that one pass, every old page is dynamic and skip-loop milestones
+are correct forever. (In practice AU's baked page-versions/supersedes are already stale/inconsistent
+across versions, so this migration also *fixes* them in one go.) This is the one operation that still
+needs the full version tree.
+
 The original version-agnostic idea (kept for the record / as a fallback if the JS approach is rejected
 upstream):
 
@@ -210,7 +244,7 @@ environment with required reviewers gates the S3 sync).
 ## Workflow map (current)
 | workflow | trigger | runner | role |
 |----------|---------|--------|------|
-| `build-review-publish.yml` | push/PR to `master`, tag `v*`, dispatch | GitHub-hosted, lean | THE pipeline. Renders once → go-publish twice (working + milestone) → both deployed side-by-side to Pages (`previews/<slug>/{working,milestone}/fhir`). **Prod publish is milestone-only** (v* tag or dispatch `publish_milestone`), gated by the `production` env. No working→prod path. |
+| `build-review-publish.yml` | push/PR to `master`, tag `v*`, dispatch | GitHub-hosted, lean | THE pipeline. Renders once → go-publish twice (working + milestone) → both deployed side-by-side to Pages (`previews/<slug>/{working,milestone}/fhir`). **Two gated prod paths** (both `production` env, additive sync): **milestone** on a `v*` tag or dispatch `publish_milestone` (promotes to current); **working** on dispatch `publish_working` (versioned snapshot, not current — mutually exclusive with `publish_milestone` so a `v*` tag never publishes a working build as current). master push / PR = previews only. |
 | `pipeline-build.yml` | manual dispatch only | self-hosted (legacy) | LEGACY/reference — superseded by the above. |
 
 Both fetch the combined custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`:
@@ -224,6 +258,9 @@ until merged to `hl7au/publications`.
   `production` environment's required reviewers (gates every S3 sync).
 - **Revert-when-merged:** once the 5 publisher changes ship in a released jar and the config lands in
   `hl7au/publications`, switch the workflows back to `_updatePublisher.sh -f -y` + `hl7au/publications`.
+- **One-time placeholder migration** (see "Making milestones cheap"): run once over the full prod tree
+  with the dynamic jar so existing old pages get the client-side placeholder; until then they keep the
+  baked (stale) banner. Required before the first dynamic milestone goes to prod.
 - Confirm whether GitHub-hosted runners need sizing up for the publisher's RAM/disk.
 - Milestone publishing was historically flaky ("milestone failing" commits); it's now the same lean
   path as working, but still warrants a milestone dry-run before the first production milestone.

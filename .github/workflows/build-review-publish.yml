@@ -1,4 +1,4 @@
-name: AU Base build → working+milestone previews → gated MILESTONE publish
+name: AU Base build → working+milestone previews → gated working/milestone publish
 
 # ONE pipeline for both release shapes. Renders the IG ONCE (publication mode), then runs go-publish
 # TWICE off that single render (-reuse-build → the 2nd is ~100s, not another render) to produce BOTH:
@@ -8,16 +8,19 @@ name: AU Base build → working+milestone previews → gated MILESTONE publish
 # Both deploy side-by-side to GitHub Pages (previews/<slug>/{working,milestone}/fhir) so reviewers can
 # compare them on a feature branch / PR with ZERO prod writes.
 #
-# PROD PUBLISH IS MILESTONE-ONLY. There is deliberately no "publish working to prod" path — working
-# builds exist only as Pages previews. The gated S3 sync promotes the MILESTONE build, and only on:
-#   - a version tag push (refs/tags/v*), or
-#   - a manual workflow_dispatch with publish_milestone=true.
-# Either way it is gated by the `production` GitHub environment (required reviewers).
+# PROD PUBLISH (gated by the `production` GitHub environment — required reviewers) has TWO paths,
+# matching the publisher's two release shapes (see docs/build-pipeline.md "working vs milestone"):
+#   - WORKING  (preview/ballot/draft snapshots): published at their versioned path, NOT promoted to
+#     "current". This is the common cadence. Trigger: workflow_dispatch with publish_working=true.
+#   - MILESTONE (the R-numbered trial-use "current" release, rare): published AND promoted to "current".
+#     Trigger: a version tag push (refs/tags/v*), or workflow_dispatch with publish_milestone=true.
+# Both are ADDITIVE S3 syncs (never --delete). On a master push / PR nothing publishes — previews only.
 #
 # TRIGGERS
 #   - push to master / PR to master   → render once + both Pages previews (NO publish)
 #   - push a tag  v*                  → both previews + gated MILESTONE publish to prod S3
-#   - workflow_dispatch               → both previews; publish_milestone=true → gated MILESTONE publish
+#   - workflow_dispatch               → both previews; publish_milestone=true → gated MILESTONE publish;
+#                                       publish_working=true   → gated WORKING publish (non-current)
 #
 # For a real milestone release: set publication-request.json version/path to the milestone version,
 # commit, then tag v<version> (or dispatch with publish_milestone=true). The milestone build forces
@@ -47,7 +50,11 @@ on:
         description: "Tag/branch of au-fhir-base to build"
         default: master
       publish_milestone:
-        description: "Promote the MILESTONE build to prod S3 (gated by the production environment)"
+        description: "Promote the MILESTONE build to prod S3 (becomes 'current'; gated by production env)"
+        type: boolean
+        default: false
+      publish_working:
+        description: "Publish the WORKING build to prod S3 (versioned snapshot, NOT current; gated)"
         type: boolean
         default: false
 
@@ -278,3 +285,32 @@ jobs:
           mkdir -p out && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C out
           test -d out/milestone/fhir || { echo "::error::milestone build missing (the milestone step failed) — not publishing"; exit 1; }
           aws s3 sync out/milestone/fhir s3://hl7au-fhir-ig/fhir --only-show-errors
+
+  # Publish the WORKING build to PROD — the common case (preview/ballot/draft). Gated by the same
+  # `production` environment. Dispatch-only (publish_working=true) and mutually exclusive with
+  # publish_milestone, so a `v*` tag never accidentally publishes a working snapshot as current.
+  # The working build adds the new version at its versioned path + regenerates the root (history,
+  # package-list, feeds, registry, redirects); it does NOT touch old versions or the /fhir/ landing,
+  # so "current" is unchanged. Additive sync — never --delete.
+  publish-working:
+    needs: build
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_working && !inputs.publish_milestone }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Download reviewed previews
+        uses: actions/download-artifact@v4
+        with: { name: "site-${{ needs.build.outputs.slug }}" }
+      - name: Configure AWS credentials from GitHub OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+          aws-region: ap-southeast-2
+      - name: Publish WORKING build to prod S3 (additive — no --delete)
+        run: |
+          mkdir -p out && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C out
+          test -d out/working/fhir || { echo "::error::working build missing — not publishing"; exit 1; }
+          # working/fhir = the new (non-current) version dir + regenerated root (package-list/history/
+          # feeds/registry/redirects). No /fhir/index.html landing is produced in working mode, so this
+          # never overwrites the current milestone's landing. Additive — old versions untouched.
+          aws s3 sync out/working/fhir s3://hl7au-fhir-ig/fhir --only-show-errors
