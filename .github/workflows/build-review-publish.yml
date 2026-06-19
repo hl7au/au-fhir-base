@@ -223,16 +223,31 @@ jobs:
       - name: Download built previews
         uses: actions/download-artifact@v4
         with: { name: "site-${{ needs.build.outputs.slug }}" }
-      - name: Unpack previews + add preview-only root redirects
+      - name: Checkout history template (its shared root assets — for the preview only)
+        uses: actions/checkout@v4
+        with: { repository: HL7/fhir-ig-history-template, path: fhir-history }
+      - name: Unpack previews + seed history assets + add preview-only root redirects
         run: |
           mkdir -p preview && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C preview
-          # The lean build has no /fhir/index.html (prod's current-version landing isn't built here).
-          # Add a PREVIEW-ONLY redirect per mode so the bare …/fhir/ URL lands on the new version.
           ver="${{ needs.build.outputs.ver }}"
           for m in working milestone; do
-            if [ -d "preview/$m/fhir" ] && [ ! -f "preview/$m/fhir/index.html" ]; then
+            d="preview/$m/fhir"
+            [ -d "$d" ] || continue
+            # history.html references shared root assets (assets-hist/, dist-hist/, history.js, *.css …)
+            # that the lean build does NOT emit: go-publish's HistoryPageUpdater only copies them on a
+            # FIRST publish (delta=false), and au-base isn't first — prod already has them at /fhir root.
+            # So copy them from the history template into the preview (PREVIEW-ONLY; the prod publish
+            # artifact stays clean — prod keeps its existing copies). Without this, preview history.html
+            # 404s its CSS/JS and the version table doesn't render.
+            cp -a fhir-history/assets-hist fhir-history/dist-hist "$d/" 2>/dev/null || true
+            cp -a fhir-history/history.js fhir-history/history-cm.js fhir-history/history.css \
+                  fhir-history/fhir.css fhir-history/jquery-ui.css fhir-history/jquery-ui.js \
+                  fhir-history/cc0.png "$d/" 2>/dev/null || true
+            # The lean build has no /fhir/index.html (prod's current-version landing isn't built here).
+            # Add a PREVIEW-ONLY redirect per mode so the bare …/fhir/ URL lands on the new version.
+            if [ ! -f "$d/index.html" ]; then
               printf '<!doctype html><meta http-equiv="refresh" content="0; url=%s/index.html"><a href="%s/index.html">%s</a>\n' \
-                "$ver" "$ver" "$ver" > "preview/$m/fhir/index.html"
+                "$ver" "$ver" "$ver" > "$d/index.html"
             fi
           done
       - name: Deploy previews to gh-pages/previews/<slug>
