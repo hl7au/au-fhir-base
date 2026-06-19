@@ -6,7 +6,7 @@ name: (LEGACY) Au base IG Profiles publish->go-publish - all releases
 # build-review-publish.yml, so this is manual-dispatch only (kept for emergency/reference). It still
 # fetches the combined custom jar so it behaves consistently if ever run.
 # INPUTS (see build-review-publish.yml for per-input notes): hl7au/au-fhir-base (IG src) ·
-# KyleOps/publications (publish-setup.json + templates) · HL7/fhir-ig-history-template · hl7au/ig-registry.
+# hl7au/publications (publish-setup.json + templates) · HL7/fhir-ig-history-template · hl7au/ig-registry.
 
 on:
   workflow_dispatch: {}   # was: push tags '**' — tag releases now run build-review-publish.yml
@@ -40,8 +40,8 @@ jobs:
     - name: Checkout Publications Repository (publish-setup.json + templates)
       uses: actions/checkout@v4
       with:
-        repository: KyleOps/publications   # TEMP: revert to hl7au/publications once config+jar merged
-        ref: au-pipeline-config             # TEMP: cloud + dynamic-publish-box config (matches custom jar)
+        repository: hl7au/publications     # publish-setup.json + templates (config on master)
+        ref: master
         
     - name: Download past versions
       run: |
