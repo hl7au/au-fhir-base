@@ -82,6 +82,16 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>AU Base</td>
     </tr>
     <tr>
+      <td><a href="ValueSet-au-endpoint-payload-type.html">AU Endpoint Payload Type</a></td>
+      <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-au-service-interface.html">Australian Service Interface</a></td>
+      <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
       <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
       <td><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td>
       <td>NCTS</td>
@@ -521,6 +531,18 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
+        <td><a href="CodeSystem-au-endpoint-payload-type.html">Australian Endpoint Payload Type</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type.html">AU Endpoint Payload Type</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-au-connection-type-interface.html">Australian Connection Type Interface</a></td>
+        <td><a href="ValueSet-au-service-interface.html">Australian Service Interface</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>   
+    <tr>
         <td><a href="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats">Australian Immunisation Register Vaccine</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
         <td>NCTS</td>
@@ -608,6 +630,12 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="ValueSet-au-v2-0360-extended.html">hl7VS-degreeLicenseCertificate - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/endpoint-connection-type">endpoint connection type</a></td>
+        <td><a href="ValueSet-au-service-interface.html">Australian Service Interface</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0074">DiagnosticServiceSectionId</a></td>
