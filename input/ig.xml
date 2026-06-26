@@ -1123,6 +1123,14 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Endpoint/example1"/>
+			</reference>
+			<name value="Endpoint - a FHIR REST API endpoint example"/>
+			<description value="Shows an example of a FHIR REST API endpoint (Downunder Hospital) conforming to the AU Base Endpoint profile, demonstrating connection type, environment type, and payload type."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Location/example3"/>
 			</reference>
 			<name value="Location - of a Practitioner as a General Practitioner"/>
@@ -2046,6 +2054,14 @@
 			<code value="shownav"/>
 			<value value="false"/>
 		</parameter>
+		<!-- A3: render json/xml/ttl "view source" pages client-side from the raw files (Prism),
+		     instead of baking large escaped-source HTML. Opt-in; ~86% smaller viewer pages.
+		     Requires the dynamic-source-viewers code registered in hl7.fhir.uv.tools (else 4
+		     cosmetic QA "code not in value set" warnings). -->
+		<parameter>
+			<code value="dynamic-source-viewers"/>
+			<value value="true"/>
+		</parameter>
 		<parameter>
 			<code value="apply-version"/>
 			<value value="true"/>
@@ -2257,6 +2273,14 @@
 		<parameter>
 			<code value="special-url"/>
 			<value value="http://terminology.hl7.org.au/CodeSystem/communication-request-category"/>
+		</parameter>
+		<!-- Pin canonical references that resolve to more than one version (the FHIR Extensions Pack
+		     ships several versions of standard extensions). pin-multiples emits an INFO ("Pinned ...
+		     from choices of ...") and fixes the reference to the already-selected version, instead of
+		     a per-reference "multiple potential matches" WARNING. Does not change which version is used. -->
+		<parameter>
+			<code value="pin-canonicals"/>
+			<value value="pin-multiples"/>
 		</parameter>
 		<parameter>
 			<code value="version-comparison-master"/>
