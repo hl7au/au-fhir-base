@@ -50,6 +50,14 @@ This version introduces the following non-compatible changes.
       <li><a href="StructureDefinition-au-hspo.html">AU HSP-O</a> (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>)</li>
     </ul>
   </li>
+  <li>New terminology:
+    <ul>
+      <li><a href="CodeSystem-au-endpoint-payload-type.html">Australian Endpoint Payload Types</a> code system</li>
+      <li><a href="CodeSystem-au-connection-type-interface.html">Australian Connection Type Interfaces</a> code system</li>
+      <li><a href="ValueSet-au-endpoint-payload-type.html">Australian Endpoint Payload Type</a> value set</li>
+      <li><a href="ValueSet-au-service-interface.html">Australian Service Interface</a> value set</li>
+    </ul>
+  </li>
   <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
     <ul>
       <li>Added AU HAE as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
