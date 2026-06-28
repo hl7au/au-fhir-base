@@ -214,7 +214,7 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="ValueSet-au-endpoint-connection-type-extended.htm">Endpoint Connection Type - AU Extended</a></td>
+    <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
     <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
     <td>AU Base</td>
 </tr>
@@ -538,7 +538,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="CodeSystem-endpoint-connection-type.html">Endpoint Connection Type AU</a></td>
-        <td><a href="ValueSet-au-endpoint-connection-type-extended.htm">Endpoint Connection Type - AU Extended</a></td>
+        <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>   
@@ -639,13 +639,13 @@ The following code systems are referenced by the value sets listed above.
     </tr>   
    <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/endpoint-connection-type">Endpoint Connection Type</a></td>
-        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
+        <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
     </tr>
     <tr>
         <td><a href="http://terminology.hl7.org.au/CodeSystem/endpoint-payload-type">Endpoint Payload Type</a></td>
-        <td><a href="ValueSet-au-endpoint-payload-type-extended.htm">Endpoint Payload Type - AU Extended</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
     </tr>
