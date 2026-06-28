@@ -82,12 +82,12 @@ The following value sets form part of localised requirements (i.e. are reference
       <td>AU Base</td>
     </tr>
     <tr>
-      <td><a href="ValueSet-au-endpoint-payload-type.html">AU Endpoint Payload Type</a></td>
+      <td><a href="ValueSet-au-endpoint-payload-type.html">Endpoint Payload Type - AU Extended</a></td>
       <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
       <td>AU Base</td>
     </tr>
     <tr>
-      <td><a href="ValueSet-au-service-interface.html">Australian Service Interface</a></td>
+      <td><a href="ValueSet-au-service-interface.html">Endpoint Connection Type - AU Extended</a></td>
       <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
       <td>AU Base</td>
     </tr>
@@ -531,14 +531,14 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-au-endpoint-payload-type.html">Australian Endpoint Payload Type</a></td>
-        <td><a href="ValueSet-au-endpoint-payload-type.html">AU Endpoint Payload Type</a></td>
+        <td><a href="CodeSystem-endpoint-payload-type.html">Endpoint Payload Type AU</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-au-connection-type-interface.html">Australian Connection Type Interface</a></td>
-        <td><a href="ValueSet-au-service-interface.html">Australian Service Interface</a></td>
+        <td><a href="CodeSystem-endpoint-connection-type.html">Endpoint Connection Type AU</a></td>
+        <td><a href="ValueSet-au-endpoint-connection-type-extended.htm">Endpoint Connection Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>   
