@@ -45,7 +45,7 @@ This version introduces the following non-compatible changes.
 <ul>
   <li>New profiles:
     <ul>
-      <li><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a> (<a href="https://jira.hl7.org/browse/FHIR-56326">FHIR-56326</a>,<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>,<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a></li>
+      <li><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a> (<a href="https://jira.hl7.org/browse/FHIR-56326">FHIR-56326</a>,<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>,<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
       <li><a href="StructureDefinition-au-hae.html">AU HAE</a> (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>, <a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>)</li>
       <li><a href="StructureDefinition-au-hspo.html">AU HSP-O</a> (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>)</li>
     </ul>
