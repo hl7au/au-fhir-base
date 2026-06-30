@@ -28,12 +28,8 @@
     </valueCodeableConcept>
   </extension>
   <identifier>
-    <system value="http://downunderhospital.com.au/fhir-endpoints"/>
+    <system value="http://downunderhospital.example.com/id/endpoint"/>
     <value value="DUH-FHIR-PROD-01"/>
-  </identifier>
-  <identifier>
-    <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
-    <value value="8003621566684455"/>
   </identifier>
   <status value="active"/>
   <connectionType>
@@ -48,36 +44,18 @@
   </managingOrganization>
   <contact>
     <system value="email"/>
-    <value value="fhir.api@downunderhospital.com.au"/>
+    <value value="admini@downunderhospital.example.com"/>
     <use value="work"/>
   </contact>
   <contact>
     <system value="phone"/>
-    <value value="+61 2 6270 8000"/>
+    <value value="+61255505560"/>
     <use value="work"/>
   </contact>
   <period>
     <start value="2023-07-01"/>
   </period>
-  <payloadType>
-    <coding>
-      <system value="http://hl7.org/fhir/resource-types"/>
-      <code value="Patient"/>
-    </coding>
-  </payloadType>
-  <payloadType>
-    <coding>
-      <system value="http://hl7.org/fhir/resource-types"/>
-      <code value="Practitioner"/>
-    </coding>
-  </payloadType>
-  <payloadType>
-    <coding>
-      <system value="http://hl7.org/fhir/resource-types"/>
-      <code value="Organization"/>
-    </coding>
-  </payloadType>
   <payloadMimeType value="application/fhir+json"/>
   <payloadMimeType value="application/fhir+xml"/>
-  <address value="https://fhir.downunderhospital.com.au/R4"/>
+  <address value="https://fhir.downunderhospital.example.com/R4"/>
 </Endpoint>
