@@ -58,7 +58,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
     <ul>
-      <li>Changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
+      <li>Changed MedicationStatement.medication[x] binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
       <li>Added guidance for representing no known medications for a patient (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
     </ul>
   </li>
