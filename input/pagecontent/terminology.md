@@ -632,7 +632,7 @@ The following code systems are referenced by the value sets listed above.
         <td>Health Level Seven International</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-endpoint-connection-type.html">Endpoint Connection Type AU</a></td>
+        <td><a href="CodeSystem-au-endpoint-connection-type.html">Endpoint Connection Type AU</a></td>
         <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
@@ -644,7 +644,7 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>   
     <tr>
-        <td><a href="CodeSystem-endpoint-payload-type.html">Endpoint Payload Type AU</a></td>
+        <td><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a></td>
         <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>

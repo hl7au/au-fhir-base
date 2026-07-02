@@ -52,8 +52,8 @@ This version introduces the following non-compatible changes.
   </li>
    <li>New code systems:
     <ul>
-      <li><a href="CodeSystem-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
-      <li><a href="CodeSystem-endpoint-connection-type.html">Endpoint Connection Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57759">FHIR-57759</a>)</li>
+      <li><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
+      <li><a href="CodeSystem-au-endpoint-connection-type.html">Endpoint Connection Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57759">FHIR-57759</a>)</li>
     </ul>
   </li>
   <li>New value sets:
