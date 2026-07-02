@@ -1,9 +1,15 @@
-name: Au base IG Profiles publish->go-publish - all releases
+name: (LEGACY) Au base IG Profiles publish->go-publish - all releases
+
+# LEGACY / reference only — SUPERSEDED by build-review-publish.yml (the single pipeline: renders once,
+# produces working + milestone Pages previews, and does the gated milestone-only prod publish).
+# This is the original self-hosted-EC2 + full 15GB S3 sync pipeline. Tag releases now run
+# build-review-publish.yml, so this is manual-dispatch only (kept for emergency/reference). It still
+# fetches the combined custom jar so it behaves consistently if ever run.
+# INPUTS (see build-review-publish.yml for per-input notes): hl7au/au-fhir-base (IG src) ·
+# hl7au/publications (publish-setup.json + templates) · HL7/fhir-ig-history-template · hl7au/ig-registry.
 
 on:
-  push:
-    tags:
-      - "**"
+  workflow_dispatch: {}   # was: push tags '**' — tag releases now run build-review-publish.yml
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -31,10 +37,11 @@ jobs:
       id: get_tag
       run: echo "##[set-output name=tag;]${GITHUB_REF#refs/tags/}"
 
-    - name: Checkout Publications Repository
+    - name: Checkout Publications Repository (publish-setup.json + templates)
       uses: actions/checkout@v4
       with:
-        repository: hl7au/publications
+        repository: hl7au/publications     # publish-setup.json + templates (config on master)
+        ref: master
         
     - name: Download past versions
       run: |
@@ -61,15 +68,22 @@ jobs:
         repository: hl7au/ig-registry
         path: ig-registry
 
-    - name: Update Publisher
+    - name: Fetch combined custom IG Publisher jar (TEMPORARY — until the 5 PRs merge)
       run: |
-        echo "Updating Publisher"
-        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
+        # TEMP: combined jar (5 opt-in features). Revert to the standard _updatePublisher.sh once merged:
+        #   curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y
+        mkdir -p input-cache
+        curl -sSL -o input-cache/publisher.jar https://github.com/KyleOps/fhir-ig-publisher/releases/download/au-pipeline-combined/publisher.jar
+        echo "publisher.jar: $(du -h input-cache/publisher.jar | cut -f1)"
          
-    - name: Basic Publish for Aubase
+    - name: Basic Publish for Aubase (publication mode → go-publish can reuse it, lever C)
       run: |
           echo "Generating Publish for  Aubase IG..."
-          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini
+          # Render in PUBLICATION mode for the final publish path so go-publish -reuse-build can adopt
+          # the output instead of re-rendering. Backward compatible with an older publisher.jar.
+          PUBPATH=$(grep -o '"path"[^,}]*' hl7au/au-fhir-base/publication-request.json | head -1 | sed 's/.*:[[:space:]]*"\([^"]*\)".*/\1/')
+          echo "Publication path: $PUBPATH"
+          java -jar input-cache/publisher.jar -ig hl7au/au-fhir-base/ig.ini -publish "$PUBPATH"
       
     - name: Download package-list.json
       run: |
@@ -83,4 +97,4 @@ jobs:
         java -jar input-cache/publisher.jar -generate-package-registry webroot
       
     - name: Run Aubase Go Publisher build
-      run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
+      run:  java -jar ./input-cache/publisher.jar -go-publish -reuse-build -source ./hl7au/au-fhir-base -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
