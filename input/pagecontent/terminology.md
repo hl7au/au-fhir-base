@@ -214,6 +214,16 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
+    <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
+    <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
+    <td><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td>
+    <td>AU Base</td>
+</tr>
+<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1">Evaluation Procedure</a></td>
     <td><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a>, <a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a>, <a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td>
     <td>NCTS</td>
@@ -609,12 +619,42 @@ The following code systems are referenced by the value sets listed above.
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>
-    <tr>
+     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0074">DiagnosticServiceSectionId</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>Health Level Seven International</td>
+    </tr>  
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/endpoint-connection-type">Endpoint Connection Type</a></td>
+        <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+        <td><a href="CodeSystem-endpoint-connection-type.html">Endpoint Connection Type AU</a></td>
+        <td><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+    </tr>  
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/endpoint-payload-type">Endpoint Payload Type</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>HL7 Australia</td>
     </tr>   
+    <tr>
+        <td><a href="CodeSystem-endpoint-payload-type.html">Endpoint Payload Type AU</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
+        <td>AU Base</td>
+        <td>HL7 Australia</td>
+  </tr>
+   <tr>
+        <td><a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HL7 ValueSet of Format Codes for use with Document Sharing</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>HL7 Australia</td>
+    </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0203">IdentifierType</a></td>
         <td><a href="ValueSet-accession-number-type.html">Accession Number Type</a>, <a href="ValueSet-order-identifier-type.html">Order Identifier Type</a>, <a href="ValueSet-au-v2-0203-extended.html">hl7VS-identifierType - AU Extended</a></td>
