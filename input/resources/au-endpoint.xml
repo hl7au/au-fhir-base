@@ -7,8 +7,8 @@
   <url value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint" />
   <name value="AUBaseEndpoint" />
   <title value="AU Base Endpoint" />
-  <status value="active" />
-  <description value="This profile defines an endpoint structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs." />
+  <status value="draft" />
+  <description value="This profile defines an endpoint structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs." />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Endpoint" />
@@ -29,6 +29,20 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType" />
       </type>
+    </element>
+    <element id="Endpoint.connectionType">
+      <path value="Endpoint.connectionType" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/endpoint-connection-type-extended" />
+      </binding>
+    </element>
+    <element id="Endpoint.payloadType">
+      <path value="Endpoint.payloadType" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/endpoint-payload-type-extended" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

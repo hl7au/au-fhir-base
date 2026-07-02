@@ -9,3 +9,4 @@
 - Endpoint: [Receiving Facility](StructureDefinition-au-receivingfacility.html)
 - Endpoint: [Receiving Application](StructureDefinition-au-receivingapplication.html)
 - Endpoint: [Encryption Certificate PEM X509](StructureDefinition-encryption-certificate-pem-x509.html)
+
