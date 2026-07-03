@@ -50,6 +50,10 @@
         <rules value="closed" />
       </slicing>
       <short value="Medication Detail" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1" />
+      </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
       <path value="MedicationStatement.medication[x]" />

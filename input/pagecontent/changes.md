@@ -45,9 +45,21 @@ This version introduces the following non-compatible changes.
 <ul>
   <li>New profiles:
     <ul>
-      <li><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a> (<a href="https://jira.hl7.org/browse/FHIR-56326">FHIR-56326</a>)</li>
+      <li><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a> (<a href="https://jira.hl7.org/browse/FHIR-56326">FHIR-56326</a>,<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>,<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
       <li><a href="StructureDefinition-au-hae.html">AU HAE</a> (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>, <a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>)</li>
       <li><a href="StructureDefinition-au-hspo.html">AU HSP-O</a> (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>)</li>
+    </ul>
+  </li>
+   <li>New code systems:
+    <ul>
+      <li><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
+      <li><a href="CodeSystem-au-endpoint-connection-type.html">Endpoint Connection Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57759">FHIR-57759</a>)</li>
+    </ul>
+  </li>
+  <li>New value sets:
+    <ul>
+      <li><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>)</li>
+      <li><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
@@ -58,13 +70,28 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
     <ul>
-      <li>Changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
+      <li>Changed MedicationStatement.medication[x] binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
       <li>Added guidance for representing no known medications for a patient (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+    </ul>
+  </li>
+   <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+    </ul>
+  </li>
+ <li><a href="StructureDefinition-au-australiancompanynumber.html">AU Australian Company Number</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to ACN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
+    </ul>
+  </li>
+ <li><a href="StructureDefinition-au-australianregistredbodynumber.html">AU Australian Registered Body Number</a>:
+    <ul>
+      <li>Identifier.type.coding fixed to ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
@@ -78,11 +105,10 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
-      <li>Added code BB, deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
-      <li>Added code MIX, deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Added code BB replaced deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
+      <li>Added code MIX replaced deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
       <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
       <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
-      <li>Technical correction/typo fix for code COP (<a href="https://jira.hl7.org/browse/FHIR-55579">FHIR-55579</a>).</li>
     </ul>
   </li>
 </ul>
