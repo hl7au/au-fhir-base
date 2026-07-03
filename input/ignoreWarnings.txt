@@ -38,6 +38,7 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hae, http://hl7.org/fhir/StructureDefinition/Identifier
 
 # === WARNING 03: Warnings are present as the IG Publisher is unable to resolve National Clinical Terminology Service (NCTS) profiles. At this time no npm package for the NCTS IG is available and there is no timeline for resolution. ===
 A definition could not be found for Canonical URL 'https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4'
@@ -60,7 +61,7 @@ The Implementation Guide contains no examples for this extension
 
 # === WARNING 08: These CodeSystems are contained in the HL7 AU Provider Directory FHIR IG and not included in AU Base dependencies. ===
 A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/smd-interfaces' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/endpoint-payload-type' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://hl7.org.au/fhir/CodeSystem/au-endpoint-payload-type' could not be found, so the code cannot be validated
 
 # === WARNING 09: External example CodeSystem URLs without any definition so can not be validated. ===
 A definition for CodeSystem 'http://example.com/generic-packages' could not be found, so the code cannot be validated
@@ -110,6 +111,10 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 
 # === WARNING 13: External example URLs that are not resolvable. ===
 No definition could be found for URL value 'http://ns.electronichealth.net.au/smd/target'
+%No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hae/1.0'%
+%No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hspo/1.0'%
+No definition could be found for URL value 'http://downunderhospital.com.au/fhir-endpoints'
+No definition could be found for URL value 'https://fhir.downunderhospital.com.au/R4'
 No definition could be found for URL value 'http://ns.medical-objects.com.au/id/routing-id'
 No definition could be found for URL value 'Binary/f016'
 No definition could be found for URL value 'https://uatsmd.connectingcare.com/cc.smd/SealedMessageDelivery.svc'
@@ -125,13 +130,28 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003621566684455'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003621566684455'
 
-# === WARNING 16: AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure' to 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure|5.3.0'
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0'
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' to 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace|5.3.0'
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName' to 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName|5.3.0'
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired' to 'http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired|5.3.0'
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthTime'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthTime' to 'http://hl7.org/fhir/StructureDefinition/patient-birthTime|5.3.0'
+# === WARNING 16: Standard FHIR extensions from the Extensions Pack resolve to multiple versions. ===
+# Handled at source by the `pin-canonicals = pin-multiples` IG parameter (input/ig.xml), which pins
+# each reference to the selected version and downgrades these to INFO ("Pinned ... from choices of ...").
+# No message-text suppressions are needed here; left as a marker so the rationale is discoverable.
+
+# === WARNING 19: RCPA SPIA requesting/reporting refsets are flagged experimental upstream; the AU Base
+# pathology result profile binds to them deliberately and is not itself experimental. WG-accepted. ===
+The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'Observation.code' binds to the value set 'https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3' which is experimental, but this structure is not labeled as experimental
+
+# === WARNING 20: External code systems referenced by examples that have no bundled FHIR definition
+# (WHO ATC and ABS classifications are not published as npm FHIR packages). ===
+A definition for CodeSystem 'http://www.whocc.no/atc' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.abs.gov.au/ausstats/abs@.nsf/mf/1249.0' could not be found, so the code cannot be validated
+
+# === WARNING 21: Bound value sets (MIMS/PBS) cannot be expanded because their content-less code systems
+# carry no codes; this is the expected consequence of WARNING 10 above. WG-accepted. ===
+Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the value set cannot be expanded
+Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the value set cannot be expanded
+%because the code system http://www.mims.com.au/codes was not found
 
 # === WARNING 17: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.1-ci-build' because the code system http://snomed.info/sct was not found

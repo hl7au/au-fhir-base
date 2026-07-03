@@ -1,0 +1,43 @@
+name: AU Base — build / preview / gated publish
+
+# Thin caller for the CENTRALIZED reusable pipeline in hl7au/publications. The full build → preview →
+# gated-publish logic lives once at hl7au/publications/.github/workflows/build-review-publish.yml;
+# this stub just forwards au-fhir-base's events to it. subtree="" → au-base owns the /fhir root.
+#
+# PROD PUBLISH is gated by THIS repo's `production` environment (required reviewers; deployment-branch
+# rule = master + v* tags). Previews deploy to the previews S3 bucket. See the reusable workflow + the
+# publications docs/pipeline-centralization.md for the full design and the per-repo setup checklist.
+
+on:
+  push:
+    branches: [master]
+    tags: ['v*']
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Tag/branch of au-fhir-base to build"
+        default: master
+      publish_milestone:
+        description: "Promote the MILESTONE build to prod S3 (becomes 'current'; gated)"
+        type: boolean
+        default: false
+      publish_working:
+        description: "Publish the WORKING build to prod S3 (versioned snapshot, NOT current; gated)"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  pipeline:
+    uses: hl7au/publications/.github/workflows/build-review-publish.yml@master
+    with:
+      subtree: ""                                          # au-base owns the /fhir root
+      ref: ${{ inputs.ref || '' }}
+      publish_milestone: ${{ inputs.publish_milestone || false }}
+      publish_working: ${{ inputs.publish_working || false }}
+    secrets: inherit
