@@ -1,6 +1,6 @@
 <div class="stu-note" markdown="1">
 
-#### AU Base 6.1.0-draft1 for testing 
+#### AU Base 6.1.1-draft for testing 
 
 This draft snapshot supports the July 2026 Sparked Testing Event.
 
