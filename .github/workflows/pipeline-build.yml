@@ -14,7 +14,7 @@ jobs:
     runs-on: [self-hosted, Linux, X64]
     # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
     container: 
-      image: hl7fhir/ig-publisher-base  
+      image: hl7fhir/ig-publisher-base:candidate-00b9b55115bb 
       volumes:
         - /webroot:/webroot
             
