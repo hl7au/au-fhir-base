@@ -27,6 +27,10 @@ on:
         description: "Publish the WORKING build to prod S3 (versioned snapshot, NOT current; gated)"
         type: boolean
         default: false
+      deploy_preprod:
+        description: "Deploy this build to preprod (staging behind the real CloudFront setup)"
+        type: boolean
+        default: false
 
 permissions:
   id-token: write
@@ -40,4 +44,5 @@ jobs:
       ref: ${{ inputs.ref || '' }}
       publish_milestone: ${{ inputs.publish_milestone || false }}
       publish_working: ${{ inputs.publish_working || false }}
+      deploy_preprod: ${{ inputs.deploy_preprod || false }}
     secrets: inherit
