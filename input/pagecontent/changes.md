@@ -1,4 +1,4 @@
-### Release 6.1.0-draft1
+### Release 6.1.1-draft
 - Publication date: 2026-07-03
 - Publication status: Draft 
 - Based on FHIR version: 4.0.1
