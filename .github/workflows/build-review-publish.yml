@@ -11,7 +11,7 @@ name: AU Base — build / preview / gated publish
 on:
   push:
     branches: [master]
-    tags: ['v*']
+    tags: ['v*', 'release-*']   # release-<version> is the established AU tagging convention
   pull_request:
     branches: [master]
   workflow_dispatch:
