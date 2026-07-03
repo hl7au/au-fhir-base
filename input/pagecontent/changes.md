@@ -1,9 +1,9 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 6.1.1-draft
+- Publication date: 2026-07-03
+- Publication status: Draft
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to TBD. 
+This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to 6.1.1-draft. 
 
 #### Reinstated
 This version of current build reinstates profiles not included in the AU Base 6.0.0 release:
