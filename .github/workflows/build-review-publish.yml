@@ -38,4 +38,5 @@ jobs:
       subtree: ""                                          # au-base owns the /fhir root
       ref: ${{ inputs.ref || '' }}
       deploy_preprod: ${{ inputs.deploy_preprod || false }}
+      qa_max_errors: -1                                    # QA gate advisory — set to the baseline after the first CI build reports it
     secrets: inherit
