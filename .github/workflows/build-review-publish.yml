@@ -1,34 +1,29 @@
-name: AU Base — build / preview / gated publish
+name: AU Base — build / preview / release to preprod
 
 # Thin caller for the CENTRALIZED reusable pipeline in hl7au/publications. The full build → preview →
-# gated-publish logic lives once at hl7au/publications/.github/workflows/build-review-publish.yml;
+# preprod-deploy logic lives once at hl7au/publications/.github/workflows/build-review-publish.yml;
 # this stub just forwards au-fhir-base's events to it. subtree="" → au-base owns the /fhir root.
 #
-# PROD PUBLISH is gated by THIS repo's `production` environment (required reviewers; deployment-branch
-# rule = master + v* tags). Previews deploy to the previews S3 bucket. See the reusable workflow + the
-# publications docs/pipeline-centralization.md for the full design and the per-repo setup checklist.
+# RELEASE FLOW: publication/release branches are never merged to master (master = CI build). Cut a
+# GitHub RELEASE targeting the release branch → this builds and deploys to PREPROD (staging). PROD is
+# NOT published from here: promotion is a manual, HL7 AU-only step in the publications repo
+# (Actions → "Promote preprod → prod"), which copies the approved preprod content to prod. See the
+# reusable workflow + publications docs/publication-process.md for the full design.
 
 on:
   push:
-    branches: [master]
-    tags: ['v*', 'release-*']   # release-<version> is the established AU tagging convention
+    branches: [master]          # CI validation build only (no deploy)
   pull_request:
     branches: [master]
+  release:
+    types: [published]          # a GitHub release → build + deploy to preprod (staging)
   workflow_dispatch:
     inputs:
       ref:
         description: "Tag/branch of au-fhir-base to build"
         default: master
-      publish_milestone:
-        description: "Promote the MILESTONE build to prod S3 (becomes 'current'; gated)"
-        type: boolean
-        default: false
-      publish_working:
-        description: "Publish the WORKING build to prod S3 (versioned snapshot, NOT current; gated)"
-        type: boolean
-        default: false
       deploy_preprod:
-        description: "Deploy this build to preprod (staging behind the real CloudFront setup)"
+        description: "Deploy this build to preprod (on-demand branch staging behind the real CloudFront setup)"
         type: boolean
         default: false
 
@@ -42,7 +37,5 @@ jobs:
     with:
       subtree: ""                                          # au-base owns the /fhir root
       ref: ${{ inputs.ref || '' }}
-      publish_milestone: ${{ inputs.publish_milestone || false }}
-      publish_working: ${{ inputs.publish_working || false }}
       deploy_preprod: ${{ inputs.deploy_preprod || false }}
     secrets: inherit
