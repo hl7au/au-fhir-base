@@ -116,6 +116,11 @@ This version introduces the following non-compatible changes.
       <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
   </li>
+  <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
+    <ul>
+      <li>Correct OID published that does not match HL7 Australia OID registry allocation.</li>
+    </ul>
+  </li>
 </ul>
 
 ### Release 6.0.0
