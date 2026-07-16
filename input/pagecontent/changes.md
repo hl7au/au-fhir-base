@@ -39,6 +39,11 @@ This version introduces the following non-compatible changes.
       <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
+  <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
+    <ul>
+      <li>Correct OID published that does not match HL7 Australia OID registry allocation.</li>
+    </ul>
+  </li>
 </ul>
 
 #### Changes in This Version
@@ -52,8 +57,8 @@ This version introduces the following non-compatible changes.
   </li>
    <li>New code systems:
     <ul>
-      <li><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
       <li><a href="CodeSystem-au-endpoint-connection-type.html">Endpoint Connection Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57759">FHIR-57759</a>)</li>
+      <li><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
     </ul>
   </li>
   <li>New value sets:
