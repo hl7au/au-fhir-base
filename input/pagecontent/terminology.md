@@ -6,7 +6,7 @@ This page includes all terminology artefacts defined as part of AU Base and:
 Terminology artefacts used in AU Base are published in AU Base, the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/).
 
 <div class="stu-note">
-Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
+Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using later releases of <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a>.
 </div>
 
 ### Value Sets

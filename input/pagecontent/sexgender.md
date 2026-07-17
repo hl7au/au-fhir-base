@@ -757,9 +757,6 @@ AU Base supports representation and exchange of Sex Parameter for Clinical Use (
 - [AU Base ServiceRequest](StructureDefinition-au-servicerequest.html)
 
  SPCU is represented with the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension. When using the [Patient Sex Parameter For Clinical Use](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension:
-<p class="stu-note">
-The guidance on this page is dependent on the availability of the <code class=" highlighter-rouge language-plaintext">intendedClinicalUse</code> element, added to the SPCU extension in the September 2025 Ballot of the HL7 International FHIR Extensions Pack.
-</p>
 - It is recommended that the clinical context for the SPCU value is provided (e.g. applies to all prescribed medications); clinical context can be included in either the [`comment`](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:comment) or [`intendedClinicalUse`](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse-definitions.html#Extension.extension:intendedClinicalUse) element.
 - A patient record can have multiple SPCU values at any one time. These SPCU values can be different depending on the clinical context and can have overlapping or non-overlapping periods.
   - When exchanging health information implementers need to consider if consistency of SPCU values across different resource type instances is appropriate for the use case. For example, an instance of `MedicationRequest` can hold an SPCU element value "female-typical" while referencing a `Patient` resource (in `MedicationRequest.subject`) that holds an SPCU value of "male-typical" and a `comment` or `intendedClinicalUse` indicating that SPCU value applies to all prescribed medications.

@@ -1,3 +1,0 @@
-<p class="stu-note">This R4 (4.0.1) conversion of the <a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex Or Gender</a> extension published in the R5 <a href="http://hl7.org/fhir/extensions/1.0.0">FHIR Extensions Pack</a> applies the expected future changes in <a href="https://jira.hl7.org/browse/FHIR-44514">FHIR-44514</a>. When available in the R4 extension pack this inclusion will be removed and AU Base will point to the extension pack.</p>
-
-### Usage Notes
