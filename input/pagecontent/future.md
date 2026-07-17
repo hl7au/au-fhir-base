@@ -1,11 +1,13 @@
 ### AU Base Yearly Updates
 AU Base will be published at least yearly. AU Base updates reflect changes supporting:
- - HL7 AU projects
+ - HL7 AU FHIR IG projects
    - AU Core
    - AU eRequesting
    - AU Patient Summary
+   - any new established projects 
  - Australian FHIR Community Process (AFCP) projects 
- - Requests from the Australian FHIR community. 
+ - Requests from the Australian FHIR community.
+ - NOTE: implementers working with any concept that has potential national usage can propose it for inclusion in AU Base. Proposed changes are reviewed and progressed through the FHIR Work Group processes.
  
  The approach is outlined in the figure below:
 
@@ -34,4 +36,4 @@ The following items are under consideration to add to AU Base ([Link to Deferred
 - **AU Base Family Member History**: The inclusion of an AU Base Family Member History profile is under consideration to support localised, standard representation of family health history in an Australian healthcare context.
 - **AU Base Health Insurer Identifier**: The inclusion of an AU Base profile to define a health insurer identifier is under consideration to support consistent, standardised identification of health insurers, including private health insurers, in an Australian healthcare context.
 - **AU Base NDIS (National Disability Insurance Scheme) Number**: The inclusion of an AU Base profile to define the NDIS Number is under consideration for a future release of AU Base.
-- **HL7 AU Terminology Work Group**: This work group intends to implement a THO AU FHIR IG project encapsulating terminology artefacts shared for HL7 AU standards implementation. This may lead to AU Base terminology artefacts moving, by agreement, from AU Base to the THO AU IG publication in the future.
+- **HL7 AU Terminology**: The HL7 AU Terminology work group intends to establish a THO AU FHIR IG project encapsulating terminology artefacts shared for HL7 AU standards implementation. This may lead to AU Base terminology artefacts moving, by agreement, from AU Base to the THO AU IG publication in the future.
