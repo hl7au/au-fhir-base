@@ -7,16 +7,18 @@
 # behaviour on the preview is what an upstream reviewer would get. (Because that jar has no
 # -reuse-build, each go-publish renders internally; the run takes several renders.)
 #
-# What it does: publishes TWO successive versions into ONE webroot (A as working, then B as
-# milestone, so B becomes current). That makes A a genuine past version whose pages were baked
-# before B existed, so the preview demonstrates the whole story on real AU Base content:
-#   - version A's pages: baked with the statement that was accurate when A was published
-#     (view-source shows it), corrected at view time by publish-box.js to "superseded by <B>";
-#   - version B (current, at the root and its own folder): baked accurate, the script
-#     changes nothing (no flicker, correct with JS disabled);
+# What it does: publishes a chain of THREE milestone versions (7.0.0/R7, 8.0.0/R8, 9.0.0/R9,
+# trial-use, each declaring its milestoneName in the publication request) into ONE webroot.
+# Each milestone was current when published, so the preview demonstrates the classic wording
+# end to end on real AU Base content:
+#   - 9.0.0 (current): "This page is part of the Australian Base IG (v9.0.0: R9) based on FHIR
+#     ... R4. This is the current published version. ... Page versions: R9 R8 R7" - all baked,
+#     and the script changes nothing (no flicker, correct with JS disabled);
+#   - 7.0.0 / 8.0.0 (past): baked "This is the current published version" (true when published,
+#     see view-source), corrected at view time by publish-box.js to "superseded by 9.0.0";
 #   - package-list.js + publish-box.js at the IG root; publish-box-pages.json in each version;
-#   - ZERO-CHURN proof: the workflow md5-verifies that publishing B rewrote nothing in A's
-#     folder, and fails if it did.
+#   - ZERO-CHURN proof: after every publish, md5-verifies that no earlier version's folder
+#     changed, and fails if one did.
 #
 # Build runs in the hl7fhir/ig-publisher-base container (jekyll etc., same env as the pipeline);
 # the S3 deploy runs in a follow-on job on the plain runner (the container has no aws cli).
@@ -38,10 +40,12 @@ concurrency:
 
 env:
   JAR_URL: https://github.com/KyleOps/fhir-ig-publisher/releases/download/pr-1330-dynamic-publish-box/publisher.jar
+  JAR_SHA256: 029688da8d7091516ead08f60d53941132e14b5c3676ee26d5fcad24940b854e
   TX_SERVER: https://tx.fhir.org
   SLUG: dynamic-publish-box
-  VER_A: 6.1.2-ci-build
-  VER_B: 6.1.3-ci-build
+  CHAIN: "7.0.0:R7 8.0.0:R8 9.0.0:R9"
+  VER_OLD: 7.0.0
+  VER_CUR: 9.0.0
   PREVIEWS_BUCKET: hl7au-fhir-ig-previews
   AWS_ROLE: arn:aws:iam::966489602583:role/ghactions_publications_oidc
   AWS_REGION: ap-southeast-2
@@ -72,7 +76,7 @@ jobs:
           curl -sSL -o publisher.jar "$JAR_URL"
           java -version 2>&1 | head -1
           # pin the exact review artifact (upstream master + PR 1330 only; see the release notes)
-          echo "07551e90f3b9c8d4cd301b2e2098c98a312164c2be4f13d0d5c8a724f301627f  publisher.jar" | sha256sum -c - || { echo "::error::publisher.jar is not the pinned review build"; exit 1; }
+          echo "$JAR_SHA256  publisher.jar" | sha256sum -c - || { echo "::error::publisher.jar is not the pinned review build"; exit 1; }
 
       - name: Seed lean -web from LIVE prod root files
         run: |
@@ -82,7 +86,7 @@ jobs:
           curl -sS -o webroot/fhir/package-feed.xml     https://hl7.org.au/fhir/package-feed.xml
           curl -sS -o webroot/fhir/publication-feed.xml https://hl7.org.au/fhir/publication-feed.xml
           curl -sS -o webroot/package-registry.json     https://hl7.org.au/package-registry.json || true
-          node -e 'const fs=require("fs");const p="webroot/fhir/package-list.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.list=d.list.filter(e=>![process.env.VER_A,process.env.VER_B].includes(e.version));fs.writeFileSync(p,JSON.stringify(d,null,2));'
+          node -e 'const fs=require("fs");const p="webroot/fhir/package-list.json";const vers=process.env.CHAIN.split(" ").map(s=>s.split(":")[0]);const d=JSON.parse(fs.readFileSync(p,"utf8"));d.list=d.list.filter(e=>!vers.includes(e.version));fs.writeFileSync(p,JSON.stringify(d,null,2));'
           rm -f ig-src/package-list.json
 
       - name: Cache FHIR package cache
@@ -94,44 +98,50 @@ jobs:
 
       # go-publish requires a pre-rendered source (ig-src/output + qa.json); without the combined
       # jar's -reuse-build it also re-renders internally, which is why each publish is slow here.
-      - name: Render + publish version A (working) into the webroot
+      # After every publish, every earlier version's folder is md5-verified untouched.
+      - name: Publish the milestone chain (zero-churn verified at each step)
         run: |
-          node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_A;d.path="http://hl7.org.au/fhir/"+process.env.VER_A;d.mode="working";d.desc="Dynamic publish box preview build (v"+process.env.VER_A+")";d["allow-current-dependencies"]=true;fs.writeFileSync(p,JSON.stringify(d,null,2));'
-          node -e 'const fs=require("fs");const p="ig-src/input/ig.xml";fs.writeFileSync(p,fs.readFileSync(p,"utf8").replace(/<version value="[^"]*"\/>/, `<version value="${process.env.VER_A}"/>`));'
-          grep -m1 "<version value=" ig-src/input/ig.xml
-          java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$VER_A" -tx "$TX_SERVER"
-          java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
-            -history "$PWD/fhir-history" -registry "$PWD/ig-registry/fhir-ig-list.json" \
-            -templates "$PWD/publications/templates" -temp "$PWD/temp-a" -tx "$TX_SERVER"
+          mkdir -p /tmp/churn
+          for spec in $CHAIN; do
+            export PUB_VER="${spec%%:*}" PUB_NAME="${spec##*:}"
+            echo "===== publishing $PUB_VER ($PUB_NAME, milestone) ====="
+            node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.PUB_VER;d.path="http://hl7.org.au/fhir/"+process.env.PUB_VER;d.mode="milestone";d.status="trial-use";d.sequence=process.env.PUB_NAME;d.milestoneName=process.env.PUB_NAME;d.desc="Dynamic publish box preview build (v"+process.env.PUB_VER+" "+process.env.PUB_NAME+")";d["allow-current-dependencies"]=true;fs.writeFileSync(p,JSON.stringify(d,null,2));'
+            node -e 'const fs=require("fs");const p="ig-src/input/ig.xml";fs.writeFileSync(p,fs.readFileSync(p,"utf8").replace(/<version value="[^"]*"\/>/, `<version value="${process.env.PUB_VER}"/>`));'
+            grep -m1 "<version value=" ig-src/input/ig.xml
+            rm -rf ig-src/output
+            java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$PUB_VER" -tx "$TX_SERVER"
+            java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
+              -history "$PWD/fhir-history" -registry "$PWD/ig-registry/fhir-ig-list.json" \
+              -templates "$PWD/publications/templates" -temp "$PWD/temp-$PUB_VER" -tx "$TX_SERVER"
+            for prev in /tmp/churn/*.md5; do
+              [ -e "$prev" ] || continue
+              v=$(basename "$prev" .md5)
+              (cd "webroot/fhir/$v" && find . -type f -exec md5sum {} + | sort) > /tmp/churn-check.md5
+              if ! diff -q "$prev" /tmp/churn-check.md5 > /dev/null; then
+                echo "::error::version $v's folder changed when $PUB_VER was published"
+                diff "$prev" /tmp/churn-check.md5 | head -40; exit 1
+              fi
+              echo "zero-churn: $v byte-identical ($(wc -l < "$prev") files) after $PUB_VER was published"
+            done
+            (cd "webroot/fhir/$PUB_VER" && find . -type f -exec md5sum {} + | sort) > "/tmp/churn/$PUB_VER.md5"
+          done
+          echo "ZERO-CHURN VERIFIED across the whole chain"
 
-      - name: Record version A state (for the zero-churn proof)
+      - name: Verify the baked output
         run: |
-          test -f "webroot/fhir/$VER_A/publish-box-pages.json" || { echo "::error::version A pages manifest missing"; exit 1; }
+          for spec in $CHAIN; do
+            v="${spec%%:*}"
+            test -f "webroot/fhir/$v/publish-box-pages.json" || { echo "::error::$v pages manifest missing"; exit 1; }
+            grep -q "class=\"fhir-pb\" data-pb-fmt=\"1\" data-pb-version=\"$v\"" "webroot/fhir/$v/index.html" || { echo "::error::$v pages not baked with dynamic markup"; exit 1; }
+          done
           test -f webroot/fhir/package-list.js || { echo "::error::package-list.js missing"; exit 1; }
           test -f webroot/fhir/publish-box.js || { echo "::error::publish-box.js missing"; exit 1; }
-          grep -q "class=\"fhir-pb\" data-pb-fmt=\"1\" data-pb-version=\"$VER_A\"" "webroot/fhir/$VER_A/index.html" || { echo "::error::version A pages not baked with dynamic markup"; exit 1; }
-          (cd "webroot/fhir/$VER_A" && find . -type f -exec md5sum {} + | sort) > /tmp/verA-before.md5
-          wc -l /tmp/verA-before.md5
-
-      - name: Render + publish version B (milestone) into the SAME webroot
-        run: |
-          node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_B;d.path="http://hl7.org.au/fhir/"+process.env.VER_B;d.mode="milestone";d.desc="Dynamic publish box preview build (v"+process.env.VER_B+")";fs.writeFileSync(p,JSON.stringify(d,null,2));'
-          node -e 'const fs=require("fs");const p="ig-src/input/ig.xml";fs.writeFileSync(p,fs.readFileSync(p,"utf8").replace(/<version value="[^"]*"\/>/, `<version value="${process.env.VER_B}"/>`));'
-          grep -m1 "<version value=" ig-src/input/ig.xml
-          rm -rf ig-src/output
-          java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$VER_B" -tx "$TX_SERVER"
-          java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
-            -history "$PWD/fhir-history" -registry "$PWD/ig-registry/fhir-ig-list.json" \
-            -templates "$PWD/publications/templates" -temp "$PWD/temp-b" -tx "$TX_SERVER"
-
-      - name: "Zero-churn proof: publishing B rewrote nothing in A's folder"
-        run: |
-          (cd "webroot/fhir/$VER_A" && find . -type f -exec md5sum {} + | sort) > /tmp/verA-after.md5
-          if ! diff -q /tmp/verA-before.md5 /tmp/verA-after.md5; then
-            echo "::error::version A's folder changed when B was published"; diff /tmp/verA-before.md5 /tmp/verA-after.md5 | head -40; exit 1
-          fi
-          echo "ZERO-CHURN VERIFIED: $(wc -l < /tmp/verA-before.md5) files in $VER_A byte-identical after $VER_B was published"
-          grep -q "data-pb-current=\"$VER_B\"" "webroot/fhir/index.html" || { echo "::error::root copy is not version B"; exit 1; }
+          grep -q "data-pb-current=\"$VER_CUR\"" "webroot/fhir/index.html" || { echo "::error::root copy is not $VER_CUR"; exit 1; }
+          grep -q "This is the current published version" "webroot/fhir/index.html" || { echo "::error::root copy statement wrong"; exit 1; }
+          grep -o "Page versions:.*</span>" "webroot/fhir/$VER_CUR/index.html" | head -c 400 || true
+          grep -q "<b>R9</b>" "webroot/fhir/$VER_CUR/index.html" || { echo "::error::current page missing its own bold milestone name"; exit 1; }
+          grep -q ">R8</a>" "webroot/fhir/$VER_CUR/index.html" || { echo "::error::current page missing the R8 cross-link"; exit 1; }
+          grep -q ">R7</a>" "webroot/fhir/$VER_CUR/index.html" || { echo "::error::current page missing the R7 cross-link"; exit 1; }
 
       - name: Preview fixups (history template assets; preview-only)
         run: |
@@ -182,14 +192,14 @@ jobs:
           dnsbase="https://previews.hl7.org.au/$SLUG"
           {
             echo "### Dynamic publish box preview (PR 1330 review jar)"
-            echo "- superseded past version (baked accurate at its publication, corrected at view time): $s3base/fhir/$VER_A/index.html"
-            echo "- current version at the root (script changes nothing): $s3base/fhir/index.html"
-            echo "- current version in its permanent folder: $s3base/fhir/$VER_B/index.html"
+            echo "- current milestone at the root (v$VER_CUR R9; full classic wording incl. Page versions: R9 R8 R7; script changes nothing): $s3base/fhir/index.html"
+            echo "- current milestone in its permanent folder: $s3base/fhir/$VER_CUR/index.html"
+            echo "- superseded past milestone (baked as current when published, corrected at view time): $s3base/fhir/$VER_OLD/index.html"
             echo "- directory of versions: $s3base/fhir/history.html"
             echo "- support files: $s3base/fhir/package-list.js and $s3base/fhir/publish-box.js"
-            echo "- page manifest: $s3base/fhir/$VER_A/publish-box-pages.json"
+            echo "- page manifest: $s3base/fhir/$VER_OLD/publish-box-pages.json"
             echo ""
-            echo "_View-source any $VER_A page: the baked statement is the accurate as-published text"
+            echo "_View-source any $VER_OLD page: the baked statement is the accurate as-published text"
             echo "(no placeholder, no inline script); disable JS to see exactly that. Same paths resolve"
             echo "under $dnsbase once previews.hl7.org.au DNS is in use._"
           } >> "$GITHUB_STEP_SUMMARY"
