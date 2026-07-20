@@ -7,12 +7,12 @@
 # behaviour on the preview is what an upstream reviewer would get. (Because that jar has no
 # -reuse-build, each go-publish renders internally; the run takes ~2 renders.)
 #
-# What it does: publishes TWO successive milestone versions into ONE webroot. That makes the first
-# version a genuine past version whose pages were baked when it was current, so the preview
-# demonstrates the whole story on real AU Base content:
-#   - the first version's pages: baked "This is the current published version" (view-source),
-#     corrected at view time by publish-box.js to "superseded by <v2>";
-#   - the second version (current, at the root and its own folder): baked accurate, the script
+# What it does: publishes TWO successive versions into ONE webroot (A as working, then B as
+# milestone, so B becomes current). That makes A a genuine past version whose pages were baked
+# before B existed, so the preview demonstrates the whole story on real AU Base content:
+#   - version A's pages: baked with the statement that was accurate when A was published
+#     (view-source shows it), corrected at view time by publish-box.js to "superseded by <B>";
+#   - version B (current, at the root and its own folder): baked accurate, the script
 #     changes nothing (no flicker, correct with JS disabled);
 #   - package-list.js + publish-box.js at the IG root; publish-box-pages.json in each version;
 #   - ZERO-CHURN proof: the workflow md5-verifies that publishing v2 rewrote nothing in v1's
@@ -85,10 +85,20 @@ jobs:
           node -e 'const fs=require("fs");const p="webroot/fhir/package-list.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.list=d.list.filter(e=>![process.env.VER_A,process.env.VER_B].includes(e.version));fs.writeFileSync(p,JSON.stringify(d,null,2));'
           rm -f ig-src/package-list.json
 
-      - name: Publish version A (milestone) into the webroot
+      - name: Cache FHIR package cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.fhir
+          key: fhir-cache-dynamic-publish-box-${{ github.run_id }}
+          restore-keys: fhir-cache-dynamic-publish-box-
+
+      # go-publish requires a pre-rendered source (ig-src/output + qa.json); without the combined
+      # jar's -reuse-build it also re-renders internally, which is why each publish is slow here.
+      - name: Render + publish version A (working) into the webroot
         run: |
-          node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_A;d.path="http://hl7.org.au/fhir/"+process.env.VER_A;d.mode="milestone";d.desc="Dynamic publish box preview build (v"+process.env.VER_A+")";d["allow-current-dependencies"]=true;fs.writeFileSync(p,JSON.stringify(d,null,2));'
+          node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_A;d.path="http://hl7.org.au/fhir/"+process.env.VER_A;d.mode="working";d.desc="Dynamic publish box preview build (v"+process.env.VER_A+")";d["allow-current-dependencies"]=true;fs.writeFileSync(p,JSON.stringify(d,null,2));'
           sed -i 's#<version value="[^"]*"/>#<version value="'"$VER_A"'"/>#' ig-src/input/ig.xml
+          java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$VER_A" -tx "$TX_SERVER"
           java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
             -history "$PWD/fhir-history" -registry "$PWD/ig-registry/fhir-ig-list.json" \
             -templates "$PWD/publications/templates" -temp "$PWD/temp-a" -tx "$TX_SERVER"
@@ -98,14 +108,16 @@ jobs:
           test -f "webroot/fhir/$VER_A/publish-box-pages.json" || { echo "::error::version A pages manifest missing"; exit 1; }
           test -f webroot/fhir/package-list.js || { echo "::error::package-list.js missing"; exit 1; }
           test -f webroot/fhir/publish-box.js || { echo "::error::publish-box.js missing"; exit 1; }
-          grep -q "data-pb-current=\"$VER_A\"" "webroot/fhir/$VER_A/index.html" || { echo "::error::version A pages not baked with dynamic markup"; exit 1; }
+          grep -q "class=\"fhir-pb\" data-pb-fmt=\"1\" data-pb-version=\"$VER_A\"" "webroot/fhir/$VER_A/index.html" || { echo "::error::version A pages not baked with dynamic markup"; exit 1; }
           (cd "webroot/fhir/$VER_A" && find . -type f -exec md5sum {} + | sort) > /tmp/verA-before.md5
           wc -l /tmp/verA-before.md5
 
-      - name: Publish version B (milestone) into the SAME webroot
+      - name: Render + publish version B (milestone) into the SAME webroot
         run: |
-          node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_B;d.path="http://hl7.org.au/fhir/"+process.env.VER_B;d.desc="Dynamic publish box preview build (v"+process.env.VER_B+")";fs.writeFileSync(p,JSON.stringify(d,null,2));'
+          node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_B;d.path="http://hl7.org.au/fhir/"+process.env.VER_B;d.mode="milestone";d.desc="Dynamic publish box preview build (v"+process.env.VER_B+")";fs.writeFileSync(p,JSON.stringify(d,null,2));'
           sed -i 's#<version value="[^"]*"/>#<version value="'"$VER_B"'"/>#' ig-src/input/ig.xml
+          rm -rf ig-src/output
+          java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$VER_B" -tx "$TX_SERVER"
           java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
             -history "$PWD/fhir-history" -registry "$PWD/ig-registry/fhir-ig-list.json" \
             -templates "$PWD/publications/templates" -temp "$PWD/temp-b" -tx "$TX_SERVER"
@@ -146,7 +158,7 @@ jobs:
           dnsbase="https://previews.hl7.org.au/$SLUG"
           {
             echo "### Dynamic publish box preview (PR 1330 review jar)"
-            echo "- superseded past version (baked as current, corrected at view time): $s3base/fhir/$VER_A/index.html"
+            echo "- superseded past version (baked accurate at its publication, corrected at view time): $s3base/fhir/$VER_A/index.html"
             echo "- current version at the root (script changes nothing): $s3base/fhir/index.html"
             echo "- current version in its permanent folder: $s3base/fhir/$VER_B/index.html"
             echo "- directory of versions: $s3base/fhir/history.html"
