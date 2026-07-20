@@ -103,17 +103,6 @@
         <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-type"/>
       </type>
     </element>
-    <element id="Medication.extension:ingredientStrength">
-      <path value="Medication.ingredient" />
-      <sliceName value="ingredientStrength" />
-      <comment value="Quantity of ingredient present"/>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]" />
-      </type>
-    </element>
     <element id="Medication.code.text">
       <path value="Medication.code.text"/>
       <short value="Medication primary text"/>
@@ -137,6 +126,27 @@
       <definition value="Identifies a particular constituent of interest in the product. Can be coded with AMT."/>
       <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]).
 Where possible use the existing `Medication.ingredient.strength` element in preference to pre-adopting the FHIR R5 `Medication.ingredient.strength[x]` element."/>
+    </element>
+   <element id="Medication.ingredient.extension">
+      <path value="Medication.ingredient.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Medication.ingredient.extension:ingredientStrength">
+      <path value="Medication.ingredient.extension" />
+      <sliceName value="ingredientStrength" />
+      <comment value="Quantity of ingredient present"/>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]" />
+      </type>
     </element>
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]"/>
