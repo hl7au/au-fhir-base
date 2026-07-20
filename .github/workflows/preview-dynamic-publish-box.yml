@@ -70,10 +70,9 @@ jobs:
       - name: Download the PR 1330 review jar
         run: |
           curl -sSL -o publisher.jar "$JAR_URL"
-          sha256sum publisher.jar
           java -version 2>&1 | head -1
-          # confirm this is the reworked box (resource shipped in the jar), not the first-cut A2
-          unzip -l publisher.jar | grep -q "web/publish-box.js" || { echo "::error::publisher.jar does not contain web/publish-box.js"; exit 1; }
+          # pin the exact review artifact (upstream master + PR 1330 only; see the release notes)
+          echo "07551e90f3b9c8d4cd301b2e2098c98a312164c2be4f13d0d5c8a724f301627f  publisher.jar" | sha256sum -c - || { echo "::error::publisher.jar is not the pinned review build"; exit 1; }
 
       - name: Seed lean -web from LIVE prod root files
         run: |
