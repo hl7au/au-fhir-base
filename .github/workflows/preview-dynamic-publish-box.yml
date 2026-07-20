@@ -97,7 +97,8 @@ jobs:
       - name: Render + publish version A (working) into the webroot
         run: |
           node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_A;d.path="http://hl7.org.au/fhir/"+process.env.VER_A;d.mode="working";d.desc="Dynamic publish box preview build (v"+process.env.VER_A+")";d["allow-current-dependencies"]=true;fs.writeFileSync(p,JSON.stringify(d,null,2));'
-          sed -i 's#<version value="[^"]*"/>#<version value="'"$VER_A"'"/>#' ig-src/input/ig.xml
+          node -e 'const fs=require("fs");const p="ig-src/input/ig.xml";fs.writeFileSync(p,fs.readFileSync(p,"utf8").replace(/<version value="[^"]*"\/>/, `<version value="${process.env.VER_A}"/>`));'
+          grep -m1 "<version value=" ig-src/input/ig.xml
           java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$VER_A" -tx "$TX_SERVER"
           java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
             -history "$PWD/fhir-history" -registry "$PWD/ig-registry/fhir-ig-list.json" \
@@ -115,7 +116,8 @@ jobs:
       - name: Render + publish version B (milestone) into the SAME webroot
         run: |
           node -e 'const fs=require("fs");const p="ig-src/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.version=process.env.VER_B;d.path="http://hl7.org.au/fhir/"+process.env.VER_B;d.mode="milestone";d.desc="Dynamic publish box preview build (v"+process.env.VER_B+")";fs.writeFileSync(p,JSON.stringify(d,null,2));'
-          sed -i 's#<version value="[^"]*"/>#<version value="'"$VER_B"'"/>#' ig-src/input/ig.xml
+          node -e 'const fs=require("fs");const p="ig-src/input/ig.xml";fs.writeFileSync(p,fs.readFileSync(p,"utf8").replace(/<version value="[^"]*"\/>/, `<version value="${process.env.VER_B}"/>`));'
+          grep -m1 "<version value=" ig-src/input/ig.xml
           rm -rf ig-src/output
           java -jar publisher.jar -ig "$PWD/ig-src" -publish "http://hl7.org.au/fhir/$VER_B" -tx "$TX_SERVER"
           java -jar publisher.jar -go-publish -source "$PWD/ig-src" -web "$PWD/webroot" \
