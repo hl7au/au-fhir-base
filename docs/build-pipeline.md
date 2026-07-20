@@ -5,9 +5,10 @@
   work because those version folders are immutable and already in S3.
 - Routine releases are **`working`** mode and only need a few **root** files locally. Milestone
   releases (the R-numbered `trial-use` "current") *used* to need the full 15 GB tree to rewrite every
-  past version's publish box — but with `dynamic-publish-box` (below) the publisher renders that box
-  client-side and **skips the past-version loop entirely**, so a milestone now needs only root files
-  too. **Both modes are GitHub-hosted and lean; the self-hosted EC2 is gone.** Both also have a gated
+  past version's publish box — but with `dynamic-publish-box` (below) past pages keep their
+  accurate-as-published banner (corrected at view time by `publish-box.js`) and **the past-version
+  loop is skipped entirely**; cross-version page links are existence-checked against tiny per-version
+  `publish-box-pages.json` manifests, so a milestone now needs only root files too. **Both modes are GitHub-hosted and lean; the self-hosted EC2 is gone.** Both also have a gated
   prod-publish path (working = the common cadence at a versioned URL; milestone = promoted to "current").
 - The current pipeline syncs the whole bucket every run on a hand-started EC2 runner, then leaves
   output for a manual S3 copy. That full sync is unnecessary for working builds — the cause of the
@@ -173,28 +174,47 @@ the **upload**:
 This applies per IG repo when rolled out (each IG's build excludes the *other* IGs' folders + bundles
 on the way in, and uploads its own new version's bundles + tgz on the way out).
 
-### Making milestones cheap: dynamic publish box — IMPLEMENTED (`dynamic-publish-box`)
-**Done.** Rather than the version-agnostic approach below (which dropped the inline "current is vY"),
-we kept that wording but fill it **client-side**: under `website.dynamic-publish-box: true` the publisher
-emits a placeholder + small script that reads `package-list.json` at page load and fills the current
-version + the "Page versions" list. Because the emitted markup is then byte-identical on every page of
-every version, a milestone rewrites **0** old-version pages — and the publisher **skips the past-version
-loop and the `needFolder` copy altogether**, so the milestone needs **no local version tree**. Measured:
-2nd milestone rewrites 0/5,153 old-version files (see `publisher-A2-prototype-results.md`). This is what
-lets the milestone path in `build-review-publish.yml` run GitHub-hosted + lean. Off by default; opt-in per IG.
-Combined into the custom jar (KyleOps/fhir-ig-publisher release `au-pipeline-combined`) with #1327,
-A3, and lever C until the upstream PRs merge.
+### Making milestones cheap: dynamic publish box (reworked 2026-07; `dynamic-publish-box`)
+**Done, second design.** The first cut (a version-agnostic placeholder filled by an inline
+`fetch()` script) was rejected upstream as defective: the static HTML defaulted to the superseded
+wording on every page, `fetch()` fails on `file://`, the inline script breaks under a strict CSP,
+every page flickered, and each page load HEAD-probed every milestone. The rework inverts it:
 
-**One-time migration (required once, before relying on skip-loop in prod).** The dynamic banner only
-self-updates on pages that contain the client-side **placeholder**. Existing prod pages still have the
-old **baked** banner (and `skip-loop` means a milestone never rewrites them) — so until they're migrated
-they keep a static, increasingly-stale "supersedes vY" and won't reflect new milestones. The fix is a
-**single** pass over the existing tree that rewrites every old page to the placeholder form (e.g. a
-one-off `-publish-update` run with the dynamic jar over a full mirror — `-publish-update` does *not*
-skip the loop, so it migrates). After that one pass, every old page is dynamic and skip-loop milestones
-are correct forever. (In practice AU's baked page-versions/supersedes are already stale/inconsistent
-across versions, so this migration also *fixes* them in one go.) This is the one operation that still
-needs the full version tree.
+- Every page bakes **exactly the static wording, accurate as of publication**, marked with
+  `data-pb-*` attributes recording its assumptions (page version, then-current version, milestones
+  the "Page versions" list accounts for). No-JS readers, crawlers and `file://` copies see the
+  accurate-as-published statement.
+- Two files at each IG root (same always-rewritten zone as `history.html`): `package-list.js`
+  (package-list.json wrapped in a variable assignment, script-tag loadable, so it works from
+  `file://` and under any base path) and `publish-box.js` (client logic, shipped in the jar).
+  Loaded via relative deferred script tags; no inline code.
+- `publish-box.js` compares the baked assumptions with `package-list.js`: **while they hold it
+  makes no DOM changes at all** (no flicker); once a newer version exists it corrects the statement
+  and appends new milestones to "Page versions", verifying each candidate (normally at most one)
+  with a single HEAD request.
+- Pages already carrying the current-format box for their own version are never rewritten
+  (write-once, keyed on `data-pb-fmt`), so a milestone rewrites **0** old-version pages, and the
+  publisher **skips the past-version loop and the `needFolder` copy**. Cross-version page links for
+  the new version are existence-checked against each version's `publish-box-pages.json` manifest
+  (written once at that version's publication), so no local version tree is needed.
+
+Upstream PR: HL7/fhir-ig-publisher#1330 (reworked; awaiting review). Two jars carry it:
+- **Review jar** (what this preview branch uses): KyleOps/fhir-ig-publisher release
+  `pr-1330-dynamic-publish-box` = exactly upstream master + the PR 1330 commits, stock core,
+  no other AU patches. Built for upstream review so the behaviour Grahame sees has no confounders.
+- **Combined jar v2** (staged, not yet live): branch `au-pipeline-combined-v2` = the same, plus
+  #1327 cloud redirects, A3 source viewers, lever C `-reuse-build`, and core 6.9.12 patched with
+  the #2507 backport (branch `au/getpackageurl-6.9.12`). Refreshing the `au-pipeline-combined`
+  release from it (dispatch `build-au-combined-jar.yml` on that branch) switches the live pipeline
+  to the reworked box; until then the release still ships the first-cut A2.
+
+**One-time migration (required once per tree, before relying on skip-loop).** Pages published
+before the feature (or with the first-cut placeholder markup) must be rewritten once to the
+marked-up accurate-as-published form. A single `-publish-update` run over a full mirror does it:
+it rewrites every non-current-format page, writes the per-version manifests, and deploys
+`package-list.js`/`publish-box.js`. Re-running is cheap and safe (already-migrated pages are
+skipped). See `migrate-publish-box.yml` in the publications repo. This is the one operation that
+still needs the full version tree.
 
 The original version-agnostic idea (kept for the record / as a fallback if the JS approach is rejected
 upstream):
@@ -258,9 +278,11 @@ until merged to `hl7au/publications`.
   `production` environment's required reviewers (gates every S3 sync).
 - **Revert-when-merged:** once the 5 publisher changes ship in a released jar and the config lands in
   `hl7au/publications`, switch the workflows back to `_updatePublisher.sh -f -y` + `hl7au/publications`.
-- **One-time placeholder migration** (see "Making milestones cheap"): run once over the full prod tree
-  with the dynamic jar so existing old pages get the client-side placeholder; until then they keep the
-  baked (stale) banner. Required before the first dynamic milestone goes to prod.
+- **One-time publish-box migration** (see "Making milestones cheap"): run `migrate-publish-box.yml`
+  once per tree (preprod first, prod later) so existing pages get the marked-up
+  accurate-as-published banner, the per-version manifests are written, and
+  `package-list.js`/`publish-box.js` are deployed. Required before the first dynamic milestone
+  goes to prod. Re-running is safe (already-migrated pages are skipped).
 - Confirm whether GitHub-hosted runners need sizing up for the publisher's RAM/disk.
 - Milestone publishing was historically flaky ("milestone failing" commits); it's now the same lean
   path as working, but still warrants a milestone dry-run before the first production milestone.
