@@ -14,12 +14,17 @@ This version of current build reinstates profiles not included in the AU Base 6.
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
- <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
+  <li><a href="StructureDefinition-au-medication.html"></a>:
+    <ul>
+      <li>Pre-adoption of FHIR R5 ingredient strength advice fixed to be valid cross version extension use.</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
- <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
+  <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
