@@ -125,7 +125,7 @@
       <path value="Medication.ingredient"/>
       <definition value="Identifies a particular constituent of interest in the product. Can be coded with AMT."/>
       <comment value="When individual ingredient strength is unavailable as a Ratio, it can be provided using additional datatypes (CodeableConcept,Quantity) using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]). 
-It is recommended to utilise the FHIR R4 Element `Medication.ingredient.strength` when representing Ratio values and the pre-adopted R5 element (via extension) only for other required datatype representations i.e CodebleConcept for coded or text representation, Quantity for numeric quantities."/>
+The FHIR R4 Element `Medication.ingredient.strength` is to be used when representing Ratio values and the pre-adopted R5 element (via extension) only for other required datatype representations i.e CodebleConcept for coded or text representation, Quantity for numeric quantities."/>
     </element>
    <element id="Medication.ingredient.extension">
       <path value="Medication.ingredient.extension"/>
