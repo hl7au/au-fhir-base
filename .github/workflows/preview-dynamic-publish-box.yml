@@ -5,7 +5,7 @@
 # Uses the REVIEW jar (KyleOps/fhir-ig-publisher release pr-1330-dynamic-publish-box), which is
 # exactly upstream master + the PR 1330 commits: stock core, none of the other AU patches, so the
 # behaviour on the preview is what an upstream reviewer would get. (Because that jar has no
-# -reuse-build, each go-publish renders internally; the run takes ~2 renders.)
+# -reuse-build, each go-publish renders internally; the run takes several renders.)
 #
 # What it does: publishes TWO successive versions into ONE webroot (A as working, then B as
 # milestone, so B becomes current). That makes A a genuine past version whose pages were baked
@@ -15,8 +15,11 @@
 #   - version B (current, at the root and its own folder): baked accurate, the script
 #     changes nothing (no flicker, correct with JS disabled);
 #   - package-list.js + publish-box.js at the IG root; publish-box-pages.json in each version;
-#   - ZERO-CHURN proof: the workflow md5-verifies that publishing v2 rewrote nothing in v1's
+#   - ZERO-CHURN proof: the workflow md5-verifies that publishing B rewrote nothing in A's
 #     folder, and fails if it did.
+#
+# Build runs in the hl7fhir/ig-publisher-base container (jekyll etc., same env as the pipeline);
+# the S3 deploy runs in a follow-on job on the plain runner (the container has no aws cli).
 
 name: Preview — dynamic publish box (PR 1330 review jar)
 
@@ -46,6 +49,7 @@ env:
 jobs:
   build-preview:
     runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base
     steps:
       - name: Checkout IG source
         uses: actions/checkout@v4
@@ -63,14 +67,11 @@ jobs:
         uses: actions/checkout@v4
         with: { repository: hl7au/ig-registry, path: ig-registry }
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with: { distribution: temurin, java-version: "17" }
-
       - name: Download the PR 1330 review jar
         run: |
           curl -sSL -o publisher.jar "$JAR_URL"
           sha256sum publisher.jar
+          java -version 2>&1 | head -1
           # confirm this is the reworked box (resource shipped in the jar), not the first-cut A2
           unzip -l publisher.jar | grep -q "web/publish-box.js" || { echo "::error::publisher.jar does not contain web/publish-box.js"; exit 1; }
 
@@ -141,6 +142,29 @@ jobs:
                 fhir-history/fhir.css fhir-history/jquery-ui.css fhir-history/jquery-ui.js \
                 fhir-history/cc0.png "$d/" 2>/dev/null || true
 
+      - name: Pack the webroot for the deploy job
+        run: |
+          rm -f webroot/publish-setup.json
+          tar -czf preview-webroot.tar.gz -C webroot .
+
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-webroot
+          path: preview-webroot.tar.gz
+          retention-days: 7
+
+  deploy-preview:
+    needs: build-preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download preview artifact
+        uses: actions/download-artifact@v4
+        with: { name: preview-webroot }
+
+      - name: Unpack
+        run: mkdir -p webroot && tar -xzf preview-webroot.tar.gz -C webroot
+
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -151,7 +175,6 @@ jobs:
         run: |
           aws configure set default.s3.max_concurrent_requests 64
           aws configure set default.s3.max_queue_size 10000
-          rm -f webroot/publish-setup.json
           aws s3 sync ./webroot "s3://$PREVIEWS_BUCKET/$SLUG/" --delete --only-show-errors
 
       - name: Report preview URLs
