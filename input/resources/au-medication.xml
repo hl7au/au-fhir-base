@@ -137,6 +137,7 @@ Where possible use the existing `Medication.ingredient.strength` element in pref
     <element id="Medication.ingredient.strength">
       <path value="Medication.ingredient.strength"/>
       <short value="Quantity/strength of ingredient present"/>
+      <comment value="Pre-adoption of FHIR R5 supported datatypes for `Medication.ingredient.strength` allow representation of additional datatypes CodeableConcept and Quantity as values for ingredient strength via the R5 to R4 support extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html). Where possible the FHIR R4 supported `Medication.ingredient.strength` as a Ratio should be used." />
     </element>
        <element id="Medication.ingredient.strength.extension">
       <path value="Medication.ingredient.strength.extension"/>
@@ -153,7 +154,7 @@ Where possible use the existing `Medication.ingredient.strength` element in pref
       <sliceName value="ingredientStrength"/>
       <short value="R5: Quantity of ingredient present"/>
       <definition value="Pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient.strength_x_) element using cross version R5 to R4 extension."/>
-      <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element using the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength)."/>
+      <comment value="Use of this extension allows additional datatype options introduced in FHIR R5 (CodeableConcept|Quanity) to be represented where Ratio is unsuitable for medication strength."/>
       <min value="0"/>
       <max value="1"/>
       <type>
