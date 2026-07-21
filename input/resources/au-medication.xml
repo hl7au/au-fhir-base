@@ -127,7 +127,7 @@
       <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]).
 Where possible use the existing `Medication.ingredient.strength` element in preference to pre-adopting the FHIR R5 `Medication.ingredient.strength[x]` element."/> 
     </element>
-   <element id="Medication.ingredient.item[x]">
+    <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]"/>
       <binding>
         <strength value="preferred"/>
@@ -138,7 +138,7 @@ Where possible use the existing `Medication.ingredient.strength` element in pref
       <path value="Medication.ingredient.strength"/>
       <short value="Quantity/strength of ingredient present"/>
     </element>
-    <element id="Medication.ingredient.strength.extension">
+       <element id="Medication.ingredient.strength.extension">
       <path value="Medication.ingredient.strength.extension"/>
       <slicing>
         <discriminator>
@@ -149,17 +149,16 @@ Where possible use the existing `Medication.ingredient.strength` element in pref
       </slicing>
     </element>
     <element id="Medication.ingredient.strength.extension:ingredientStrength">
-      <path value="Medication.ingredient.strength.extension" />
-      <sliceName value="ingredientStrength" />
+      <path value="Medication.ingredient.strength.extension"/>
+      <sliceName value="ingredientStrength"/>
       <short value="R5: Quantity of ingredient present"/>
-      <definition value="Pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element."/>
-      <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]).
-Where possible use the existing `Medication.ingredient.strength` element in preference to pre-adopting the FHIR R5 `Medication.ingredient.strength[x]` element."/>
-      <min value="0" />
-      <max value="1" />
+      <definition value="Pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient.strength_x_) element using cross version R5 to R4 extension."/>
+      <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element using the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength)."/>
+      <min value="0"/>
+      <max value="1"/>
       <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength" />
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength"/>
       </type>
     </element>
   </differential>
