@@ -14,7 +14,7 @@ This version of current build reinstates profiles not included in the AU Base 6.
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
-  <li><a href="StructureDefinition-au-medication.html"></a>:
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Pre-adoption of FHIR R5 ingredient strength advice fixed to be valid cross version extension use.</li>
     </ul>
