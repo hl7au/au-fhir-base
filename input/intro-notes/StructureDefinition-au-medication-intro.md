@@ -19,7 +19,7 @@
   - individual ingredient strength included as [FHIR R5 element pre-adoption](https://hl7.org/fhir/R5/versions.html#extensions) of [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient).strength_x_). See example [Tadim](Medication-IngredientStrengthExtension0.html).
     - Use the element pre-adoption extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).
     - Apply the pre-adoption extension on `Medication.ingredient.strength`.
-- Where possible the FHIR R4 supported `Medication.ingredient.strength` as a Ratio should be used. However, pre-adoption of FHIR R5 supported additional datatypes for `Medication.ingredient.strength` allow representation of CodeableConcept and Quantity as values for ingredient strength via the R5 to R4 support extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) where required.     
+- Where possible the FHIR R4 supported `Medication.ingredient.strength` as a Ratio should be used. However, pre-adoption of FHIR R5 supported additional datatypes for `Medication.ingredient.strength` allows representation of CodeableConcept or Quantity as a value for ingredient strength via the R5 to R4 support extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) where required.     
 
 **Potentially useful extensions:**
 
