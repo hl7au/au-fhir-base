@@ -1667,6 +1667,22 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="Medication/ingredient-strength-with-narrative"/>
+			</reference>
+			<name value="Medication - with backported R5 Ingredient Strength Element (with manual narrative)"/>
+			<description value="Shows an example of a medication, Tadim, containing the ingredient colistimethate (1 Million IU) as a powder, with ingredient strength specified using the preadopted R5 element strength[x] (as CodeableConcept), for the *AU Base Medication* profile. This example includes a manually added narrative, as a workaround for the IG Publisher issue: auto-generating narrative for this element throws a NullPointerException (`Cannot invoke org.hl7.fhir.r5.renderers.utils.ResourceWrapper.has(String) because q is null`)."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Medication/ingredient-strength-no-narrative"/>
+			</reference>
+			<name value="Medication - with backported R5 Ingredient Strength Element (auto-generated narrative)"/>
+			<description value="Shows an example of a medication, Tadim, containing the ingredient colistimethate (1 Million IU) as a powder, with ingredient strength specified using the preadopted R5 element strength[x] (as CodeableConcept), for the *AU Base Medication* profile. This example does not include narrative, to demonstrate the isue with auto-generating narrative for this element (`Cannot invoke org.hl7.fhir.r5.renderers.utils.ResourceWrapper.has(String) because q is null`)."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="Composition/multiple-information-recipients"/>
 			</reference>
 			<name value="Composition - with multiple information recipients"/>
