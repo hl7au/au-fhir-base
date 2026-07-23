@@ -26,4 +26,4 @@
 - Medication: [Medication Brand Name](StructureDefinition-medication-brand-name.html)
 - Medication: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
 - Medication: [Medication Strength](StructureDefinition-medication-strength.html)
-- Medication.ingredient.strength [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html)
+- Medication.ingredient.strength: [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html)
