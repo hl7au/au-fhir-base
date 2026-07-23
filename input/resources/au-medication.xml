@@ -125,7 +125,7 @@
       <path value="Medication.ingredient"/>
       <definition value="Identifies a particular constituent of interest in the product. Can be coded with AMT."/>
       <comment value="When individual ingredient strength is unavailable as a ratio, it can be surfaced as text in `CodeableConcept.text` by using pre-adoption of the FHIR R5 [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient) element with the extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]](http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength[x]).
-Where possible use the existing `Medication.ingredient.strength` element in preference to pre-adopting the FHIR R5 `Medication.ingredient.strength[x]` element."/>
+Where possible use the existing `Medication.ingredient.strength` element in preference to pre-adopting the FHIR R5 `Medication.ingredient.strength[x]` element."/> 
     </element>
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]"/>
@@ -137,6 +137,17 @@ Where possible use the existing `Medication.ingredient.strength` element in pref
     <element id="Medication.ingredient.strength">
       <path value="Medication.ingredient.strength"/>
       <short value="Quantity/strength of ingredient present"/>
+      <comment value="Use FHIR R4 `Medication.ingredient.strength` as a Ratio where possible. However, pre-adoption of FHIR R5 supported additional datatypes for `Medication.ingredient.strength[x]` allows ingredient strength as CodeableConcept or Quantity using the R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) where required." />
+    </element>
+       <element id="Medication.ingredient.strength.extension">
+      <path value="Medication.ingredient.strength.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
     </element>
   </differential>
 </StructureDefinition>

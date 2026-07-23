@@ -14,12 +14,17 @@ This version of current build reinstates profiles not included in the AU Base 6.
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
- <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>
+      <li>Fix advice for pre-adoption of FHIR R5 Medication.ingredient.strength support to be valid cross version extension use (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
- <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
+  <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
@@ -67,16 +72,21 @@ This version introduces the following non-compatible changes.
       <li><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Added AU HAE as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
-      <li>Added AU HSP-O as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
+      <li>Fix advice for pre-adoption of FHIR R5 Medication.ingredient.strength support to be valid cross version extension use (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
     <ul>
       <li>Changed MedicationStatement.medication[x] binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
       <li>Added guidance for representing no known medications for a patient (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
+    <ul>
+      <li>Added AU HAE as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
+      <li>Added AU HSP-O as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
