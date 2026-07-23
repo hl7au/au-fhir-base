@@ -17,8 +17,14 @@
 	<experimental value="false"/>
 	<description value="The Service Provision Conditions Australian Concepts value set includes values that may be used to identify the type of service provision conditions in an Australian context."/>
 	<compose>
-		<include>
+		<exclude>
 			<system value="http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"/>
-		</include>
+			<concept>
+				<code value="FBB">
+			</concept>
+			<concept>
+				<code value="BBO">
+			</concept>
+		</exclude>
 	</compose>
 </ValueSet>

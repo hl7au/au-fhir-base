@@ -111,7 +111,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
-      <li>Concept description changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
+      <li>Concept definition changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code HSPO (<a href="https://jira.hl7.org/browse/FHIR-56101">FHIR-56101</a>).</li>
       <li>Added code HAE (<a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>).</li>
@@ -120,15 +120,17 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
-      <li>Added code BB replaced deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
-      <li>Added code MIX replaced deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
+      <li>Added code BB (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
+      <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Added code MIX (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
       <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
       <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
     <ul>
-      <li>Correct OID published that does not match HL7 Australia OID registry allocation.</li>
+      <li>Corrected OID published that does not match HL7 Australia OID registry allocation.</li>
     </ul>
   </li>
 </ul>
