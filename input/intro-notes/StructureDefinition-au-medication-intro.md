@@ -9,6 +9,7 @@
   - [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 - When a code for medication definition is unavailable, just text is allowed in `Medication.code.text`.
 - When a medication is compounded and is a list of ingredients, `Medication.code` may contain only the list of ingredients as text in `Medication.code.text`.
+- When representing strength of an ingredient of a medication, use the native FHIR element `Medication.ingredient.strength` as [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio) wherever possible. If the strength cannot be represented as a Ratio, it can be represented as text, quantity or coded by using the R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).     
 - For support as text representation of other medicinal product information consider:
   - ​brand name in [Medication Brand Name](StructureDefinition-medication-brand-name.html) extension
   - ​generic name in [Medication Generic Name](StructureDefinition-medication-generic-name.html) extension
@@ -19,7 +20,6 @@
   - individual ingredient strength included as [FHIR R5 element pre-adoption](https://hl7.org/fhir/R5/versions.html#extensions) of [`Medication.ingredient.strength[x]`](https://www.hl7.org/fhir/R5/medication-definitions.html#Medication.ingredient). See example [Tadim](Medication-IngredientStrengthExtension0.html).
     - Use the element pre-adoption extension URL [http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.ingredient.strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).
     - Apply the pre-adoption extension on `Medication.ingredient.strength`.
-- Use FHIR R4 `Medication.ingredient.strength` as a Ratio where possible. However, pre-adoption of FHIR R5 supported additional datatypes for `Medication.ingredient.strength[x]` allows ingredient strength as CodeableConcept or Quantity using the R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) where required.     
 
 **Potentially useful extensions:**
 
