@@ -49,6 +49,21 @@ This version introduces the following non-compatible changes.
       <li>Correct OID published that does not match HL7 Australia OID registry allocation.</li>
     </ul>
   </li>
+  <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
+    <ul>
+      <li>Deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
+      <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Added code BB (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
+      <li>Added code MIX (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
+      <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
+    </ul>
+  </li>
+  <li><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
+    <ul>
+      <li>Removed deprecated codes (BBO, FBB) (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>, <a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>)</li>
+    </ul>
+  </li>
 </ul>
 
 #### Changes in This Version
@@ -121,18 +136,18 @@ This version introduces the following non-compatible changes.
   <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
       <li>Deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
-      <li>Added code BB (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
       <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
+      <li>Added code BB (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
       <li>Added code MIX (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
       <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
       <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
-  </li>s
+  </li>
   <li><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
-      <li>Remove deprecated codes (BBO, FBB) (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>, <a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>)</li>
+      <li>Removed deprecated codes (BBO, FBB) (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>, <a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>)</li>
     </ul>
-  </li>s
+  </li>
   <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
     <ul>
       <li>Corrected OID published that does not match HL7 Australia OID registry allocation.</li>
