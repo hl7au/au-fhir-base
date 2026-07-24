@@ -14,11 +14,6 @@ This version of current build reinstates profiles not included in the AU Base 6.
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
-  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
-    <ul>
-      <li>Fix advice for pre-adoption of FHIR R5 Medication.ingredient.strength support to be valid cross version extension use (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
-    </ul>
-  </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
@@ -89,7 +84,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Fix advice for pre-adoption of FHIR R5 Medication.ingredient.strength support to be valid cross version extension use (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
+      <li>Changed pre-adoption guidance for Medication.ingredient.strength[x] to use ExtensionMedication_Ingredient_Strength (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
