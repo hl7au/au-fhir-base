@@ -30,172 +30,88 @@ The following [extensions]({{site.data.fhir.path}}extensibility.html) have been 
 
 ### Extension Usage
 
-The following lists the extensions that included the profile (**Used**) and any extensions identified as suitable (**Potentially useful**). Extensions are sourced from either this guide (**AU Base**), the [FHIR Extensions Pack]({{site.data.fhir.path}}extensibility-registry.html) (**FHIR Extensions Pack**) or a [cross-version extension](https://hl7.org/fhir/uv/xver/index.html) pre-adopted from a future version of FHIR. Only profiles with at least one associated extension are listed.
+The following table lists the extensions used by each profile (**Used**) and any extensions identified as suitable for use with the profile (**Potentially Useful**). Extensions are sourced from either this guide (**AU Base**), the [FHIR Extensions Pack]({{site.data.fhir.path}}extensibility-registry.html) (**FHIR Extensions Pack**), FHIR core, or a [cross-version extension](https://hl7.org/fhir/uv/xver/index.html) pre-adopted from a future version of FHIR, noted in the Comment column. Only profiles with at least one associated extension are listed.
 
-#### AU Base Composition
-**Used:**
-* [Information Recipient](StructureDefinition-information-recipient.html) — AU Base
-
-#### AU Base Diagnostic Imaging Result
-**Used:**
-* [BodyStructure Reference](https://hl7.org/fhir/extensions/StructureDefinition-bodySite.html) — FHIR Extensions Pack
-
-#### AU Base Diagnostic Request
-**Used:**
-* [procedure-targetBodyStructure](https://hl7.org/fhir/extensions/StructureDefinition-procedure-targetBodyStructure.html) — FHIR Extensions Pack
-
-**Potentially useful:**
-* [Result Copies To](StructureDefinition-result-copies-to.html) — AU Base
-
-#### AU Base Diagnostic Result
-**Used:**
-* [BodyStructure Reference](https://hl7.org/fhir/extensions/StructureDefinition-bodySite.html) — FHIR Extensions Pack
-
-#### AU Base DiagnosticReport
-**Used:**
-* [Sex Parameter for Clinical Use](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) — FHIR Extensions Pack
-
-#### AU Base Encounter
-**Potentially useful:**
-* [Encounter.participant.actor](http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.participant.actor) — FHIR core (R5 pre-adoption extension)
-
-#### AU Base Endpoint
-**Used:**
-* [Endpoint.environmentType](http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType) — FHIR cross-version extension (R5 to R4)
-
-**Potentially useful:**
-* [Receiving Facility](StructureDefinition-au-receivingfacility.html) — AU Base
-* [Receiving Application](StructureDefinition-au-receivingapplication.html) — AU Base
-* [Encryption Certificate PEM X509](StructureDefinition-encryption-certificate-pem-x509.html) — AU Base
-
-#### AU Base HealthcareService
-**Used:**
-* [Timezone Code](https://hl7.org/fhir/extensions/StructureDefinition-timezone.html) — FHIR Extensions Pack (profiled for Australian use by the AU Base [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html) extension)
-
-**Potentially useful:**
-* [Contact Purpose](StructureDefinition-contact-purpose.html) — AU Base
-
-#### AU Base Immunization
-**Used:**
-* [Vaccine Vial Serial Number](StructureDefinition-vaccine-serial-number.html) — AU Base
-
-#### AU Base Medication
-**Used:**
-* [Medication Type](StructureDefinition-medication-type.html) — AU Base
-
-**Potentially useful:**
-* [Medication Brand Name](StructureDefinition-medication-brand-name.html) — AU Base
-* [Medication Generic Name](StructureDefinition-medication-generic-name.html) — AU Base
-* [Medication Strength](StructureDefinition-medication-strength.html) — AU Base
-* [Medication.ingredient.strength](https://hl7.org/fhir/uv/xver-r5.r4/StructureDefinition-ext-R5-Medication.ing.strength.html) — FHIR cross-version extension (R5 to R4)
-
-#### AU Base MedicationAdministration
-**Used:**
-* [Medication Type](StructureDefinition-medication-type.html) — AU Base
-
-#### AU Base MedicationDispense
-**Used:**
-* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) — AU Base
-* [Dispense Number](StructureDefinition-dispense-number.html) — AU Base
-* [Medication Type](StructureDefinition-medication-type.html) — AU Base
-
-**Potentially useful:**
-* [Medication Brand Name](StructureDefinition-medication-brand-name.html) — AU Base
-* [Medication Generic Name](StructureDefinition-medication-generic-name.html) — AU Base
-
-#### AU Base MedicationRequest
-**Used:**
-* [Sex Parameter for Clinical Use](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) — FHIR Extensions Pack
-* [Subsidised Concurrent Supply](StructureDefinition-subsidised-concurrent-supply.html) — AU Base
-* [Medication Type](StructureDefinition-medication-type.html) — AU Base
-
-**Potentially useful:**
-* [Medication Brand Name](StructureDefinition-medication-brand-name.html) — AU Base
-* [Medication Generic Name](StructureDefinition-medication-generic-name.html) — AU Base
-
-#### AU Base MedicationStatement
-**Used:**
-* [Long Term](StructureDefinition-medication-long-term.html) — AU Base
-* [Medication Type](StructureDefinition-medication-type.html) — AU Base
-
-**Potentially useful:**
-* [Medication Brand Name](StructureDefinition-medication-brand-name.html) — AU Base
-* [Medication Generic Name](StructureDefinition-medication-generic-name.html) — AU Base
-
-#### AU Base Organization
-**Potentially useful:**
-* [Contact Purpose](StructureDefinition-contact-purpose.html) — AU Base
-
-#### AU Base Patient
-**Used:**
-* [Birth Place](https://hl7.org/fhir/extensions/StructureDefinition-patient-birthPlace.html) — FHIR Extensions Pack
-* [Australian Indigenous Status](StructureDefinition-indigenous-status.html) — AU Base
-* [Australian Veteran Status](StructureDefinition-veteran-status.html) — AU Base
-* [Closing the Gap Registration](StructureDefinition-closing-the-gap-registration.html) — AU Base
-* [Mother's Maiden Name](https://hl7.org/fhir/extensions/StructureDefinition-patient-mothersMaidenName.html) — FHIR Extensions Pack
-* [Interpreter Required](https://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html) — FHIR Extensions Pack
-* [Date of Arrival in Australia](StructureDefinition-date-of-arrival.html) — AU Base
-* [Individual Gender Identity](https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html) — FHIR Extensions Pack
-* [Individual Pronouns](https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) — FHIR Extensions Pack
-* [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) — FHIR Extensions Pack
-* [Sex Parameter for Clinical Use](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) — FHIR Extensions Pack
-* [Date Accuracy Indicator](StructureDefinition-date-accuracy-indicator.html) — AU Base
-* [Patient Birth Time](https://hl7.org/fhir/extensions/StructureDefinition-patient-birthTime.html) — FHIR Extensions Pack
-
-**Potentially useful:**
-* [Ethnicity](StructureDefinition-ethnicity.html) — AU Base
-
-#### AU Base Practitioner
-**Used:**
-* [Individual Gender Identity](https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html) — FHIR Extensions Pack
-* [Individual Pronouns](https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) — FHIR Extensions Pack
-* [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) — FHIR Extensions Pack
-
-#### AU Base PractitionerRole
-**Used:**
-* [Timezone Code](https://hl7.org/fhir/extensions/StructureDefinition-timezone.html) — FHIR Extensions Pack (profiled for Australian use by the AU Base [Australian Time Zone Usage](StructureDefinition-au-timezone-usage.html) extension)
-
-**Potentially useful:**
-* [Contact Purpose](StructureDefinition-contact-purpose.html) — AU Base
-
-#### AU Base Procedure
-**Used:**
-* [Sex Parameter for Clinical Use](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) — FHIR Extensions Pack
-* [procedure-targetBodyStructure](https://hl7.org/fhir/extensions/StructureDefinition-procedure-targetBodyStructure.html) — FHIR Extensions Pack
-
-#### AU Base RelatedPerson
-**Used:**
-* [Individual Gender Identity](https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html) — FHIR Extensions Pack
-* [Individual Pronouns](https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) — FHIR Extensions Pack
-* [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) — FHIR Extensions Pack
-
-#### AU Base ServiceRequest
-**Used:**
-* [Sex Parameter for Clinical Use](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) — FHIR Extensions Pack
-* [procedure-targetBodyStructure](https://hl7.org/fhir/extensions/StructureDefinition-procedure-targetBodyStructure.html) — FHIR Extensions Pack
-
-#### AU Medicine List
-**Used:**
-* [Author as a RelatedPerson](StructureDefinition-author-related-person.html) — AU Base
-* [Change Description](StructureDefinition-change-description.html) — AU Base
-
-#### Australian Address
-**Used:**
-* [Address Identifier](StructureDefinition-address-identifier.html) — AU Base
-* [No Fixed Address](StructureDefinition-no-fixed-address.html) — AU Base
-
-**Potentially useful:**
-* [Unit](https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-unitID.html) — FHIR Extensions Pack
-* [House Number](https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-houseNumber.html) — FHIR Extensions Pack
-* [Street Name](https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-streetName.html) — FHIR Extensions Pack
-* [Street Name Type](https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-streetNameType.html) — FHIR Extensions Pack
-* [Street Name Base](https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-streetNameBase.html) — FHIR Extensions Pack
-
-#### IHI
-**Used:**
-* [IHI Status](StructureDefinition-ihi-status.html) — AU Base
-* [IHI Record Status](StructureDefinition-ihi-record-status.html) — AU Base
-* [IHI Verification Date](StructureDefinition-ihi-verified-date.html) — AU Base
+<table>
+<thead>
+<tr><th>Profile</th><th>Extension</th><th>Usage</th><th>Source</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td rowspan="1"><a href="StructureDefinition-au-composition.html">AU Base Composition</a></td><td><a href="StructureDefinition-information-recipient.html">Information Recipient</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-imagingresult.html">AU Base Diagnostic Imaging Result</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-bodySite.html">BodyStructure Reference</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="2"><a href="StructureDefinition-au-diagnosticrequest.html">AU Base Diagnostic Request</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-procedure-targetBodyStructure.html">procedure-targetBodyStructure</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="StructureDefinition-result-copies-to.html">Result Copies To</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-diagnosticresult.html">AU Base Diagnostic Result</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-bodySite.html">BodyStructure Reference</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-diagnosticreport.html">AU Base DiagnosticReport</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Sex Parameter for Clinical Use</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-encounter.html">AU Base Encounter</a></td><td><a href="http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.participant.actor">Encounter.participant.actor</a></td><td>Potentially Useful</td><td>FHIR core</td><td>R5 pre-adoption extension</td></tr>
+<tr><td rowspan="4"><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a></td><td><a href="http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType">Endpoint.environmentType</a></td><td>Used</td><td>FHIR cross-version extension</td><td>R5 to R4</td></tr>
+<tr><td><a href="StructureDefinition-au-receivingfacility.html">Receiving Facility</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-au-receivingapplication.html">Receiving Application</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-encryption-certificate-pem-x509.html">Encryption Certificate PEM X509</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="2"><a href="StructureDefinition-au-healthcareservice.html">AU Base HealthcareService</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-timezone.html">Timezone Code</a></td><td>Used</td><td>FHIR Extensions Pack</td><td>Profiled for Australian use by the AU Base <a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a> extension</td></tr>
+<tr><td><a href="StructureDefinition-contact-purpose.html">Contact Purpose</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-immunization.html">AU Base Immunization</a></td><td><a href="StructureDefinition-vaccine-serial-number.html">Vaccine Vial Serial Number</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="5"><a href="StructureDefinition-au-medication.html">AU Base Medication</a></td><td><a href="StructureDefinition-medication-type.html">Medication Type</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-brand-name.html">Medication Brand Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-generic-name.html">Medication Generic Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-strength.html">Medication Strength</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/uv/xver-r5.r4/StructureDefinition-ext-R5-Medication.ing.strength.html">Medication.ingredient.strength</a></td><td>Potentially Useful</td><td>FHIR cross-version extension</td><td>R5 to R4</td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a></td><td><a href="StructureDefinition-medication-type.html">Medication Type</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="5"><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a></td><td><a href="StructureDefinition-subsidised-concurrent-supply.html">Subsidised Concurrent Supply</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-dispense-number.html">Dispense Number</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-type.html">Medication Type</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-brand-name.html">Medication Brand Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-generic-name.html">Medication Generic Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="5"><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Sex Parameter for Clinical Use</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="StructureDefinition-subsidised-concurrent-supply.html">Subsidised Concurrent Supply</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-type.html">Medication Type</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-brand-name.html">Medication Brand Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-generic-name.html">Medication Generic Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="4"><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td><td><a href="StructureDefinition-medication-long-term.html">Long Term</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-type.html">Medication Type</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-brand-name.html">Medication Brand Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-medication-generic-name.html">Medication Generic Name</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="1"><a href="StructureDefinition-au-organization.html">AU Base Organization</a></td><td><a href="StructureDefinition-contact-purpose.html">Contact Purpose</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="14"><a href="StructureDefinition-au-patient.html">AU Base Patient</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-birthPlace.html">Birth Place</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="StructureDefinition-indigenous-status.html">Australian Indigenous Status</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-veteran-status.html">Australian Veteran Status</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-closing-the-gap-registration.html">Closing the Gap Registration</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-mothersMaidenName.html">Mother's Maiden Name</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-interpreterRequired.html">Interpreter Required</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="StructureDefinition-date-of-arrival.html">Date of Arrival in Australia</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html">Individual Gender Identity</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html">Individual Pronouns</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex or Gender</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Sex Parameter for Clinical Use</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-birthTime.html">Patient Birth Time</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="StructureDefinition-ethnicity.html">Ethnicity</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="3"><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html">Individual Gender Identity</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html">Individual Pronouns</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex or Gender</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="2"><a href="StructureDefinition-au-practitionerrole.html">AU Base PractitionerRole</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-timezone.html">Timezone Code</a></td><td>Used</td><td>FHIR Extensions Pack</td><td>Profiled for Australian use by the AU Base <a href="StructureDefinition-au-timezone-usage.html">Australian Time Zone Usage</a> extension</td></tr>
+<tr><td><a href="StructureDefinition-contact-purpose.html">Contact Purpose</a></td><td>Potentially Useful</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="2"><a href="StructureDefinition-au-procedure.html">AU Base Procedure</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Sex Parameter for Clinical Use</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-procedure-targetBodyStructure.html">procedure-targetBodyStructure</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="3"><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html">Individual Gender Identity</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html">Individual Pronouns</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html">Person Recorded Sex or Gender</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="2"><a href="StructureDefinition-au-servicerequest.html">AU Base ServiceRequest</a></td><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">Sex Parameter for Clinical Use</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-procedure-targetBodyStructure.html">procedure-targetBodyStructure</a></td><td>Used</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="2"><a href="StructureDefinition-au-medlist.html">AU Medicine List</a></td><td><a href="StructureDefinition-author-related-person.html">Author as a RelatedPerson</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-change-description.html">Change Description</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td rowspan="7"><a href="StructureDefinition-au-address.html">Australian Address</a></td><td><a href="StructureDefinition-address-identifier.html">Address Identifier</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-no-fixed-address.html">No Fixed Address</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-unitID.html">Unit</a></td><td>Potentially Useful</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-houseNumber.html">House Number</a></td><td>Potentially Useful</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-streetName.html">Street Name</a></td><td>Potentially Useful</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-streetNameType.html">Street Name Type</a></td><td>Potentially Useful</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td><a href="https://hl7.org/fhir/extensions/StructureDefinition-iso21090-ADXP-streetNameBase.html">Street Name Base</a></td><td>Potentially Useful</td><td>FHIR Extensions Pack</td><td></td></tr>
+<tr><td rowspan="3"><a href="StructureDefinition-au-ihi.html">IHI</a></td><td><a href="StructureDefinition-ihi-status.html">IHI Status</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-ihi-record-status.html">IHI Record Status</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+<tr><td><a href="StructureDefinition-ihi-verified-date.html">IHI Verification Date</a></td><td>Used</td><td>AU Base</td><td></td></tr>
+</tbody>
+</table>
 
 <br />
 
