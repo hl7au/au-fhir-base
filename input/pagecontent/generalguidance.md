@@ -113,7 +113,7 @@ When modelling AU Base resource profiles:
 * Slice Constraints: slicing is avoided as much as possible. Slicing limits the opportunities for downstream IGs and applications to define their own business rules. Slicing, where present, is used to either include an extension or to define a real world concept that cannot be meaningfully modelled using another profiling technique, and is left open to allow for flexibility.
 * References (target resources or profiles): references are not constrained to avoid limiting the opportunities for downstream IGs and applications to define their own business rules.
 * Type choices: types are restricted only where there is national agreement to restrict that usage in Australia. Additionally, AU Base data type profiles suitable for usage for that particular element are added to the set of type choices (e.g. [AU IHI](StructureDefinition-au-ihi.html) in the `Patient.identifier` element in [AU Base Patient](StructureDefinition-au-patient.html)). 
-* Must Support and Obligations: _Must Support_ or Obligation is not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
+* Must Support and Obligations: _Must Support_ or Obligations are not present as there is no assertion of required support for any of the elements profiled in this guide for a particular usage.
 
 Some FHIR resource types are not profiled in AU Base as the resource type is too abstract to support meaningful localisation across use cases in a base resource profile (e.g. Basic, Observation, and Device). For these resource types, AU Core or a downstream use case IG can profile directly instead of inheriting from an AU Base profile. 
 
@@ -130,7 +130,7 @@ Generic use case resource profiles remain definitional, encourage derivation, an
 
 When an IG project starts that covers the scope of an AU Base generic use case resource profile, that profile is moved to new IG project and then either deprecated or removed in AU Base. For example:
 * the AU Core vital signs profiles started in AU Base and were subsequently moved to AU Core and then removed from AU Base
-* the AU eRequesting ServiceRequest profile started in AU Base and was subsequently moved to AU eRequesting and then deprecated in AU Base
+* the AU eRequesting Diagnostic Request profile started in AU Base and was subsequently moved to AU eRequesting and then deprecated in AU Base
 
 ### Maturity Levels 
 These levels used for HL7 AU FHIR Implementation Guides are associated with the [FHIR Maturity Model](http://hl7.org/fhir/R4/versions.html#maturity) and adjusted for local use.
