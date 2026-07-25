@@ -1,15 +1,9 @@
-### Release TBD
-- Publication date: TBD
-- Publication status: TBD
+### Release 7.0.0-ballot1
+- Publication date: 2026-07-27
+- Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to TBD. 
-
-#### Reinstated
-This version of current build reinstates profiles not included in the AU Base 6.0.0 release:
-<ul>
-  <li>Ethnicity extension</li>
-</ul>
+This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to <a href="https://hl7.org.au/fhir/7.0.0-ballot1/index.html">7.0.0-ballot1</a>. The changes in this update are for ballot.
 
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
@@ -59,6 +53,12 @@ This version introduces the following non-compatible changes.
       <li>Removed deprecated codes (BBO, FBB) (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>, <a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>)</li>
     </ul>
   </li>
+</ul>
+
+#### Not Included
+The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/7.0.0-ballot1/generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM DRAFT 0 maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) where these artefacts may be available if retained in the specification.
+<ul>
+  <li>Ethnicity extension</li>
 </ul>
 
 #### Changes in This Version
