@@ -41,17 +41,15 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
     <ul>
-      <li>Correct OID published that does not match HL7 Australia OID registry allocation.</li>
+      <li>Corrected invalid OID to match HL7 Australia OID registry (<a href="https://jira.hl7.org/browse/FHIR-57881">FHIR-57881</a>).</li>
     </ul>
   </li>
   <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
       <li>Deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
       <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
-      <li>Added code BB (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
-      <li>Added code MIX (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
-      <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
-      <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
+      <li>Concept definition corrected for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
+      <li>Concept definition made narrower for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
   </li>
   <li><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
@@ -84,7 +82,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Changed pre-adoption guidance for Medication.ingredient.strength[x] to use ExtensionMedication_Ingredient_Strength (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
+      <li>Changed pre-adoption guidance for Medication.ingredient.strength[x] to use [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
@@ -134,8 +132,8 @@ This version introduces the following non-compatible changes.
       <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
       <li>Added code BB (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
       <li>Added code MIX (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
-      <li>Concept definition changed for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
-      <li>Concept definition changed for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
+     <li>Concept definition corrected for code FAP (<a href="https://jira.hl7.org/browse/FHIR-55577">FHIR-55577</a>).</li>
+      <li>Concept definition made narrower for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
   </li>
   <li><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
@@ -145,7 +143,7 @@ This version introduces the following non-compatible changes.
   </li>
   <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
     <ul>
-      <li>Corrected OID published that does not match HL7 Australia OID registry allocation.</li>
+      <li>Corrected invalid OID to match HL7 Australia OID registry (<a href="https://jira.hl7.org/browse/FHIR-57881">FHIR-57881</a>).</li>
     </ul>
   </li>
 </ul>
