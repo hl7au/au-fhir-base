@@ -80,9 +80,14 @@ This version introduces the following non-compatible changes.
       <li><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
     </ul>
   </li>
+   <li>Deprecated extensions:
+    <ul>
+      <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-no-fixed-address.html">No Fixed Address</a> extension (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>)</li>
+    </ul>
+  </li>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Changed pre-adoption guidance for Medication.ingredient.strength[x] to use [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html) (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
+      <li>Changed pre-adoption guidance for Medication.ingredient.strength[x] to use <a href="http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html">ExtensionMedication_Ingredient_Strength</a> (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
@@ -95,6 +100,11 @@ This version introduces the following non-compatible changes.
     <ul>
       <li>Added AU HAE as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
       <li>Added AU HSP-O as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
+    </ul>
+  </li>
+      <li><a href="StructureDefinition-au-address.html">Australian Address</a>:
+  <ul>
+      <li>Removed Australian <a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-no-fixed-address.html">No Fixed Address</a> added HL7 extension pack <a href="http://hl7.org/fhir/StructureDefinition/no-fixed-address">No Fixed Address</a> (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
