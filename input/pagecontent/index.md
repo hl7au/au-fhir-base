@@ -1,3 +1,5 @@
+{% include note-to-balloters.md -%}
+
 ### Introduction
 This implementation guide is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context.  
 
