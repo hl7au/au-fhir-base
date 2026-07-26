@@ -80,7 +80,7 @@ This version introduces the following non-compatible changes.
       <li><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
     </ul>
   </li>
-   <li>Deprecated extensions:
+  <li>Deprecated extensions:
     <ul>
       <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-no-fixed-address.html">No Fixed Address</a> extension (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>)</li>
     </ul>
