@@ -82,7 +82,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/7.0
   </li>
   <li>Deprecated extensions:
     <ul>
-      <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-no-fixed-address.html">No Fixed Address</a> extension (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-no-fixed-address.html">No Fixed Address</a> extension (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>)</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
