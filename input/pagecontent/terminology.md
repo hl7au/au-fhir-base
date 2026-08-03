@@ -293,12 +293,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <td><a href="StructureDefinition-ihi-status.html">IHI Status</a></td>
     <td>NCTS</td>
 </tr>
-   <tr>
-        <td><a href="http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes">HL7 ValueSet of Format Codes for use with Document Sharing</a></td>
-        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
-        <td>HL7 Terminology (THO)</td>
-        <td>HL7 Australia</td>
-    </tr>
 <tr>
     <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
     <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
@@ -508,7 +502,7 @@ The following code systems are referenced by the value sets listed above.
   <tbody>
     <tr>
       <td><a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a></td>
-      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>, <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a>, <a href="http://terminology.hl7.org/ValueSet/v3-GTIN">GTIN</a></td>
+      <td><a href="ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a>, <a href="ValueSet-au-coverage-type-extended.html">Coverage Type and Self-Pay Codes - AU Extended</a></td>
       <td>HL7 Terminology (THO)</td>
       <td>Health Level Seven International</td>
     </tr>
@@ -555,7 +549,7 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
-        <td><a href="https://www.healthterminologies.gov.au/CodeSystem/australian-veteran-status-1">Australian Veteran Status</a></td>
+        <td><a href="https://healthterminologies.gov.au/CodeSystem/australian-veteran-status-1">Australian Veteran Status</a></td>
         <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1">Australian Veteran Status</a></td>
         <td>NCTS</td>
         <td>Australian Digital Health Agency</td>
@@ -647,14 +641,26 @@ The following code systems are referenced by the value sets listed above.
         <td><a href="http://terminology.hl7.org/CodeSystem/endpoint-payload-type">Endpoint Payload Type</a></td>
         <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
-        <td>HL7 Australia</td>
+        <td>Health Level Seven International</td>
     </tr>   
     <tr>
         <td><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a></td>
         <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
-  </tr>
+    </tr>
+    <tr>
+        <td><a href="http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode">FormatCode CodeSystem</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
+        <td>Integrating the Healthcare Enterprise (IHE)</td>
+        <td>IHE</td>
+    </tr>
+    <tr>
+        <td><a href="http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes">HL7 Document Format Code</a></td>
+        <td><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a></td>
+        <td>HL7 Terminology (THO)</td>
+        <td>Health Level Seven International</td>
+    </tr>
     <tr>
         <td><a href="http://terminology.hl7.org/CodeSystem/v2-0203">IdentifierType</a></td>
         <td><a href="ValueSet-accession-number-type.html">Accession Number Type</a>, <a href="ValueSet-order-identifier-type.html">Order Identifier Type</a>, <a href="ValueSet-au-v2-0203-extended.html">hl7VS-identifierType - AU Extended</a></td>
@@ -680,13 +686,13 @@ The following code systems are referenced by the value sets listed above.
         <td>Australian Digital Health Agency</td>
     </tr>
     <tr>
-        <td><a href="https://terminology.hl7.org/CodeSystem-ISO3166Part1.html">ISO3166Part1</a></td>
+        <td><a href="https://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO3166Part1</a></td>
         <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>International Organization for Standardization (ISO)</td>
     </tr>
     <tr>
-        <td><a href="https://terminology.hl7.org/6.0.0/CodeSystem-v3-iso3166-2.html">ISO3166_2</a></td>
+        <td><a href="https://terminology.hl7.org/6.5.0/CodeSystem-v3-iso3166-2.html">ISO3166_2</a></td>
         <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
         <td>HL7 Terminology (THO)</td>
         <td>International Organization for Standardization (ISO)</td>
@@ -705,7 +711,7 @@ The following code systems are referenced by the value sets listed above.
     </tr>
     <tr>
         <td><a href="CodeSystem-au-location-type.html">Location Type AU</a></td>
-        <td><a href="ValueSet-au-location-physical-type-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+        <td><a href="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
         <td>AU Base</td>
         <td>HL7 Australia</td>
     </tr>

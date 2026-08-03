@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="example3"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/endpoint-environment"/>
+        <code value="test"/>
+        <display value="Test"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="active"/>
+  <connectionType>
+    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+    <code value="hl7-fhir-rest"/>
+    <display value="HL7 FHIR"/>
+  </connectionType>
+  <name value="HL7 AU Terminology Server"/>
+  <managingOrganization>
+    <display value="HL7 Australia"/>
+  </managingOrganization>
+  <contact>
+    <system value="url"/>
+    <value value="https://hl7.com.au/"/>
+    <use value="work"/>
+  </contact>
+  <payloadType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/endpoint-payload-type"/>
+      <code value="any"/>
+      <display value="Any"/>
+    </coding>
+  </payloadType>
+  <payloadMimeType value="application/fhir+json"/>
+  <payloadMimeType value="application/fhir+xml"/>
+  <address value="https://tx.hl7.org.au/fhir"/>
+</Endpoint>

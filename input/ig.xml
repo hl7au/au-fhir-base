@@ -5,7 +5,7 @@
 		<valueCode value="trial-use"/>
 	</extension>
 	<url value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
-	<version value="6.1.2-ci-build"/>
+	<version value="7.0.0-ci-build"/>
 	<name value="AUBaseImplementationGuide"/>
 	<title value="AU Base Implementation Guide"/>
 	<status value="active"/>
@@ -1151,6 +1151,22 @@
 			</reference>
 			<name value="Endpoint - a FHIR REST API endpoint example"/>
 			<description value="Shows an example of a FHIR REST API endpoint for an Australian hospital using the AU Base Endpoint profile."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Endpoint/example2"/>
+			</reference>
+			<name value="Endpoint - the HL7 AU reference AU Core FHIR server"/>
+			<description value="Shows an example of a FHIR RESTful API endpoint for the HL7 AU reference AU Core FHIR server, where the supported payload is discovered from the server's CapabilityStatement rather than declared in the endpoint."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Endpoint/example3"/>
+			</reference>
+			<name value="Endpoint - the HL7 AU reference terminology server"/>
+			<description value="Shows an example of a FHIR RESTful API endpoint for the HL7 AU reference terminology server, where the supported payload and terminology capability are discovered from the server's CapabilityStatement and terminology capabilities rather than declared in the endpoint."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-endpoint"/>
 		</resource>
 		<resource>

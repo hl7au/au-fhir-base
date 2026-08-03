@@ -430,7 +430,7 @@ Example: Patient resource with prefer not to answer for pronouns
             "coding" : [
               {
                 "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-                "code" : "asked-declined",
+                "code" : "asked-declined"
               }
             ]
           }

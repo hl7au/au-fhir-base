@@ -2,7 +2,7 @@
 
 **Profile specific implementation guidance:**
 
-- To represent the environment type of an endpoint (e.g. production, staging, test), use the cross-version extension [extension-Endpoint.environmentType](https://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Endpoint.environmentType.html) from the [FHIR Cross-Version Extensions IG (xver-r5.r4)](https://hl7.org/fhir/uv/xver-r5.r4/0.1.0/index.html). This extension backports the R5 `Endpoint.environmentType` element for use in R4.
+- When representing the environment type of an endpoint (e.g. production, staging, test), use the R5 to R4 pre-adoption extension [ExtensionEndpoint_EnvironmentType](https://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Endpoint.environmentType.html). 
  
 **Potentially useful extensions:**
 
