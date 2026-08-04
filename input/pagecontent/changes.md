@@ -3,48 +3,55 @@
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
  
-This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to TBD. 
+This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/7.0.0-ballot1/index.html">7.0.0-ballot1</a> to TBD. 
 
 #### Reinstated
-This version of current build reinstates profiles not included in the AU Base 6.0.0 release:
+This version of current build reinstates profiles not included in the AU Base 7.0.0-ballot1 release:
 <ul>
   <li>Ethnicity extension</li>
 </ul>
 
+### Release 7.0.0-ballot1
+- Publication date: 2026-07-27
+- Publication status: Ballot for Working Standard
+- Based on FHIR version: 4.0.1
+ 
+This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to <a href="https://hl7.org.au/fhir/7.0.0-ballot1/index.html">7.0.0-ballot1</a>. The changes in this update are for ballot.
+
 #### Breaking Changes <a name="breakingchanges"></a>
 This version introduces the following non-compatible changes.
 <ul>
-  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
- <li><a href="StructureDefinition-au-australiancompanynumber.html">AU Australian Company Number</a>:
+ <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-australiancompanynumber.html">AU Australian Company Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ACN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
- <li><a href="StructureDefinition-au-australianregistredbodynumber.html">AU Australian Registered Body Number</a>:
+ <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-australianregistredbodynumber.html">AU Australian Registered Body Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
       <li>Concept definition changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-resource-tag.html">Resource Tag</a>:
     <ul>
       <li>Corrected invalid OID to match HL7 Australia OID registry (<a href="https://jira.hl7.org/browse/FHIR-57881">FHIR-57881</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
       <li>Deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
       <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
@@ -52,32 +59,38 @@ This version introduces the following non-compatible changes.
       <li>Concept definition made narrower for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
   </li>
-  <li><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
       <li>Removed deprecated codes (BBO, FBB) (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>, <a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>)</li>
     </ul>
   </li>
 </ul>
 
+#### Not Included
+The <a href="https://hl7.org.au/fhir/7.0.0-ballot1/generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy">HL7 AU FHIR Artefact Release Publishing Policy</a> is applied in this release. This includes the editorial removal of artefacts at AFMM DRAFT 0 maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) where these artefacts may be available if retained in the specification.
+<ul>
+  <li>Ethnicity extension</li>
+</ul>
+
 #### Changes in This Version
 <ul>
   <li>New profiles:
     <ul>
-      <li><a href="StructureDefinition-au-endpoint.html">AU Base Endpoint</a> (<a href="https://jira.hl7.org/browse/FHIR-56326">FHIR-56326</a>,<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>,<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
-      <li><a href="StructureDefinition-au-hae.html">AU HAE</a> (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>, <a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>)</li>
-      <li><a href="StructureDefinition-au-hspo.html">AU HSP-O</a> (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-endpoint.html">AU Base Endpoint</a> (<a href="https://jira.hl7.org/browse/FHIR-56326">FHIR-56326</a>,<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>,<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-hae.html">AU HAE</a> (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>, <a href="https://jira.hl7.org/browse/FHIR-56102">FHIR-56102</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-hspo.html">AU HSP-O</a> (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>)</li>
     </ul>
   </li>
    <li>New code systems:
     <ul>
-      <li><a href="CodeSystem-au-endpoint-connection-type.html">Endpoint Connection Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57759">FHIR-57759</a>)</li>
-      <li><a href="CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-au-endpoint-connection-type.html">Endpoint Connection Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57759">FHIR-57759</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-au-endpoint-payload-type.html">Endpoint Payload Type AU</a> (<a href="https://jira.hl7.org/browse/FHIR-57760">FHIR-57760</a>)</li>
     </ul>
   </li>
   <li>New value sets:
     <ul>
-      <li><a href="ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>)</li>
-      <li><a href="ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-au-endpoint-connection-type-extended.html">Endpoint Connection Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57762">FHIR-57762</a>)</li>
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-au-endpoint-payload-type-extended.html">Endpoint Payload Type - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-57761">FHIR-57761</a>)</li>
     </ul>
   </li>
   <li>Deprecated extensions:
@@ -85,49 +98,49 @@ This version introduces the following non-compatible changes.
       <li><a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-no-fixed-address.html">No Fixed Address</a> extension (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>)</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Changed pre-adoption guidance for Medication.ingredient.strength[x] to use <a href="http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html">ExtensionMedication_Ingredient_Strength</a> (<a href="https://jira.hl7.org/browse/FHIR-57900">FHIR-57900</a>). </li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
     <ul>
       <li>Changed MedicationStatement.medication[x] binding to Australian Medication Use (preferred) (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
       <li>Added guidance for representing no known medications for a patient (<a href="https://jira.hl7.org/browse/FHIR-53469">FHIR-53469</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-organization.html">AU Base Organization</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-organization.html">AU Base Organization</a>:
     <ul>
       <li>Added AU HAE as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54928">FHIR-54928</a>).</li>
       <li>Added AU HSP-O as an option for Organization.identifier (<a href="https://jira.hl7.org/browse/FHIR-54923">FHIR-54923</a>).</li>
     </ul>
   </li>
-      <li><a href="StructureDefinition-au-address.html">Australian Address</a>:
+      <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-address.html">Australian Address</a>:
   <ul>
       <li>Removed Australian <a href="https://hl7.org.au/fhir/6.0.0/StructureDefinition-no-fixed-address.html">No Fixed Address</a> added HL7 extension pack <a href="http://hl7.org/fhir/StructureDefinition/no-fixed-address">No Fixed Address</a> (<a href="https://jira.hl7.org/browse/ FHIR-56041">FHIR-56041</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
     <ul>
       <li>Identifier.type.coding fixed to PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
     </ul>
   </li>
-   <li><a href="StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
+   <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-australianbusinessnumber.html">AU Australian Business Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ABN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
- <li><a href="StructureDefinition-au-australiancompanynumber.html">AU Australian Company Number</a>:
+ <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-australiancompanynumber.html">AU Australian Company Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ACN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
- <li><a href="StructureDefinition-au-australianregistredbodynumber.html">AU Australian Registered Body Number</a>:
+ <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-australianregistredbodynumber.html">AU Australian Registered Body Number</a>:
     <ul>
       <li>Identifier.type.coding fixed to ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-au-v2-0203.html">IdentifierType AU</a>:
     <ul>
       <li>Concept definition changed for NOI (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
       <li>Added code PAIO (<a href="https://jira.hl7.org/browse/FHIR-55738">FHIR-55738</a>).</li>
@@ -136,7 +149,7 @@ This version introduces the following non-compatible changes.
       <li>Added codes ABN, ACN, ARBN (<a href="https://jira.hl7.org/browse/FHIR-56103">FHIR-56103</a>).</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
       <li>Deprecated code BBO (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>).</li>
       <li>Deprecated code FBB (<a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>).</li>
@@ -146,12 +159,12 @@ This version introduces the following non-compatible changes.
       <li>Concept definition made narrower for code NFE (<a href="https://jira.hl7.org/browse/FHIR-55578">FHIR-55578</a>).</li>
     </ul>
   </li>
-  <li><a href="ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-service-provision-conditions.html">Service Provision Conditions Australian Concepts</a>:
     <ul>
       <li>Removed deprecated codes (BBO, FBB) (<a href="https://jira.hl7.org/browse/FHIR-55575">FHIR-55575</a>, <a href="https://jira.hl7.org/browse/FHIR-55576">FHIR-55576</a>)</li>
     </ul>
   </li>
-  <li><a href="CodeSystem-resource-tag.html">Resource Tag</a>:
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/CodeSystem-resource-tag.html">Resource Tag</a>:
     <ul>
       <li>Corrected invalid OID to match HL7 Australia OID registry (<a href="https://jira.hl7.org/browse/FHIR-57881">FHIR-57881</a>).</li>
     </ul>
