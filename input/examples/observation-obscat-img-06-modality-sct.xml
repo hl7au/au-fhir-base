@@ -1,0 +1,39 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="obscat-img-06-modality-sct"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="77477000"/>
+            <display value="CT of abdomen"/>
+        </coding>
+    </category>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="51185008"/>
+            <display value="Thoracic structure"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="168731009"/>
+        </coding>
+        <text value="Chest X-ray"/>
+    </code>
+    <subject>
+        <reference value="Patient/example0"/>
+    </subject>
+    <effectiveDateTime value="2019-09-25T08:20:00Z"/>
+    <valueString value="No acute abnormality."/>
+</Observation>
