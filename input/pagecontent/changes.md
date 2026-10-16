@@ -11,6 +11,16 @@ This version of current build reinstates profiles not included in the AU Base 7.
   <li>Ethnicity extension</li>
 </ul>
 
+#### Changes in This Version
+<ul>
+  <li><a href="StructureDefinition-medication-generic-name.html">Medication Generic Drug Name</a>:
+    <ul>
+      <li>Extension definition and narrative updated to consistently use the term generic drug name, and to clarify that the extension supports a non-proprietary medication name as text and not a coded medication concept (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
+    </ul>
+  </li>
+  <li>Changed usage notes in <a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>, and <a href="StructureDefinition-medication-brand-name.html">Medication Brand Name</a> to refer to the Medication Generic Drug Name extension (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
+</ul>
+
 ### Release 7.0.0-ballot1
 - Publication date: 2026-07-27
 - Publication status: Ballot for Working Standard
