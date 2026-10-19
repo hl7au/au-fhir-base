@@ -11,6 +11,15 @@ This version of current build reinstates profiles not included in the AU Base 7.
   <li>Ethnicity extension</li>
 </ul>
 
+#### Changes in This Version
+<ul>
+  <li><a href="StructureDefinition-medication-generic-name.html">Medication Generic Drug Name</a>:
+    <ul>
+      <li>Changed profile and element guidance (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
+    </ul>
+  </li>
+</ul>
+
 ### Release 7.0.0-ballot1
 - Publication date: 2026-07-27
 - Publication status: Ballot for Working Standard
