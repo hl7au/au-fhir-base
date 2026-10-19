@@ -742,9 +742,9 @@ The following code systems are referenced by the value sets listed above.
         <td>HL7 Australia</td>
     </tr>
     <tr>
-        <td><a href="CodeSystem-mims-external.html">Monthly Index of Medical Specialties (MIMS)</a></td>
+        <td><a href="http://www.mims.com.au/codes">Monthly Index of Medical Specialties (MIMS)</a></td>
         <td><a href="ValueSet-mims.html">MIMS</a></td>
-        <td>AU Base</td>
+        <td>MIMS Australia</td>
         <td>MIMS Australia Pty Ltd</td>
     </tr>
     <tr>
@@ -760,9 +760,9 @@ The following code systems are referenced by the value sets listed above.
         <td>Health Level Seven International</td>
     </tr>   
     <tr>
-        <td><a href="CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
+        <td><a href="http://pbs.gov.au/code/item">PBS Item Codes</a></td>
         <td><a href="ValueSet-pbs-item.html">PBS Item Codes</a></td>
-        <td>AU Base</td>
+        <td>Pharmaceutical Benefits Scheme (PBS)</td>
         <td>Department of Health and Aged Care, Commonwealth of Australia</td>
     </tr>
     <tr>
