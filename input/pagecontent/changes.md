@@ -16,12 +16,12 @@ This version introduces the following non-compatible changes. Note that a slice 
 <ul>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
-      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on Medication.code.coding.extension from medicationClass to medicationType, applied for consistency with the equivalent change in the other medication profiles.</li>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on Medication.code.coding.extension from medicationClass to medicationType, aligned technical correction.</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>:
     <ul>
-      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationAdministration.medication[x].coding.extension from medicationClass to medicationType, applied for consistency with the equivalent change in the other medication profiles.</li>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationAdministration.medication[x].coding.extension from medicationClass to medicationType, aligned technical correction.</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>:
