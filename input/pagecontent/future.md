@@ -46,5 +46,6 @@ The following items are under consideration to add to AU Base ([Link to Deferred
   * Ahpra Registration Details (deprecated 6.0.0)
   * Result Copies To (deprecated 6.0.0)
   * AMT Medicinal Product and Substances (deprecated 6.0.0)
+
 Any specific needs or issues with retirement of a given artefact may be raised with the FHIR Work Group co-chairs and during this discussion. 
   
