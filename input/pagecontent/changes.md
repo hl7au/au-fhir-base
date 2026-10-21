@@ -41,6 +41,35 @@ This version introduces the following non-compatible changes. Note that a slice 
   </li>
 </ul>
 
+#### Changes in This Version
+<ul>
+  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on Medication.code.coding.extension from medicationClass to medicationType, aligned technical correction.</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>:
+    <ul>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationAdministration.medication[x].coding.extension from medicationClass to medicationType, aligned technical correction.</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>:
+    <ul>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationDispense.medication[x].coding.extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58679">FHIR-58679</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
+    <ul>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationRequest.medication[x].coding.extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
+    <ul>
+      <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationStatement.medication[x].coding.extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
+    </ul>
+  </li>
+</ul>
+
 ### Release 7.0.0-ballot1
 - Publication date: 2026-07-27
 - Publication status: Ballot for Working Standard
