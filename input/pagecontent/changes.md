@@ -15,12 +15,12 @@ This version of current build reinstates profiles not included in the AU Base 7.
 <ul>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAID-O Identifier</a>:
     <ul>
-      <li>Identifier.value invariant inv-paid-1 additional prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+      <li>Identifier.value invariant inv-paid-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
     </ul>
   </li>
    <li><a href="StructureDefinition-au-paididentifier.html">AU PAID-O Identifier</a>:
     <ul>
-      <li>Identifier.value invariant inv-paio-1 additional prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+      <li>Identifier.value invariant inv-paio-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
     </ul>
   </li>
 </ul>
