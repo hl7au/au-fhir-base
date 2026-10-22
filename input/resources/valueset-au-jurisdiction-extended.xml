@@ -7,6 +7,13 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
         <valueInteger value="1"/>
     </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="deprecated">
+            <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
+                <valueMarkdown value="This value set was deprecated in AU Base 7.0.0 and is replaced by use of the [Jurisdiction ValueSet](http://terminology.hl7.org/ValueSet/jurisdiction) value set. The Australian additions in this value set duplicate concepts for Australian states and territories that are already available in the Jurisdiction ValueSet from the urn:iso:std:iso:3166:-2 code system, and so are invalid for use against an extensible binding to that value set."/>
+            </extension>
+        </valueCode>
+    </extension>
     <url value="http://terminology.hl7.org.au/ValueSet/jurisdiction-extended" />
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
@@ -14,9 +21,9 @@
     </identifier>
     <name value="JurisdictionValueSetAUExtended"/>
     <title value="Jurisdiction ValueSet - AU Extended" />
-    <status value="active" />
+    <status value="retired" />
     <experimental value="false"/>
-    <description value="Jurisdiction ValueSet extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set."/>
+    <description value="This value set is deprecated and replaced by use of the [Jurisdiction ValueSet](http://terminology.hl7.org/ValueSet/jurisdiction) value set, which already includes concepts for Australian states and territories from the urn:iso:std:iso:3166:-2 code system.&#xA;&#xA;Jurisdiction ValueSet extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set."/>
     <compose>
         <include>
           <valueSet value="http://terminology.hl7.org/ValueSet/jurisdiction"/>

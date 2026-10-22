@@ -295,7 +295,7 @@ The following value sets form part of localised requirements (i.e. are reference
 </tr>
 <tr>
     <td><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a></td>
-    <td><a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex Or Gender</a></td>
+    <td>This value set is not used here; it is deprecated and replaced by use of the <a href="http://terminology.hl7.org/ValueSet/jurisdiction">Jurisdiction ValueSet</a> value set.</td>
     <td>AU Base</td>
 </tr>
 <tr>
