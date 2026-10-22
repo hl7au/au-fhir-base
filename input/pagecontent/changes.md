@@ -38,7 +38,21 @@ This version of current build reinstates profiles not included in the AU Base 7.
       <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>)</li>
     </ul>
   </li>
-  <li>The jurisdiction element of the Person Recorded Sex or Gender extension is no longer constrained by AU Base and returns to the binding defined by the extension. Australian states and territories are available in the bound <a href="http://terminology.hl7.org/ValueSet/jurisdiction">Jurisdiction ValueSet</a> value set from the urn:iso:std:iso:3166:-2 code system; a code from the <a href="https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1">Australian States and Territories</a> code system may be sent as an additional coding (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-patient.html">AU Base Patient</a>:
+    <ul>
+      <li>Removed invariant inv-pat-5 binding the Person Recorded Sex or Gender jurisdiction element to <a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a>, and the remaining invariant was renumbered (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
+    <ul>
+      <li>Removed invariant inv-pra-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a>, and the remaining invariant was renumbered (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
+    <ul>
+      <li>Removed invariant inv-relper-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="https://hl7.org.au/fhir/7.0.0-ballot1/ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a>, and the remaining invariant was renumbered (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+    </ul>
+  </li>
   <li>Reworded the jurisdiction guidance in the <a href="https://hl7.org.au/fhir/7.0.0-ballot1/sexgender.html#recorded-sex-or-gender">Sex and Gender</a> page and updated the recorded sex or gender examples accordingly (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
 </ul>
 
