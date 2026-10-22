@@ -730,6 +730,11 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
           "valueCodeableConcept" : {
             "coding" : [
               {
+                "system" : "urn:iso:std:iso:3166:-2",
+                "code" : "AU-QLD",
+                "display" : "Queensland"
+              },
+              {
                 "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
                 "code" : "QLD"
               }
