@@ -1,1 +1,1 @@
-<p class="stu-note">This value set is deprecated as Australian states and territories are already supported with the content of the <a href="http://terminology.hl7.org/ValueSet/jurisdiction">Jurisdiction ValueSet</a>, with concepts from the urn:iso:std:iso:3166:-2 code system.</p>
+<p class="stu-note">This value set is deprecated as Australian states and territories are already supported with the content of the <a href="http://terminology.hl7.org/ValueSet/jurisdiction">Jurisdiction ValueSet</a> with concepts from the urn:iso:std:iso:3166:-2 code system.</p>
