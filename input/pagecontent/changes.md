@@ -11,6 +11,16 @@ This version of current build reinstates profiles not included in the AU Base 7.
   <li>Ethnicity extension</li>
 </ul>
 
+#### Breaking Changes <a name="breakingchanges"></a>
+This version introduces the following non-compatible changes.
+<ul>
+  <li><a href="StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a>:
+    <ul>
+      <li>Observation.value[x] <a href="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1">Assertion Of Absence</a> value set replaces SNOMED CT 1234391000168107 &#124;No known current medicines&#124; with SNOMED CT 787481004 &#124;No known medications&#124; to align with <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a> guidance (<a href="https://jira.hl7.org/browse/FHIR-57347">FHIR-57347</a>).</li>
+    </ul>
+  </li>
+</ul>
+
 #### Changes in This Version
 <ul>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAID-O Identifier</a>:
@@ -32,7 +42,7 @@ This version of current build reinstates profiles not included in the AU Base 7.
  
 This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/6.0.0/index.html">6.0.0</a> to <a href="https://hl7.org.au/fhir/7.0.0-ballot1/index.html">7.0.0-ballot1</a>. The changes in this update are for ballot.
 
-#### Breaking Changes <a name="breakingchanges"></a>
+#### Breaking Changes
 This version introduces the following non-compatible changes.
 <ul>
   <li><a href="https://hl7.org.au/fhir/7.0.0-ballot1/StructureDefinition-au-paioidentifier.html">AU PAI-O Identifier</a>:
