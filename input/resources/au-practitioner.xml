@@ -47,7 +47,7 @@
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
       </constraint>
       <constraint>
-        <key value="inv-pra-4" />
+        <key value="inv-pra-5" />
         <severity value="warning" />
         <human value="Recorded sex or gender source shall be a member of the AU Recorded Sex or Gender (RSG) Source value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('source').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('source').value.ofType(CodeableConcept).all(memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source'))"/>
@@ -96,7 +96,7 @@
       </type>
       <condition value="inv-pra-2"/>
       <condition value="inv-pra-3"/>
-      <condition value="inv-pra-4"/>
+      <condition value="inv-pra-5"/>
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />

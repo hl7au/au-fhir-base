@@ -47,7 +47,7 @@
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
       </constraint>
       <constraint>
-        <key value="inv-relper-4" />
+        <key value="inv-relper-5" />
         <severity value="warning" />
         <human value="Recorded sex or gender source shall be a member of the AU Recorded Sex or Gender (RSG) Source value set if any codes within that value set can apply" />
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('source').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('source').value.ofType(CodeableConcept).all(memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source'))"/>
@@ -97,7 +97,7 @@
       </type>
       <condition value="inv-relper-2"/>
       <condition value="inv-relper-3"/>
-      <condition value="inv-relper-4"/>
+      <condition value="inv-relper-5"/>
     </element>
     <element id="RelatedPerson.identifier">
       <path value="RelatedPerson.identifier" />
