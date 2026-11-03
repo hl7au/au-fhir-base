@@ -53,7 +53,6 @@ This version of current build reinstates profiles not included in the AU Base 7.
       <li>Removed invariant inv-relper-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
-  <li>Reworded the jurisdiction guidance in the <a href="sexgender.html#recorded-sex-or-gender">Sex and Gender</a> page and updated the recorded sex or gender examples accordingly (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
 </ul>
 
 
