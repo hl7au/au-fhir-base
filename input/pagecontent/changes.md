@@ -10,17 +10,17 @@ This version introduces the following non-compatible changes.
 <ul>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
-      <li>Removed invariant inv-pat-5 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+      <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
-      <li>Removed invariant inv-pra-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+      <li>Removed invariant inv-pra-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
     <ul>
-      <li>Removed invariant inv-relper-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+      <li>Removed invariant inv-relper-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
 </ul>
@@ -40,17 +40,17 @@ This version of current build reinstates profiles not included in the AU Base 7.
   </li>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
-      <li>Removed invariant inv-pat-5 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+      <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
     <ul>
-      <li>Removed invariant inv-pra-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+      <li>Removed invariant inv-pra-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
     <ul>
-      <li>Removed invariant inv-relper-4 binding the Person Recorded Sex or Gender jurisdiction element to <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+      <li>Removed invariant inv-relper-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
 </ul>
