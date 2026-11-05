@@ -53,8 +53,17 @@ This version of current build reinstates profiles not included in the AU Base 7.
       <li>Removed invariant inv-relper-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAID-O Identifier</a>:
+    <ul>
+      <li>Identifier.value invariant inv-paid-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+    </ul>
+  </li>
+   <li><a href="StructureDefinition-au-paididentifier.html">AU PAID-O Identifier</a>:
+    <ul>
+      <li>Identifier.value invariant inv-paio-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+    </ul>
+  </li>
 </ul>
-
 
 ### Release 7.0.0-ballot1
 - Publication date: 2026-07-27
