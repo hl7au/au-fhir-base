@@ -15,7 +15,7 @@ This version of current build reinstates profiles not included in the AU Base 7.
 <ul>
   <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:
     <ul>
-      <li>Changed DiagnosticReport.code binding to <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-requesting-refset-3">RCPA - SPIA Requesting Pathology Terminology Reference Set</a> (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
+      <li>Changed DiagnosticReport.code binding to RCPA - SPIA Requesting Pathology Terminology Reference Set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
       <li>Removed profile specific guidance in DiagnosticReport.code binding as reporting value set no longer applies (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
     </ul>
   </li>
