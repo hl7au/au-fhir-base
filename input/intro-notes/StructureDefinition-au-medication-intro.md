@@ -10,7 +10,7 @@
 - When a code for medication definition is unavailable, just text is allowed in `Medication.code.text`.
 - When a medication is compounded and is a list of ingredients, `Medication.code` may contain only the list of ingredients as text in `Medication.code.text`.
 - When representing medication ingredient strength use the native FHIR element `Medication.ingredient.strength` as [Ratio](https://hl7.org/fhir/R4/datatypes.html#Ratio) whenever possible. If the strength cannot be represented as a Ratio, it can be represented as [CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept) (text and/or coding) or [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) using the R5 to R4 pre-adoption extension [ExtensionMedication_Ingredient_Strength](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-Medication.ing.strength.html).     
-- For support as text representation of other medicinal product information where item form and strength is not included as part of medication definition in `Medication.code.text` consider:
+- To support text-based representation of additional medicinal product information not included in `Medication.code.text`, consider:
   - ​brand name in [Medication Brand Name](StructureDefinition-medication-brand-name.html) extension
   - ​generic drug name in [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html) extension
   - medication strength (as a whole) in [Medication Strength](StructureDefinition-medication-strength.html) extension
