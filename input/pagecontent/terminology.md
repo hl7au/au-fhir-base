@@ -389,8 +389,13 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
+    <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-requesting-refset-3">RCPA - SPIA Requesting Pathology Terminology Reference Set</a></td>
+    <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a></td>
+    <td>NCTS</td>
+</tr>
+<tr>
     <td><a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
-    <td><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>, <a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
+    <td><a href="StructureDefinition-au-pathologyresult.html">AU Base Pathology Result</a></td>
     <td>NCTS</td>
 </tr>
 <tr>
@@ -845,6 +850,7 @@ The following code systems are referenced by the value sets listed above.
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1">Medicine Substitution Reason</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>,  
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, 
+            <a href="https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-requesting-refset-3">RCPA - SPIA Requesting Pathology Terminology Reference Set</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason for Encounter</a>,
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, 
             <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">Reason Vaccine Administered</a>, 
