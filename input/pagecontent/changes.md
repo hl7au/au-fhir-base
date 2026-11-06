@@ -13,6 +13,11 @@ This version of current build reinstates profiles not included in the AU Base 7.
 
 #### Changes in This Version
 <ul>
+  <li><a href="StructureDefinition-medication-generic-name.html">Medication Generic Drug Name</a>:
+    <ul>
+      <li>Changed profile and element guidance (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
+    </ul>
+  </li>
   <li><a href="StructureDefinition-au-paioidentifier.html">AU PAID-O Identifier</a>:
     <ul>
       <li>Identifier.value invariant inv-paid-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
