@@ -18,6 +18,16 @@ This version of current build reinstates profiles not included in the AU Base 7.
       <li>Changed profile and element guidance (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAID-O Identifier</a>:
+    <ul>
+      <li>Identifier.value invariant inv-paid-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+    </ul>
+  </li>
+   <li><a href="StructureDefinition-au-paididentifier.html">AU PAID-O Identifier</a>:
+    <ul>
+      <li>Identifier.value invariant inv-paio-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+    </ul>
+  </li>
 </ul>
 
 ### Release 7.0.0-ballot1
@@ -588,7 +598,7 @@ To help implementers, only the more significant changes are listed here.
 </li>
 <li>Changes to <a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
   <ul>
-    <li>Removed invariants inv-pra-0 (related to the Ahpra Profession Details extension) and inv-pra-1 (related to the Ahpra Registration Details extension), relaxing contraint on their use, and remaining invariants were renumbered (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
+    <li>Removed invariants inv-pra-0 (related to the Ahpra Profession Details extension) and inv-pra-1 (related to the Ahpra Registration Details extension), relaxing constraint on their use, and remaining invariants were renumbered (<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
     <li>Removed the explicit inclusion of the Ahpra Profession Details and Ahpra Registration Details extension from Practitioner.qualification(<a href="https://jira.hl7.org/browse/FHIR-46718">FHIR-46718</a>).</li>
   </ul>
 </li>

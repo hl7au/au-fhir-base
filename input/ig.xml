@@ -4,6 +4,9 @@
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use"/>
 	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+		<valueCode value="au-fhir"/>
+	</extension>
 	<url value="http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base"/>
 	<version value="7.0.0-ci-build"/>
 	<name value="AUBaseImplementationGuide"/>
@@ -1288,6 +1291,22 @@
 			<name value="PractitionerRole - with Provider Number and ANZSCO coded role"/>
 			<description value="Shows an example of a Cardiologist role for the *AU Base PractitionerRole* profile,  including a Medicare Provider Number identifier, specialty in Cardiology, contact details for work and after-hours purposes, and references to the associated Practitioner, Organization, and Location."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/reid-health-network"/>
+			</reference>
+			<name value="Organization - with HAE"/>
+			<description value="Shows an example of an organisation, Reid Health Network, for the *AU Base Organization* profile, with a HAE name, contact details, and address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Organization/curtin-care-and-support"/>
+			</reference>
+			<name value="Organization - with HSP-O"/>
+			<description value="Shows an example of an organisation, Curtin Care and Support, for the *AU Base Organization* profile, with a HSP-O name, contact details, and address."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/StructureDefinition/au-organization"/>
 		</resource>
 		<resource>
 			<reference>
