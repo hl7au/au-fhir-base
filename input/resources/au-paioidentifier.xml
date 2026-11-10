@@ -29,8 +29,8 @@
       <constraint>
         <key value="inv-paio-1" />
         <severity value="error" />
-        <human value="PAI-O prefix shall be 800364" />
-        <expression value="value.startsWith('800364')" />
+        <human value="PAI-O prefix shall be 80036400(00|01|11)" />
+        <expression value="value.matches('^80036400(00|01|11)')"/>
         <source value="http://hl7.org.au/fhir/StructureDefinition/au-paioidentifier" />
       </constraint>
       <constraint>

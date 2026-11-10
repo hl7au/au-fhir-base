@@ -68,6 +68,16 @@ This version introduces the following non-compatible changes. Note that a slice 
       <li>Changed the <a href="StructureDefinition-medication-type.html">Medication Type</a> extension slice name on MedicationStatement.medication[x].coding.extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-au-paioidentifier.html">AU PAID-O Identifier</a>:
+    <ul>
+      <li>Identifier.value invariant inv-paid-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+    </ul>
+  </li>
+   <li><a href="StructureDefinition-au-paididentifier.html">AU PAID-O Identifier</a>:
+    <ul>
+      <li>Identifier.value invariant inv-paio-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
+    </ul>
+  </li>
 </ul>
 
 ### Release 7.0.0-ballot1
