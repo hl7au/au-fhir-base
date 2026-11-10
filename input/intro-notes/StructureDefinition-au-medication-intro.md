@@ -6,6 +6,7 @@
 
 - Medication definition includes coding as:
   - [PBS Item Code](https://www.pbs.gov.au/pbs/home) - Pharmaceutical Benefits Scheme coding, claiming context is not relevant as medicine coding
+  - [Medication Package Global Trade Item Number](https://www.gs1.org/gtin) - Global Trade Item Number (GTIN) physical product reference
   - [AMT Medicines](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) - Australian Medicines Terminology, national drug terminology
   - [MIMS Package](https://www.mims.com.au/index.php) - commonly used medicine coding
 - When a code for medication definition is unavailable, just text is allowed in `Medication.code.text`.
