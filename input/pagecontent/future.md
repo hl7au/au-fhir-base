@@ -37,7 +37,7 @@ The following items are under consideration to add to AU Base ([Link to Deferred
 - **AU Base Health Insurer Identifier**: The inclusion of an AU Base profile to define a health insurer identifier is under consideration to support consistent, standardised identification of health insurers, including private health insurers, in an Australian healthcare context.
 - **AU Base NDIS (National Disability Insurance Scheme) Number**: The inclusion of an AU Base profile to define the NDIS Number is under consideration for a future release of AU Base.
 - **HL7 AU Terminology**: The HL7 AU Terminology work group intends to establish a THO AU FHIR IG project encapsulating terminology artefacts shared for HL7 AU standards implementation. This may lead to AU Base terminology artefacts moving, by agreement, from AU Base to the THO AU IG publication in the future.
-- **AU Base Deprecations and Removals**: A number of artefacts have been deprecated over time in AU Base. Considering some of these deprecations have been published through multiple versions of the AU Base Working Standard it would be appropriate to review, with an intent to remove them. Any specific continuing need or issues with removal of a given artefact may be raised with the FHIR Work Group co-chairs. The workgroup will likely consider the following artefacts for retirement in the next version of AU Base:
+- **AU Base Deprecations and Removals**: The FHIR Work Group intends to review these artefacts for potential removal in the next version of AU Base. The following artefacts are expected to be considered for removal:
   * AU Base Diagnostic Request (deprecated in AU Base 5.0.0)
   * Encounter Description - (deprecated in AU Base 5.0.0)
   * Australian Time Zone -  (deprecated in AU Base 6.0.0)
