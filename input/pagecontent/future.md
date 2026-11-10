@@ -39,8 +39,8 @@ The following items are under consideration to add to AU Base ([Link to Deferred
 - **HL7 AU Terminology**: The HL7 AU Terminology work group intends to establish a THO AU FHIR IG project encapsulating terminology artefacts shared for HL7 AU standards implementation. This may lead to AU Base terminology artefacts moving, by agreement, from AU Base to the THO AU IG publication in the future.
 - **AU Base Deprecations and Removals**: The FHIR Work Group intends to review these artefacts for potential removal in the next version of AU Base. The following artefacts are expected to be considered for removal:
   * AU Base Diagnostic Request (deprecated in AU Base 5.0.0)
-  * Encounter Description - (deprecated in AU Base 5.0.0)
-  * Australian Time Zone -  (deprecated in AU Base 6.0.0)
+  * Encounter Description (deprecated in AU Base 5.0.0)
+  * Australian Time Zone (deprecated in AU Base 6.0.0)
   * Associated Healthcare Service (deprecated in AU Base 6.0.0)
   * Ahpra Profession Details (deprecated in AU Base 6.0.0)
   * Ahpra Registration Details (deprecated in AU Base 6.0.0)
