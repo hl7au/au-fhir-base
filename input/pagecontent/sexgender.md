@@ -497,7 +497,6 @@ RSG is represented with the [Person Recorded Sex or Gender](https://hl7.org/fhir
 - the type element is constrained to be [AU Recorded Sex or Gender Type](ValueSet-rsg-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 - the source element is constrained to be [AU Recorded Sex or Gender (RSG) Source](ValueSet-rsg-source.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 - the sourceDocument element is constrained to be [AU Recorded Sex or Gender (RSG) Source Document Type](ValueSet-rsg-source-document-type.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
-- the jurisdiction element is constrained to be [Jurisdiction ValueSet - AU Extended](ValueSet-au-jurisdiction-extended.html) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible))
 
 RSG information includes the various sex and gender concepts that are often used in existing systems but are known to not reliably represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction. When populating recorded sex or gender it is important to select a meaningful terminology for the value element of the [Person Recorded Sex or Gender](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) extension. For example, when representing a biological sex value it is recommended to use a biological sex value set. See [Sex Assigned at Birth](sexgender.html#sex-assigned-at-birth) for specific guidance on the representation of Sex Assigned at Birth.
 
@@ -729,6 +728,11 @@ Example: Patient resource with Sex Assigned at Birth from birth certificate
           "url" : "jurisdiction",
           "valueCodeableConcept" : {
             "coding" : [
+              {
+                "system" : "urn:iso:std:iso:3166:-2",
+                "code" : "AU-QLD",
+                "display" : "Queensland"
+              },
               {
                 "system" : "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
                 "code" : "QLD"
