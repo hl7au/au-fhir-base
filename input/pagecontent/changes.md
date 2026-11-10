@@ -8,6 +8,36 @@ This change log documents the significant updates and resolutions implemented fr
 #### Breaking Changes <a name="breakingchangestbd"></a>
 This version introduces the following non-compatible changes.
 <ul>
+ <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+    <ul>
+      <li>Changed Medication.code.coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>:
+    <ul>
+      <li>Changed MedicationAdministration.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>:
+    <ul>
+      <li>Changed MedicationDispense.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58679">FHIR-58679</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
+    <ul>
+      <li>Changed MedicationRequest.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
+    <ul>
+      <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:
+    <ul>
+      <li>Changed DiagnosticReport.code binding to RCPA - SPIA Requesting Pathology Terminology Reference Set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
+    </ul>
+  </li>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
@@ -31,36 +61,6 @@ This version of current build reinstates profiles not included in the AU Base 7.
   <li>Ethnicity extension</li>
 </ul>
 
-#### Breaking Changes <a name="breakingchanges"></a>
-This version introduces the following non-compatible changes. Note that a slice name change is a breaking change and may affect downstream implementation guides that derive from these profiles, or that refer to these slices by name.
-<ul>
-  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
-    <ul>
-      <li>Changed Medication.code.coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
-    </ul>
-  </li>
-  <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>:
-    <ul>
-      <li>Changed MedicationAdministration.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
-    </ul>
-  </li>
-  <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>:
-    <ul>
-      <li>Changed MedicationDispense.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58679">FHIR-58679</a>).</li>
-    </ul>
-  </li>
-  <li><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
-    <ul>
-      <li>Changed MedicationRequest.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
-    </ul>
-  </li>
-  <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
-    <ul>
-      <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
-    </ul>
-  </li>
-</ul>
-
 #### Changes in This Version
 <ul>
   <li>Deprecated value sets:
@@ -68,12 +68,6 @@ This version introduces the following non-compatible changes. Note that a slice 
       <li><a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>)</li>
     </ul>
   </li>
-    <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:
-    <ul>
-      <li>Changed DiagnosticReport.code binding to RCPA - SPIA Requesting Pathology Terminology Reference Set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
-      <li>Removed guidance on using discipline specific value sets for DiagnosticReport.code (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
-    </ui>
-  </li>
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Changed Medication.code.coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
@@ -97,6 +91,12 @@ This version introduces the following non-compatible changes. Note that a slice 
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
     <ul>
       <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:
+    <ul>
+      <li>Changed DiagnosticReport.code binding to RCPA - SPIA Requesting Pathology Terminology Reference Set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
+      <li>Removed guidance on using discipline specific value sets for DiagnosticReport.code (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
