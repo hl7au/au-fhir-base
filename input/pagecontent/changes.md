@@ -8,33 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Breaking Changes <a name="breakingchangestbd"></a>
 This version introduces the following non-compatible changes.
 <ul>
-  <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
-    <ul>
-      <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
-    </ul>
-  </li>
-  <li><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
-    <ul>
-      <li>Removed invariant inv-pra-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
-    </ul>
-  </li>
-  <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
-    <ul>
-      <li>Removed invariant inv-relper-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
-    </ul>
-  </li>
-</ul>
-
-#### Reinstated
-This version of current build reinstates profiles not included in the AU Base 7.0.0-ballot1 release:
-<ul>
-  <li>Ethnicity extension</li>
-</ul>
-
-#### Breaking Changes <a name="breakingchanges"></a>
-This version introduces the following non-compatible changes. Note that a slice name change is a breaking change and may affect downstream implementation guides that derive from these profiles, or that refer to these slices by name.
-<ul>
-  <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
+ <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Changed Medication.code.coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
     </ul>
@@ -59,6 +33,27 @@ This version introduces the following non-compatible changes. Note that a slice 
       <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
+    <ul>
+      <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-practitioner.html">AU Base Practitioner</a>:
+    <ul>
+      <li>Removed invariant inv-pra-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a>:
+    <ul>
+      <li>Removed invariant inv-relper-4 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
+    </ul>
+  </li>
+</ul>
+
+#### Reinstated
+This version of current build reinstates profiles not included in the AU Base 7.0.0-ballot1 release:
+<ul>
+  <li>Ethnicity extension</li>
 </ul>
 
 #### Changes in This Version
@@ -93,6 +88,12 @@ This version introduces the following non-compatible changes. Note that a slice 
       <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:
+    <ul>
+      <li>Changed DiagnosticReport.code binding to RCPA - SPIA Requesting Pathology Terminology Reference Set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
+      <li>Removed guidance on using discipline specific value sets for DiagnosticReport.code (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
+    </ul>
+  </li>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
@@ -118,6 +119,11 @@ This version introduces the following non-compatible changes. Note that a slice 
       <li>Identifier.value invariant inv-paio-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-medication-generic-name.html">Medication Generic Drug Name</a>:
+    <ul>
+      <li>Changed description and element definitions to represent the generic drug name (e.g. active ingredient name) rather than a generic brand product name (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
+    </ul>
+  </ul>
 </ul>
 
 ### Release 7.0.0-ballot1
@@ -601,7 +607,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](https://hl7.org.au/fhir/6.0
 
 To help implementers, only the more significant changes are listed here.
 
-##### Breaking Changes
+#### Breaking Changes
 This release includes breaking changes to the following artefacts. Implementers are advised to consider the changes described in these artefacts when in use.
 <ul>
   <li><a href="https://hl7.org.au/fhir/5.0.0/StructureDefinition-au-medicarecardnumber.html">AU Medicare Card Number</a>:
@@ -631,7 +637,7 @@ This release includes breaking changes to the following artefacts. Implementers 
   </li>
 </ul>
 
-##### Not Included
+#### Not Included
 The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au-fhir-artefact-release-publishing-policy) is applied in this release. This includes the editorial removal of artefacts at AFMM <b>DRAFT 0</b> maturity level in official publications. These artefacts may be published in future versions of AU Base and implementers are recommended to refer to the [current build of AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base) where these artefacts may be available if retained in the specification.
   <ul>
       <li>AU Base Service Request</li>
@@ -644,7 +650,7 @@ The [HL7 AU FHIR Artefact Release Publishing Policy](generalguidance.html#hl7-au
       <li>Observation Category Codes AU code system</li>
   </ul>
 
-##### Changes in this version
+#### Changes in this version
 To help implementers, only the more significant changes are listed here.
 
 <ul>
