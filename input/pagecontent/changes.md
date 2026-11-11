@@ -119,6 +119,11 @@ This version of current build reinstates profiles not included in the AU Base 7.
       <li>Identifier.value invariant inv-paio-1 additional 10 digit prefix constraints (<a href="https://jira.hl7.org/browse/FHIR-55574">FHIR-55574</a>).</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-medication-generic-name.html">Medication Generic Drug Name</a>:
+    <ul>
+      <li>Changed description and element definitions to represent the generic drug name (e.g. active ingredient name) rather than a generic brand product name (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
+    </ul>
+  </ul>
 </ul>
 
 ### Release 7.0.0-ballot1

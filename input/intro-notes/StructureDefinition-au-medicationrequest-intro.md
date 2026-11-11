@@ -15,4 +15,4 @@
 
 **Potentially useful extensions:**
 * MedicationRequest: [Medication Brand Name](StructureDefinition-medication-brand-name.html) 
-* MedicationRequest: [Medication Generic Name](StructureDefinition-medication-generic-name.html)
+* MedicationRequest: [Medication Generic Drug Name](StructureDefinition-medication-generic-name.html)
