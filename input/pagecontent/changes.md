@@ -33,11 +33,6 @@ This version introduces the following non-compatible changes.
       <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:
-    <ul>
-      <li>Changed DiagnosticReport.code binding to RCPA - SPIA Requesting Pathology Terminology Reference Set (preferred) (<a href="https://jira.hl7.org/browse/FHIR-57529">FHIR-57529</a>).</li>
-    </ul>
-  </li>
   <li><a href="StructureDefinition-au-patient.html">AU Base Patient</a>:
     <ul>
       <li>Removed invariant inv-pat-5 from RSG.jurisdiction that bound <a href="ValueSet-au-jurisdiction-extended.html">Jurisdiction ValueSet - AU Extended</a> (extensible) (<a href="https://jira.hl7.org/browse/FHIR-58632">FHIR-58632</a>).</li>
