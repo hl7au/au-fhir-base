@@ -72,7 +72,7 @@ This version of current build reinstates profiles not included in the AU Base 7.
   <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>:
     <ul>
       <li>Changed MedicationAdministration.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
-      <li>Removed GTIN additional binding from MedicationAdministration.medication[x] and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).
+      <li>Removed GTIN additional binding from MedicationAdministration.medication[x] and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>:
