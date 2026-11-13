@@ -123,7 +123,7 @@ This version of current build reinstates profiles not included in the AU Base 7.
     <ul>
       <li>Changed description and element definitions to represent the generic drug name (e.g. active ingredient name) rather than a generic brand product name (<a href="https://jira.hl7.org/browse/FHIR-57962">FHIR-57962</a>).</li>
     </ul>
-  </ul>
+  </li>
 </ul>
 
 ### Release 7.0.0-ballot1
