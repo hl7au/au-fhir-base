@@ -66,26 +66,31 @@ This version of current build reinstates profiles not included in the AU Base 7.
   <li><a href="StructureDefinition-au-medication.html">AU Base Medication</a>:
     <ul>
       <li>Changed Medication.code.coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+       <li>Removed GTIN additional binding from Medication.code and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>:
     <ul>
       <li>Changed MedicationAdministration.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+      <li>Removed GTIN additional binding from MedicationAdministration.medication[x] and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>:
     <ul>
       <li>Changed MedicationDispense.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58679">FHIR-58679</a>).</li>
+      <li>Removed GTIN additional binding from MedicationDispense.medication[x] and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>:
     <ul>
       <li>Changed MedicationRequest.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58677">FHIR-58677</a>).</li>
+      <li>Removed GTIN additional binding from MedicationRequest.medication[x] and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a>:
     <ul>
       <li>Changed MedicationStatement.medication[x].coding.extension slice name for the Medication Type extension from medicationClass to medicationType (<a href="https://jira.hl7.org/browse/FHIR-58680">FHIR-58680</a>).</li>
+      <li>Removed GTIN additional binding from MedicationStatement.medication[x] and added interim advice on representing GTIN codes pending community agreement (<a href="https://jira.hl7.org/browse/FHIR-59776">FHIR-59776</a>).</li>
     </ul>
   </li>
   <li><a href="StructureDefinition-au-pathologyreport.html">AU Base Pathology Report</a>:

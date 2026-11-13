@@ -234,11 +234,6 @@ The following value sets form part of localised requirements (i.e. are reference
     <td>NCTS</td>
 </tr>
 <tr>
-    <td><a href="http://terminology.hl7.org/ValueSet/v3-GTIN">GTIN</a></td>
-    <td><a href="StructureDefinition-au-medication.html">AU Base Medication</a>, <a href="StructureDefinition-au-medicationadministration.html">AU Base MedicationAdministration</a>, <a href="StructureDefinition-au-medicationdispense.html">AU Base MedicationDispense</a>, <a href="StructureDefinition-au-medicationrequest.html">AU Base MedicationRequest</a>, <a href="StructureDefinition-au-medicationstatement.html">AU Base MedicationStatement</a></td>
-    <td>HL7 Terminology (THO)</td>
-</tr>
-<tr>
     <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a></td>
     <td><a href="StructureDefinition-au-organization.html">AU Base Organization</a></td>
     <td>NCTS</td>
